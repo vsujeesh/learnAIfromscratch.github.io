@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-01-05 Sun 18:59 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Construct Software</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+   body {
+    background-color: #ededed;
+    margin: auto;
+    padding: 0.5rem;
+    max-width: 80ch; 
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">How to Construct Software</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org42accfe">Intro</a>
+<ul>
+<li><a href="#org488e998">Technical requirements</a></li>
+<li><a href="#org94a6aaa">Code of Conduct</a></li>
+<li><a href="#orga6eef2f">Study advice</a></li>
+</ul>
+</li>
+<li><a href="#org1f92059">Start here</a>
+<ul>
+<li><a href="#org8fb4324">Materials needed to complete this</a></li>
+<li><a href="#org6dd74ab">Archiving the assignments (optional)</a></li>
+</ul>
+</li>
+<li><a href="#org95f2eac">Lecture 1</a>
+<ul>
+<li><a href="#org588530a">Reading chapter 1 and 2</a></li>
+<li><a href="#org883ae04">Reading chapter 3</a></li>
+<li><a href="#orgf836d78">Reading Chapter 4</a></li>
+<li><a href="#orgbd4bcdf">Reading chapter 5</a></li>
+<li><a href="#orgcb0bdb1">Reading chapter 6</a></li>
+<li><a href="#org78bc2c4">Assignment 1: DocDiff</a></li>
+</ul>
+</li>
+<li><a href="#org8c8468a"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org42accfe" class="outline-2">
+<h2 id="org42accfe">Intro</h2>
+<div class="outline-text-2" id="text-org42accfe">
+<p>
+This is a (ongoing) workshop to learn foundational programming skills in designing, writing and optimizing software and is Part IA of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to understand future courses in AI. Doing this concurrently with the other 2 parts helps to understand this material better as programming makes it easier to learn math and learning math makes it easier to program, though it's self contained. We will start at scratch and continually do resources which are just above our present skill levels so we're always levelling up and kept interested.
+</p>
+
+<p>
+The notes I take here will get considerably more terse as the courses go on, otherwise they highlight anything that may trip up a beginner.
+</p>
+</div>
+
+<div id="outline-container-org488e998" class="outline-3">
+<h3 id="org488e998">Technical requirements</h3>
+<div class="outline-text-3" id="text-org488e998">
+<p>
+No access to laptops/desktops is assumed, if you must you can complete most of this workshop with just a cheap Android phone. Access to somewhat reliable internet is assumed but since you're reading this page right now you're good to go. You can archive all the content for offline viewing.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94a6aaa" class="outline-3">
+<h3 id="org94a6aaa">Code of Conduct</h3>
+<div class="outline-text-3" id="text-org94a6aaa">
+<p>
+Don't post your solutions anywhere or bother contacting TAs or professors in the courses we're doing they already have a full schedule of tuition paying students waiting for their attention so your emails will just be spam to them. By not posting solutions to the assignments we can ensure future students can get access to these courses because schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6eef2f" class="outline-3">
+<h3 id="orga6eef2f">Study advice</h3>
+<div class="outline-text-3" id="text-orga6eef2f">
+<p>
+Have the attitude you refuse to not know the material and you'll be fine. If you find you have no time to do this, try getting up a little early so you can put in a single hour that day before doing whatever it is you have to do. Repeat this and by the end of the year you will have put in hundreds of hours you never thought you had. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1f92059" class="outline-2">
+<h2 id="org1f92059">Start here</h2>
+<div class="outline-text-2" id="text-org1f92059">
+<p>
+We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
+</p>
+
+<p>
+There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">placement</a> for the course but we're going to skip it, CS019 assumes no background the placement tests are to see if you can keep up with their very difficult first few months of nonstop assignments. We're not under a deadline.   
+</p>
+</div>
+
+<div id="outline-container-org8fb4324" class="outline-3">
+<h3 id="org8fb4324">Materials needed to complete this</h3>
+<div class="outline-text-3" id="text-org8fb4324">
+<p>
+It's possible to complete this course with just a phone
+</p>
+<ul class="org-ul">
+<li>the <a href="https://papl.cs.brown.edu/2019/">book</a> <i>Programming and Programming Languages</i> (free)</li>
+<li>a web browser to view the <a href="https://brown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222559ad35-3fff-4ef1-a2ac-a951011eb91e%22&amp;maxResults=50">lectures</a>
+<ul class="org-ul">
+<li>the lectures are mandatory, cover some extra material from cs019 not in the book</li>
+</ul></li>
+<li>a web browser to use the Pyret online <a href="https://www.pyret.org/set-sail/">interpreter</a></li>
+<li>a google account to save your work if you wish</li>
+<li>the 2018 copy of the <a href="https://cs.brown.edu/courses/cs019/2018/assignments.html">assignments</a> since we are watching the 2018 lectures</li>
+<li>the labs at the bottom of this <a href="https://cs.brown.edu/courses/cs019/2016/assignments.html">page</a> (Big-O, Higher-Order Functions, Streams etc).</li>
+<li>search github for translated notes of the book if needed such as this <a href="https://amiskov.github.io/papl/">Russian</a> translation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6dd74ab" class="outline-3">
+<h3 id="org6dd74ab">Archiving the assignments (optional)</h3>
+<div class="outline-text-3" id="text-org6dd74ab">
+<p>
+If you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
+</p>
+<pre class="example">
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://cs.brown.edu/courses/cs019/2018/assignments.html
+</pre>
+
+<p>
+You may also want to archive the pyret <a href="https://www.pyret.org/docs/latest/index.html">documentation</a> or even the entire <a href="https://papl.cs.brown.edu/2019/index.html">book</a> using the same method. To archive the lectures try a browser plugin that can download video content and save them as you watch or just wait until I upload them to academictorrents or some other archive should Brown kill access to them.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95f2eac" class="outline-2">
+<h2 id="org95f2eac">Lecture 1</h2>
+<div class="outline-text-2" id="text-org95f2eac">
+<p>
+We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what recursion is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
+</p>
+
+<p>
+Notice he shuts down a lot of out of scope questions to not derail the lecture.  
+</p>
+
+<p>
+@34:20 is the private app Exemplar which we don't have access to, and is usually an extra assignment on homework. The idea is that the students are given a task 'write a program that calculates the <a href="https://en.wikipedia.org/wiki/Median">median</a> of data in a list'. They start by writing the tests first before implementing the program, to get you to think about the problem. The exemplar app already has a working (and purposely buggy) implementation of the assignment that they can't see the source code for which is where the 'chaffs' are found (potential bugs caught). We will just have to write a lot of tests ourselves, covering enough cases until we've fleshed out the problem enough that we can go about implementing it. 
+</p>
+
+<p>
+So how can we figure out the student given test cases for the median program? By looking up what a <a href="https://en.wikipedia.org/wiki/Median">median</a> is and the procedure to find it. Reading that article we see that the median is a value that seperates a finite list of numbers, that can be found by arranging them from the smallest to the greatest. If there is an odd number of entries, the middle number that splits the list into two even parts is picked. Otherwise it is defined to be the mean of the two middle values which means add them both and divide by 2, the idea being getting as close as possible to evenly splitting the data. That's why the test for [list: 1, 3, 2] is 2 because your program would reorder the list to be [list: 1, 2, 3] and choose 2 as the median. The Fermi problems he talks about must be released on Piazza which requires campus logins, <a href="https://piazza.com/class">https://piazza.com/class</a> is a kind of wiki/msg forum for courses that encourages anonymous postings so students don't feel embarassed to ask questions. A lot of universities now solely distribute their course materials through it meaning the public doesn't have access anymore. You can find these yourself online anyway by searching for Fermi problems. 
+</p>
+
+<p>
+At the end he mentions the design recipe, as a way to save TAs time, explaining if you show up to office hours for help they will go about writing a template with the student, going through all the various stages and not just giving them an answer. He notes it is totally optional to use the design recipe, but it will help you with the hard assignments and if you're going to office hours with a lot of questions clearly your methods aren't working so why not try their method. If you read that <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/">paper</a> <i>What Help Do Students Seek in TA Office Hours</i> in the beginning of this workshop you'll see statistical results of the outcomes of students who used the design recipe vs those that didn't and their final grades. When we do the first assignment we'll <a href="https://papl.cs.brown.edu/2015/Programming_in_Pyret.html">try it out</a>. 
+</p>
+</div>
+
+
+<div id="outline-container-org588530a" class="outline-3">
+<h3 id="org588530a">Reading chapter 1 and 2</h3>
+<div class="outline-text-3" id="text-org588530a">
+<p>
+Let's work through the <a href="https://papl.cs.brown.edu/2019/index.html">book</a> starting at the beginning, I'm using whatever the latest version is (as of this writing, 2019). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet.
+</p>
+
+<p>
+Chapter 2 <i>Basic Data and Expressions</i> do while you have the pyret interpreter at code.pyret.org open. The examples with "&gt;" in front of them indicates enter this into the <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>, on the right hand side of the pyret code editor like he did in the lecture pressing enter to eval. It's running a read-eval-print-loop (repl) which means exactly what you think it means. It reads input, evaluates it, prints it to the console and then loops back to waiting to read input again. You can increase the font size if you click the lambda skull logo on the top left side. 
+</p>
+
+<p>
+Already we are introduced to built-in functions, such as num-expt. To understand these, let's read the <a href="https://www.pyret.org/docs/latest/Builtins_and_Libraries.html">documentation</a> something we will have to a lot of to complete the assignments, and is good training since for all future courses we'll need to look at their documentation. Note: if you have a small screen, you will need to turn your device to landscape or increase the browser window size in order to see the table of contents in the pyret docs which automatically hide depending on screen size and is annoying UI. Find the number functions <a href="https://www.pyret.org/docs/latest/numbers.html#(part._.Number_.Functions)">documentation</a> by hitting Ctrl-F in your browser or otherwise searching the page for 'num-expt'. Here is how you <a href="https://www.pyret.org/docs/latest/numbers.html#(part._numbers_num-expt)">read</a> it. The "::" syntax refers to type expected, so num-expt(base :: Number, exponent :: Number) -&gt; Number is annotation telling you this built-in requires two inputs: a base and an exponent of type number, and it outputs a number. This will be explained in chapter 3. Repeat looking in the documentation to understand what string-subtring() does. Try changing the examples yourself in the REPL as you go. 
+</p>
+
+<p>
+The last section on roughnums, where irrational numbers like the square root of two return different values is due to floating point approximation. It uses a 'round to nearest' rounding strategy which if you wanted you could learn from this <a href="https://www.youtube.com/watch?v=XVg_tUyyQzA&amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;index=5&amp;t=0s">lecture</a> but it assumes a technical background we don't have yet, namely that you've completed all the other lectures in that playlist and an introductory programming course. The final exercise <i>Do roughnums obey the axioms of arithmetic operators like distributivity, associativity and commutativity?</i> you can tell immediately from the examples in the book that roughnums are always returning different values, so a + b does not equal b + a if the numbers are roughnums. Think to yourself what would happen if you used floating point to encode money in financial software, with unpredictable results if some trade combination resulted in a roughnum. Oops
+</p>
+</div>
+</div>
+
+<div id="outline-container-org883ae04" class="outline-3">
+<h3 id="org883ae04">Reading chapter 3</h3>
+<div class="outline-text-3" id="text-org883ae04">
+<p>
+You spent all of chapter 2 entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. In 3.5 <i>Defining Functions in Steps</i> notice he changes the tests to not just return the expected value, but to return the expected computation, writing out in full what should be happening. The idea of doing this is to help you write the function. 
+</p>
+
+<p>
+I'm assuming you're doing all the exercises. Let's walk through the 'has-overtime' raises exercise.
+</p>
+
+<pre class="example">
+fun has-overtime(hours :: Number) -&gt; Boolean:
+  doc: "Returns true if hours &gt; 40 or returns false. Hours must be a positive number or error is raised"
+  if hours &lt; 0:
+    raise("hours must be greater than zero")
+  else if hours &gt; 40:
+      true
+  else:
+    false
+  end
+where:
+  has-overtime(40) is false
+  has-overtime(40.0001) is true
+  has-overtime(-1) raises "hours must be greater than zero"
+end
+</pre>
+
+<p>
+Notice raise() is a built-in function. Where did I find this? In the pyret language documentation. 
+</p>
+
+<p>
+Let's write some tests for the last exercise hours-to-wages-ot as an example of how writing tests essentially writes the program for you. We have to write a function that consumes hours, an hourly rate, a threshold for OT, and returns anything over that threshold at 1.5 times the rate, adding it to the total pay. 
+</p>
+
+<p>
+first, let's write the parameters:
+</p>
+<pre class="example">
+fun hours-to-wage-ot(hours :: Number, rate :: Number, threshold :: Number) -&gt; Number:
+  doc: "Calculates total pay with all hours over threshold at 1.5 the rate"
+where:
+end
+</pre>
+<p>
+now let's write the tests:
+</p>
+<pre class="example">
+where:
+ hours-to-wage-ot(10, 1, 40) is 10 * 1
+ hours-to-wage-ot(41, 1, 40) is (40 * 1) + (1 * (1 * 1.5))
+ hours-to-wage-ot(50, 20, 48) is (48 * 20) + ((50 - 48) * (20 * 1.5))
+end
+</pre>
+
+<p>
+Keep writing test cases where you don't just write the final expected result, but how you would arrive at that result. Now writing this program is easy, all I did here was copy the last test case, and the first test case to the function body:
+</p>
+<pre class="example">
+fun hours-to-wages-ot(hours :: Number, rate :: Number, threshold :: Number) -&gt; Number:
+  doc: "Calculates pay with all hours over threshold at 1.5 the rate"
+  if hours &gt; threshold:
+    (threshold * rate) + ((hours - threshold) * (rate * 1.5))
+  else:
+    hours * rate
+  end
+where:
+  hours-to-wages-ot(10, 1, 40) is 10 * 1
+  hours-to-wages-ot(41, 1, 40) is (40 * 1) + (1 * (1 * 1.5))
+  hours-to-wages-ot(50, 20, 48) is (48 * 20) + ((50 - 48) * (20 * 1.5))
+end
+
+
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgf836d78" class="outline-3">
+<h3 id="orgf836d78">Reading Chapter 4</h3>
+<div class="outline-text-3" id="text-orgf836d78">
+<p>
+We're tearing through this book. We need to finish up to Chapter 6 <i>Processing Lists</i> to try the first assignment DocDiff, and resume the lectures. This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. 
+</p>
+
+<p>
+I noted the text also expects you to start reading documentation, not telling you how to assign a table to a variable so you can run all those sieve expressions on it. See the docs and change the examples in the text as you go to see what they do:
+</p>
+
+<pre class="example">
+mytable = table: name, age
+  row: "Alice", 30
+  row: "Bob", 40
+  row: "Carol", 25
+end
+
+sieve mytable using name:
+  name == 'Carol'
+end
+
+order mytable:
+  name ascending
+end
+</pre>
+
+<p>
+This is similar to <a href="https://n0x400.1mb.dev/#org268f85c">SQL syntax</a>, where you just declare what you want to do to rows and columns instead of how to do it. 4.2.6 selecting syntax is exactly like SQL syntax. Congrats you know some SQL now. Note in 4.2.7 the <i>principle of orthogonality</i> comment on why they composed these table row operations to be independent of each other so combining them in complex expressions is possible. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd4bcdf" class="outline-3">
+<h3 id="orgbd4bcdf">Reading chapter 5</h3>
+<div class="outline-text-3" id="text-orgbd4bcdf">
+<p>
+TODO
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb0bdb1" class="outline-3">
+<h3 id="orgcb0bdb1">Reading chapter 6</h3>
+<div class="outline-text-3" id="text-orgcb0bdb1">
+<p>
+TODO
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78bc2c4" class="outline-3">
+<h3 id="org78bc2c4">Assignment 1: DocDiff</h3>
+<div class="outline-text-3" id="text-org78bc2c4">
+<p>
+TODO
+This is easier than it looks
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org8c8468a" class="outline-2">
+<h2 id="org8c8468a"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></h2>
+<div class="outline-text-2" id="text-org8c8468a">
+<p>
+We'll do this after CS019, as we need to learn how to build things like parsers when there is no good existing library in python/julia/whatever to do so. We'll do the <a href="http://cs.brown.edu/courses/cs173/2012/Videos/">lectures</a> and 2012 book, and the newer <a href="http://cs.brown.edu/courses/cs173/2017/assignments.html">mystery languages</a> assignments.
+He may even put up a new PLAI by the time we get to it, he'll start writing up the 2020 version in the <a href="https://www.plai.org/">spring</a>..
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

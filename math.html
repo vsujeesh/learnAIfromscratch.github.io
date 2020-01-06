@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2020-01-05 Sun 22:04 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Foundations from Scratch</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+   body {
+    background-color: #ededed;
+    margin: auto;
+    padding: 0.5rem;
+    max-width: 80ch; 
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Math Foundations from Scratch</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc18e0bd">Intro</a>
+<ul>
+<li><a href="#org222d195">Strategy</a></li>
+</ul>
+</li>
+<li><a href="#org7880b21">Start here</a>
+<ul>
+<li><a href="#orgde1be7d">Foundations lectures</a>
+<ul>
+<li><a href="#orge530009">The natural numbers</a></li>
+<li><a href="#org6cc9351">Arithmetic with natural numbers</a></li>
+<li><a href="#org03f1c9f">Laws of arithmetic 2</a></li>
+<li><a href="#orge5e2827">Subtraction and division</a></li>
+<li><a href="#orgeb8ee74">The Hindu-Arabic number system</a></li>
+<li><a href="#orge74a6af">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#orgc4302ce">Division</a></li>
+<li><a href="#org65e352f">Fractions</a></li>
+<li><a href="#orgc531dab">Arithmetic with fractions</a></li>
+<li><a href="#orgecea65c">Laws of arithmetic for fractions</a></li>
+</ul>
+</li>
+<li><a href="#orgb8cd3ab">Analysis I</a></li>
+<li><a href="#org40b748e">2.1 The Peano Axioms</a>
+<ul>
+<li><a href="#org3e37f45">Aside: Induction Lectures</a></li>
+</ul>
+</li>
+<li><a href="#orgfc28dd7">Back to 2.1</a>
+<ul>
+<li><a href="#org286890c">Aside: Induction and Recursion</a></li>
+</ul>
+</li>
+<li><a href="#orgd6022c1">2.2 Addition</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orgc18e0bd" class="outline-2">
+<h2 id="orgc18e0bd">Intro</h2>
+<div class="outline-text-2" id="text-orgc18e0bd">
+<p>
+This is a (ongoing) workshop to learn basic math skills in building and understanding applied models, doing proofs and manipulating enormous matrices and is Part IB of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to satisfy prerequisites in future AI courses. No background is assumed. All the books can be found on <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> or physical copies through <a href="https://www.worldcat.org/">WorldCat.org</a> or whatever book seller so you save your eyes from staring at a screen because a lot of this math will require staring at it trying to unravel the notation. We'll take a mix of courses where the exercises are done with a programming language, and some chapters out of traditional undergrad math books.
+</p>
+</div>
+
+<div id="outline-container-org222d195" class="outline-3">
+<h3 id="org222d195">Strategy</h3>
+<div class="outline-text-3" id="text-org222d195">
+<p>
+We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgormley/courses/606-607-f18/about.html#2-required-background">requirements</a>:
+</p>
+
+<blockquote>
+<p>
+"We’re assuming mathematical maturity: you should be familiar with the idea of derivations and proofs, and of building formal representations for objects given their English language description. We’ll assume that you can take scalar derivatives. We’ll assume that you’ve seen real vector spaces and matrices (linear operators) and know how to reason about things like matrix multiplication and solving systems of linear equations. We’ll assume that you’ve seen sets and data types. We’ll assume that you’ve worked with probabilities (e.g., conditioning, Bayes rule). We will also assume familiarity with coding. The assignments will be in Python."
+</p>
+</blockquote>
+
+<p>
+The other goal is building up to completing Gilbert Strang's new 18.065 <a href="https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/video-lectures/">course</a> from MIT which is a second course in linear algebra, that covers numerical linear algebra and other topics we'll need for deep/machine learning. 
+</p>
+
+<p>
+To get there we will have to teach ourselves how to read and write proofs, how to build models with applied first year calculus, a linear algebra introduction where we will program the exercises and a course on probability. A few resources won't have any provided solutions, we'll be expected to figure it out ourselves. This is actually <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn</a>. In definition-theorem-proof style books the author will show you dozens of proofs per chapter, and then expect you to mimic what they did in order to solve the exercises. In a way you already have the answers in each chapter and you'll see what this means when we start Terence Tao's <i>Analysis I</i>.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org7880b21" class="outline-2">
+<h2 id="org7880b21">Start here</h2>
+<div class="outline-text-2" id="text-org7880b21">
+<p>
+We begin with relearning some basic things that were probably taught incorrectly the first time.
+</p>
+</div>
+
+<div id="outline-container-orgde1be7d" class="outline-3">
+<h3 id="orgde1be7d">Foundations lectures</h3>
+<div class="outline-text-3" id="text-orgde1be7d">
+<p>
+We're going to go through some short YouTube lectures on foundations, then rigorously redo this same material in Terence Tao's <i>Analysis I</i> book. The point of these lectures is to understand 'objects' in math, how everthing is different. We will also see a few direct proofs. These lectures match the material in <i>Analysis I</i> which will be doing. 
+</p>
+</div>
+
+<div id="outline-container-orge530009" class="outline-4">
+<h4 id="orge530009">The natural numbers</h4>
+<div class="outline-text-4" id="text-orge530009">
+<p>
+Presented here is a definition of a mathematical object called a natural number, as a string or sequence of strokes, which are successors of each other. ie: the successor of a number, is another number.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/91c5Ti6Ddio">YouTube</a> - Arithmetic and Geometry Math Foundations 1 *note these videos eventually get better in quality</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6cc9351" class="outline-4">
+<h4 id="org6cc9351">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-org6cc9351">
+<ul class="org-ul">
+<li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
+</ul>
+
+<p>
+An interesting explanation of multiplication.
+</p>
+<ul class="org-ul">
+<li>Laws for addition
+<ul class="org-ul">
+<li>n + m = m + n (Commutative)
+<ul class="org-ul">
+<li>Changing the order of the elements.</li>
+</ul></li>
+<li>(k + n) + m = k + (m + n) (Associative)
+<ul class="org-ul">
+<li>Changing the grouping of the elements.</li>
+</ul></li>
+<li>n + 1 = s(n) (Successor)</li>
+</ul></li>
+
+<li>Laws for multiplication
+<ul class="org-ul">
+<li>nm = mn (Commutative)</li>
+<li>(kn)m = k(nm) (Associative)</li>
+<li>n \(\cdot\) 1 = n (Identity)</li>
+</ul></li>
+
+<li>Note the different notation for multiplication:
+<ul class="org-ul">
+<li>nm</li>
+<li>n \(\cdot\) m</li>
+<li>n \(\times\) m</li>
+</ul></li>
+
+<li>Distributive laws
+<ul class="org-ul">
+<li>k(n + m) = kn + km</li>
+<li>(k + n)m = km + nm</li>
+</ul></li>
+</ul>
+
+
+<p>
+Exercise: Prove why the multiplication and distributive laws work. Since we have no idea what a proof is yet, we're just going to walk through some examples.   
+</p>
+
+<p>
+Identity law: n \(\cdot\) 1 = n.
+</p>
+<ul class="org-ul">
+<li>We are creating n groups of 1. According to our definition of multiplication |||| \(\cdot\) | would be 4 groups of | or ||||. This is still 4.</li>
+</ul>
+
+<p>
+Commutative law: nm = mn. 
+</p>
+<ul class="org-ul">
+<li>||| \(\cdot\) || = || || || or 6. Rearranging this, || \(\cdot\) ||| is ||| ||| which is again 6.</li>
+</ul>
+
+<p>
+Associative law: (kn)m = k(nm).  
+</p>
+<ul class="org-ul">
+<li>If k = |, and n = ||, and m = ||| and parens expressions are evaluated first:
+<ul class="org-ul">
+<li>Left side: (kn)m. We first evaluate (kn) as || (2 groups of 1, the identity law), and 2m is ||| ||| (2 groups of 3) for a total of 6.</li>
+<li>Right side: k(nm): In the parens nm is 2 groups of 3, so ||| |||.  k(6) is the identity law, one group of 6. Thus (kn)m = k(nm).</li>
+</ul></li>
+</ul>
+
+<p>
+Distributive law: (k + n)m = km + nm.
+</p>
+<ul class="org-ul">
+<li>If k = ||||, and n = ||, and m = |:
+<ul class="org-ul">
+<li>Left side: (|||| + ||) is 6, and (6) x 1 is six groups of 1 or 6 according to the identity law.</li>
+<li>Right side: km + nm: 4 groups of one is 4, plus two groups of 1 is 2 (identity law). Answer is again 6.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org03f1c9f" class="outline-4">
+<h4 id="org03f1c9f">Laws of arithmetic 2</h4>
+<div class="outline-text-4" id="text-org03f1c9f">
+<ul class="org-ul">
+<li><a href="https://youtu.be/ScTJRrg8ZfU">YouTube</a> - Arithmetic and Geometry Math Foundations 3</li>
+</ul>
+
+<p>
+Wildberger shows another interpretation of multiplication, and walks through the proofs of the laws by rearranging according to the commutative law. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5e2827" class="outline-4">
+<h4 id="orge5e2827">Subtraction and division</h4>
+<div class="outline-text-4" id="text-orge5e2827">
+<ul class="org-ul">
+<li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
+</ul>
+
+<p>
+Subtraction is the inverse of addition
+</p>
+
+<ul class="org-ul">
+<li>If k + m = n then k = n - m</li>
+<li>Note: n - m is only defined if n &gt; m as we are still in the realm of the Naturals and negative numbers/integers aren't yet defined.</li>
+</ul>
+
+<p>
++, -, are binary operations and can only do 2 operations at a time
+</p>
+
+<ul class="org-ul">
+<li>Laws of Subtraction:
+<ul class="org-ul">
+<li>n - (m + k) = (n - m) - k</li>
+<li>n + (m - k) = (n + m) - k</li>
+<li>n - (m - k) = (n - m) + k</li>
+</ul></li>
+
+<li>Distributive laws of subtraction:
+<ul class="org-ul">
+<li>n(m - k) = nm - nk</li>
+<li>(n - m)k = nk - mk</li>
+</ul></li>
+</ul>
+
+<p>
+Note to remove parens: <a href="https://www.themathpage.com/alg/parentheses.htm">https://www.themathpage.com/alg/parentheses.htm</a> we can just drop the grouping enforcement when using addition (associative law) but must distribute the negative sign, as subtraction is not associative.  
+</p>
+
+<ul class="org-ul">
+<li>n - (m + k) = (n - m) - k
+<ul class="org-ul">
+<li>removing grouping: n - m - k = n - m - k</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeb8ee74" class="outline-4">
+<h4 id="orgeb8ee74">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-orgeb8ee74">
+<ul class="org-ul">
+<li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
+</ul>
+
+<p>
+A simplified Roman numeral system is introduced to abstract our previous notation of one's so we can manipulate bigger numbers. 
+</p>
+<ul class="org-ul">
+<li>Uses powers of 10 
+<ul class="org-ul">
+<li>327 = 3(100) + 2(10) + 7(1)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge74a6af" class="outline-4">
+<h4 id="orge74a6af">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-orge74a6af">
+<ul class="org-ul">
+<li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
+</ul>
+
+<p>
+Multiplication with the Hindu-Arabic notation:
+</p>
+<ul class="org-ul">
+<li>Same laws as before:
+<ul class="org-ul">
+<li>(ab)c = a(bc)</li>
+<li>a(b + c) = ab + ac</li>
+<li>(a + b)(c + d) = ac + ad + bc + bd</li>
+</ul></li>
+</ul>
+
+<p>
+A different way of hand multiplication is shown, taking advantage of the fact the notation is using the distributive law.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4302ce" class="outline-4">
+<h4 id="orgc4302ce">Division</h4>
+<div class="outline-text-4" id="text-orgc4302ce">
+<ul class="org-ul">
+<li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
+</ul>
+
+<p>
+Division is repeated subtraction. Laws of Division:
+</p>
+
+<ul class="org-ul">
+<li>1. \(\frac{k}{m}\) + \(\frac{n}{m}\) = \(\frac{k + n}{m}\)</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>2. \(\frac{k}{m}\) \(\cdot\) \(\frac{n}{l}\) = \(\frac{kn}{ml}\)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>3. \(\frac{k/m}{n}\) = \(\frac{k}{mn}\)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>4.  \(\frac{k}{m/n}\) = \(\frac{kn}{m}\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org65e352f" class="outline-4">
+<h4 id="org65e352f">Fractions</h4>
+<div class="outline-text-4" id="text-org65e352f">
+<ul class="org-ul">
+<li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
+</ul>
+
+<p>
+We're still just using natural numbers.  
+</p>
+
+<ul class="org-ul">
+<li>Def: A fraction, is an ordered pair (m,n) of natural numbers also written m/n.
+<ul class="org-ul">
+<li>Fractions m/n and k/l are equal precisely when ml=nk.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc531dab" class="outline-4">
+<h4 id="orgc531dab">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-orgc531dab">
+<ul class="org-ul">
+<li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
+</ul>
+
+<p>
+Wildberger uses the laws of division to define arithmetic with fractions, and proves these laws. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgecea65c" class="outline-4">
+<h4 id="orgecea65c">Laws of arithmetic for fractions</h4>
+<div class="outline-text-4" id="text-orgecea65c">
+<ul class="org-ul">
+<li><a href="https://youtu.be/uADs1yepIIA">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
+</ul>
+
+<p>
+Wildberger proves the distributive and commutative laws using fractions while still in the natural numbers.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgb8cd3ab" class="outline-3">
+<h3 id="orgb8cd3ab">Analysis I</h3>
+<div class="outline-text-3" id="text-orgb8cd3ab">
+<p>
+Now that you've seen some basic proofs with natural numbers, we're starting Terence Tao's <i>Analysis I</i>. Obtain the <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> from somewhere and skip to chapter 2. I'm using the Springer 2016 3rd edition. This will be an ongoing book we do in parallel with other courses at the same time. We won't be able to solve all the exercises but the point is to think about the problems enough and see enough proofs that we begin to understand <i>mathematical thinking</i>. It will also teach us natural numbers, integers, rationals and the real numbers from absolute scratch.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40b748e" class="outline-3">
+<h3 id="org40b748e">2.1 The Peano Axioms</h3>
+<div class="outline-text-3" id="text-org40b748e">
+<ul class="org-ul">
+<li>The five Axioms
+<ul class="org-ul">
+<li>Axiom 2.1: 0 is a natural number</li>
+<li>Axiom 2.2: If n is a natural number, then n++ is also a natural number</li>
+<li>Axiom 2.3: 0 is not the successor of any natural number</li>
+<li>Axiom 2.4: Different natural numbers must have different successors</li>
+<li>Axiom 2.5: Let P(n) be any property pertaining to a natural number n. Suppose that P(0) is true, and suppose that whenever P(n) is true, P(n++) is also true. Then P(n) is true for every natural number n. 
+<ul class="org-ul">
+<li>What this translates to is: We make an assumption about a property P(n) being true, for example you are looking at a sequence of numbers, and you figure out that there is a pattern where you are able to deduce the next number in the sequence. You call your hypothesis P(n), and you <i>assume</i> this is true meaning you do not show P(n), you show P(0) and P(n+1) are true, and both these form a logical implication meaning that if they are both true, then your initial assumption of P(n) being true holds.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest definition of induction I've seen. P means 'property'. Note the example where no natural number can be 'a half number', because of the increment step n++. The base case of 0 (as per Axiom 2.5, and Axiom 2.1) fails if we are using 'half numbers' instead of natural numbers because if zero is a natural number, and any n++ is another natural number, the only next successive number is 1 it can't be 0.5 or -3 or 3/4. The way you should view these axioms about the natural numbers is:
+</p>
+
+<ul class="org-ul">
+<li>0 is an element of N</li>
+<li>if x is an element of N, then so is x + 1.</li>
+<li>nothing else is an element of N</li>
+</ul>
+</div>
+
+
+
+<div id="outline-container-org3e37f45" class="outline-4">
+<h4 id="org3e37f45">Aside: Induction Lectures</h4>
+<div class="outline-text-4" id="text-org3e37f45">
+<p>
+Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-2-induction/">1. Induction lecture</a></li>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">2. Strong Induction lecture</a> 
+<ul class="org-ul">
+<li>This lecture walks through the construction of an entire theorem.</li>
+</ul></li>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/proofs/tp4-1/">3. Another Induction lecture</a></li>
+</ul>
+
+<p>
+At 06:54 in the 3rd lecture, why is \(r^0\) = 1? Because of the <a href="https://www.mesacc.edu/~scotz47781/mat120/notes/exponents/review/review.html">laws</a> of exponents any base with exponent zero is one. (We will learn all this in the Tao text completely and rigorously). So the sequence \(1 + r + r^2\)&#x2026;is actually \(r^0 + r^1 + r^2 + r^3 ... r^n\). The right hand side \(\frac{r^{0+1}-1}{r-1}\) is also equal to one since anything over itself is 1, and at 06:00 we declared in the induction hypotenuse that the variable r in (r - 1) cannot equal 1 in order to prevent division by zero. There's a difference between r = 1 and the entire expression evaluating to 1. If r = 2, then the entire expression evaluates to 1 again for the base case of n = 0 since it would be \(\frac{2^1 - 1}{2 - 1}\) which is 1/1 or 1. At 09:24 we are just doing simple fraction addition that we've seen Wildberger do:
+</p>
+
+<p>
+\(\frac{r^{n+1}-1}{r-1}\) + \(\frac{r^{n+1}}{1}\) using laws of fraction addition is:  \(\frac{r^{n+1}-1 + (r^{n+1})(r - 1)}{r-1}\) then by distributive law becomes \(\frac{r^{n+1}-1 + (r^{n+2} - r^{n+1})}{r-1}\) and is simplified by subraction of exponents \(\frac{r^{n+1}-1 + (r^{n+1})}{r-1}\) finally simplyfing to what is shown in the lecture: \(\frac{r^{(n+1)+1}-1}{r-1}\).
+</p>
+
+<p>
+The proof is complete since we wanted to show that the sum of r up to \(r^n\), plus it's successor (an additional power of r) is the same as the expression on the right hand side plus an additional power of r.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc28dd7" class="outline-3">
+<h3 id="orgfc28dd7">Back to 2.1</h3>
+<div class="outline-text-3" id="text-orgfc28dd7">
+<p>
+Remark 2.1.15 in Tao's <i>Analysis I</i> and Proposition 2.1.16 (Recursive definitions) all this is saying is after you establish a base case of \(a_0\) = c, you can then define the rest of the sequence \(a_1, a_2, a_n\) to derive their value from previous values. So the value of \(a_2\) depends on the value of \(a_1\). 
+</p>
+</div>
+
+<div id="outline-container-org286890c" class="outline-4">
+<h4 id="org286890c">Aside: Induction and Recursion</h4>
+<div class="outline-text-4" id="text-org286890c">
+<p>
+Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
+</p>
+<ul class="org-ul">
+<li>twoExp(0) = 1</li>
+<li>twoExp(1) = 2</li>
+<li>twoExp(2) = 4</li>
+<li>twoExp(3) = 8</li>
+<li>twoExp(4) = 16</li>
+<li>twoExp(5) = 32</li>
+</ul>
+
+<p>
+You notice the pattern: the result of the next value, is 2x the previous value. twoExp(5) is 2 * twoExp(4). You write an algorithm using the above examples: if input = 0, then return 1, otherwise return 2 * twoExp(n-1). You make an assumption, that the input will always be non-negative. Walking through the program execution, twoExp(3) evaluates:
+</p>
+
+<ul class="org-ul">
+<li>2 * twoExp(3-1)</li>
+<li>2 * (2 * twoExp(2-1))</li>
+<li>2 * (2 * (2 * twoExp(1-1)))</li>
+<li>2 * (2 * (2 * (1))) = \(2^3\)</li>
+</ul>
+
+<p>
+To prove this by induction on n, we try the base case P(0). If n = 0 then twoExp(0) evaluates to 1, which is \(2^0\). What is P(n)? According to our recursive definition, n = 2*P where the value of P = twoExp(n-1) or \(2^{n-1}\). Our inductive step is n, since our algorithm is inductively defined n-1, and we wish to prove the successor n + 1, which is n. \(2*P\) = \(2*2^{n-1}\) or n = \(2^n\). If somehow this isn't clear try an example.
+</p>
+
+<p>
+Note that we didn't have to do anything extra to prove this recursive function. That's because an inductive proof is a recursive function, and a recursive function is an inductive proof.    
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd6022c1" class="outline-3">
+<h3 id="orgd6022c1">2.2 Addition</h3>
+<div class="outline-text-3" id="text-orgd6022c1">
+<p>
+<b>This part and numerous other things will be rewritten, this is an early (1 day old) draft.</b> 
+</p>
+
+<p>
+Definition 2.2.1 the 'n' is inductively/recursively defined, so if you wanted to add 5 to 6, with this notation: (4++)+6 := (4+6)++ or 11.  You may prefer the 'successor' <a href="https://en.wikipedia.org/wiki/Peano_axioms#Addition">notation</a> meaning a function s(n) that increments, so s(n) = n + 1, s(s(n)) = n + 2, etc. Tao notes that 'we can prove easily, using Axioms 2.1, 2.2 and 2.5 (induction) that the sum of two natural numbers is again a natural number'. 
+</p>
+
+<p>
+Lemma 2.2.2 notice how he's using prior definitions. The inductive step of adding n++ to both sides of (n + 0) = n is a straight forward proof when you refer to definition 2.2.1
+</p>
+
+<p>
+Lemma 2.2.3 Prove: n + (m++) = (n + m)++. We are inducting on n, so replace all instances of n with 0 for the base case and show the inductive hypothesis holds that 0 plus the increment of some other number, equals that number, which you do by simply pointing out Lemma 2.2.2. Next is the inductive hypothesis where we assume n + (m++) = (n + m)++ is true, and then prove the n + 1 inductive step: ((n++) + (m++)) = ((n++) + m)++ which by definition 2.2.1 is ((n + m)++)++. You didn't do any fancy distributive law manipulation or anything, you just referred to definition 2.2.1. 
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
