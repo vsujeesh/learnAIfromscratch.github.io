@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-07 Tue 07:30 -->
+<!-- 2020-01-07 Tue 22:29 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -261,44 +261,45 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3bdbdf8">Intro</a>
+<li><a href="#org5778110">Intro</a>
 <ul>
-<li><a href="#orgfb2f155">Strategy</a></li>
+<li><a href="#orgc44b6c8">README</a></li>
+<li><a href="#org148f3a7">What exactly are we doing then</a></li>
 </ul>
 </li>
-<li><a href="#org66b9446">Start here</a>
+<li><a href="#org640e7db">Start here</a>
 <ul>
-<li><a href="#orgaf10a0c">Foundations lectures</a>
+<li><a href="#org8f15680">Foundations lectures</a>
 <ul>
-<li><a href="#org7c49d4b">The natural numbers</a></li>
-<li><a href="#org19a54bf">Arithmetic with natural numbers</a></li>
-<li><a href="#orga4f0262">Laws of arithmetic 2</a></li>
-<li><a href="#orgd07f92a">Subtraction and division</a></li>
-<li><a href="#orgc32a6e9">The Hindu-Arabic number system</a></li>
-<li><a href="#org93eff9b">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org0d770ec">Division</a></li>
-<li><a href="#org0298472">Fractions</a></li>
-<li><a href="#org3812c07">Arithmetic with fractions</a></li>
-<li><a href="#orgd07476c">Laws of arithmetic for fractions</a></li>
+<li><a href="#orgc45bd67">The natural numbers</a></li>
+<li><a href="#org0cb5ee1">Arithmetic with natural numbers</a></li>
+<li><a href="#org7b6a6af">Laws of arithmetic 2</a></li>
+<li><a href="#org27eba42">Subtraction and division</a></li>
+<li><a href="#org5381d3d">The Hindu-Arabic number system</a></li>
+<li><a href="#org245f44e">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#orgfacdc03">Division</a></li>
+<li><a href="#orge624598">Fractions</a></li>
+<li><a href="#org5db0999">Arithmetic with fractions</a></li>
+<li><a href="#org1ff9fea">Laws of arithmetic for fractions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9f50155">Analysis I</a>
+<li><a href="#org7682176">Analysis I</a>
 <ul>
-<li><a href="#org5c65bd5">2.1 The Peano Axioms</a>
+<li><a href="#org08c8ec2">2.1 The Peano Axioms</a>
 <ul>
-<li><a href="#orge2bdcf7">Aside: Induction Lectures</a></li>
+<li><a href="#org1815981">Aside: Induction Lectures</a></li>
 </ul>
 </li>
-<li><a href="#org408546a">Back to 2.1</a>
+<li><a href="#orge399d19">Back to 2.1</a>
 <ul>
-<li><a href="#orgb4852e4">Aside: Induction and Recursion</a></li>
+<li><a href="#org8f17bf6">Aside: Induction and Recursion</a></li>
 </ul>
 </li>
-<li><a href="#org162676a">2.2 Addition</a>
+<li><a href="#orgb636cf2">2.2 Addition</a>
 <ul>
-<li><a href="#orgdac2e66">Corollary</a></li>
+<li><a href="#org66af254">Corollary</a></li>
 </ul>
 </li>
 </ul>
@@ -307,17 +308,34 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org3bdbdf8" class="outline-2">
-<h2 id="org3bdbdf8">Intro</h2>
-<div class="outline-text-2" id="text-org3bdbdf8">
+<div id="outline-container-org5778110" class="outline-2">
+<h2 id="org5778110">Intro</h2>
+<div class="outline-text-2" id="text-org5778110">
 <p>
-This is a (ongoing) workshop to learn basic math skills in building and understanding applied models, doing proofs and manipulating enormous matrices and is Part IB of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to satisfy prerequisites in future AI courses. No background is assumed. All the books can be found on <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> or physical copies through <a href="https://www.worldcat.org/">WorldCat.org</a> or whatever book seller so you save your eyes from staring at a screen because a lot of this math will require staring at it trying to unravel the notation. 
+This is a (ongoing) workshop to learn the math needed for various prereqs in university AI intro courses, and is Part IB of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to satisfy prerequisites in future AI courses. No background is assumed. 
 </p>
 </div>
 
-<div id="outline-container-orgfb2f155" class="outline-3">
-<h3 id="orgfb2f155">Strategy</h3>
-<div class="outline-text-3" id="text-orgfb2f155">
+<div id="outline-container-orgc44b6c8" class="outline-3">
+<h3 id="orgc44b6c8">README</h3>
+<div class="outline-text-3" id="text-orgc44b6c8">
+<p>
+This is experimental. In a regular university <a href="https://www.cs.cmu.edu/bs-in-artificial-intelligence/curriculum">curriculum</a> you would likely take 3 semesters of calculus (essentially the entire Calculus book written by Stewart). You would take a linear algebra class, a probability class, a class about linear regression/intro to stats. You would take an 'intro to proofs' style course, and then yet another proof based class in discrete math covering an enormous grab bag of topics. Every one of these classes you would have TAs/office hours/recitations and peer study groups to help you. 
+</p>
+
+<p>
+We don't have any of this. So we need to do things differently, it's just us by ourselves trying to figure out this material. We also don't have the motivation to complete all that in the beginning. University you have a specific goal: graduate and not lose all your tuition money, and you work towards that single goal of graduation. It what drives you to complete the material, a daily schedule until you graduate. However doing this yourself, there is ample opportunity to just quit at anytime because quitting is consequence free for us. So that's what most people do. 
+</p>
+
+<p>
+Instead, what we're going to do is different. We have the luxury of just needing to directly target a small subfield of AI, specifically university intro courses, we don't have to satisfy a BSc breadth requirement of piles of general courses. Once we get to the level of being able to complete these courses <b>you will have the motivation to complete all the other material</b>. Now you have a goal, research in AI, and are willing to teach yourself measure theory and advanced probability, but right now you don't have the patience for hundreds of boring pages of precalculus that don't challenge you at all.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org148f3a7" class="outline-3">
+<h3 id="org148f3a7">What exactly are we doing then</h3>
+<div class="outline-text-3" id="text-org148f3a7">
 <p>
 We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgormley/courses/606-607-f18/about.html#2-required-background">requirements</a>:
 </p>
@@ -329,32 +347,44 @@ We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgorml
 </blockquote>
 
 <p>
-A few resources won't have any provided solutions, we'll be expected to figure it out ourselves. This is actually <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn</a>. In definition-theorem-proof style books the author will show you dozens of proofs per chapter, and then expect you to mimic what they did in order to solve the exercises. In a way you already have the answers in each chapter and you'll see what this means when we start Terence Tao's <i>Analysis I</i>.
+To get there, we will use an unconventional strategy. We aren't going to go through enormous hand-wavy books on precalculus you likely already did (and hated) in highschool. We're not going to watch a hundred lectures on calculus. We're not going to do any of those 'learn to do proofs' books. We're not going to torture ourselves with pages of logic 'p implies q'. These are all important to know, but we can't start there because we have no reason to complete them. After we learn how to prove things, we will naturally be interested and willing to research ourselves all these books and their dozens of advanced strategies. 
+</p>
+
+<p>
+Instead we are going to learn basic math by proving it at the same time. This way we are doing conceptually simple abstractions incrementally to more difficult abstractions, not being bombarded with a large number of advanced topics and expected to learn how a proof works at the same time. We're also going to learn things like polynomials from the lens of linear algebra from the start. We're also just going to backfill whatever we need on the way, not do entire courses with exception of probability and linear algebra. 
+</p>
+
+<p>
+A few resources won't have any provided solutions, we'll be expected to figure it out ourselves. This is actually <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn</a>. In definition-theorem-proof style books the author will show you dozens of proofs per chapter, and then expect you to mimic what they did in order to solve the exercises. In a way you already have the answers in each chapter and you'll see what this means when we start Terence Tao's <i>Analysis I</i>, and his Linear Algebra notes. 
+</p>
+
+<p>
+Because all this is experimental it could fail, but you'll still know more about math than if you spent the same time in a massive precalculus book. 
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org66b9446" class="outline-2">
-<h2 id="org66b9446">Start here</h2>
-<div class="outline-text-2" id="text-org66b9446">
+<div id="outline-container-org640e7db" class="outline-2">
+<h2 id="org640e7db">Start here</h2>
+<div class="outline-text-2" id="text-org640e7db">
 <p>
 We begin with relearning some basic things that were probably taught incorrectly the first time. 
 </p>
 </div>
 
-<div id="outline-container-orgaf10a0c" class="outline-3">
-<h3 id="orgaf10a0c">Foundations lectures</h3>
-<div class="outline-text-3" id="text-orgaf10a0c">
+<div id="outline-container-org8f15680" class="outline-3">
+<h3 id="org8f15680">Foundations lectures</h3>
+<div class="outline-text-3" id="text-org8f15680">
 <p>
 We're going to go through some short YouTube lectures on foundations, to learn the basics of arithmetic then rigorously redo this same material in Terence Tao's book. We will also see a few direct proofs. The reasons for doing these lectures is he defining things step by step from scratch using the easy framework of the natural numbers so you can understand exactly how fractions and division works before moving on to more complicated things. We'll probably do most of this playlist, matching lectures with other material until we can build up to doing an applied calculus book and understand it.
 </p>
 </div>
 
-<div id="outline-container-org7c49d4b" class="outline-4">
-<h4 id="org7c49d4b">The natural numbers</h4>
-<div class="outline-text-4" id="text-org7c49d4b">
+<div id="outline-container-orgc45bd67" class="outline-4">
+<h4 id="orgc45bd67">The natural numbers</h4>
+<div class="outline-text-4" id="text-orgc45bd67">
 <p>
 Presented here is a definition of a mathematical object called a natural number, as a string or sequence of strokes, which are successors of each other. ie: the successor of a number, is another number.
 </p>
@@ -365,9 +395,9 @@ Presented here is a definition of a mathematical object called a natural number,
 </div>
 </div>
 
-<div id="outline-container-org19a54bf" class="outline-4">
-<h4 id="org19a54bf">Arithmetic with natural numbers</h4>
-<div class="outline-text-4" id="text-org19a54bf">
+<div id="outline-container-org0cb5ee1" class="outline-4">
+<h4 id="org0cb5ee1">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-org0cb5ee1">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -453,9 +483,9 @@ Distributive law: (k + n)m = km + nm.
 </div>
 </div>
 
-<div id="outline-container-orga4f0262" class="outline-4">
-<h4 id="orga4f0262">Laws of arithmetic 2</h4>
-<div class="outline-text-4" id="text-orga4f0262">
+<div id="outline-container-org7b6a6af" class="outline-4">
+<h4 id="org7b6a6af">Laws of arithmetic 2</h4>
+<div class="outline-text-4" id="text-org7b6a6af">
 <ul class="org-ul">
 <li><a href="https://youtu.be/ScTJRrg8ZfU">YouTube</a> - Arithmetic and Geometry Math Foundations 3</li>
 </ul>
@@ -466,9 +496,9 @@ Wildberger shows another interpretation of multiplication, and walks through the
 </div>
 </div>
 
-<div id="outline-container-orgd07f92a" class="outline-4">
-<h4 id="orgd07f92a">Subtraction and division</h4>
-<div class="outline-text-4" id="text-orgd07f92a">
+<div id="outline-container-org27eba42" class="outline-4">
+<h4 id="org27eba42">Subtraction and division</h4>
+<div class="outline-text-4" id="text-org27eba42">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -514,9 +544,9 @@ Note to remove parens: <a href="https://www.themathpage.com/alg/parentheses.htm"
 </div>
 </div>
 
-<div id="outline-container-orgc32a6e9" class="outline-4">
-<h4 id="orgc32a6e9">The Hindu-Arabic number system</h4>
-<div class="outline-text-4" id="text-orgc32a6e9">
+<div id="outline-container-org5381d3d" class="outline-4">
+<h4 id="org5381d3d">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-org5381d3d">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -533,9 +563,9 @@ A simplified Roman numeral system is introduced to abstract our previous notatio
 </div>
 </div>
 
-<div id="outline-container-org93eff9b" class="outline-4">
-<h4 id="org93eff9b">Arithmetic with Hindu-Arabic notation</h4>
-<div class="outline-text-4" id="text-org93eff9b">
+<div id="outline-container-org245f44e" class="outline-4">
+<h4 id="org245f44e">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-org245f44e">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -558,9 +588,9 @@ A different way of hand multiplication is shown, taking advantage of the fact th
 </div>
 </div>
 
-<div id="outline-container-org0d770ec" class="outline-4">
-<h4 id="org0d770ec">Division</h4>
-<div class="outline-text-4" id="text-org0d770ec">
+<div id="outline-container-orgfacdc03" class="outline-4">
+<h4 id="orgfacdc03">Division</h4>
+<div class="outline-text-4" id="text-orgfacdc03">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -591,9 +621,9 @@ Division is repeated subtraction. Laws of Division:
 </div>
 </div>
 
-<div id="outline-container-org0298472" class="outline-4">
-<h4 id="org0298472">Fractions</h4>
-<div class="outline-text-4" id="text-org0298472">
+<div id="outline-container-orge624598" class="outline-4">
+<h4 id="orge624598">Fractions</h4>
+<div class="outline-text-4" id="text-orge624598">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -611,9 +641,9 @@ We're still just using natural numbers.
 </div>
 </div>
 
-<div id="outline-container-org3812c07" class="outline-4">
-<h4 id="org3812c07">Arithmetic with fractions</h4>
-<div class="outline-text-4" id="text-org3812c07">
+<div id="outline-container-org5db0999" class="outline-4">
+<h4 id="org5db0999">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-org5db0999">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -634,9 +664,9 @@ What we are trying to prove is ab' = ba' and cd' = dc'. He introduces some extra
 
 
 
-<div id="outline-container-orgd07476c" class="outline-4">
-<h4 id="orgd07476c">Laws of arithmetic for fractions</h4>
-<div class="outline-text-4" id="text-orgd07476c">
+<div id="outline-container-org1ff9fea" class="outline-4">
+<h4 id="org1ff9fea">Laws of arithmetic for fractions</h4>
+<div class="outline-text-4" id="text-org1ff9fea">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -650,9 +680,9 @@ Wildberger proves the distributive and commutative laws using fractions while st
 </div>
 
 
-<div id="outline-container-org9f50155" class="outline-2">
-<h2 id="org9f50155">Analysis I</h2>
-<div class="outline-text-2" id="text-org9f50155">
+<div id="outline-container-org7682176" class="outline-2">
+<h2 id="org7682176">Analysis I</h2>
+<div class="outline-text-2" id="text-org7682176">
 <p>
 Now that you've seen some basic proofs with natural numbers, we're starting Terence Tao's <i>Analysis I</i>. Obtain the <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> from somewhere and read the preface about how these notes were originally used for a course, and why the proofs are the way they are. Read a little of the introduction like how you can't blindly cancel c from both sides of ac = bc if c = 0, because then the equality makes no sense ie: 2x0 = 3x0, you're dividing by zero (dividing each side by zero to remove c from ac = bc). The rest of the examples in the intro we can't figure out yet since we haven't started calculus. Skip to chapter 2. I'm using the Springer 2016 3rd edition. This will be an ongoing book we do in parallel with other courses at the same time. We won't be able to solve all the exercises but the point is to think about the problems enough and see enough proofs that we begin to understand <i>mathematical thinking</i>. It will also teach us natural numbers, integers, rationals and the real numbers from absolute scratch.
 </p>
@@ -662,9 +692,9 @@ The author explains <a href="https://terrytao.wordpress.com/career-advice/theres
 </p>
 </div>
 
-<div id="outline-container-org5c65bd5" class="outline-3">
-<h3 id="org5c65bd5">2.1 The Peano Axioms</h3>
-<div class="outline-text-3" id="text-org5c65bd5">
+<div id="outline-container-org08c8ec2" class="outline-3">
+<h3 id="org08c8ec2">2.1 The Peano Axioms</h3>
+<div class="outline-text-3" id="text-org08c8ec2">
 <ul class="org-ul">
 <li>The five Axioms
 <ul class="org-ul">
@@ -691,9 +721,9 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </div>
 
 
-<div id="outline-container-orge2bdcf7" class="outline-4">
-<h4 id="orge2bdcf7">Aside: Induction Lectures</h4>
-<div class="outline-text-4" id="text-orge2bdcf7">
+<div id="outline-container-org1815981" class="outline-4">
+<h4 id="org1815981">Aside: Induction Lectures</h4>
+<div class="outline-text-4" id="text-org1815981">
 <p>
 Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </p>
@@ -710,9 +740,9 @@ Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </div>
 
 
-<div id="outline-container-org408546a" class="outline-3">
-<h3 id="org408546a">Back to 2.1</h3>
-<div class="outline-text-3" id="text-org408546a">
+<div id="outline-container-orge399d19" class="outline-3">
+<h3 id="orge399d19">Back to 2.1</h3>
+<div class="outline-text-3" id="text-orge399d19">
 <p>
 Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. In a way Tao kind of broke his circular definition rule here where beginning material will not rely on later material, as he doesn't define what a function is and starts using one. He will tell us exactly what it is eventually but for now we can consider it a rule or mapping. An input maps to a single output. 
 </p>
@@ -735,9 +765,9 @@ The proof notes Axiom 2.3 protects the value \(a_0\) from being redefined by one
 </p>
 </div>
 
-<div id="outline-container-orgb4852e4" class="outline-4">
-<h4 id="orgb4852e4">Aside: Induction and Recursion</h4>
-<div class="outline-text-4" id="text-orgb4852e4">
+<div id="outline-container-org8f17bf6" class="outline-4">
+<h4 id="org8f17bf6">Aside: Induction and Recursion</h4>
+<div class="outline-text-4" id="text-org8f17bf6">
 <p>
 Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
 </p>
@@ -773,9 +803,9 @@ Note that we didn't have to do anything extra to prove this recursive function. 
 </div>
 
 
-<div id="outline-container-org162676a" class="outline-3">
-<h3 id="org162676a">2.2 Addition</h3>
-<div class="outline-text-3" id="text-org162676a">
+<div id="outline-container-orgb636cf2" class="outline-3">
+<h3 id="orgb636cf2">2.2 Addition</h3>
+<div class="outline-text-3" id="text-orgb636cf2">
 <p>
 Let's understand his example for addition. 3 + 5 should be the same as (((5++)++)++) and adding 0 to 5 should just give 5.  
 </p>
@@ -830,9 +860,9 @@ Lemma 2.2.3 Prove: n + (m++) = (n + m)++. We are inducting on n, and keeping m f
 </ul>
 </div>
 
-<div id="outline-container-orgdac2e66" class="outline-4">
-<h4 id="orgdac2e66">Corollary</h4>
-<div class="outline-text-4" id="text-orgdac2e66">
+<div id="outline-container-org66af254" class="outline-4">
+<h4 id="org66af254">Corollary</h4>
+<div class="outline-text-4" id="text-org66af254">
 <p>
 Tao asks why n++ = n + 1 as a consequence from the two proved lemmas. These questions are designed to help you learn this material by figuring it out for yourself to develop this kind of thinking. Compare Lemma 2.2.3 <i>For any natural numbers n and m, n + (m++) = (n + m)++</i> to Definition 2.2.1 where we were able to show m++ = m + 1. Compare Lemma 2.2.2 to the base case in Definition 2.2.1
 </p>
