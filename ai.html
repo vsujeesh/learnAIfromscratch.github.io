@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-06 Mon 20:12 -->
+<!-- 2020-01-09 Thu 22:26 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -230,6 +230,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -239,30 +261,31 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8102c67">Intro</a></li>
-<li><a href="#orga25d9a7">Start here</a>
+<li><a href="#orgbf1b250">Intro</a></li>
+<li><a href="#orgf766f00">Start here</a></li>
+<li><a href="#orgac0f4e3">6.803 Computing Machinery &amp; Intelligence</a>
 <ul>
-<li><a href="#org588f92f">6.803 Computing Machinery &amp; Intelligence</a></li>
+<li><a href="#orgc78b31d">Turing <i>Computing Machinery and Intelligence</i></a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8102c67" class="outline-2">
-<h2 id="org8102c67">Intro</h2>
-<div class="outline-text-2" id="text-org8102c67">
+<div id="outline-container-orgbf1b250" class="outline-2">
+<h2 id="orgbf1b250">Intro</h2>
+<div class="outline-text-2" id="text-orgbf1b250">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga25d9a7" class="outline-2">
-<h2 id="orga25d9a7">Start here</h2>
-<div class="outline-text-2" id="text-orga25d9a7">
+<div id="outline-container-orgf766f00" class="outline-2">
+<h2 id="orgf766f00">Start here</h2>
+<div class="outline-text-2" id="text-orgf766f00">
 <p>
-Let's begin with learning about human intelligence from a computational view point. We'll go through the papers from MIT's <a href="https://courses.csail.mit.edu/6.803/schedule.html">6.803/6.833</a>. First read the <a href="https://courses.csail.mit.edu/6.803/style.html">style guide</a> there's some interesting advice there in writing with better precision (I need this advice). If we're going to write amazing AI software, we should probably at least know what that term means. 
+Let's begin with learning about human intelligence from a computational view point. We'll go through the papers from MIT's <a href="https://courses.csail.mit.edu/6.803/schedule.html">6.803/6.833</a>. First read the <a href="https://courses.csail.mit.edu/6.803/style.html">style guide</a> there's some interesting advice there in writing with better precision (I need this advice). If we're going to write amazing AI software, we should probably at least know what that term means. Note these aren't simple papers you can casually read, some may require amateur research into complexity theory and other topics just to gain an intuitive idea of the paper's subject. 
 </p>
 
 <p>
@@ -272,12 +295,33 @@ You can archive this site for local reading if you have <a href="https://en.wiki
 wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://courses.csail.mit.edu/6.803/schedule.html
 </pre>
 </div>
+</div>
 
-<div id="outline-container-org588f92f" class="outline-3">
-<h3 id="org588f92f">6.803 Computing Machinery &amp; Intelligence</h3>
-<div class="outline-text-3" id="text-org588f92f">
+<div id="outline-container-orgac0f4e3" class="outline-2">
+<h2 id="orgac0f4e3">6.803 Computing Machinery &amp; Intelligence</h2>
+<div class="outline-text-2" id="text-orgac0f4e3">
+</div>
+<div id="outline-container-orgc78b31d" class="outline-3">
+<h3 id="orgc78b31d">Turing <i>Computing Machinery and Intelligence</i></h3>
+<div class="outline-text-3" id="text-orgc78b31d">
 <p>
 A <a href="https://courses.csail.mit.edu/6.803/turing.html">paper</a> by Turing, there is also a <a href="https://www.abelard.org/turpap/turpap.php">html</a> version. 
+</p>
+
+<p>
+I decided to print this paper and read it without looking at a screen. This is extremely comfy when it's late at night and you want to sleep, and bright blue light injected directly into your brain by staring at a large screen before sleeping is never a good idea. You can also take draft notes more easily.
+</p>
+
+<p>
+This is an amazing paper for 1950. "A number of interrogators could be used, and statistics compiled to show how often the right identification was given." This is essentially the present state of AI. Turing mentions a 'desk machine', and 'packets', remember this was 1950.
+</p>
+
+<p>
+The chapter on discrete-state machines, how to read that table? Input is ON or OFF. At the top, the last states are the columns. If the input is off (\(i_0\)), and the last state was q1, then the current state is q2. See this <a href="https://www.youtube.com/watch?v=3aqHmilhxmI">demonstration</a>.
+</p>
+
+<p>
+TODO
 </p>
 </div>
 </div>
