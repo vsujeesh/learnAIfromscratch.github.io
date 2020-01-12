@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-10 Fri 23:33 -->
+<!-- 2020-01-11 Sat 17:09 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Construct Software</title>
@@ -230,6 +230,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -239,40 +261,40 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfe1c812">Intro</a>
+<li><a href="#orgd3b8c6d">Intro</a>
 <ul>
-<li><a href="#org534cd70">Code of Conduct</a></li>
-<li><a href="#org28eb6ab">Study advice</a></li>
+<li><a href="#orge274492">Code of Conduct</a></li>
+<li><a href="#org7db39b7">Study advice</a></li>
 </ul>
 </li>
-<li><a href="#orgec585af">Start here</a>
+<li><a href="#org1e1eef2">Start here</a>
 <ul>
-<li><a href="#org02402d5">Materials needed to complete this</a></li>
-<li><a href="#org934fae2">Archiving the assignments (optional)</a></li>
+<li><a href="#org00d833d">Materials needed to complete this</a></li>
+<li><a href="#orgb487921">Archiving the assignments (optional)</a></li>
 </ul>
 </li>
-<li><a href="#orgb2a5dc5">Lecture 1</a>
+<li><a href="#org0d9a881">Lecture 1</a>
 <ul>
-<li><a href="#org2f66b7a">Reading chapter 1 and 2</a></li>
-<li><a href="#orgb76199f">Reading chapter 3</a></li>
-<li><a href="#orgf5e9f37">Reading chapter 4</a>
+<li><a href="#org4f8030f">Reading chapter 1 and 2</a></li>
+<li><a href="#orgb83cd7e">Reading chapter 3</a></li>
+<li><a href="#org8626b96">Reading chapter 4</a>
 <ul>
-<li><a href="#orgf832f9b">4.2.3 Exercise</a></li>
+<li><a href="#org205cebf">4.2.3 Exercise</a></li>
 </ul>
 </li>
-<li><a href="#orgc4c03d8">Reading chapter 5</a></li>
-<li><a href="#org1d2e1cf">Chapter 6</a></li>
-<li><a href="#org854ad82">Assignment 1: DocDiff</a></li>
+<li><a href="#org84c3195">Reading chapter 5</a></li>
+<li><a href="#org274aba2">Reading chapter 6</a></li>
+<li><a href="#org44cb773">Assignment 1: DocDiff</a></li>
 </ul>
 </li>
-<li><a href="#orgbcb471f"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></a></li>
+<li><a href="#orge70dbef"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgfe1c812" class="outline-2">
-<h2 id="orgfe1c812">Intro</h2>
-<div class="outline-text-2" id="text-orgfe1c812">
+<div id="outline-container-orgd3b8c6d" class="outline-2">
+<h2 id="orgd3b8c6d">Intro</h2>
+<div class="outline-text-2" id="text-orgd3b8c6d">
 <p>
 This is a (ongoing) workshop to learn foundational programming skills in designing, writing and optimizing software and is Part IA of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to understand future courses in AI. Doing this concurrently with the other 2 parts helps to understand this material better as programming makes it easier to learn math and learning math makes it easier to program, though it's self contained. The way these notes work is I do this material with you, and point out anything that may trip up a beginner who then is likely to just give up. The further we go on, the more terse the notes will get because I can then assume a background. 
 </p>
@@ -282,18 +304,18 @@ If you know how to use a web browser you can start this curriculum, no expertise
 </p>
 </div>
 
-<div id="outline-container-org534cd70" class="outline-3">
-<h3 id="org534cd70">Code of Conduct</h3>
-<div class="outline-text-3" id="text-org534cd70">
+<div id="outline-container-orge274492" class="outline-3">
+<h3 id="orge274492">Code of Conduct</h3>
+<div class="outline-text-3" id="text-orge274492">
 <p>
 Don't post your solutions anywhere or bother contacting TAs or professors in the courses we're doing they already have a full schedule of tuition paying students waiting for their attention so your emails will just be spam to them. By not posting solutions to the assignments we can ensure future students can get access to these courses because schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org28eb6ab" class="outline-3">
-<h3 id="org28eb6ab">Study advice</h3>
-<div class="outline-text-3" id="text-org28eb6ab">
+<div id="outline-container-org7db39b7" class="outline-3">
+<h3 id="org7db39b7">Study advice</h3>
+<div class="outline-text-3" id="text-org7db39b7">
 <p>
 Have the attitude you refuse to not know the material and you'll be fine. If you find you have no time to do this, try getting up a little early so you can put in a single hour that day before doing whatever it is you have to do. Repeat this and by the end of the year you will have put in hundreds of hours you never thought you had. 
 </p>
@@ -301,9 +323,9 @@ Have the attitude you refuse to not know the material and you'll be fine. If you
 </div>
 </div>
 
-<div id="outline-container-orgec585af" class="outline-2">
-<h2 id="orgec585af">Start here</h2>
-<div class="outline-text-2" id="text-orgec585af">
+<div id="outline-container-org1e1eef2" class="outline-2">
+<h2 id="org1e1eef2">Start here</h2>
+<div class="outline-text-2" id="text-org1e1eef2">
 <p>
 We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
 </p>
@@ -313,9 +335,9 @@ There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">pl
 </p>
 </div>
 
-<div id="outline-container-org02402d5" class="outline-3">
-<h3 id="org02402d5">Materials needed to complete this</h3>
-<div class="outline-text-3" id="text-org02402d5">
+<div id="outline-container-org00d833d" class="outline-3">
+<h3 id="org00d833d">Materials needed to complete this</h3>
+<div class="outline-text-3" id="text-org00d833d">
 <p>
 It's possible to complete this course with just a phone
 </p>
@@ -334,9 +356,9 @@ It's possible to complete this course with just a phone
 </div>
 </div>
 
-<div id="outline-container-org934fae2" class="outline-3">
-<h3 id="org934fae2">Archiving the assignments (optional)</h3>
-<div class="outline-text-3" id="text-org934fae2">
+<div id="outline-container-orgb487921" class="outline-3">
+<h3 id="orgb487921">Archiving the assignments (optional)</h3>
+<div class="outline-text-3" id="text-orgb487921">
 <p>
 If you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
 </p>
@@ -351,9 +373,9 @@ You may also want to archive the pyret <a href="https://www.pyret.org/docs/lates
 </div>
 </div>
 
-<div id="outline-container-orgb2a5dc5" class="outline-2">
-<h2 id="orgb2a5dc5">Lecture 1</h2>
-<div class="outline-text-2" id="text-orgb2a5dc5">
+<div id="outline-container-org0d9a881" class="outline-2">
+<h2 id="org0d9a881">Lecture 1</h2>
+<div class="outline-text-2" id="text-org0d9a881">
 <p>
 We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what recursion is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
 </p>
@@ -376,9 +398,9 @@ At the end he mentions the design recipe, as a way to save TAs time, explaining 
 </div>
 
 
-<div id="outline-container-org2f66b7a" class="outline-3">
-<h3 id="org2f66b7a">Reading chapter 1 and 2</h3>
-<div class="outline-text-3" id="text-org2f66b7a">
+<div id="outline-container-org4f8030f" class="outline-3">
+<h3 id="org4f8030f">Reading chapter 1 and 2</h3>
+<div class="outline-text-3" id="text-org4f8030f">
 <p>
 Let's work through the <a href="https://papl.cs.brown.edu/2019/index.html">book</a> starting at the beginning, I'm using whatever the latest version is (as of this writing, 2019). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet.
 </p>
@@ -397,9 +419,9 @@ The last section on roughnums, where irrational numbers like the square root of 
 </div>
 </div>
 
-<div id="outline-container-orgb76199f" class="outline-3">
-<h3 id="orgb76199f">Reading chapter 3</h3>
-<div class="outline-text-3" id="text-orgb76199f">
+<div id="outline-container-orgb83cd7e" class="outline-3">
+<h3 id="orgb83cd7e">Reading chapter 3</h3>
+<div class="outline-text-3" id="text-orgb83cd7e">
 <p>
 You spent all of chapter 2 entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. In 3.5 <i>Defining Functions in Steps</i> notice he changes the tests to not just return the expected value, but to return the expected computation, writing out in full what should be happening. The idea of doing this is to help you write the function. These aren't tests to prove it is correct, they are tests to help understand the full domain of the problem so we can write a model for it with software. 
 </p>
@@ -476,9 +498,9 @@ end
 </div>
 </div>
 
-<div id="outline-container-orgf5e9f37" class="outline-3">
-<h3 id="orgf5e9f37">Reading chapter 4</h3>
-<div class="outline-text-3" id="text-orgf5e9f37">
+<div id="outline-container-org8626b96" class="outline-3">
+<h3 id="org8626b96">Reading chapter 4</h3>
+<div class="outline-text-3" id="text-org8626b96">
 <p>
 We need to finish up to Chapter 6 <i>Processing Lists</i> to try the first assignment DocDiff, and resume the lectures. This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. 
 </p>
@@ -508,9 +530,9 @@ This is similar to <a href="https://n0x400.1mb.dev/#org268f85c">SQL syntax</a>, 
 </p>
 </div>
 
-<div id="outline-container-orgf832f9b" class="outline-4">
-<h4 id="orgf832f9b">4.2.3 Exercise</h4>
-<div class="outline-text-4" id="text-orgf832f9b">
+<div id="outline-container-org205cebf" class="outline-4">
+<h4 id="org205cebf">4.2.3 Exercise</h4>
+<div class="outline-text-4" id="text-org205cebf">
 <p>
 <i>Do Now</i> from 4.2.3. We are asked to think about how to write two questions, the first one is given to us so I tried the second which asks <i>Of the songs by a particular artist, which have we played the least often?</i>" using only what we've seen so far: 
 </p>
@@ -572,9 +594,9 @@ select song, playcount from leastPlayed end
 </div>
 
 
-<div id="outline-container-orgc4c03d8" class="outline-3">
-<h3 id="orgc4c03d8">Reading chapter 5</h3>
-<div class="outline-text-3" id="text-orgc4c03d8">
+<div id="outline-container-org84c3195" class="outline-3">
+<h3 id="org84c3195">Reading chapter 5</h3>
+<div class="outline-text-3" id="text-org84c3195">
 <p>
 The term <i>datum</i> has been used repeatedly, look up what it means. In 5.3.1 the description of the properties of an 'anonymous value' abstraction by using numbers and asking what they mean is similar to Terence Tao's <i>Linear Algebra</i> text where he points out that the precise property of numbers that makes them useful is their ability to be interpreted differently depending on context. 
 </p>
@@ -612,23 +634,23 @@ Important: the Exercise in 5.4.2 <i>Implement all the other statistical question
 </div>
 </div>
 
-<div id="outline-container-org1d2e1cf" class="outline-3">
-<h3 id="org1d2e1cf">Chapter 6</h3>
-<div class="outline-text-3" id="text-org1d2e1cf">
+<div id="outline-container-org274aba2" class="outline-3">
+<h3 id="org274aba2">Reading chapter 6</h3>
+<div class="outline-text-3" id="text-org274aba2">
 <p>
-6.1/6.2 you can type all those examples in the REPL to see what they do, like manually linking a list together with link. In 6.3, <i>Another way we can write this (paying attention to the right side)</i> notice the numbers are head plus rest in the examples. 
+6.1/6.2 you can type all those examples in the REPL to see what they do, like manually linking a list together with link. In 6.3.1,"<i>Another way we can write this (paying attention to the right side)"</i> notice the numbers are head of the list plus the rest of the list in the examples. 
 </p>
 
 <p>
-6.3.3 let's walk through the example of my-len(). The (l) in my-len(l) is just a placeholder, the <i>parameter</i> indicating it will consume a list as input. The second line: cases (List) l: the (List) indicates what we're doing cases on (it's type), and the l: is the parameter. We could've also written my-len(inputList) and then written in the second line cases (List) inputList.
+6.3.3 let's walk through the example of my-len(). The (l) in my-len(l) is just a placeholder, the <i>parameter</i>. It consumes a list for input, so they've used the letter l for an example. The second line: <i>cases (List) l</i>: the (List) indicates what we're doing cases on (it's type), and the l: is the parameter from my-len(l), you bind the input to l and now can work with it in the body of the function. We could've also written my-len(inputList) and then written in the second line <i>cases (List) inputList:</i>.
 </p>
 
 <p>
-You read the cases as: if case is empty list, return zero, otherwise if there is a list with something in it, return 1 (the head)  + the rest of the list. Note we are counting it's length, not summing the numbers. The list could also be [list: A, B, C, D] with length 4. 
+You read the cases as: if case is empty list, return zero, otherwise if there is a list with something in it, return 1 (the head) + the rest of the list. Note we are counting it's length, not summing the numbers. The list could also be [list: A, B, C, D] with length 4. 
 </p>
 
 <p>
-link(f, r) can be any variable, such as <i>link(first, rest)</i>. From the book you know why <i>| link(f,r) =&gt; 1 + (the rest of the list</i>) is written here. They didn't tell you but this is recursion and let's evaluate the my-len(l) example in 6.3.3 with an actual list:
+Recall from the first lecture that link(f, r) can be any variable, such as <i>link(first, rest)</i>. From the book you know why <i>| link(f,r) =&gt; 1 + (the rest of the list</i>) is written here. They didn't tell you but this is recursion and let's evaluate the my-len(l) example in 6.3.3 with an actual list:
 </p>
 
 <p>
@@ -677,7 +699,7 @@ end
 </pre>
 
 <p>
-Using an example of [List: 9, 3, 2, 1] this would translate to
+Using an example of [list: 9, 3, 2, 1] this would translate to
 </p>
 <ul class="org-ul">
 <li>f == 9 (first/head of list)</li>
@@ -687,24 +709,104 @@ Using an example of [List: 9, 3, 2, 1] this would translate to
 </ul>
 
 <p>
-This is a big chapter TODO
+6.4.1 the my-str-len(l) function, notice the link function is creating a new list where the length of the current head is linked. We didn't mutate/overwrite the original list, we created a second list. Try stepping through the example to see it's evaluation:
+</p>
+
+<pre class="example">
+fun my-str-len(l):
+  cases (List) l:
+    | empty =&gt; empty
+    | link(f, r) =&gt;
+      link(string-length(f), my-str-len(r))
+  end
+end
+
+randomString = ([list: "hi", "there", "mateys"])
+my-str-len(randomString)
+
+// this evals as the following:
+link(2, link(5, link(6, empty)))
+</pre>
+<ul class="org-ul">
+<li>More thoroughly evals:
+<ul class="org-ul">
+<li>link(string-length("hi"), my-str-len([list: "there", "mateys"]))</li>
+<li>link(2, (link(string-length("there"), my-str-len([list: "mateys"]))))</li>
+<li>link(2, link(5, (link(string-length("mateys"), my-str-len([list: ])))))</li>
+<li>link(2, link(5, link(6, empty)))</li>
+</ul></li>
+</ul>
+
+<p>
+Why is the last link(6, empty)? Because the cases: empty or link(f, r). You evaluate link(f, link(f, link(f,&#x2026; until the list is empty, upon which the cases simply produce 'empty' for r in link(f, r). Note how string-length() built-in function makes this much easier than having to do all the work manually in the body of the cases, you can simply call to it and then link the returned value and continue on.
+</p>
+
+<p>
+6.4.2 is another example of how writing explicit tests how things should be computed, you end up writing the function too, such as 'if number is positive, link it otherwise skip this entry and proceed with rest of list'. Try adding some of your own examples as asked, such as 
+</p>
+<pre class="example">
+check:
+  my-pos-nums([list: -2, 0, 4]) is link(4, empty)
+end
+</pre>
+
+<p>
+Try the assignment DocDiff before continuing. 
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org854ad82" class="outline-3">
-<h3 id="org854ad82">Assignment 1: DocDiff</h3>
+<div id="outline-container-org44cb773" class="outline-3">
+<h3 id="org44cb773">Assignment 1: DocDiff</h3>
+<div class="outline-text-3" id="text-org44cb773">
+<p>
+Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. One way to slog through a long chapter on list functions is to actually implement something using lists, then we can refer to it as reference. In other words it becomes a research project to read that we are more motivated to do since we're trying to complete a task.
+</p>
+
+<p>
+Without knowing what a vector is, we can see from the assignment writeup that it is defined as a list of numbers, that represent the count of letters of the alphabet. [list: "a", "b", "c"] becomes the 'vector' [list: 1, 1, 1, 0] if our vector includes "d", which would be zero since there aren't any d's in the first list. 
+</p>
+
+<p>
+The <a href="https://en.wikipedia.org/wiki/Dot_product#Algebraic_definition">dot product</a> algebraic definition is what we want. Ignore the sigma notation at first and look at the example for [1,3,-5] x [4,-2,-1]. Each index in the first list is multiplied by it's corresponding index in the second list, then those results are added together. To read the sigma notation, a*b = the sum of \(a_ib_i\) starting at index 1 (first element of the list) up to the length of the list (n):
+</p>
+
+<p>
+If a = [1, 3, -5] and b = [4, -2, -1]:
+</p>
+
+<p>
+\(a*b = \displaystyle \sum_{i=1}^3 a_ib_i\) = (\(1_{a1} * 4_{b1})+(3_{a2} * -2_{b2})+(-5_{a3} * -1_{b3})\)
+</p>
+
+<p>
+Now you know how to read sigma notation. Some more requirements are listed, such as ignoring the case (upper/lower) of a letter when counting it's number of occurences. Overlap looks confusing at first but note the exact formula: (vector of one list of words) x (vector of another list of words) divided by the max of both vectors square, or multiplied by themselves. 
+</p>
+
+<p>
+When we write examples, this overlap() function will write itself. What this assignment is asking for is:
+</p>
+
+<p>
+Given two lists of words, of arbitrary length, make a third list that is the total number of unique characters or 'vector space'. So list1 = [list: "cat"]) and list2 = [list: "hat"] should produce a total list3 = [list: "a", "c", "h", "t"] in some kind of sorted order. Then compare each of list1 and list2 to this global unique characters list3, to produce 2 new lists of each, representing the count of all their letters: list1-vector = [list: 1, 1, 0, 1] and list2-vector = [list: 1, 0, 1, 1]. The two new vector lists should be the same size as list3, the total unique characters.
+</p>
+
+<p>
+Take the two new lists, and determine their overlap by a given formula of: dotProduct(list1-vector) x dotProduct(list2-vector) divided by max(square(dotProduct(list1-vector)),square((dotproduct(list2-vector)))).
+</p>
+
+<p>
+TODO: examples
+</p>
 </div>
 </div>
+</div>
 
 
-
-
-
-<div id="outline-container-orgbcb471f" class="outline-2">
-<h2 id="orgbcb471f"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></h2>
-<div class="outline-text-2" id="text-orgbcb471f">
+<div id="outline-container-orge70dbef" class="outline-2">
+<h2 id="orge70dbef"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></h2>
+<div class="outline-text-2" id="text-orge70dbef">
 <p>
 We'll do this after CS019, as we need to learn how to build things like parsers when there is no good existing library in python/julia/whatever to do so. We'll do the <a href="http://cs.brown.edu/courses/cs173/2012/Videos/">lectures</a> and 2012 book, and the newer <a href="http://cs.brown.edu/courses/cs173/2017/assignments.html">mystery languages</a> assignments.
 He may even put up a new PLAI by the time we get to it, he'll start writing up the 2020 version in the <a href="https://www.plai.org/">spring</a>..
