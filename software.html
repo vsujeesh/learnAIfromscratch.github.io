@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-13 Mon 21:51 -->
+<!-- 2020-01-15 Wed 06:55 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Construct Software</title>
@@ -261,41 +261,44 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgac980e1">Intro</a>
+<li><a href="#orgd25d6d9">Intro</a>
 <ul>
-<li><a href="#org2ad09fa">Code of Conduct</a></li>
-<li><a href="#org4d47a3b">Study advice</a></li>
+<li><a href="#orgc773601">Code of Conduct</a></li>
+<li><a href="#org914e8a5">Study advice</a></li>
 </ul>
 </li>
-<li><a href="#org30d8701">Start here</a>
+<li><a href="#org784f86f">Start here</a>
 <ul>
-<li><a href="#orgcdbbebe">Materials needed to complete this</a></li>
-<li><a href="#org3af2b7a">Archiving the assignments (optional)</a></li>
+<li><a href="#orgb35fc96">Materials needed to complete this</a></li>
+<li><a href="#org7693d26">Archiving the assignments (optional)</a></li>
 </ul>
 </li>
-<li><a href="#orga423402">Lecture 1</a>
+<li><a href="#orgf789200">Lecture 1</a>
 <ul>
-<li><a href="#org13bd9a4">Reading chapter 1 and 2</a></li>
-<li><a href="#orgc47d1ba">Reading chapter 3</a></li>
-<li><a href="#orgb11c555">Reading chapter 4</a>
-<ul>
-<li><a href="#orgb4d4abd">4.2.3 Exercise</a></li>
+<li><a href="#org717599e">Reading chapter 1 and 2</a></li>
+<li><a href="#org7964636">Reading chapter 3</a></li>
 </ul>
 </li>
-<li><a href="#org634108b">Reading chapter 5</a></li>
-<li><a href="#org3bd6539">Reading chapter 6</a></li>
-<li><a href="#org1988ea7">Assignment 1: DocDiff</a></li>
+<li><a href="#org6e0841e">Lecture 2</a>
+<ul>
+<li><a href="#org9417024">Reading chapter 4</a>
+<ul>
+<li><a href="#org34674af">4.2.3 Exercise</a></li>
 </ul>
 </li>
-<li><a href="#orgc513a6a">Lecture 2</a></li>
-<li><a href="#orgd79e032"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></a></li>
+<li><a href="#orgd7a9076">Reading chapter 5</a></li>
+<li><a href="#orgf33a853">Reading chapter 6</a></li>
+<li><a href="#org41d73e0">Assignment 1: DocDiff</a></li>
+</ul>
+</li>
+<li><a href="#orgcb8d398"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgac980e1" class="outline-2">
-<h2 id="orgac980e1">Intro</h2>
-<div class="outline-text-2" id="text-orgac980e1">
+<div id="outline-container-orgd25d6d9" class="outline-2">
+<h2 id="orgd25d6d9">Intro</h2>
+<div class="outline-text-2" id="text-orgd25d6d9">
 <p>
 This is a (ongoing) workshop to learn foundational programming skills in designing, writing and optimizing software and is Part IA of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to understand future courses in AI. Doing this concurrently with the other 2 parts helps to understand this material better as programming makes it easier to learn math and learning math makes it easier to program, though it's self contained. The way these notes work is I do this material with you, and point out anything that may trip up a beginner who then is likely to just give up. The further we go on, the more terse the notes will get because I can then assume a background. 
 </p>
@@ -305,18 +308,18 @@ If you know how to use a web browser you can start this curriculum, no expertise
 </p>
 </div>
 
-<div id="outline-container-org2ad09fa" class="outline-3">
-<h3 id="org2ad09fa">Code of Conduct</h3>
-<div class="outline-text-3" id="text-org2ad09fa">
+<div id="outline-container-orgc773601" class="outline-3">
+<h3 id="orgc773601">Code of Conduct</h3>
+<div class="outline-text-3" id="text-orgc773601">
 <p>
-Don't post your solutions anywhere or bother contacting TAs or professors in the courses we're doing they already have a full schedule of tuition paying students waiting for their attention so your emails will just be spam to them. By not posting solutions to the assignments we can ensure future students can get access to these courses because schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.   
+Don't post your solutions to the assignments anywhere, schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4d47a3b" class="outline-3">
-<h3 id="org4d47a3b">Study advice</h3>
-<div class="outline-text-3" id="text-org4d47a3b">
+<div id="outline-container-org914e8a5" class="outline-3">
+<h3 id="org914e8a5">Study advice</h3>
+<div class="outline-text-3" id="text-org914e8a5">
 <p>
 Have the attitude you refuse to not know the material and you'll be fine. If you find you have no time to do this, try getting up a little early so you can put in a single hour that day before doing whatever it is you have to do. Repeat this and by the end of the year you will have put in hundreds of hours you never thought you had. 
 </p>
@@ -324,11 +327,11 @@ Have the attitude you refuse to not know the material and you'll be fine. If you
 </div>
 </div>
 
-<div id="outline-container-org30d8701" class="outline-2">
-<h2 id="org30d8701">Start here</h2>
-<div class="outline-text-2" id="text-org30d8701">
+<div id="outline-container-org784f86f" class="outline-2">
+<h2 id="org784f86f">Start here</h2>
+<div class="outline-text-2" id="text-org784f86f">
 <p>
-We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
+We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one and as a result omits some tedious analytical details you would find in regular classes that you can always research on your own should you later require those things. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
 </p>
 
 <p>
@@ -336,9 +339,9 @@ There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">pl
 </p>
 </div>
 
-<div id="outline-container-orgcdbbebe" class="outline-3">
-<h3 id="orgcdbbebe">Materials needed to complete this</h3>
-<div class="outline-text-3" id="text-orgcdbbebe">
+<div id="outline-container-orgb35fc96" class="outline-3">
+<h3 id="orgb35fc96">Materials needed to complete this</h3>
+<div class="outline-text-3" id="text-orgb35fc96">
 <p>
 It's possible to complete this course with just a phone
 </p>
@@ -357,9 +360,9 @@ It's possible to complete this course with just a phone
 </div>
 </div>
 
-<div id="outline-container-org3af2b7a" class="outline-3">
-<h3 id="org3af2b7a">Archiving the assignments (optional)</h3>
-<div class="outline-text-3" id="text-org3af2b7a">
+<div id="outline-container-org7693d26" class="outline-3">
+<h3 id="org7693d26">Archiving the assignments (optional)</h3>
+<div class="outline-text-3" id="text-org7693d26">
 <p>
 If you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
 </p>
@@ -374,11 +377,11 @@ You may also want to archive the pyret <a href="https://www.pyret.org/docs/lates
 </div>
 </div>
 
-<div id="outline-container-orga423402" class="outline-2">
-<h2 id="orga423402">Lecture 1</h2>
-<div class="outline-text-2" id="text-orga423402">
+<div id="outline-container-orgf789200" class="outline-2">
+<h2 id="orgf789200">Lecture 1</h2>
+<div class="outline-text-2" id="text-orgf789200">
 <p>
-We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what recursion is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
+We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
 </p>
 
 <p>
@@ -394,14 +397,18 @@ So how can we figure out the student given test cases for the median program? By
 </p>
 
 <p>
-At the end he mentions the design recipe, as a way to save TAs time, explaining if you show up to office hours for help they will go about writing a template with the student, going through all the various stages and not just giving them an answer. He notes it is totally optional to use the design recipe, but it will help you with the hard assignments and if you're going to office hours with a lot of questions clearly your methods aren't working so why not try their method. If you read that <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/">paper</a> <i>What Help Do Students Seek in TA Office Hours</i> in the beginning of this workshop you'll see statistical results of the outcomes of students who used the design recipe vs those that didn't and their final grades. This material isn't in the new version of PAPL yet though you can <a href="https://papl.cs.brown.edu/2015/Programming_in_Pyret.html">try it out</a> from an older version. We're not going to use it because it requires going through a lot of <a href="https://htdp.org/2018-01-06/Book/">HtDP</a> so instead we'll just concentrate on writing a lot of examples to define the problem. 
+At the end he mentions the design recipe, as a way to save TAs time, explaining if you show up to office hours for help they will go about writing a template with the student, going through all the various stages and not just giving them an answer. He notes it is totally optional to use the design recipe, but it will help you with the hard assignments and if you're going to office hours with a lot of questions clearly your methods aren't working so why not try their method. If you read that <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/">paper</a> <i>What Help Do Students Seek in TA Office Hours</i> in the beginning of this workshop you'll see statistical results of the outcomes of students who used the design recipe vs those that didn't and their final grades. 
+</p>
+
+<p>
+Templates are covered in the third lecture, it's just a tool to extract 'code for free' from your data and will be useful for some of the assignments. 
 </p>
 </div>
 
 
-<div id="outline-container-org13bd9a4" class="outline-3">
-<h3 id="org13bd9a4">Reading chapter 1 and 2</h3>
-<div class="outline-text-3" id="text-org13bd9a4">
+<div id="outline-container-org717599e" class="outline-3">
+<h3 id="org717599e">Reading chapter 1 and 2</h3>
+<div class="outline-text-3" id="text-org717599e">
 <p>
 Let's work through the <a href="https://papl.cs.brown.edu/2019/index.html">book</a> starting at the beginning, I'm using whatever the latest version is (as of this writing, 2019). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet.
 </p>
@@ -415,14 +422,14 @@ Already we are introduced to built-in functions, such as num-expt. To understand
 </p>
 
 <p>
-The last section on roughnums, where irrational numbers like the square root of two return different values is due to floating point approximation. It uses a 'round to nearest' rounding strategy which if you wanted you could learn from this <a href="https://www.youtube.com/watch?v=XVg_tUyyQzA&amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;index=5&amp;t=0s">lecture</a> but it assumes a technical background we don't have yet, namely that you've completed all the other lectures in that playlist and an introductory programming course. The final exercise <i>Do roughnums obey the axioms of arithmetic operators like distributivity, associativity and commutativity?</i> you can tell immediately from the examples in the book that roughnums are always returning different values, so a + b does not equal b + a if the numbers are roughnums. Think to yourself what would happen if you used floating point to encode money in financial software, with unpredictable results if some trade combination resulted in a roughnum. Oops
+The last section on roughnums, where irrational numbers like the square root of two return different values is due to floating point approximation. It uses a 'round to nearest' rounding strategy which if you wanted you could learn from this <a href="https://www.youtube.com/watch?v=XVg_tUyyQzA&amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;index=5&amp;t=0s">lecture</a> but it assumes a technical background we don't have yet, namely that you've completed all the other lectures in that playlist and an introductory programming course, which we are doing right now. The final exercise <i>Do roughnums obey the axioms of arithmetic operators like distributivity, associativity and commutativity?</i> you can tell immediately from the examples in the book that roughnums are always returning different values, so a + b does not equal b + a if the numbers are roughnums. Think to yourself what would happen if you used floating point to encode money in financial software, with unpredictable results if some trade combination resulted in a roughnum. Oops
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc47d1ba" class="outline-3">
-<h3 id="orgc47d1ba">Reading chapter 3</h3>
-<div class="outline-text-3" id="text-orgc47d1ba">
+<div id="outline-container-org7964636" class="outline-3">
+<h3 id="org7964636">Reading chapter 3</h3>
+<div class="outline-text-3" id="text-org7964636">
 <p>
 You spent all of chapter 2 entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. In 3.5 <i>Defining Functions in Steps</i> notice he changes the tests to not just return the expected value, but to return the expected computation, writing out in full what should be happening. The idea of doing this is to help you write the function. These aren't tests to prove it is correct, they are tests to help understand the full domain of the problem so we can write a model for it with software. 
 </p>
@@ -457,7 +464,7 @@ Let's write some tests for the last exercise hours-to-wages-ot as an example of 
 </p>
 
 <p>
-first, let's write the parameters:
+First, let's write the parameters:
 </p>
 <pre class="example">
 fun hours-to-wage-ot(hours :: Number, rate :: Number, threshold :: Number) -&gt; Number:
@@ -492,36 +499,39 @@ where:
   hours-to-wages-ot(41, 1, 40) is (40 * 1) + (1 * (1 * 1.5))
   hours-to-wages-ot(50, 20, 48) is (48 * 20) + ((50 - 48) * (20 * 1.5))
 end
-
-
-
 </pre>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orgb11c555" class="outline-3">
-<h3 id="orgb11c555">Reading chapter 4</h3>
-<div class="outline-text-3" id="text-orgb11c555">
+<div id="outline-container-org6e0841e" class="outline-2">
+<h2 id="org6e0841e">Lecture 2</h2>
+<div class="outline-text-2" id="text-org6e0841e">
 <p>
-We need to finish up to Chapter 6 <i>Processing Lists</i> to try the first assignment DocDiff, and resume the lectures. This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. 
+Watch the Mon9/10/18 second lecture. Interesting lecture about 'the rainfall problem' and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. Higher-order functions were talked about, like filter and map which are in the pyret documentation. We're going to write our own versions of map, filter and fold after we cover Chapter 6 <i>Processing Lists</i>.
 </p>
+</div>
 
+
+<div id="outline-container-org9417024" class="outline-3">
+<h3 id="org9417024">Reading chapter 4</h3>
+<div class="outline-text-3" id="text-org9417024">
 <p>
-I noted the text also expects you to start reading documentation, not telling you how to assign a table to a variable so you can run all those sieve expressions on it. See the docs and change the examples in the text as you go to see what they do:
+This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. I noted the text also expects you to start reading documentation, not telling you how to assign a table to a variable so you can run all those sieve expressions on it. See the docs and change the examples in the text as you go to see what they do:
 </p>
 
 <pre class="example">
-mytable = table: name, age
+my-table = table: name, age
   row: "Alice", 30
   row: "Bob", 40
   row: "Carol", 25
 end
 
-sieve mytable using name:
+sieve my-table using name:
   name == 'Carol'
 end
 
-order mytable:
+order my-table:
   name ascending
 end
 </pre>
@@ -531,22 +541,22 @@ This is similar to <a href="https://n0x400.1mb.dev/#org268f85c">SQL syntax</a>, 
 </p>
 </div>
 
-<div id="outline-container-orgb4d4abd" class="outline-4">
-<h4 id="orgb4d4abd">4.2.3 Exercise</h4>
-<div class="outline-text-4" id="text-orgb4d4abd">
+<div id="outline-container-org34674af" class="outline-4">
+<h4 id="org34674af">4.2.3 Exercise</h4>
+<div class="outline-text-4" id="text-org34674af">
 <p>
 <i>Do Now</i> from 4.2.3. We are asked to think about how to write two questions, the first one is given to us so I tried the second which asks <i>Of the songs by a particular artist, which have we played the least often?</i>" using only what we've seen so far: 
 </p>
 
 <pre class="example">
-myPlaylist = 
+my-playlist = 
   table: artist, song, playcount
     row: "Lustre", "The First Snow", 10
     row: "Lustre", "Green Worlds", 1
     row: "Lustre", "Welcome Winter", 2
   end
 
-order myPlaylist:
+order my-playlist:
   playcount ascending
 end
 </pre>
@@ -556,14 +566,14 @@ Second Exercise <i>Write the second example as a composition of keep and order o
 </p>
 
 <pre class="example">
-myPlaylist = 
+my-playlist = 
   table: artist, song, playcount
     row: "Lustre", "The First Snow", 10
     row: "Lustre", "Green Worlds", 1
     row: "Lustre", "Welcome Winter", 2
   end
 
-composition = order myPlaylist:
+composition = order my-playlist:
   playcount ascending
 end
 
@@ -577,29 +587,29 @@ Read ahead and play around with this, maybe you just want to return the song nam
 </p>
 
 <pre class="example">
-myPlaylist = 
+my-playlist = 
   table: artist, song, playcount
     row: "Lustre", "The First Snow", 10
     row: "Lustre", "Green Worlds", 1
     row: "Lustre", "Welcome Winter", 2
   end
 
-leastPlayed = order myPlaylist:
+least-played = order my-playlist:
   playcount ascending
 end
 
-select song, playcount from leastPlayed end
+select song, playcount from least-played end
 </pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org634108b" class="outline-3">
-<h3 id="org634108b">Reading chapter 5</h3>
-<div class="outline-text-3" id="text-org634108b">
+<div id="outline-container-orgd7a9076" class="outline-3">
+<h3 id="orgd7a9076">Reading chapter 5</h3>
+<div class="outline-text-3" id="text-orgd7a9076">
 <p>
-The term <i>datum</i> has been used repeatedly, look up what it means. In 5.3.1 the description of the properties of an 'anonymous value' abstraction by using numbers and asking what they mean is similar to Terence Tao's <i>Linear Algebra</i> text where he points out that the precise property of numbers that makes them useful is their ability to be interpreted differently depending on context. 
+In 5.3.1 the description of the properties of an 'anonymous value' abstraction by using numbers and asking what they mean is similar to Terence Tao's <i>Linear Algebra</i> text where he points out that a property of numbers that makes them useful is their ability to be interpreted differently depending on context. 
 </p>
 
 <p>
@@ -610,34 +620,97 @@ A <i>Do Now</i> appears. This means we should actually do it. Try to sieve our p
 include math
 include statistics
 
-myPlaylist = 
+my-playlist = 
   table: artist, song, playcount
     row: "Lustre", "The First Snow", 10
     row: "Lustre", "Green Worlds", 1
     row: "Lustre", "Welcome Winter", 2
   end
 
-playCount = extract playcount from myPlaylist end
-most-played-count = max(playCount)
+play-count = extract playcount from my-playlist end
+most-played-count = max(play-count)
 
-sieve myPlaylist using playcount:
+sieve my-playlist using playcount:
   playcount == most-played-count
 end
 </pre>
 
 <p>
-How would you rewrite this example? Do I need to import both the math and stats library? What about inconsistent variable naming, like most-played-count VS the camelCase style of other variable names. 
+Lists are introduced, which is the datastructure we will be using for a lot of the exercises. 
 </p>
 
 <p>
-Important: the Exercise in 5.4.2 <i>Implement all the other statistical questions posed in Basic Statistical Questions</i> is mandatory. They look easy after reading the book examples, and you definitely will think to yourself 'oh I already know this, time to move on' but you only learn by doing. Remember experts in learning have constructed this book and course and know exactly what you need to do in order to be successful in completing it. There will always be one or two questions in there that will stump you a little and require research to solve the exercise and when you figure it out you will never forget how you found that solution whereas if you skip this exercise, you'll promptly forget in a few days time. I think I completed the upcoming assignment DocDiff a year ago, and I remember exactly how I did it because I had to figure it out myself. That's an entire year of information that flooded my brain and had to be filed, yet I can still retrieve that silly assignment.  
+Important: the Exercise in 5.4.2 <i>Implement all the other statistical questions posed in Basic Statistical Questions</i> is mandatory. They look easy after reading the book examples, and you definitely will think to yourself 'oh I already know this, time to move on' but you only learn by doing. Remember experts in learning have constructed this book and course and know exactly what you need to do in order to be successful in completing it. There will always be one or two questions in there that will stump you a little and require research to solve the exercise and when you figure it out you will never forget how you found that solution whereas if you skip this exercise, you'll promptly forget in a few days time. So let's look at them:
+</p>
+
+<p>
+Note: 'keep-if' isn't a real built-in, it's pseudo-code. Let's go through 5.1 <i>Basic Statistical Questions</i> but using our my-playlist as an example. Note these will all be functions on lists, because we use extract built-in function to remove this information from a table and put it in a list.
+</p>
+
+<pre class="example">
+# notice these import statements so we can use these built-in function
+include math
+include statistics
+import lists as L
+
+my-playlist = 
+  table: artist, song, playcount
+    row: "Lustre", "The First Snow", 10
+    row: "Lustre", "Green Worlds", 1
+    row: "Lustre", "Welcome Winter", 2
+  end
+
+# From 5.1 Basic Stat Questions:
+# Question 1, 2, and 3 are the same: the maximum or largest value
+# To see what these datastructures look like, type 'play-count' into REPL
+play-count = extract playcount from my-playlist end
+most-played-count = max(play-count)
+
+sieve my-playlist using playcount:
+  playcount == most-played-count
+end
+
+# Smallest value in a column 
+least-played-count = min(play-count)
+
+# Number of songs in a playlist
+# Since we have extracted a list, we just need to count the length of the list using a built-in function
+# using: play-count = extract playcount from my-playlist end
+play-count.length()
+
+# All the distinct entries in playcount column
+# Another built-in from lists documentation
+# Notice import lists as L, you can call this something else 'import lists as whatever' 
+L.distinct(play-count)
+
+# The number of distinct entries in a playcount column
+# Asking us: count how many entries are distinct
+# Note we are chaining built-ins together here:
+L.distinct(play-count).length()
+
+# The average, this is another built-in, from this exact chapter
+avg-play-count = mean(play-count)
+
+# Other statistics
+# Just replace x(play-count) with that built-in from the statistics library 
+modes-play-count = modes(play-count)
+median-play-count = median(play-count)
+stdev-play-count = stdev(play-count)
+</pre>
+
+<p>
+That was a little tedious but it taught us how to look up documentation, how to use import or include statements.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3bd6539" class="outline-3">
-<h3 id="org3bd6539">Reading chapter 6</h3>
-<div class="outline-text-3" id="text-org3bd6539">
+<div id="outline-container-orgf33a853" class="outline-3">
+<h3 id="orgf33a853">Reading chapter 6</h3>
+<div class="outline-text-3" id="text-orgf33a853">
+<p>
+We need to understand this chapter to understand the rest of the lectures, and assignments. 
+</p>
+
 <p>
 6.1/6.2 you can type all those examples in the REPL to see what they do, like manually linking a list together with link. In 6.3.1,"<i>Another way we can write this (paying attention to the right side)"</i> notice the numbers are head of the list plus the rest of the list in the examples. 
 </p>
@@ -758,9 +831,9 @@ Try the assignment DocDiff before continuing.
 </div>
 
 
-<div id="outline-container-org1988ea7" class="outline-3">
-<h3 id="org1988ea7">Assignment 1: DocDiff</h3>
-<div class="outline-text-3" id="text-org1988ea7">
+<div id="outline-container-org41d73e0" class="outline-3">
+<h3 id="org41d73e0">Assignment 1: DocDiff</h3>
+<div class="outline-text-3" id="text-org41d73e0">
 <p>
 Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. One way to slog through a long chapter on list functions is to actually implement something using lists, then we can refer to it as reference. In other words it becomes a research project to read that we are more motivated to do since we're trying to complete a task.
 </p>
@@ -871,23 +944,10 @@ A create-vector() function can consume two lists of words, a document and allWor
 </div>
 </div>
 
-<div id="outline-container-orgc513a6a" class="outline-2">
-<h2 id="orgc513a6a">Lecture 2</h2>
-<div class="outline-text-2" id="text-orgc513a6a">
-<p>
-Watch the Mon9/10/18 second lecture. Interesting lecture about 'the rainfall problem' and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. 
-</p>
 
-<p>
-Higher-order functions were talked about, like filter and map which I used in the DocDiff assignment. Most languages have some kind of versions of these functions and these will be covered in full, where we will even <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">write</a> our own versions of map/filter/fold soon. Try them out in the code.pyret.org editor. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgd79e032" class="outline-2">
-<h2 id="orgd79e032"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></h2>
-<div class="outline-text-2" id="text-orgd79e032">
+<div id="outline-container-orgcb8d398" class="outline-2">
+<h2 id="orgcb8d398"><span class="todo TODO">TODO</span> : Brown CS173 <i>Programming Languages</i></h2>
+<div class="outline-text-2" id="text-orgcb8d398">
 <p>
 We'll do this after CS019, as we need to learn how to build things like parsers when there is no good existing library in python/julia/whatever to do so. We'll do the <a href="http://cs.brown.edu/courses/cs173/2012/Videos/">lectures</a> and 2012 book, and the newer <a href="http://cs.brown.edu/courses/cs173/2017/assignments.html">mystery languages</a> assignments.
 He may even put up a new PLAI by the time we get to it, he'll start writing up the 2020 version in the <a href="https://www.plai.org/">spring</a>.
