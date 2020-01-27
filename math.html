@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-22 Wed 16:48 -->
+<!-- 2020-01-26 Sun 21:09 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -261,67 +261,72 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org60c59d1">Intro</a>
+<li><a href="#org244fd5f">Intro</a>
 <ul>
-<li><a href="#orgf092855">README</a></li>
-<li><a href="#org1ceea01">Goal</a></li>
+<li><a href="#org7bf6377">README</a></li>
+<li><a href="#orgf3de4d8">Goal</a></li>
 </ul>
 </li>
-<li><a href="#orge202603">Start here</a>
+<li><a href="#orgafd826b">Start here</a>
 <ul>
-<li><a href="#org43a62c0">Foundations lectures</a>
+<li><a href="#org3795639">Foundations lectures</a>
 <ul>
-<li><a href="#org3e219cc">The natural numbers</a></li>
-<li><a href="#orga25df76">Arithmetic with natural numbers</a></li>
-<li><a href="#org5eecbea">Laws of arithmetic 2</a></li>
-<li><a href="#orgd077849">Subtraction and division</a></li>
-<li><a href="#org21baedf">The Hindu-Arabic number system</a></li>
-<li><a href="#orge8d7240">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org71a6850">Division</a></li>
-<li><a href="#org4fe36d6">Fractions</a></li>
-<li><a href="#org03253af">Arithmetic with fractions</a></li>
-<li><a href="#orgda0c038">Laws of arithmetic for fractions</a></li>
+<li><a href="#orge99cfe9">The natural numbers</a></li>
+<li><a href="#org4b4e2de">Arithmetic with natural numbers</a></li>
+<li><a href="#org00b4df3">Laws of arithmetic 2</a></li>
+<li><a href="#org392c9b8">Subtraction and division</a></li>
+<li><a href="#orgb1f61fd">The Hindu-Arabic number system</a></li>
+<li><a href="#org9121aa9">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org8ffcbd2">Division</a></li>
+<li><a href="#orgab2838a">Fractions</a></li>
+<li><a href="#org4b1bf7d">Arithmetic with fractions</a></li>
+<li><a href="#org5146ef9">Laws of arithmetic for fractions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org859eb94">Mathematical Thinking</a>
+<li><a href="#org601672a">Mathematical Thinking</a>
 <ul>
-<li><a href="#org917f6e6">2.1 The Peano Axioms</a>
+<li><a href="#org5624b63">2.1 The Peano Axioms</a>
 <ul>
-<li><a href="#orgdc9c675">Aside: Induction Lectures</a></li>
+<li><a href="#org760da44">Aside: Induction Lectures</a></li>
 </ul>
 </li>
-<li><a href="#orgd06041b">Back to 2.1</a>
+<li><a href="#org83a26a6">Back to 2.1</a>
 <ul>
-<li><a href="#org2c65e94">Aside: Induction and Recursion</a></li>
+<li><a href="#org18fbfed">Aside: Induction and Recursion</a></li>
 </ul>
 </li>
-<li><a href="#org0b59b47">2.2 Addition</a>
+<li><a href="#org7fcf96d">2.2 Addition</a>
 <ul>
-<li><a href="#orga4afe7d">Corollary</a></li>
-<li><a href="#orgf5d4e99">Exercise 2.2.1</a></li>
+<li><a href="#org4076949">Exercise 2.2.1</a></li>
 </ul>
 </li>
+<li><a href="#org3ad0b12">2.2. cont.</a>
+<ul>
+<li><a href="#org8c9a82d">What we've seen so far</a></li>
+</ul>
+</li>
+<li><a href="#org1a64dfa">2.3 Multiplication</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org60c59d1" class="outline-2">
-<h2 id="org60c59d1">Intro</h2>
-<div class="outline-text-2" id="text-org60c59d1">
+<div id="outline-container-org244fd5f" class="outline-2">
+<h2 id="org244fd5f">Intro</h2>
+<div class="outline-text-2" id="text-org244fd5f">
 <p>
 This is a (ongoing) workshop to learn the math needed for various prereqs in university AI intro courses, and is Part IB of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to satisfy prerequisites in future AI courses. No background is assumed. 
 </p>
 </div>
 
-<div id="outline-container-orgf092855" class="outline-3">
-<h3 id="orgf092855">README</h3>
-<div class="outline-text-3" id="text-orgf092855">
+<div id="outline-container-org7bf6377" class="outline-3">
+<h3 id="org7bf6377">README</h3>
+<div class="outline-text-3" id="text-org7bf6377">
 <p>
-This is experimental. In a regular university <a href="https://www.cs.cmu.edu/bs-in-artificial-intelligence/curriculum">curriculum</a> you would likely take 3 semesters of calculus (essentially the entire calculus book written by Stewart). You would take a linear algebra class, an intro probability class, a class about linear regression/intro to stats. You would take an 'intro to proofs' style course being flooded with advanced strategies, and then yet another proof based class in discrete math covering an enormous grab bag of topics. Every one of these classes you would have TAs/office hours/recitations and peer study groups to help you. 
+This is experimental. In a regular university <a href="https://www.cs.cmu.edu/bs-in-artificial-intelligence/curriculum">curriculum</a> you would likely take 3 semesters of calculus (essentially the entire calculus book written by Stewart). You would take a linear algebra class, an intro probability class, a class about linear regression/intro to stats. You would take an 'intro to proofs' style course being flooded with advanced strategies, and then yet another proof based class in discrete math covering a grab bag of topics. Every one of these classes you would have TAs/office hours/recitations and peer study groups to help you. 
 </p>
 
 <p>
@@ -329,30 +334,27 @@ We don't have any of these resources to help us, or the motivation to complete t
 </p>
 
 <p>
-Instead we are going to learn basic math by proving simple facts about it at the same time. This way we are doing conceptually simple abstractions incrementally to more difficult abstractions and not being bombarded with a large number of advanced topics while expected to learn how a proof works at the same time. We're also going to learn things like polynomials from the lens of linear algebra from the start. We're also just going to backfill whatever we need on the way.
+Instead we are going to learn basic math by proving simple facts about it at the same time. This way we are doing conceptually simple abstractions incrementally to more difficult abstractions and not being bombarded with a large number of advanced topics while expected to learn how a proof works at the same time. 
 </p>
 
 <p>
-A few resources won't have any provided solutions, we'll be expected to figure it out ourselves. This is actually <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn</a>. In definition-theorem-proof style books the author will show you dozens of proofs per chapter, and then expect you to mimic what they did in order to solve the exercises. In a way you already have the answers in each chapter and you'll see what this means when we start Terence Tao's <i>Analysis I</i>, and his Linear Algebra notes. 
-</p>
-
-<p>
-Because all this is experimental it could fail, but you'll still know more about math than if you spent the same time in a massive precalculus book. 
+A few resources won't have any provided solutions, we'll be expected to figure it out ourselves. This is actually <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn</a>. In definition-theorem-proof style books the author will show you dozens of proofs per chapter, and then expect you to mimic what they did in order to solve the exercises. In a way you already have the answers in each chapter and you'll see what this means when we start Terence Tao's <i>Analysis I</i>. 
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org1ceea01" class="outline-3">
-<h3 id="org1ceea01">Goal</h3>
-<div class="outline-text-3" id="text-org1ceea01">
+
+<div id="outline-container-orgf3de4d8" class="outline-3">
+<h3 id="orgf3de4d8">Goal</h3>
+<div class="outline-text-3" id="text-orgf3de4d8">
 <p>
 We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgormley/courses/606-607-f18/about.html#2-required-background">requirements</a>:
 </p>
 
 <blockquote>
 <p>
-"We’re assuming mathematical maturity: you should be familiar with the idea of derivations and proofs, and of building formal representations for objects given their English language description. We’ll assume that you can take scalar derivatives. We’ll assume that you’ve seen real vector spaces and matrices (linear operators) and know how to reason about things like matrix multiplication and solving systems of linear equations. We’ll assume that you’ve seen sets and data types. We’ll assume that you’ve worked with probabilities (e.g., conditioning, Bayes rule). We will also assume familiarity with coding. The assignments will be in Python."
+"We’re assuming mathematical maturity: you should be familiar with the idea of derivations and proofs, and of building formal representations for objects given their English language description. We’ll assume that you can take scalar derivatives. We’ll assume that you’ve seen real vector spaces and matrices (linear operators) and know how to reason about things like matrix multiplication and solving systems of linear equations. We’ll assume that you’ve seen sets and data types. We’ll assume that you’ve worked with probabilities (e.g., conditioning, Bayes rule)"
 </p>
 </blockquote>
 </div>
@@ -361,26 +363,25 @@ We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgorml
 
 
 
-
-<div id="outline-container-orge202603" class="outline-2">
-<h2 id="orge202603">Start here</h2>
-<div class="outline-text-2" id="text-orge202603">
+<div id="outline-container-orgafd826b" class="outline-2">
+<h2 id="orgafd826b">Start here</h2>
+<div class="outline-text-2" id="text-orgafd826b">
 <p>
 We begin with relearning some basic things that were probably taught incorrectly the first time. 
 </p>
 </div>
 
-<div id="outline-container-org43a62c0" class="outline-3">
-<h3 id="org43a62c0">Foundations lectures</h3>
-<div class="outline-text-3" id="text-org43a62c0">
+<div id="outline-container-org3795639" class="outline-3">
+<h3 id="org3795639">Foundations lectures</h3>
+<div class="outline-text-3" id="text-org3795639">
 <p>
 We're going to go through some short YouTube lectures on foundations, to learn the basics of arithmetic then rigorously redo this same material in Terence Tao's book. We will also see a few direct proofs. The reasons for doing these lectures is he defining things step by step from scratch using the easy framework of the natural numbers so you can understand exactly how fractions and division works before moving on to more complicated things. We'll probably do most of this playlist, matching lectures with other material until we can build up to doing an applied calculus book and understand it.
 </p>
 </div>
 
-<div id="outline-container-org3e219cc" class="outline-4">
-<h4 id="org3e219cc">The natural numbers</h4>
-<div class="outline-text-4" id="text-org3e219cc">
+<div id="outline-container-orge99cfe9" class="outline-4">
+<h4 id="orge99cfe9">The natural numbers</h4>
+<div class="outline-text-4" id="text-orge99cfe9">
 <p>
 Presented here is a definition of a mathematical object called a natural number, as a string or sequence of strokes, which are successors of each other. ie: the successor of a number, is another number.
 </p>
@@ -391,9 +392,9 @@ Presented here is a definition of a mathematical object called a natural number,
 </div>
 </div>
 
-<div id="outline-container-orga25df76" class="outline-4">
-<h4 id="orga25df76">Arithmetic with natural numbers</h4>
-<div class="outline-text-4" id="text-orga25df76">
+<div id="outline-container-org4b4e2de" class="outline-4">
+<h4 id="org4b4e2de">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-org4b4e2de">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -479,9 +480,9 @@ Distributive law: (k + n)m = km + nm.
 </div>
 </div>
 
-<div id="outline-container-org5eecbea" class="outline-4">
-<h4 id="org5eecbea">Laws of arithmetic 2</h4>
-<div class="outline-text-4" id="text-org5eecbea">
+<div id="outline-container-org00b4df3" class="outline-4">
+<h4 id="org00b4df3">Laws of arithmetic 2</h4>
+<div class="outline-text-4" id="text-org00b4df3">
 <ul class="org-ul">
 <li><a href="https://youtu.be/ScTJRrg8ZfU">YouTube</a> - Arithmetic and Geometry Math Foundations 3</li>
 </ul>
@@ -492,9 +493,9 @@ Wildberger shows another interpretation of multiplication, and walks through the
 </div>
 </div>
 
-<div id="outline-container-orgd077849" class="outline-4">
-<h4 id="orgd077849">Subtraction and division</h4>
-<div class="outline-text-4" id="text-orgd077849">
+<div id="outline-container-org392c9b8" class="outline-4">
+<h4 id="org392c9b8">Subtraction and division</h4>
+<div class="outline-text-4" id="text-org392c9b8">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -540,9 +541,9 @@ Note to remove parens: <a href="https://www.themathpage.com/alg/parentheses.htm"
 </div>
 </div>
 
-<div id="outline-container-org21baedf" class="outline-4">
-<h4 id="org21baedf">The Hindu-Arabic number system</h4>
-<div class="outline-text-4" id="text-org21baedf">
+<div id="outline-container-orgb1f61fd" class="outline-4">
+<h4 id="orgb1f61fd">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-orgb1f61fd">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -559,9 +560,9 @@ A simplified Roman numeral system is introduced to abstract our previous notatio
 </div>
 </div>
 
-<div id="outline-container-orge8d7240" class="outline-4">
-<h4 id="orge8d7240">Arithmetic with Hindu-Arabic notation</h4>
-<div class="outline-text-4" id="text-orge8d7240">
+<div id="outline-container-org9121aa9" class="outline-4">
+<h4 id="org9121aa9">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-org9121aa9">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -584,9 +585,9 @@ A different way of hand multiplication is shown, taking advantage of the fact th
 </div>
 </div>
 
-<div id="outline-container-org71a6850" class="outline-4">
-<h4 id="org71a6850">Division</h4>
-<div class="outline-text-4" id="text-org71a6850">
+<div id="outline-container-org8ffcbd2" class="outline-4">
+<h4 id="org8ffcbd2">Division</h4>
+<div class="outline-text-4" id="text-org8ffcbd2">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -617,9 +618,9 @@ Division is repeated subtraction. Laws of Division:
 </div>
 </div>
 
-<div id="outline-container-org4fe36d6" class="outline-4">
-<h4 id="org4fe36d6">Fractions</h4>
-<div class="outline-text-4" id="text-org4fe36d6">
+<div id="outline-container-orgab2838a" class="outline-4">
+<h4 id="orgab2838a">Fractions</h4>
+<div class="outline-text-4" id="text-orgab2838a">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -637,9 +638,9 @@ We're still just using natural numbers.
 </div>
 </div>
 
-<div id="outline-container-org03253af" class="outline-4">
-<h4 id="org03253af">Arithmetic with fractions</h4>
-<div class="outline-text-4" id="text-org03253af">
+<div id="outline-container-org4b1bf7d" class="outline-4">
+<h4 id="org4b1bf7d">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-org4b1bf7d">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -660,9 +661,9 @@ What we are trying to prove is ab' = ba' and cd' = dc'. He introduces some extra
 
 
 
-<div id="outline-container-orgda0c038" class="outline-4">
-<h4 id="orgda0c038">Laws of arithmetic for fractions</h4>
-<div class="outline-text-4" id="text-orgda0c038">
+<div id="outline-container-org5146ef9" class="outline-4">
+<h4 id="org5146ef9">Laws of arithmetic for fractions</h4>
+<div class="outline-text-4" id="text-org5146ef9">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -676,11 +677,11 @@ Wildberger proves the distributive and commutative laws using fractions while st
 </div>
 
 
-<div id="outline-container-org859eb94" class="outline-2">
-<h2 id="org859eb94">Mathematical Thinking</h2>
-<div class="outline-text-2" id="text-org859eb94">
+<div id="outline-container-org601672a" class="outline-2">
+<h2 id="org601672a">Mathematical Thinking</h2>
+<div class="outline-text-2" id="text-org601672a">
 <p>
-Now that you've seen some basic proofs with natural numbers, we're starting Terence Tao's <i>Analysis I</i>. Obtain the <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> from somewhere and read the preface about how these notes were originally used for a course, and why the proofs are the way they are instead of being more abstract and elegant like they are in many other analysis texts. Read a little of the introduction like how you can't blindly cancel c from both sides of ac = bc if c = 0, because then the equality makes no sense ie: 2x0 = 3x0, you're dividing by zero to remove c from ac = bc. The rest of the examples in the intro we can't figure out yet since we haven't started calculus. Skip to chapter 2. I'm using the Springer 2016 3rd edition. This will be an ongoing book we do in parallel with other courses at the same time. We won't be able to solve all the exercises but the point is to think about the problems enough and see enough proofs that we begin to understand <i>mathematical thinking</i>. 
+Now that you've seen some basic proofs with natural numbers, we're starting Terence Tao's <i>Analysis I</i>. Obtain the <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> from <a href="https://www.worldcat.org/">WorldCat</a> or <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> and read the preface about how these notes were originally used for a course, and why the proofs are the way they are instead of being more abstract and elegant like they are in many other analysis texts. Read a little of the introduction like how you can't blindly cancel c from both sides of ac = bc if c = 0, because then the equality makes no sense ie: 2x0 = 3x0, you're dividing by zero to remove c from ac = bc. The rest of the examples in the intro we can't figure out yet since we haven't started calculus. Skip to chapter 2. I'm using the Springer 2016 3rd edition. This will be an ongoing book we do in parallel with other courses at the same time. We won't be able to solve all the exercises but the point is to think about the problems enough and see enough proofs that we begin to understand <i>mathematical thinking</i>. 
 </p>
 
 <p>
@@ -688,9 +689,9 @@ The author explains <a href="https://terrytao.wordpress.com/career-advice/theres
 </p>
 </div>
 
-<div id="outline-container-org917f6e6" class="outline-3">
-<h3 id="org917f6e6">2.1 The Peano Axioms</h3>
-<div class="outline-text-3" id="text-org917f6e6">
+<div id="outline-container-org5624b63" class="outline-3">
+<h3 id="org5624b63">2.1 The Peano Axioms</h3>
+<div class="outline-text-3" id="text-org5624b63">
 <ul class="org-ul">
 <li>The five Axioms
 <ul class="org-ul">
@@ -700,13 +701,13 @@ The author explains <a href="https://terrytao.wordpress.com/career-advice/theres
 <li>Axiom 2.4: Different natural numbers must have different successors</li>
 <li>Axiom 2.5: Let P(n) be any property pertaining to a natural number n. Suppose that P(0) is true, and suppose that whenever P(n) is true, P(n++) is also true. Then P(n) is true for every natural number n. 
 <ul class="org-ul">
-<li>What this translates to is: We make an assumption about a property P(n) being true, for example you are looking at a sequence of numbers, and you figure out that there is a pattern where you are able to deduce the next number in the sequence. You call your hypothesis P(n), and you <i>assume</i> this is true meaning you do not show P(n), you show P(0) and P(n+1) are true, and both these form a logical implication meaning that if they are both true, then your initial assumption of P(n) being true holds.</li>
+<li>We make an assumption about a property P(n) being true meaning you do not prove P(n), you prove P(0) and P(n + 1) are true, and both these form a logical implication meaning that if they are both true, then your initial assumption of P(n) being true holds.</li>
 </ul></li>
 </ul></li>
 </ul>
 
 <p>
-Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest definition of induction I've seen. P means 'property'. Note the example where no natural number can be 'a half number', because of the increment step n++. The base case of 0 (as per Axiom 2.5, and Axiom 2.1) fails if we are using 'half numbers' instead of natural numbers because if zero is a natural number, and any n++ is another natural number, the only next successive number is 1 it can't be 0.5 or -3 or 3/4. The way you should view these axioms about the natural numbers is:
+Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest definition of proof by induction I've seen. Note the example where no natural number can be 'a half number', because of the increment step n + 1. The base case of 0 (as per Axiom 2.5, and Axiom 2.1) fails if we are using 'half numbers' instead of natural numbers because if zero is a natural number, and any n++ is another natural number, the only next successive number is 1 it can't be 0.5 or -3 or 3/4. The way you should view these axioms about the natural numbers is:
 </p>
 
 <ul class="org-ul">
@@ -717,9 +718,9 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </div>
 
 
-<div id="outline-container-orgdc9c675" class="outline-4">
-<h4 id="orgdc9c675">Aside: Induction Lectures</h4>
-<div class="outline-text-4" id="text-orgdc9c675">
+<div id="outline-container-org760da44" class="outline-4">
+<h4 id="org760da44">Aside: Induction Lectures</h4>
+<div class="outline-text-4" id="text-org760da44">
 <p>
 Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </p>
@@ -736,15 +737,15 @@ Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </div>
 
 
-<div id="outline-container-orgd06041b" class="outline-3">
-<h3 id="orgd06041b">Back to 2.1</h3>
-<div class="outline-text-3" id="text-orgd06041b">
+<div id="outline-container-org83a26a6" class="outline-3">
+<h3 id="org83a26a6">Back to 2.1</h3>
+<div class="outline-text-3" id="text-org83a26a6">
 <p>
-Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. In a way Tao kind of broke his preface rule here where beginning material will not rely on later material, as he doesn't define what a function is and starts using one. He will tell us exactly what it is eventually but for now we can consider it a rule or mapping. If you read the 3.3 functions intro Tao will explain what they are though using sets. What's a set? Read 3.1.1. What is \(a_0\)? It's an index. Imagine a finite sequence: 1, 2, 3. Imagine indexing them: \(1_0\), \(2_1\), \(3_2\) so you can refer to each entry by it's index instead of it's value. (What's a finite <a href="https://youtu.be/LCvk0Qolt68">sequence?</a>)   
+Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. Tao uses a function but it's definition can be read in the 3.3 functions intro. What is \(a_0\)? It's an index. Imagine a finite sequence: 1, 2, 3. Imagine indexing them: \(1_0\), \(2_1\), \(3_2\) so you can refer to each entry by it's index instead of it's value. (What's a finite <a href="https://youtu.be/LCvk0Qolt68">sequence?</a>)   
 </p>
 
 <p>
-This proposition is using a new function every time, I'm guessing to avoid sequences where they could repeat ie 0, 1, 1, 2, 3, 4&#x2026;. 
+This proposition is using a new function (a rule that maps from one input to one output) every time, I'm guessing to avoid sequences where they could repeat ie 0, 1, 1, 2, 3 
 </p>
 
 <p>
@@ -761,9 +762,9 @@ The proof notes Axiom 2.3 protects the value \(a_0\) from being redefined by one
 </p>
 </div>
 
-<div id="outline-container-org2c65e94" class="outline-4">
-<h4 id="org2c65e94">Aside: Induction and Recursion</h4>
-<div class="outline-text-4" id="text-org2c65e94">
+<div id="outline-container-org18fbfed" class="outline-4">
+<h4 id="org18fbfed">Aside: Induction and Recursion</h4>
+<div class="outline-text-4" id="text-org18fbfed">
 <p>
 Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
 </p>
@@ -799,9 +800,9 @@ Note that we didn't have to do anything extra to prove this recursive function. 
 </div>
 
 
-<div id="outline-container-org0b59b47" class="outline-3">
-<h3 id="org0b59b47">2.2 Addition</h3>
-<div class="outline-text-3" id="text-org0b59b47">
+<div id="outline-container-org7fcf96d" class="outline-3">
+<h3 id="org7fcf96d">2.2 Addition</h3>
+<div class="outline-text-3" id="text-org7fcf96d">
 <p>
 Let's understand his example for addition. 3 + 5 should be the same as (((5++)++)++) and adding 0 to 5 should just give 5.  
 </p>
@@ -854,39 +855,31 @@ Lemma 2.2.3 Prove: n + (m++) = (n + m)++. We are inducting on n, and keeping m f
 <li>right side is ((n + m)++)++ because of 2.2.1</li>
 </ul></li>
 </ul>
-</div>
 
-<div id="outline-container-orga4afe7d" class="outline-4">
-<h4 id="orga4afe7d">Corollary</h4>
-<div class="outline-text-4" id="text-orga4afe7d">
 <p>
-Tao asks why n++ = n + 1 as a consequence from the two proved lemmas. These questions are designed to help you learn this material by figuring it out for yourself to develop this kind of thinking. Compare lemma 2.2.3 <i>For any natural numbers n and m, n + (m++) = (n + m)++</i> to definition 2.2.1 where we were able to show m++ = m + 1. Compare lemma 2.2.2 to the base case in definition 2.2.1
+Corollary:
+Tao asks why n++ = n + 1 is a consequence from the two proved lemmas. Compare lemma 2.2.3 <i>For any natural numbers n and m, n + (m++) = (n + m)++</i> to definition 2.2.1 where we were able to show m++ = m + 1. Compare lemma 2.2.2 to the base case in definition 2.2.1
 </p>
 
 <p>
-How would you rewrite 2.2.1 for a new, second definition of n++ = n + 1 like he did for m++ = m + 1 so we can now show n++ = n + 1?
+Proposition 2.2.4 (Addition is commutative) the base case is straight forward. We use the definition of addition, and lemma 2.2.2 to rewrite the successor of n to be (n + m)++ = (m + n)++ and now it is in the form of the inductive hypothesis, so we can use our hypothesis of n + m = m + n to show that (m + n)++ is the same as (n + m)++. Proposition 2.2.6 is similar. 
 </p>
+</div>
 
+<div id="outline-container-org4076949" class="outline-4">
+<h4 id="org4076949">Exercise 2.2.1</h4>
+<div class="outline-text-4" id="text-org4076949">
 <p>
-Proposition 2.2.4 (Addition is commutative) the base case is straight forward. The inductive part is different, we use the definition of addition, and lemma 2.2.2 to rewrite the successor of n to be (n + m)++ = (m + n)++ and now it is in the form of the inductive hypothesis, so we can use our hypothesis of n + m = m + n to show that (m + n)++ is the same as (n + m)++. Proposition 2.2.6 is similar. 
+Proposition 2.2.5 (Addition is associative) what we want to prove is (a + b) + c = a + (b + c)
+Obtain the inductive template from the beginning of the chapter and try this yourself. 
 </p>
 </div>
-</div>
-
-<div id="outline-container-orgf5d4e99" class="outline-4">
-<h4 id="orgf5d4e99">Exercise 2.2.1</h4>
-<div class="outline-text-4" id="text-orgf5d4e99">
-<p>
-Proposition 2.2.5 (Addition is associative) what we want to prove is (a + b) + c = a + (b + c). You don't have to be able to do these exercises, just try them and see if you can mimic what the author has been doing. Let's grab the inductive template and fill it in.
-</p>
-</div>
-
 
 <ul class="org-ul">
-<li><a id="org13034d7"></a>Base Case<br>
-<div class="outline-text-5" id="text-org13034d7">
+<li><a id="orgc501d7a"></a>Base Case<br>
+<div class="outline-text-5" id="text-orgc501d7a">
 <p>
-What is the base case? We want to show that even if a natural number is inside or outside brackets, it will have the same result when added together. We could pick b, then it would be (a + 0) + c = a + (0 + c) and from lemma 2.2.2/definition of addition, we would know this to be a + c = a + c but that doesn't seem to capture what we're trying to prove, and all of Tao's previous base cases we've seen tried to show what he was trying to prove not a trick to make both sides equal. Instead let's pick c or a, as on each side of the equality they are either inside the bracket, or outside it. 
+What is the base case? We want to show that even if a natural number is inside or outside brackets, it will have the same result when added together. Let's pick c or a, as on each side of the equality they are either inside the bracket, or outside it. 
 </p>
 
 <p>
@@ -905,16 +898,16 @@ What is the base case? We want to show that even if a natural number is inside o
 </div>
 </li>
 
-<li><a id="orgf15fc54"></a>IH<br>
-<div class="outline-text-5" id="text-orgf15fc54">
+<li><a id="orge5b0100"></a>IH<br>
+<div class="outline-text-5" id="text-orge5b0100">
 <p>
-The inductive hypothesis we assume addition is associative, and that (a + b) + c = a + (b + c). Whenever you move around your proof in the inductive step, if it is either in form (a + b) + c or a + (b + c) you can change them for each other. 
+The inductive hypothesis we assume addition is associative, and that (a + b) + c = a + (b + c). If any steps of your proof are either in form (a + b) + c or a + (b + c) you can change them for each other by the IH.  
 </p>
 </div>
 </li>
 
-<li><a id="org5542568"></a>Inductive step<br>
-<div class="outline-text-5" id="text-org5542568">
+<li><a id="orga7e9f8f"></a>Inductive step<br>
+<div class="outline-text-5" id="text-orga7e9f8f">
 <p>
 There's a few ways to show this. I'm just going to move stuff around randomly and you can see where the proof is:
 </p>
@@ -948,14 +941,21 @@ There's a few ways to show this. I'm just going to move stuff around randomly an
 <p>
 You should try this yourself, move everything around until you understand exactly how commutativity and associativity work. See if you can get it to a form where you can use the inductive hypothesis, permute them around some more until this starts to make sense. Remember to think as (n + m) as one value, so (n++) + (n + m) is (n + (n + m))++ and (n + (n + m)) can be rewritten according to commutative property ((n + m) + n).
 </p>
+</div>
+</li>
+</ul>
+</div>
+</div>
 
-
+<div id="outline-container-org3ad0b12" class="outline-3">
+<h3 id="org3ad0b12">2.2. cont.</h3>
+<div class="outline-text-3" id="text-org3ad0b12">
 <p>
-Proposition 2.2.6 (Cancellation Law) uses Axiom 2.4 which states '<i>Different natural numbers must have different successors; i.e., if n, m are natural numbers and n = m, then n++ = m++. Equivalently, if n++ = m++, then we must have n = m</i>'. So (a + b)++ = (a + c)++ is = a + b = a + c by the line <i>if n++ = m++, then n = m</i> in axiom 2.4. We dropped down from the successor by using axiom 2.4 and can now just use our inductive hypothesis of the cancellation law for a to show b = c and close the induction. Notice how this is basically logical detective work, you look around for axioms and prior established lemmas and proofs to help you write a new proof. 
+Proposition 2.2.6 (Cancellation Law) uses Axiom 2.4 which states '<i>Different natural numbers must have different successors; i.e., if n, m are natural numbers and n = m, then n++ = m++. Equivalently, if n++ = m++, then we must have n = m</i>'. So (a + b)++ = (a + c)++ is = a + b = a + c by the line <i>if n++ = m++, then n = m</i> in axiom 2.4. We dropped down from the successor by using axiom 2.4 and can now just use our inductive hypothesis of the cancellation law for a to show b = c and close the induction. . 
 </p>
 
 <p>
-Lemma 2.2.10 has an exercise where induction is suggested. For the base case it's clear we can't use a, since (b++) = 0 would violate Axiom 2.3 that zero is not the successor of any natural number. So it must be b, (0++) = a, which by the definition of addition tells us (0++) = 1, which confirms our test that 'there exists exactly one natural number who's successor is a' since if a is 1, it can only be (0)++. This is already true by Axiom 2.4 where different natural numbers have different successors, and if you induct on b then you'll just end up with the definition of addition (b++)++ = a.  
+Lemma 2.2.10 has an exercise where induction is suggested. For the base case it's clear we can't use a, since (b++) = 0 would violate Axiom 2.3 that zero is not the successor of any natural number. So it must be b, (0++) = a, which by the definition of addition tells us (0++) = 1, which confirms our base case test that 'there exists exactly one natural number who's successor is a' since if a is 1, it can only be (0)++. This is already true by Axiom 2.4 where different natural numbers have different successors, and if you induct on b then you'll just end up with the definition of addition (b++)++ = a.  
 </p>
 
 <p>
@@ -963,7 +963,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 </p>
 
 <p>
-Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for natural numbers. Here I will show how you can 'reverse' a lemma or other proved proposition.
+Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for natural numbers. Here I will show how you can 'reverse' a lemma or other proved proposition, none of this is a real proof just notes on moving through steps to understand the problem then after write a proof in the style Tao has been teaching us.   
 </p>
 
 <p>
@@ -971,22 +971,18 @@ Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for nat
 </p>
 <ul class="org-ul">
 <li>Reflexive property is that any natural number is equal to itself.</li>
-</ul>
-<ul class="org-ul">
-<li>We want to show order is reflexive: a &gt;= a</li>
-<li>a = a + n (definition 2.2.11 of ordering of natural numbers)</li>
+<li>We want to show order is reflexive: a \(\ge\) a</li>
+<li>a = a + n (def 2.2.11 of ordering of natural numbers)</li>
 <li>From lemma 2.2.2 we know that a + 0 = a and so a = a and is reflexive</li>
-<li>By definition 2.2.11 we also have a =&lt; a</li>
+<li>By definition 2.2.11 we also have a \(\ge\) a</li>
 </ul>
 <p>
 <b>Transitive order property</b>
 </p>
 <ul class="org-ul">
-<li>if a ≥ b and b ≥ c, then a ≥ c</li>
-</ul>
-<ul class="org-ul">
-<li>Inductive method: If a = b + 0, b = c + 0, and a = c + 0, then we have Axiom 2.4 and transitivity (equality) holds.</li>
-<li>Other method: Remember Wildberger manipulating symbols in his proofs? This is why I made you watch those videos:</li>
+<li>a \(\ge\) b and b \(\ge\) c, then a \(\ge\) c</li>
+<li>If a = b + 0, b = c + 0, and a = c + 0, then we have lemma 2.2.2 and transitivity (equality) holds with a = b, b = c and a = c.</li>
+<li>Substitution: Remember Wildberger substitution method in his proofs?</li>
 <li>a = b + n</li>
 <li>b = c + n
 <ul class="org-ul">
@@ -994,24 +990,22 @@ Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for nat
 </ul></li>
 <li>a = (c + n) + n</li>
 <li>a = c + (n++)</li>
-<li>By lemma 2.2.10 we have a = c + m since b++ = some natural number. 
+<li>By lemma 2.2.10 we have a = c + m since b++ = some positive natural number. 
 <ul class="org-ul">
-<li>By definition 2.2.11 we have a &gt;= c + m and proof is done.</li>
+<li>By definition 2.2.11 a = c + m is a \(\ge\) c + m</li>
 </ul></li>
-<li>To make this more clear, could use: a = b + m, b = c + n:</li>
-<li>a &gt;= (c + n) + m</li>
-<li>a &gt;= c + (m + n) and here point out which corollary/lemma gives us the property that a nat plus a nat = another nat, then you have a = c + number, and once again definition 2.2.11.</li>
+<li>To make this more clear: a = b + m and b = c + n:</li>
+<li>a \(\ge\) (c + n) + m (substitute c + n for b)</li>
+<li>a \(\ge\)  c + (m + n) and here point out which axiom/def/corollary/lemma gives us the property that a nat plus a nat = another nat, then you have a = c + number, and once again definition 2.2.11</li>
 </ul>
 <p>
 <b>Anti-symmetric order</b>
 </p>
 <ul class="org-ul">
-<li>if a &gt;= b and b &gt;= a then a = b</li>
-</ul>
-<ul class="org-ul">
-<li>a = b + n and b = a + n then:</li>
-<li>a = b is b + n = a + n which is b = a by cancellation law</li>
-<li>More exact method: show a = b not b = a:</li>
+<li>a \(\ge\) b and b \(\ge\) a then a = b</li>
+<li>a = b + n and b = a + n by 2.2.11</li>
+<li>a = b by substitution is b + n = a + n which is b = a by cancellation law</li>
+<li>Another method: show a = b:</li>
 <li>a = b + m by 2.2.11</li>
 <li>b = a + n by 2.2.11</li>
 <li>Substitute b for (a + n):</li>
@@ -1026,54 +1020,52 @@ Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for nat
 <b>Addition preserves order</b>
 </p>
 <ul class="org-ul">
-<li>a &gt;= b iff a + c &gt;= b + c</li>
-</ul>
-<ul class="org-ul">
+<li>a \(\ge\) b iff a + c \(\ge\) b + c</li>
 <li>a + c = b + n + c by 2.2.11</li>
-<li>a = b + n or ordered is preserved a &gt;= b by cancellation law</li>
-<li>More exact method: show that a + c &gt;= b + c</li>
+<li>a = b + n by cancellation law and a \(\ge\) b by 2.2.11</li>
+<li>Another method: a + c \(\ge\) b + c</li>
 <li>a + c = b + n + c by 2.2.11</li>
 <li>a + c = b + c + n (commutative law)</li>
-<li>a + c = (b + c) + n (associative law)
+<li>(a + c) = (b + c) + n (associative law)
 <ul class="org-ul">
-<li>2.2.11 this is a + c &gt;= b + c</li>
-</ul></li>
-<li>Now show that a + c &gt;= b + c which just ends up cancellation law again and a = b.</li>
-</ul>
-<p>
-<b>a &lt; b iff a++ =&lt; b</b>
-</p>
-<ul class="org-ul">
-<li>(a++) + n = b (def ordering of natural numbers)</li>
-<li>(a + n)++ = b (def of addition)
-<ul class="org-ul">
-<li>lemma 2.2.10 there exists exactly one number such that it's successor can = b, so a &lt; b.</li>
+<li>Per 2.2.11 this is nat number = nat number + another number or a \(\ge\) b</li>
 </ul></li>
 </ul>
 
 <p>
-Tao probably doesn't approve of that proof, let's try a more thorough method:
+<b>a &lt; b iff a++ \(\le\) b</b>
+</p>
+<ul class="org-ul">
+<li>b = (a++) + n (def ordering of natural numbers)</li>
+<li>b = (a + n)++ (def of addition)
+<ul class="org-ul">
+<li>successor of another number cannot be itself, so b does not equal a and by 2.2.11 a &lt; b</li>
+</ul></li>
+</ul>
+
+<p>
+We skipped steps, Tao is more thorough so let's try it again:
 </p>
 
 <ul class="org-ul">
-<li>Prove first a++ &lt;= b:</li>
+<li>a \(\lt\) b:</li>
 <li>b = a + n and n does not equal zero (2.2.11)</li>
 <li>Since n must be a positive natural number by 2.2.7 and 2.2.11:</li>
 <li>b = a + (n++)
 <ul class="org-ul">
-<li>to ensure not zero, also this is lemma 2.2.10 since (a + n)++ = b</li>
+<li>def of a positive natural lemma 2.2.10</li>
 </ul></li>
 <li>b = a + (n + 1) (corollary from 2.2.2/2.2.3)</li>
 <li>b = a + (1 + n ) (commutative law)</li>
 <li>b = (a + 1) + n (associative law, grouping doesn't matter for addition)</li>
 <li>b = (a++) + n by previous corollary of n++ is n + 1
 <ul class="org-ul">
-<li>b &gt;= a++ since by 2.2.11 b &gt;= a and a &lt;= b are same.</li>
+<li>a++ \(\le\) b since by 2.2.11</li>
 </ul></li>
 </ul>
 
 <p>
-Now we have to prove that if a++ =&lt; b, then we must have a &lt; b. 
+If a++ \(\le\) b, then we must have a &lt; b. 
 </p>
 
 <ul class="org-ul">
@@ -1081,8 +1073,9 @@ Now we have to prove that if a++ =&lt; b, then we must have a &lt; b.
 <li>b = (a + 1) + n (corollary from 2.2.2/2.2.3)</li>
 <li>b = a + (n++) (associative law, corollary from 2.2.2/2.2.3)</li>
 <li>We want to prove b cannot equal a, so a &lt; b.</li>
-<li>For the sake of contradiction, assume b = a so that a = a + (n++).</li>
-<li>a + 0 = a + (n++) from lemma 2.2.2</li>
+<li>For the sake of contradiction, assume b = a so that a = a + (n++)</li>
+<li>a = (a + n)++ which contradicts the Peano axioms, b cannot equal a</li>
+<li>Let's try a + 0 = a + (n++) from lemma 2.2.2</li>
 <li>0 = (n++) from cancellation law</li>
 <li>contradiction: zero cannot be the successor of any natural number, ergo b cannot equal a.</li>
 <li>a &lt; b</li>
@@ -1095,7 +1088,7 @@ Now we have to prove that if a++ =&lt; b, then we must have a &lt; b.
 <li>base case d = 1 since we assume d is positive</li>
 <li>b = a + 1 or b = a++</li>
 <li>lemma 2.2.10 again, a &lt; b</li>
-<li>Another method: For the sake of contradiction, assume a =&lt; b (a = b)</li>
+<li>Another method: For the sake of contradiction, assume a \(\ge\) b (a = b case)</li>
 <li>a + 0 = a + d (lemma 2.2.2)</li>
 <li>0 = d from cancellation law
 <ul class="org-ul">
@@ -1105,11 +1098,112 @@ Now we have to prove that if a++ =&lt; b, then we must have a &lt; b.
 </ul>
 
 <p>
-Proposition 2.2.13. When a = 0, we have 0 =&lt; b for all b (why?). Because of definition 2.2.11: b = 0 + n. Whatever n is, b is, for all b if a = 0. The base case for 0 &lt; b, as per proposition 2.2.12 b = 0 + n must be positive. If n = 1, then b = 0++ which is lemma 2.2.10 and the definition of division and the axiom that the successor of zero cannot be zero so b &gt; 0 for all b. TODO: finish this fully, this is a sketch.
+Proposition 2.2.13. Here I again just show some random strategies, there are many different ways to prove this proposition.
+</p>
+
+
+<p>
+0 &lt; b:
+</p>
+<ul class="org-ul">
+<li>b = a + d (d is a positive number for the 0 &lt; b case as per (f) in 2.2.12)</li>
+<li>c++ = d (lemma 2.2.10 def of a positive number)</li>
+<li>b = 0 + (c++) (substitute c++ for d, 0 for a (base case))</li>
+<li>this is b &gt; 0 or 0 &lt; b, by 2.2.11 and 2.2.12</li>
+</ul>
+
+<p>
+0 = b:
+</p>
+<ul class="org-ul">
+<li>b = 0 + d</li>
+<li>d does not need to be positive for 0 \(\le\) b</li>
+<li>if b = 0, then by corollary 2.2.9 b = 0 + 0   
+<ul class="org-ul">
+<li>b = 0 or 0 = b</li>
+</ul></li>
+</ul>
+
+<p>
+a &gt; b then a++ &gt; b 
+</p>
+<ul class="org-ul">
+<li>a++ = b + d (as per 2.2.12, d must be positive)</li>
+<li>c++ = d (lemma 2.2.10)</li>
+<li>a++ = b + (c++) (substitution)
+<ul class="org-ul">
+<li>a++ &gt; b by def of ordering</li>
+</ul></li>
+<li>other way:</li>
+<li>a++ = (b + c)++ (def of addition)</li>
+<li>a = b + c (Axiom 2.4)
+<ul class="org-ul">
+<li>a &gt; b (2.2.12 d is positive)</li>
+</ul></li>
+</ul>
+
+<p>
+a = b, then a++ &gt; b 
+</p>
+<ul class="org-ul">
+<li>If a = b, then a++ = b++ by Axiom 2.4</li>
+<li>a++ = b + 1 (corollary 2.2.2/2.2.3)
+<ul class="org-ul">
+<li>this is a++ &gt; b by 2.2.11</li>
+</ul></li>
+</ul>
+
+<p>
+Proposition 2.2.14 (Strong induction) If you remember the <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">lecture</a> on strong induction the intuition here is Q(m) if all the dominoes are already knocked down and there's just one left standing, then it too will be knocked down whereas 'weak induction' intuition is P(n) if you knock down one domino, they will all fall. If P(n) is true because P(n++) implies P(n) true, then for all m \(\le\) P(n), Q(m) is true.  
+</p>
+
+<p>
+First look up <a href="https://en.wikipedia.org/wiki/Vacuous_truth">vacuous truth</a>.
+</p>
+
+<ul class="org-ul">
+<li>Let Q(n) be the property that P(m) is true for all m\(_0\) \(\le\) m &lt; n for n \(\ge\) m\(_0\).</li>
+<li>Q(0) is true since: 
+<ul class="org-ul">
+<li>m\(_0\) \(\le\) m &lt; 0 is 'vacuously true' as stated by Tao in the exercise hint</li>
+<li>2.2.14 proposition of for all n \(\ge\) m\(_0\) is true 0 \(\ge\) 0\(_0\)</li>
+</ul></li>
+<li>Show that Q(n++) is true:</li>
+<li>P(m) m\(_0\) \(\le\) m \(\lt\) n \(\lt\) n++ is true (2.2.11)</li>
+<li>implies that P(m) m\(_0\) \(\le\) m \(\lt\) n++ is true for all n \(\ge\) m\(_0\)</li>
+</ul>
+<p>
+Try an example. 
+</p>
+
+<ul class="org-ul">
+<li>P(n) is the property that n + 0 = n</li>
+<li>Q(0) is 0 + 0 = 0 and P(0)</li>
+<li>Q(1) is 1 + 0 = 1 and P(1), P(0)</li>
+<li>Q(2) is 2 + 0 = 2 and P(2), P(1), P(0)</li>
+</ul>
+
+<p>
+Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that all P(m) is true for m \(\le\) n++. Then per Axiom 2.5 P(n) is true, so P(m) is true for all m \(\le\) n' since Tao hinted at 'backwards induction'. 
 </p>
 </div>
-</li>
-</ul>
+
+<div id="outline-container-org8c9a82d" class="outline-4">
+<h4 id="org8c9a82d">What we've seen so far</h4>
+<div class="outline-text-4" id="text-org8c9a82d">
+<p>
+We've seen proof techniques by contradiction, weak induction and strong induction. We've seen substitution, we've seen how you can work backwards to unravel implications such as if P(n++) then P(n) or if a = b then a++ = b++ (Axiom 2.4 if a++ = b++ then a = b). We some of how mathematical reasoning works, by building up a chain of facts that we can then point to in order to help us write new proofs. We also learned the construction of the naturals and all their addition and ordering laws.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a64dfa" class="outline-3">
+<h3 id="org1a64dfa">2.3 Multiplication</h3>
+<div class="outline-text-3" id="text-org1a64dfa">
+<p>
+TODO
+</p>
 </div>
 </div>
 </div>
