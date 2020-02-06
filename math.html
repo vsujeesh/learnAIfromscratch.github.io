@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-02-04 Tue 06:56 -->
+<!-- 2020-02-06 Thu 07:38 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -261,79 +261,72 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org66d276d">Intro</a>
+<li><a href="#org96a502c">Intro</a>
 <ul>
-<li><a href="#org8e5a103">README</a></li>
-<li><a href="#org1ce0164">Goal</a></li>
+<li><a href="#orgbbd2e6f">README</a></li>
+<li><a href="#orgc24a6ec">Goal</a></li>
 </ul>
 </li>
-<li><a href="#org4b8834b">Start here</a>
+<li><a href="#orgd386730">Start here</a>
 <ul>
-<li><a href="#org54f58fe">Foundations lectures</a>
+<li><a href="#org81e01c8">Foundations lectures</a>
 <ul>
-<li><a href="#org208ce75">The natural numbers</a></li>
-<li><a href="#org8760e75">Arithmetic with natural numbers</a></li>
-<li><a href="#org83ccf4c">Laws of arithmetic 2</a></li>
-<li><a href="#org07e5476">Subtraction and division</a></li>
-<li><a href="#orgc80f544">The Hindu-Arabic number system</a></li>
-<li><a href="#org8b2ae3b">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#orgcb10728">Division</a></li>
-<li><a href="#orgfa07501">Fractions</a></li>
-<li><a href="#orgc2c1a99">Arithmetic with fractions</a></li>
-<li><a href="#org582634d">Laws of arithmetic for fractions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org97c5346">Mathematical Thinking</a>
-<ul>
-<li><a href="#orgd9a784b">2.1 The Peano Axioms</a>
-<ul>
-<li><a href="#org52b58c1">Aside: Induction Lectures</a></li>
-</ul>
-</li>
-<li><a href="#orga996250">Back to 2.1</a>
-<ul>
-<li><a href="#orgabd9322">Aside: Induction and Recursion</a></li>
-</ul>
-</li>
-<li><a href="#org466d3db">2.2 Addition</a>
-<ul>
-<li><a href="#org02e3cbc">Exercise 2.2.1</a></li>
-</ul>
-</li>
-<li><a href="#orgcda8a5c">2.2. cont.</a>
-<ul>
-<li><a href="#orgcd5d3da">What we've seen so far</a></li>
-</ul>
-</li>
-<li><a href="#org035b79a">2.3 Multiplication</a></li>
-<li><a href="#org42c8645">Exercises</a>
-<ul>
-<li><a href="#org25d0deb">Exercise 2.3.1 Prove Lemma 2.3.2:</a></li>
-<li><a href="#orgd65741e">Exercise 2.3.2 Prove Lemma 2.3.3</a></li>
-<li><a href="#org0167b71">Exercise 2.3.3 multiplication is associative</a></li>
-<li><a href="#org722a2a1">Exercise 2.3.4</a></li>
-<li><a href="#orgc48158a">Exercise 2.3.5</a></li>
+<li><a href="#orgf793433">The natural numbers</a></li>
+<li><a href="#org5b3ff96">Arithmetic with natural numbers</a></li>
+<li><a href="#orgab40d5d">Laws of arithmetic 2</a></li>
+<li><a href="#org7ffb8ca">Subtraction and division</a></li>
+<li><a href="#orge3615ff">The Hindu-Arabic number system</a></li>
+<li><a href="#org23b49b1">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org1b0d429">Division</a></li>
+<li><a href="#org90c93ff">Fractions</a></li>
+<li><a href="#orgae1fe6c">Arithmetic with fractions</a></li>
+<li><a href="#org5ea31a0">Laws of arithmetic for fractions</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#org1f54638">Mathematical Thinking</a>
+<ul>
+<li><a href="#orgb4b534d">2.1 The Peano Axioms</a>
+<ul>
+<li><a href="#orgdeedb61">Aside: Induction Lectures</a></li>
+</ul>
+</li>
+<li><a href="#org3def0dd">Back to 2.1</a>
+<ul>
+<li><a href="#orgd9ece7d">Aside: Induction and Recursion</a></li>
+</ul>
+</li>
+<li><a href="#orgc8a3dd5">2.2 Addition</a>
+<ul>
+<li><a href="#orgf51b1af">Exercise 2.2.1</a></li>
+</ul>
+</li>
+<li><a href="#orgbe5c564">2.2. cont.</a></li>
+<li><a href="#org58e2775">2.3 Multiplication</a></li>
+<li><a href="#org3e8734d">Exercise 2.3.1</a></li>
+<li><a href="#orge513acb">Exercise 2.3.2</a></li>
+<li><a href="#org7f309f6">Exercise 2.3.3</a></li>
+<li><a href="#org82b4a7c">Exercise 2.3.4</a></li>
+<li><a href="#org8c72ba6">Exercise 2.3.5</a></li>
+</ul>
+</li>
+<li><a href="#orge50ad00">Set Theory</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org66d276d" class="outline-2">
-<h2 id="org66d276d">Intro</h2>
-<div class="outline-text-2" id="text-org66d276d">
+<div id="outline-container-org96a502c" class="outline-2">
+<h2 id="org96a502c">Intro</h2>
+<div class="outline-text-2" id="text-org96a502c">
 <p>
 This is a (ongoing) workshop to learn the math needed for various prereqs in university AI intro courses, and is Part IB of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a> to get to a level of competency to satisfy prerequisites in future AI courses. No background is assumed. 
 </p>
 </div>
 
-<div id="outline-container-org8e5a103" class="outline-3">
-<h3 id="org8e5a103">README</h3>
-<div class="outline-text-3" id="text-org8e5a103">
+<div id="outline-container-orgbbd2e6f" class="outline-3">
+<h3 id="orgbbd2e6f">README</h3>
+<div class="outline-text-3" id="text-orgbbd2e6f">
 <p>
 This is experimental. In a regular university <a href="https://www.cs.cmu.edu/bs-in-artificial-intelligence/curriculum">curriculum</a> you would likely take 3 semesters of calculus (essentially the entire calculus book written by Stewart). You would take a linear algebra class, an intro probability class, a class about linear regression/intro to stats. You would take an 'intro to proofs' style course being flooded with advanced strategies, and then yet another proof based class in discrete math covering a grab bag of topics. Every one of these classes you would have TAs/office hours/recitations and peer study groups to help you. 
 </p>
@@ -354,9 +347,9 @@ A few resources won't have any provided solutions, we'll be expected to figure i
 
 
 
-<div id="outline-container-org1ce0164" class="outline-3">
-<h3 id="org1ce0164">Goal</h3>
-<div class="outline-text-3" id="text-org1ce0164">
+<div id="outline-container-orgc24a6ec" class="outline-3">
+<h3 id="orgc24a6ec">Goal</h3>
+<div class="outline-text-3" id="text-orgc24a6ec">
 <p>
 We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgormley/courses/606-607-f18/about.html#2-required-background">requirements</a>:
 </p>
@@ -372,25 +365,25 @@ We are going to build up to this level of <a href="http://www.cs.cmu.edu/~mgorml
 
 
 
-<div id="outline-container-org4b8834b" class="outline-2">
-<h2 id="org4b8834b">Start here</h2>
-<div class="outline-text-2" id="text-org4b8834b">
+<div id="outline-container-orgd386730" class="outline-2">
+<h2 id="orgd386730">Start here</h2>
+<div class="outline-text-2" id="text-orgd386730">
 <p>
 We begin with relearning some basic things that were probably taught incorrectly the first time. 
 </p>
 </div>
 
-<div id="outline-container-org54f58fe" class="outline-3">
-<h3 id="org54f58fe">Foundations lectures</h3>
-<div class="outline-text-3" id="text-org54f58fe">
+<div id="outline-container-org81e01c8" class="outline-3">
+<h3 id="org81e01c8">Foundations lectures</h3>
+<div class="outline-text-3" id="text-org81e01c8">
 <p>
 We're going to go through some short YouTube lectures on foundations, to learn the basics of arithmetic then rigorously redo this same material in Terence Tao's book. We will also see a few direct proofs. The reasons for doing these lectures is he defining things step by step from scratch using the easy framework of the natural numbers so you can understand exactly how fractions and division works before moving on to more complicated things. We'll probably do most of this playlist, matching lectures with other material until we can build up to doing an applied calculus book and understand it.
 </p>
 </div>
 
-<div id="outline-container-org208ce75" class="outline-4">
-<h4 id="org208ce75">The natural numbers</h4>
-<div class="outline-text-4" id="text-org208ce75">
+<div id="outline-container-orgf793433" class="outline-4">
+<h4 id="orgf793433">The natural numbers</h4>
+<div class="outline-text-4" id="text-orgf793433">
 <p>
 Presented here is a definition of a mathematical object called a natural number, as a string or sequence of strokes, which are successors of each other. ie: the successor of a number, is another number.
 </p>
@@ -401,9 +394,9 @@ Presented here is a definition of a mathematical object called a natural number,
 </div>
 </div>
 
-<div id="outline-container-org8760e75" class="outline-4">
-<h4 id="org8760e75">Arithmetic with natural numbers</h4>
-<div class="outline-text-4" id="text-org8760e75">
+<div id="outline-container-org5b3ff96" class="outline-4">
+<h4 id="org5b3ff96">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-org5b3ff96">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -489,9 +482,9 @@ Distributive law: (k + n)m = km + nm.
 </div>
 </div>
 
-<div id="outline-container-org83ccf4c" class="outline-4">
-<h4 id="org83ccf4c">Laws of arithmetic 2</h4>
-<div class="outline-text-4" id="text-org83ccf4c">
+<div id="outline-container-orgab40d5d" class="outline-4">
+<h4 id="orgab40d5d">Laws of arithmetic 2</h4>
+<div class="outline-text-4" id="text-orgab40d5d">
 <ul class="org-ul">
 <li><a href="https://youtu.be/ScTJRrg8ZfU">YouTube</a> - Arithmetic and Geometry Math Foundations 3</li>
 </ul>
@@ -502,9 +495,9 @@ Wildberger shows another interpretation of multiplication, and walks through the
 </div>
 </div>
 
-<div id="outline-container-org07e5476" class="outline-4">
-<h4 id="org07e5476">Subtraction and division</h4>
-<div class="outline-text-4" id="text-org07e5476">
+<div id="outline-container-org7ffb8ca" class="outline-4">
+<h4 id="org7ffb8ca">Subtraction and division</h4>
+<div class="outline-text-4" id="text-org7ffb8ca">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -550,9 +543,9 @@ Note to remove parens: <a href="https://www.themathpage.com/alg/parentheses.htm"
 </div>
 </div>
 
-<div id="outline-container-orgc80f544" class="outline-4">
-<h4 id="orgc80f544">The Hindu-Arabic number system</h4>
-<div class="outline-text-4" id="text-orgc80f544">
+<div id="outline-container-orge3615ff" class="outline-4">
+<h4 id="orge3615ff">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-orge3615ff">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -569,9 +562,9 @@ A simplified Roman numeral system is introduced to abstract our previous notatio
 </div>
 </div>
 
-<div id="outline-container-org8b2ae3b" class="outline-4">
-<h4 id="org8b2ae3b">Arithmetic with Hindu-Arabic notation</h4>
-<div class="outline-text-4" id="text-org8b2ae3b">
+<div id="outline-container-org23b49b1" class="outline-4">
+<h4 id="org23b49b1">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-org23b49b1">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -594,9 +587,9 @@ A different way of hand multiplication is shown, taking advantage of the fact th
 </div>
 </div>
 
-<div id="outline-container-orgcb10728" class="outline-4">
-<h4 id="orgcb10728">Division</h4>
-<div class="outline-text-4" id="text-orgcb10728">
+<div id="outline-container-org1b0d429" class="outline-4">
+<h4 id="org1b0d429">Division</h4>
+<div class="outline-text-4" id="text-org1b0d429">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -627,9 +620,9 @@ Division is repeated subtraction. Laws of Division:
 </div>
 </div>
 
-<div id="outline-container-orgfa07501" class="outline-4">
-<h4 id="orgfa07501">Fractions</h4>
-<div class="outline-text-4" id="text-orgfa07501">
+<div id="outline-container-org90c93ff" class="outline-4">
+<h4 id="org90c93ff">Fractions</h4>
+<div class="outline-text-4" id="text-org90c93ff">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -647,9 +640,9 @@ We're still just using natural numbers.
 </div>
 </div>
 
-<div id="outline-container-orgc2c1a99" class="outline-4">
-<h4 id="orgc2c1a99">Arithmetic with fractions</h4>
-<div class="outline-text-4" id="text-orgc2c1a99">
+<div id="outline-container-orgae1fe6c" class="outline-4">
+<h4 id="orgae1fe6c">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-orgae1fe6c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -670,9 +663,9 @@ What we are trying to prove is ab' = ba' and cd' = dc'. He introduces some extra
 
 
 
-<div id="outline-container-org582634d" class="outline-4">
-<h4 id="org582634d">Laws of arithmetic for fractions</h4>
-<div class="outline-text-4" id="text-org582634d">
+<div id="outline-container-org5ea31a0" class="outline-4">
+<h4 id="org5ea31a0">Laws of arithmetic for fractions</h4>
+<div class="outline-text-4" id="text-org5ea31a0">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -686,9 +679,9 @@ Wildberger proves the distributive and commutative laws using fractions while st
 </div>
 
 
-<div id="outline-container-org97c5346" class="outline-2">
-<h2 id="org97c5346">Mathematical Thinking</h2>
-<div class="outline-text-2" id="text-org97c5346">
+<div id="outline-container-org1f54638" class="outline-2">
+<h2 id="org1f54638">Mathematical Thinking</h2>
+<div class="outline-text-2" id="text-org1f54638">
 <p>
 Now that you've seen some basic proofs with natural numbers, we're starting Terence Tao's <i>Analysis I</i>. Obtain the <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> from <a href="https://www.worldcat.org/">WorldCat</a> or <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> and read the preface about how these notes were originally used for a course, and why the proofs are the way they are instead of being more abstract and elegant like they are in many other analysis texts. Read a little of the introduction like how you can't blindly cancel c from both sides of ac = bc if c = 0, because then the equality makes no sense ie: 2x0 = 3x0, you're dividing by zero to remove c from ac = bc. The rest of the examples in the intro we can't figure out yet since we haven't started calculus. Skip to chapter 2. I'm using the Springer 2016 3rd edition. This will be an ongoing book we do in parallel with other courses at the same time. We won't be able to solve all the exercises but the point is to think about the problems enough and see enough proofs that we begin to understand <i>mathematical thinking</i>. 
 </p>
@@ -698,9 +691,9 @@ The author explains <a href="https://terrytao.wordpress.com/career-advice/theres
 </p>
 </div>
 
-<div id="outline-container-orgd9a784b" class="outline-3">
-<h3 id="orgd9a784b">2.1 The Peano Axioms</h3>
-<div class="outline-text-3" id="text-orgd9a784b">
+<div id="outline-container-orgb4b534d" class="outline-3">
+<h3 id="orgb4b534d">2.1 The Peano Axioms</h3>
+<div class="outline-text-3" id="text-orgb4b534d">
 <ul class="org-ul">
 <li>The five Axioms
 <ul class="org-ul">
@@ -727,9 +720,9 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </div>
 
 
-<div id="outline-container-org52b58c1" class="outline-4">
-<h4 id="org52b58c1">Aside: Induction Lectures</h4>
-<div class="outline-text-4" id="text-org52b58c1">
+<div id="outline-container-orgdeedb61" class="outline-4">
+<h4 id="orgdeedb61">Aside: Induction Lectures</h4>
+<div class="outline-text-4" id="text-orgdeedb61">
 <p>
 Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </p>
@@ -746,9 +739,9 @@ Let's understand Axiom 2.5 by watching a few lectures from MIT on proofs.
 </div>
 
 
-<div id="outline-container-orga996250" class="outline-3">
-<h3 id="orga996250">Back to 2.1</h3>
-<div class="outline-text-3" id="text-orga996250">
+<div id="outline-container-org3def0dd" class="outline-3">
+<h3 id="org3def0dd">Back to 2.1</h3>
+<div class="outline-text-3" id="text-org3def0dd">
 <p>
 Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. Tao uses a function but it's definition can be read in the 3.3 functions intro. What is \(a_0\)? It's an index. Imagine a finite sequence: 1, 2, 3. Imagine indexing them: \(1_0\), \(2_1\), \(3_2\) so you can refer to each entry by it's index instead of it's value. (What's a finite <a href="https://youtu.be/LCvk0Qolt68">sequence?</a>)   
 </p>
@@ -771,9 +764,9 @@ The proof notes Axiom 2.3 protects the value \(a_0\) from being redefined by one
 </p>
 </div>
 
-<div id="outline-container-orgabd9322" class="outline-4">
-<h4 id="orgabd9322">Aside: Induction and Recursion</h4>
-<div class="outline-text-4" id="text-orgabd9322">
+<div id="outline-container-orgd9ece7d" class="outline-4">
+<h4 id="orgd9ece7d">Aside: Induction and Recursion</h4>
+<div class="outline-text-4" id="text-orgd9ece7d">
 <p>
 Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
 </p>
@@ -809,9 +802,9 @@ Note that we didn't have to do anything extra to prove this recursive function. 
 </div>
 
 
-<div id="outline-container-org466d3db" class="outline-3">
-<h3 id="org466d3db">2.2 Addition</h3>
-<div class="outline-text-3" id="text-org466d3db">
+<div id="outline-container-orgc8a3dd5" class="outline-3">
+<h3 id="orgc8a3dd5">2.2 Addition</h3>
+<div class="outline-text-3" id="text-orgc8a3dd5">
 <p>
 Let's understand his example for addition. 3 + 5 should be the same as (((5++)++)++) and adding 0 to 5 should just give 5.  
 </p>
@@ -875,9 +868,9 @@ Proposition 2.2.4 (Addition is commutative) the base case is straight forward. W
 </p>
 </div>
 
-<div id="outline-container-org02e3cbc" class="outline-4">
-<h4 id="org02e3cbc">Exercise 2.2.1</h4>
-<div class="outline-text-4" id="text-org02e3cbc">
+<div id="outline-container-orgf51b1af" class="outline-4">
+<h4 id="orgf51b1af">Exercise 2.2.1</h4>
+<div class="outline-text-4" id="text-orgf51b1af">
 <p>
 Proposition 2.2.5 (Addition is associative) what we want to prove is (a + b) + c = a + (b + c)
 Obtain the inductive template from the beginning of the chapter and try this yourself. 
@@ -885,8 +878,8 @@ Obtain the inductive template from the beginning of the chapter and try this you
 </div>
 
 <ul class="org-ul">
-<li><a id="org24a7f37"></a>Base Case<br>
-<div class="outline-text-5" id="text-org24a7f37">
+<li><a id="orge8b629d"></a>Base Case<br>
+<div class="outline-text-5" id="text-orge8b629d">
 <p>
 What is the base case? We want to show that even if a natural number is inside or outside brackets, it will have the same result when added together. Let's pick c or a, as on each side of the equality they are either inside the bracket, or outside it. 
 </p>
@@ -907,16 +900,16 @@ What is the base case? We want to show that even if a natural number is inside o
 </div>
 </li>
 
-<li><a id="org426dfe0"></a>IH<br>
-<div class="outline-text-5" id="text-org426dfe0">
+<li><a id="org4d7b904"></a>IH<br>
+<div class="outline-text-5" id="text-org4d7b904">
 <p>
 The inductive hypothesis we assume addition is associative, and that (a + b) + c = a + (b + c). If any steps of your proof are either in form (a + b) + c or a + (b + c) you can change them for each other by the IH.  
 </p>
 </div>
 </li>
 
-<li><a id="orgef14163"></a>Inductive step<br>
-<div class="outline-text-5" id="text-orgef14163">
+<li><a id="orgfb7d09f"></a>Inductive step<br>
+<div class="outline-text-5" id="text-orgfb7d09f">
 <p>
 There's a few ways to show this. I'm just going to move stuff around randomly and you can see where the proof is:
 </p>
@@ -956,9 +949,9 @@ You should try this yourself, move everything around until you understand exactl
 </div>
 </div>
 
-<div id="outline-container-orgcda8a5c" class="outline-3">
-<h3 id="orgcda8a5c">2.2. cont.</h3>
-<div class="outline-text-3" id="text-orgcda8a5c">
+<div id="outline-container-orgbe5c564" class="outline-3">
+<h3 id="orgbe5c564">2.2. cont.</h3>
+<div class="outline-text-3" id="text-orgbe5c564">
 <p>
 Proposition 2.2.6 (Cancellation Law) uses Axiom 2.4 which states '<i>Different natural numbers must have different successors; i.e., if n, m are natural numbers and n = m, then n++ = m++. Equivalently, if n++ = m++, then we must have n = m</i>'. So (a + b)++ = (a + c)++ is = a + b = a + c by the line <i>if n++ = m++, then n = m</i> in axiom 2.4. We dropped down from the successor by using axiom 2.4 and can now just use our inductive hypothesis of the cancellation law for a to show b = c and close the induction. . 
 </p>
@@ -1198,23 +1191,14 @@ Try an example.
 </ul>
 
 <p>
-Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that all P(m) is true for m \(\le\) n++. Then per Axiom 2.5 P(n) is true, so P(m) is true for all m \(\le\) n' since Tao hinted at 'backwards induction'. 
-</p>
-</div>
-
-<div id="outline-container-orgcd5d3da" class="outline-4">
-<h4 id="orgcd5d3da">What we've seen so far</h4>
-<div class="outline-text-4" id="text-orgcd5d3da">
-<p>
-We've seen proof techniques by contradiction, weak induction and strong induction. We've seen substitution, we've seen how you can work backwards to unravel implications such as if P(n++) then P(n) or if a = b then a++ = b++ (Axiom 2.4 if a++ = b++ then a = b). We learned a little of how mathematical reasoning works, by building up a chain of facts that we can then point to in order to help us write new proofs. We also learned the construction of the naturals and all their addition and ordering laws.   
+Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that all P(m) is true for m \(\le\) n++. Then per Axiom 2.5 P(n) is true, so P(m) is true for all m \(\le\) n' since Tao hinted at 'backwards induction'.    
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org035b79a" class="outline-3">
-<h3 id="org035b79a">2.3 Multiplication</h3>
-<div class="outline-text-3" id="text-org035b79a">
+<div id="outline-container-org58e2775" class="outline-3">
+<h3 id="org58e2775">2.3 Multiplication</h3>
+<div class="outline-text-3" id="text-org58e2775">
 <p>
 Proposition 2.3.4 follow along with definition 2.3.1 of multiplication where (n++) x m = (n x m) + m also recall that n++ is n + 1: (n + 1)m so nm + m   
 </p>
@@ -1234,13 +1218,9 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 </div>
 </div>
 
-<div id="outline-container-org42c8645" class="outline-3">
-<h3 id="org42c8645">Exercises</h3>
-<div class="outline-text-3" id="text-org42c8645">
-</div>
-<div id="outline-container-org25d0deb" class="outline-4">
-<h4 id="org25d0deb">Exercise 2.3.1 Prove Lemma 2.3.2:</h4>
-<div class="outline-text-4" id="text-org25d0deb">
+<div id="outline-container-org3e8734d" class="outline-3">
+<h3 id="org3e8734d">Exercise 2.3.1</h3>
+<div class="outline-text-3" id="text-org3e8734d">
 <p>
 n x m = m x n:
 </p>
@@ -1302,9 +1282,9 @@ Now we have to prove m x n = n x m
 </div>
 </div>
 
-<div id="outline-container-orgd65741e" class="outline-4">
-<h4 id="orgd65741e">Exercise 2.3.2 Prove Lemma 2.3.3</h4>
-<div class="outline-text-4" id="text-orgd65741e">
+<div id="outline-container-orge513acb" class="outline-3">
+<h3 id="orge513acb">Exercise 2.3.2</h3>
+<div class="outline-text-3" id="text-orge513acb">
 <p>
 The hint is to prove the second statement first, if n and m are both positive, then nm is also positive. You could use Proposition 2.3.6 as a template for this:
 </p>
@@ -1325,9 +1305,9 @@ Lemma 2.3.3: n x m = 0 iff n = 0 or m = 0. You could try a contradiction using t
 </div>
 </div>
 
-<div id="outline-container-org0167b71" class="outline-4">
-<h4 id="org0167b71">Exercise 2.3.3 multiplication is associative</h4>
-<div class="outline-text-4" id="text-org0167b71">
+<div id="outline-container-org7f309f6" class="outline-3">
+<h3 id="org7f309f6">Exercise 2.3.3</h3>
+<div class="outline-text-3" id="text-org7f309f6">
 <p>
 A rewrite of 2.2.5: For any natural numbers a, b c, we have (a x b) x c = a x (b x c). You could induct on b, convert to the 2.3.1 form, and rearrange whenever you move something around and it is in the form of the inductive hypotenuse.
 </p>
@@ -1352,9 +1332,9 @@ Tao also suggests using the distributive law:
 </div>
 
 
-<div id="outline-container-org722a2a1" class="outline-4">
-<h4 id="org722a2a1">Exercise 2.3.4</h4>
-<div class="outline-text-4" id="text-org722a2a1">
+<div id="outline-container-org82b4a7c" class="outline-3">
+<h3 id="org82b4a7c">Exercise 2.3.4</h3>
+<div class="outline-text-3" id="text-org82b4a7c">
 <p>
 Prove the <a href="https://youtu.be/7eZUzceFFJw">identity</a>.  
 </p>
@@ -1371,14 +1351,30 @@ Prove the <a href="https://youtu.be/7eZUzceFFJw">identity</a>.
 </div>
 
 
-<div id="outline-container-orgc48158a" class="outline-4">
-<h4 id="orgc48158a">Exercise 2.3.5</h4>
-<div class="outline-text-4" id="text-orgc48158a">
+<div id="outline-container-org8c72ba6" class="outline-3">
+<h3 id="org8c72ba6">Exercise 2.3.5</h3>
+<div class="outline-text-3" id="text-org8c72ba6">
 <p>
-Prove proposition 2.3.9 by fixing q and inducting on n.
+Prove proposition 2.3.9 by fixing q and inducting on n for n = mq + r and 0 \(\le\) r \(\lt\) q
+</p>
+
+<p>
+For the base case, if 0 = mq + r, then m and r must be zero because this still satisfies the inequality where q is greater than r and remember we fixed q, so it can't be zero. For the inductive step, n + 1 = mq + r + 1 (adding + 1 to both sides as per previous lectures on induction), we have two cases, r + 1 &lt; q or r + 1 \(\le\) q. If r + 1 &lt; q then we have the inductive hypothesis and there's nothing more to prove since 0 \(\le\) r + 1 \(\lt\) q. Remember the order of multiplication/addition, this is still (number) = (number) plus n in the form of (n + 1) = (mq) + (r + 1). 
+</p>
+
+<p>
+If r + 1 \(\le\) q, or (r = q), then we have n + 1 = mq + q, and from the definition of multiplication/distributive law this is n + 1 = (m + 1)q or m++(q) + 0 and 0 still satisfies the inequality of r &lt; q. 
 </p>
 </div>
 </div>
+</div>
+
+<div id="outline-container-orge50ad00" class="outline-2">
+<h2 id="orge50ad00">Set Theory</h2>
+<div class="outline-text-2" id="text-orge50ad00">
+<p>
+We spent almost a month doing 2 chapters, this is typical for a dense math text when you're just starting. If you're still kind of confused this is normal too, it will take seeing and doing many more proofs to get better at this and we have the rest of Tao's <i>Analysis</i> text to work through and gain experience in this kind of thinking. This chapter on set theory will set us up for the rest of the cs019 lectures when Big-O notation is introduced. 
+</p>
 </div>
 </div>
 </div>
