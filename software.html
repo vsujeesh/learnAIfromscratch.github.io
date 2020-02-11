@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-25 Sat 13:23 -->
+<!-- 2020-02-11 Tue 07:13 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learn Programming from Scratch</title>
@@ -261,56 +261,60 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5b38afc">Intro</a>
+<li><a href="#org126fe3a">Intro</a>
 <ul>
-<li><a href="#orgf8abb52">Code of Conduct</a></li>
-<li><a href="#org895c831">Study advice</a></li>
+<li><a href="#org9aedf94">Code of Conduct</a></li>
+<li><a href="#orgcb7874f">Study advice</a></li>
 </ul>
 </li>
-<li><a href="#org362ef79">Start here</a>
+<li><a href="#org2f92e9c">Start here</a>
 <ul>
-<li><a href="#org9fffb29">Materials needed to complete this</a></li>
-<li><a href="#orge97389c">Archiving the assignments (optional)</a></li>
+<li><a href="#org4b3d82b">Materials needed to complete this</a></li>
+<li><a href="#org53981fc">Archiving the assignments (optional)</a></li>
 </ul>
 </li>
-<li><a href="#org0d0da85">Lecture 1</a>
+<li><a href="#orgb4c4e2d">Lecture 1</a>
 <ul>
-<li><a href="#org7c9183b">Reading PAPL</a></li>
-<li><a href="#org658523d">Reading documentation</a>
+<li><a href="#org3b60ee3">Reading PAPL</a></li>
+<li><a href="#org1261261">Reading documentation</a>
 <ul>
-<li><a href="#org6a7e557">Methods</a></li>
+<li><a href="#org9691df4">Methods</a></li>
 </ul>
 </li>
-<li><a href="#org6164fff">Reading Chapter 2</a></li>
-<li><a href="#orgd19c6a9">Reading chapter 3</a></li>
+<li><a href="#orgdc00e2d">Reading chapter 2</a></li>
+<li><a href="#org13c462f">Reading chapter 3</a></li>
 </ul>
 </li>
-<li><a href="#org5d42986">Lecture 2</a>
+<li><a href="#orgab5add5">Lecture 2</a>
 <ul>
-<li><a href="#orgcd9f7ba">Reading chapter 4</a>
+<li><a href="#org08c5138">Reading chapter 4</a>
 <ul>
-<li><a href="#org5cc540f">4.2.3 Exercise</a></li>
+<li><a href="#orge143a1f">4.2.3 Exercise</a></li>
 </ul>
 </li>
-<li><a href="#orgb562c75">Reading chapter 5</a></li>
-<li><a href="#org7d0cb28">Reading chapter 6</a></li>
-<li><a href="#org6dfe3f0">Assignment 1: DocDiff</a></li>
+<li><a href="#org87e7a48">Reading chapter 5</a></li>
+<li><a href="#org2ed49f0">Reading chapter 6</a></li>
+<li><a href="#org4a58545">Assignment 1: DocDiff</a></li>
 </ul>
 </li>
-<li><a href="#orgbcb3ac5">Lecture 3</a>
+<li><a href="#org64fa656">Lecture 3</a>
 <ul>
-<li><a href="#org8f0d1ef">Lab: Higher-Order Functions</a></li>
+<li><a href="#orgbb79c51">Lab: Higher-Order Functions</a></li>
 </ul>
 </li>
-<li><a href="#orgb1bf070">15-122 - Imperative Programming</a></li>
-<li><a href="#orgb4d853d">Cryptopals challenges</a></li>
+<li><a href="#org976240f">15-122 - Imperative Programming</a>
+<ul>
+<li><a href="#orgc7930ee">Cryptopals challenges</a></li>
+</ul>
+</li>
+<li><a href="#org6159bcc">Lecture 4</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org5b38afc" class="outline-2">
-<h2 id="org5b38afc">Intro</h2>
-<div class="outline-text-2" id="text-org5b38afc">
+<div id="outline-container-org126fe3a" class="outline-2">
+<h2 id="org126fe3a">Intro</h2>
+<div class="outline-text-2" id="text-org126fe3a">
 <p>
 This is a (ongoing) workshop to learn foundational programming skills in designing, writing and optimizing software and is Part IA of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a>. The way these notes work is I do this material with you, and point out anything that may trip up a beginner who then is likely to just give up. The further we go on, the more terse the notes will get because I can then assume a background. The courses and books we will do promote that you try and figure out things for yourself as the only proven way to learn this material but their targeted audience is elite students who qualify to get into the <a href="https://en.wikipedia.org/wiki/Ivy_League">Ivy League</a> so we'll have to backtrack as we go filling in some holes in our education in the early lectures. 
 </p>
@@ -320,18 +324,18 @@ If you know how to use a web browser you can start this curriculum, no expertise
 </p>
 </div>
 
-<div id="outline-container-orgf8abb52" class="outline-3">
-<h3 id="orgf8abb52">Code of Conduct</h3>
-<div class="outline-text-3" id="text-orgf8abb52">
+<div id="outline-container-org9aedf94" class="outline-3">
+<h3 id="org9aedf94">Code of Conduct</h3>
+<div class="outline-text-3" id="text-org9aedf94">
 <p>
 Don't post your solutions to the assignments anywhere, such as keeping a public github with every assignment completed. Schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.    
 </p>
 </div>
 </div>
 
-<div id="outline-container-org895c831" class="outline-3">
-<h3 id="org895c831">Study advice</h3>
-<div class="outline-text-3" id="text-org895c831">
+<div id="outline-container-orgcb7874f" class="outline-3">
+<h3 id="orgcb7874f">Study advice</h3>
+<div class="outline-text-3" id="text-orgcb7874f">
 <p>
 Have the attitude you refuse to not know the material and you'll be fine. Try giving a lecture to an imaginary class from notes you took to prove you actually <a href="https://en.wikipedia.org/wiki/Grok#Adoption_and_modern_usage">grok</a> this material. If you can effortlessly explain the topic without stumbling over your words, using excessive jargon or forgetting your notes you can be assured you know the material. To get around the habit of jargon, imagine everytime you use jargon that somebody asks you to define precisely what it means and you have to stop your imaginary lecture and unravel technical language. 
 </p>
@@ -339,9 +343,9 @@ Have the attitude you refuse to not know the material and you'll be fine. Try gi
 </div>
 </div>
 
-<div id="outline-container-org362ef79" class="outline-2">
-<h2 id="org362ef79">Start here</h2>
-<div class="outline-text-2" id="text-org362ef79">
+<div id="outline-container-org2f92e9c" class="outline-2">
+<h2 id="org2f92e9c">Start here</h2>
+<div class="outline-text-2" id="text-org2f92e9c">
 <p>
 We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one and as a result omits some tedious analytical details you would find in regular classes that you can always research on your own should you later require those things. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
 </p>
@@ -351,9 +355,9 @@ There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">pl
 </p>
 </div>
 
-<div id="outline-container-org9fffb29" class="outline-3">
-<h3 id="org9fffb29">Materials needed to complete this</h3>
-<div class="outline-text-3" id="text-org9fffb29">
+<div id="outline-container-org4b3d82b" class="outline-3">
+<h3 id="org4b3d82b">Materials needed to complete this</h3>
+<div class="outline-text-3" id="text-org4b3d82b">
 <p>
 As stated in the intro it's possible to complete this course with just a phone or a tablet
 </p>
@@ -371,9 +375,9 @@ As stated in the intro it's possible to complete this course with just a phone o
 </div>
 </div>
 
-<div id="outline-container-orge97389c" class="outline-3">
-<h3 id="orge97389c">Archiving the assignments (optional)</h3>
-<div class="outline-text-3" id="text-orge97389c">
+<div id="outline-container-org53981fc" class="outline-3">
+<h3 id="org53981fc">Archiving the assignments (optional)</h3>
+<div class="outline-text-3" id="text-org53981fc">
 <p>
 If you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
 </p>
@@ -388,9 +392,9 @@ You may also want to archive the pyret <a href="https://www.pyret.org/docs/lates
 </div>
 </div>
 
-<div id="outline-container-org0d0da85" class="outline-2">
-<h2 id="org0d0da85">Lecture 1</h2>
-<div class="outline-text-2" id="text-org0d0da85">
+<div id="outline-container-orgb4c4e2d" class="outline-2">
+<h2 id="orgb4c4e2d">Lecture 1</h2>
+<div class="outline-text-2" id="text-orgb4c4e2d">
 <p>
 We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
 </p>
@@ -417,9 +421,9 @@ Templates are covered in the third lecture, it's a tool to extract 'code for fre
 </div>
 
 
-<div id="outline-container-org7c9183b" class="outline-3">
-<h3 id="org7c9183b">Reading PAPL</h3>
-<div class="outline-text-3" id="text-org7c9183b">
+<div id="outline-container-org3b60ee3" class="outline-3">
+<h3 id="org3b60ee3">Reading PAPL</h3>
+<div class="outline-text-3" id="text-org3b60ee3">
 <p>
 Let's work through the <a href="https://papl.cs.brown.edu/2019/index.html">book</a> starting at the beginning, I'm using whatever the latest version is (as of this writing, 2019). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet. The lectures we do will fill in these blanks.
 </p>
@@ -430,9 +434,9 @@ Chapter 2 <i>Basic Data and Expressions</i> read while you have the pyret interp
 </div>
 </div>
 
-<div id="outline-container-org658523d" class="outline-3">
-<h3 id="org658523d">Reading documentation</h3>
-<div class="outline-text-3" id="text-org658523d">
+<div id="outline-container-org1261261" class="outline-3">
+<h3 id="org1261261">Reading documentation</h3>
+<div class="outline-text-3" id="text-org1261261">
 <p>
 Already we are introduced to built-in functions, such as num-expt. To understand these, let's read the <a href="https://www.pyret.org/docs/latest/Builtins_and_Libraries.html">documentation</a>. If you have a small screen, you will need to turn your device to landscape or increase the browser window size in order to see the table of contents in the pyret docs which automatically hide depending on screen size and is annoying UI. 
 </p>
@@ -442,9 +446,9 @@ Find the number functions <a href="https://www.pyret.org/docs/latest/numbers.htm
 </p>
 </div>
 
-<div id="outline-container-org6a7e557" class="outline-4">
-<h4 id="org6a7e557">Methods</h4>
-<div class="outline-text-4" id="text-org6a7e557">
+<div id="outline-container-org9691df4" class="outline-4">
+<h4 id="org9691df4">Methods</h4>
+<div class="outline-text-4" id="text-org9691df4">
 <p>
 In the documentation under <a href="https://www.pyret.org/docs/latest/lists.html">lists</a> you will see additional built-in functions called methods. These have a dot notation such as .length() or .map(). What this means is the object itself, a list object, has features you can access directly. If your list is named my-list then you can access these by my-list.length() or by chaining them together, such as my-list.sort().length() to both sort and return the length of a list. Try this yourself in the REPL.
 </p>
@@ -452,18 +456,18 @@ In the documentation under <a href="https://www.pyret.org/docs/latest/lists.html
 </div>
 </div>
 
-<div id="outline-container-org6164fff" class="outline-3">
-<h3 id="org6164fff">Reading Chapter 2</h3>
-<div class="outline-text-3" id="text-org6164fff">
+<div id="outline-container-orgdc00e2d" class="outline-3">
+<h3 id="orgdc00e2d">Reading chapter 2</h3>
+<div class="outline-text-3" id="text-orgdc00e2d">
 <p>
 The last section on roughnums, where irrational numbers like the square root of two return different values is due to floating point approximation that by default use a 'round to even' rounding strategy which if you wanted you could learn from this <a href="https://www.youtube.com/watch?v=XVg_tUyyQzA&amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;index=5&amp;t=0s">lecture</a> but it assumes a technical background we don't have yet, namely that you've completed all the other lectures in that playlist and an introductory programming course, which we are doing right now. The final exercise <i>Do roughnums obey the axioms of arithmetic operators like distributivity, associativity and commutativity?</i> you can tell immediately from the examples in the book that roughnums are always returning different values, so a + b does not equal b + a if the numbers are roughnums. Think to yourself what would happen if you used floating point to encode money in financial software, with unpredictable results if some trade combination resulted in a roughnum. Oops
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd19c6a9" class="outline-3">
-<h3 id="orgd19c6a9">Reading chapter 3</h3>
-<div class="outline-text-3" id="text-orgd19c6a9">
+<div id="outline-container-org13c462f" class="outline-3">
+<h3 id="org13c462f">Reading chapter 3</h3>
+<div class="outline-text-3" id="text-org13c462f">
 <p>
 You spent all of chapter 2 entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. In 3.5 <i>Defining Functions in Steps</i> notice he changes the tests to not just return the expected value, but to return the expected computation, writing out in full what should be happening. The idea of doing this is to help you write the function. These aren't tests to prove it is correct, they are tests to help understand the full domain of the problem so we can write a model for it with software. 
 </p>
@@ -538,18 +542,18 @@ end
 </div>
 </div>
 
-<div id="outline-container-org5d42986" class="outline-2">
-<h2 id="org5d42986">Lecture 2</h2>
-<div class="outline-text-2" id="text-org5d42986">
+<div id="outline-container-orgab5add5" class="outline-2">
+<h2 id="orgab5add5">Lecture 2</h2>
+<div class="outline-text-2" id="text-orgab5add5">
 <p>
 Watch the Mon9/10/18 second lecture. Interesting lecture about the rainfall problem and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. Higher-order functions are talked about, like filter and map which are in the pyret documentation. We're going to write our own versions of map, filter and fold after we cover Chapter 6 <i>Processing Lists</i>.
 </p>
 </div>
 
 
-<div id="outline-container-orgcd9f7ba" class="outline-3">
-<h3 id="orgcd9f7ba">Reading chapter 4</h3>
-<div class="outline-text-3" id="text-orgcd9f7ba">
+<div id="outline-container-org08c5138" class="outline-3">
+<h3 id="org08c5138">Reading chapter 4</h3>
+<div class="outline-text-3" id="text-org08c5138">
 <p>
 This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. The text also expects you to start reading documentation, not telling you how to assign a table to a variable so you can run all those sieve expressions on it. See the docs and change the examples in the text as you go to see what they do:
 </p>
@@ -575,9 +579,9 @@ This is similar to <a href="https://n0x400.1mb.dev/#org268f85c">SQL syntax</a>, 
 </p>
 </div>
 
-<div id="outline-container-org5cc540f" class="outline-4">
-<h4 id="org5cc540f">4.2.3 Exercise</h4>
-<div class="outline-text-4" id="text-org5cc540f">
+<div id="outline-container-orge143a1f" class="outline-4">
+<h4 id="orge143a1f">4.2.3 Exercise</h4>
+<div class="outline-text-4" id="text-orge143a1f">
 <p>
 <i>Do Now</i> from 4.2.3. We are asked to think about how to write two questions, the first one is given to us so I tried the second which asks <i>Of the songs by a particular artist, which have we played the least often?</i>" using only what we've seen so far: 
 </p>
@@ -639,9 +643,9 @@ select song, playcount from least-played end
 </div>
 
 
-<div id="outline-container-orgb562c75" class="outline-3">
-<h3 id="orgb562c75">Reading chapter 5</h3>
-<div class="outline-text-3" id="text-orgb562c75">
+<div id="outline-container-org87e7a48" class="outline-3">
+<h3 id="org87e7a48">Reading chapter 5</h3>
+<div class="outline-text-3" id="text-org87e7a48">
 <p>
 In 5.3.1 the description of the properties of an 'anonymous value' abstraction by using numbers and asking what they mean is similar to Terence Tao's <i>Linear Algebra</i> text where he points out that a property of numbers that makes them useful is their ability to be interpreted differently depending on context. 
 </p>
@@ -741,9 +745,9 @@ That was a little tedious but it taught us how to look up documentation, how to 
 </div>
 </div>
 
-<div id="outline-container-org7d0cb28" class="outline-3">
-<h3 id="org7d0cb28">Reading chapter 6</h3>
-<div class="outline-text-3" id="text-org7d0cb28">
+<div id="outline-container-org2ed49f0" class="outline-3">
+<h3 id="org2ed49f0">Reading chapter 6</h3>
+<div class="outline-text-3" id="text-org2ed49f0">
 <p>
 We need to understand this chapter to follow along with the rest of the lectures, and for future assignments. 6.1 you can type all those examples in the REPL to see what they do, like manually linking a list together with link. 
 </p>
@@ -916,9 +920,9 @@ If this doesn't make sense step by hand through clean-data():
 </div>
 
 
-<div id="outline-container-org6dfe3f0" class="outline-3">
-<h3 id="org6dfe3f0">Assignment 1: DocDiff</h3>
-<div class="outline-text-3" id="text-org6dfe3f0">
+<div id="outline-container-org4a58545" class="outline-3">
+<h3 id="org4a58545">Assignment 1: DocDiff</h3>
+<div class="outline-text-3" id="text-org4a58545">
 <p>
 Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. One way to slog through a long chapter on list functions is to actually implement something using lists, then we can refer to it as reference. In other words it becomes a research project to read that we are more motivated to do since we're trying to complete a task. You could also try watching Lecture 3 first before doing this assignment if you're unsure of how recursion on lists works. 
 </p>
@@ -1035,9 +1039,9 @@ I almost posted too much of the answer, breaking my own rule on not posting answ
 </div>
 </div>
 
-<div id="outline-container-orgbcb3ac5" class="outline-2">
-<h2 id="orgbcb3ac5">Lecture 3</h2>
-<div class="outline-text-2" id="text-orgbcb3ac5">
+<div id="outline-container-org64fa656" class="outline-2">
+<h2 id="org64fa656">Lecture 3</h2>
+<div class="outline-text-2" id="text-org64fa656">
 <p>
 We're watching Wed9/12/18 lecture on sorting. These videos you can download in 1920x1080 if you want and zoom if you can't see the writing on the whiteboard. 
 </p>
@@ -1101,9 +1105,9 @@ Everytime a list is returned, the next call to insert can happen because it is c
 </p>
 </div>
 
-<div id="outline-container-org8f0d1ef" class="outline-3">
-<h3 id="org8f0d1ef">Lab: Higher-Order Functions</h3>
-<div class="outline-text-3" id="text-org8f0d1ef">
+<div id="outline-container-orgbb79c51" class="outline-3">
+<h3 id="orgbb79c51">Lab: Higher-Order Functions</h3>
+<div class="outline-text-3" id="text-orgbb79c51">
 <p>
 Let's do the <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">lab</a> on functions as data, and write our own map, filter and fold. 
 </p>
@@ -1397,9 +1401,9 @@ This means as the price increases, the quantity demanded will decrease by 60 uni
 
 
 
-<div id="outline-container-orgb1bf070" class="outline-2">
-<h2 id="orgb1bf070">15-122 - Imperative Programming</h2>
-<div class="outline-text-2" id="text-orgb1bf070">
+<div id="outline-container-org976240f" class="outline-2">
+<h2 id="org976240f">15-122 - Imperative Programming</h2>
+<div class="outline-text-2" id="text-org976240f">
 <p>
 In the next lecture of cs019, we will cover how to estimate complexity of a program, and then apply that to all future lectures and assignments. Here we will do the same, learn about how reasoning with contracts can help us write better code and then apply it to all future code. We will also learn exactly how numbers are represented in a computer, which is everyday knowledge we should know when later we have to work in Python for an AI course.  
 </p>
@@ -1409,7 +1413,7 @@ Register <a href="https://oli.cmu.edu/jcourse/webui/register/student.do">here</a
 </p>
 
 <p>
-Click on 'Enter course' and you should see Syllabus: 15-122 Imperative Programming Aug-Dec 2018. It consists of three units on integers (how two's complement works, bit shifting) and one unit on contracts which is a method for proving correctness of loops and interfaces. One of the professors has a short talk <a href="https://www.youtube.com/watch?v=lNITrPhl2_A">here</a> outlining the benefits of contracts. 
+Click on 'Enter course' and you should see Syllabus: 15-122 Imperative Programming Aug-Dec 2018. It consists of three units on integers (how two's complement works, bit shifting) and one unit on contracts which is a method for ensuring correctness. One of the professors has a short talk <a href="https://www.youtube.com/watch?v=lNITrPhl2_A">here</a> outlining the benefits of contracts. 
 </p>
 
 <p>
@@ -1436,13 +1440,12 @@ Try the interactive assignment then move on to module 2 <a href="https://oli.cmu
 TODO
 </p>
 </div>
-</div>
 
 
 
-<div id="outline-container-orgb4d853d" class="outline-2">
-<h2 id="orgb4d853d">Cryptopals challenges</h2>
-<div class="outline-text-2" id="text-orgb4d853d">
+<div id="outline-container-orgc7930ee" class="outline-3">
+<h3 id="orgc7930ee">Cryptopals challenges</h3>
+<div class="outline-text-3" id="text-orgc7930ee">
 <p>
 Using only what we know so far (how to read Pyret docs, how to use higher order function) try completing a few of the <a href="https://cryptopals.com/">cryptopals</a> challenges to learn about how real-world crypto is attacked. Model the bytes however you want, I used strings because we haven't covered making our own datatypes yet for type binary, and if you use numbers Pyret will truncate binary 0001 to just 1. These challenges were designed so you write most of the modeling yourself.
 </p>
@@ -1584,6 +1587,67 @@ hex-string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69
 
 <p>
 In Challenge 3, trying to find out which character has been XOR'd against the given hex encoded string, you can see Norvig's <a href="https://norvig.com/mayzner.html">word frequency</a> post. Your program can take the 1 byte ASCII <a href="https://i.pinimg.com/originals/03/14/eb/0314ebabbc3f4a6a756828a78f40a98e.png">character</a> (ie: 01010000 is "P") and only test XOR'ing the common words, then checking if the result is a member of the much larger original. You avoid having to xor the entire original string every try. Use the repeat() function for strings to multiply a single character's byte representation to the same size of the word's byte representation. Map2 over them with your own xor function. 
+</p>
+
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6159bcc" class="outline-2">
+<h2 id="org6159bcc">Lecture 4</h2>
+<div class="outline-text-2" id="text-org6159bcc">
+<p>
+Watching the Fri 9/14/18 lecture on performance. The lambda notation, it's the same as our anonymous map function notation we already did. The setup in the beginning of the lecture is to distinguish the notation in O(n) as being a function that maps from n -&gt; steps to complete computation. Another explanation is <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#(part._.Ambiguities_in_mathematics)">here</a> in <i>ambiguities in mathematics</i>.  
+</p>
+
+<p>
+The constant mentioned at the end of the lecture in the formal notation is further exampled <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#(part._.A_formal_definition)">here</a>. It's a factor that bounds f, so no matter what input to f(k), a constant c times g(k) will be bigger or equal to it. What times k is bigger or equal to 5k + 4:
+</p>
+
+<ul class="org-ul">
+<li>f(k) -&gt; 5k + 4:
+<ul class="org-ul">
+<li>5(1) + 4 = 9  (length 1)</li>
+<li>5(2) + 4 = 14 (length 2)</li>
+<li>5(3) + 4 = 19 (length 3)</li>
+<li>5(10) + 4 = 54 (length 10)</li>
+</ul></li>
+
+<li>g(k) -&gt; k:
+<ul class="org-ul">
+<li>g(1) = 1</li>
+<li>g(2) = 2</li>
+<li>g(3) = 3</li>
+</ul></li>
+</ul>
+
+<p>
+To find the constant c, you could pick 10 as suggested in the lecture, if k = 1 then we need a constant to make g(k) bigger or equal to 9. 
+</p>
+
+<ul class="org-ul">
+<li>f(1) = 9</li>
+<li>g(1) = 1
+<ul class="org-ul">
+<li>10 * g(1) is 10 and f &lt; g</li>
+</ul></li>
+<li>f(2) = 14</li>
+<li>g(2) = 2
+<ul class="org-ul">
+<li>10 * g(2) is 20 and f &lt; g</li>
+</ul></li>
+<li>f(10) = 54</li>
+<li>g(10) = 10
+<ul class="org-ul">
+<li>10 * g(10) is 100 and f &lt; g</li>
+</ul></li>
+</ul>
+
+<p>
+Be aware in algorithm analysis you will rarely have to find the constant and solve inequalities because as per this <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#(part._.A_formal_definition)">book</a> chapter on formal notation <i>we rarely count exactly and then make things more imprecise</i>. This is just to understand how the big-O complexity model of f(n) \(\le\) c * g(n) work.
 </p>
 </div>
 </div>
