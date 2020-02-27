@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-02-25 Tue 06:38 -->
+<!-- 2020-02-26 Wed 19:25 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learn Programming from Scratch</title>
@@ -261,65 +261,68 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org79749c5">Intro</a>
+<li><a href="#orgff63702">Intro</a>
 <ul>
-<li><a href="#org53fbb6b">Code of Conduct</a></li>
-<li><a href="#orgfecd788">Study advice</a></li>
+<li><a href="#orgf045716">Code of Conduct</a></li>
+<li><a href="#org432a21d">Study advice</a></li>
 </ul>
 </li>
-<li><a href="#orgf6507a8">Start here</a>
+<li><a href="#org4b009f4">Start here</a>
 <ul>
-<li><a href="#orga01964e">Materials needed to complete this</a></li>
-<li><a href="#org829c5a4">Archiving the assignments (optional)</a></li>
+<li><a href="#org579f908">Materials needed to complete this</a></li>
+<li><a href="#org8c37f4b">Archiving the assignments (optional)</a></li>
 </ul>
 </li>
-<li><a href="#org2ec5897">Lecture 1 CS019</a>
+<li><a href="#org3b5aba7">Lecture 1 CS019</a>
 <ul>
-<li><a href="#org4d775f9">Reading PAPL</a></li>
-<li><a href="#org0d2147a">Reading documentation</a>
+<li><a href="#org4f3de85">Reading PAPL</a></li>
+<li><a href="#org5cecd07">Reading documentation</a>
 <ul>
-<li><a href="#org942d6c1">Methods</a></li>
+<li><a href="#orgd6aac2f">Methods</a></li>
 </ul>
 </li>
-<li><a href="#org30d13d5">Reading chapter 2</a></li>
-<li><a href="#org6e0bb74">Reading chapter 3</a></li>
+<li><a href="#org37ca11f">Reading chapter 2</a></li>
+<li><a href="#org15c4051">Reading chapter 3</a></li>
 </ul>
 </li>
-<li><a href="#orgc6582fd">Lecture 2 CS019</a>
+<li><a href="#org080ba32">Lecture 2 CS019</a>
 <ul>
-<li><a href="#org4ccdeaf">Reading chapter 4</a>
+<li><a href="#orgdfa2a4a">Reading chapter 4</a>
 <ul>
-<li><a href="#org0f0a690">4.2.3 Exercise</a></li>
+<li><a href="#orgd363a88">4.2.3 Exercise</a></li>
 </ul>
 </li>
-<li><a href="#orgf131d2e">Reading chapter 5</a></li>
-<li><a href="#org8a8afee">Reading chapter 6</a></li>
-<li><a href="#orgae43efb">Assignment 1: DocDiff</a></li>
+<li><a href="#org0287c0c">Reading chapter 5</a></li>
+<li><a href="#org5506ee7">Reading chapter 6</a></li>
+<li><a href="#orgeef12b9">Assignment 1: DocDiff</a></li>
 </ul>
 </li>
-<li><a href="#orgaaaf1d3">Lecture 3 CS019</a>
+<li><a href="#org8494242">Lecture 3 CS019</a>
 <ul>
-<li><a href="#org3ce5ae8">Lab: Higher-Order Functions</a></li>
+<li><a href="#orge9575a3">Lab: Higher-Order Functions</a></li>
 </ul>
 </li>
-<li><a href="#org9b160b3">15-122 - Imperative Programming</a>
+<li><a href="#org9e5620f">15-122 - Imperative Programming</a>
 <ul>
-<li><a href="#orgec37308">Correct Code</a></li>
-<li><a href="#org3f9ce3b">Loops</a></li>
-<li><a href="#orgff3cd6c">Testing</a></li>
-<li><a href="#org20132e6">Correctness</a></li>
-<li><a href="#org71239c7">Arrays</a></li>
+<li><a href="#org98a23a4">Correct Code</a></li>
+<li><a href="#org7d2ed87">Loops</a></li>
+<li><a href="#org7190f29">Testing</a></li>
+<li><a href="#orgf2e39b8">Proving Correctness</a></li>
+<li><a href="#org23ea413">Arrays</a></li>
+<li><a href="#org47a9647">Aliasing</a></li>
+<li><a href="#orgac755cf">Searching and Sorting</a></li>
+<li><a href="#org721a883">Complexity</a></li>
 </ul>
 </li>
-<li><a href="#orga002099">Cryptopals challenges</a></li>
-<li><a href="#org58738c9">Lecture 4 CS019</a></li>
+<li><a href="#org99637f5">Cryptopals challenges</a></li>
+<li><a href="#orga79c99f">Lecture 4 CS019</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org79749c5" class="outline-2">
-<h2 id="org79749c5">Intro</h2>
-<div class="outline-text-2" id="text-org79749c5">
+<div id="outline-container-orgff63702" class="outline-2">
+<h2 id="orgff63702">Intro</h2>
+<div class="outline-text-2" id="text-orgff63702">
 <p>
 This is a (ongoing) workshop to learn foundational programming skills in designing, writing and optimizing software and is Part IA of the so-called <a href="https://learnaifromscratch.github.io">AI Tripos</a>. The way these notes work is I do this material with you, and point out anything that may trip up a beginner who then is likely to just give up. The further we go on, the more terse the notes will get because I can then assume a background. The courses and books we will do promote that you try and figure out things for yourself as the only proven way to learn this material but their targeted audience is elite students who qualify to get into the <a href="https://en.wikipedia.org/wiki/Ivy_League">Ivy League</a> so we'll have to backtrack as we go filling in some holes in our education in the early lectures. 
 </p>
@@ -329,18 +332,18 @@ If you know how to use a web browser you can start this curriculum, no expertise
 </p>
 </div>
 
-<div id="outline-container-org53fbb6b" class="outline-3">
-<h3 id="org53fbb6b">Code of Conduct</h3>
-<div class="outline-text-3" id="text-org53fbb6b">
+<div id="outline-container-orgf045716" class="outline-3">
+<h3 id="orgf045716">Code of Conduct</h3>
+<div class="outline-text-3" id="text-orgf045716">
 <p>
 Don't post your solutions to the assignments anywhere, such as keeping a public github with every assignment completed. Schools will hide them behind logins if too many solutions are posted. Some of the AI courses we'll see later the assignments have been restricted to the public. We'll work around this but it's annoying.    
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfecd788" class="outline-3">
-<h3 id="orgfecd788">Study advice</h3>
-<div class="outline-text-3" id="text-orgfecd788">
+<div id="outline-container-org432a21d" class="outline-3">
+<h3 id="org432a21d">Study advice</h3>
+<div class="outline-text-3" id="text-org432a21d">
 <p>
 Have the attitude you refuse to not know the material and you'll be fine. Try giving a lecture to an imaginary class from notes you took to prove you actually <a href="https://en.wikipedia.org/wiki/Grok#Adoption_and_modern_usage">grok</a> this material. If you can effortlessly explain the topic without stumbling over your words, using excessive jargon or forgetting your notes you can be assured you know the material. To get around the habit of jargon, imagine everytime you use jargon that somebody asks you to define precisely what it means and you have to stop your imaginary lecture and unravel technical language. 
 </p>
@@ -348,9 +351,9 @@ Have the attitude you refuse to not know the material and you'll be fine. Try gi
 </div>
 </div>
 
-<div id="outline-container-orgf6507a8" class="outline-2">
-<h2 id="orgf6507a8">Start here</h2>
-<div class="outline-text-2" id="text-orgf6507a8">
+<div id="outline-container-org4b009f4" class="outline-2">
+<h2 id="org4b009f4">Start here</h2>
+<div class="outline-text-2" id="text-org4b009f4">
 <p>
 We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i> which is 2 semesters combined into one and as a result omits some tedious analytical details you would find in regular classes that you can always research on your own should you later require those things. Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#(part._.Unusual_.Assignments)">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. This is a quora <a href="https://www.mooclab.club/threads/what-does-professor-shriram-krishnamurthi-expect-a-student-to-know-after-he-she-works.4012/">post</a> about the book we'll do with the course from the writer/instructor "A person completing the first half is ready for most upper-level computer science". We're doing the entire book. 
 </p>
@@ -360,9 +363,9 @@ There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">pl
 </p>
 </div>
 
-<div id="outline-container-orga01964e" class="outline-3">
-<h3 id="orga01964e">Materials needed to complete this</h3>
-<div class="outline-text-3" id="text-orga01964e">
+<div id="outline-container-org579f908" class="outline-3">
+<h3 id="org579f908">Materials needed to complete this</h3>
+<div class="outline-text-3" id="text-org579f908">
 <p>
 As stated in the intro it's possible to complete this course with just a phone or a tablet
 </p>
@@ -380,9 +383,9 @@ As stated in the intro it's possible to complete this course with just a phone o
 </div>
 </div>
 
-<div id="outline-container-org829c5a4" class="outline-3">
-<h3 id="org829c5a4">Archiving the assignments (optional)</h3>
-<div class="outline-text-3" id="text-org829c5a4">
+<div id="outline-container-org8c37f4b" class="outline-3">
+<h3 id="org8c37f4b">Archiving the assignments (optional)</h3>
+<div class="outline-text-3" id="text-org8c37f4b">
 <p>
 If you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
 </p>
@@ -397,9 +400,9 @@ You may also want to archive the pyret <a href="https://www.pyret.org/docs/lates
 </div>
 </div>
 
-<div id="outline-container-org2ec5897" class="outline-2">
-<h2 id="org2ec5897">Lecture 1 CS019</h2>
-<div class="outline-text-2" id="text-org2ec5897">
+<div id="outline-container-org3b5aba7" class="outline-2">
+<h2 id="org3b5aba7">Lecture 1 CS019</h2>
+<div class="outline-text-2" id="text-org3b5aba7">
 <p>
 We're starting with the lecture titled <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f53a52c3-2d36-406a-bde4-a952013df5e2">Wed 9/5/18</a>. Go to code.pyret.org and click <i>open editor</i> as you follow along the lecture. The book will cover everything he's doing like what a list is, what a function is, this is just a demonstration of the online interpreter. You can run Pyret <a href="https://www.pyret.org/set-sail/">offline</a> too. 
 </p>
@@ -426,9 +429,9 @@ Templates are covered in the third lecture, it's a tool to extract 'code for fre
 </div>
 
 
-<div id="outline-container-org4d775f9" class="outline-3">
-<h3 id="org4d775f9">Reading PAPL</h3>
-<div class="outline-text-3" id="text-org4d775f9">
+<div id="outline-container-org4f3de85" class="outline-3">
+<h3 id="org4f3de85">Reading PAPL</h3>
+<div class="outline-text-3" id="text-org4f3de85">
 <p>
 Let's work through the <a href="https://papl.cs.brown.edu/2019/index.html">book</a> starting at the beginning, I'm using whatever the latest version is (as of this writing, 2019). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet. The lectures we do will fill in these blanks.
 </p>
@@ -439,9 +442,9 @@ Chapter 2 <i>Basic Data and Expressions</i> read while you have the pyret interp
 </div>
 </div>
 
-<div id="outline-container-org0d2147a" class="outline-3">
-<h3 id="org0d2147a">Reading documentation</h3>
-<div class="outline-text-3" id="text-org0d2147a">
+<div id="outline-container-org5cecd07" class="outline-3">
+<h3 id="org5cecd07">Reading documentation</h3>
+<div class="outline-text-3" id="text-org5cecd07">
 <p>
 Already we are introduced to built-in functions, such as num-expt. To understand these, let's read the <a href="https://www.pyret.org/docs/latest/Builtins_and_Libraries.html">documentation</a>. If you have a small screen, you will need to turn your device to landscape or increase the browser window size in order to see the table of contents in the pyret docs which automatically hide depending on screen size and is annoying UI. 
 </p>
@@ -451,9 +454,9 @@ Find the number functions <a href="https://www.pyret.org/docs/latest/numbers.htm
 </p>
 </div>
 
-<div id="outline-container-org942d6c1" class="outline-4">
-<h4 id="org942d6c1">Methods</h4>
-<div class="outline-text-4" id="text-org942d6c1">
+<div id="outline-container-orgd6aac2f" class="outline-4">
+<h4 id="orgd6aac2f">Methods</h4>
+<div class="outline-text-4" id="text-orgd6aac2f">
 <p>
 In the documentation under <a href="https://www.pyret.org/docs/latest/lists.html">lists</a> you will see additional built-in functions called methods. These have a dot notation such as .length() or .map(). What this means is the object itself, a list object, has features you can access directly. If your list is named my-list then you can access these by my-list.length() or by chaining them together, such as my-list.sort().length() to both sort and return the length of a list. Try this yourself in the REPL.
 </p>
@@ -461,18 +464,18 @@ In the documentation under <a href="https://www.pyret.org/docs/latest/lists.html
 </div>
 </div>
 
-<div id="outline-container-org30d13d5" class="outline-3">
-<h3 id="org30d13d5">Reading chapter 2</h3>
-<div class="outline-text-3" id="text-org30d13d5">
+<div id="outline-container-org37ca11f" class="outline-3">
+<h3 id="org37ca11f">Reading chapter 2</h3>
+<div class="outline-text-3" id="text-org37ca11f">
 <p>
 The last section on roughnums, where irrational numbers like the square root of two return different values is due to floating point approximation that by default use a 'round to even' rounding strategy which if you wanted you could learn from this <a href="https://www.youtube.com/watch?v=XVg_tUyyQzA&amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;index=5&amp;t=0s">lecture</a> but it assumes a technical background we don't have yet, namely that you've completed all the other lectures in that playlist and an introductory programming course, which we are doing right now. The final exercise <i>Do roughnums obey the axioms of arithmetic operators like distributivity, associativity and commutativity?</i> you can tell immediately from the examples in the book that roughnums are always returning different values, so a + b does not equal b + a if the numbers are roughnums. Think to yourself what would happen if you used floating point to encode money in financial software, with unpredictable results if some trade combination resulted in a roughnum. Oops
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6e0bb74" class="outline-3">
-<h3 id="org6e0bb74">Reading chapter 3</h3>
-<div class="outline-text-3" id="text-org6e0bb74">
+<div id="outline-container-org15c4051" class="outline-3">
+<h3 id="org15c4051">Reading chapter 3</h3>
+<div class="outline-text-3" id="text-org15c4051">
 <p>
 You spent all of chapter 2 entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. In 3.5 <i>Defining Functions in Steps</i> notice he changes the tests to not just return the expected value, but to return the expected computation, writing out in full what should be happening. The idea of doing this is to help you write the function. These aren't tests to prove it is correct, they are tests to help understand the full domain of the problem so we can write a model for it with software. 
 </p>
@@ -547,18 +550,18 @@ end
 </div>
 </div>
 
-<div id="outline-container-orgc6582fd" class="outline-2">
-<h2 id="orgc6582fd">Lecture 2 CS019</h2>
-<div class="outline-text-2" id="text-orgc6582fd">
+<div id="outline-container-org080ba32" class="outline-2">
+<h2 id="org080ba32">Lecture 2 CS019</h2>
+<div class="outline-text-2" id="text-org080ba32">
 <p>
 Watch the Mon9/10/18 second lecture. Interesting lecture about the rainfall problem and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. Higher-order functions are talked about, like filter and map which are in the pyret documentation. We're going to write our own versions of map, filter and fold after we cover Chapter 6 <i>Processing Lists</i>.
 </p>
 </div>
 
 
-<div id="outline-container-org4ccdeaf" class="outline-3">
-<h3 id="org4ccdeaf">Reading chapter 4</h3>
-<div class="outline-text-3" id="text-org4ccdeaf">
+<div id="outline-container-orgdfa2a4a" class="outline-3">
+<h3 id="orgdfa2a4a">Reading chapter 4</h3>
+<div class="outline-text-3" id="text-orgdfa2a4a">
 <p>
 This is an interesting and short chapter how you would go about converting data to rows. There's nothing in here you can't already figure out now that you know how to read the documentation for pyret. The goal here is not to memorize all the built-in functions of Pyret but just gain extra experience changing the examples, and learning how to take data and make it into a program. The text also expects you to start reading documentation, not telling you how to assign a table to a variable so you can run all those sieve expressions on it. See the docs and change the examples in the text as you go to see what they do:
 </p>
@@ -584,9 +587,9 @@ This is similar to <a href="https://n0x400.1mb.dev/#org268f85c">SQL syntax</a>, 
 </p>
 </div>
 
-<div id="outline-container-org0f0a690" class="outline-4">
-<h4 id="org0f0a690">4.2.3 Exercise</h4>
-<div class="outline-text-4" id="text-org0f0a690">
+<div id="outline-container-orgd363a88" class="outline-4">
+<h4 id="orgd363a88">4.2.3 Exercise</h4>
+<div class="outline-text-4" id="text-orgd363a88">
 <p>
 <i>Do Now</i> from 4.2.3. We are asked to think about how to write two questions, the first one is given to us so I tried the second which asks <i>Of the songs by a particular artist, which have we played the least often?</i>" using only what we've seen so far: 
 </p>
@@ -648,9 +651,9 @@ select song, playcount from least-played end
 </div>
 
 
-<div id="outline-container-orgf131d2e" class="outline-3">
-<h3 id="orgf131d2e">Reading chapter 5</h3>
-<div class="outline-text-3" id="text-orgf131d2e">
+<div id="outline-container-org0287c0c" class="outline-3">
+<h3 id="org0287c0c">Reading chapter 5</h3>
+<div class="outline-text-3" id="text-org0287c0c">
 <p>
 In 5.3.1 the description of the properties of an 'anonymous value' abstraction by using numbers and asking what they mean is similar to Terence Tao's <i>Linear Algebra</i> text where he points out that a property of numbers that makes them useful is their ability to be interpreted differently depending on context. 
 </p>
@@ -750,9 +753,9 @@ That was a little tedious but it taught us how to look up documentation, how to 
 </div>
 </div>
 
-<div id="outline-container-org8a8afee" class="outline-3">
-<h3 id="org8a8afee">Reading chapter 6</h3>
-<div class="outline-text-3" id="text-org8a8afee">
+<div id="outline-container-org5506ee7" class="outline-3">
+<h3 id="org5506ee7">Reading chapter 6</h3>
+<div class="outline-text-3" id="text-org5506ee7">
 <p>
 We need to understand this chapter to follow along with the rest of the lectures, and for future assignments. 6.1 you can type all those examples in the REPL to see what they do, like manually linking a list together with link. 
 </p>
@@ -925,9 +928,9 @@ If this doesn't make sense step by hand through clean-data():
 </div>
 
 
-<div id="outline-container-orgae43efb" class="outline-3">
-<h3 id="orgae43efb">Assignment 1: DocDiff</h3>
-<div class="outline-text-3" id="text-orgae43efb">
+<div id="outline-container-orgeef12b9" class="outline-3">
+<h3 id="orgeef12b9">Assignment 1: DocDiff</h3>
+<div class="outline-text-3" id="text-orgeef12b9">
 <p>
 Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. One way to slog through a long chapter on list functions is to actually implement something using lists, then we can refer to it as reference. In other words it becomes a research project to read that we are more motivated to do since we're trying to complete a task. You could also try watching Lecture 3 first before doing this assignment if you're unsure of how recursion on lists works. 
 </p>
@@ -1044,9 +1047,9 @@ I almost posted too much of the answer, breaking my own rule on not posting answ
 </div>
 </div>
 
-<div id="outline-container-orgaaaf1d3" class="outline-2">
-<h2 id="orgaaaf1d3">Lecture 3 CS019</h2>
-<div class="outline-text-2" id="text-orgaaaf1d3">
+<div id="outline-container-org8494242" class="outline-2">
+<h2 id="org8494242">Lecture 3 CS019</h2>
+<div class="outline-text-2" id="text-org8494242">
 <p>
 We're watching Wed9/12/18 lecture on sorting. These videos you can download in 1920x1080 if you want and zoom if you can't see the writing on the whiteboard. 
 </p>
@@ -1110,9 +1113,9 @@ Everytime a list is returned, the next call to insert can happen because it is c
 </p>
 </div>
 
-<div id="outline-container-org3ce5ae8" class="outline-3">
-<h3 id="org3ce5ae8">Lab: Higher-Order Functions</h3>
-<div class="outline-text-3" id="text-org3ce5ae8">
+<div id="outline-container-orge9575a3" class="outline-3">
+<h3 id="orge9575a3">Lab: Higher-Order Functions</h3>
+<div class="outline-text-3" id="text-orge9575a3">
 <p>
 Let's do the <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">lab</a> on functions as data, and write our own map, filter and fold. 
 </p>
@@ -1405,9 +1408,9 @@ This means as the price increases, the quantity demanded will decrease by 60 uni
 </div>
 
 
-<div id="outline-container-org9b160b3" class="outline-2">
-<h2 id="org9b160b3">15-122 - Imperative Programming</h2>
-<div class="outline-text-2" id="text-org9b160b3">
+<div id="outline-container-org9e5620f" class="outline-2">
+<h2 id="org9e5620f">15-122 - Imperative Programming</h2>
+<div class="outline-text-2" id="text-org9e5620f">
 <p>
 In the next lecture of cs019, we will cover how to estimate complexity of a program, and then apply that to all future lectures and assignments. Here we will do the same, learn about how reasoning with contracts can help us write better code and then apply it to all future code. We will also learn exactly how numbers are represented in a computer, which is everyday knowledge we should know when later we have to work in Python for an AI course.  
 </p>
@@ -1471,9 +1474,9 @@ Module 7 <i>Relating Arithmetic and Bitwise Operations</i> what they are describ
 </p>
 </div>
 
-<div id="outline-container-orgec37308" class="outline-3">
-<h3 id="orgec37308">Correct Code</h3>
-<div class="outline-text-3" id="text-orgec37308">
+<div id="outline-container-org98a23a4" class="outline-3">
+<h3 id="org98a23a4">Correct Code</h3>
+<div class="outline-text-3" id="text-org98a23a4">
 <p>
 We're now on module 1 <i>Preconditions - When Do Errors Show up?</i> which is the bulk of 15-122, analyzing imperative code and reasoning about it's correctness. You use code commenting to describe the behavior or a function, and these comments are called contracts. The compiler can statically check these contracts meaning the code is not running, or some languages have the ability to run the code with these contracts enforced, such as JML(Java), Clojure.spec, and C0. If you watched the <a href="https://youtu.be/lNITrPhl2_A">talk</a> ex CMU prof Simmons gave about contracts I posted earlier in these notes, you'll see that extensive testing covers less than 1% of the field of potential inputs. That same talk he also points out contracts have benefits even for functional languages with strong typing (we'll learn these later too) and briefly gives an idea about dependent types as a replacement for contracts, something we'll also briefly cover later.   
 </p>
@@ -1493,9 +1496,9 @@ Module 2 <i>Conditionals</i> the syntax of [0, 14) which is standard interval <a
 </div>
 </div>
 
-<div id="outline-container-org3f9ce3b" class="outline-3">
-<h3 id="org3f9ce3b">Loops</h3>
-<div class="outline-text-3" id="text-org3f9ce3b">
+<div id="outline-container-org7d2ed87" class="outline-3">
+<h3 id="org7d2ed87">Loops</h3>
+<div class="outline-text-3" id="text-org7d2ed87">
 <p>
 Module 2: <i>Introduction to Loops</i> when you mutate data many things can go wrong, so learning how to reason about correct loops will be important to us should we go on to use a Python or some other AI library later. The first example the while loop you can hand step this loop, adjust the varibles with each iteration, then compare them to the assert such as @assert i &gt;=n once the loop exits, since if n = 3, then i should equal 3. Invariants are talked about but not introduced yet, these will be critical to know. An invariant is something that remains constant and doesn't change. 
 </p>
@@ -1539,28 +1542,28 @@ However it does accept as correct answer:
 </div>
 </div>
 
-<div id="outline-container-orgff3cd6c" class="outline-3">
-<h3 id="orgff3cd6c">Testing</h3>
-<div class="outline-text-3" id="text-orgff3cd6c">
+<div id="outline-container-org7190f29" class="outline-3">
+<h3 id="org7190f29">Testing</h3>
+<div class="outline-text-3" id="text-org7190f29">
 <p>
 Module 3 <i>Introduction to Testing</i> I had no problems answering all the assignments correctly the first time, a testament to the greatness of CS019/PAPL. For the edge cases I used gcd(1, 10) and gcd(10, 1), for the factorial function I used fact(0) is 1. There's numerous pow(base, exp) function edge cases you can come up with like pow(0,2) is 0. 
 </p>
 
 <p>
-<i>Specification Functions</i> module is interesting, writing an inefficient secondary correct function to test a much faster implementation, or a secondary function to quickly test the result. I used 100,10 as inputs to the incorrect gcd. It uses a for loop, something the text didn't discuss at all before using it but you can probably figure it out anyway. First i is declared and assigned to 1, then a condition: i must be less or equal to x and i must be less or equal to y. On each iteration increment i with i++ until i's value doesn't pass the loop condition. This is a completely incorrect implementation for example purposes.
+<i>Specification Functions</i> module is interesting, writing an inefficient secondary correct function to test a much faster implementation, or a secondary function to quickly test the result. I used 100,10 as inputs to the incorrect gcd. It uses a for loop, something the text didn't discuss at all before using it but you can probably figure it out anyway (for loops are covered in Module 10). First i is declared and assigned to 1, this is the index. A condition: i must be less or equal to x and i must be less or equal to y for the loop to continue. On each iteration increment i with i++ until i's value doesn't pass the loop condition. This is a completely incorrect implementation for example purposes.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org20132e6" class="outline-3">
-<h3 id="org20132e6">Correctness</h3>
-<div class="outline-text-3" id="text-org20132e6">
+<div id="outline-container-orgf2e39b8" class="outline-3">
+<h3 id="orgf2e39b8">Proving Correctness</h3>
+<div class="outline-text-3" id="text-orgf2e39b8">
 <p>
 Module 4 <i>Proving Correctness</i> let's learn about invariants and correctness proofs. The exercise in <i>Reasoning about Loop Invariants</i> for int test(int lo, int hi) my answers if you're stuck were lo &lt;= i', lo &lt;= i + 1, and i + 1 &lt;= hi. I couldn't get the system to accept i' &lt;= hi which it should be, if the condition on line 10 is i + 1 &lt;= hi. It does however accept i &lt;= hi (without the prime). We found another exercise bug. 
 </p>
 
 <p>
-Aside: It's sometimes beneficial to have a few bugs in these kinds of courses, because you then challenge your own answer and go through the material again to prove your answer is correct. You'll experience this if you ever use an international version of a popular university textbook which typically sell for only 10% the regular cost. Almost always the end of chapter exercises will have been rewritten by some contractor to force students to buy the full priced version, as often the exercises will be assigned homework. Since the publisher doesn't care at all about the international version it will likely be filled with errata/mistakes in these exercises and sometimes this is beneficial, as a student you will have to dig deep into the material in order to assure yourself you have the correct answer and the text is wrong. It also keeps you awake while going through the material.
+Aside: It's sometimes beneficial to have a few bugs in these kinds of courses, because you then challenge your own answer and go through the material again to prove your answer is correct. You'll experience this if you ever use an international version of a popular university textbook which typically sell for only 10% the regular cost. Almost always the end of chapter exercises will have been rewritten by some contractor to force students to buy the full priced version, as often the exercises will be assigned homework. Since the publisher doesn't care at all about the international version it will likely be filled with errata/mistakes in these exercises. You will have to dig deep into the material in order to assure yourself that you have the correct answer and the text is wrong. It also keeps you awake while going through the material.
 </p>
 
 <p>
@@ -1569,9 +1572,9 @@ There's another mistake in the very last point-to reasoning question in <i>Provi
 </div>
 </div>
 
-<div id="outline-container-org71239c7" class="outline-3">
-<h3 id="org71239c7">Arrays</h3>
-<div class="outline-text-3" id="text-org71239c7">
+<div id="outline-container-org23ea413" class="outline-3">
+<h3 id="org23ea413">Arrays</h3>
+<div class="outline-text-3" id="text-org23ea413">
 <p>
 Since we're on a roll let's just finish this entire course, starting with Module 8 <i>C0 Memory Model for Simple Types</i>. In <i>Function Calls</i> in a C program main() is called first, which is usually at the bottom. The first learn by doing exercise you are only determining what fast pow is being called with (parameters), so x and y. The second is hand stepping the function one iteration. You can see how difficult this can become, trying to keep the entire state of a program's variables in your head. In Pyret and other functional languages you don't have to do this, since variables are immutable. The recursion module should be easy to figure out since we've already done a lot of recursion with Pyret. 
 </p>
@@ -1590,7 +1593,7 @@ B[3] = B[1] || B[0];
 </details>
 
 <p>
-The second array exercise also runs your code:
+The second array exercise also runs your code, I just copied the examples for int[]:
 </p>
 
 <details>
@@ -1609,15 +1612,96 @@ C[2][1] = 'f';
 </details>
 
 <p>
-TODO finish 15-122
+In Module 9 <i>The C0 Memory Model</i> the first assignment asks you to open the c0 interpreter and find out what the default initialized value is for an array of type boolean. I guessed it was false instead of using the interpreter since false would be the obvious design choice. You can try the online interpreter for c0 <a href="https://c0.surge.sh/">here</a>. At the end of this module they example a contract calling a helper function with \length(A) being used as an input in order to find the length of the array, with a warning that this is a hacky method that won't work if contracts aren't enabled in production since that assert statement won't be run. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47a9647" class="outline-3">
+<h3 id="org47a9647">Aliasing</h3>
+<div class="outline-text-3" id="text-org47a9647">
+<p>
+Scope and aliasing can be difficult topics to learn, as per this paper on <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/tfk-stu-underst-alias-proc-calls/">Prof Shriram</a>'s Brown Univeristy page where upper-level students even failed to understand aliasing. That paper is worth looking at, to see how confusing this can become in some languages like Java where one change affects two different locations, as they both point to the same thing. The exercises on this page can get tricky, remember that A <code>= B if true means array A and B share the shame memory location and are thus the same array. A[1] =</code> B[1] if true means the values stored at those indexes are the same. 
+</p>
+
+<p>
+Moving on to module 10 <i>Coding with Arrays</i> we run into more aliasing. Here they decide to introduce for loops even though they were already used previously. The main difference between a while loop and a for loop, is you want to use a for loop when the range is known, and a while loop for unknown amounts of loops, such as waiting for a user to enter a key, or summing an arbitrary amount of inputs. Since an array is a fixed range you'd use a for loop for our array copy program.  The learn by doing for summing an array, all you need to do here is declare int sum = 0 then in the body of the for loop keep a running sum, returning it outside the loop. Better code you'd have an if test to see if n == 0 then return 0 (sum of an empty array) but I didn't bother and it accepted my answer anyway. 
+</p>
+
+<details>
+<pre class="example">
+int sum = 0; 
+for(int i = 0; i &lt; n; i++) {
+   sum += A[i];
+}
+return sum;
+// grader doesn't like sum = sum + A[i], preferring the += syntax instead
+
+
+//the 'did I get this' exercise
+int sum = 0;
+for(int i = 0; i &lt; n; i++) {
+   sum += i;
+}
+return sum;
+//note the 'between 0 and n' meaning exclusive of n
+
+</pre>
+</details>
+
+<p>
+In <i>Safety of Array Code</i> you can see how difficult this can become to prove safety such as needing to guarantee the loop never reaches INT MAX. The very last <i>did I get this</i> question asks you to prove access to B[i] is safe, which there is only one answer and what we just covered in this module (the loop invariant). The rest of the exercises get harder and harder, but you will eventually figure them out and get better at 'point to reasoning'. For example the reasoning in array copy after the postcondition is added, how can we prove the postcondition is correct: if array B is created with length of n, and returned, then the postcondition must be correct. In <i>Correctness of Array Code</i> I couldn't get the system to accept my answer, which was originally A[i] == B[i] and return true, false otherwise. The accepted answer is to check if they don't equal, return true otherwise:
+</p>
+
+<pre class="example">
+bool is_same_array(int[] A, int[] B, int n)
+ //@requires n == \length(A) &amp;&amp; n == \length(B)
+{ 
+ for (int i = 0; i &lt; n; i++) 
+ //@loop_invariant 0 &lt;= i
+ {
+   if (A[i] != B[i]) 
+   return false; 
+  } 
+  
+  return true;
+}
+</pre>
+
+<p>
+For Module 10 <i>Contract Exploits w/Array Code</i> the learn by doing assignment just wants you to write assert statements such as assert(A[0] == 0);, checking A's elements are not modified by array copy. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac755cf" class="outline-3">
+<h3 id="orgac755cf">Searching and Sorting</h3>
+<div class="outline-text-3" id="text-orgac755cf">
+<p>
+The loop invariant in the first search function '0 <code>= i' is suspect, as that invariant will be broken the first iteration. From the assignment questions this appears to be a typo, that it should read 0 &lt;</code> i instead. In Module 11 this is a confirmed typo, as the same function is repeated but with the fixed invariant. The first search learn by doing there's a few typos you'll catch, like search(100, x, A, 0, 10) when our search function only takes 4 parameters not 5. The last exercise in <i>Searching in a sorted Array</i> is easy once you've done the other exercises, only the 3rd line was a problem which was assert that A[i] &lt; x, a kind of pointless assertion since if A[i] is not x, and A[i] is not bigger than x (remember it's a sorted array), then our present iteration of A[i] must be less than x. In <i>Reasoning about the search function</i> the first exercise any function calls in the requires/ensures/assert contracts need to be checked for safety violations, and any statement accessing arrays in the @ensures postconditions, assert contracts or body of the code. The feedback for the correct answer on the last exercise is wrong but by now you should be pretty good at point to reasoning. The postcondition in the last exercise is correct because the array has a precondition that it's already sorted, there's a loop invariant that the desired value is not in the array so far making a call to a boolean function with the current value of i, there's 2 assert statements and an if block that if A[current loop index] is bigger than x, then clearly x isn't in the array since it's a sorted array. 
+</p>
+
+<p>
+At this point, believe it or not, you know all there is to know about basic imperative programming and can go through the docs of any mainstream language like Python3.x for a future AI course. What we didn't cover was manual C pointers which if you wanted could go through the slides of the full 15-122 <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">course</a> or try a systems <a href="https://functionalcs.github.io/curriculum/#orgf43f5fd">course</a> that shows how these pointers work at the assembly level. Since we care about AI and will likely be using Python soon this course was a great intro to reasoning about code that mutates memory. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org721a883" class="outline-3">
+<h3 id="org721a883">Complexity</h3>
+<div class="outline-text-3" id="text-org721a883">
+<p>
+We made it to the last unit on complexity. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga002099" class="outline-2">
-<h2 id="orga002099">Cryptopals challenges</h2>
-<div class="outline-text-2" id="text-orga002099">
+
+
+<div id="outline-container-org99637f5" class="outline-2">
+<h2 id="org99637f5">Cryptopals challenges</h2>
+<div class="outline-text-2" id="text-org99637f5">
 <p>
 Using only what we know so far (how to read Pyret docs, how to use higher order function) try completing a few of the <a href="https://cryptopals.com/">cryptopals</a> challenges to learn about how real-world crypto is attacked. Model the bytes however you want, I used strings because we haven't covered making our own datatypes yet for type binary, and if you use numbers Pyret will truncate binary 0001 to just 1. These challenges were designed so you write most of the modeling yourself.
 </p>
@@ -1767,9 +1851,9 @@ TODO
 </div>
 </div>
 
-<div id="outline-container-org58738c9" class="outline-2">
-<h2 id="org58738c9">Lecture 4 CS019</h2>
-<div class="outline-text-2" id="text-org58738c9">
+<div id="outline-container-orga79c99f" class="outline-2">
+<h2 id="orga79c99f">Lecture 4 CS019</h2>
+<div class="outline-text-2" id="text-orga79c99f">
 <p>
 Watching the Fri 9/14/18 lecture on performance. The lambda notation, it's the same as our anonymous map function notation we already did. The setup in the beginning of the lecture is to distinguish the notation in O(n) as being a function that maps from n -&gt; steps to complete computation. Another explanation is <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#(part._.Ambiguities_in_mathematics)">here</a> in <i>ambiguities in mathematics</i>.  
 </p>
