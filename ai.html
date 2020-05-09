@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-01-28 Tue 22:16 -->
+<!-- 2020-05-08 Fri 17:50 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -230,28 +230,6 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -261,102 +239,63 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7915ec3">Intro</a></li>
-<li><a href="#org57db752">Start here</a></li>
-<li><a href="#orgbf61070">6.803 Computing Machinery &amp; Intelligence</a>
+<li><a href="#orgbad7530">Intro</a></li>
+<li><a href="#orge112842">Start here</a>
 <ul>
-<li><a href="#orgf322332">Turing <i>Computing Machinery and Intelligence</i></a>
-<ul>
-<li><a href="#org082290c">Assignments:</a></li>
-</ul>
-</li>
-<li><a href="#org5f6912b">Minsky <i>Steps toward Artificial Intelligence</i></a></li>
+<li><a href="#org1dc6151">Material req to complete this course</a></li>
+<li><a href="#org33f5a15">Introduction</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org7915ec3" class="outline-2">
-<h2 id="org7915ec3">Intro</h2>
-<div class="outline-text-2" id="text-org7915ec3">
+<div id="outline-container-orgbad7530" class="outline-2">
+<h2 id="orgbad7530">Intro</h2>
+<div class="outline-text-2" id="text-orgbad7530">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org57db752" class="outline-2">
-<h2 id="org57db752">Start here</h2>
-<div class="outline-text-2" id="text-org57db752">
+<div id="outline-container-orge112842" class="outline-2">
+<h2 id="orge112842">Start here</h2>
+<div class="outline-text-2" id="text-orge112842">
 <p>
-Let's begin with learning about human intelligence from a computational view point. We'll go through the papers from MIT's <a href="https://courses.csail.mit.edu/6.803/schedule.html">6.803/6.833</a>. First read the <a href="https://courses.csail.mit.edu/6.803/style.html">style guide</a> there's some interesting advice there in writing with better precision (I need this advice). If we're going to write amazing AI software, we should probably at least know what that term means. Note these aren't simple papers you can casually read, some may require amateur research into complexity theory and other topics just to gain an intuitive idea of the paper's subject. 
-</p>
-
-<p>
-Linked on the home page of this course is his yearly talk he gave before he died titled <a href="https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/">How to Speak</a> which is a method to properly communicate your ideas in a talk, a thesis defence or pass a job interview. Winston did a lot of AI research into story telling, as he believed one of the main characteristics of being human is that you can understand a story. So playwriting will come up in this talk frequently. 
-</p>
-
-<p>
-You can archive this site for local reading if you have <a href="https://en.wikipedia.org/wiki/Wget">wget</a> installed:
-</p>
-<pre class="example">
-wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://courses.csail.mit.edu/6.803/schedule.html
-</pre>
-</div>
-</div>
-
-<div id="outline-container-orgbf61070" class="outline-2">
-<h2 id="orgbf61070">6.803 Computing Machinery &amp; Intelligence</h2>
-<div class="outline-text-2" id="text-orgbf61070">
-</div>
-<div id="outline-container-orgf322332" class="outline-3">
-<h3 id="orgf322332">Turing <i>Computing Machinery and Intelligence</i></h3>
-<div class="outline-text-3" id="text-orgf322332">
-<p>
-A <a href="https://courses.csail.mit.edu/6.803/turing.html">paper</a> by Turing, there is also a <a href="https://www.abelard.org/turpap/turpap.php">html</a> version. 
-</p>
-
-<p>
-I decided to print this paper and read it without looking at a screen. This is extremely comfy when it's late at night and you want to sleep, and bright blue light injected directly into your brain by staring at a large screen before sleeping is never a good idea. You can also take notes more easily.
-</p>
-
-<p>
-"A number of interrogators could be used, and statistics compiled to show how often the right identification was given." This is essentially the present state of AI. The chapter on discrete-state machines, how to read that table? Input is ON or OFF. At the top, the last states are the columns. If the input is off (\(i_0\)), and the last state was q1, then the current state is q2. See this <a href="https://www.youtube.com/watch?v=3aqHmilhxmI">demonstration</a>. Turing predicts storage capacity will be so vast in the future the imitation game will be difficult to distinguish from intelligence within the first 5 minutes of interrogation. There's an interesting refutation by example to the argument that a program can't write a sonnet. He concludes that abstract learning would probably be the best place to start, which is where we have already started, with Alpha Go/chess programs. He also suggests a language strategy as a starting point, teaching a program to read and understand a language. 
-</p>
-
-<p>
-If you look this paper up on Wikipedia, they primarily focus on the specifics of the <i>turing test</i> and imitation game but reading this paper I find that is overanalysis and isn't the main points of this paper, which are to debunk popular objections then to the proposition 'machines can think', not provide any kind of concrete intelligence testing heuristics.  
+It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.  
 </p>
 </div>
 
-<div id="outline-container-org082290c" class="outline-4">
-<h4 id="org082290c">Assignments:</h4>
-<div class="outline-text-4" id="text-org082290c">
+<div id="outline-container-org1dc6151" class="outline-3">
+<h3 id="org1dc6151">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-org1dc6151">
 <p>
-Suppose that you are Alan Turing. You have been asked to participate in a panel discussion on the possibility of intelligent computers at a meeting of the Royal Society. You prepare some talking points by completing the following:
+Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides scripts to set up your own environment. 
 </p>
-
-<ul class="org-ul">
-<li>In retrospect, the most important part of my paper is &#x2026;, because&#x2026;</li>
-<li>I think the strongest of my various arguments is&#x2026;, because&#x2026;</li>
-<li>I think the weakest of my various arguments is&#x2026;, because&#x2026;</li>
-<li>I hope that people pursue research focused on&#x2026;, because&#x2026;don't seem particularly important to me.</li>
-</ul>
-</div>
 </div>
 </div>
 
-<div id="outline-container-org5f6912b" class="outline-3">
-<h3 id="org5f6912b">Minsky <i>Steps toward Artificial Intelligence</i></h3>
-<div class="outline-text-3" id="text-org5f6912b">
+<div id="outline-container-org33f5a15" class="outline-3">
+<h3 id="org33f5a15">Introduction</h3>
+<div class="outline-text-3" id="text-org33f5a15">
 <p>
-A <a href="https://courses.csail.mit.edu/6.803/minsky1.html">survey</a> of techniques: Search, Pattern-Recognition, Learning, Planning and Induction. 
+We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode'&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address in content = "" into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
 
 <p>
-This paper is exactly everything we will be covering, in a well written generalist way that anybody can understand despite the math notation used. 
+This is a great description of statistics:
 </p>
+
+<blockquote>
+<p>
+Statistics is the branch of mathematical engineering which designs and analyses methods for drawing reliable inferences from imperfect data. The subject of most sciences is some aspect of the world around us, or within us. Psychology studies minds; geology studies the Earth’s composition and form; economics studies production, distribution and exchange; mycology studies mushrooms. Statistics does not study the world, but some of the ways we try to understand the world — some of the intellectual tools of the other sciences. Its utility comes indirectly, through helping those other sciences. This utility is very great, because all the sciences have to deal with imperfect data.
+</p>
+
+<p>
+Data may be imperfect because we can only observe and record a small fraction of what is relevant; or because we can only observe indirect signs of what is truly relevant; or because, no matter  how carefully we try, our data always contain an element of noise. Over the last two centuries, statistics has come to handle all such imperfections by modeling them as random processes, and probability has become so central to statistics that we introduce random events deliberately (as in sample surveys). Statistics, then, uses probability to model inference from data. We try to mathematically understand the properties of different procedures for drawing inferences: Under what conditions are they reliable? What sorts of errors do they make, and how often? What can they tell us when they work? What are signs that something has gone wrong? Like other branches of engineering  statistics aims not just at understanding but also at improvement: we want to analyze data better: more reliably, with fewer and smaller errors, under broader conditions, faster, and with less mental effort.  &#x2013; <i>Advanced Data Analysis From an Elementary Point of View</i> by <a href="http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Cosma Shalizi</a>
+</p>
+</blockquote>
 </div>
 </div>
 </div>
