@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-08 Fri 20:34 -->
+<!-- 2020-05-09 Sat 00:25 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -230,6 +230,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -239,47 +261,56 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge705ad7">Intro</a></li>
-<li><a href="#orge4bb756">Start here</a>
+<li><a href="#orga16c52a">Intro</a></li>
+<li><a href="#org021cc0e">Start here</a>
 <ul>
-<li><a href="#orgc8dcf8c">Material req to complete this course</a></li>
-<li><a href="#orgd912d95">Introduction</a></li>
+<li><a href="#orgfc07ad5">Material req to complete this course</a></li>
+<li><a href="#orgf6274aa">Introduction</a></li>
+<li><a href="#orgc9ed77b">Lecture 2 Data collection and scraping</a>
+<ul>
+<li><a href="#org475f031">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#orge3324ac">Lecture 2 Data collection and scraping</a></li>
+<li><a href="#org5e48199">Jupyter notebooks</a>
+<ul>
+<li><a href="#orgc5ac6af">Assignment 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orge705ad7" class="outline-2">
-<h2 id="orge705ad7">Intro</h2>
-<div class="outline-text-2" id="text-orge705ad7">
+<div id="outline-container-orga16c52a" class="outline-2">
+<h2 id="orga16c52a">Intro</h2>
+<div class="outline-text-2" id="text-orga16c52a">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge4bb756" class="outline-2">
-<h2 id="orge4bb756">Start here</h2>
-<div class="outline-text-2" id="text-orge4bb756">
+<div id="outline-container-org021cc0e" class="outline-2">
+<h2 id="org021cc0e">Start here</h2>
+<div class="outline-text-2" id="text-org021cc0e">
 <p>
-It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.  
+It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.
 </p>
 </div>
 
-<div id="outline-container-orgc8dcf8c" class="outline-3">
-<h3 id="orgc8dcf8c">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-orgc8dcf8c">
+<div id="outline-container-orgfc07ad5" class="outline-3">
+<h3 id="orgfc07ad5">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-orgfc07ad5">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides scripts to set up your own environment. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd912d95" class="outline-3">
-<h3 id="orgd912d95">Introduction</h3>
-<div class="outline-text-3" id="text-orgd912d95">
+<div id="outline-container-orgf6274aa" class="outline-3">
+<h3 id="orgf6274aa">Introduction</h3>
+<div class="outline-text-3" id="text-orgf6274aa">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -307,10 +338,55 @@ We don't have the recommended background but you'll see later most of these requ
 </p>
 </div>
 </div>
+
+<div id="outline-container-orgc9ed77b" class="outline-3">
+<h3 id="orgc9ed77b">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orgc9ed77b">
+<p>
+Next lecture when he introduces Jupyter notebook, we'll export the notes as a notebook for this lecture (and the recitation) to experiment around with the regex library. This is also what the assignments are for, to better understand the material by doing it ourselves.   
+</p>
+
+<p>
+The regex poll done in class is explained in the notes:
+</p>
+
+<pre class="example">
+r"\w+\s+science" 
+</pre>
+
+<p>
+"These rules can of course be combined with the rules to match potentially very complicated expressions. For instance, if we want to match the text “something science” where something is any alphanumeric character, and there can be any number of spaces of any kind between something and the word “science”, we could use the expression r"\w+\s+science".
+</p>
 </div>
 
-<div id="outline-container-orge3324ac" class="outline-2">
-<h2 id="orge3324ac">Lecture 2 Data collection and scraping</h2>
+
+<div id="outline-container-org475f031" class="outline-4">
+<h4 id="org475f031">Regex practice</h4>
+<div class="outline-text-4" id="text-org475f031">
+<p>
+If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e48199" class="outline-3">
+<h3 id="org5e48199">Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-org5e48199">
+<p>
+todo, I'll just use google colab which is free
+</p>
+</div>
+
+<div id="outline-container-orgc5ac6af" class="outline-4">
+<h4 id="orgc5ac6af">Assignment 1</h4>
+<div class="outline-text-4" id="text-orgc5ac6af">
+<p>
+todo both 15-388 and 688 assignment
+</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </body>
