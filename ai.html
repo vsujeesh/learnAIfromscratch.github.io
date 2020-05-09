@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-08 Fri 17:50 -->
+<!-- 2020-05-08 Fri 20:34 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -239,52 +239,53 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgbad7530">Intro</a></li>
-<li><a href="#orge112842">Start here</a>
+<li><a href="#orge705ad7">Intro</a></li>
+<li><a href="#orge4bb756">Start here</a>
 <ul>
-<li><a href="#org1dc6151">Material req to complete this course</a></li>
-<li><a href="#org33f5a15">Introduction</a></li>
+<li><a href="#orgc8dcf8c">Material req to complete this course</a></li>
+<li><a href="#orgd912d95">Introduction</a></li>
 </ul>
 </li>
+<li><a href="#orge3324ac">Lecture 2 Data collection and scraping</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgbad7530" class="outline-2">
-<h2 id="orgbad7530">Intro</h2>
-<div class="outline-text-2" id="text-orgbad7530">
+<div id="outline-container-orge705ad7" class="outline-2">
+<h2 id="orge705ad7">Intro</h2>
+<div class="outline-text-2" id="text-orge705ad7">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge112842" class="outline-2">
-<h2 id="orge112842">Start here</h2>
-<div class="outline-text-2" id="text-orge112842">
+<div id="outline-container-orge4bb756" class="outline-2">
+<h2 id="orge4bb756">Start here</h2>
+<div class="outline-text-2" id="text-orge4bb756">
 <p>
 It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.  
 </p>
 </div>
 
-<div id="outline-container-org1dc6151" class="outline-3">
-<h3 id="org1dc6151">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-org1dc6151">
+<div id="outline-container-orgc8dcf8c" class="outline-3">
+<h3 id="orgc8dcf8c">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-orgc8dcf8c">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides scripts to set up your own environment. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org33f5a15" class="outline-3">
-<h3 id="org33f5a15">Introduction</h3>
-<div class="outline-text-3" id="text-org33f5a15">
+<div id="outline-container-orgd912d95" class="outline-3">
+<h3 id="orgd912d95">Introduction</h3>
+<div class="outline-text-3" id="text-orgd912d95">
 <p>
-We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode'&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address in content = "" into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
+We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
 
 <p>
-This is a great description of statistics:
+This is a great description of statistics, from a book we will be able to complete soon:
 </p>
 
 <blockquote>
@@ -296,8 +297,20 @@ Statistics is the branch of mathematical engineering which designs and analyses 
 Data may be imperfect because we can only observe and record a small fraction of what is relevant; or because we can only observe indirect signs of what is truly relevant; or because, no matter  how carefully we try, our data always contain an element of noise. Over the last two centuries, statistics has come to handle all such imperfections by modeling them as random processes, and probability has become so central to statistics that we introduce random events deliberately (as in sample surveys). Statistics, then, uses probability to model inference from data. We try to mathematically understand the properties of different procedures for drawing inferences: Under what conditions are they reliable? What sorts of errors do they make, and how often? What can they tell us when they work? What are signs that something has gone wrong? Like other branches of engineering  statistics aims not just at understanding but also at improvement: we want to analyze data better: more reliably, with fewer and smaller errors, under broader conditions, faster, and with less mental effort.  &#x2013; <i>Advanced Data Analysis From an Elementary Point of View</i> by <a href="http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Cosma Shalizi</a>
 </p>
 </blockquote>
+
+<p>
+All the examples he talks about you can see the slides better in the lecture <a href="http://www.datasciencecourse.org/notes/intro/">notes</a>. The one example about thatched roofs turned out to be a bad indicator as one student mentions. Googling this I discover: "There are many structures in Kenya and Uganda that have thatched roofs, but are not households, such as kitchens and sheds. These buildings were artificially inflating the count of households with thatched roofs, making areas look poorer than they were."
+</p>
+
+<p>
+We don't have the recommended background but you'll see later most of these requirements are given a crash course enough to finish the assignments. The rest of this lecture is just course logistics, the masters version of this course 15-688 just has extra homework assignments, which we'll try some of them. 
+</p>
 </div>
 </div>
+</div>
+
+<div id="outline-container-orge3324ac" class="outline-2">
+<h2 id="orge3324ac">Lecture 2 Data collection and scraping</h2>
 </div>
 </div>
 </body>
