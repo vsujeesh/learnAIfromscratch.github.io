@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-09 Sat 00:25 -->
+<!-- 2020-05-11 Mon 22:46 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,19 +261,20 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga16c52a">Intro</a></li>
-<li><a href="#org021cc0e">Start here</a>
+<li><a href="#orgfbd92cc">Intro</a></li>
+<li><a href="#orgb44b258">Start here</a>
 <ul>
-<li><a href="#orgfc07ad5">Material req to complete this course</a></li>
-<li><a href="#orgf6274aa">Introduction</a></li>
-<li><a href="#orgc9ed77b">Lecture 2 Data collection and scraping</a>
+<li><a href="#orgadc509e">Material req to complete this course</a></li>
+<li><a href="#org9dd2055">Lecture 1 Introduction</a></li>
+<li><a href="#orgb459e5a">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org475f031">Regex practice</a></li>
+<li><a href="#org08824c3">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org5e48199">Jupyter notebooks</a>
+<li><a href="#orga91bdd5">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#org7129a89">Recitation 1</a>
 <ul>
-<li><a href="#orgc5ac6af">Assignment 1</a></li>
+<li><a href="#orgf7f8e26">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -282,35 +283,39 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-orga16c52a" class="outline-2">
-<h2 id="orga16c52a">Intro</h2>
-<div class="outline-text-2" id="text-orga16c52a">
+<div id="outline-container-orgfbd92cc" class="outline-2">
+<h2 id="orgfbd92cc">Intro</h2>
+<div class="outline-text-2" id="text-orgfbd92cc">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org021cc0e" class="outline-2">
-<h2 id="org021cc0e">Start here</h2>
-<div class="outline-text-2" id="text-org021cc0e">
+<div id="outline-container-orgb44b258" class="outline-2">
+<h2 id="orgb44b258">Start here</h2>
+<div class="outline-text-2" id="text-orgb44b258">
 <p>
 It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.
 </p>
+
+<p>
+Note the math in this course is just applied in a black box way, applied machine learning you'll see is possible no matter what your math background and if you've followed the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a> and made it to first lecture on Linear Algebra you'll be more than prepared.  
+</p>
 </div>
 
-<div id="outline-container-orgfc07ad5" class="outline-3">
-<h3 id="orgfc07ad5">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-orgfc07ad5">
+<div id="outline-container-orgadc509e" class="outline-3">
+<h3 id="orgadc509e">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-orgadc509e">
 <p>
-Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides scripts to set up your own environment. 
+Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides Vagrant files and instructions to set up your own environment. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf6274aa" class="outline-3">
-<h3 id="orgf6274aa">Introduction</h3>
-<div class="outline-text-3" id="text-orgf6274aa">
+<div id="outline-container-org9dd2055" class="outline-3">
+<h3 id="org9dd2055">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org9dd2055">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -339,9 +344,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-orgc9ed77b" class="outline-3">
-<h3 id="orgc9ed77b">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-orgc9ed77b">
+<div id="outline-container-orgb459e5a" class="outline-3">
+<h3 id="orgb459e5a">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orgb459e5a">
 <p>
 Next lecture when he introduces Jupyter notebook, we'll export the notes as a notebook for this lecture (and the recitation) to experiment around with the regex library. This is also what the assignments are for, to better understand the material by doing it ourselves.   
 </p>
@@ -359,10 +364,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-
-<div id="outline-container-org475f031" class="outline-4">
-<h4 id="org475f031">Regex practice</h4>
-<div class="outline-text-4" id="text-org475f031">
+<div id="outline-container-org08824c3" class="outline-4">
+<h4 id="org08824c3">Regex practice</h4>
+<div class="outline-text-4" id="text-org08824c3">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -370,17 +374,60 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org5e48199" class="outline-3">
-<h3 id="org5e48199">Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org5e48199">
+<div id="outline-container-orga91bdd5" class="outline-3">
+<h3 id="orga91bdd5">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orga91bdd5">
 <p>
-todo, I'll just use google colab which is free
+Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. He mentions recitations, we also have access to <a href="http://www.datasciencecourse.org/notes/recitation_1/">them</a> as exportable notebooks. If you want your own local notebook (recommended) then see <a href="http://www.datasciencecourse.org/assignments/">environment</a> about using Vagrant or other methods. You can also use Google Colab online for <a href="https://colab.research.google.com/">free</a> click on File -&gt; New Notebook and enter in a throwaway or regular google account, a new notebook should appear. Note that free version of Colab, the VM will shut down after some indeterminate amount of time being idle, which you just click on Runtime -&gt; Restart Runtime. You can back up everything to a Google drive account or Github. You can redefine all the heavily used key shortcuts in Colab so if you're stuck with just a tablet, then redefine Shift-Enter (run and move to new cell) and Ctrl-Enter (run cell) to whatever you want. You can enter shell commands with ! so !cd or !ls or !python &#x2013;version to match up to the online python documentation.
+</p>
+
+<p>
+I assume you have a notebook open while he's going through the lab. Note the syntax of python is nearly identical to what we've been using (pyret, with is python + racket) except each function needs a return statement, however in Jupyter notebook you often don't write functions it is one big function, you can keep variable scope from getting out of control like he suggested by sticking them inside <a href="https://docs.python.org/3.6/tutorial/datastructures.html#list-comprehensions">list comprehensions</a> or map/filter/localized in a loop. Notebooks are for fast experimentation doing things that you don't need a full editor for.   
+</p>
+
+<ul class="org-ul">
+<li>Efficiency lists:
+<ul class="org-ul">
+<li>Accessing a list element O(1)</li>
+<li>Appending O(1)</li>
+<li>Inserting O(n) due to 'lists' being an array</li>
+</ul></li>
+</ul>
+
+<p>
+Note he uses a <a href="https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb">magic</a> command for %%timeit. 
+</p>
+
+<ul class="org-ul">
+<li>Efficieny dicts:
+<ul class="org-ul">
+<li>Value lookup O(1)</li>
+<li>Insert O(1)</li>
+<li>Delete O(1)
+<ul class="org-ul">
+<li>Worse time constant than lists</li>
+<li>Use for more complex type than integers</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part1.html">here</a> and <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part2.html">here</a> note the video button. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7129a89" class="outline-3">
+<h3 id="org7129a89">Recitation 1</h3>
+<div class="outline-text-3" id="text-org7129a89">
+<p>
+todo
 </p>
 </div>
 
-<div id="outline-container-orgc5ac6af" class="outline-4">
-<h4 id="orgc5ac6af">Assignment 1</h4>
-<div class="outline-text-4" id="text-orgc5ac6af">
+<div id="outline-container-orgf7f8e26" class="outline-4">
+<h4 id="orgf7f8e26">Assignment 1</h4>
+<div class="outline-text-4" id="text-orgf7f8e26">
 <p>
 todo both 15-388 and 688 assignment
 </p>
