@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-12 Tue 17:03 -->
+<!-- 2020-05-12 Tue 17:15 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,21 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org23a902e">Intro</a></li>
-<li><a href="#org1fa1861">Start here</a>
+<li><a href="#org4891eea">Intro</a></li>
+<li><a href="#org7b35a48">Start here</a>
 <ul>
-<li><a href="#orgaec65e3">Material req to complete this course</a></li>
-<li><a href="#org6e42da9">Lecture 1 Introduction</a></li>
-<li><a href="#orge290de5">Lecture 2 Data collection and scraping</a>
+<li><a href="#org0900a2e">Material req to complete this course</a></li>
+<li><a href="#org1ca9e9a">Lecture 1 Introduction</a></li>
+<li><a href="#org4f4b862">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#orge55357e">Regex practice</a></li>
+<li><a href="#org8ae43be">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org3680216">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#orgdcf4130">Recitation 1</a></li>
-<li><a href="#orgdc1cb84">Finite State Automata</a>
+<li><a href="#orgd942aed">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#org7024d9c">Recitation 1</a></li>
+<li><a href="#org7567e59">Finite State Automata</a>
 <ul>
-<li><a href="#org06f0df1">Assignment 1</a></li>
+<li><a href="#orge50d5eb">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -284,39 +284,39 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org23a902e" class="outline-2">
-<h2 id="org23a902e">Intro</h2>
-<div class="outline-text-2" id="text-org23a902e">
+<div id="outline-container-org4891eea" class="outline-2">
+<h2 id="org4891eea">Intro</h2>
+<div class="outline-text-2" id="text-org4891eea">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1fa1861" class="outline-2">
-<h2 id="org1fa1861">Start here</h2>
-<div class="outline-text-2" id="text-org1fa1861">
+<div id="outline-container-org7b35a48" class="outline-2">
+<h2 id="org7b35a48">Start here</h2>
+<div class="outline-text-2" id="text-org7b35a48">
 <p>
-It's assumed you're following the math and software workshop in parallel with this one. We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this on topcoder or in industry while we later take more advanced AI courses that take longer to complete.
+It's assumed you're following the math and software workshop in parallel with this one. We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this on topcoder (they are an adhoc freelancer site now for quick and dirty data science) or in industry while we later take more advanced AI courses.
 </p>
 
 <p>
-Note the math in 15-388/688 is applied in a black box way, applied machine learning you'll see is possible no matter what your math background and if you've followed the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a> and made it to first lecture on Linear Algebra you'll be more than prepared. The programming skills needed, if you've made it to higher order functions map/filter/fold in the software workshop you should be fine.  
+Note the math in 15-388/688 is applied in a black box way and applied machine learning you'll see is possible no matter what your math background and if you've followed the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a> and made it to the first lecture on Linear Algebra you'll be more than prepared. The programming skills needed, if you've made it to higher order functions map/filter/fold in the software workshop you should be fine.  
 </p>
 </div>
 
-<div id="outline-container-orgaec65e3" class="outline-3">
-<h3 id="orgaec65e3">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-orgaec65e3">
+<div id="outline-container-org0900a2e" class="outline-3">
+<h3 id="org0900a2e">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-org0900a2e">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this course using Google colab (free) otherwise the course uses Python and provides Vagrant files and instructions to set up your own environment. I recommend <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6e42da9" class="outline-3">
-<h3 id="org6e42da9">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org6e42da9">
+<div id="outline-container-org1ca9e9a" class="outline-3">
+<h3 id="org1ca9e9a">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org1ca9e9a">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -345,9 +345,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-orge290de5" class="outline-3">
-<h3 id="orge290de5">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-orge290de5">
+<div id="outline-container-org4f4b862" class="outline-3">
+<h3 id="org4f4b862">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-org4f4b862">
 <p>
 Next lecture when he introduces Jupyter notebook, we'll export the notes as a notebook for this lecture (and the recitation) to experiment around with the regex library. This is also what the assignments are for, to better understand the material by doing it ourselves.   
 </p>
@@ -365,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-orge55357e" class="outline-4">
-<h4 id="orge55357e">Regex practice</h4>
-<div class="outline-text-4" id="text-orge55357e">
+<div id="outline-container-org8ae43be" class="outline-4">
+<h4 id="org8ae43be">Regex practice</h4>
+<div class="outline-text-4" id="text-org8ae43be">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -375,9 +375,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org3680216" class="outline-3">
-<h3 id="org3680216">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org3680216">
+<div id="outline-container-orgd942aed" class="outline-3">
+<h3 id="orgd942aed">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orgd942aed">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -428,15 +428,15 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-orgdcf4130" class="outline-3">
-<h3 id="orgdcf4130">Recitation 1</h3>
-<div class="outline-text-3" id="text-orgdcf4130">
+<div id="outline-container-org7024d9c" class="outline-3">
+<h3 id="org7024d9c">Recitation 1</h3>
+<div class="outline-text-3" id="text-org7024d9c">
 <p>
-Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open recitation<sub>1.ipynb</sub> in jupyter notebook and now you can run all the code. 
+Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
 
 <p>
-If you're using Google Colab, look at <a href="https://colab.research.google.com/notebooks/io.ipynb">this</a> otherwise <a href="https://stackoverflow.com/a/52300696">mount</a> a google drive, save the homework .tar.gz file directly to your google drive, and use something like ZIP extractor to open it there. Other method is open a new notebook in colab and type the following, then File -&gt; Open from drive and load recitation<sub>1.ipnyb</sub> and run all code blocks Runtime -&gt; Run All
+If you're using Google Colab, look at <a href="https://colab.research.google.com/notebooks/io.ipynb">this</a> otherwise <a href="https://stackoverflow.com/a/52300696">mount</a> a google drive, save the homework .tar.gz file directly to your google drive, and use something like ZIP extractor to open it there. Other method is open a new notebook in colab and type the following, then File -&gt; Open from drive and load the .ipnyb notbook and run all code blocks Runtime -&gt; Run All
 </p>
 
 <pre class="example">
@@ -456,14 +456,14 @@ They show that Python libraries can create encoding conflicts. Remember code poi
 </p>
 
 <p>
-Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not just a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook, ba?t matches 'btt' and 'abt' too.  
+Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not just a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdc1cb84" class="outline-3">
-<h3 id="orgdc1cb84">Finite State Automata</h3>
-<div class="outline-text-3" id="text-orgdc1cb84">
+<div id="outline-container-org7567e59" class="outline-3">
+<h3 id="org7567e59">Finite State Automata</h3>
+<div class="outline-text-3" id="text-org7567e59">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand this if you've taken set theory in the math workshop, and can google the <a href="https://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>. 
 </p>
@@ -495,11 +495,11 @@ Around 59:25 we begin regular operations, concatenation (multiplication), union 
 </ul>
 
 <p>
-Their example regular expression of 'x starts and ends with the same char, in the language L of {a,b} then \(L^{*}\) would be {a, b, aa, bb, aaa, bbb, ababa, etc}}
+Their example regular expression of 'x starts and ends with the same char, in the language L of {a,b} then \(L^{*}\) would be {a, b, aa, bb, aaa, bbb, ababa, etc}
 </p>
 
 <p>
-a(a|b)*a | b(a|b)*b | a | b which translates to: a concatenated with any amount of a's or b's, and ends with a, OR b concatenated with any amount of concatenated a's or b's, in any amount concatenated with b OR a or b 
+a(a|b)*a | b(a|b)*b | a | b which translates to: a concatenated with any amount of a's or b's, and ends with a, OR b concatenated with any amount of a's or b's, ending with b OR a or b 
 </p>
 
 <p>
@@ -518,14 +518,14 @@ There is also order precedence: Repetition like ?, star (highest), concat, union
 </ul>
 
 <p>
-I saved you hours of frustration at regex golf now you know exactly how a regular language works and expressions you no longer need those practice sites, just the Python documentation to look up addon features that are non regular, such as back references.  
+I saved you hours of frustration debugging regex or practicing regex golf now you know exactly how a regular language works and expressions you no longer need those practice sites, just the Python documentation to look up addon features that are non regular, such as back references.  
 </p>
 </div>
 
 
-<div id="outline-container-org06f0df1" class="outline-4">
-<h4 id="org06f0df1">Assignment 1</h4>
-<div class="outline-text-4" id="text-org06f0df1">
+<div id="outline-container-orge50d5eb" class="outline-4">
+<h4 id="orge50d5eb">Assignment 1</h4>
+<div class="outline-text-4" id="text-orge50d5eb">
 <p>
 todo both 15-388 and 688 assignment
 </p>
