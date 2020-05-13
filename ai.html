@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-12 Tue 17:15 -->
+<!-- 2020-05-12 Tue 17:32 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,21 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4891eea">Intro</a></li>
-<li><a href="#org7b35a48">Start here</a>
+<li><a href="#orgdbb2f9c">Intro</a></li>
+<li><a href="#orgd18fab1">Start here</a>
 <ul>
-<li><a href="#org0900a2e">Material req to complete this course</a></li>
-<li><a href="#org1ca9e9a">Lecture 1 Introduction</a></li>
-<li><a href="#org4f4b862">Lecture 2 Data collection and scraping</a>
+<li><a href="#org4058a40">Material req to complete this course</a></li>
+<li><a href="#orge3f5935">Lecture 1 Introduction</a></li>
+<li><a href="#org3c25087">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org8ae43be">Regex practice</a></li>
+<li><a href="#orgfa55039">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#orgd942aed">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#org7024d9c">Recitation 1</a></li>
-<li><a href="#org7567e59">Finite State Automata</a>
+<li><a href="#orgcff9d7f">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#org47ea0f7">Recitation 1</a></li>
+<li><a href="#org4ecb8a2">Finite State Automata</a>
 <ul>
-<li><a href="#orge50d5eb">Assignment 1</a></li>
+<li><a href="#orgf544db8">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -284,18 +284,18 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org4891eea" class="outline-2">
-<h2 id="org4891eea">Intro</h2>
-<div class="outline-text-2" id="text-org4891eea">
+<div id="outline-container-orgdbb2f9c" class="outline-2">
+<h2 id="orgdbb2f9c">Intro</h2>
+<div class="outline-text-2" id="text-orgdbb2f9c">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7b35a48" class="outline-2">
-<h2 id="org7b35a48">Start here</h2>
-<div class="outline-text-2" id="text-org7b35a48">
+<div id="outline-container-orgd18fab1" class="outline-2">
+<h2 id="orgd18fab1">Start here</h2>
+<div class="outline-text-2" id="text-orgd18fab1">
 <p>
 It's assumed you're following the math and software workshop in parallel with this one. We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this on topcoder (they are an adhoc freelancer site now for quick and dirty data science) or in industry while we later take more advanced AI courses.
 </p>
@@ -305,18 +305,18 @@ Note the math in 15-388/688 is applied in a black box way and applied machine le
 </p>
 </div>
 
-<div id="outline-container-org0900a2e" class="outline-3">
-<h3 id="org0900a2e">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-org0900a2e">
+<div id="outline-container-org4058a40" class="outline-3">
+<h3 id="org4058a40">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-org4058a40">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this course using Google colab (free) otherwise the course uses Python and provides Vagrant files and instructions to set up your own environment. I recommend <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1ca9e9a" class="outline-3">
-<h3 id="org1ca9e9a">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org1ca9e9a">
+<div id="outline-container-orge3f5935" class="outline-3">
+<h3 id="orge3f5935">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-orge3f5935">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -345,9 +345,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-org4f4b862" class="outline-3">
-<h3 id="org4f4b862">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-org4f4b862">
+<div id="outline-container-org3c25087" class="outline-3">
+<h3 id="org3c25087">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-org3c25087">
 <p>
 Next lecture when he introduces Jupyter notebook, we'll export the notes as a notebook for this lecture (and the recitation) to experiment around with the regex library. This is also what the assignments are for, to better understand the material by doing it ourselves.   
 </p>
@@ -365,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-org8ae43be" class="outline-4">
-<h4 id="org8ae43be">Regex practice</h4>
-<div class="outline-text-4" id="text-org8ae43be">
+<div id="outline-container-orgfa55039" class="outline-4">
+<h4 id="orgfa55039">Regex practice</h4>
+<div class="outline-text-4" id="text-orgfa55039">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -375,9 +375,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-orgd942aed" class="outline-3">
-<h3 id="orgd942aed">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-orgd942aed">
+<div id="outline-container-orgcff9d7f" class="outline-3">
+<h3 id="orgcff9d7f">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orgcff9d7f">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -428,9 +428,9 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-org7024d9c" class="outline-3">
-<h3 id="org7024d9c">Recitation 1</h3>
-<div class="outline-text-3" id="text-org7024d9c">
+<div id="outline-container-org47ea0f7" class="outline-3">
+<h3 id="org47ea0f7">Recitation 1</h3>
+<div class="outline-text-3" id="text-org47ea0f7">
 <p>
 Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
@@ -461,9 +461,9 @@ Regexp they want us to <a href="https://blog.codinghorror.com/regular-expression
 </div>
 </div>
 
-<div id="outline-container-org7567e59" class="outline-3">
-<h3 id="org7567e59">Finite State Automata</h3>
-<div class="outline-text-3" id="text-org7567e59">
+<div id="outline-container-org4ecb8a2" class="outline-3">
+<h3 id="org4ecb8a2">Finite State Automata</h3>
+<div class="outline-text-3" id="text-org4ecb8a2">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand this if you've taken set theory in the math workshop, and can google the <a href="https://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>. 
 </p>
@@ -486,10 +486,11 @@ Around 59:25 we begin regular operations, concatenation (multiplication), union 
 <li>Example: Concatenation
 <ul class="org-ul">
 <li>\(L_1\) = {00,10}; \(L_2\) = {0,1} then \(L_1 \cdot L_2\) = {000, 001, 100, 101}</li>
+<li>The dot notation is dropped in regex, abc is still multiplication</li>
 </ul></li>
 <li>Example: Star, the concatenation of i copies of L for i &gt; 0
 <ul class="org-ul">
-<li>If L = {0,1} then \(L^{2}\) = {00, 01, 10, 11} and \(L^{*}\) = {none, 0, 00, 0000, 01, 111, 01110 etc}</li>
+<li>If L = {0,1} then \(L^{2}\) = {00, 01, 10, 11} (L x L concatenated) and \(L^{*}\) = {none, 0, 00, 0000, 01, 111, 01110 etc}</li>
 <li>Select any finite number of strings from the language and concat them all together (including possibility of no strings selected, as empty concat empty gives empty)</li>
 </ul></li>
 </ul>
@@ -506,26 +507,29 @@ a(a|b)*a | b(a|b)*b | a | b which translates to: a concatenated with any amount 
 There is also order precedence: Repetition like ?, star (highest), concat, union (lowest) unless you use parenthesis to denote order. For example ab* is a(b*). 
 </p>
 
+<p>
+Some regex modelled as DFAs:
+</p>
+
 <ul class="org-ul">
-<li>Some regex modelled as DFAs:</li>
 <li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_5.html">automaton</a> of "a x"</li>
 <li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_15.html">automaton</a> for "a?bc" (matches empty string as well)</li>
 <li>Kleene star <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_16.html">matching</a> example and it's <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_17.html">automaton</a> for [fr]*og
 <ul class="org-ul">
-<li>now you know why [fr]*og matches "og" as well as "frog" because of the DFA, * will also match empty, so this regex is any combination of f or r (ffffff, or rr), or nothing, concatenated with og</li>
+<li>the DFA explains why [fr]*og matches "og" as well as "frog", * will also match empty, so this regex is any combination of f or r (ffffff, or rr), or nothing, concatenated with og</li>
 </ul></li>
 <li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_20.html">automaton</a> for + (one or more)</li>
 </ul>
 
 <p>
-I saved you hours of frustration debugging regex or practicing regex golf now you know exactly how a regular language works and expressions you no longer need those practice sites, just the Python documentation to look up addon features that are non regular, such as back references.  
+I saved you hours of frustration debugging regex or practicing regex golf, you no longer need those practice sites, just the Python documentation to look up addon features that are non regular such as back references.  
 </p>
 </div>
 
 
-<div id="outline-container-orge50d5eb" class="outline-4">
-<h4 id="orge50d5eb">Assignment 1</h4>
-<div class="outline-text-4" id="text-orge50d5eb">
+<div id="outline-container-orgf544db8" class="outline-4">
+<h4 id="orgf544db8">Assignment 1</h4>
+<div class="outline-text-4" id="text-orgf544db8">
 <p>
 todo both 15-388 and 688 assignment
 </p>
