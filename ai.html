@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-12 Tue 01:10 -->
+<!-- 2020-05-12 Tue 17:03 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,20 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf5f1a35">Intro</a></li>
-<li><a href="#org8e64d07">Start here</a>
+<li><a href="#org23a902e">Intro</a></li>
+<li><a href="#org1fa1861">Start here</a>
 <ul>
-<li><a href="#org1b51278">Material req to complete this course</a></li>
-<li><a href="#org9322fbd">Lecture 1 Introduction</a></li>
-<li><a href="#orgb69be98">Lecture 2 Data collection and scraping</a>
+<li><a href="#orgaec65e3">Material req to complete this course</a></li>
+<li><a href="#org6e42da9">Lecture 1 Introduction</a></li>
+<li><a href="#orge290de5">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org8241a7c">Regex practice</a></li>
+<li><a href="#orge55357e">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org6467e64">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#orgbe5aab6">Recitation 1</a>
+<li><a href="#org3680216">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#orgdcf4130">Recitation 1</a></li>
+<li><a href="#orgdc1cb84">Finite State Automata</a>
 <ul>
-<li><a href="#orgf3a2ccb">Assignment 1</a></li>
+<li><a href="#org06f0df1">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -283,39 +284,39 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-orgf5f1a35" class="outline-2">
-<h2 id="orgf5f1a35">Intro</h2>
-<div class="outline-text-2" id="text-orgf5f1a35">
+<div id="outline-container-org23a902e" class="outline-2">
+<h2 id="org23a902e">Intro</h2>
+<div class="outline-text-2" id="text-org23a902e">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8e64d07" class="outline-2">
-<h2 id="org8e64d07">Start here</h2>
-<div class="outline-text-2" id="text-org8e64d07">
+<div id="outline-container-org1fa1861" class="outline-2">
+<h2 id="org1fa1861">Start here</h2>
+<div class="outline-text-2" id="text-org1fa1861">
 <p>
-It's assumed you're following the other 2 workshops in parallel with this one and have at least written a few assignments and know what map/filter/fold do. We're going to start out with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this in industry while we later take more advanced AI courses that take longer to complete.
+It's assumed you're following the math and software workshop in parallel with this one. We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems when they come up. A bonus of doing this course is when you finish you can get paid to do this on topcoder or in industry while we later take more advanced AI courses that take longer to complete.
 </p>
 
 <p>
-Note the math in this course is just applied in a black box way, applied machine learning you'll see is possible no matter what your math background and if you've followed the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a> and made it to first lecture on Linear Algebra you'll be more than prepared.  
+Note the math in 15-388/688 is applied in a black box way, applied machine learning you'll see is possible no matter what your math background and if you've followed the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a> and made it to first lecture on Linear Algebra you'll be more than prepared. The programming skills needed, if you've made it to higher order functions map/filter/fold in the software workshop you should be fine.  
 </p>
 </div>
 
-<div id="outline-container-org1b51278" class="outline-3">
-<h3 id="org1b51278">Material req to complete this course</h3>
-<div class="outline-text-3" id="text-org1b51278">
+<div id="outline-container-orgaec65e3" class="outline-3">
+<h3 id="orgaec65e3">Material req to complete this course</h3>
+<div class="outline-text-3" id="text-orgaec65e3">
 <p>
-Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this entire course using Google colab (free) otherwise the course uses Anaconda and provides Vagrant files and instructions to set up your own environment. 
+Like the software workshop if all you have is access to a phone or tablet it's still possible to complete this course using Google colab (free) otherwise the course uses Python and provides Vagrant files and instructions to set up your own environment. I recommend <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9322fbd" class="outline-3">
-<h3 id="org9322fbd">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org9322fbd">
+<div id="outline-container-org6e42da9" class="outline-3">
+<h3 id="org6e42da9">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org6e42da9">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -344,9 +345,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-orgb69be98" class="outline-3">
-<h3 id="orgb69be98">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-orgb69be98">
+<div id="outline-container-orge290de5" class="outline-3">
+<h3 id="orge290de5">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orge290de5">
 <p>
 Next lecture when he introduces Jupyter notebook, we'll export the notes as a notebook for this lecture (and the recitation) to experiment around with the regex library. This is also what the assignments are for, to better understand the material by doing it ourselves.   
 </p>
@@ -364,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-org8241a7c" class="outline-4">
-<h4 id="org8241a7c">Regex practice</h4>
-<div class="outline-text-4" id="text-org8241a7c">
+<div id="outline-container-orge55357e" class="outline-4">
+<h4 id="orge55357e">Regex practice</h4>
+<div class="outline-text-4" id="text-orge55357e">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -374,9 +375,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org6467e64" class="outline-3">
-<h3 id="org6467e64">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org6467e64">
+<div id="outline-container-org3680216" class="outline-3">
+<h3 id="org3680216">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-org3680216">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -386,7 +387,7 @@ If you must it's possible to use Google Colab (python v 3.6) online for <a href=
 </p>
 
 <p>
-There is a Vagrant method here in <a href="http://www.datasciencecourse.org/assignments/">environment</a> but it likely won't install anymore as Vagrant is junkware, so instead I went with his advice in the lecture and installed <a href="https://docs.anaconda.com/anaconda/install/">Anaconda</a> which has a <a href="https://conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">cheat sheet</a> for it's package manager. The reason Anaconda exists is because there are countless scientific libraries and that all require a specific version of python to run so Anaconda solves this problem. You still get 'pip' the python package manager with Anaconda default install. 
+There is a vagrant method here in <a href="http://www.datasciencecourse.org/assignments/">environment</a> but it likely won't install anymore (<a href="https://app.vagrantup.com/ubuntu/boxes/trusty64">change</a> the box in the Vagrantfile to another ubuntu distro), so instead I went with his advice in the lecture and installed <a href="https://docs.anaconda.com/anaconda/install/">Anaconda</a>, actually <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which has a <a href="https://conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">cheat sheet</a> for it's package manager (Python is so complex now that it needs distros). One reason anaconda exists is because there are countless scientific libraries and that all require a specific environment of python to run so anaconda solves this problem, and in many labs and bigcorps you need written permission to download and install new software so anaconda full install can give you everything up front. Other solutions exist like NixOS or Guix in order to run multiple different versions of the same software.   
 </p>
 
 <p>
@@ -399,6 +400,8 @@ I assume you have a notebook open while he's going through the lab. Note the syn
 <li>Accessing a list element O(1)</li>
 <li>Appending O(1)</li>
 <li>Inserting O(n) due to 'lists' being an array</li>
+<li>If you forgot efficiency from CS019 see <a href="https://www.cs.cmu.edu/~112/notes/notes-efficiency.html">this</a></li>
+<li>There's a somewhat accurate list of python <a href="https://wiki.python.org/moin/TimeComplexity">builtins</a> complexity</li>
 </ul></li>
 </ul>
 
@@ -420,22 +423,109 @@ Note he uses a <a href="https://nbviewer.jupyter.org/github/ipython/ipython/blob
 </ul>
 
 <p>
-Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part1.html">here</a> and <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part2.html">here</a> note the video button. 
+Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part1.html">here</a> and <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part2.html">here</a>, more <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part3.html">here</a> and finally using sets and dictionaries in <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part4.html">classes</a> but we won't be using any kind of complex OOP in this course.    
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbe5aab6" class="outline-3">
-<h3 id="orgbe5aab6">Recitation 1</h3>
-<div class="outline-text-3" id="text-orgbe5aab6">
+<div id="outline-container-orgdcf4130" class="outline-3">
+<h3 id="orgdcf4130">Recitation 1</h3>
+<div class="outline-text-3" id="text-orgdcf4130">
 <p>
-todo
+Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open recitation<sub>1.ipynb</sub> in jupyter notebook and now you can run all the code. 
+</p>
+
+<p>
+If you're using Google Colab, look at <a href="https://colab.research.google.com/notebooks/io.ipynb">this</a> otherwise <a href="https://stackoverflow.com/a/52300696">mount</a> a google drive, save the homework .tar.gz file directly to your google drive, and use something like ZIP extractor to open it there. Other method is open a new notebook in colab and type the following, then File -&gt; Open from drive and load recitation<sub>1.ipnyb</sub> and run all code blocks Runtime -&gt; Run All
+</p>
+
+<pre class="example">
+!wget http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz
+!tar -xvf recitation_1.tar.gz
+!cp recitation_1.ipynb '/content/drive/My Drive' 
+
+# note this can all be automated with python (pydrive) or google colab library
+</pre>
+
+<p>
+Run all the cells (Cell -&gt; Run All). Recitation begins with notes about testing, in every homework assignment notebook it comes with a large amount of tests already written for us. The 'from' statement is of course importing a <a href="https://www.cs.cmu.edu/~112/notes/notes-variables-and-functions.html#ModuleFunctions">library</a>. This recitation is self explanatory, notice what 'pprint(dict(response.headers))' did, returned the header in a dictionary with keys. Anytime you want try some examples yourself insert a code cell below what you want to manipulate. 
+</p>
+
+<p>
+They show that Python libraries can create encoding conflicts. Remember code points from cs019, <a href="https://wiki.sei.cmu.edu/confluence/display/c/MSC10-C.+Character+encoding:+UTF8-related+issues">Unicode/UTF-8</a> replaces ASCII, ISO 8859 and other encodings, and supports any written language characters. These encodings are all different ways to interpret raw bytes and represent <a href="https://docs.python.org/3/howto/unicode.html">textual data</a>.
+</p>
+
+<p>
+Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not just a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook, ba?t matches 'btt' and 'abt' too.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc1cb84" class="outline-3">
+<h3 id="orgdc1cb84">Finite State Automata</h3>
+<div class="outline-text-3" id="text-orgdc1cb84">
+<p>
+A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand this if you've taken set theory in the math workshop, and can google the <a href="https://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a>. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0c960c5-1c95-4664-b36e-21c8f82ebb45">Finite Automata</a> 15-251 Great Theoretical Ideas in CS
+<ul class="org-ul">
+<li>In the beginning the slides are slightly out of order, match with <a href="http://www.cs.cmu.edu/~aada/courses/15251s15/www/slides/lec04.pdf">these</a> slides.</li>
+</ul></li>
+</ul>
+
+<p>
+The accepting state in a regular expression is a matching state.The 5 tuple he describes, is similar to the definition of an algorithm in the first chapter of <i>The Art of Computer Programming vol 1</i> by Knuth. Now you know how to do those exercises should you ever read that book. 
+</p>
+
+<p>
+Around 59:25 we begin regular operations, concatenation (multiplication), union and star.
+</p>
+<ul class="org-ul">
+<li>Example: Concatenation
+<ul class="org-ul">
+<li>\(L_1\) = {00,10}; \(L_2\) = {0,1} then \(L_1 \cdot L_2\) = {000, 001, 100, 101}</li>
+</ul></li>
+<li>Example: Star, the concatenation of i copies of L for i &gt; 0
+<ul class="org-ul">
+<li>If L = {0,1} then \(L^{2}\) = {00, 01, 10, 11} and \(L^{*}\) = {none, 0, 00, 0000, 01, 111, 01110 etc}</li>
+<li>Select any finite number of strings from the language and concat them all together (including possibility of no strings selected, as empty concat empty gives empty)</li>
+</ul></li>
+</ul>
+
+<p>
+Their example regular expression of 'x starts and ends with the same char, in the language L of {a,b} then \(L^{*}\) would be {a, b, aa, bb, aaa, bbb, ababa, etc}}
+</p>
+
+<p>
+a(a|b)*a | b(a|b)*b | a | b which translates to: a concatenated with any amount of a's or b's, and ends with a, OR b concatenated with any amount of concatenated a's or b's, in any amount concatenated with b OR a or b 
+</p>
+
+<p>
+There is also order precedence: Repetition like ?, star (highest), concat, union (lowest) unless you use parenthesis to denote order. For example ab* is a(b*). 
+</p>
+
+<ul class="org-ul">
+<li>Some regex modelled as DFAs:</li>
+<li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_5.html">automaton</a> of "a x"</li>
+<li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_15.html">automaton</a> for "a?bc" (matches empty string as well)</li>
+<li>Kleene star <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_16.html">matching</a> example and it's <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_17.html">automaton</a> for [fr]*og
+<ul class="org-ul">
+<li>now you know why [fr]*og matches "og" as well as "frog" because of the DFA, * will also match empty, so this regex is any combination of f or r (ffffff, or rr), or nothing, concatenated with og</li>
+</ul></li>
+<li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_20.html">automaton</a> for + (one or more)</li>
+</ul>
+
+<p>
+I saved you hours of frustration at regex golf now you know exactly how a regular language works and expressions you no longer need those practice sites, just the Python documentation to look up addon features that are non regular, such as back references.  
 </p>
 </div>
 
-<div id="outline-container-orgf3a2ccb" class="outline-4">
-<h4 id="orgf3a2ccb">Assignment 1</h4>
-<div class="outline-text-4" id="text-orgf3a2ccb">
+
+<div id="outline-container-org06f0df1" class="outline-4">
+<h4 id="org06f0df1">Assignment 1</h4>
+<div class="outline-text-4" id="text-org06f0df1">
 <p>
 todo both 15-388 and 688 assignment
 </p>
