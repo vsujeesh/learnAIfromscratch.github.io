@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-14 Thu 10:22 -->
+<!-- 2020-05-14 Thu 10:30 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,21 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org930c870">Intro</a></li>
-<li><a href="#org308068b">Start here</a>
+<li><a href="#orgc94b4ff">Intro</a></li>
+<li><a href="#org94cf427">Start here</a>
 <ul>
-<li><a href="#org3e4a465">Material req</a></li>
-<li><a href="#orgbc47dfa">Lecture 1 Introduction</a></li>
-<li><a href="#org362d1e2">Lecture 2 Data collection and scraping</a>
+<li><a href="#orge213938">Material req</a></li>
+<li><a href="#org34778b7">Lecture 1 Introduction</a></li>
+<li><a href="#orge7497f6">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org8578a59">Regex practice</a></li>
+<li><a href="#org53afc73">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org3b1c50d">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#org933fa3a">Recitation 1</a></li>
-<li><a href="#org746ae73">Finite State Automata</a>
+<li><a href="#orgf75b6c3">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#orgfc3f80c">Recitation 1</a></li>
+<li><a href="#orga6751f1">Finite State Automata</a>
 <ul>
-<li><a href="#orga9eb3ca">Assignment 1</a></li>
+<li><a href="#org35c4056">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -284,18 +284,18 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org930c870" class="outline-2">
-<h2 id="org930c870">Intro</h2>
-<div class="outline-text-2" id="text-org930c870">
+<div id="outline-container-orgc94b4ff" class="outline-2">
+<h2 id="orgc94b4ff">Intro</h2>
+<div class="outline-text-2" id="text-orgc94b4ff">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org308068b" class="outline-2">
-<h2 id="org308068b">Start here</h2>
-<div class="outline-text-2" id="text-org308068b">
+<div id="outline-container-org94cf427" class="outline-2">
+<h2 id="org94cf427">Start here</h2>
+<div class="outline-text-2" id="text-org94cf427">
 <p>
 We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> from fall 2019 because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems. When you finish this course you can get paid to do this in industry while we later take more advanced AI courses.
 </p>
@@ -305,18 +305,18 @@ This course assumes some <a href="https://learnaifromscratch.github.io/math.html
 </p>
 </div>
 
-<div id="outline-container-org3e4a465" class="outline-3">
-<h3 id="org3e4a465">Material req</h3>
-<div class="outline-text-3" id="text-org3e4a465">
+<div id="outline-container-orge213938" class="outline-3">
+<h3 id="orge213938">Material req</h3>
+<div class="outline-text-3" id="text-orge213938">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's possible to complete this course using Google colab (free) otherwise the course uses Python3 and provides Vagrant files and instructions to set up your own environment. I went with <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. All the assignments are handed out as jupyter notebooks, you can certainly do them in PyCharm too if you wanted or vim even. The lectures are through <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">panopto</a> and open to the public.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbc47dfa" class="outline-3">
-<h3 id="orgbc47dfa">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-orgbc47dfa">
+<div id="outline-container-org34778b7" class="outline-3">
+<h3 id="org34778b7">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org34778b7">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -345,9 +345,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-org362d1e2" class="outline-3">
-<h3 id="org362d1e2">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-org362d1e2">
+<div id="outline-container-orge7497f6" class="outline-3">
+<h3 id="orge7497f6">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orge7497f6">
 <p>
 Next lecture when he introduces Jupyter notebook, you can export the <a href="http://www.datasciencecourse.org/notes/data_collection/">notes</a> for this lecture as a notebook to experiment around with the regex library, they are fully interactive can run them yourself, change anything to see how corner cases are matched, go through the Python <a href="https://docs.python.org/3.8/tutorial/">tutorial</a> looking up anything you don't understand like what range does or list/dict comprehensions.     
 </p>
@@ -365,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-org8578a59" class="outline-4">
-<h4 id="org8578a59">Regex practice</h4>
-<div class="outline-text-4" id="text-org8578a59">
+<div id="outline-container-org53afc73" class="outline-4">
+<h4 id="org53afc73">Regex practice</h4>
+<div class="outline-text-4" id="text-org53afc73">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -375,9 +375,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org3b1c50d" class="outline-3">
-<h3 id="org3b1c50d">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org3b1c50d">
+<div id="outline-container-orgf75b6c3" class="outline-3">
+<h3 id="orgf75b6c3">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orgf75b6c3">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -435,9 +435,9 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-org933fa3a" class="outline-3">
-<h3 id="org933fa3a">Recitation 1</h3>
-<div class="outline-text-3" id="text-org933fa3a">
+<div id="outline-container-orgfc3f80c" class="outline-3">
+<h3 id="orgfc3f80c">Recitation 1</h3>
+<div class="outline-text-3" id="text-orgfc3f80c">
 <p>
 Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
@@ -468,9 +468,9 @@ Regexp they want us to <a href="https://blog.codinghorror.com/regular-expression
 </div>
 </div>
 
-<div id="outline-container-org746ae73" class="outline-3">
-<h3 id="org746ae73">Finite State Automata</h3>
-<div class="outline-text-3" id="text-org746ae73">
+<div id="outline-container-orga6751f1" class="outline-3">
+<h3 id="orga6751f1">Finite State Automata</h3>
+<div class="outline-text-3" id="text-orga6751f1">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand DFAs even if you haven't taken set theory in the math workshop. 
 </p>
@@ -534,9 +534,9 @@ Some regex and their corresponding state diagrams:
 </div>
 
 
-<div id="outline-container-orga9eb3ca" class="outline-4">
-<h4 id="orga9eb3ca">Assignment 1</h4>
-<div class="outline-text-4" id="text-orga9eb3ca">
+<div id="outline-container-org35c4056" class="outline-4">
+<h4 id="org35c4056">Assignment 1</h4>
+<div class="outline-text-4" id="text-org35c4056">
 <p>
 Walking through the first assignment the the rest won't be as verbose, I can always release these as notebooks themselves but you're better off writing your own anyway. 
 </p>
@@ -643,10 +643,12 @@ You could have this inside all restaurants or in a seperate cell and keep all re
 <pre class="example">
 # Yelp API docs: up to 1k results, max 50 returned at once
 # Use offset parameter to get next 50, and so on
+# Use time library so you don't get blocked
 
 content = []
 for y in range(0, 1000, 50):
     content += list(all_restaurants(read_api_key(), 'Polish, Hill, Pittsburgh', y))
+    time.sleep(1)
 
 print(len(content))
 print([x['name'] for x in content])
@@ -687,7 +689,8 @@ def parse_api_response(data):
 </p>
 
 <p>
-todo</p>
+todo
+</p>
 </div>
 </div>
 </div>
