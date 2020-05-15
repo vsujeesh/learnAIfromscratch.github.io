@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-14 Thu 10:30 -->
+<!-- 2020-05-14 Thu 18:40 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,21 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc94b4ff">Intro</a></li>
-<li><a href="#org94cf427">Start here</a>
+<li><a href="#org1b1bde4">Intro</a></li>
+<li><a href="#org3b9293f">Start here</a>
 <ul>
-<li><a href="#orge213938">Material req</a></li>
-<li><a href="#org34778b7">Lecture 1 Introduction</a></li>
-<li><a href="#orge7497f6">Lecture 2 Data collection and scraping</a>
+<li><a href="#orgaca8787">Material req</a></li>
+<li><a href="#org70cf623">Lecture 1 Introduction</a></li>
+<li><a href="#orgcfcee47">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org53afc73">Regex practice</a></li>
+<li><a href="#org9d9d799">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#orgf75b6c3">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#orgfc3f80c">Recitation 1</a></li>
-<li><a href="#orga6751f1">Finite State Automata</a>
+<li><a href="#org25bc6c4">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#org25bc2d1">Recitation 1</a></li>
+<li><a href="#orgad9d67a">Finite State Automata</a>
 <ul>
-<li><a href="#org35c4056">Assignment 1</a></li>
+<li><a href="#org8e1b13e">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -284,18 +284,18 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-orgc94b4ff" class="outline-2">
-<h2 id="orgc94b4ff">Intro</h2>
-<div class="outline-text-2" id="text-orgc94b4ff">
+<div id="outline-container-org1b1bde4" class="outline-2">
+<h2 id="org1b1bde4">Intro</h2>
+<div class="outline-text-2" id="text-org1b1bde4">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org94cf427" class="outline-2">
-<h2 id="org94cf427">Start here</h2>
-<div class="outline-text-2" id="text-org94cf427">
+<div id="outline-container-org3b9293f" class="outline-2">
+<h2 id="org3b9293f">Start here</h2>
+<div class="outline-text-2" id="text-org3b9293f">
 <p>
 We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> from fall 2019 because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems. When you finish this course you can get paid to do this in industry while we later take more advanced AI courses.
 </p>
@@ -305,18 +305,18 @@ This course assumes some <a href="https://learnaifromscratch.github.io/math.html
 </p>
 </div>
 
-<div id="outline-container-orge213938" class="outline-3">
-<h3 id="orge213938">Material req</h3>
-<div class="outline-text-3" id="text-orge213938">
+<div id="outline-container-orgaca8787" class="outline-3">
+<h3 id="orgaca8787">Material req</h3>
+<div class="outline-text-3" id="text-orgaca8787">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's possible to complete this course using Google colab (free) otherwise the course uses Python3 and provides Vagrant files and instructions to set up your own environment. I went with <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. All the assignments are handed out as jupyter notebooks, you can certainly do them in PyCharm too if you wanted or vim even. The lectures are through <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">panopto</a> and open to the public.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org34778b7" class="outline-3">
-<h3 id="org34778b7">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org34778b7">
+<div id="outline-container-org70cf623" class="outline-3">
+<h3 id="org70cf623">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org70cf623">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -345,9 +345,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-orge7497f6" class="outline-3">
-<h3 id="orge7497f6">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-orge7497f6">
+<div id="outline-container-orgcfcee47" class="outline-3">
+<h3 id="orgcfcee47">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orgcfcee47">
 <p>
 Next lecture when he introduces Jupyter notebook, you can export the <a href="http://www.datasciencecourse.org/notes/data_collection/">notes</a> for this lecture as a notebook to experiment around with the regex library, they are fully interactive can run them yourself, change anything to see how corner cases are matched, go through the Python <a href="https://docs.python.org/3.8/tutorial/">tutorial</a> looking up anything you don't understand like what range does or list/dict comprehensions.     
 </p>
@@ -365,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-org53afc73" class="outline-4">
-<h4 id="org53afc73">Regex practice</h4>
-<div class="outline-text-4" id="text-org53afc73">
+<div id="outline-container-org9d9d799" class="outline-4">
+<h4 id="org9d9d799">Regex practice</h4>
+<div class="outline-text-4" id="text-org9d9d799">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -375,9 +375,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-orgf75b6c3" class="outline-3">
-<h3 id="orgf75b6c3">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-orgf75b6c3">
+<div id="outline-container-org25bc6c4" class="outline-3">
+<h3 id="org25bc6c4">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-org25bc6c4">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -435,9 +435,9 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-orgfc3f80c" class="outline-3">
-<h3 id="orgfc3f80c">Recitation 1</h3>
-<div class="outline-text-3" id="text-orgfc3f80c">
+<div id="outline-container-org25bc2d1" class="outline-3">
+<h3 id="org25bc2d1">Recitation 1</h3>
+<div class="outline-text-3" id="text-org25bc2d1">
 <p>
 Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
@@ -468,9 +468,9 @@ Regexp they want us to <a href="https://blog.codinghorror.com/regular-expression
 </div>
 </div>
 
-<div id="outline-container-orga6751f1" class="outline-3">
-<h3 id="orga6751f1">Finite State Automata</h3>
-<div class="outline-text-3" id="text-orga6751f1">
+<div id="outline-container-orgad9d67a" class="outline-3">
+<h3 id="orgad9d67a">Finite State Automata</h3>
+<div class="outline-text-3" id="text-orgad9d67a">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand DFAs even if you haven't taken set theory in the math workshop. 
 </p>
@@ -534,9 +534,9 @@ Some regex and their corresponding state diagrams:
 </div>
 
 
-<div id="outline-container-org35c4056" class="outline-4">
-<h4 id="org35c4056">Assignment 1</h4>
-<div class="outline-text-4" id="text-org35c4056">
+<div id="outline-container-org8e1b13e" class="outline-4">
+<h4 id="org8e1b13e">Assignment 1</h4>
+<div class="outline-text-4" id="text-org8e1b13e">
 <p>
 Walking through the first assignment the the rest won't be as verbose, I can always release these as notebooks themselves but you're better off writing your own anyway. 
 </p>
@@ -560,6 +560,59 @@ The next notebook, Scraper, install requirements.txt again with pip. You unfortu
 </p>
 
 <p>
+<b>Jupyter Notebook/Python bugs to know about</b>
+</p>
+
+<ul class="org-ul">
+<li>If you get a persistent @test error 'TypeError: 'dict' object is not callable' or something similar, restart the kernel. You can try %history -g dict to see what command may have corrupted your state but I think I spent an hour trying to figure out this cryptic error only to just discover it vanishes upon kernel reset.</li>
+<li>Global variables, a few times I forgot I was actually hacking around with some global reponse variable 'r' I designated to slice apart some nested dictionary and test some things, only later to wonder why my tests weren't passing.</li>
+<li>Reserved keywords, to see what they are:</li>
+</ul>
+
+<details>
+<pre class="example">
+import keyword
+keyword.kwlist
+
+['False',
+ 'None',
+ 'True',
+ 'and',
+ 'as',
+ 'assert',
+ 'async',
+ 'await',
+ 'break',
+ 'class',
+ 'continue',
+ 'def',
+ 'del',
+ 'elif',
+ 'else',
+ 'except',
+ 'finally',
+ 'for',
+ 'from',
+ 'global',
+ 'if',
+ 'import',
+ 'in',
+ 'is',
+ 'lambda',
+ 'nonlocal',
+ 'not',
+ 'or',
+ 'pass',
+ 'raise',
+ 'return',
+ 'try',
+ 'while',
+ 'with',
+ 'yield']
+</pre>
+</details>
+
+<p>
 <b>Q0: Basic HTTP Requests</b>
 </p>
 
@@ -572,7 +625,7 @@ You may have to change the test to: test.true("This domain is for use in illustr
 </p>
 
 <p>
-We'll need the Yelp API <a href="https://www.yelp.com/developers/documentation/v3/business_search">documentation</a>. A warning about the API, it may block your key for 24 hours if you do too many requests too quickly trying to figure out the assignment, I highly recommend retrieving just once and then storing that in some global variable so you can hack around with the response unpacking the content instead of repeated calls. If for any reason you get a persistent type error with @test delete the notebook, unarchive a new one and run pip install on requirements.txt again. 
+We'll need the Yelp API <a href="https://www.yelp.com/developers/documentation/v3/business_search">documentation</a>. A warning about the API, it may block your key for 24 hours if you do too many requests too quickly trying to figure out the assignment, I highly recommend retrieving just once and then storing that in some global variable so you can hack around with the response unpacking the content instead of repeated calls. 
 </p>
 
 <details>
@@ -679,13 +732,45 @@ def parse_api_response(data):
     Returns:
         (list): list of URLs as strings from the input JSON.
     """
-    s = json.loads(data)
-    return [x['url'] for x in s['businesses']]
+    dict_json = json.loads(data)
+    return [x['url'] for x in dict_json['businesses']]
 </pre>
 </details>
 
 <p>
 <b>Q3: Parse a Yelp restaurant Page</b>
+</p>
+
+<p>
+Yelp has changed their page since this assignment was written, all the information is in a script tag now. The documentation for BeautifulSoup isn't concise enough (neither is requests library for that matter) but eventually I figured out the library. There's some notable corner cases, you have to return the 'page count' not the total count, which is integer division, and you have to cast the ratings to floats. What I did here was first dump the page into beautiful soup and notice what I wanted was all in the &lt;script&gt;, specifically the third element with that tag. Then I dumped the text into jason.loads() and printed the keys to see which one's I could iterate on, and used a list comprehension to return the dict keys and page total as a tuple. 
+</p>
+
+
+<details>
+<pre class="example">
+def parse_page(html):
+ """
+   Parse the reviews on a single page of a restaurant.
+    Args:
+       html (string): String of HTML corresponding to a Yelp restaurant
+    Returns:
+       Tuple[List[Dict], int]: a tuple of two elements
+           first element: list of dictionaries corresponding to the extracted review information
+           second element: number of pages total.
+   """
+    soup = BeautifulSoup(html, 'html5lib')
+    json_extract = soup.select("[type='application/ld+json']")[3]
+    json_dict = json.loads(json_extract.text)
+    return [{'author': x['author'],
+            'rating': float(x['reviewRating']['ratingValue']),
+            'date': x['datePublished'],
+            'description': x['description']} 
+           for x in json_dict['review']], json_dict['aggregateRating']['reviewCount']//20
+</pre>
+</details>
+
+<p>
+<b>Q3.5: Extract all the Yelp reviews for a Single Restaurant</b>
 </p>
 
 <p>
