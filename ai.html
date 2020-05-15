@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-05-14 Thu 18:40 -->
+<!-- 2020-05-14 Thu 23:00 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,21 +261,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1b1bde4">Intro</a></li>
-<li><a href="#org3b9293f">Start here</a>
+<li><a href="#org74ea358">Intro</a></li>
+<li><a href="#org3975f83">Start here</a>
 <ul>
-<li><a href="#orgaca8787">Material req</a></li>
-<li><a href="#org70cf623">Lecture 1 Introduction</a></li>
-<li><a href="#orgcfcee47">Lecture 2 Data collection and scraping</a>
+<li><a href="#orgf1153ac">Material req</a></li>
+<li><a href="#org09ac56e">Lecture 1 Introduction</a></li>
+<li><a href="#orgb208285">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#org9d9d799">Regex practice</a></li>
+<li><a href="#orgdb49f4b">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org25bc6c4">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#org25bc2d1">Recitation 1</a></li>
-<li><a href="#orgad9d67a">Finite State Automata</a>
+<li><a href="#orgb3154a9">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#orgc07db9a">Recitation 1</a></li>
+<li><a href="#org79f33af">Finite State Automata</a>
 <ul>
-<li><a href="#org8e1b13e">Assignment 1</a></li>
+<li><a href="#orged5e946">Assignment 1</a></li>
 </ul>
 </li>
 </ul>
@@ -284,39 +284,39 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org1b1bde4" class="outline-2">
-<h2 id="org1b1bde4">Intro</h2>
-<div class="outline-text-2" id="text-org1b1bde4">
+<div id="outline-container-org74ea358" class="outline-2">
+<h2 id="org74ea358">Intro</h2>
+<div class="outline-text-2" id="text-org74ea358">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3b9293f" class="outline-2">
-<h2 id="org3b9293f">Start here</h2>
-<div class="outline-text-2" id="text-org3b9293f">
+<div id="outline-container-org3975f83" class="outline-2">
+<h2 id="org3975f83">Start here</h2>
+<div class="outline-text-2" id="text-org3975f83">
 <p>
 We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> from fall 2019 because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems. When you finish this course you can get paid to do this in industry while we later take more advanced AI courses.
 </p>
 
 <p>
-This course assumes some <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">programming</a> background, but the math is all applied in a blackbox way you'll be able to figure out, and if you know higher order functions map/filter/fold from the software workshop you should be fine. All the code we will write here will be quick and dirty prototyping in Python.  
+This course assumes some <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">programming</a> background, but the math is all applied in a blackbox way you'll be able to figure out, and if you know higher order functions map/filter/fold from the software workshop you should be fine. All the code we will write here will be quick and dirty prototyping in Python. .  
 </p>
 </div>
 
-<div id="outline-container-orgaca8787" class="outline-3">
-<h3 id="orgaca8787">Material req</h3>
-<div class="outline-text-3" id="text-orgaca8787">
+<div id="outline-container-orgf1153ac" class="outline-3">
+<h3 id="orgf1153ac">Material req</h3>
+<div class="outline-text-3" id="text-orgf1153ac">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's possible to complete this course using Google colab (free) otherwise the course uses Python3 and provides Vagrant files and instructions to set up your own environment. I went with <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. All the assignments are handed out as jupyter notebooks, you can certainly do them in PyCharm too if you wanted or vim even. The lectures are through <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">panopto</a> and open to the public.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org70cf623" class="outline-3">
-<h3 id="org70cf623">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org70cf623">
+<div id="outline-container-org09ac56e" class="outline-3">
+<h3 id="org09ac56e">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-org09ac56e">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -340,14 +340,14 @@ All the examples he talks about you can see the slides better in the lecture <a 
 </p>
 
 <p>
-We don't have the recommended background but you'll see later most of these requirements are given a crash course enough to finish the assignments. The rest of this lecture is just course logistics, the masters version of this course 15-688 just has extra homework assignments, which we'll try some of them. 
+We don't have the recommended background but you'll see later most of these requirements are given a crash course enough to finish the assignments. The rest of this lecture is just course logistics, the masters version of this course 15-688 has extra homework assignments, which we'll try some of them. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcfcee47" class="outline-3">
-<h3 id="orgcfcee47">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-orgcfcee47">
+<div id="outline-container-orgb208285" class="outline-3">
+<h3 id="orgb208285">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-orgb208285">
 <p>
 Next lecture when he introduces Jupyter notebook, you can export the <a href="http://www.datasciencecourse.org/notes/data_collection/">notes</a> for this lecture as a notebook to experiment around with the regex library, they are fully interactive can run them yourself, change anything to see how corner cases are matched, go through the Python <a href="https://docs.python.org/3.8/tutorial/">tutorial</a> looking up anything you don't understand like what range does or list/dict comprehensions.     
 </p>
@@ -365,9 +365,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-org9d9d799" class="outline-4">
-<h4 id="org9d9d799">Regex practice</h4>
-<div class="outline-text-4" id="text-org9d9d799">
+<div id="outline-container-orgdb49f4b" class="outline-4">
+<h4 id="orgdb49f4b">Regex practice</h4>
+<div class="outline-text-4" id="text-orgdb49f4b">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -375,16 +375,16 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org25bc6c4" class="outline-3">
-<h3 id="org25bc6c4">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org25bc6c4">
+<div id="outline-container-orgb3154a9" class="outline-3">
+<h3 id="orgb3154a9">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-orgb3154a9">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
 
 <p>
 <b>Colab</b>
-If you must it's possible to use Google Colab (python v 3.6) online for <a href="https://colab.research.google.com/">free</a> click on File -&gt; New Notebook and enter in a throwaway or regular google account, a new notebook should appear. Free version of Colab, the VM will shut down after some indeterminate amount of time being idle, which you just click on Runtime -&gt; Restart Runtime. You can back up everything to a Google drive account or Github. You can redefine all the heavily used key shortcuts in Colab so if you're stuck with just a tablet, then redefine Shift-Enter (run and move to new cell) and Ctrl-Enter (run cell) to whatever you want. You can enter shell commands with ! so !cd or !ls or !python &#x2013;version to match up to the online python documentation.
+If you must it's possible to use Google Colab (python v 3.6) online for <a href="https://colab.research.google.com/">free</a> click on File -&gt; New Notebook and enter in a throwaway or regular google account, a new notebook should appear. Free version of Colab, the VM will shut down after some indeterminate amount of time being idle, which you then have to reset with Runtime -&gt; Restart Runtime. You can back up everything to a Google drive account or Github. You can redefine all the heavily used key shortcuts in Colab so if you're stuck with just a tablet, then redefine Shift-Enter (run and move to new cell) and Ctrl-Enter (run cell) to whatever you want. You can enter shell commands with ! so !cd or !ls or !python &#x2013;version to match up to the online python documentation.
 </p>
 
 <p>
@@ -393,7 +393,7 @@ There is a vagrant installation method here (scroll down to <a href="http://www.
 </p>
 
 <p>
-I'm not sure I agree with his shill of python growth based on the amount of stackoverflow questions. That could also mean the documentation is terrible or error messages so cryptic that everybody needs to consult stackoverflow. For our use in this course, which is hacking around with data scripting it into various datastructures, visualization, and machine learning, Python is the the obvious choice because of the libraries available like Pytorch. If whatever prototype you come up with needs to be deployed in some other language there is a C++ API for Pytorch.  
+His shill of python growth based on the amount of stackoverflow questions could also mean the documentation is terrible or error messages so cryptic that everybody needs to consult stackoverflow. For our use in this course, which is hacking around with data, scripting it into various datastructures, visualization, and machine learning, Python is the obvious choice because of the libraries available like Pytorch. If whatever prototype you come up with needs to be deployed in some other language there is a C++ API for Pytorch.  
 </p>
 
 
@@ -435,9 +435,9 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-org25bc2d1" class="outline-3">
-<h3 id="org25bc2d1">Recitation 1</h3>
-<div class="outline-text-3" id="text-org25bc2d1">
+<div id="outline-container-orgc07db9a" class="outline-3">
+<h3 id="orgc07db9a">Recitation 1</h3>
+<div class="outline-text-3" id="text-orgc07db9a">
 <p>
 Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
@@ -463,14 +463,14 @@ They show that Python libraries can create encoding conflicts. Remember code poi
 </p>
 
 <p>
-Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not just a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook.
+Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgad9d67a" class="outline-3">
-<h3 id="orgad9d67a">Finite State Automata</h3>
-<div class="outline-text-3" id="text-orgad9d67a">
+<div id="outline-container-org79f33af" class="outline-3">
+<h3 id="org79f33af">Finite State Automata</h3>
+<div class="outline-text-3" id="text-org79f33af">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand DFAs even if you haven't taken set theory in the math workshop. 
 </p>
@@ -534,15 +534,15 @@ Some regex and their corresponding state diagrams:
 </div>
 
 
-<div id="outline-container-org8e1b13e" class="outline-4">
-<h4 id="org8e1b13e">Assignment 1</h4>
-<div class="outline-text-4" id="text-org8e1b13e">
+<div id="outline-container-orged5e946" class="outline-4">
+<h4 id="orged5e946">Assignment 1</h4>
+<div class="outline-text-4" id="text-orged5e946">
 <p>
 Walking through the first assignment the the rest won't be as verbose, I can always release these as notebooks themselves but you're better off writing your own anyway. 
 </p>
 
 <p>
-Let's try <a href="https://www.datasciencecourse.org/assignments/homework-1/">homework 1</a>. Untar it and run 'pip install -r requirements.txt'. Get Started notebook, you fill in rotate list and reverse dict, both of which are just easy one liners straight from the previous lectures. Rotate list is return list slice + list slice, reverse dict is return swapped keys for a,b in d.items(). The second task is write some tests, notice this is an oracle, it consumes a function and then tests it. You need to add @test decorator and name your test function as specified in the notebook
+Let's try <a href="https://www.datasciencecourse.org/assignments/homework-1/">homework 1</a>. Untar it and run 'pip install -r requirements.txt'. Get Started notebook, you fill in rotate list and reverse dict, both of which are easy one liners straight from the previous lectures. Rotate list is return list slice + list slice, reverse dict is return swapped keys for a,b in d.items(). The second task is write some tests, notice this is an oracle, it consumes a function and then tests it. You need to add @test decorator and name your test function as specified in the notebook
 </p>
 
 <pre class="example">
@@ -560,12 +560,12 @@ The next notebook, Scraper, install requirements.txt again with pip. You unfortu
 </p>
 
 <p>
-<b>Jupyter Notebook/Python bugs to know about</b>
+<b>Jupyter Notebook/IPython issues</b>
 </p>
 
 <ul class="org-ul">
-<li>If you get a persistent @test error 'TypeError: 'dict' object is not callable' or something similar, restart the kernel. You can try %history -g dict to see what command may have corrupted your state but I think I spent an hour trying to figure out this cryptic error only to just discover it vanishes upon kernel reset.</li>
-<li>Global variables, a few times I forgot I was actually hacking around with some global reponse variable 'r' I designated to slice apart some nested dictionary and test some things, only later to wonder why my tests weren't passing.</li>
+<li>If you get a persistent @test error 'TypeError: 'dict' object is not callable' or something similar, restart the kernel. You can try %history -g dict to see what command may have corrupted your state but I think I spent an hour trying to figure out this cryptic error only to discover it vanishes upon kernel reset.</li>
+<li>Global variables, a few times I forgot I was actually hacking around with some global reponse variable 'r' I designated to slice apart some nested dictionary/list and test some things, only later to wonder why my tests weren't passing.</li>
 <li>Reserved keywords, to see what they are:</li>
 </ul>
 
@@ -625,7 +625,7 @@ You may have to change the test to: test.true("This domain is for use in illustr
 </p>
 
 <p>
-We'll need the Yelp API <a href="https://www.yelp.com/developers/documentation/v3/business_search">documentation</a>. A warning about the API, it may block your key for 24 hours if you do too many requests too quickly trying to figure out the assignment, I highly recommend retrieving just once and then storing that in some global variable so you can hack around with the response unpacking the content instead of repeated calls. 
+We'll need the Yelp API <a href="https://www.yelp.com/developers/documentation/v3/business_search">documentation</a>. A warning about the API, it may block your key for 24 hours if you do too many requests too quickly trying to figure out the assignment, I highly recommend retrieving once and then storing that in some global variable so you can hack around with the response unpacking the content instead of repeated calls. 
 </p>
 
 <details>
@@ -663,7 +663,7 @@ def yelp_search(api_key, query):
 </p>
 
 <p>
-I merely cut + paste the yelp search function but added an extra parameter 'offset' and returned only r['businesses']. I also experimented here seeing how many python builtins I could chain together. This violates DRY principal really we should just generalize yelp search to take a parameter of how many businesses you want from the API.
+I merely cut + paste the yelp search function but added an extra parameter 'offset' and returned only r['businesses']. I also experimented here seeing how many python builtins I could chain together. This violates DRY principal really we should generalize yelp search to take a parameter of how many businesses you want from the API.
 </p>
 
 <details>
@@ -689,7 +689,7 @@ def all_restaurants(api_key, query, offset):
 </details>
 
 <p>
-You could have this inside all restaurants or in a seperate cell and keep all restaurants generalized to call for any offset. There's probably a <i>pythonic</i> <a href="https://www.python.org/dev/peps/pep-0008/">recommended</a> way to do this, I'm just haphazardly scripting away on cruise control. You can check your code with pycodestyle &#x2013;show-source file.py (pip install pycodestyle) or use a linter for this in PyCharm and other IDEs. 
+You could have this inside the all restaurants function or in a seperate cell and keep all restaurants generalized to call for any offset. There's probably a <i>pythonic</i> <a href="https://www.python.org/dev/peps/pep-0008/">recommended</a> way to do this, I'm just haphazardly scripting away on cruise control. You can check your code with pycodestyle &#x2013;show-source file.py (pip install pycodestyle) or use a linter for this in PyCharm and other IDEs. 
 </p>
 
 <details>
@@ -698,10 +698,11 @@ You could have this inside all restaurants or in a seperate cell and keep all re
 # Use offset parameter to get next 50, and so on
 # Use time library so you don't get blocked
 
+# Can also append to a dict w/content[i] for i in range()
 content = []
 for y in range(0, 1000, 50):
     content += list(all_restaurants(read_api_key(), 'Polish, Hill, Pittsburgh', y))
-    time.sleep(1)
+    time.sleep(.3)
 
 print(len(content))
 print([x['name'] for x in content])
@@ -742,7 +743,7 @@ def parse_api_response(data):
 </p>
 
 <p>
-Yelp has changed their page since this assignment was written, all the information is in a script tag now. The documentation for BeautifulSoup isn't concise enough (neither is requests library for that matter) but eventually I figured out the library. There's some notable corner cases, you have to return the 'page count' not the total count, which is integer division, and you have to cast the ratings to floats. What I did here was first dump the page into beautiful soup and notice what I wanted was all in the &lt;script&gt;, specifically the third element with that tag. Then I dumped the text into jason.loads() and printed the keys to see which one's I could iterate on, and used a list comprehension to return the dict keys and page total as a tuple. 
+Yelp has changed their page since this assignment was written, all the information is in a script tag now. There's some assignment tests to return 'page count' (20 per page) not the total count, which is integer division, and you have to cast the ratings to floats. What I did here was first dump the page into beautifulsoup and noticed what I wanted was all in the &lt;script&gt; tags, specifically the third element with that tag. Then I dumped the text into jason.loads() and printed the keys to see which one's I could iterate on, and used a list comprehension to return the dict keys and page total as a tuple. 
 </p>
 
 
@@ -774,7 +775,7 @@ def parse_page(html):
 </p>
 
 <p>
-todo
+This assignment is the same as everything above except you have to extract the name and location  with string slice (or regex, or any other method), then use re.sub() to switch the '-' characters for spaces, iterate through the response looking for the name that matches, get the business id then call the Yelp reviews API.  
 </p>
 </div>
 </div>
