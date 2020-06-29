@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-06-25 Thu 14:50 -->
+<!-- 2020-06-29 Mon 08:23 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -261,127 +261,131 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb57cb27">Intro</a>
+<li><a href="#orged3e947">Intro</a>
 <ul>
-<li><a href="#org4d34271">Exercises/psets</a></li>
+<li><a href="#org218f695">Exercises/psets</a></li>
 </ul>
 </li>
-<li><a href="#orgfb4d1f4">Start here</a>
+<li><a href="#org692b181">Start here</a>
 <ul>
-<li><a href="#org228d577">The natural numbers</a></li>
-<li><a href="#org899f46b">Arithmetic with natural numbers</a></li>
-<li><a href="#org29e4ec7">Laws of arithmetic 2</a></li>
-<li><a href="#org1255d83">Subtraction and division</a></li>
-<li><a href="#org180f378">The Hindu-Arabic number system</a></li>
-<li><a href="#org30af858">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org7c0cd9e">Division</a></li>
-<li><a href="#orgddc21f4">Fractions</a></li>
-<li><a href="#orgbe7cb89">Arithmetic with fractions</a></li>
-<li><a href="#orgdc46f6f">Laws of arithmetic for fractions</a></li>
+<li><a href="#org0c50a69">The natural numbers</a></li>
+<li><a href="#org3c2d4aa">Arithmetic with natural numbers</a></li>
+<li><a href="#orgd8270b0">Laws of arithmetic 2</a></li>
+<li><a href="#org33bdedb">Subtraction and division</a></li>
+<li><a href="#orgc23d472">The Hindu-Arabic number system</a></li>
+<li><a href="#org1bd035b">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org4ba1ba7">Division</a></li>
+<li><a href="#org407dd24">Fractions</a></li>
+<li><a href="#org311a6dc">Arithmetic with fractions</a></li>
+<li><a href="#org63dc9b6">Laws of arithmetic for fractions</a></li>
 </ul>
 </li>
-<li><a href="#org194e6b8">Proofs</a>
+<li><a href="#org17babe8">Proofs</a>
 <ul>
-<li><a href="#org66f6695">Materials needed</a>
+<li><a href="#org7a95e9e">Materials needed</a>
 <ul>
-<li><a href="#orga5a9b82">How to read math</a></li>
+<li><a href="#org82146ca">How to read math</a></li>
 </ul>
 </li>
-<li><a href="#org4712af4">2.1 The Peano Axioms</a></li>
-<li><a href="#orgd52533e">Induction</a></li>
-<li><a href="#orge6d2cac">Back to 2.1</a>
+<li><a href="#org405676e">2.1 The Peano Axioms</a></li>
+<li><a href="#org55fe5a2">Induction</a></li>
+<li><a href="#orgd74ebb7">Back to 2.1</a>
 <ul>
-<li><a href="#orga48858f">Aside: Induction and Recursion</a></li>
+<li><a href="#orgc09e312">Aside: Induction and Recursion</a></li>
 </ul>
 </li>
-<li><a href="#orga6f4451">2.2 Addition</a>
+<li><a href="#org09cde72">2.2 Addition</a>
 <ul>
-<li><a href="#orga7e3a54">Exercise 2.2.1</a></li>
+<li><a href="#org74fbd66">Exercise 2.2.1</a></li>
 </ul>
 </li>
-<li><a href="#orgedf84ba">2.2. cont.</a>
+<li><a href="#orgad1cd93">2.2. cont.</a>
 <ul>
-<li><a href="#orgb15eab9">Exercises</a></li>
+<li><a href="#org38260bf">Exercises</a></li>
 </ul>
 </li>
-<li><a href="#org9c55c67">2.3 Multiplication</a>
+<li><a href="#org427b0d5">2.3 Multiplication</a>
 <ul>
-<li><a href="#orgb6d186a">Exercises</a></li>
+<li><a href="#org81965bc">Exercises</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgeb9efee">Geometry</a>
+<li><a href="#org32df3bb">Geometry</a>
 <ul>
-<li><a href="#org4cede8c">Euclidean</a></li>
-<li><a href="#orgb6960c8">Analytic</a></li>
-<li><a href="#orga37a5ce">Projective</a></li>
-<li><a href="#org38a32d9">Non-Euclidean</a></li>
-<li><a href="#org91e6c1c">Differential</a></li>
+<li><a href="#org8716ebc">Euclidean</a></li>
+<li><a href="#orgfe03654">Analytic</a></li>
+<li><a href="#org4897c15">Projective</a></li>
+<li><a href="#orgbebd3ba">Non-Euclidean</a></li>
+<li><a href="#orgfae762f">Differential</a></li>
 </ul>
 </li>
-<li><a href="#org8c7bcb5">Some Algebra</a>
+<li><a href="#org6227011">Some Algebra</a>
 <ul>
-<li><a href="#org632aca0">Crash course in solving equations &amp; polynomials</a></li>
-<li><a href="#orgcf1bcc2">Lectures</a>
+<li><a href="#orgb41063f">Crash course in solving equations &amp; polynomials</a></li>
+<li><a href="#orgcf3ca44">Lectures</a>
 <ul>
-<li><a href="#orgd8d4555">A different modelling of Polynomials</a></li>
+<li><a href="#orge010699">A different modelling of Polynomials</a></li>
 </ul>
 </li>
-<li><a href="#org27cc84f">Lectures about pi</a></li>
+<li><a href="#orgd6a0777">Lectures about pi</a></li>
 </ul>
 </li>
-<li><a href="#org0768b74">Trigonometry Boot Camp</a>
+<li><a href="#orgc0612f3">Trigonometry Boot Camp</a>
 <ul>
-<li><a href="#orgff01f24">Some Calculus</a></li>
+<li><a href="#org29101c8">Some Calculus</a></li>
 </ul>
 </li>
-<li><a href="#org52793c4">Set Theory</a>
+<li><a href="#org5cb19e2">Set Theory</a>
 <ul>
-<li><a href="#orgb38ede0">History of set theory</a></li>
-<li><a href="#org6c7941f">Appendix A: the basics of mathematical logic</a></li>
-<li><a href="#org873ee49">A.2 Implication</a>
+<li><a href="#orgfae640a">History of set theory</a></li>
+<li><a href="#orgdbd69cb">Appendix A: the basics of mathematical logic</a></li>
+<li><a href="#orgece8d84">A.2 Implication</a>
 <ul>
-<li><a href="#org984e265">Using Boole's Algebra w/implications</a></li>
+<li><a href="#org18086ab">Using Boole's Algebra w/implications</a></li>
 </ul>
 </li>
-<li><a href="#orgd1ffa03">Appendix A cont.</a>
+<li><a href="#orgd9fac08">Appendix A cont.</a>
 <ul>
-<li><a href="#org12aa1e8">Quiz: Logic</a></li>
+<li><a href="#org227f8dd">Quiz: Logic</a></li>
 </ul>
 </li>
-<li><a href="#orgc584dc0">3.1 Fundamentals (Set Theory)</a>
+<li><a href="#orge38047a">3.1 Fundamentals (Set Theory)</a>
 <ul>
-<li><a href="#org3038d7a">Quiz Sets</a></li>
-<li><a href="#orga22e4b2">Exercises</a></li>
-<li><a href="#orgee5c125">3.2 Russell's Paradox</a></li>
+<li><a href="#org6b94a18">Quiz Sets</a></li>
+<li><a href="#orgc5ab8b4">Exercises</a></li>
+<li><a href="#org8fa8780">3.2 Russell's Paradox</a></li>
 </ul>
 </li>
-<li><a href="#org519874b">3.3 Functions</a>
+<li><a href="#org2a66492">3.3 Functions</a>
 <ul>
-<li><a href="#orgd5d02f7">Quiz Functions</a></li>
-<li><a href="#org2039736">Exercises</a></li>
+<li><a href="#org9b772e1">Quiz Functions</a></li>
+<li><a href="#orgcd44324">Exercises</a></li>
 </ul>
 </li>
-<li><a href="#orgfc57f15">Proof strategies</a></li>
-<li><a href="#orgead4ac6">3.4 Images and inverse images</a></li>
+<li><a href="#org61e971b">Proof strategies</a></li>
+<li><a href="#orgf23b930">3.4 Images and inverse images</a></li>
+<li><a href="#orgf5a0a08">3.5 Cartesian products</a></li>
+<li><a href="#org51a1935">3.6 Cardinality of sets</a></li>
+<li><a href="#orgeb54dd1">Programming sets</a></li>
 </ul>
 </li>
-<li><a href="#org1a051d1">Linear Algebra</a>
+<li><a href="#org1905071">Linear Algebra</a>
 <ul>
-<li><a href="#orgc99bf6d">Introduction to Linear Algebra</a></li>
-<li><a href="#orgb0f338d">Vector Arithmetic</a></li>
-<li><a href="#orgf0e4645">Center of mass and barycentric coordinates</a></li>
-<li><a href="#org7994fc6">Area and volume (determinants)</a></li>
+<li><a href="#orgafe3dd5">Introduction to Linear Algebra</a></li>
+<li><a href="#org053cb47">Vector Arithmetic</a></li>
+<li><a href="#orgd6c7277">Center of mass and barycentric coordinates</a></li>
+<li><a href="#org6c481f3">Area and volume (determinants)</a></li>
 </ul>
 </li>
+<li><a href="#org2064725">Integers and rational numbers</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgb57cb27" class="outline-2">
-<h2 id="orgb57cb27">Intro</h2>
-<div class="outline-text-2" id="text-orgb57cb27">
+<div id="outline-container-orged3e947" class="outline-2">
+<h2 id="orged3e947">Intro</h2>
+<div class="outline-text-2" id="text-orged3e947">
 <p>
 This is a (ongoing) workshop to learn the math needed for various prereqs in university AI intro courses, and is Part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. No background is assumed. The idea here is that you do this workshop until you can figure out the courses in the AI workshop and then can either continue doing both or switch, up to you. We start by writing proofs of basic arithmetic with the natural numbers and work our way up. Proof writing is a skill you practice like every other skill, if you persist and practice it enough eventually you pick up the skill.  I watch a lecture one day, next day read some of a chapter, mainly 1 - 2 hrs a day sometimes less or more on the weekends but I try and do it everyday. 
 </p>
@@ -391,9 +395,9 @@ This is a (ongoing) workshop to learn the math needed for various prereqs in uni
 </p>
 </div>
 
-<div id="outline-container-org4d34271" class="outline-3">
-<h3 id="org4d34271">Exercises/psets</h3>
-<div class="outline-text-3" id="text-org4d34271">
+<div id="outline-container-org218f695" class="outline-3">
+<h3 id="org218f695">Exercises/psets</h3>
+<div class="outline-text-3" id="text-org218f695">
 <p>
 If you can't figure out an exercise write it down in a notebook called 'Things I Don't Know' and every once in a while as you progress through more of the material, review your notebook of unsolved problems and see if you can now solve them. For proofs write out full sentences, it helps you remember the material and is the proper way you write a proof anyway. Don't just do scratch work and think you have the answer you'd be surprised how stuck you get when you try explaining it to yourself in the form of a written proof, it means you don't truly understand and need to either review the material again, or put that proof in your 'book of things I don't know' and go back to it later. 
 </p>
@@ -405,17 +409,17 @@ If you write all your own examples everytime you come to a definition, you proba
 </div>
 </div>
 
-<div id="outline-container-orgfb4d1f4" class="outline-2">
-<h2 id="orgfb4d1f4">Start here</h2>
-<div class="outline-text-2" id="text-orgfb4d1f4">
+<div id="outline-container-org692b181" class="outline-2">
+<h2 id="org692b181">Start here</h2>
+<div class="outline-text-2" id="text-org692b181">
 <p>
 We start with some 10 minute lectures on basic arithmetic, from the point of view of a mathematician.
 </p>
 </div>
 
-<div id="outline-container-org228d577" class="outline-3">
-<h3 id="org228d577">The natural numbers</h3>
-<div class="outline-text-3" id="text-org228d577">
+<div id="outline-container-org0c50a69" class="outline-3">
+<h3 id="org0c50a69">The natural numbers</h3>
+<div class="outline-text-3" id="text-org0c50a69">
 <p>
 Presented here is a definition of a mathematical object called a natural number, as a string or sequence of strokes, which are successors of each other. ie: the successor of a number, is another number.
 </p>
@@ -426,9 +430,9 @@ Presented here is a definition of a mathematical object called a natural number,
 </div>
 </div>
 
-<div id="outline-container-org899f46b" class="outline-3">
-<h3 id="org899f46b">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-org899f46b">
+<div id="outline-container-org3c2d4aa" class="outline-3">
+<h3 id="org3c2d4aa">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-org3c2d4aa">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -514,9 +518,9 @@ Distributive law: (k + n)m = km + nm.
 </div>
 </div>
 
-<div id="outline-container-org29e4ec7" class="outline-3">
-<h3 id="org29e4ec7">Laws of arithmetic 2</h3>
-<div class="outline-text-3" id="text-org29e4ec7">
+<div id="outline-container-orgd8270b0" class="outline-3">
+<h3 id="orgd8270b0">Laws of arithmetic 2</h3>
+<div class="outline-text-3" id="text-orgd8270b0">
 <ul class="org-ul">
 <li><a href="https://youtu.be/ScTJRrg8ZfU">YouTube</a> - Arithmetic and Geometry Math Foundations 3</li>
 </ul>
@@ -527,9 +531,9 @@ Wildberger shows another interpretation of multiplication, and walks through the
 </div>
 </div>
 
-<div id="outline-container-org1255d83" class="outline-3">
-<h3 id="org1255d83">Subtraction and division</h3>
-<div class="outline-text-3" id="text-org1255d83">
+<div id="outline-container-org33bdedb" class="outline-3">
+<h3 id="org33bdedb">Subtraction and division</h3>
+<div class="outline-text-3" id="text-org33bdedb">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -575,9 +579,9 @@ Note to remove parens: <a href="https://www.themathpage.com/alg/parentheses.htm"
 </div>
 </div>
 
-<div id="outline-container-org180f378" class="outline-3">
-<h3 id="org180f378">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-org180f378">
+<div id="outline-container-orgc23d472" class="outline-3">
+<h3 id="orgc23d472">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-orgc23d472">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -594,9 +598,9 @@ A simplified Roman numeral system is introduced to abstract our previous notatio
 </div>
 </div>
 
-<div id="outline-container-org30af858" class="outline-3">
-<h3 id="org30af858">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-org30af858">
+<div id="outline-container-org1bd035b" class="outline-3">
+<h3 id="org1bd035b">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-org1bd035b">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -619,9 +623,9 @@ A different way of hand multiplication is shown, taking advantage of the fact th
 </div>
 </div>
 
-<div id="outline-container-org7c0cd9e" class="outline-3">
-<h3 id="org7c0cd9e">Division</h3>
-<div class="outline-text-3" id="text-org7c0cd9e">
+<div id="outline-container-org4ba1ba7" class="outline-3">
+<h3 id="org4ba1ba7">Division</h3>
+<div class="outline-text-3" id="text-org4ba1ba7">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -652,9 +656,9 @@ Division is repeated subtraction. Laws of Division:
 </div>
 </div>
 
-<div id="outline-container-orgddc21f4" class="outline-3">
-<h3 id="orgddc21f4">Fractions</h3>
-<div class="outline-text-3" id="text-orgddc21f4">
+<div id="outline-container-org407dd24" class="outline-3">
+<h3 id="org407dd24">Fractions</h3>
+<div class="outline-text-3" id="text-org407dd24">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -672,9 +676,9 @@ We're still using natural numbers.
 </div>
 </div>
 
-<div id="outline-container-orgbe7cb89" class="outline-3">
-<h3 id="orgbe7cb89">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-orgbe7cb89">
+<div id="outline-container-org311a6dc" class="outline-3">
+<h3 id="org311a6dc">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-org311a6dc">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -694,9 +698,9 @@ What we are trying to prove is ab' = ba' and cd' = dc'. He introduces some extra
 </div>
 
 
-<div id="outline-container-orgdc46f6f" class="outline-3">
-<h3 id="orgdc46f6f">Laws of arithmetic for fractions</h3>
-<div class="outline-text-3" id="text-orgdc46f6f">
+<div id="outline-container-org63dc9b6" class="outline-3">
+<h3 id="org63dc9b6">Laws of arithmetic for fractions</h3>
+<div class="outline-text-3" id="text-org63dc9b6">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -709,17 +713,17 @@ Wildberger proves the distributive and commutative laws using fractions while st
 </div>
 
 
-<div id="outline-container-org194e6b8" class="outline-2">
-<h2 id="org194e6b8">Proofs</h2>
-<div class="outline-text-2" id="text-org194e6b8">
+<div id="outline-container-org17babe8" class="outline-2">
+<h2 id="org17babe8">Proofs</h2>
+<div class="outline-text-2" id="text-org17babe8">
 <p>
 Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage.
 </p>
 </div>
 
-<div id="outline-container-org66f6695" class="outline-3">
-<h3 id="org66f6695">Materials needed</h3>
-<div class="outline-text-3" id="text-org66f6695">
+<div id="outline-container-org7a95e9e" class="outline-3">
+<h3 id="org7a95e9e">Materials needed</h3>
+<div class="outline-text-3" id="text-org7a95e9e">
 <ul class="org-ul">
 <li>The <a href="https://terrytao.wordpress.com/books/analysis-i/">3rd edition</a> of <i>Analysis I</i> from <a href="https://www.worldcat.org/">WorldCat</a> or <a href="https://en.wikipedia.org/wiki/Library_Genesis">LibGen</a> (or buy it, it's an inexpensive book if you get the international version from abebooks or Amazon India)</li>
 <li>The <a href="http://www.kevinhouston.net/httlam.html">book</a> <i>How to Think Like a Mathematician</i> by Kevin Houston. Most of this won't make sense until we do a few chapter's out of Tao's book, we will read it at the same time.</li>
@@ -727,9 +731,9 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 </ul>
 </div>
 
-<div id="outline-container-orga5a9b82" class="outline-4">
-<h4 id="orga5a9b82">How to read math</h4>
-<div class="outline-text-4" id="text-orga5a9b82">
+<div id="outline-container-org82146ca" class="outline-4">
+<h4 id="org82146ca">How to read math</h4>
+<div class="outline-text-4" id="text-org82146ca">
 <p>
 See chapter 2 <i>Reading mathematics</i> and chapter 12 <i>Examples and counterexamples</i> and Kevin Houston's book. The way I read is go through the chapter and attempt to understand with my own examples, don't worry about memorizing anything when you do the exercises you will flip back and forth to every definition in the chapter repeatedly as you write the proof, this is where you start to remember the material and why exercises exist.    
 </p>
@@ -737,9 +741,9 @@ See chapter 2 <i>Reading mathematics</i> and chapter 12 <i>Examples and countere
 </div>
 </div>
 
-<div id="outline-container-org4712af4" class="outline-3">
-<h3 id="org4712af4">2.1 The Peano Axioms</h3>
-<div class="outline-text-3" id="text-org4712af4">
+<div id="outline-container-org405676e" class="outline-3">
+<h3 id="org405676e">2.1 The Peano Axioms</h3>
+<div class="outline-text-3" id="text-org405676e">
 <p>
 We begin like we did with Wildberger, basic counting but rigorously defined. 
 </p>
@@ -771,9 +775,9 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </div>
 
 
-<div id="outline-container-orgd52533e" class="outline-3">
-<h3 id="orgd52533e">Induction</h3>
-<div class="outline-text-3" id="text-orgd52533e">
+<div id="outline-container-org55fe5a2" class="outline-3">
+<h3 id="org55fe5a2">Induction</h3>
+<div class="outline-text-3" id="text-org55fe5a2">
 <p>
 Let's understand Axiom 2.5 by watching a lecture from MIT on proofs though you will end up writing so many induction style proofs on the natural numbers in Tao's book this will become second nature.
 </p>
@@ -789,9 +793,9 @@ Let's understand Axiom 2.5 by watching a lecture from MIT on proofs though you w
 </div>
 
 
-<div id="outline-container-orge6d2cac" class="outline-3">
-<h3 id="orge6d2cac">Back to 2.1</h3>
-<div class="outline-text-3" id="text-orge6d2cac">
+<div id="outline-container-orgd74ebb7" class="outline-3">
+<h3 id="orgd74ebb7">Back to 2.1</h3>
+<div class="outline-text-3" id="text-orgd74ebb7">
 <p>
 Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. Tao uses a function, it's definition can be read in chapter 3.3. Here \(a_0\) is function notation so \(a_0\) is \(f_0(0)\), \(a_1\) is \(f_1(1)\). This proposition is using a new function (a rule that maps from one input to one output) every time, I'm guessing to avoid sequences where they could repeat ie 0, 1, 1, 2, 3.. 
 </p>
@@ -810,9 +814,9 @@ The proof notes Axiom 2.3 protects the value \(a_0\) from being redefined by one
 </p>
 </div>
 
-<div id="outline-container-orga48858f" class="outline-4">
-<h4 id="orga48858f">Aside: Induction and Recursion</h4>
-<div class="outline-text-4" id="text-orga48858f">
+<div id="outline-container-orgc09e312" class="outline-4">
+<h4 id="orgc09e312">Aside: Induction and Recursion</h4>
+<div class="outline-text-4" id="text-orgc09e312">
 <p>
 Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
 </p>
@@ -848,9 +852,9 @@ Note that we didn't have to do anything extra to prove this recursive function. 
 </div>
 
 
-<div id="outline-container-orga6f4451" class="outline-3">
-<h3 id="orga6f4451">2.2 Addition</h3>
-<div class="outline-text-3" id="text-orga6f4451">
+<div id="outline-container-org09cde72" class="outline-3">
+<h3 id="org09cde72">2.2 Addition</h3>
+<div class="outline-text-3" id="text-org09cde72">
 <p>
 Let's understand his example for addition. 3 + 5 should be the same as (((5++)++)++) and adding 0 to 5 should result in 5.  
 </p>
@@ -909,11 +913,11 @@ Proposition 2.2.4 (Addition is commutative) the base case is straight forward. W
 </p>
 </div>
 
-<div id="outline-container-orga7e3a54" class="outline-4">
-<h4 id="orga7e3a54">Exercise 2.2.1</h4>
-<div class="outline-text-4" id="text-orga7e3a54">
+<div id="outline-container-org74fbd66" class="outline-4">
+<h4 id="org74fbd66">Exercise 2.2.1</h4>
+<div class="outline-text-4" id="text-org74fbd66">
 <p>
-Recall <a href="#org4d34271">Exercises/psets</a> if you can't figure out something, write it down somewhere and move on. Routinely revisit to see if you can now figure out the proof. Note this is all scratchwork:
+Recall <a href="#org218f695">Exercises/psets</a> if you can't figure out something, write it down somewhere and move on. Routinely revisit to see if you can now figure out the proof. Note this is all scratchwork:
 </p>
 
 <details>
@@ -996,9 +1000,9 @@ Try moving everything around until you understand exactly how commutativity and 
 </div>
 </div>
 
-<div id="outline-container-orgedf84ba" class="outline-3">
-<h3 id="orgedf84ba">2.2. cont.</h3>
-<div class="outline-text-3" id="text-orgedf84ba">
+<div id="outline-container-orgad1cd93" class="outline-3">
+<h3 id="orgad1cd93">2.2. cont.</h3>
+<div class="outline-text-3" id="text-orgad1cd93">
 <p>
 Proposition 2.2.6 (Cancellation Law) uses Axiom 2.4 which states '<i>Different natural numbers must have different successors; i.e., if n, m are natural numbers and n = m, then n++ = m++. Equivalently, if n++ = m++, then we must have n = m</i>'. So (a + b)++ = (a + c)++ is = a + b = a + c by the line <i>if n++ = m++, then n = m</i> in axiom 2.4. We dropped down from the successor by using axiom 2.4 and can now use our inductive hypothesis of the cancellation law for a to show b = c and close the induction. . 
 </p>
@@ -1012,9 +1016,9 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 </p>
 </div>
 
-<div id="outline-container-orgb15eab9" class="outline-4">
-<h4 id="orgb15eab9">Exercises</h4>
-<div class="outline-text-4" id="text-orgb15eab9">
+<div id="outline-container-org38260bf" class="outline-4">
+<h4 id="org38260bf">Exercises</h4>
+<div class="outline-text-4" id="text-org38260bf">
 <details>
 <p>
 
@@ -1167,9 +1171,9 @@ Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that al
 </div>
 </div>
 
-<div id="outline-container-org9c55c67" class="outline-3">
-<h3 id="org9c55c67">2.3 Multiplication</h3>
-<div class="outline-text-3" id="text-org9c55c67">
+<div id="outline-container-org427b0d5" class="outline-3">
+<h3 id="org427b0d5">2.3 Multiplication</h3>
+<div class="outline-text-3" id="text-org427b0d5">
 <p>
 Proposition 2.3.4 follow along with definition 2.3.1 of multiplication where (n++) x m = (n x m) + m also recall that n++ is n + 1: (n + 1)m so nm + m   
 </p>
@@ -1188,9 +1192,9 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 </p>
 </div>
 
-<div id="outline-container-orgb6d186a" class="outline-4">
-<h4 id="orgb6d186a">Exercises</h4>
-<div class="outline-text-4" id="text-orgb6d186a">
+<div id="outline-container-org81965bc" class="outline-4">
+<h4 id="org81965bc">Exercises</h4>
+<div class="outline-text-4" id="text-org81965bc">
 <p>
 Scratchwork and notes
 </p>
@@ -1342,18 +1346,18 @@ If r + 1 \(\le\) q, or (r = q), then we have n + 1 = mq + q, and from the defini
 </div>
 
 
-<div id="outline-container-orgeb9efee" class="outline-2">
-<h2 id="orgeb9efee">Geometry</h2>
-<div class="outline-text-2" id="text-orgeb9efee">
+<div id="outline-container-org32df3bb" class="outline-2">
+<h2 id="org32df3bb">Geometry</h2>
+<div class="outline-text-2" id="text-org32df3bb">
 <p>
 Before we learn some algebra and modern trigonometry, we should at least see some geometry. These lectures follow the John Stillwell book <i>Mathematics and it's History</i> where Wildberger slices various shapes with planes so you can see why we study things like a parabola or hyperbola. This is only casual viewing.
 </p>
 </div>
 
 
-<div id="outline-container-org4cede8c" class="outline-3">
-<h3 id="org4cede8c">Euclidean</h3>
-<div class="outline-text-3" id="text-org4cede8c">
+<div id="outline-container-org8716ebc" class="outline-3">
+<h3 id="org8716ebc">Euclidean</h3>
+<div class="outline-text-3" id="text-org8716ebc">
 <ul class="org-ul">
 <li><a href="https://youtu.be/dW8Cy6WrO94">Pythagoras' Theorem 1</a> and <a href="https://youtu.be/OqxYLyGLqcs">Pythaoras' Theorem 2</a>
 <ul class="org-ul">
@@ -1375,9 +1379,9 @@ Before we learn some algebra and modern trigonometry, we should at least see som
 </div>
 </div>
 
-<div id="outline-container-orgb6960c8" class="outline-3">
-<h3 id="orgb6960c8">Analytic</h3>
-<div class="outline-text-3" id="text-orgb6960c8">
+<div id="outline-container-orgfe03654" class="outline-3">
+<h3 id="orgfe03654">Analytic</h3>
+<div class="outline-text-3" id="text-orgfe03654">
 <p>
 This is the geometry we will be doing shortly that allows for computational Euclidean geometry. We don't have a definition of polynomials yet but you can probably understand most of this lecture anyway.  
 </p>
@@ -1392,9 +1396,9 @@ This is the geometry we will be doing shortly that allows for computational Eucl
 </div>
 </div>
 
-<div id="outline-container-orga37a5ce" class="outline-3">
-<h3 id="orga37a5ce">Projective</h3>
-<div class="outline-text-3" id="text-orga37a5ce">
+<div id="outline-container-org4897c15" class="outline-3">
+<h3 id="org4897c15">Projective</h3>
+<div class="outline-text-3" id="text-org4897c15">
 <p>
 Abstract geometry, we will need to use projections later when we study linear algebra and project into affine spaces.
 </p>
@@ -1409,9 +1413,9 @@ Abstract geometry, we will need to use projections later when we study linear al
 </div>
 </div>
 
-<div id="outline-container-org38a32d9" class="outline-3">
-<h3 id="org38a32d9">Non-Euclidean</h3>
-<div class="outline-text-3" id="text-org38a32d9">
+<div id="outline-container-orgbebd3ba" class="outline-3">
+<h3 id="orgbebd3ba">Non-Euclidean</h3>
+<div class="outline-text-3" id="text-orgbebd3ba">
 <p>
 Even more abstract geometry, construct a new plane by slicing a sphere and studying a hyperbola. Hyperbolic geometry seems better suited for deep learning as it has 'more capacity'. Maybe we will end up back here projecting our data into a hyperbolic plane.  
 </p>
@@ -1425,9 +1429,9 @@ Even more abstract geometry, construct a new plane by slicing a sphere and study
 </div>
 </div>
 
-<div id="outline-container-org91e6c1c" class="outline-3">
-<h3 id="org91e6c1c">Differential</h3>
-<div class="outline-text-3" id="text-org91e6c1c">
+<div id="outline-container-orgfae762f" class="outline-3">
+<h3 id="orgfae762f">Differential</h3>
+<div class="outline-text-3" id="text-orgfae762f">
 <p>
 Geometry of space curves, osculating plane  
 </p>
@@ -1443,13 +1447,13 @@ Geometry of space curves, osculating plane
 </div>
 </div>
 
-<div id="outline-container-org8c7bcb5" class="outline-2">
-<h2 id="org8c7bcb5">Some Algebra</h2>
-<div class="outline-text-2" id="text-org8c7bcb5">
+<div id="outline-container-org6227011" class="outline-2">
+<h2 id="org6227011">Some Algebra</h2>
+<div class="outline-text-2" id="text-org6227011">
 </div>
-<div id="outline-container-org632aca0" class="outline-3">
-<h3 id="org632aca0">Crash course in solving equations &amp; polynomials</h3>
-<div class="outline-text-3" id="text-org632aca0">
+<div id="outline-container-orgb41063f" class="outline-3">
+<h3 id="orgb41063f">Crash course in solving equations &amp; polynomials</h3>
+<div class="outline-text-3" id="text-orgb41063f">
 <p>
 Flip through sections 1.3.1, 1.3.2 and 1.3.3 <i>Review, Redo, Renew</i> from this draft <a href="http://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf">book</a> used in CMU's 15-151/21-28 <a href="http://www.math.cmu.edu/~jmackey/151_128/welcome.html">course</a>. The author has a list of errata on his <a href="http://math.cmu.edu/~bwsulliv/">page</a>. You will get a crash course in some quick arithmetic, solving linear equations and polynomials. There's a few interesting methods here you may not know about like how to variables from equations. Wildberger covers much of this material too for example Problem 1.3.8, an infinite nest is also in a continuous fractions lecture from the <i>History of Mathematics</i> playlist: \(x = \sqrt{2 + x}\)
 </p>
@@ -1461,9 +1465,9 @@ If you're interested there is a summary of Algebra <a href="https://youtu.be/tAr
 </div>
 
 
-<div id="outline-container-orgcf1bcc2" class="outline-3">
-<h3 id="orgcf1bcc2">Lectures</h3>
-<div class="outline-text-3" id="text-orgcf1bcc2">
+<div id="outline-container-orgcf3ca44" class="outline-3">
+<h3 id="orgcf3ca44">Lectures</h3>
+<div class="outline-text-3" id="text-orgcf3ca44">
 <p>
 Mostly 10 minute lectures on algebra basics, such as how Pascal's array/Khayyam triangle/Yang Hui's triangle encodes the binomial theorem, this series sets up understanding algebra and later calculus and combinatorics.
 </p>
@@ -1517,9 +1521,9 @@ Mostly 10 minute lectures on algebra basics, such as how Pascal's array/Khayyam 
 </ul>
 </div>
 
-<div id="outline-container-orgd8d4555" class="outline-4">
-<h4 id="orgd8d4555">A different modelling of Polynomials</h4>
-<div class="outline-text-4" id="text-orgd8d4555">
+<div id="outline-container-orge010699" class="outline-4">
+<h4 id="orge010699">A different modelling of Polynomials</h4>
+<div class="outline-text-4" id="text-orge010699">
 <p>
 Wildberger has a unique encoding of polynomials in the rest of his math foundations <a href="https://www.youtube.com/playlist?list=PL5A714C94D40392AB">playlist</a> by abstracting coefficients into columns and rows. Pascal's array is then used, and things like factoring or polynomial division is surprisingly trivial to do. Later in the same playlist he teaches some algebraic calculus using this polynumber encoding and taking derivatives and doing integration is again trivial arithmetic. They could teach this to primary school kids. If you have time, I highly recommend watching the rest of the playlist.  
 </p>
@@ -1528,9 +1532,9 @@ Wildberger has a unique encoding of polynomials in the rest of his math foundati
 </div>
 
 
-<div id="outline-container-org27cc84f" class="outline-3">
-<h3 id="org27cc84f">Lectures about pi</h3>
-<div class="outline-text-3" id="text-org27cc84f">
+<div id="outline-container-orgd6a0777" class="outline-3">
+<h3 id="orgd6a0777">Lectures about pi</h3>
+<div class="outline-text-3" id="text-orgd6a0777">
 <p>
 Before we do trig, let's learn what \(\pi\) is. Wildberger <a href="https://youtu.be/lcIbCZR0HbU">talks</a> about the history of pi such as Archimedes interval for pi, Newton's formula, a hexadecimal version of pi, his own formula. The end of this lecture he claims pi is some kind of complex object we still don't understand. At this stage we only need to know it's a constant, or the applied approximation of 22/7 or 355/113.  
 </p>
@@ -1539,9 +1543,9 @@ Before we do trig, let's learn what \(\pi\) is. Wildberger <a href="https://yout
 </div>
 
 
-<div id="outline-container-org0768b74" class="outline-2">
-<h2 id="org0768b74">Trigonometry Boot Camp</h2>
-<div class="outline-text-2" id="text-org0768b74">
+<div id="outline-container-orgc0612f3" class="outline-2">
+<h2 id="orgc0612f3">Trigonometry Boot Camp</h2>
+<div class="outline-text-2" id="text-orgc0612f3">
 <p>
 Let's take the Brown Univeristy trig <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/">boot camp</a>. There is a crash course <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. I assume you know the basic gist of what an <a href="https://en.wikipedia.org/wiki/Angle">angle</a> is which will be better defined when we take calculus.   
 </p>
@@ -1571,9 +1575,9 @@ How I solved these: subtract 1 pi if it's bigger than 2pi, or a 1/2pi if smaller
 </p>
 </div>
 
-<div id="outline-container-orgff01f24" class="outline-3">
-<h3 id="orgff01f24">Some Calculus</h3>
-<div class="outline-text-3" id="text-orgff01f24">
+<div id="outline-container-org29101c8" class="outline-3">
+<h3 id="org29101c8">Some Calculus</h3>
+<div class="outline-text-3" id="text-org29101c8">
 <p>
 Now that we know trig functions, watch this basics of calculus <a href="https://youtu.be/zfHEkt-1sqo">crash course</a> which was designed for non-english speaking students to learn math notation (with Chinese subtitles). Note in the last few examples how the derivative works d = \(nx^{n-1}\) so in the examples the derivative of \(y = \frac{-g}{2}t^2+v_0t+y_0\) is (\(2\cdot\frac{-g}{2}t^{2-1}+ 1\cdot v_0t^{1-1}\)) or \(-gt + v_0\) you take the exponent power, multiply the coefficient of the base, and subtract the power, so the derivative of  \(-gt^1 + v_0\) is (\(1\cdot-gt^0 + v_0\)) which is -g, as we'll see later any terms without a variable (in this example t) cancels out or as Wildberger mentioned are so small so they are discarded.  
 </p>
@@ -1589,22 +1593,22 @@ Try reading the first chapter from Gilbert Strang's <a href="https://ocw.mit.edu
 </div>
 </div>
 
-<div id="outline-container-org52793c4" class="outline-2">
-<h2 id="org52793c4">Set Theory</h2>
-<div class="outline-text-2" id="text-org52793c4">
+<div id="outline-container-org5cb19e2" class="outline-2">
+<h2 id="org5cb19e2">Set Theory</h2>
+<div class="outline-text-2" id="text-org5cb19e2">
 </div>
-<div id="outline-container-orgb38ede0" class="outline-3">
-<h3 id="orgb38ede0">History of set theory</h3>
-<div class="outline-text-3" id="text-orgb38ede0">
+<div id="outline-container-orgfae640a" class="outline-3">
+<h3 id="orgfae640a">History of set theory</h3>
+<div class="outline-text-3" id="text-orgfae640a">
 <p>
 There is a <a href="https://youtu.be/5LsdsnjXT_Y">lecture</a> on the history of sets/functions, explaining ordinals, cardinals, various schools of logic, and a second <a href="https://youtu.be/Bo2w25fDLwY">lecture</a> about the history of set theory with Godel and Turing. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6c7941f" class="outline-3">
-<h3 id="org6c7941f">Appendix A: the basics of mathematical logic</h3>
-<div class="outline-text-3" id="text-org6c7941f">
+<div id="outline-container-orgdbd69cb" class="outline-3">
+<h3 id="orgdbd69cb">Appendix A: the basics of mathematical logic</h3>
+<div class="outline-text-3" id="text-orgdbd69cb">
 <p>
 This chapter on set theory in <i>Analysis I</i> relies on the fact that you've already read the appendix on logic and have an idea what implies means or disjunction. Now that we have done some proofs ourselves, and the basics of trigonometry we can finally understand some of the examples he uses in this appendix. Tao makes a point that this chapter is meant to be read and understood not studied and memorized, and thankfully he is not bombarding us with piles of confusing logic notation that you normally see in other 'how to do proofs' books. At the same time you read this appendix, read <i>How to Think Like a Mathematician</i> by K. Houston it will clear up any cryptic definitions like how implication works.
 </p>
@@ -1612,9 +1616,9 @@ This chapter on set theory in <i>Analysis I</i> relies on the fact that you've a
 </div>
 
 
-<div id="outline-container-org873ee49" class="outline-3">
-<h3 id="org873ee49">A.2 Implication</h3>
-<div class="outline-text-3" id="text-org873ee49">
+<div id="outline-container-orgece8d84" class="outline-3">
+<h3 id="orgece8d84">A.2 Implication</h3>
+<div class="outline-text-3" id="text-orgece8d84">
 <p>
 A.2 Implication seems confusing on first read, it's modern language use relating to casuality is different from the logician's use which is explained <a href="http://www.math.niu.edu/~richard/Math101/implies.pdf">here</a>. The only permutation where implication is false is if p implies q and p is true, but q is false. See the Kevin Houston book for more details. 
 </p>
@@ -1646,9 +1650,9 @@ An optional short series on the history of various schools of logic that led to 
 </ul>
 </div>
 
-<div id="outline-container-org984e265" class="outline-4">
-<h4 id="org984e265">Using Boole's Algebra w/implications</h4>
-<div class="outline-text-4" id="text-org984e265">
+<div id="outline-container-org18086ab" class="outline-4">
+<h4 id="org18086ab">Using Boole's Algebra w/implications</h4>
+<div class="outline-text-4" id="text-org18086ab">
 <ul class="org-ul">
 <li><a href="https://youtu.be/XkqmuUg_yFs">Implication and 16 logical operations</a> - MF 258</li>
 </ul>
@@ -1660,9 +1664,9 @@ Another optional lecture from a short series on Boole's Algebra which is differe
 </div>
 </div>
 
-<div id="outline-container-orgd1ffa03" class="outline-3">
-<h3 id="orgd1ffa03">Appendix A cont.</h3>
-<div class="outline-text-3" id="text-orgd1ffa03">
+<div id="outline-container-orgd9fac08" class="outline-3">
+<h3 id="orgd9fac08">Appendix A cont.</h3>
+<div class="outline-text-3" id="text-orgd9fac08">
 <p>
 Proposition A.2.3, confusing the hypotenuse "Suppose that&#x2026;" by assuming the conclusion. We always assume the hypotenuse, and prove the conclusion.  Proposition A.2.6, proof by contradiction, we know that when pi/2 (90deg) the sine function is 1, because remember it is the y axis of the unit circle. Tao also makes a note here to not use confusing logical notation in proofs.  
 </p>
@@ -1684,25 +1688,25 @@ A.6 the point of the examples is to make a point about arguments that use outer 
 </p>
 </div>
 
-<div id="outline-container-org12aa1e8" class="outline-4">
-<h4 id="org12aa1e8">Quiz: Logic</h4>
-<div class="outline-text-4" id="text-org12aa1e8">
+<div id="outline-container-org227f8dd" class="outline-4">
+<h4 id="org227f8dd">Quiz: Logic</h4>
+<div class="outline-text-4" id="text-org227f8dd">
 <p>
-These multiple choice <a href="http://scherk.pbworks.com/w/page/14864181/FrontPage">quizzes</a> are from Tao's Analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, try the <a href="http://scherk.pbworks.com/w/page/14864234/Quiz:%20Logic">logic</a> quiz. If you struggle read the other two resources from <a href="#org66f6695">Materials needed</a> relevant chapters on logic, search YouTube for proofs by implication, or search 'discrete math inference rules' there are dozens of tutorials. Take the quiz again.
+These multiple choice <a href="http://scherk.pbworks.com/w/page/14864181/FrontPage">quizzes</a> are from Tao's Analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, try the <a href="http://scherk.pbworks.com/w/page/14864234/Quiz:%20Logic">logic</a> quiz. If you struggle read the other two resources from <a href="#org7a95e9e">Materials needed</a> relevant chapters on logic, search YouTube for proofs by implication, or search 'discrete math inference rules' there are dozens of tutorials. Take the quiz again.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc584dc0" class="outline-3">
-<h3 id="orgc584dc0">3.1 Fundamentals (Set Theory)</h3>
-<div class="outline-text-3" id="text-orgc584dc0">
+<div id="outline-container-orge38047a" class="outline-3">
+<h3 id="orge38047a">3.1 Fundamentals (Set Theory)</h3>
+<div class="outline-text-3" id="text-orge38047a">
 <p>
 We are back to reading Tao's <i>Analysis I</i> and still in the realm of the natural numbers. Example 3.1.2 is similar to a nested list such as [list: 1, [list: 1, 2], 100] is length 3, even though there is a nested list overall it still only contains 3 elements. Remark 3.1.3 is in the above historical lectures on set theory. We are referred to Appendix A.7 Equality to read about the substitution axiom which you should have already read.
 </p>
 
 <p>
-Lemma 3.1.6 if set A is equal to set (empty), then if x is in A it must also be in set empty, a contradiction, so A must be a non-empty set is how I interpret the lemma, which is a way to say that if an empty set exists, there must also be a possibility of a non-empty set. Remark 3.1.8 Cardinality if you watched the Wildberger <i>History of Mathematics</i> <a href="#orgb38ede0">lecture</a> linked above assigns a value.
+Lemma 3.1.6 if set A is equal to set (empty), then if x is in A it must also be in set empty, a contradiction, so A must be a non-empty set is how I interpret the lemma, which is a way to say that if an empty set exists, there must also be a possibility of a non-empty set. Remark 3.1.8 Cardinality if you watched the Wildberger <i>History of Mathematics</i> <a href="#orgfae640a">lecture</a> linked above assigns a value.
 </p>
 
 <p>
@@ -1728,18 +1732,18 @@ Example 3.1.32 looks a lot like programming syntax. There seems to be an order o
 </p>
 </div>
 
-<div id="outline-container-org3038d7a" class="outline-4">
-<h4 id="org3038d7a">Quiz Sets</h4>
-<div class="outline-text-4" id="text-org3038d7a">
+<div id="outline-container-org6b94a18" class="outline-4">
+<h4 id="org6b94a18">Quiz Sets</h4>
+<div class="outline-text-4" id="text-org6b94a18">
 <p>
-Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz:%20Sets">quiz</a>. If you totally failed this try secondary reading material of the other two books in <a href="#org66f6695">Materials needed</a>. Watch Youtube <a href="https://www.youtube.com/playlist?list=PLg8ZEeSiXsjgoQJzRcq60GjK0UrkMsA3-">lectures</a> and take the quiz again.
+Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz:%20Sets">quiz</a>. If you totally failed this try secondary reading material of the other two books in <a href="#org7a95e9e">Materials needed</a>. Watch Youtube <a href="https://www.youtube.com/playlist?list=PLg8ZEeSiXsjgoQJzRcq60GjK0UrkMsA3-">lectures</a> and take the quiz again.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga22e4b2" class="outline-4">
-<h4 id="orga22e4b2">Exercises</h4>
-<div class="outline-text-4" id="text-orga22e4b2">
+<div id="outline-container-orgc5ab8b4" class="outline-4">
+<h4 id="orgc5ab8b4">Exercises</h4>
+<div class="outline-text-4" id="text-orgc5ab8b4">
 <details>
 <p>
 
@@ -1769,7 +1773,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz:%20Sets">quiz<
 
 <ul class="org-ul">
 <li>3.1.15 Show how union, intersection and subset are logically equivalent:</li>
-<li>Look in the <a href="#org66f6695">Houston</a> book in the appendix, see the advice for how to prove that two statements are equivalent. For this exercise if A is a subset of B, and the union of A and B = B, then this implies the intersection of A and B will be A, which in turn implies A is a subset of B. 
+<li>Look in the <a href="#org7a95e9e">Houston</a> book in the appendix, see the advice for how to prove that two statements are equivalent. For this exercise if A is a subset of B, and the union of A and B = B, then this implies the intersection of A and B will be A, which in turn implies A is a subset of B. 
 <ul class="org-ul">
 <li>We will show that any two set operations implies another. If x is in A \(\cup\) B, then by definition of union x is in A or B, so by disjunction x is in B. If x is in A, since A is a subset of B then x is again in B. Thus x \(\in\) A \(\cup\) B if and only if x \(\in\) B and by definition of union, and axiom of equality 3.1.4, A \(\cup\) B = B. Since x is in B, if x is in A \(\cap\) B it must also be in A, so x is in A and B, which is the definition of intersection, and if A \(\cap\) B = A, and if A \(\cup\) B = B, then every element of A is in B so A \(\subset\) B.</li>
 </ul></li>
@@ -1791,9 +1795,9 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz:%20Sets">quiz<
 </div>
 </div>
 
-<div id="outline-container-orgee5c125" class="outline-4">
-<h4 id="orgee5c125">3.2 Russell's Paradox</h4>
-<div class="outline-text-4" id="text-orgee5c125">
+<div id="outline-container-org8fa8780" class="outline-4">
+<h4 id="org8fa8780">3.2 Russell's Paradox</h4>
+<div class="outline-text-4" id="text-org8fa8780">
 <p>
 Wildberger covered some of this already, 3.9 Axiom of Regularity is worth reading to see some more examples of what is and what isn't an element of a set. 
 </p>
@@ -1801,9 +1805,9 @@ Wildberger covered some of this already, 3.9 Axiom of Regularity is worth readin
 </div>
 </div>
 
-<div id="outline-container-org519874b" class="outline-3">
-<h3 id="org519874b">3.3 Functions</h3>
-<div class="outline-text-3" id="text-org519874b">
+<div id="outline-container-org2a66492" class="outline-3">
+<h3 id="org2a66492">3.3 Functions</h3>
+<div class="outline-text-3" id="text-org2a66492">
 <p>
 Example 3.3.3 if you forgot range <a href="https://stackoverflow.com/questions/4396290/what-does-this-square-bracket-and-parenthesis-bracket-notation-mean-first1-last">notation</a>. Remark 3.3.5 clears up some notation for functions notably a sequence subscript also denotes a function. Example 3.3.9 asks why 3.3.7 asserts that all functions from empty-set to X are equal, because they have the same domain (nothing) and range. 
 </p>
@@ -1841,18 +1845,18 @@ Our first proof in this chapter is in Lemma 3.3.12, and if we can go by all the 
 </div>
 
 
-<div id="outline-container-orgd5d02f7" class="outline-4">
-<h4 id="orgd5d02f7">Quiz Functions</h4>
-<div class="outline-text-4" id="text-orgd5d02f7">
+<div id="outline-container-org9b772e1" class="outline-4">
+<h4 id="org9b772e1">Quiz Functions</h4>
+<div class="outline-text-4" id="text-org9b772e1">
 <p>
-Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz:%20Functions">quiz</a> from Tao's analysis class. If you totally failed this try secondary reading material of the other two books in <a href="#org66f6695">Materials needed</a>. Watch Youtube lectures you can find. Try the quiz again.
+Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz:%20Functions">quiz</a> from Tao's analysis class. If you totally failed this try secondary reading material of the other two books in <a href="#org7a95e9e">Materials needed</a>. Watch Youtube lectures you can find. Try the quiz again.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2039736" class="outline-4">
-<h4 id="org2039736">Exercises</h4>
-<div class="outline-text-4" id="text-org2039736">
+<div id="outline-container-orgcd44324" class="outline-4">
+<h4 id="orgcd44324">Exercises</h4>
+<div class="outline-text-4" id="text-orgcd44324">
 <details>
 <p>
 A all of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
@@ -1872,9 +1876,9 @@ A all of these proofs have a youtube tutorial or stackexchange answer, these are
 </div>
 </div>
 
-<div id="outline-container-orgfc57f15" class="outline-3">
-<h3 id="orgfc57f15">Proof strategies</h3>
-<div class="outline-text-3" id="text-orgfc57f15">
+<div id="outline-container-org61e971b" class="outline-3">
+<h3 id="org61e971b">Proof strategies</h3>
+<div class="outline-text-3" id="text-org61e971b">
 <p>
 Watch <a href="https://youtu.be/K0CoGGcLc1M?t=2161">this</a> starting @ 36:00, from 41:00+ he shows how he solves problems step by step, trying small cases to understand the problem better and poking at the problem enough to finally figure out a proof. 
 </p>
@@ -1890,32 +1894,63 @@ So tl;dr relax and just keep writing because the practice of flipping back throu
 </div>
 
 
-<div id="outline-container-orgead4ac6" class="outline-3">
-<h3 id="orgead4ac6">3.4 Images and inverse images</h3>
-<div class="outline-text-3" id="text-orgead4ac6">
+<div id="outline-container-orgf23b930" class="outline-3">
+<h3 id="orgf23b930">3.4 Images and inverse images</h3>
+<div class="outline-text-3" id="text-orgf23b930">
 <p>
-Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = 2x, so {-2,-1,0,1,2} and in Example 3.4.5, the set of everything in the natural numbers that can result in {1,2,3} if f(x) = 2x, is only f({1}). Axiom 3.11 (Union) if A = {{2,3}, {3,4}, {4,5}} and Ua = {2,3,4,5} why? Because it's {2,3} U {3,4} U {4, 5} you are performing union on every set.
+Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = x<sup>2</sup>, so {-2,-1,0,1,2} and in Example 3.4.5, the set of everything in the natural numbers that can result in {1,2,3} if f(x) = 2x, is only f({1}). Axiom 3.11 (Union) if A = {{2,3}, {3,4}, {4,5}} and Ua = {2,3,4,5} why? Because it's {2,3} U {3,4} U {4, 5} you are performing union on every set, this is notation to avoid having to write out an enormous page of union operations. Search youtube for <a href="https://youtu.be/TDpQSa3hJRw">indexed sets</a>. The power set you can choose which subsets you want to add, again search for this on youtube. 
 </p>
 
 <p>
-Todo finishing some of the exercises, we've already done similar exercises in set theory there's nothing new here.  
+The exercises, we've already done similar exercises in set theory there's nothing new here. Reminder that millions of discrete and applied math students have already done similar exercises so you can look up proofs of function inverse images anywhere. I did enough of the exercises so I was sure I understood these set and function operations otherwise move on. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf5a0a08" class="outline-3">
+<h3 id="orgf5a0a08">3.5 Cartesian products</h3>
+<div class="outline-text-3" id="text-orgf5a0a08">
+<p>
+Another topic with plenty of youtube <a href="https://youtu.be/NnEkVooAsxk">tutorials</a>. Definition 3.5.7 notation for product is introduced, it looks complicated but all it's doing is specifying an index (i is greater or equal to 1, and less than or equal to n) and repeated cross product. The exercises some of the solutions are <a href="https://youtu.be/XmkGxHZDer8">walked through</a> on youtube.
+</p>
+
+<p>
+The cartesian plane itself is a cartesian product of R x R, you have tuples (x, y) or (x, y, z) so R x R x R. In programming the type int * int is the set Integers x Integers, anything that isn't a cross product of the integers with itself will not type check.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51a1935" class="outline-3">
+<h3 id="org51a1935">3.6 Cardinality of sets</h3>
+<div class="outline-text-3" id="text-org51a1935">
+<p>
+A good <a href="https://youtu.be/JkOKMwRe4BE">tutorial</a>. Tao is using #(A) notation which means finite cardinality, while |A| cardinality notation means infinite. There exists errata for the exercises specifically 3.6.8. The last exercise the <a href="https://www.youtube.com/watch?v=2-mxYrCNX60">pigeonhole principle</a> if set A has greater cardinality than B, then f(x) A -&gt; B can't be injective, since there would be two elements in A that point to a single element in B.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb54dd1" class="outline-3">
+<h3 id="orgeb54dd1">Programming sets</h3>
+<div class="outline-text-3" id="text-orgeb54dd1">
+<p>
+If you want you can re-do what we've done so far to get better at this material by programming sets using the <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">book</a> <i>Discrete Math and Functional Programming</i>. Everything we covered such as peano axioms, inductive proofs, cardinality, function images and even converting math notation into programs is covered and highly recommended. 
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org1a051d1" class="outline-2">
-<h2 id="org1a051d1">Linear Algebra</h2>
-<div class="outline-text-2" id="text-org1a051d1">
+<div id="outline-container-org1905071" class="outline-2">
+<h2 id="org1905071">Linear Algebra</h2>
+<div class="outline-text-2" id="text-org1905071">
 <p>
 We're doing <i>Analysis I</i> and Linear Algebra in parallel. These sets of lectures cover Linear Algebra from a geometric approach so when we work through Tao's Linear Algebra <a href="https://terrytao.files.wordpress.com/2016/12/linear-algebra-notes.pdf">notes</a> we can understand what is happening. The foundations of this geometry are simple and from Pappus of Alexandria's law of parallel lines. 
 </p>
 </div>
 
-<div id="outline-container-orgc99bf6d" class="outline-3">
-<h3 id="orgc99bf6d">Introduction to Linear Algebra</h3>
-<div class="outline-text-3" id="text-orgc99bf6d">
+<div id="outline-container-orgafe3dd5" class="outline-3">
+<h3 id="orgafe3dd5">Introduction to Linear Algebra</h3>
+<div class="outline-text-3" id="text-orgafe3dd5">
 <ul class="org-ul">
 <li><a href="https://youtu.be/yAb12PWrhV0">Introduction</a> - Wild Linear Algebra A1</li>
 </ul>
@@ -1933,14 +1968,14 @@ The biggest a takeaway here is what vector direction is, what a basis vector is 
 </p>
 
 <p>
-In this optional related <a href="https://youtu.be/Nu-YPJSNFpE">lecture</a> he shows how ancient people made a ruler using just parallel line geometry, which leads to modelling the rational continuum. 
+In this optional related <a href="https://youtu.be/Nu-YPJSNFpE">lecture</a> he shows how ancient people made a ruler using just parallel line geometry, which leads to modelling the rational continuum. Some more optional (short) videos is <a href="https://youtu.be/fNk_zzaMoSs">this</a> from 3Blue1Brown on what a vector is, and <a href="https://youtu.be/k7RM-ot2NWY">this</a> presentation of basis vectors and what a span is, but he imposes a cartesian plane, which we've seen isn't needed. Change of basis is video 13 in the 3BlueBrown playlist but the explanation here by Wildberger in the first lecture I find is better. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb0f338d" class="outline-3">
-<h3 id="orgb0f338d">Vector Arithmetic</h3>
-<div class="outline-text-3" id="text-orgb0f338d">
+<div id="outline-container-org053cb47" class="outline-3">
+<h3 id="org053cb47">Vector Arithmetic</h3>
+<div class="outline-text-3" id="text-org053cb47">
 <ul class="org-ul">
 <li><a href="https://youtu.be/132amJvoLpU">Geometry with Vectors</a> - Wild Linear Algebra A2</li>
 </ul>
@@ -1960,27 +1995,40 @@ All this vector arithmetic will come up later in other courses, at least now you
 </ul>
 
 <p>
-@38:00 or so solving linear eq with 2 unknown variables we already covered in the first lecture or review <a href="#org632aca0">Crash course in solving equations &amp; polynomials</a>.
+@38:00 or so solving linear eq with 2 unknown variables we already covered in the first lecture or review <a href="#orgb41063f">Crash course in solving equations &amp; polynomials</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf0e4645" class="outline-3">
-<h3 id="orgf0e4645">Center of mass and barycentric coordinates</h3>
-<div class="outline-text-3" id="text-orgf0e4645">
+<div id="outline-container-orgd6c7277" class="outline-3">
+<h3 id="orgd6c7277">Center of mass and barycentric coordinates</h3>
+<div class="outline-text-3" id="text-orgd6c7277">
 <p>
-Since we just did Physics in the software workshop (CS019 Differential systems) Let's learn about Archimedes principle of the lever, accelerations in the grid plane and Newton's laws. You don't need to memorize this just get more familiar with subtracting vectors, seeing him do some more proofs. 
+Since we just did Physics in the software workshop (CS019 Differential systems) let's learn about Archimedes principle of the lever, accelerations in the grid plane and Newton's laws. Calculus is normally introduced with some physics as well since these were the motivating problems that led to a lot of definitions in modern math. You don't need to memorize this just get more familiar with subtracting vectors, seeing vectors as points, seeing him do some more proofs. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7994fc6" class="outline-3">
-<h3 id="org7994fc6">Area and volume (determinants)</h3>
-<div class="outline-text-3" id="text-org7994fc6">
+<div id="outline-container-org6c481f3" class="outline-3">
+<h3 id="org6c481f3">Area and volume (determinants)</h3>
+<div class="outline-text-3" id="text-org6c481f3">
 <p>
-The fourth <a href="https://youtu.be/6XghF70fqkY">lecture</a> in the series to lead up to determinants. You probably recognize ad-bc from the first lecture, which was one of the exercises. 
+The fourth <a href="https://youtu.be/6XghF70fqkY">lecture</a> in the series to lead up to determinants. You probably recognize ad-bc from the first lecture, which was one of the exercises. He uses different notation for bi-vectors since it represents the union of vector a and b. The torque example you have probably seen somebody using a long pipe over a wrench in order to increase the torque without needing increased force, now you know why increasing the area of the wrench increases the torque. All 3 physics examples can be modelled with a parallegram/bi-vector. The bi-vector rules (ie: adding a scalar to one side of a bi-vector doesn't change the bi-vector) will make sense around 35:50 when he produces a picture proof showing how moving things doesn't change the bi-vector. At around 38:00 we once again get the formula ad-bc, the signed area is a scalar of two basis vectors. 45:50 introduces three-dimensional affine space. 
+</p>
+
+<p>
+Now that you've seen this model of area using bi-vectors, see <a href="https://youtu.be/Ip3X9LOh2dk">this</a> 10 minute presentation by 3Blue1Brown which will fill in some more details, like why the signed area can be negative if you didn't already figure it out. The exercises are conceptually easy, you don't have to do all of them but the whole point of linear algebra is to take these geometric concepts and do them in algebra. 
 </p>
 </div>
+</div>
+</div>
+
+<div id="outline-container-org2064725" class="outline-2">
+<h2 id="org2064725">Integers and rational numbers</h2>
+<div class="outline-text-2" id="text-org2064725">
+<p>
+We made it to chapter 4 of Tao's <i>Analysis I</i> text. 
+</p>
 </div>
 </div>
 </div>
