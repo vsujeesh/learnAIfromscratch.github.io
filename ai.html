@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-07-21 Tue 07:08 -->
+<!-- 2020-07-25 Sat 11:23 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,52 +261,53 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga35a529">Intro</a></li>
-<li><a href="#orgff93ddb">Start here</a>
+<li><a href="#org832caf4">Intro</a></li>
+<li><a href="#org0145ded">Start here</a>
 <ul>
-<li><a href="#orge2e1855">Material req</a></li>
-<li><a href="#org989da53">Lecture 1 Introduction</a></li>
-<li><a href="#org1f3da11">Lecture 2 Data collection and scraping</a>
+<li><a href="#org7d075fa">Material req</a></li>
+<li><a href="#orgc310da3">Lecture 1 Introduction</a></li>
+<li><a href="#org1e886bd">Lecture 2 Data collection and scraping</a>
 <ul>
-<li><a href="#orga58bc85">Regex practice</a></li>
+<li><a href="#org52f8489">Regex practice</a></li>
 </ul>
 </li>
-<li><a href="#org66f8fc2">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#orgdbd4835">Recitation 1</a></li>
-<li><a href="#orgeb50ef0">Finite State Automata</a>
+<li><a href="#org14c2f92">Lecture 3 Jupyter notebooks</a></li>
+<li><a href="#org23d87fa">Recitation 1</a></li>
+<li><a href="#orgb4dbdfc">Finite State Automata</a>
 <ul>
-<li><a href="#orga4b1495">Assignment 1</a></li>
-<li><a href="#orge032705">Assignment 1 15-688 (Optional)</a></li>
+<li><a href="#orgbd163e5">Assignment 1</a></li>
+<li><a href="#org6fb2e64">Assignment 1 15-688 (Optional)</a></li>
 </ul>
 </li>
-<li><a href="#org52e525d">Lecture 4 Relational Data</a></li>
-<li><a href="#org06c752b">Lecture 5 Visualizations</a></li>
-<li><a href="#org245870b">Lecture 6 Linear Algebra</a>
+<li><a href="#orgb9222d3">Lecture 4 Relational Data</a></li>
+<li><a href="#org516fc7e">Lecture 5 Visualizations</a></li>
+<li><a href="#orga1e6206">Lecture 6 Linear Algebra</a>
 <ul>
-<li><a href="#orgbd6c803">Vector Boot Camp</a></li>
-<li><a href="#orgcf6c3bf">Linear Algebra Review</a></li>
-<li><a href="#org3582b3b">15-388 Linear Algebra Lecture 6 (Optimization)</a></li>
+<li><a href="#org19fa528">Vector Boot Camp</a></li>
+<li><a href="#org2551bf0">Linear Algebra Review</a></li>
+<li><a href="#org07c5173">15-388 Linear Algebra Lecture 6 (Optimization)</a></li>
+<li><a href="#orgd93033a">More Programming w/Linear Algebra</a></li>
 </ul>
 </li>
+<li><a href="#org482aa6c">Lecture 7 Graphs</a></li>
 </ul>
 </li>
-<li><a href="#orgf8cb242">Coding the Matrix</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orga35a529" class="outline-2">
-<h2 id="orga35a529">Intro</h2>
-<div class="outline-text-2" id="text-orga35a529">
+<div id="outline-container-org832caf4" class="outline-2">
+<h2 id="org832caf4">Intro</h2>
+<div class="outline-text-2" id="text-org832caf4">
 <p>
 This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgff93ddb" class="outline-2">
-<h2 id="orgff93ddb">Start here</h2>
-<div class="outline-text-2" id="text-orgff93ddb">
+<div id="outline-container-org0145ded" class="outline-2">
+<h2 id="org0145ded">Start here</h2>
+<div class="outline-text-2" id="text-org0145ded">
 <p>
 We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> from fall 2019 because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems. When you finish this course you can get paid to do this in industry while we later take more advanced AI courses.
 </p>
@@ -316,18 +317,18 @@ This course assumes some <a href="https://learnaifromscratch.github.io/math.html
 </p>
 </div>
 
-<div id="outline-container-orge2e1855" class="outline-3">
-<h3 id="orge2e1855">Material req</h3>
-<div class="outline-text-3" id="text-orge2e1855">
+<div id="outline-container-org7d075fa" class="outline-3">
+<h3 id="org7d075fa">Material req</h3>
+<div class="outline-text-3" id="text-org7d075fa">
 <p>
 Like the software workshop if all you have is access to a phone or tablet it's possible to complete this course using Google colab (free) otherwise the course uses Python3 and provides Vagrant files and instructions to set up your own environment. I went with <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. All the assignments are handed out as jupyter notebooks, you can certainly do them in PyCharm too if you wanted or vim even. The lectures are through <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">panopto</a> and open to the public.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org989da53" class="outline-3">
-<h3 id="org989da53">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-org989da53">
+<div id="outline-container-orgc310da3" class="outline-3">
+<h3 id="orgc310da3">Lecture 1 Introduction</h3>
+<div class="outline-text-3" id="text-orgc310da3">
 <p>
 We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
 </p>
@@ -356,9 +357,9 @@ We don't have the recommended background but you'll see later most of these requ
 </div>
 </div>
 
-<div id="outline-container-org1f3da11" class="outline-3">
-<h3 id="org1f3da11">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-org1f3da11">
+<div id="outline-container-org1e886bd" class="outline-3">
+<h3 id="org1e886bd">Lecture 2 Data collection and scraping</h3>
+<div class="outline-text-3" id="text-org1e886bd">
 <p>
 Next lecture when he introduces Jupyter notebook, you can export the <a href="http://www.datasciencecourse.org/notes/data_collection/">notes</a> for this lecture as a notebook to experiment around with the regex library, they are fully interactive can run them yourself, change anything to see how corner cases are matched, go through the Python <a href="https://docs.python.org/3.8/tutorial/">tutorial</a> looking up anything you don't understand like what range does or list/dict comprehensions.     
 </p>
@@ -376,9 +377,9 @@ r"\w+\s+science"
 </p>
 </div>
 
-<div id="outline-container-orga58bc85" class="outline-4">
-<h4 id="orga58bc85">Regex practice</h4>
-<div class="outline-text-4" id="text-orga58bc85">
+<div id="outline-container-org52f8489" class="outline-4">
+<h4 id="org52f8489">Regex practice</h4>
+<div class="outline-text-4" id="text-org52f8489">
 <p>
 If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
 </p>
@@ -386,9 +387,9 @@ If you want some practice, try <a href="https://regexone.com/lesson/introduction
 </div>
 </div>
 
-<div id="outline-container-org66f8fc2" class="outline-3">
-<h3 id="org66f8fc2">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-org66f8fc2">
+<div id="outline-container-org14c2f92" class="outline-3">
+<h3 id="org14c2f92">Lecture 3 Jupyter notebooks</h3>
+<div class="outline-text-3" id="text-org14c2f92">
 <p>
 Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
 </p>
@@ -446,9 +447,9 @@ Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu
 </div>
 </div>
 
-<div id="outline-container-orgdbd4835" class="outline-3">
-<h3 id="orgdbd4835">Recitation 1</h3>
-<div class="outline-text-3" id="text-orgdbd4835">
+<div id="outline-container-org23d87fa" class="outline-3">
+<h3 id="org23d87fa">Recitation 1</h3>
+<div class="outline-text-3" id="text-org23d87fa">
 <p>
 Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
 </p>
@@ -479,9 +480,9 @@ Regexp they want us to <a href="https://blog.codinghorror.com/regular-expression
 </div>
 </div>
 
-<div id="outline-container-orgeb50ef0" class="outline-3">
-<h3 id="orgeb50ef0">Finite State Automata</h3>
-<div class="outline-text-3" id="text-orgeb50ef0">
+<div id="outline-container-orgb4dbdfc" class="outline-3">
+<h3 id="orgb4dbdfc">Finite State Automata</h3>
+<div class="outline-text-3" id="text-orgb4dbdfc">
 <p>
 A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand DFAs even if you haven't taken set theory in the math workshop. 
 </p>
@@ -545,9 +546,9 @@ Some regex and their corresponding state diagrams:
 </div>
 
 
-<div id="outline-container-orga4b1495" class="outline-4">
-<h4 id="orga4b1495">Assignment 1</h4>
-<div class="outline-text-4" id="text-orga4b1495">
+<div id="outline-container-orgbd163e5" class="outline-4">
+<h4 id="orgbd163e5">Assignment 1</h4>
+<div class="outline-text-4" id="text-orgbd163e5">
 <p>
 Walking through the first assignment the the rest won't be as verbose. Let's try <a href="https://www.datasciencecourse.org/assignments/homework-1/">homework 1</a>. Untar it and run 'pip install -r requirements.txt'. Get Started notebook, you fill in rotate list and reverse dict, both of which are easy one liners straight from the previous lectures. Rotate list is return list slice + list slice, reverse dict is return swapped keys for a,b in d.items(). The second task is write some tests, notice this is an oracle, it consumes a function and then tests it. You need to add @test decorator and name your test function as specified in the notebook
 </p>
@@ -794,9 +795,9 @@ Now you can scrape any page you want, and are familiar with APIs.
 </div>
 
 
-<div id="outline-container-orge032705" class="outline-4">
-<h4 id="orge032705">Assignment 1 15-688 (Optional)</h4>
-<div class="outline-text-4" id="text-orge032705">
+<div id="outline-container-org6fb2e64" class="outline-4">
+<h4 id="org6fb2e64">Assignment 1 15-688 (Optional)</h4>
+<div class="outline-text-4" id="text-org6fb2e64">
 <p>
 The graduate version of this course has it's own <a href="http://www.datasciencecourse.org/assignments/homework-1/">homework</a>, and expects you already have an undergrad where you programmed in some OOP language for a year or so, so is up to you if you want to try the homework. For hw1_xml_parser.ipynb remember the automatons from the DFA lecture, keep one in your head and process the characters sending them to a non accepting loop or to a matching state, being aware of greedy matching vs lazy matching. 
 </p>
@@ -865,9 +866,9 @@ I actually didn't try this one, since I spent longer than I wanted on the XML pa
 </div>
 
 
-<div id="outline-container-org52e525d" class="outline-3">
-<h3 id="org52e525d">Lecture 4 Relational Data</h3>
-<div class="outline-text-3" id="text-org52e525d">
+<div id="outline-container-orgb9222d3" class="outline-3">
+<h3 id="orgb9222d3">Lecture 4 Relational Data</h3>
+<div class="outline-text-3" id="text-orgb9222d3">
 <p>
 Standard dbms crash course, more <a href="https://functionalcs.github.io/web/#org268f85c">here</a> if you're interested in learning some advanced sql like CTEs (common table expressions) where you just declare everything up front 'here's what I want' in a single statement and the dbms optimizes the query for you. Reminder you can load the notes for this lecture in jupyter notebook and test out all the Pandas functions as he introduces them. 
 </p>
@@ -875,26 +876,26 @@ Standard dbms crash course, more <a href="https://functionalcs.github.io/web/#or
 </div>
 
 
-<div id="outline-container-org06c752b" class="outline-3">
-<h3 id="org06c752b">Lecture 5 Visualizations</h3>
-<div class="outline-text-3" id="text-org06c752b">
+<div id="outline-container-org516fc7e" class="outline-3">
+<h3 id="org516fc7e">Lecture 5 Visualizations</h3>
+<div class="outline-text-3" id="text-org516fc7e">
 <p>
 This lecture is about making your own visualizations for data exploration much like how we wrote examples in CS019 in the software workshop to better understand the full domain of the problem. Some good advice in here about how not to visualize, like never using a pie chart. There's no code in this lecture.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org245870b" class="outline-3">
-<h3 id="org245870b">Lecture 6 Linear Algebra</h3>
-<div class="outline-text-3" id="text-org245870b">
+<div id="outline-container-orga1e6206" class="outline-3">
+<h3 id="orga1e6206">Lecture 6 Linear Algebra</h3>
+<div class="outline-text-3" id="text-orga1e6206">
 <p>
 None of this will make sense unless you've done a bit of linear algebra already, so let's get a crash course. 
 </p>
 </div>
 
-<div id="outline-container-orgbd6c803" class="outline-4">
-<h4 id="orgbd6c803">Vector Boot Camp</h4>
-<div class="outline-text-4" id="text-orgbd6c803">
+<div id="outline-container-org19fa528" class="outline-4">
+<h4 id="org19fa528">Vector Boot Camp</h4>
+<div class="outline-text-4" id="text-org19fa528">
 <p>
 This <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/">crash course</a> from Brown University, 3 tutorials on vectors, scalars, dot/cross product and a worksheet of <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/vector-boot-camp-problems.pdf">exercises</a> with <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/vector-boot-camp-solutions.pdf">solutions</a> to practice. 
 </p>
@@ -926,9 +927,9 @@ We can't do the cross product exercises yet since we haven't watched <a href="ht
 </div>
 </div>
 
-<div id="outline-container-orgcf6c3bf" class="outline-4">
-<h4 id="orgcf6c3bf">Linear Algebra Review</h4>
-<div class="outline-text-4" id="text-orgcf6c3bf">
+<div id="outline-container-org2551bf0" class="outline-4">
+<h4 id="org2551bf0">Linear Algebra Review</h4>
+<div class="outline-text-4" id="text-org2551bf0">
 <p>
 The same prof has a linear algebra <a href="https://www.youtube.com/playlist?list=PLC7GP7QTnIJ8w2qcrHK1nIy7mWQnYSOmr">crash course</a> where this material is better explained, with <a href="https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">notes</a>. You won't need all of this playlist for the course. <a href="https://twitter.com/goodfellow_ian/status/969306960263749632?lang=en">Ian Goodfellow</a> (author of Deep Learning) used these notes when he took Andrew Ng's machine learning class at Stanford. Of course linear algebra is a huge subject, with a geometric interpretation, and we'll need to know much more of it which is what the math workshop is for.
 </p>
@@ -954,9 +955,9 @@ Going through this playlist:
 </div>
 </div>
 
-<div id="outline-container-org3582b3b" class="outline-4">
-<h4 id="org3582b3b">15-388 Linear Algebra Lecture 6 (Optimization)</h4>
-<div class="outline-text-4" id="text-org3582b3b">
+<div id="outline-container-org07c5173" class="outline-4">
+<h4 id="org07c5173">15-388 Linear Algebra Lecture 6 (Optimization)</h4>
+<div class="outline-text-4" id="text-org07c5173">
 <p>
 Now we can watch <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81a6c82d-1ef4-4a55-ab21-aacc00f77c5c">this</a> lecture, we have an idea of linear algebra and how multiplication of matrices works enough so that we can program linear algebra using Numpy. 
 </p>
@@ -1018,41 +1019,33 @@ We're just using easy libraries here, none of this we have to manually write so 
 </p>
 </div>
 </div>
+
+<div id="outline-container-orgd93033a" class="outline-4">
+<h4 id="orgd93033a">More Programming w/Linear Algebra</h4>
+<div class="outline-text-4" id="text-orgd93033a">
+<p>
+If you want some more practice programming linear algebra in python try Brown University's <i>Coding the Matrix</i> <a href="http://cs.brown.edu/courses/cs053/current/index.htm">CS053</a> which has open recorded lectures and a pdf on Library Genesis which is mostly complete (missing some figures which will be in the lecture and slides), or you can buy the text for $40. I'll go through these lectures in parallel with 15-388 lectures. If you look at the homework on the class <a href="http://cs.brown.edu/courses/cs053/current/homeworks.htm">page</a> it's primarily from the book and we have access to some <a href="http://grading.codingthematrix.com/edition1/index.html">auto-grading</a>. Labs are from the book, plus there are these <a href="https://foundations-of-applied-mathematics.github.io/">labs</a>. 
+</p>
+
+<p>
+I was going to go through this course here but the more Wildberger Linear Algebra lectures I've done in the math <a href="https://learnaifromscratch.github.io/math.html">workshop</a> the more I've realized this content is all entirely covered there, at an even more advanced level so things like vector calculus on curves, and the AI courses here will give us what we need to know specifically for AI. 
+</p>
+
+<p>
+Later we will do a machine learning course from Cornell and a linear algebra deep learning course from MIT that uses julia/matlab and python, so if you dislike python for whatever reasons you can switch to the more LISPy julia.
+</p>
 </div>
 </div>
+</div>
 
 
-<div id="outline-container-orgf8cb242" class="outline-2">
-<h2 id="orgf8cb242">Coding the Matrix</h2>
-<div class="outline-text-2" id="text-orgf8cb242">
+<div id="outline-container-org482aa6c" class="outline-3">
+<h3 id="org482aa6c">Lecture 7 Graphs</h3>
+<div class="outline-text-3" id="text-org482aa6c">
 <p>
-To practice programming linear algebra let's try Brown University's <i>Coding the Matrix</i> <a href="http://cs.brown.edu/courses/cs053/current/index.htm">CS053</a> which has open recorded lectures and a pdf on Library Genesis which is mostly complete (missing some figures which will be in the lecture and slides), or you can buy the text for $40. I'll go through these lectures in parallel with 15-388 lectures. 
+Missing from the 2019 playlist for some reason, so let's watch the 2017 playlist for <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=362c00ae-e0ef-4719-9b99-a8800148f2f5&amp;query=graph">graphs</a> introduction. TODO
 </p>
-
-<p>
-Starting with <a href="http://cs.brown.edu/courses/cs053/current/lectures.htm">Lecture 1</a> video <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b82b2c07-3009-4208-b6a0-9357cfaca62b">introduction</a>. There are other recorded <a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/">lectures</a>.
-</p>
-<ul class="org-ul">
-<li>At 8:20 the aim of this course is learning k-Means Clustering, PCA, all things that will come up again in other courses.</li>
-<li>If you look at the homework on the class <a href="http://cs.brown.edu/courses/cs053/current/homeworks.htm">page</a> it's primarily from the book and we have access to some <a href="http://grading.codingthematrix.com/edition1/index.html">auto-grading</a>.</li>
-<li>Labs are from the book, plus we'll do these <a href="https://foundations-of-applied-mathematics.github.io/">labs</a>.</li>
-<li>The actual lecture starts at around 34:00, this is review at light speed for us since we've seen most of this already. You can thank Tao.</li>
-<li>Python has a set comprehension (if you're also doing 15-388 in AI workshop, you know about list and dict comprehensions).</li>
-<li>Cardinality and cartesian product we already know, except Tao uses different notation for finite cardinality.
-<ul class="org-ul">
-<li>Reminder that the coordinates of a cartesian plane (x, y) are R x R meaning that tuple can have any value in R cross product with itself, so you couldn't have (-1, "string") since string isn't a cross product of R x R.</li>
-</ul></li>
-<li>At around 54mins we see some new notation denoting all functions from D to F as F^D</li>
-<li>He walks through a proof of composition, injective and surjective functions we've already seen in Tao's book</li>
-</ul>
-
-<p>
-tl;dr We've already done this lecture, it's review with exception to the F^D notation. There's no homework and the reading is the exact same topics as the lecture so we can skip it, noting there is an intro to probability in there we can read next lecturer when it comes up.  
-</p>
-
-<p>
-todo
-</p>
+</div>
 </div>
 </div>
 </div>
