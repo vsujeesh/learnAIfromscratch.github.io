@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-07-25 Sat 11:34 -->
+<!-- 2020-11-09 Mon 11:19 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -230,28 +230,6 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -261,791 +239,73 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgac41f5c">Intro</a></li>
-<li><a href="#orge743edf">Start here</a>
+<li><a href="#org8233e1c">Intro</a>
 <ul>
-<li><a href="#orgec05d06">Material req</a></li>
-<li><a href="#orgedb45c4">Lecture 1 Introduction</a></li>
-<li><a href="#org64518e3">Lecture 2 Data collection and scraping</a>
-<ul>
-<li><a href="#orgc1e5f98">Regex practice</a></li>
+<li><a href="#orgd11a771">Outline</a></li>
+<li><a href="#orgbb01682">Goals</a></li>
 </ul>
 </li>
-<li><a href="#orga4b3f02">Lecture 3 Jupyter notebooks</a></li>
-<li><a href="#orgbbdb2a2">Recitation 1</a></li>
-<li><a href="#org33ed5a3">Finite State Automata</a>
-<ul>
-<li><a href="#org54a60bb">Assignment 1</a></li>
-<li><a href="#org03a8281">Assignment 1 15-688 (Optional)</a></li>
-</ul>
-</li>
-<li><a href="#org988c139">Lecture 4 Relational Data</a></li>
-<li><a href="#org390f000">Lecture 5 Visualizations</a></li>
-<li><a href="#orge766f8b">Lecture 6 Linear Algebra</a>
-<ul>
-<li><a href="#orgc288b32">Vector Boot Camp</a></li>
-<li><a href="#orge1231fc">Linear Algebra Review</a></li>
-<li><a href="#orgf7a64d8">15-388 Linear Algebra Lecture 6 (Optimization)</a></li>
-<li><a href="#org8232eda">More Programming w/Linear Algebra</a></li>
-</ul>
-</li>
-<li><a href="#org6b099c8">Lecture 7 Graphs</a></li>
-</ul>
-</li>
+<li><a href="#org5c6470e">18.089 Review of Mathematics</a></li>
 </ul>
 </div>
 </nav>
-
-<div id="outline-container-orgac41f5c" class="outline-2">
-<h2 id="orgac41f5c">Intro</h2>
-<div class="outline-text-2" id="text-orgac41f5c">
+<div id="outline-container-org8233e1c" class="outline-2">
+<h2 id="org8233e1c">Intro</h2>
+<div class="outline-text-2" id="text-org8233e1c">
 <p>
-This is an (ongoing) workshop, Part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a>. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge743edf" class="outline-2">
-<h2 id="orge743edf">Start here</h2>
-<div class="outline-text-2" id="text-orge743edf">
-<p>
-We start with CMU's 15-388/688 <a href="http://www.datasciencecourse.org/lectures/">Practical Data Science</a> from fall 2019 because it will teach us the 'full stack' so collection, processing, visualizations, building models using machine learning, and how to diagnose problems. When you finish this course you can get paid to do this in industry while we later take more advanced AI courses.
-</p>
-
-<p>
-This course assumes some <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">programming</a> background, but the math is all applied in a blackbox way you'll be able to figure out, and if you know higher order functions map/filter/fold and lists from the software workshop you should be fine for the 15-388 assignments whereas the 15-688 assignments assume an entire undergrad already. .
+This is part II in the <a href="https://learnaifromscratch.github.io">AI Tripos</a> an ongoing workshop to learn machine/deep learning. 
 </p>
 </div>
 
-<div id="outline-container-orgec05d06" class="outline-3">
-<h3 id="orgec05d06">Material req</h3>
-<div class="outline-text-3" id="text-orgec05d06">
+<div id="outline-container-orgd11a771" class="outline-3">
+<h3 id="orgd11a771">Outline</h3>
+<div class="outline-text-3" id="text-orgd11a771">
 <p>
-Like the software workshop if all you have is access to a phone or tablet it's possible to complete this course using Google colab (free) otherwise the course uses Python3 and provides Vagrant files and instructions to set up your own environment. I went with <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>. All the assignments are handed out as jupyter notebooks, you can certainly do them in PyCharm too if you wanted or vim even. The lectures are through <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">panopto</a> and open to the public.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgedb45c4" class="outline-3">
-<h3 id="orgedb45c4">Lecture 1 Introduction</h3>
-<div class="outline-text-3" id="text-orgedb45c4">
-<p>
-We're watching the first <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">lecture</a> named <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dfa649d2-639b-4684-bf4e-aab50178338f">introduction</a>. If you want to download these lectures, right-click, open inspector, click on &lt;head id="HeadNode"&gt; and expand the tree, scroll down to &lt;meta property="og:video" content =" &#x2026;"&gt; and cut and paste the .mp4 address into another browser tab, you can now save the video the locally. There's also <a href="http://www.datasciencecourse.org/notes/intro/">notes</a> for this lecture. 
-</p>
-
-<p>
-This is a great description of statistics, from a book we will be able to complete soon:
-</p>
-
-<blockquote>
-<p>
-Statistics is the branch of mathematical engineering which designs and analyses methods for drawing reliable inferences from imperfect data. The subject of most sciences is some aspect of the world around us, or within us. Psychology studies minds; geology studies the Earth’s composition and form; economics studies production, distribution and exchange; mycology studies mushrooms. Statistics does not study the world, but some of the ways we try to understand the world — some of the intellectual tools of the other sciences. Its utility comes indirectly, through helping those other sciences. This utility is very great, because all the sciences have to deal with imperfect data.
-</p>
-
-<p>
-Data may be imperfect because we can only observe and record a small fraction of what is relevant; or because we can only observe indirect signs of what is truly relevant; or because, no matter  how carefully we try, our data always contain an element of noise. Over the last two centuries, statistics has come to handle all such imperfections by modeling them as random processes, and probability has become so central to statistics that we introduce random events deliberately (as in sample surveys). Statistics, then, uses probability to model inference from data. We try to mathematically understand the properties of different procedures for drawing inferences: Under what conditions are they reliable? What sorts of errors do they make, and how often? What can they tell us when they work? What are signs that something has gone wrong? Like other branches of engineering  statistics aims not just at understanding but also at improvement: we want to analyze data better: more reliably, with fewer and smaller errors, under broader conditions, faster, and with less mental effort.  &#x2013; <i>Advanced Data Analysis From an Elementary Point of View</i> by <a href="http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Cosma Shalizi</a>
-</p>
-</blockquote>
-
-<p>
-All the examples he talks about you can see the slides better in the lecture <a href="http://www.datasciencecourse.org/notes/intro/">notes</a>. The one example about thatched roofs turned out to be a bad indicator as one student mentions. Googling this I discover: "There are many structures in Kenya and Uganda that have thatched roofs, but are not households, such as kitchens and sheds. These buildings were artificially inflating the count of households with thatched roofs, making areas look poorer than they were."
-</p>
-
-<p>
-We don't have the recommended background but you'll see later most of these requirements are given a crash course enough to finish the assignments. The rest of this lecture is just course logistics, the masters version of this course 15-688 has extra homework assignments, which are up to you if you want to try them.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-org64518e3" class="outline-3">
-<h3 id="org64518e3">Lecture 2 Data collection and scraping</h3>
-<div class="outline-text-3" id="text-org64518e3">
-<p>
-Next lecture when he introduces Jupyter notebook, you can export the <a href="http://www.datasciencecourse.org/notes/data_collection/">notes</a> for this lecture as a notebook to experiment around with the regex library, they are fully interactive can run them yourself, change anything to see how corner cases are matched, go through the Python <a href="https://docs.python.org/3.8/tutorial/">tutorial</a> looking up anything you don't understand like what range does or list/dict comprehensions.     
-</p>
-
-<p>
-The regex poll done in class is explained in the notes:
-</p>
-
-<pre class="example">
-r"\w+\s+science" 
-</pre>
-
-<p>
-"These rules can of course be combined with the rules to match potentially very complicated expressions. For instance, if we want to match the text “something science” where something is any alphanumeric character, and there can be any number of spaces of any kind between something and the word “science”, we could use the expression r"\w+\s+science".
-</p>
-</div>
-
-<div id="outline-container-orgc1e5f98" class="outline-4">
-<h4 id="orgc1e5f98">Regex practice</h4>
-<div class="outline-text-4" id="text-orgc1e5f98">
-<p>
-If you want some practice, try <a href="https://regexone.com/lesson/introduction_abcs">this</a>.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orga4b3f02" class="outline-3">
-<h3 id="orga4b3f02">Lecture 3 Jupyter notebooks</h3>
-<div class="outline-text-3" id="text-orga4b3f02">
-<p>
-Watching <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=063d8956-2b99-4b9c-b2f6-aabf01450eb5">lecture 3</a>. 
-</p>
-
-<p>
-<b>Colab</b>
-If you must it's possible to use Google Colab (python v 3.6) online for <a href="https://colab.research.google.com/">free</a> click on File -&gt; New Notebook and enter in a throwaway or regular google account, a new notebook should appear. Free version of Colab, the VM will shut down after some indeterminate amount of time being idle, which you then have to reset with Runtime -&gt; Restart Runtime. You can back up everything to a Google drive account or Github. You can redefine all the heavily used key shortcuts in Colab so if you're stuck with just a tablet, then redefine Shift-Enter (run and move to new cell) and Ctrl-Enter (run cell) to whatever you want. You can enter shell commands with ! so !cd or !ls or !python &#x2013;version to match up to the online python documentation.
-</p>
-
-<p>
-<b>Local environment</b>
-There is a vagrant installation method here (scroll down to <a href="http://www.datasciencecourse.org/assignments/">environment</a>) but it likely won't install anymore and you'll have to manually <a href="https://app.vagrantup.com/ubuntu/boxes/trusty64">change</a> the box in the Vagrantfile to another ubuntu distro. If you're wondering what Vagrant does in this context, it's a pile of scripts to download and configure a virtual environment, starts up virtualbox, you minimize that window and from command line 'vagrant ssh' into the running VM, so you can start jupyter notebook which gives you a localhost IP, and then whatever regular browser you use can go to that address and run the notebook. You can also install all this with your regular OS though a vm is nice to keep environments seperate as we'll installing pip packages for the course. I took his advice in the lecture and installed <a href="https://docs.anaconda.com/anaconda/install/">Anaconda</a>, actually <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>, which has a <a href="https://conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">cheat sheet</a> for it's package manager (Python is so complex now that it needs distros). One reason anaconda exists is because there are countless scientific libraries and that all require a specific environment of python to run so anaconda solves this problem, and in many research labs and bigcorps you need written permission to download and install new software from the various layers of corporate security officers so anaconda full install can give you everything up front. Other solutions exist like NixOS or Guix in order to run multiple different versions of the same software.
-</p>
-
-<p>
-His shill of python growth based on the amount of stackoverflow questions could also mean the documentation is terrible or error messages so cryptic that everybody needs to consult stackoverflow. For our use in this course, which is hacking around with data, scripting it into various datastructures, visualization, and machine learning, Python is the obvious choice because of the libraries available like Facebook's Pytorch. If whatever prototype you come up with needs to be deployed in some other language there is a C++ API for Pytorch.  
-</p>
-
-
-<p>
-I assume you have a notebook open while he's going through the lab. Note the syntax of python is nearly identical to what we've been using in the other workshop (pyret, with is python + racket) except each function needs a return statement.     
+Most of the following has recorded lectures on YouTube or interactive notebooks, and everything can be done in the same language Julia, which is similar in syntax to Pyret from CS019 assuming you took the programming <a href="https://learnaifromscratch.github.io/software.html">workshop</a>. We will also use other material as recitations like the lectures from 15-388 <i>Practical Data Science</i>.
 </p>
 
 <ul class="org-ul">
-<li>Efficiency lists:
+<li>Prereqs:
 <ul class="org-ul">
-<li>Accessing a list element O(1)</li>
-<li>Appending O(1)</li>
-<li>Inserting O(n) due to 'lists' being an array</li>
-<li>If you forgot efficiency from CS019 see <a href="https://www.cs.cmu.edu/~112/notes/notes-efficiency.html">this</a></li>
-<li>There's a somewhat accurate list of python <a href="https://wiki.python.org/moin/TimeComplexity">builtins</a> complexity</li>
+<li>18.089 <a href="https://math.mit.edu/classes/18.089/Summer2009/index.html">Review of Mathematics</a>: a 6 week crash course in calculus and <a href="https://www.youtube.com/channel/UC7gOYDYEgXG1yIH_rc2LgOw/playlists">vector calculus</a> w/intro to linear algebra</li>
+<li>18.S191 <a href="https://computationalthinking.mit.edu/Fall20/">Intro Computational Thinking</a>: taken the same time as calculus, a course on programming simulations and other scientific computing techniques needed for later machine learning algorithms</li>
+</ul></li>
+<li>Learning Theory:
+<ul class="org-ul">
+<li>18.065 <a href="https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/">Matrix Methods</a>: Strang's tools to manipulate matrices, intro to probability and stats and full explanation of how deep learning works</li>
+<li>10-701 <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro Machine Learning</a>: Everything there is to know about current learning methods at the university intro level, and some <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">applied</a> ML, <a href="http://www.stat.cmu.edu/~cshalizi/TALR/">modern regression</a> and <a href="http://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">data analysis</a>. Maybe <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">CS4780</a> instead of 601 as he shows how to write these algorithms.</li>
+<li>A review of <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034">papers</a> from AI researchers comparing their historical ideas to modern AI</li>
+</ul></li>
+<li>Optimization:  
+<ul class="org-ul">
+<li>18.337J <a href="https://mitmath.github.io/18337/">Scientific Machine Learning</a>: Applied performance engineering of ML, how to write parallel GPU code, intro to commonly used high performance matrix algorithms in research labs.</li>
+<li>18.335J <a href="https://github.com/mitmath/18335">Intro to Numerical Methods</a>: Numerical Linear Algebra book w/applied optimizations like cache-oblivious algorithms, more performance engineering</li>
+<li>10-725 <a href="http://www.andrew.cmu.edu/user/yuanzhil/cov2.html">Non-Covex Optimization</a>: to understand optimizing neural networks or <a href="https://www.cs.cornell.edu/courses/cs6787/2020fa/">similar</a> kind of optimization course</li>
 </ul></li>
 </ul>
 
 <p>
-Note he uses a <a href="https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb">magic</a> command for %%timeit. 
-</p>
-
-<ul class="org-ul">
-<li>Efficiency dicts:
-<ul class="org-ul">
-<li>Value lookup O(1)</li>
-<li>Insert O(1)</li>
-<li>Delete O(1)
-<ul class="org-ul">
-<li>Worse time constant than lists</li>
-<li>Use for more complex type than integers</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-Classes, methods and OOP in python are explained <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part1.html">here</a> and <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part2.html">here</a>, more <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part3.html">here</a> and finally using sets and dictionaries in <a href="https://www.cs.cmu.edu/~112/notes/notes-oop-part4.html">classes</a> but we won't be using any kind of complex OOP or engineering software in this course just scripting together libraries.    
+If time permits CMU's course on <a href="http://demo.clab.cs.cmu.edu/NLP/">NLP</a> would be fun to do since it focuses on rapid prototyping and has overlap with all the above courses meaning we don't have to take all of it. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbbdb2a2" class="outline-3">
-<h3 id="orgbbdb2a2">Recitation 1</h3>
-<div class="outline-text-3" id="text-orgbbdb2a2">
+<div id="outline-container-orgbb01682" class="outline-3">
+<h3 id="orgbb01682">Goals</h3>
+<div class="outline-text-3" id="text-orgbb01682">
 <p>
-Let's do the first <a href="http://www.datasciencecourse.org/notes/recitation_1/">recitation</a>. Download the Jupyter <a href="http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz">notebook</a> for this recitation and <a href="https://explainshell.com/explain?cmd=tar++-xvf+recitation_1.tgz">untar</a> it, open the .ipynb file in jupyter notebook and now you can run all the code. 
-</p>
-
-<p>
-If you're using Google Colab, look at <a href="https://colab.research.google.com/notebooks/io.ipynb">this</a> otherwise <a href="https://stackoverflow.com/a/52300696">mount</a> a google drive, save the homework .tar.gz file directly to your google drive, and use something like ZIP extractor to open it there. Other method is open a new notebook in colab and type the following, then File -&gt; Open from drive and load the .ipnyb notbook and run all code blocks Runtime -&gt; Run All
-</p>
-
-<pre class="example">
-!wget http://www.datasciencecourse.org/notes/recitation_1/recitation_1.tar.gz
-!tar -xvf recitation_1.tar.gz
-!cp recitation_1.ipynb '/content/drive/My Drive' 
-
-# note this can all be automated with python (pydrive) or google colab library
-</pre>
-
-<p>
-Run all the cells (Cell -&gt; Run All). Recitation begins with notes about testing, in every homework assignment notebook it comes with a large amount of tests already written for us. The 'from' statement is of course importing a <a href="https://www.cs.cmu.edu/~112/notes/notes-variables-and-functions.html#ModuleFunctions">library</a>. This recitation is self explanatory, notice what 'pprint(dict(response.headers))' did, returned the header in a dictionary with keys. Anytime you want try some examples yourself insert a code cell below what you want to manipulate. 
-</p>
-
-<p>
-They show that Python libraries can create encoding conflicts. Remember code points from cs019, <a href="https://wiki.sei.cmu.edu/confluence/display/c/MSC10-C.+Character+encoding:+UTF8-related+issues">Unicode/UTF-8</a> replaces ASCII, ISO 8859 and other encodings, and supports any written language characters. These encodings are all different ways to interpret raw bytes and represent <a href="https://docs.python.org/3/howto/unicode.html">textual data</a>.
-</p>
-
-<p>
-Regexp they want us to <a href="https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/">read</a> a blog, it can be summarized as: break up your regexp into newlines so it's not a massive oneliner, use comments so you don't forget what you wrote, use a regexp tool like 'regex buddy' that allows you to paste in regexp and figure out what they do should you come across them in code, and use a real parser for parsing. The python <a href="https://docs.python.org/3/howto/regex.html#more-metacharacters">documentation</a> will explain metacharacters like *, ?, + which are repetition operators or ^ $. You can add more examples and run them in this recitation notebook.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org33ed5a3" class="outline-3">
-<h3 id="org33ed5a3">Finite State Automata</h3>
-<div class="outline-text-3" id="text-org33ed5a3">
-<p>
-A diversion into theoretical CS so you can understand regular languages and expressions as a finite automaton then all these Kleene star notations and repetition/assertion operators will make sense. You can understand DFAs even if you haven't taken set theory in the math workshop. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0c960c5-1c95-4664-b36e-21c8f82ebb45">Finite Automata</a> 15-251 Great Theoretical Ideas in CS
-<ul class="org-ul">
-<li>In the beginning the slides are slightly out of order, match with <a href="http://www.cs.cmu.edu/~aada/courses/15251s15/www/slides/lec04.pdf">these</a> slides.</li>
-</ul></li>
-</ul>
-
-<p>
-The accepting state in a regular expression is a matching state. The 5 tuple he describes, is similar to the definition of an algorithm in the first chapter of <i>The Art of Computer Programming vol 1</i> by Knuth. Now you know how to do those exercises should you ever read that book. 
-</p>
-
-<p>
-Around 59:25 we begin regular operations, concatenation (multiplication), union and star.
-</p>
-<ul class="org-ul">
-<li>Example: Concatenation
-<ul class="org-ul">
-<li>\(L_1\) = {00,10}; \(L_2\) = {0,1} then \(L_1 \cdot L_2\) = {000, 001, 100, 101}</li>
-<li>The dot notation is dropped in regex, abc is still multiplication</li>
-</ul></li>
-<li>Example: Star, the concatenation of i copies of L for i &gt; 0
-<ul class="org-ul">
-<li>If L = {0,1} then \(L^{2}\) = {00, 01, 10, 11} (L x L concatenated) and \(L^{*}\) = {none, 0, 00, 0000, 01, 111, 01110 etc}</li>
-<li>Select any finite number of strings from the language and concat them all together (including possibility of no strings selected, as empty concat empty gives empty)</li>
-</ul></li>
-</ul>
-
-<p>
-Their example regular expression of 'x starts and ends with the same char, in the language L of {a,b} then \(L^{*}\) would be {a, b, aa, bb, aaa, bbb, ababa, etc}
-</p>
-
-<p>
-a(a|b)*a | b(a|b)*b | a | b which translates to: a concatenated with any amount of a's or b's, and ends with a, OR b concatenated with any amount of a's or b's, ending with b OR a OR b 
-</p>
-
-<p>
-There is also order precedence: Repetition like ?, star (highest), concat, union (lowest) unless you use parenthesis to denote order. For example ab* is a(b*). 
-</p>
-
-<p>
-Some regex and their corresponding state diagrams:
-</p>
-
-<ul class="org-ul">
-<li>The <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_15.html">automaton</a> for "a?bc" (matches empty string as well)</li>
-<li>Kleene star <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_16.html">matching</a> example and it's corresponding <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_17.html">automaton</a> for [fr]*og
-<ul class="org-ul">
-<li>the DFA explains why [fr]*og matches "og" as well as "frog", * will also match empty, so this regex is any combination of f or r (ffffff, or rr), or nothing, concatenated with og</li>
-</ul></li>
-<li>The regex <a href="https://chortle.ccsu.edu/FiniteAutomata/Section07/sect07_20.html">automaton</a> for "[A-Z]+[aeiou]+[bd]?"
-<ul class="org-ul">
-<li>Two acceptance states, because [bd]? is none or b or d</li>
-</ul></li>
-<li>The <a href="https://chortle.ccsu.edu/FiniteAutomata/Section08/sect08_6.html">automaton</a> for "[abc]+[123]*|[def]*[456]+"</li>
-<li>The <a href="https://chortle.ccsu.edu/FiniteAutomata/Section08/sect08_9.html">automaton</a> for "([A-C][0-3][D-F])+"</li>
-</ul>
-</div>
-
-
-<div id="outline-container-org54a60bb" class="outline-4">
-<h4 id="org54a60bb">Assignment 1</h4>
-<div class="outline-text-4" id="text-org54a60bb">
-<p>
-Walking through the first assignment the the rest won't be as verbose. Let's try <a href="https://www.datasciencecourse.org/assignments/homework-1/">homework 1</a>. Untar it and run 'pip install -r requirements.txt'. Get Started notebook, you fill in rotate list and reverse dict, both of which are easy one liners straight from the previous lectures. Rotate list is return list slice + list slice, reverse dict is return swapped keys for a,b in d.items(). The second task is write some tests, notice this is an oracle, it consumes a function and then tests it. You need to add @test decorator and name your test function as specified in the notebook
-</p>
-
-<pre class="example">
-@test
-def successor(n):
-    return n + 1
-
-def successor_test(successor):
-    test.equal(successor(0), 1)
-    test.equal(successor(1), 2)
-</pre>
-
-<p>
-The next notebook, Scraper, install requirements.txt again with pip. You unfortunately have to create a Yelp account to use the API, and this means relentless spam so use a throwaway email. How I'm doing this assignment is keep open the <a href="https://docs.python.org/3.8/tutorial/">python tutorial</a>, keep open the course notes which have almost all the information you'll need, keep open the library documentation for BeautifulSoup and Requests, and the Yelp API documentation. 
-</p>
-
-<p>
-<b>Jupyter Notebook/IPython issues</b>
-</p>
-
-<ul class="org-ul">
-<li>If you get a persistent @test error 'TypeError: 'dict' object is not callable' or something similar, restart the kernel. You can try %history -g dict to see what command may have corrupted your state but I think I spent an hour trying to figure out this cryptic error only to discover it vanishes upon kernel reset.</li>
-<li>Annoying indentation <a href="https://www2.cs.arizona.edu/people/mccann/errors-python">errors</a>, don't use tab use spaces</li>
-<li>Global variables, a few times I forgot I was actually hacking around with some global reponse variable 'r' I designated to slice apart some nested dictionary/list and test some things, only later to wonder why my tests weren't passing.</li>
-<li>Jupyter config can be done in the browser dom or peristent config in a local .json file</li>
-<li>Reserved keywords, to see what they are:</li>
-</ul>
-
-<details>
-<pre class="example">
-import keyword
-keyword.kwlist
-
-['False',
- 'None',
- 'True',
- 'and',
- 'as',
- 'assert',
- 'async',
- 'await',
- 'break',
- 'class',
- 'continue',
- 'def',
- 'del',
- 'elif',
- 'else',
- 'except',
- 'finally',
- 'for',
- 'from',
- 'global',
- 'if',
- 'import',
- 'in',
- 'is',
- 'lambda',
- 'nonlocal',
- 'not',
- 'or',
- 'pass',
- 'raise',
- 'return',
- 'try',
- 'while',
- 'with',
- 'yield']
-</pre>
-</details>
-
-<p>
-<b>Q0: Basic HTTP Requests</b>
-</p>
-
-<p>
-You may have to change the test to: test.true("This domain is for use in illustrative examples in documents." in text). This is just a requests.get(url), and return the status code, r.text
-</p>
-
-<p>
-<b>Q1: Authenticated HTTP Request with the Yelp API</b>
-</p>
-
-<p>
-We'll need the Yelp API <a href="https://www.yelp.com/developers/documentation/v3/business_search">documentation</a>. A warning about the API, it may block your key for 24 hours if you do too many requests too quickly trying to figure out the assignment, I highly recommend retrieving once and then storing that in some global variable so you can hack around with the response unpacking the content instead of repeated calls. I used .content here instead of text to play around with the binary response in other cells, you would probably want .text
-</p>
-
-<details>
-<pre class="example">
-def yelp_search_test(yelp_search):
-    total, business = yelp_search(read_api_key(), "Pittsburgh")
-    test.true(abs(total - 2600) &lt; 60)
-    expected_keys = ['id', 'name', 'phone', 'review_count']
-    if len(business):
-        test.true(all(k in set(business[0].keys()) for k in expected_keys))
-
-@test
-def yelp_search(api_key, query):
-    """
-    Make an authenticated request to the Yelp API.
-
-    Args:
-        query (string): Search term
-
-    Returns:
-        total (integer): total number of businesses on Yelp corresponding to the query
-        businesses (list): list of dicts representing each business
-    """
-    api = 'https://api.yelp.com/v3/businesses/search'
-    headers = {'Authorization': 'Bearer ' + api_key}
-    params = {'location': query}
-    r = requests.get(api, params=params, headers=headers).content
-    s = json.loads(r)
-    return s['total'], s['businesses']
-</pre>
-</details>
-
-<p>
-<b>Q2: Aquire all of the restaurants in Pittsburgh (on Yelp)</b>
-</p>
-
-<p>
-I cut + paste the yelp search function but added an extra parameter 'offset' and returned only r['businesses']. I also experimented here seeing how many python builtins I could chain together (again using binary r.content, you probably want r.text). This violates DRY principal obviously, if this wasn't an assignment you'd generalize yelp search to take a parameter of how many businesses you want from the API.
-</p>
-
-<details>
-<pre class="example">
-def all_restaurants(api_key, query, offset):
-    """
-    Retrieve ALL the restaurants on Yelp for a given query.
-
-    Args:
-        query (string): Search term
-
-    Returns:
-        results (list): list of dicts representing each business
-    """
-    api = 'https://api.yelp.com/v3/businesses/search'
-    headers = {'Authorization': 'Bearer ' + api_key}
-    params = {'location': query, 'limit': '50', 'offset': offset}
-    r = json.loads(
-        requests.get(api, params=params, headers=headers)
-        .content)   
-    return r["businesses"]
-</pre>
-</details>
-
-<p>
-You could have this inside the all restaurants function or in a seperate cell and keep all restaurants generalized to call for any offset. There's probably a <i>pythonic</i> <a href="https://www.python.org/dev/peps/pep-0008/">recommended</a> way to do this, I'm just haphazardly scripting away on cruise control. You can check your code with pycodestyle &#x2013;show-source file.py (pip install pycodestyle) or use a linter for this in PyCharm and other IDEs. 
-</p>
-
-<details>
-<pre class="example">
-# Yelp API docs: up to 1k results, max 50 returned at once
-# Use offset parameter to get next 50, and so on
-# Use time library so you don't get blocked
-
-# Can also append to a dict w/content[i] for i in range()
-content = []
-for y in range(0, 1000, 50):
-    content += list(all_restaurants(read_api_key(), 'Polish, Hill, Pittsburgh', y))
-    time.sleep(.3)
-
-print(len(content))
-print([x['name'] for x in content])
-</pre>
-</details>
-
-<p>
-<b>Q2.5 Parse the API Responses and Extract the URLs</b>
-</p>
-
-<p>
-Jam the string into a json dict and use another list comprehension
-</p>
-
-<details>
-<pre class="example">
-def parse_api_response_test(parse_api_response):
-    test.equal(parse_api_response(json_src), ['https://www.yelp.com/biz/four-barrel-coffee-san-francisco'])
-
-@test
-def parse_api_response(data):
-    """
-    Parse Yelp API results to extract restaurant URLs.
-    
-    Args:
-        data (string): String of properly formatted JSON.
-
-    Returns:
-        (list): list of URLs as strings from the input JSON.
-    """
-    dict_json = json.loads(data)
-    return [x['url'] for x in dict_json['businesses']]
-</pre>
-</details>
-
-<p>
-<b>Q3: Parse a Yelp restaurant Page</b>
-</p>
-
-<p>
-Yelp has changed their page since this assignment was written, all the information is in a script tag now. There's some assignment tests to return 'page count' (20 per page) not the total count, which is integer division, and you have to cast the ratings to floats. What I did here was first dump the page into beautifulsoup and noticed what I wanted was all in the &lt;script&gt; tags, specifically the third element with that tag. Then I dumped the text into json.loads() and printed the keys to see which one's I could iterate on, and used a list comprehension to return the dict keys and page total as a tuple. 
-</p>
-
-
-<details>
-<pre class="example">
-def parse_page(html):
- """
-   Parse the reviews on a single page of a restaurant.
-    Args:
-       html (string): String of HTML corresponding to a Yelp restaurant
-    Returns:
-       Tuple[List[Dict], int]: a tuple of two elements
-           first element: list of dictionaries corresponding to the extracted review information
-           second element: number of pages total.
-   """
-    soup = BeautifulSoup(html, 'html5lib')
-    json_extract = soup.select("[type='application/ld+json']")[3]
-    json_dict = json.loads(json_extract.text)
-    return [{'author': x['author'],
-            'rating': float(x['reviewRating']['ratingValue']),
-            'date': x['datePublished'],
-            'description': x['description']} 
-           for x in json_dict['review']], json_dict['aggregateRating']['reviewCount']//20
-</pre>
-</details>
-
-<p>
-<b>Q3.5: Extract all the Yelp reviews for a Single Restaurant</b>
-</p>
-
-<p>
-This assignment the yelp url goes up by 20 each time, so after page one you add ?start=20, ?start=40, to offset the reviews. I actually did this assignment incorrectly and instead used the API to get all the reviews, then when rereading figured out I was supposed to crawl each page. Essentially this is the same as other assignments you can either grab the itemprop tags or you can grab the type=application/json in the &lt;script&gt; again, except you will have to use regex to clean up the beginning and end capturing everything after &lt;!&#x2013; and everything before &#x2013;&gt; which is grouping that we did in the lecture. I selected soup.select("[type='application/json']")[2] for every page after the first page, cleaned it w/regex, returned group(1) and loaded this in a json dict which then was trivial to use a comprehension to return all the desired nested values. The first page you extract the page count and then this is your range to loop over. 
-</p>
-
-<p>
-Now you can scrape any page you want, and are familiar with APIs.  
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org03a8281" class="outline-4">
-<h4 id="org03a8281">Assignment 1 15-688 (Optional)</h4>
-<div class="outline-text-4" id="text-org03a8281">
-<p>
-The graduate version of this course has it's own <a href="http://www.datasciencecourse.org/assignments/homework-1/">homework</a>, and expects you already have an undergrad where you programmed in some OOP language for a year or so, so is up to you if you want to try the homework. For hw1_xml_parser.ipynb remember the automatons from the DFA lecture, keep one in your head and process the characters sending them to a non accepting loop or to a matching state, being aware of greedy matching vs lazy matching. 
-</p>
-
-<p>
-<b>Q1: Regular expression for identifying tags</b>
-</p>
-
-<p>
-Answers go in the second code box, above test_snippet="bunch of xml":
-</p>
-
-<pre class="example">
-... other regexs
-comment = re.compile(r'&lt;!--(.[^-]*)')
-xml_prolog = re.compile(r'(xml version.+")')
-html_declaration = re.compile(r'DOCTYPE \w*')
-</pre>
-
-<p>
-For my comment regex, I got [^-] from <a href="https://developers.google.com/edu/python/regular-expressions#greedy-vs.-non-greedy-optional">here</a> "all of these chars except stopping at X" so stop on the - in &#x2013;&gt;. There's probably a hundred different ways to match these strings.
-</p>
-
-<p>
-There is some weird spacing with their tests:
-</p>
-<pre class="example">
-Mine   [('note', 'date="8/31/12"'), ('to', ''), ('from', ''), ('heading', 'type="Reminder"/'), ('body', ''), ('h1', ''), ('p', '')]
-Theirs [('note', ' date="8/31/12"'), ('to', ''), ('from', ''), ('heading', ' type="Reminder"/'), ('body', ''), ('h1', ''), ('p', '')])
-
-date and type='Reminder' have a space for some reason,  only test I failed
-</pre>
-
-<p>
-<b>Q2: XML Parser</b>
-</p>
-
-<p>
-There is actually a paper floating around of somebody who parsed XML with a <a href="https://www2.cs.sfu.ca/~cameron/REX.html">single</a> regex but since XML is not a regular language you would never want to do this and instead use/make a real parser. For this assignment try the following then you'll get what you have to do, you already made tag_open, tag_close, comment etc., in the last assignment. 
-</p>
-
-<ul class="org-ul">
-<li>matchopen = tag_open.search(test_snippet, 117)  #search(text-to-search, position)
-<ul class="org-ul">
-<li>&lt;re.Match object; span=(138, 142), match='&lt;to&gt;'&gt;</li>
-</ul></li>
-<li>matchclosed = tag_close.search(test_snippet, 117)
-<ul class="org-ul">
-<li>&lt;re.Match object; span=(146, 151), match='&lt;/to&gt;'&gt;</li>
-</ul></li>
-</ul>
-
-<p>
-So you follow the algorithm they've described, testing with if-statements for a match, and moving around the matches using the .position methods like match.end() or span. 
-</p>
-
-<p>
-<b>Q3: Searching for tags</b>
-</p>
-
-<p>
-I actually didn't try this one, since I spent longer than I wanted on the XML parser, and we can only do so many assignments on regex parsing hacks. It consumes an XMLNode and then searches for tags so isn't a lot of code to write. I put this in a todo notebook, anytime I run out of time for an assignment the unfinished ones go in there and later I go back and see if I can redo them, or if it's worth the time to redo them.    
+Basically 'ML engineer' meaning be able to understand current papers in AI, turn these paper into an algorithm and optimize for practical use in a business or scientific research lab setting, a high demand skill. Also, having fun building gigantic scifi-tier <a href="https://mitpress.mit.edu/books/software-design-flexibility">systems</a> that can dynamically expand themselves as they learn.  
 </p>
 </div>
 </div>
 </div>
 
-
-<div id="outline-container-org988c139" class="outline-3">
-<h3 id="org988c139">Lecture 4 Relational Data</h3>
-<div class="outline-text-3" id="text-org988c139">
+<div id="outline-container-org5c6470e" class="outline-2">
+<h2 id="org5c6470e">18.089 Review of Mathematics</h2>
+<div class="outline-text-2" id="text-org5c6470e">
 <p>
-Standard dbms crash course, more <a href="https://functionalcs.github.io/web/#org268f85c">here</a> if you're interested in learning some advanced sql like CTEs (common table expressions) where you just declare everything up front 'here's what I want' in a single statement and the dbms optimizes the query for you. Reminder you can load the notes for this lecture in jupyter notebook and test out all the Pandas functions as he introduces them. 
+TODO
 </p>
-</div>
-</div>
-
-
-<div id="outline-container-org390f000" class="outline-3">
-<h3 id="org390f000">Lecture 5 Visualizations</h3>
-<div class="outline-text-3" id="text-org390f000">
-<p>
-This lecture is about making your own visualizations for data exploration much like how we wrote examples in CS019 in the software workshop to better understand the full domain of the problem. Some good advice in here about how not to visualize, like never using a pie chart. There's no code in this lecture.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge766f8b" class="outline-3">
-<h3 id="orge766f8b">Lecture 6 Linear Algebra</h3>
-<div class="outline-text-3" id="text-orge766f8b">
-<p>
-None of this will make sense unless you've done a bit of linear algebra already, so let's get a crash course. 
-</p>
-</div>
-
-<div id="outline-container-orgc288b32" class="outline-4">
-<h4 id="orgc288b32">Vector Boot Camp</h4>
-<div class="outline-text-4" id="text-orgc288b32">
-<p>
-This <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/">crash course</a> from Brown University, 3 tutorials on vectors, scalars, dot/cross product and a worksheet of <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/vector-boot-camp-problems.pdf">exercises</a> with <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/vector-boot-camp-solutions.pdf">solutions</a> to practice. 
-</p>
-
-<p>
-Let's do <a href="https://youtu.be/lTvelzDUamo">part 1</a>:
-</p>
-<ul class="org-ul">
-<li>Some of this we've already seen in the math workshop: adding, subtracting, scalar multiplication</li>
-<li>The rest of this part covers the law of cosines using vectors (assuming you've already watched the <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/">trig</a> bootcamp)</li>
-</ul>
-
-<p>
-Pretty easy, let's see <a href="https://youtu.be/zl-FpvGIJRU">part 2</a>:
-</p>
-<ul class="org-ul">
-<li>If you've also done the software workshop, the dot product is the first assignment</li>
-<li>Dot product properties are at 13:55</li>
-<li>Vector and scalar projection (the rest of the video) is optional, part 3 of the bootcamp also optional</li>
-</ul>
-
-<p>
-The practice <a href="http://www.math.brown.edu/~dkatz/vectorbootcamp/vector-boot-camp-solutions.pdf">solutions</a> the first answer is obviously wrong, that's 4v not 4w. The rest are straight forward if you remember how to multiply <a href="https://www.varsitytutors.com/sat_math-help/how-to-multiply-square-roots">square roots</a>, for example 1(e) is \(\sqrt48\) which simplifies to \(\sqrt 16\) * \(\sqrt 3\) or \(4\sqrt 3\).
-</p>
-
-<p>
-We can't do the cross product exercises yet since we haven't watched <a href="https://youtu.be/yfzxF7-5jUY">part 3</a> which we'll cover eventually in the math workshop. The cross product produces a vector instead of a scalar (dot product) and only works 'nicely' in 3 and 7 dimensional spaces.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge1231fc" class="outline-4">
-<h4 id="orge1231fc">Linear Algebra Review</h4>
-<div class="outline-text-4" id="text-orge1231fc">
-<p>
-The same prof has a linear algebra <a href="https://www.youtube.com/playlist?list=PLC7GP7QTnIJ8w2qcrHK1nIy7mWQnYSOmr">crash course</a> where this material is better explained, with <a href="https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">notes</a>. You won't need all of this playlist for the course. <a href="https://twitter.com/goodfellow_ian/status/969306960263749632?lang=en">Ian Goodfellow</a> (author of Deep Learning) used these notes when he took Andrew Ng's machine learning class at Stanford. Of course linear algebra is a huge subject, with a geometric interpretation, and we'll need to know much more of it which is what the math workshop is for.
-</p>
-
-<p>
-Take the <a href="https://www.cs.cmu.edu/~zkolter/course/15-884/linalg-review.pdf">notes</a> with some pieces of paper and make your own <a href="https://www.statlect.com/matrix-algebra/">examples</a>. You'll see really you just need to know how the dimensions get manipulated, and the formulas for the various products and sums and you're good to go for the purposes of this course. We are interested in programming linear algebra using libraries not doing it by hand, so a high level overview of all the rules and operations are all that's needed. All these operations have a geometric explanation such as <a href="https://youtu.be/uQhTuRlWMxw">inverse matrices</a> but the math workshop will explain this better than even those 3blue1Brown animations since it is geometric focused from the beginning. 
-</p>
-
-<p>
-Going through this playlist:
-</p>
-<ul class="org-ul">
-<li>Introduction: we've seen this already in the math workshop</li>
-<li>Basic Notation: transpose is also described <a href="https://en.wikipedia.org/wiki/Transpose">here</a>. Notation is \(R^{Row \times Column}\)</li>
-<li>Basic Operations 1: There are examples of these operations <a href="https://www.statlect.com/matrix-algebra/matrix-multiplication">here</a> with actual values. The properties that allow multiplication described at 2:30 is all you need to understand the rest of this video. Notice the dimensions follow the rules, where the two inner dimensions must be equal, ie: A \(\in R^{n \times n} \cdot\) B \(\in R^{n \times p}\) the inner n's are equal size so this operation is possible. That's why these various properties like associativity works, since AB have same dimensions, and BC have same dimensions.</li>
-<li>Basic Operations 2: All these operations are equivalent (you'll get the same output). You don't have to memorize this because there are notes to refer to inner and outer vector products.</li>
-<li>Special Matrices: Identity square (n x n) matrix, Zero matrix, all-ones vector, standard basis vector, square symmetric matrices, diagonal matrices (also square n x n) to scale columns and rows depending on how you multiply another matrix with the diagonal, right side scales columns, left scales rows.</li>
-<li>Matrix inverses and solving linear eq: non-singular has an inverse, singular matrix does not. The inverse if you're wondering exists so you can do 'division' with a matrix, since there is no concept of dividing a matrix.</li>
-<li>Matrix functions: all the above operations but now with function notation, the trace, vector norms, determinant.</li>
-<li>Putting equations into matrix form 1, 2, and 3: Various examples on how you can use previous definitions to rewrite equations into a single matrix expression. Refer to the notes, write your own <a href="https://www.statlect.com/matrix-algebra/">examples</a> with tiny matrices.</li>
-<li>(Optional) Advanced topics: Range, Linear Independence, Rank, Orthogonal vectors/matrix, Nullspace, Eigenvalues and Quadratic forms I didn't watch since we won't need them yet.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgf7a64d8" class="outline-4">
-<h4 id="orgf7a64d8">15-388 Linear Algebra Lecture 6 (Optimization)</h4>
-<div class="outline-text-4" id="text-orgf7a64d8">
-<p>
-Now we can watch <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81a6c82d-1ef4-4a55-ab21-aacc00f77c5c">this</a> lecture, we have an idea of linear algebra and how multiplication of matrices works enough so that we can program linear algebra using Numpy. 
-</p>
-
-<p>
-The whole lecture up to 50mins is review of what we just did in his crash course, so you can skip it. At 50:51 he reminds us not to bother writing our own linear algebra code as it won't be optimized like Numpy is. The example he gives with that C matmul function is also explained in the first lecture of this excellent <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-172-performance-engineering-of-software-systems-fall-2018/lecture-videos/lecture-1-intro-and-matrix-multiplication/">course</a> from MIT should you want to learn real optimization. 
-</p>
-
-<p>
-He informs us that various Python distros have various optimized libraries, and Anaconda has a 'fairly well Intel MKL/OpenBLAS optimized version of Numpy' by default where some Python distros have no optimization and tells us how to check this in jupyter notebook:
-</p>
-
-<pre class="example">
-// trying this in google colab
-// guess they don't use Intel
-
-import numpy as np
-print(np.__config__.show())
-
-blas_mkl_info:
-  NOT AVAILABLE
-blis_info:
-  NOT AVAILABLE
-openblas_info:
-    libraries = ['openblas', 'openblas']
-    library_dirs = ['/usr/local/lib']
-    language = c
-    define_macros = [('HAVE_CBLAS', None)]
-blas_opt_info:
-    libraries = ['openblas', 'openblas']
-    library_dirs = ['/usr/local/lib']
-    language = c
-    define_macros = [('HAVE_CBLAS', None)]
-lapack_mkl_info:
-  NOT AVAILABLE
-openblas_lapack_info:
-    libraries = ['openblas', 'openblas']
-    library_dirs = ['/usr/local/lib']
-    language = c
-    define_macros = [('HAVE_CBLAS', None)]
-lapack_opt_info:
-    libraries = ['openblas', 'openblas']
-    library_dirs = ['/usr/local/lib']
-    language = c
-    define_macros = [('HAVE_CBLAS', None)]
-None
-</pre>
-
-<p>
-Here's a random <a href="https://stackoverflow.com/questions/55111554/howto-tune-numpy-dependencies-on-google-colab">question</a> I found of somebody having problems optimizing their ML training process on colab. This is where a few of those MIT <i>Performance Engineering of Software Systems</i> lectures will come in handy understanding how you write code to take advantage of hardware and compiler features that google has enabled or disabled for various architectures like GPUs/TPUs. We should probably do that entire MIT course in this workshop later as it seems critical to future software we will be building. 
-</p>
-
-<p>
-All these Numpy operations he's talking about are detailed in the notes for this lecture too. Never use np.matrix class/methods it's junk.
-</p>
-
-<p>
-We're just using easy libraries here, none of this we have to manually write so np.linalg.solve(). Last comment on complexity makes sense, you get quadratic running time if you multiply ABx as A(Bx), so next step simplifies to A(x) instead of (AB)x, because A*B is n^3 complexity. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8232eda" class="outline-4">
-<h4 id="org8232eda">More Programming w/Linear Algebra</h4>
-<div class="outline-text-4" id="text-org8232eda">
-<p>
-If you want some more practice programming linear algebra in python try Brown University's <i>Coding the Matrix</i> <a href="http://cs.brown.edu/courses/cs053/current/index.htm">CS053</a> which has open recorded lectures and a pdf on Library Genesis which is mostly complete (missing some figures which will be in the lecture and slides), or you can buy the text for $40. If you look at the homework on the class <a href="http://cs.brown.edu/courses/cs053/current/homeworks.htm">page</a> it's primarily from the book and we have access to some <a href="http://grading.codingthematrix.com/edition1/index.html">auto-grading</a>. Labs are from the book, plus there are these <a href="https://foundations-of-applied-mathematics.github.io/">labs</a>. It's a great course, covering things like cache locality, probability distributions, markov chains/stochastic matrix, page rank algorithm and other topics all extremely helpful to learning future AI courses.  
-</p>
-
-<p>
-I was going to go through this course here but the more Wildberger Linear Algebra lectures I've done in the math <a href="https://learnaifromscratch.github.io/math.html">workshop</a> the more I've realized the core content we need is all entirely covered there, at an even more advanced level so things like vector calculus on curves, and the AI courses here will give us what we need to know specifically for AI. 
-</p>
-
-<p>
-Later we will do a machine learning course from Cornell and a linear algebra deep learning course from MIT that uses julia/matlab and python, so if you dislike python for whatever reasons you can switch to the more LISPy julia.
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org6b099c8" class="outline-3">
-<h3 id="org6b099c8">Lecture 7 Graphs</h3>
-<div class="outline-text-3" id="text-org6b099c8">
-<p>
-Missing from the 2019 playlist for some reason, so let's watch the 2017 playlist for <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=362c00ae-e0ef-4719-9b99-a8800148f2f5&amp;query=graph">graphs</a> introduction. TODO
-</p>
-</div>
 </div>
 </div>
 </div>
