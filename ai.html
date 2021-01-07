@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-07 Thu 09:22 -->
+<!-- 2021-01-07 Thu 10:50 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,31 +261,31 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org37042ae">Intro</a>
+<li><a href="#orge1a9008">Intro</a>
 <ul>
-<li><a href="#org6c3054a">Materials</a></li>
+<li><a href="#org2cc1387">Materials</a></li>
 </ul>
 </li>
-<li><a href="#org3ff5ca0">Start here</a>
+<li><a href="#org18d0a34">Start here</a>
 <ul>
-<li><a href="#orge4da901">Probability</a></li>
+<li><a href="#org6a72157">Probability</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org37042ae" class="outline-2">
-<h2 id="org37042ae">Intro</h2>
-<div class="outline-text-2" id="text-org37042ae">
+<div id="outline-container-orge1a9008" class="outline-2">
+<h2 id="orge1a9008">Intro</h2>
+<div class="outline-text-2" id="text-orge1a9008">
 <p>
 This is a self-directed workshop to learn machine learning, neural networks, autonomous agents and whatever else we can find. Like the other two workshops on <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">computer science</a> this is a course built around courses. Self-directed means choose your own curriculum. I'll audit resources and you can decide to take it yourself or not. My interest will be: learning some of the popular current models and methods for learning, how to <a href="https://mitmath.github.io/18337/">optimize</a> these models and deploy them, and <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034#Prospectus">criticism</a> of the current state of AI to see if there's something else we should be trying. This field changes every year as you will see in the first 10-701 lecture, methods that we abandoned have a breakthrough then we go back to them, and methods that dominate today could be replaced tomorrow.     
 </p>
 </div>
 
-<div id="outline-container-org6c3054a" class="outline-3">
-<h3 id="org6c3054a">Materials</h3>
-<div class="outline-text-3" id="text-org6c3054a">
+<div id="outline-container-org2cc1387" class="outline-3">
+<h3 id="org2cc1387">Materials</h3>
+<div class="outline-text-3" id="text-org2cc1387">
 <p>
 As I go I will choose various materials from the following:
 </p>
@@ -307,15 +307,15 @@ Maybe try some AI competitions, like <a href="https://halite.io/">Halite</a>.
 </div>
 </div>
 
-<div id="outline-container-org3ff5ca0" class="outline-2">
-<h2 id="org3ff5ca0">Start here</h2>
-<div class="outline-text-2" id="text-org3ff5ca0">
+<div id="outline-container-org18d0a34" class="outline-2">
+<h2 id="org18d0a34">Start here</h2>
+<div class="outline-text-2" id="text-org18d0a34">
 <p>
 Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. We are told there are sets T, P and E where T is the set of tasks, P is the set of performance measures that improves with experiences in set E. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics. 10-701 talks about how ML methods change often, there was a breakthrough in neural networks recently so now it's all about neural networks, we used to heavily use kernel methods and now not as much. We could use convex optimization back then and now things are much more non-convex.  
 </p>
 
 <p>
-Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Watch this first to see what we need to know then we will pick up all the probability and linear algebra after. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,0). So using his patient data vector example, Y would be binary 0,1 or -1/1 to represent yes or no. X is all the 'feature set' of a patient and D is the total training data set of all possible combinations of 'feature set' with yes and no. In the notes this notation is \(R^d \cdot C\) and we can think of this notation as the scope of the elements inside D, everything we insert into D is a tuple of (features,labels).
+Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Watch this first to see what we need to know then we will pick up all the probability and linear algebra after. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,-1). So using his patient data vector example, Y would be binary 0 or 1 to represent yes or no. X is all the feature set of a patient and D is the total training data set of all possible combinations of feature set with yes and no. In the notes this notation is \(R^d \cdot C\) and we can think of this notation as the scope of the elements inside D, everything we insert into D is a tuple of (features,labels).
 </p>
 
 <p>
@@ -323,11 +323,15 @@ You can learn basic set theory by typing it into <a href="https://www.youtube.co
 </p>
 </div>
 
-<div id="outline-container-orge4da901" class="outline-3">
-<h3 id="orge4da901">Probability</h3>
-<div class="outline-text-3" id="text-orge4da901">
+<div id="outline-container-org6a72157" class="outline-3">
+<h3 id="org6a72157">Probability</h3>
+<div class="outline-text-3" id="text-org6a72157">
 <p>
 My skills in probability are weak so I'm going to research around to find some material on it. A good starting point is 15-251 CMU's undergrad class on theoretical cs topics. Let's watch <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures. I'm also going through his <a href="https://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> on probability because they're pretty good at explaining this from a computer science viewpoint "probability theory = analyzing randomized code". By this I mean I watched both lectures, then will go through these notes as I do machine learning not completely master the entire set of 252 pages of notes and then resume, you can do both at the same time. 
+</p>
+
+<p>
+I'm watching the 2013 YouTube lecture but if you want the 2015 Panopto version it is <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a>. In the YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The input to these algorithms he uses to set up the theory are 1/m with m being the total amount of possible outcomes. A coin flip has two outcomes: it's probability of heads or tails is 1 over 2 possible outcomes or 1/2. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RanInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. TODO
 </p>
 </div>
 </div>
