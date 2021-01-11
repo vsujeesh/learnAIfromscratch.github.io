@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 01:01 -->
+<!-- 2021-01-11 Mon 01:24 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -938,7 +938,7 @@ Proposition 2.2.4 (Addition is commutative) the base case is straight forward. W
 Remember a proof at our early level is just a convicing argument to yourself. To check that it is correct, all the forms have to already have been introduced in the text, for example say Tao has only defined 0 + b = 0 but not b + 0 = 0 + b. We can't assume b + 0 = 0 + b unless it has already been proved (or you write your own lemma for it) so if Tao has only shown 0 + b = 0, you can still do a dance where you claim b = 0 and then by substitution in the appendix claim it's also 0 = b but you're not supposed to directly assume anything.
 </p>
 
-<details id="org7fb8ab6">
+<details id="org21ff8f1">
 <p>
 
 </p>
@@ -1041,7 +1041,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try these yourself, doesn't matter if they are right or wrong we don't have enough practice with mathematical logic yet so consider this to be practice. 
 </p>
 
-<details id="org22d8763">
+<details id="org8f0c12e">
 <p>
 
 </p>
@@ -1224,7 +1224,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orgf500beb">
+<details id="org68273e2">
 <p>
 
 </p>
@@ -1398,7 +1398,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 Proof scratchwork, these exercises are all similar to the Wildberger proof he gave in the lecture and Tao's example proofs.
 </p>
 
-<details id="org5e43329">
+<details id="org10ce3cf">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1504,7 +1504,7 @@ To recap we defined the natural numbers, embedded them in the integers (a - b) t
 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orgfb87ad8">
+<details id="org08db328">
 <p>
 
 </p>
@@ -2080,7 +2080,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 <div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises" class="outline-4">
 <h4 id="3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">
-<details id="orgc7f658e">
+<details id="org22d7b99">
 <p>
 
 </p>
@@ -2196,7 +2196,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 <div id="outline-container-3.3%20Functions--Exercises" class="outline-4">
 <h4 id="3.3%20Functions--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-3.3%20Functions--Exercises">
-<details id="org9841bfc">
+<details id="org7795bd3">
 <p>
 A all of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2586,7 +2586,7 @@ Prop 6.1.7 notice he has assigned epsilon to the value |L-L'|/3 which is why d(L
 In Remark 6.1.9 we throw out the starting index, I also noticed he changed the index type from naturals to integers in these definitions. Try some exercises:
 </p>
 
-<details id="orgb1d9264">
+<details id="orgec7a6e6">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>

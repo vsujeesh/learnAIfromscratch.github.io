@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 00:59 -->
+<!-- 2021-01-11 Mon 01:25 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Computer Science from scratch</title>
+<title>Accelerated Introduction to Computer Science</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -196,7 +196,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<style> body {background-color: #fafad2} </style>
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -245,7 +244,7 @@
 <body>
 <div id="content">
 <header>
-<h1 class="title">Computer Science from scratch</h1>
+<h1 class="title">Accelerated Introduction to Computer Science</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -265,9 +264,13 @@
 </li>
 <li><a href="#Lecture%202%20CS019%20Rainfall%20Problem">Lecture 2 CS019 Rainfall Problem</a>
 <ul>
-<li><a href="#Reading%20chapter%206">Reading chapter 6</a></li>
-<li><a href="#Recitation%3A%20creating%20examples">Recitation: creating examples</a></li>
-<li><a href="#Reading%20chapter%207%20%26%208">Reading chapter 7 &amp; 8</a></li>
+<li><a href="#How%20to%20write%20examples">How to write examples</a></li>
+</ul>
+</li>
+<li><a href="#Optional%20reading%20PAPL">Optional reading PAPL</a>
+<ul>
+<li><a href="#Chapter%206">Chapter 6</a></li>
+<li><a href="#Chapter%207%20%26%208">Chapter 7 &amp; 8</a></li>
 <li><a href="#Recitation%3A%20lambdas">Recitation: lambdas</a></li>
 <li><a href="#Recitation%3A%20lists%20and%20recursion">Recitation: lists and recursion</a></li>
 <li><a href="#Reading%20chapter%209%20%26%2010">Reading chapter 9 &amp; 10</a></li>
@@ -279,7 +282,12 @@
 </ul>
 </li>
 <li><a href="#Requirements%20Analysis">Requirements Analysis</a></li>
-<li><a href="#Assignment%201%3A%20DocDiff">Assignment 1: DocDiff</a></li>
+<li><a href="#Assignment%201%3A%20DocDiff">Assignment 1: DocDiff</a>
+<ul>
+<li><a href="#A%20study%20about%20us%2C%20beginner%20students">A study about us, beginner students</a></li>
+<li><a href="#DocDiff">DocDiff</a></li>
+</ul>
+</li>
 <li><a href="#Lecture%204%20CS019%20Big-O">Lecture 4 CS019 Big-O</a>
 <ul>
 <li><a href="#Reading%20Chapter%2017">Reading Chapter 17</a></li>
@@ -292,28 +300,12 @@
 <li><a href="#Lab%3A%20Big-O%201">Lab: Big-O 1</a></li>
 </ul>
 </li>
-<li><a href="#15-122%20-%20Imperative%20Programming">15-122 - Imperative Programming</a>
-<ul>
-<li><a href="#Correct%20Code">Correct Code</a></li>
-<li><a href="#Loops">Loops</a></li>
-<li><a href="#Testing">Testing</a></li>
-<li><a href="#Proving%20Correctness">Proving Correctness</a></li>
-<li><a href="#Arrays">Arrays</a></li>
-<li><a href="#Aliasing">Aliasing</a></li>
-<li><a href="#Searching%20and%20Sorting">Searching and Sorting</a></li>
-<li><a href="#Complexity">Complexity</a></li>
-<li><a href="#Determining%20complexity%20of%20code">Determining complexity of code</a></li>
-</ul>
-</li>
-<li><a href="#Lecture%206%20CS019%20Quicksort">Lecture 6 CS019 Quicksort</a>
-<ul>
-<li><a href="#Lab%3A%20Big-O%202">Lab: Big-O 2</a></li>
-</ul>
-</li>
+<li><a href="#Lecture%206%20CS019%20Quicksort">Lecture 6 CS019 Quicksort</a></li>
 <li><a href="#Assignment%202%3A%20Nile">Assignment 2: Nile</a></li>
 <li><a href="#Assignment%203%3A%20Sortacle">Assignment 3: Sortacle</a>
 <ul>
-<li><a href="#More%20testing">More testing</a></li>
+<li><a href="#Check%20your%20work%20against%20the%20official%20solution">Check your work against the official solution</a></li>
+<li><a href="#Logic%20for%20Systems">Logic for Systems</a></li>
 </ul>
 </li>
 <li><a href="#Assignment%204%3A%20Data%20Scripting">Assignment 4: Data Scripting</a></li>
@@ -330,7 +322,12 @@
 <li><a href="#Reading%20Chapter%2015">Reading Chapter 15</a></li>
 </ul>
 </li>
-<li><a href="#Assignment%205%3A%20Oracle">Assignment 5: Oracle</a></li>
+<li><a href="#Assignment%205%3A%20Oracle">Assignment 5: Oracle</a>
+<ul>
+<li><a href="#Check%20your%20solution">Check your solution</a></li>
+<li><a href="#Future%20assignments%20auditing">Future assignments auditing</a></li>
+</ul>
+</li>
 <li><a href="#Lecture%209%20CS019%20Logarithmic%20Growth">Lecture 9 CS019 Logarithmic Growth</a></li>
 <li><a href="#Lecture%2010%20CS019%20Balanced%20Binary%20Search%20Trees">Lecture 10 CS019 Balanced Binary Search Trees</a>
 <ul>
@@ -347,32 +344,17 @@
 </li>
 <li><a href="#Lecture%2012%20CS019%20Model%20View%20Controllers">Lecture 12 CS019 Model View Controllers</a></li>
 <li><a href="#Lecture%2013%20CS019%20Differential%20Systems">Lecture 13 CS019 Differential Systems</a></li>
-<li><a href="#Assignment%207%3A%20Updater">Assignment 7: Updater</a></li>
-<li><a href="#Lecture%2014%20CS019%20Aliasing">Lecture 14 CS019 Aliasing</a>
-<ul>
-<li><a href="#Reading%20Chapter%2020">Reading Chapter 20</a></li>
-</ul>
-</li>
+<li><a href="#Lecture%2014%20CS019%20Aliasing">Lecture 14 CS019 Aliasing</a></li>
 <li><a href="#Lecture%2015%20CS019%20Monads%2C%20Sequential%20Computation">Lecture 15 CS019 Monads, Sequential Computation</a></li>
-<li><a href="#Assignment%208%3A%20Continued%20Fractions">Assignment 8: Continued Fractions</a>
+<li><a href="#Lectures%20Memory%20mutation">Lectures Memory mutation</a>
 <ul>
-<li><a href="#Streams%20in%20Python">Streams in Python</a></li>
+<li><a href="#Lecture%2024%20Memory%20refs">Lecture 24 Memory refs</a></li>
+<li><a href="#Lecture%2025%20Closures">Lecture 25 Closures</a></li>
+<li><a href="#Reading%20Chapter%2022">Reading Chapter 22</a></li>
+<li><a href="#Lecture%2026%20The%20Halting%20problem"><span class="todo TODO">TODO</span> Lecture 26 The Halting problem</a></li>
 </ul>
 </li>
-<li><a href="#Assignment%209%3A%20JoinLists">Assignment 9: JoinLists</a></li>
-<li><a href="#Graphs">Graphs</a></li>
-<li><a href="#Lecture%2022%20CS019%20Choose%20your%20own%20curriculum">Lecture 22 CS019 Choose your own curriculum</a></li>
-<li><a href="#Lecture%2023%20Min%20Spanning%20Trees%20%26%20Mutation">Lecture 23 Min Spanning Trees &amp; Mutation</a></li>
-<li><a href="#Lecture%2024%20%26%2025%20Programming%20w%2FState">Lecture 24 &amp; 25 Programming w/State</a></li>
-<li><a href="#Lecture%2026%20The%20Halting%20Problem">Lecture 26 The Halting Problem</a></li>
-<li><a href="#Lecture%2027%20%26%2028%20Memoization">Lecture 27 &amp; 28 Memoization</a></li>
-<li><a href="#Lecture%2029%20Dynamic%20Programming">Lecture 29 Dynamic Programming</a></li>
-<li><a href="#Lecture%2030%20Levenshtein%20Distance">Lecture 30 Levenshtein Distance</a></li>
-<li><a href="#Lecture%2031%20P%20%3D%20NP">Lecture 31 P = NP</a></li>
-<li><a href="#Lecture%2032%20-%2034%20Programming%20languages">Lecture 32 - 34 Programming languages</a></li>
-<li><a href="#Lecture%2035%20Computer%20Networks">Lecture 35 Computer Networks</a></li>
-<li><a href="#Lecture%2036%20Security">Lecture 36 Security</a></li>
-<li><a href="#You%27re%20Done">You're Done</a></li>
+<li><a href="#The%20rest%20of%20the%20cs19%20lectures">The rest of the cs19 lectures</a></li>
 </ul>
 </div>
 </nav>
@@ -381,7 +363,7 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-This is part IA of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> and is an accelerated introduction. The way these notes work is I do this material with you, and point out anything that may trip up a beginner. The further we go on, the more terse the notes will get because I can then assume a background. This is a draft that changes over time to be more efficient.  
+This is part IA of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> to learn <a href="http://bactra.org/reviews/nature-of-computation.html">computation</a> from scratch. If you only have a phone you can complete this. 
 </p>
 </div>
 </div>
@@ -390,15 +372,7 @@ This is part IA of the <a href="https://learnaifromscratch.github.io">AI Tripos<
 <h2 id="Start%20here">Start here</h2>
 <div class="outline-text-2" id="text-Start%20here">
 <p>
-We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i>. This is not a usual compsci class, things like log n complexity structures to hold data, infinite streams, graphs and testing are explained completely in the lectures and book. You won't be expected to understand everything the first time around, the further you get in the course the more you will understand earlier material. 
-</p>
-
-<p>
-Look around the various course <a href="https://cs.brown.edu/courses/cs019/">pages</a>, like the <a href="http://cs.brown.edu/courses/csci0190/2019/README.html">readme</a>, and the notes about the <a href="http://cs.brown.edu/courses/csci0190/2019/policy.html#%28part._.Unusual_.Assignments%29">unusual assignments</a> which respects the intelligence of the student. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education, and scroll through his <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/">papers</a>. Skim through the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/paper.pdf">paper</a> on 'What Help Do Students Seek in TA Hours?' because it's from the exact course we are about to take. 'TA' is a teaching assistant, usually a student who did well in the course before. 
-</p>
-
-<p>
-There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">placement</a> for the course but CS019 assumes no background and we have the luxury of time to fill in any blanks as we go.    
+We begin with Brown University's CS019 <i>Accelerated Introduction to Computer Science</i>. You don't have to do it all linearly we can take it up to a certain point then use the rest of the course as our research material for doing competitive programming problem sets. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education.  
 </p>
 </div>
 
@@ -406,7 +380,7 @@ There is a <a href="http://cs.brown.edu/courses/csci0190/2019/placement.html">pl
 <h3 id="Materials%20needed%20to%20complete%20this">Materials needed to complete this</h3>
 <div class="outline-text-3" id="text-Materials%20needed%20to%20complete%20this">
 <p>
-It's possible to complete this course with just a phone or a tablet, the interpreter you use is online and even has a static type checker
+As stated in the intro it's possible to complete this course with just a phone or a tablet, the interpreter you use is online and even has a static type checker
 </p>
 <ul class="org-ul">
 <li>the <a href="https://papl.cs.brown.edu/2020/">book</a> <i>Programming and Programming Languages</i> (use the most latest version, which is 2020)</li>
@@ -426,7 +400,7 @@ It's possible to complete this course with just a phone or a tablet, the interpr
 <p>
 I made a torrent w/the lectures and labs:
 </p>
-<pre class="example" id="orgb6c8258">
+<pre class="example" id="orgdb290a8">
 CS019 2018 Lectures, labs
 magnet:?xt=urn:btih:5db2ed40c8952ea69a06c4ab940d168bc2798a49&amp;dn=cs019
 </pre>
@@ -444,11 +418,7 @@ We're starting with the lecture titled <a href="https://www.youtube.com/playlist
 </p>
 
 <p>
-Notice he shuts down a lot of out of scope questions to not derail the lecture.  
-</p>
-
-<p>
-@34:20 is the private app Exemplar which we don't have access to, and is usually an extra assignment on homework. The idea is that the students are given a task 'write a program that calculates the <a href="https://en.wikipedia.org/wiki/Median">median</a> of data in a list'. They start by writing the tests first before implementing the program, to get you to think about the problem. The exemplar app already has a working (and purposely buggy) implementation of the assignment that they can't see the source code for which is where the 'chaffs' are found (potential bugs caught). We will have to write a lot of tests ourselves, covering enough cases until we've fleshed out the problem enough that we can go about implementing it. The professor's university page has a paper on Exemplar detailing how many tests the students typically write which is 30+. 
+Notice he shuts down a lot of out of scope questions to not derail the lecture. @34:20 is the private app Exemplar which we don't have access to. The professor's university page has a paper on Exemplar detailing how many tests the students typically write which is 30+. 
 </p>
 
 <p>
@@ -456,11 +426,7 @@ So how can we figure out the student given test cases for the median program? By
 </p>
 
 <p>
-At the end he mentions the design recipe, as a way to save TAs time, explaining if you show up to office hours for help they will go about writing a template with the student, going through all the various stages and not just giving them an answer. He notes it is totally optional to use the design recipe, but it will help you with the hard assignments and if you're going to office hours with a lot of questions clearly your methods aren't working so why not try their method. If you read that <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/">paper</a> <i>What Help Do Students Seek in TA Office Hours</i> in the beginning of this workshop you'll see statistical results of the outcomes of students who used the design recipe vs those that didn't and their final grades. 
-</p>
-
-<p>
-Templates are covered in the third lecture, it's a tool to extract 'code for free' from your data and will be useful for some of the assignments. 
+At the end he mentions the design recipe, as a way to save TAs time, explaining if you show up to office hours for help they will go about writing a template with the student, going through all the various stages and not just giving them an answer. He notes it is totally optional to use the design recipe, but it will help you with the hard assignments and if you're going to office hours with a lot of questions clearly your methods aren't working so why not try their method. If you read the <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/rkf-student-ta-hours/">paper</a> <i>What Help Do Students Seek in TA Office Hours</i> the design recipe is talked about, templates are covered in the third lecture as a tool to extract 'code for free' from your data.  
 </p>
 </div>
 
@@ -469,21 +435,12 @@ Templates are covered in the third lecture, it's a tool to extract 'code for fre
 <h3 id="Reading%20PAPL">Reading PAPL</h3>
 <div class="outline-text-3" id="text-Reading%20PAPL">
 <p>
-Let's work through the <a href="https://papl.cs.brown.edu/2020/">book</a> <i>Programming and Programming Languages</i>, I'm using whatever the latest version is (as of this writing, 2020). This book is a work in progress so you'll see some minor errors like "REF" which is supposed to later be a link to whatever reference in the text that's not finished yet. The lectures we do will fill in these blanks.
+Let's work through the <a href="https://papl.cs.brown.edu/2020/">book</a> <i>Programming and Programming Languages</i>, I'm using whatever the latest version is (as of this writing, 2020). 
 </p>
 
 <p>
-Chapter 3 <i>Getting Started</i> read while you have CPO open (<a href="https://code.pyret.org">https://code.pyret.org</a>). The examples with many "&gt;" in front of them indicates enter this into the <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>, on the right hand side of the pyret code editor like he did in the lecture pressing enter to eval. It's running a read-eval-print-loop (repl) which means exactly what you think it means. It reads input, evaluates it, prints it to the console and then loops back to waiting to read input again. You can increase the font size if you click the lambda skull logo on the top left side.
+Chapter 3 <i>Getting Started</i> read while you have CPO open (<a href="https://code.pyret.org">https://code.pyret.org</a>). The examples with many "&gt;" in front of them indicates enter this into the <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>, on the right hand side of the pyret code editor like he did in the lecture pressing enter to eval. It's running a read-eval-print-loop (repl) which means exactly what you think it means. It reads input, evaluates it, prints it to the console and then loops back waiting to read input again. You can increase the font size if you click the lambda skull logo on the top left side.
 </p>
-</div>
-
-<div id="outline-container-Methods" class="outline-4">
-<h4 id="Methods">Methods</h4>
-<div class="outline-text-4" id="text-Methods">
-<p>
-In the documentation for <a href="https://www.pyret.org/docs/latest/lists.html">lists,</a> you will see built-in functions called methods. These have a dot notation such as .length() or .map(). What this means is the object itself, a list object, has features you can access directly. If your list is named my-list then you can access these by my-list.length() or by chaining them together, such as my-list.sort().length() to both sort and return the length of a list. Try this yourself in the REPL.
-</p>
-</div>
 </div>
 </div>
 
@@ -492,102 +449,70 @@ In the documentation for <a href="https://www.pyret.org/docs/latest/lists.html">
 <h3 id="Reading%20chapter%204">Reading chapter 4</h3>
 <div class="outline-text-3" id="text-Reading%20chapter%204">
 <p>
-You spent all of the last chapter entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. If you make a mistake like accidentally deleting all your code Ctrl-z will undo. This is a good chapter telling you exactly what is evaluated and how when you click <i>run</i>. 
-</p>
-
-<p>
-4.3 seems to be an error, width = 30 should create a new directory entry for width and associate it with value 30 (not value 'size'). 
-</p>
-
-<p>
-4.3.1 it's worth noting when you have an include statement all the definitions in that library are added to the directory, meaning you have a very large namespace now including all of these <a href="https://www.pyret.org/docs/latest/image.html">definitions</a>. Many programs you'll see in the wild try to contain this namespace by only importing select functions from libraries, or in functional languages they will import libraries only within a function body so that namespace does not exist outside of that function instead of filling the top of the program with include statements that open up an enormous globally accessed namespace.   
+You spent all of the last chapter entering commands into the REPL on the right hand side of the pyret online editor, now you'll use the left hand side to write functions and run them by either pressing Ctrl-Enter or the <i>Run</i> button. If you make a mistake like accidentally deleting all your code Ctrl-z will undo on most browsers I tested it on. This is a good chapter telling you exactly what is evaluated and how when you click <i>run</i>. Note 4.3 in the 2020 papl version seems to be an error, width = 30 should create a new directory entry for width and associate it with value 30 (not 'size'). 
 </p>
 </div>
 </div>
-
 
 <div id="outline-container-Reading%20chapter%205" class="outline-3">
 <h3 id="Reading%20chapter%205">Reading chapter 5</h3>
 <div class="outline-text-3" id="text-Reading%20chapter%205">
 <ul class="org-ul">
-<li>There is a recorded recitation for this chapter <a href="https://youtu.be/kR1DvZ17mkc">here</a></li>
+<li>There is an optional recorded recitation for this chapter <a href="https://youtu.be/kR1DvZ17mkc">here</a></li>
 </ul>
 
 <p>
-This chapter tells you exactly how functions are defined and run by Pyret. Note that he writes the examples like how the code in the body of the function would look like, such as "is 5 * 0.25" this is to help you write the function itself by first working through the examples.  
-</p>
-
-<p>
-You can define a function within a function, to access the namespace/scope of the parent function:
-</p>
-
-<pre class="example" id="orgaad9301">
-fun moon-weight(earth-weight :: Number) -&gt; Number:
-  doc: "A toy example of scope" 
-
-  fun helper():
-    earth-weight * 1/6
-  end
-
-  helper()
-where:
-  moon-weight(1) is 1/6
-  moon-weight(2) is 1/3
-  moon-weight(0) is 0
-end
-</pre>
-
-<p>
-Here the inside helper() function can access the earth-weight value because it's within scope. This is sometimes referred to as a trampoline, upon evaluation of moon-weight() you bounce back into the function body to run some helper function. It will be helpful to know this when we do some of the cs019 assignments and you need to have multiple helper functions inside another function. 
-</p>
-
-<p>
-Now that you've read this chapter, read chapter 4.4 <i>Functions as Templates</i> from this <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">pdf</a>. He describes functions as containing 'holes that fit a pattern' you may find illuminating and parameters as placeholders. Functions are values, and the variable you declare them by such as in 4.3 'moon-weight()' are bound to that value. The math example at the end may not make sense yet but he's trying to show that a function is a value, and using the Pyret example in 5.3 for moon weight, try in the REPL moon-weight(moon-weight(10)) to see how a function evaluates to a value to be used by another function.
+This chapter tells you exactly how functions are defined and run by Pyret. He writes the examples like how the code in the body of the function would look like, such as "is 5 * 0.25" this is to help you write the function itself by first working through the examples. Now that you've worked through this chapter, read some of 4.1 <i>Functions as Templates</i> from this <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf">pdf</a>. He describes functions as containing 'holes that fit a pattern' you may find illuminating and parameters as placeholders. The math example at the end he's trying to show the concept of a variable is similar to substitution in highschool math, but different from the idea of an 'assignable' which is mutated memory we will learn later. 
 </p>
 </div>
 </div>
 </div>
+
 
 <div id="outline-container-Lecture%202%20CS019%20Rainfall%20Problem" class="outline-2">
 <h2 id="Lecture%202%20CS019%20Rainfall%20Problem">Lecture 2 CS019 Rainfall Problem</h2>
 <div class="outline-text-2" id="text-Lecture%202%20CS019%20Rainfall%20Problem">
 <p>
-Watch the Mon9/10/18 second lecture. Interesting lecture about the rainfall problem and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. Higher-order functions are talked about, like filter and map which are in the pyret documentation. We're going to write our own versions of map, filter and fold after we cover chapter 10 <i>Processing Lists</i>.
+Watch the Mon9/10/18 second lecture. Interesting lecture about the rainfall problem and the benefits of writing a lot of examples in order to understand badly defined problems. Data science/machine learning is brought up, as examples of dirty data. Higher-order functions are talked about, like filter and map which are in the pyret documentation. 
 </p>
 </div>
 
-<div id="outline-container-Reading%20chapter%206" class="outline-3">
-<h3 id="Reading%20chapter%206">Reading chapter 6</h3>
-<div class="outline-text-3" id="text-Reading%20chapter%206">
+<div id="outline-container-How%20to%20write%20examples" class="outline-3">
+<h3 id="How%20to%20write%20examples">How to write examples</h3>
+<div class="outline-text-3" id="text-How%20to%20write%20examples">
+<p>
+This <a href="https://youtu.be/cTQI4iN1VDg">recitation video</a> goes through some drill questions from CS0111 and talks about creating good examples.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Optional%20reading%20PAPL" class="outline-2">
+<h2 id="Optional%20reading%20PAPL">Optional reading PAPL</h2>
+<div class="outline-text-2" id="text-Optional%20reading%20PAPL">
+<p>
+Everything here is optional, you can do it was you go through the lectures and come across things you don't understand.
+</p>
+</div>
+
+<div id="outline-container-Chapter%206" class="outline-3">
+<h3 id="Chapter%206">Chapter 6</h3>
+<div class="outline-text-3" id="text-Chapter%206">
 <p>
 Conditional expressions and exactly how Pyret evaluates if-branches is defined here.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Recitation%3A%20creating%20examples" class="outline-3">
-<h3 id="Recitation%3A%20creating%20examples">Recitation: creating examples</h3>
-<div class="outline-text-3" id="text-Recitation%3A%20creating%20examples">
-<p>
-This <a href="https://youtu.be/cTQI4iN1VDg">video</a> goes through some drill questions from CS0111 and talks about creating good examples.
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Reading%20chapter%207%20%26%208" class="outline-3">
-<h3 id="Reading%20chapter%207%20%26%208">Reading chapter 7 &amp; 8</h3>
-<div class="outline-text-3" id="text-Reading%20chapter%207%20%26%208">
+<div id="outline-container-Chapter%207%20%26%208" class="outline-3">
+<h3 id="Chapter%207%20%26%208">Chapter 7 &amp; 8</h3>
+<div class="outline-text-3" id="text-Chapter%207%20%26%208">
 <ul class="org-ul">
 <li>There is a recorded recitation for these chapters <a href="https://youtu.be/3my9aovhOO8">here</a></li>
 </ul>
 
 <p>
-Tabular data, and what normalizing data means. Remember the rainfall lecture. You don't have to do this chapter but it will help to know about tabular data like the user interface in gmail. 
-</p>
-
-<p>
-In the previous versions of PAPL, he noted why they composed these table row operations to be independent of each other so combining them in complex expressions is possible just like <a href="https://youtu.be/6VCHuLqfmV8">SQL</a>. Where does tabular data often appear? Excel spreadsheets that every trader <a href="https://news.ycombinator.com/item?id=15819016">still uses</a>.  
+Tabular data, and what normalizing data means. Remember the rainfall lecture. In the previous versions of PAPL, he noted why they composed these table row operations to be independent of each other so combining them in complex expressions is possible just like <a href="https://youtu.be/6VCHuLqfmV8">SQL</a> or Excel spreadsheets that every trader <a href="https://news.ycombinator.com/item?id=15819016">still uses</a>.  
 </p>
 </div>
 </div>
@@ -596,7 +521,7 @@ In the previous versions of PAPL, he noted why they composed these table row ope
 <h3 id="Recitation%3A%20lambdas">Recitation: lambdas</h3>
 <div class="outline-text-3" id="text-Recitation%3A%20lambdas">
 <p>
-This <a href="https://youtu.be/vxXFDS95nB4">recorded</a> recitation explains anonymous functions using table row operations as examples.  
+This <a href="https://youtu.be/vxXFDS95nB4">recorded</a> recitation explains anonymous functions using table row operations as examples.
 </p>
 </div>
 </div>
@@ -605,11 +530,26 @@ This <a href="https://youtu.be/vxXFDS95nB4">recorded</a> recitation explains ano
 <h3 id="Recitation%3A%20lists%20and%20recursion">Recitation: lists and recursion</h3>
 <div class="outline-text-3" id="text-Recitation%3A%20lists%20and%20recursion">
 <p>
-A <a href="https://youtu.be/XEOLa6J2_F0">tutorial</a> on lists, case syntax and recursion, will be helpful when reading chapter 9 and 10. Recursion will be best understood once we do recurrence relations. For a list, imagine you are building up a structure one link at a time: link(1, link(2, link(3, &#x2026; and now you want to take apart that structure, so you use recursion to disassemble the structure you built back to the base case. 
+A <a href="https://youtu.be/XEOLa6J2_F0">tutorial</a> on lists, case syntax and recursion helpful when reading chapter 9 and 10. For a list, imagine you are building up a structure one link at a time: link(1, link(2, link(3, &#x2026; and now you want to take apart that structure, so you use recursion to disassemble the structure you built back to the base case. PAPL has a <a href="https://papl.cs.brown.edu/2020/Recursive_Data.html">chapter</a> on this you can skip ahead and read now to see what a template for recursion on lists looks like:
 </p>
 
+<pre class="example" id="orgc9324df">
+# This is the design recipe for recursive data using type NumList
+# Change nl-link to link(first, rest) for regular lists
+#|
+fun num-list-fun(nl :: NumList) -&gt; ???:
+  cases (NumList) nl:
+    | nl-empty =&gt; ...
+    | nl-link(first, rest) =&gt;
+      ... first ...
+      ... num-list-fun(rest) ...
+  end
+end
+|#
+</pre>
+
 <p>
-PAPL has a <a href="https://papl.cs.brown.edu/2020/Recursive_Data.html">chapter</a> on this you can skip ahead and read now to see what a template for recursion on lists looks like.
+This template which will work for any assignment in the book, and has you considering 4 things: What type should the function produce? What to do with the empty case, and what to do with the first part of the list, and the rest which is already filled in for you with a recursive call on rest. 
 </p>
 </div>
 </div>
@@ -644,32 +584,25 @@ Here we are being taught how to write examples which help us later write the pro
 <h4 id="10.4%20Structural%20Problems%20w%2FList%20Answers">10.4 Structural Problems w/List Answers</h4>
 <div class="outline-text-4" id="text-10.4%20Structural%20Problems%20w%2FList%20Answers">
 <p>
-There's an exercise to add examples for lists that end with positive numbers, and lists with [link: 0], try it yourself. 
+There's an exercise to add examples for lists that end with positive numbers, and lists with [link: 0], try it yourself. Reminder that the recursive template can be used for all of these exercises:
 </p>
 
-<pre class="example" id="orgf5489bb">
-fun my-pos-nums(l):
+<pre class="example" id="org2c28db6">
+#|
+fun list-fun(l :: List&lt;???&gt;) -&gt; ???:
   cases (List) l:
-    | empty =&gt; empty
+    | empty =&gt; ...
     | link(f, r) =&gt;
-      if f &gt; 0:
-        link(f, my-pos-nums(r))
-      else:
-        my-pos-nums(r)
-      end
+      ... f ...
+      ... list-fun(r) ...
   end
-where:
-  # running the program to fill in the rest of the test
-  my-pos-nums([list: 1,  0]) is link(1, my-pos-nums([list:  ]))
-  my-pos-nums([list: 1,  1]) is link(1, my-pos-nums([list: 1]))
-
-  # direct test of expected output
-  my-pos-nums([list: 1, 0]) is [list: 1]
-  my-pos-nums([list: 1, 1]) is [list: 1, 1]
 end
+|#
 </pre>
 </div>
 </div>
+
+
 
 <div id="outline-container-10.5%20Structural%20Problems%20and%20Sub-Domains" class="outline-4">
 <h4 id="10.5%20Structural%20Problems%20and%20Sub-Domains">10.5 Structural Problems and Sub-Domains</h4>
@@ -680,7 +613,7 @@ Study my-alternating() and my-max(), note how the empty case was handled. This i
 
 <ul class="org-ul">
 <li>input: my-max([list: 1, 2, 3])</li>
-<li>num-max(1, num-max(2, num-max(3, 3))) since on the r is empty case, we return f</li>
+<li>num-max(1, num-max(2, num-max(3, 3))) since the rest will be empty case, we return f</li>
 <li>num-max(1, num-max(2, 3))</li>
 <li>num-max(1, 3)</li>
 <li>3</li>
@@ -692,7 +625,7 @@ Study my-alternating() and my-max(), note how the empty case was handled. This i
 <h4 id="10.7%20Accumulators">10.7 Accumulators</h4>
 <div class="outline-text-4" id="text-10.7%20Accumulators">
 <p>
-Read 10.6 how my-avg() was obtained. Here we are shown helper functions inside other functions with the statement: <i>Observe that we do not change my-running-sum itself to take extra arguments. There are multiple reasons for this</i>. One reason is you want simple documentation, user intuitive and bug-free access to my-alternating() just like a typical command shell utility like change directory (cd) you wouldn't have users init your accumulators with cd(empty, 0, dir-name) you would instead want a simple interface where all internal operations are encapsulated that only takes a single input.   
+Read 10.6 how my-avg() was obtained. Here we are shown helper functions inside other functions with the statement: <i>Observe that we do not change my-running-sum itself to take extra arguments. There are multiple reasons for this</i>. One reason is you want simple documentation, user intuitive and bug-free access to my-alternating() just like a typical command shell utility such as change directory (cd) you wouldn't have users init your accumulators with cd(empty, 0, dir-name) you would instead want a simple interface where all internal operations are encapsulated that only takes a single input.   
 </p>
 </div>
 </div>
@@ -701,7 +634,7 @@ Read 10.6 how my-avg() was obtained. Here we are shown helper functions inside o
 <h4 id="10.8%20Reducing%20computation">10.8 Reducing computation</h4>
 <div class="outline-text-4" id="text-10.8%20Reducing%20computation">
 <p>
-In 10.8.4 to reduce the computation they store the list that uniq-rec(r) outputs and if f is not a member, link it to all of the list ur or else return ur, so you save one iteration of the entire list by having f only compare against a distinct list with all duplicates removed.  
+In 10.8.4 uniq-rec3: ur = uniq-rec(r) meaning it called uniq-rec with the rest of the list and now is only checking that returned distinct rest instead of having the first element in uniq-rec3 linearly go through the entire rest. If the rest of the list is a billion entries, many of them dupes, then you saved yourself 1 iteration of a billion checks by slicing off the first element and comparing it to an already distinct rest.  
 </p>
 </div>
 </div>
@@ -710,7 +643,7 @@ In 10.8.4 to reduce the computation they store the list that uniq-rec(r) outputs
 <h4 id="10.9%20Polymorphic%20Types">10.9 Polymorphic Types</h4>
 <div class="outline-text-4" id="text-10.9%20Polymorphic%20Types">
 <p>
-my-max&lt;T&gt;(l :: List&lt;T&gt;) -&gt; List&lt;T&gt; means the list can be any type &lt;T&gt;, but it's first element enforces what type the rest will be (string, number, boolean..) whereas List&lt;Any&gt; means any types can be mixed in the list. This will come up lecture repeatedly and eventually we will learn <a href="https://papl.cs.brown.edu/2020/para-poly.html">type variables</a>. 
+my-max&lt;T&gt;(l :: List&lt;T&gt;) -&gt; List&lt;T&gt; means the list can be any type &lt;T&gt;, but it's first element enforces what type the rest will be (string, number, boolean..). This will come up lecture repeatedly and eventually we will learn <a href="https://papl.cs.brown.edu/2020/para-poly.html">type variables</a>. 
 </p>
 </div>
 </div>
@@ -721,7 +654,7 @@ my-max&lt;T&gt;(l :: List&lt;T&gt;) -&gt; List&lt;T&gt; means the list can be an
 <h2 id="Lecture%203%20CS019%20Insertion%20Sort">Lecture 3 CS019 Insertion Sort</h2>
 <div class="outline-text-2" id="text-Lecture%203%20CS019%20Insertion%20Sort">
 <p>
-We're watching Wed9/12/18 lecture on sorting. These videos you can download in 1920x1080 if you want and zoom if you can't see the writing on the whiteboard. 
+We're watching Wed9/12/18 lecture on sorting. These videos you can change res to 1920x1080 if you want and zoom if you can't see the writing on the whiteboard. 
 </p>
 
 <p>
@@ -790,7 +723,7 @@ Everytime a list is returned, the next call to insert can happen because it is c
 Let's do the <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">lab</a> on functions as data, and write our own map, filter and fold. 
 </p>
 
-<pre class="example" id="orgee86597">
+<pre class="example" id="orgd355548">
 fun fun-plus-one(num :: Number, func :: (Number -&gt; Number)) -&gt; Number:
   func(num) + 1
 end
@@ -811,7 +744,7 @@ Try entering various built-ins, or one you wrote yourself, as the second paramet
 We're given test cases and asked to implement f-to-c and goldilocks, and given the formula for f to c temperature unit conversion.
 </p>
 
-<pre class="example" id="org9edbc8c">
+<pre class="example" id="org7a10eb4">
 fun f-to-c(f-lst :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
   cases (List) f-lst:
     | empty =&gt; empty
@@ -843,7 +776,7 @@ end
 We're asked to rewrite goldilocks using map. The data dumped into a map function is whatever the value is at that list index. In this case we know it's a number since f-lst parameter is :: List&lt;Number&gt;.
 </p>
 
-<pre class="example" id="org99e2718">
+<pre class="example" id="orgcccfedb">
 fun goldilocks2(f-lst :: List&lt; Number&gt;) -&gt; List&lt;String&gt;:
   f-lst.map({(x): if x &gt; 90: "too hot" else if x &lt; 70: "too cold" else: "just right" end})
 end
@@ -853,14 +786,14 @@ end
 </pre>
 
 <p>
-.map() is a built-in method on a list, where f-lst.map() means we are mapping over f-lst. I used the shorthand syntax for lambdas.
+.map() is a built-in method on a list, where f-lst.map() means we are mapping over f-lst. I used the shorthand bracket syntax for lambdas in the Pyret documentation.
 </p>
 
 <p>
 We could have also rewritten it like the following example, where a seperate function is used for map instead of writing our own lambda:
 </p>
 
-<pre class="example" id="org3b0385f">
+<pre class="example" id="orgd4e9f43">
 fun goldilocks(x :: Number) -&gt; String:
   if x &gt; 90:
     "too hot"
@@ -880,11 +813,11 @@ end
 </pre>
 
 <p>
-Now our task is write our own version of map(). I used the documentation examples for map as check tests. Remember map consumes a function and a list, applies the function to each entry in the list returning a new list, try to do this yourself before looking at a solution (your solution may be better). For annotations, I used the <a href="https://www.pyret.org/docs/latest/s_annotations.html#%28part._s~3aname-ann%29">built-in</a> name annotations but if you read through the documentation you can also import annotations, or create your own datatype. The 'T' annotation is described at the end of chapter on processing lists, the notation &lt;T&gt; says that T is a type variable parameter meaning it can be any type, so if you give map a list of numbers it will be that type, or a list of strings, it will be List&lt;String&gt; etc. 
+Now our task is write our own version of map. I used the documentation examples for map as check tests. Remember map consumes a function and a list, applies the function to each entry in the list returning a new list, try to do this yourself before looking at a solution (your solution may be better). For annotations, I used the <a href="https://www.pyret.org/docs/latest/s_annotations.html#%28part._s~3aname-ann%29">built-in</a> name annotations but if you read through the documentation you can also import annotations, or create your own datatype. The 'T' annotation is described at the end of chapter on processing lists, the notation &lt;T&gt; says that T is a type variable parameter meaning it can be any type, so if you give map a list of numbers it will be type List&lt;Number&gt;, or a list of strings, it will be List&lt;String&gt; etc. 
 </p>
 
-<details id="org84fc4ed">
-<pre class="example" id="orgba12e00">
+<details id="org4ea94aa">
+<pre class="example" id="orgf3dda03">
 fun my-map&lt;T&gt;(func :: (T -&gt; T), l :: List&lt;T&gt;) -&gt; List&lt;T&gt;:
   cases (List) l:
     | empty =&gt; empty
@@ -907,8 +840,8 @@ end
 First two assignments are straight forward to get you to used to using filter, except you have to use string-to-code-points() instead of any built-in string functions. 
 </p>
 
-<details id="orgdfdc0e0">
-<pre class="example" id="org022127c">
+<details id="org63031b0">
+<pre class="example" id="orgaf81b70">
 fun tl-dr(lol :: List&lt;String&gt;, length-thresh :: Number) -&gt; List&lt;String&gt;:
   filter(lam(element): string-to-code-points(element).length() &lt;= length-thresh end, lol)
 end
@@ -935,8 +868,8 @@ end
 Lambda parameters can be a single letter: filter(lam(x): x &gt; 1 end) as it's immediately evident what that parameter is and it's scope is limited. Task: implement our own version of filter, which is similar to what we did for map:
 </p>
 
-<details id="org79c781b">
-<pre class="example" id="org11e8fd3">
+<details id="org957a065">
+<pre class="example" id="orgb8e885c">
 fun my-filter&lt;T&gt;(func :: ( T -&gt; Boolean), l :: List&lt;T&gt;)-&gt; List&lt;T&gt;:
   cases (List) l:
     | empty =&gt; empty
@@ -966,9 +899,8 @@ end
 Try the two tasks: list-product and list-max:
 </p>
 
-<details id="org77ad421">
-<pre class="example" id="org1406142">
-
+<details id="org4d556b6">
+<pre class="example" id="org6a735c3">
 fun list-product(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): acc * n end, 1, lon)
 end
@@ -977,7 +909,13 @@ check:
   list-product([list: 0, 1, 2]) is 0
   list-product([list: -1, -1]) is 1
 end
+</pre>
 
+<p>
+There's a bug here to fix, try all negative examples
+Found by <a href="https://github.com/rand-anon-007">https://github.com/rand-anon-007</a>
+</p>
+<pre class="example" id="orgdbe702e">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): if n &gt; acc: n else: acc end end, 0, lon)
 end
@@ -987,14 +925,71 @@ check:
   list-max([list: 1/2, 3/4]) is 3/4
 end
 </pre>
+
+<p>
+The problem is the accumulator needs to be initialized with the first value of the list, well actually the problem is I didn't write enough example tests:
+</p>
+
+<pre class="example" id="org53275b7">
+fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
+  fold(lam(acc, n): if n &gt; acc: n else: acc end end, lon.get(0), lon)
+where:
+  list-max([list: -1, 1, 2]) is 2
+  list-max([list: 0, -100, 1]) is 1
+  list-max([list: 1/2, 3/4]) is 3/4
+  list-max([list: -1, -2, -3]) is -1
+  list-max([list: 0]) is 0
+# list-max(empty) what about this case?
+end
+</pre>
+
+<p>
+Then we come to another problem, what if the list is empty then long.get(0) returns an error:
+</p>
+
+<pre class="example" id="org2be891a">
+fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
+  if lon == empty:
+    0 # is this correct?
+  else:
+    fold(lam(acc, n): if n &gt; acc: n else: acc end end, lon.get(0), lon)
+  end
+where:
+  list-max([list: -1, 1, 2]) is 2
+  list-max([list: 0, -100, 1]) is 1
+  list-max([list: 1/2, 3/4]) is 3/4
+  list-max([list: -1, -2, -3])  is -1
+  list-max(empty) is 0
+end
+</pre>
+
+<p>
+Now we have to make design decisions, should it eval to 0 for empty since the max of an empty list is nothing or should it raise an error?
+</p>
+
+<pre class="example" id="org871eb64">
+fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
+  if lon == empty:
+    raise("List can't be empty")
+  else:
+    fold(lam(acc, n): if n &gt; acc: n else: acc end end, lon.get(0), lon)
+  end
+where:
+  list-max([list: -1, 1, 2]) is 2
+  list-max([list: 0, -100, 1]) is 1
+  list-max([list: 1/2, 3/4]) is 3/4
+  list-max([list: -1, -2, -3])  is -1
+  list-max(empty) raises "List can't be empty"
+end
+</pre>
 </details>
 
 <p>
 Write your own fold 
 </p>
 
-<details id="org12c29d7">
-<pre class="example" id="org47ae27a">
+<details id="orge65f0bd">
+<pre class="example" id="org04c29c2">
 fun my-fold&lt;T&gt;(func :: (T, T-&gt; T), acc :: T, l :: List&lt;T&gt;) -&gt; T:
   cases (List) l:
     | empty =&gt; acc
@@ -1022,8 +1017,8 @@ end
 Try the task for implementing who-passed, the second task we're asked to write map2 ourselves. 
 </p>
 
-<details id="org4eacfcb">
-<pre class="example" id="orgd2ac26d">
+<details id="orga254f4e">
+<pre class="example" id="org4b8d078">
 # link(ff, rr) and link(f, r) can be called anything:
 # ie: link(head-first, tail-first) or link(head-second, tail-second)
 
@@ -1055,7 +1050,7 @@ end
 The last task, best-price, look on youtube what a basic demand function is. Here's an example:
 </p>
 
-<pre class="example" id="orga7828d3">
+<pre class="example" id="orgf473522">
 fun demand(price-increase :: Number) -&gt; Number:
  doc: "1000 is approx demand of product at a fixed price"
   1000 - (60 * price-increase)
@@ -1074,7 +1069,7 @@ This means as the price increases, the quantity demanded will decrease by 60 uni
 map and filter only consider one item at a time whereas fold can consider the entire list. You can implement both map and filter with fold (try it). If you've noticed in the Pyret documentation there is two folds: foldl and foldr:
 </p>
 
-<pre class="example" id="orgcf12074">
+<pre class="example" id="org2a40f05">
 import lists as L
 
 L.foldl(lam(acc, x): acc + x end, 0, [list: 1, 2, 3])
@@ -1103,25 +1098,45 @@ It may be helpful to look at some pdfs on software <a href="https://www.cs.corne
 <h2 id="Assignment%201%3A%20DocDiff">Assignment 1: DocDiff</h2>
 <div class="outline-text-2" id="text-Assignment%201%3A%20DocDiff">
 <p>
-Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. 
+Let's try the first <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment</a>. We can access the assignments before 2019, because the 2020 assignments have a different IDE requiring a brown student login, you'll see what it looks like and why a sign-in is needed in the paper we read next.
+</p>
+</div>
+
+<div id="outline-container-A%20study%20about%20us%2C%20beginner%20students" class="outline-3">
+<h3 id="A%20study%20about%20us%2C%20beginner%20students">A study about us, beginner students</h3>
+<div class="outline-text-3" id="text-A%20study%20about%20us%2C%20beginner%20students">
+<p>
+Before you begin, it will be helpful to read Prof K's <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/wk-stud-write-test-no-coercion/">paper</a> about these same cs19 assignments which will tell us why this course is set up the way it is in the first place, what he expects and how he grades these assignments. In the introduction he bluntly informs us that we lack the metacognitive awareness at the beginner stage to self-regulate our progress. Various attempts to fix this have been tried like Polya's <i>How to Solve It</i> problem solving book or his own book <i>How to Design Programs</i> which uses the design recipe template to help beginning students. We as students are supposed to reinterpret the problem ourselves so we actually understand it by writing examples or walking through the design recipe. 
 </p>
 
 <p>
-This assignment looks difficult on purpose but it's implementation is not. The <a href="https://en.wikipedia.org/wiki/Dot_product#Algebraic_definition">dot product</a> algebraic definition, look at the example for [1,3,-5] x [4,-2,-1]. Each index in the first list is multiplied by it's corresponding index in the second list, then those results are added together. To read the sigma notation, a*b = the sum of \(a_ib_i\) starting at index 1 (first element of the list) up to the length of the list (n):
+Section 2 <i>Pedagogic Context</i> begins to talk about this same course we are doing. He extracts the students tests and runs them against known buggy implementations to see how thorough they are. There's a picture of the new sign-in IDE it's the same CPO except included is a shared g-drive library that tell you your testing progress. This is included to 'coerce' students to write more tests with interactive feedback. He even ran statistics on when students click run in the interpreter.  
 </p>
 
-<details id="orgf45e508">
 <p>
-If a = [1, 3, -5] and b = [4, -2, -1]:
+5.2 tells us exactly how to start these assignments: write 'interesting' examples prior to any implementation. Interesting means an assertion that probes our understanding of the problem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-DocDiff" class="outline-3">
+<h3 id="DocDiff">DocDiff</h3>
+<div class="outline-text-3" id="text-DocDiff">
+<p>
+So now we know what we need to do: write examples that help our understanding and these should be thorough meaning covering the whole problem domain. Let's try DocDiff assignment. 
+</p>
+
+<p>
+This <a href="https://cs.brown.edu/courses/cs019/2018/docdiffdocdiff.html">assignment writeup</a> seems purposely difficult to get us to write examples to help understand what the assignment wants. The <a href="https://en.wikipedia.org/wiki/Dot_product#Algebraic_definition">dot product</a> algebraic definition, look at the example for [1,3,-5] x [4,-2,-1]. Each index in the first list is multiplied by it's corresponding index in the second list, then those results are added together. To read the sigma notation, a*b = the sum of \(a_ib_i\) starting at index 1 (first element of the list) up to the length of the list (n). If a = [1,3,-5] and b = [4,-2,-1]:
 </p>
 
 <p>
 \(a*b = \sum_{i=1}^3 a_ib_i\) = (\(1_{a1} * 4_{b1})+(3_{a2} * -2_{b2})+(-5_{a3} * -1_{b3})\)
 </p>
-</details>
+
 
 <p>
-Some more requirements are listed, such as ignoring the case (upper/lower) of a word when counting it's number of occurrences, this translates to converting list string inputs to string-to-lower/string-to-upper. The exact equation for overlap is given: dot-product(doc-vec1, doc-vec2) / num-max(num-sqr(magnitude(doc1)), num-sqr(magnitude(doc2))). The magnitude is defined as: num-sqrt(x * x) so the square root of a vector multiplied (dot product multiplication) by itself.   
+Some more requirements are listed, such as ignoring the case (upper/lower) of a word when counting it's number of occurrences. The exact equation for overlap is given that needs to be translated to a program. 
 </p>
 
 <p>
@@ -1161,125 +1176,80 @@ Example vectors:
 <p>
 Before we begin see the Pyret <a href="https://www.pyret.org/docs/latest/Pyret_Style_Guide.html">style guide</a>. 
 </p>
-</div>
-
-<div id="outline-container-Where%20to%20Start" class="outline-4">
-<h4 id="Where%20to%20Start">Where to Start</h4>
-<div class="outline-text-4" id="text-Where%20to%20Start">
-<p>
-One strategy is to begin with function skeletons of things you know you will need:
-</p>
-
-<pre class="example" id="orgd9f3079">
-import lists as L
-
-fun overlap(doc1 :: List&lt;String&gt;, doc2 :: List&lt;String&gt;) -&gt; Number:
-  ```Consumes two lists of strings, ignores case, and returns their overlap: 
-  dot-product(doc-vec1, doc-vec2) / num-max(num-sqr(magnitude(doc-vec1)), num-sqr(magnitude(doc-vec2)```
-
-  fun create-vec(l-a :: List&lt;String&gt;, l-b :: List&lt;String&gt;) -&gt; List&lt;Number&gt;:
-    doc: "Consumes two lists and returns a vector representation of the first input (l-a)"
-  end
-
-  fun ignore-case(l-c :: List&lt;String&gt;) -&gt; List&lt;String&gt;:
-    doc: "Converts a list of words to lower case"
-  end
-
-  fun dot-product(v-a :: List&lt;Number&gt;, v-b :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
-    doc: "Consumes two vector lists and returns the dot product "
-  end
-
-  fun magnitude(v-c :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
-    doc: "Consumes a vector and returns it's magnitude: sqrt(dot-product(v-c, v-c)"
-  end
-
-end
-</pre>
 
 <p>
-This function documentation is temporary to help remember what we're writing.  We will probably add more helper functions inside overlap() as we go. Let's start with create-vec() since we were given examples in the assignment writeup:
+Let's start with create-vec() since we were given examples in the assignment writeup, scroll down the assignment writeup and click 'Implementation' you should get <a href="https://code.pyret.org/editor#share=1s-chFIEAeCKvIsYnstqRxqOBtiodMPme&amp;v=7aff971">this</a> which makes it clear they just want a single function called overlap, but we can fill it with helper functions like create-vec:
 </p>
 
-<pre class="example" id="org747d208">
-  fun create-vec(l-a :: List&lt;String&gt;, l-b :: List&lt;String&gt;) -&gt; List&lt;Number&gt;:
-    doc: "Consumes two lists and returns a vector representation of the first input (l-a)"
-  where:
-   create-vec([list: "a", "B", "c"], [list: "d", "d", "d", "b"]) is [list: 1, 1, 1, 0] 
-   create-vec([list: "d", "d", "D", "b"], [list: "a", "b", "c"]) is [list: 0, 1, 0, 3]
-end
-  end
-</pre>
-
-<p>
-We need to combine input l-a and l-b into one sorted distinct list so from our two examples: [list: "a", "b", "c", "d"]. The list library built-ins are permitted:
-</p>
-
-<pre class="example" id="org480b5d0">
-fun create-vec(l-a :: List&lt;String&gt;, l-b :: List&lt;String&gt;) -&gt; List&lt;String&gt;:
-    doc: "Consumes two lists of strings and returns a document vector representation of the first input l-a"
-    distinct = L.distinct(l-a + l-b).sort()
-  where:
-   create-vec([list: "a", "B", "c"], [list: "d", "d", "d", "b"]) is [list: 1, 1, 1, 0] 
-   create-vec([list: "d", "d", "D", "b"], [list: "a", "b", "c"]) is [list: 0, 1, 0, 3]
-  # vector is ['another', list', 'of', 'words']
-   create-vec([list: "list", "of", "words"], [list: "another", "list"]) is [list: 0, 1, 1, 1]
-   create-vec([list: "another", "list"], [list: "list", "of", "words"]) is [list: 1, 1, 0, 0]
-end
-  end
-</pre>
-
-<p>
-Note in the examples, the vector returned is the same length of the distinct list of each document, so this distinct list we will want to go through each element, and count how many occurrences of that word, linking the count. We can write some more helper functions for this, first function deconstructs the distinct-list into elements, each time asking something like 'if f is a member, then link(count(f))' with count() being our other helper function that takes an element as input, and counts how many times it occurs in a list. This is known as 'wishing for functions' where you pretend you already have functions to do whatever your want, and call to them as you're writing another function. Each time you wish for one write an empty template. 
-</p>
-
-<pre class="example" id="org8a17525">
+<pre class="example" id="orgc13e1d0">
 fun create-vec(l-a :: List&lt;String&gt;, l-b :: List&lt;String&gt;) -&gt; List&lt;Number&gt;:
-  doc: "Consumes two lists and returns a document vector representation of the first (l-a)"
-
-  fun count(s :: String, l-e :: List&lt;String&gt;) -&gt; Number:
-    doc: "Counts the occurrences of a string in a document"
-    cases (List) l-e:
-      | empty =&gt; 0
-      | link(f, r) =&gt;
-        if s == f:
-          1 + count(s, r)
-        else:
-          count(s, r)
-        end
-    end
-  where:
-    count("d", [list: "d", "b","d"]) is 2
-    count("e", [list: "f"]) is 0
-    count("f", empty) is 0
-  end
-
-  fun helper(distinct-list :: List&lt;String&gt;, document :: List&lt;String&gt;) -&gt; List&lt;Number&gt;:
-    doc: "Helper to assemble the vector"
-    cases (List) distinct-list:
-      | empty =&gt; empty
-      | link(f, r) =&gt; if document.member(f):
-          link(count(f, document), helper(r, document))
-        else:
-          link(0, helper(r, document))
-        end
-    end
-  end
-
-  distinct = L.distinct(l-a + l-b).sort()
-  helper(ignore-case(distinct), ignore-case(l-a))
+  doc: "Consumes two lists and returns a vector representation of the first input (l-a)"
+  ...
 where:
   create-vec([list: "a", "B", "c"], [list: "d", "d", "d", "b"]) is [list: 1, 1, 1, 0] 
   create-vec([list: "d", "d", "D", "b"], [list: "a", "b", "c"]) is [list: 0, 1, 0, 3]
 end
+
 </pre>
 
 <p>
-I wished for another function: ignore-case that I assume goes through a list of strings and converts them all to the same case. Repeat this for the rest of the assignment, see chapter 6 of PAPL to write dot-product(list1, list2) with cases of list1, cases on lists2, and link(f * ff, dot-product(r, rr)), on the empty case return the sum. When you're done click the arrow on the online interpreter and choose to type check and run. 
+Write examples what you think it should produce. How do you sort the vector representation is it alphabetical (you can use built-in .sort() for this) is one test to write. Practice writing create-vec in several ways, for example a vector looks a lot like table data. Let's make one using the above given example for [list: "a", "B", "c"], [list: "d", "d", "D", "b"]) is [list: 1, 1, 1, 0]  
+</p>
+
+<pre class="example" id="orgf04e7c0">
+vector = table: word, count
+  row: "a", 1
+  row: "b", 1
+  row: "c", 1
+  row: "d", 0
+end
+vector.get-column("count") # this returns: [list: 1, 1, 1, 0]
+</pre>
+
+<p>
+You could then write a helper function inside create-vec that takes the distinct and sorted concatenation of both input lists to produce a vector table, I found this in the Pyret documentation:
+</p>
+
+<pre class="example" id="org54b089d">
+  fun helper(distinct-list :: List&lt;String&gt;, vec-table :: Table) -&gt; Table:
+    cases (List) distinct-list:
+      | empty =&gt; vec-table
+      | link(f ,r) =&gt; helper(r, vec-table.add-row(vec-table.row(f, count(f))))
+    end
+  end
+...
+... stuff here in create-vec()
+where:
+  create-vec([list: "a", "B", "c"], [list: "d", "d", "d", "b"]).get-column("count") is [list: 1, 1, 1, 0] 
+  create-vec([list: "d", "d", "D", "b"], [list: "a", "b", "c"]).get-column("count") is [list: 0, 1, 0, 3]
+  create-vec([list: "word1", "word3"], [list: "word2"]).get-column("count") is [list: 1, 0, 1]
+# check if sorted properly, this would need more testing
+  create-vec([list: "aaab", "aaaab"], [list: "aab", "aaab"]).get-column("count") is [list: 1, 1, 0]
+end
+</pre>
+
+<p>
+Or you could play around with making a vector data type, then you can build whole lists of vectors and map through the list to do cases on vectors
+</p>
+
+<pre class="example" id="org71bdeb1">
+data Vector:
+  | vec(
+      words :: List&lt;String&gt;,
+      total-words :: List&lt;String&gt;,
+      occurence :: List&lt;Number&gt;)
+end
+
+vector-1 = vec([list: "a", "B", "c"], [list: "a", "b", "c", "d"], [list: 1, 1, 1, 0]) 
+vector-1.occurence # produces [list: 1, 1, 1, 0]
+</pre>
+
+<p>
+Or use map/filter/fold on lists, produce a distinct list and then as you map through each element (which will be a word), call another function count(x) to count how many times that word appeared. The point here being you can represent it as anything so experiment with whatever you want. To square a vector write a dot-product function to multiply and sum a vector by itself ie: dot-product(doc1, doc1), then translate the overlap formula with <a href="https://www.pyret.org/docs/latest/numbers.html#%28part._numbers_num-sqrt%29">built-ins</a>. The overlap function will return a <a href="https://www.pyret.org/docs/latest/numbers.html#%28part._.Number_.Literals%29">roughnum</a> because of the ways computers repesent real numbers using floating point, so you will never get enough precision to test the output of overlap with pre-calculated value. You can however measure the displacement between the output of overlap, and your expected test value meaning if you subtract them both the absolute value of their difference should be within some tiny arbitrary displacement you decide on the precision for like .000001 and use 'is-roughly' for testing.  
 </p>
 </div>
 </div>
 </div>
-
 
 <div id="outline-container-Lecture%204%20CS019%20Big-O" class="outline-2">
 <h2 id="Lecture%204%20CS019%20Big-O">Lecture 4 CS019 Big-O</h2>
@@ -1361,7 +1331,7 @@ The Tabular Method, is not necessary as you will read in 17.8 since we can hand 
 </p>
 
 <p>
-17.9 <i>Combining Big-oh Without Woe</i> as we saw in 15-122 two functions in O(n) run consecutively (one after the other) are O(n + n) or O(2n) which is O(n) since constants don't matter, like f(5k + 4) is really f(k). A function f(n) that invokes z(n) in each of it's steps is O(n x n) or O(n<sup>2</sup>). 
+17.9 <i>Combining Big-oh Without Woe</i> two functions in O(n) run consecutively (one after the other) are O(n + n) or O(2n) which is O(n) since constants don't matter, like f(5k + 4) is really f(k). A function f(n) that invokes z(n) in each of it's steps is O(n x n) or O(n<sup>2</sup>). 
 </p>
 </div>
 
@@ -1578,7 +1548,7 @@ In 3 <i>The Tabular Method</i> we finally get an explanation what the terms 'que
 Let's figure out 5, a function that takes input 2 lists and counts their length. This translates to two nested cases:
 </p>
 
-<pre class="example" id="orgc67feb6">
+<pre class="example" id="orga88e8b4">
 fun dbl-count(list1, list2):
  cases (List) list1:
   | empty =&gt; 0
@@ -1605,423 +1575,16 @@ Looking at chapter 17 in the book, this is T(k) = 2T(k - 1) + c. Two recursive c
 </p>
 
 <p>
-Another task, find the closed form of T(k-2) + 1 if k &gt; 1. I will show the improper guess method where you input values for T(n) and  hope an obvious pattern reveals itself, then link the correct method:
+Another task, find the closed form of T(k-2) + 1 if k &gt; 1. There's a lecture for <a href="https://www.youtube.com/watch?v=8gt0D0IqU5w">this</a>.
 </p>
-
-<ul class="org-ul">
-<li>T(0) = constant</li>
-<li>T(1) = constant</li>
-<li>T(2) = T(0) + 1 or 1 + constant</li>
-<li>T(3) = T(1) + 1 or 1 + constant</li>
-<li>T(4) = T(2) + 1 or 1 + 1 + constant</li>
-<li>T(5) = T(3) + 1 or 1 + 1 + constant</li>
-<li>T(6) = T(4) + 1 or 1 + 1 + 1 + constant</li>
-<li>T(7) = T(5) + 1 or 1 + 1 + 1 + constant</li>
-<li>T(8) = T(6) + 1 or 1 + 1 + 1 + 1 + constant</li>
-<li>Pattern: 1,1,2,2,3,3,4,4 etc. 
-<ul class="org-ul">
-<li>Hint: Enter the pattern into OEIS and you find <a href="https://oeis.org/A004526">this</a></li>
-<li>floor(n/2) (integer division, no remainder)</li>
-</ul></li>
-<li>T(n) = floor(n/2) + constant for n &gt; 1</li>
-<li>This is [n -&gt; log n] since at each level we only do constant work and throw away half the input.</li>
-<li>For a better explanation, watch <a href="https://www.youtube.com/watch?v=8gt0D0IqU5w">this</a>.</li>
-</ul>
 
 <p>
 Second recurrence relation: 2T(k-1) + 1 for k &gt; 0 we already did, it's O([k -&gt; k<sup>k</sup>]). The extra challenge relations are all in the book and lectures to solve these exist in this guy's <a href="https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O">playlist</a> under 2.1.1 - 2.3.3. 
+assertion is true. If you get stuck on the nested conditionals question notice the @requries x &lt; 10, and if 4 &lt; x makes the nested x &lt;= 16 statement a waste of code. Let's continue on to the <i>Assignments</i> module, the example of if (e &gt; 0) { e = e - 1;.. note again these are integers, so the input can't be 0.5 or a 'half number' that makes e negative after 1 is subtracted. This is a little confusing because they are mixing assignment statements '=' with equality statements in working out their point-to reasoning. The very last assignment took some word smithing, x' + y' &gt; 2 * n. The last question to rewrite the assertion without using primed variables substitute exactly what x and y are into x + y &gt; 2 * n, which is (x * 2) + x &gt; 2 * n. 
 </p>
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-15-122%20-%20Imperative%20Programming" class="outline-2">
-<h2 id="15-122%20-%20Imperative%20Programming">15-122 - Imperative Programming</h2>
-<div class="outline-text-2" id="text-15-122%20-%20Imperative%20Programming">
-<p>
-Here we will learn about how reasoning with contracts can help us write better code and then apply it to all future code. We will also learn exactly how numbers are represented in a computer, which is everyday knowledge we should know.
-</p>
-
-<p>
-Register <a href="https://oli.cmu.edu/jcourse/webui/register/student.do">here</a> free to Carnegie Mellon University's open learning initiative, and use the course key: imp2019f or imp2020s (this course can also be completed with only a phone). I used 2019f for these notes but imp2020s has much more material you may be interested in. 
-</p>
-
-<p>
-Click on <a href="https://oli.cmu.edu/jcourse/lms/students/syllabus.do?last=entry&amp;section=cf8f60f80a0001dc13d6d1a95a068126">Enter Course</a> and you should see Syllabus: 15-122 Imperative Programming Aug-Dec 2019. It consists of three units on integers (how two's complement works, bit shifting) and one unit on contracts which is a method for ensuring correctness. One of the professors has a short talk <a href="https://www.youtube.com/watch?v=lNITrPhl2_A">here</a> outlining the benefits of contracts. If you use imp2020s you get the <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">whole course</a> though I'm just going to go through a few modules. 
-</p>
-
-<p>
-Let's start with Unit 2, Module 5: <a href="https://oli.cmu.edu/jcourse/webui/syllabus/module.do?context=cf8f63420a0001dc1bb09fcd7fd784a2">Representing Integers</a>.
-</p>
-
-<p>
-The Hindu-Arabic numeral system is introduced which if you've taken the <a href="https://learnaifromscratch.github.io/math.html">math</a> foundations beside this programming workshop you already know about. The summation notation for converting binary numbers to decimals: below the sigma (the greek E symbol, which means sum) is the starting index 0. Above the sigma is the range, which is n - 1 since we are beginning at zero, if you wish to sum 4 binary numbers then you want 0 through 3 (0, 1, 2, 3 is 4 digits). \(b_i2^i\) is where you plug in the starting index. The b variable (base) is either 0 or 1 since this is binary:
-</p>
-
-<p>
-\(b_{0}2^0 + b_{1}2^1 + b_{2}2^2\)&#x2026; for binary number 0101 is (1 * \(2^0\))+(0 * \(2^1\))+(1 * \(2^2\))+(0 * \(2^3\)) as you start from the right of the binary number and sum left. This will make sense when you do the 'do now' exercise.
-</p>
-
-<p>
-Horner's rule you evaluate by starting with the deepest nested brackets and working to the right. The example you eval the multiplication first then addition: (2 + 1) x 2 x 2 x 2 x 2 (+ 1) which is 3 x 2 (6) x 2 (12) x 2 (24) x 2 (48) + 1 = 49.  
-</p>
-
-<p>
-Try the interactive assignment then move on to <a href="https://oli.cmu.edu/jcourse/workbook/activity/page?context=cf8f63450a0001dc67eab637081785cd">Adding Binary Numbers</a>. The bit carry you start at the top and work down, so if you have three 1's (a carried bit), then it's 1 + 1 = 0 (carry over a 1), 0 + 1 = 1. Hexadecimal representation is next, the 'did I get this' questions are great for understanding how the 0x notation works, for example 0x10 is 00010000 or 2\(^4\). 
-</p>
-
-<p>
-We're now on module 6, fixed-precision integers. C0 is pronounced 'c-naught' and is <a href="http://c0.typesafety.net/">similar</a> to C. Note for these assignments if you want more practice, click on reset to keep feeding yourself new questions. There's a typo in <i>Division and Modulus</i>, it should read 9/4 = 2 and the remainder 9 % 4 = 1 for (x / y) * y + (x % y) = x. 
-</p>
-
-<p>
-The rounding unit points out that Python uses the round to negative infinity rounding strategy. Try some of the examples yourself: (-7) / 3 = -2.333&#x2026; and the strategy for rounding towards O is truncate -2.333 to -2 while rounding to negative infinity you would decrease to -3 instead. Let's explain to ourselves the difference in mod operators too where rounding towards 0 for (-8) % 5 = -3 while rounding towards negative infinity results in -2. The Java/C model (towards 0), you multiply 5 by -1 and the remainder from -5 to -8 is -3. In the Python/negative infinity model, you are finding the lowest multiple of 5, which is less than -8, so 5 x (-2) = -10. The modulus is then the distance between -10 and -8, which is +2. The important takeaway here is to always read the documentation/specs of whatever language you're using, to understand how it's number representation works for integers, floats, etc. 
-</p>
-
-<p>
-Now we're on module 7 <i>Bit Patterns</i>. The AND operation against a mask such as 0xFF will leave every byte unchanged since if you look at the boolean table if the original bit is 0 or 1 then it will still be 0 or 1. The boolean most significant bit example of 0x80000000 remember 8 in hex is 1000. Let's go through the Bitwise negation example to understand it but with only 8 bytes. Assume x's current state is 0000 0001 everything is off except the first bit, using their home automation model where 1 bit represents a light switch. We want to toggle bit 5, the dining room light: 
-</p>
-
-<ul class="org-ul">
-<li>0x20 = 0010 0000</li>
-<li>&amp; ~x = 1111 1110
-<ul class="org-ul">
-<li>dr = 0010 0000</li>
-</ul></li>
-<li>0xDF = 1101 1111</li>
-<li>&amp;x   = 0000 0001
-<ul class="org-ul">
-<li>others = 0000 0001</li>
-</ul></li>
-<li>dr | others = 0010 0001</li>
-</ul>
-
-<p>
-Module 7 <i>Relating Arithmetic and Bitwise Operations</i> what they are describing is 'complement and increment' as a way to change any binary number to it's negative two's complement representation. The left shift exercise when you look at the answer notice they are shifting around the 1/3 values of blue then using OR to put them all back together into 32bits. The right shifting unit, there's a problem with the answer for 0xC0C0FFEE &gt;&gt; 20 it should be 0xFFFFFC0C but it doesn't recognize it as correct. The last one you have to manually write out the bits, arithmetically shift (padding 1's) to the right 7 bits, then reassemble them from left to right into groups of 4, truncating the furthest right 7 bits to get the answer.   
-</p>
-</div>
-
-<div id="outline-container-Correct%20Code" class="outline-3">
-<h3 id="Correct%20Code">Correct Code</h3>
-<div class="outline-text-3" id="text-Correct%20Code">
-<p>
-We're now on module 1 <i>Preconditions - When Do Errors Show up?</i> which is the bulk of 15-122, analyzing imperative code and reasoning about it's correctness. You use code commenting to describe the behavior or a function, and these comments are called contracts. The compiler can statically check these contracts meaning the code is not running. If you watched the <a href="https://youtu.be/lNITrPhl2_A">talk</a> ex CMU prof Simmons gave about contracts I posted earlier in these notes, you'll see that extensive testing covers less than 1% of the field of potential inputs. That same talk he also points out contracts have benefits even for functional languages with strong typing and briefly gives an idea about dependent types as a replacement for contracts, something we'll also briefly cover later.   
-</p>
-
-
-<p>
-In <i>When Do Errors Show Up?</i> the example <i>string attach(int n, char c, string str)</i> int, char, and string are similar to Pyret type notations describing what inputs they should accept. Some of the exercises assume syntax knowledge like a char must be in single quotes ie: 'c' (char) vs "c" (string) but otherwise the syntax is easy enough to figure out just by looking at it, and if you make a simple syntax error the system still gives you the correct answer anyway. Module <i>What 'Safety' Means in C0</i> the first learn by doing you're entering statements like n &gt;=0 &amp;&amp; n &lt;=12. The equality boolean is n == 0 (double equal, single is assignment like Pyret). 
-</p>
-
-<p>
-Moving on to Module 2 <a href="https://oli.cmu.edu/jcourse/workbook/activity/page?context=cf8f62f90a0001dc4733a1faff094884">Assertions</a>. These are similar to Pyret check tests. If you're following the math workshop with this programming workshop, you will have no problem understanding their examples of 'point-to reasoning'. It's similar to the proofs we've done in Tao's <i>Analysis</i>, you are listing reasons why something is true by pointing out which axiom or lemma gives it to you. The first <i>learn by doing</i> question has a bug, look at the actual assertion statement and not the 'The assertion x!= 8 is valid' title as sometimes the assertion is x!=20 if you reset the question.
-</p>
-
-<p>
-Module 2 <i>Conditionals</i> the syntax of [0, 14) which is standard interval <a href="https://en.wikipedia.org/wiki/Bracket_(mathematics)#Intervals">notation</a> for inclusive/exclusive. In the example of @assert x==y, note we are using int's and not floats or roughnums so this assertion is true. If you get stuck on the nested conditionals question notice the @requries x &lt; 10, and if 4 &lt; x makes the nested x &lt;= 16 statement a waste of code. Let's continue on to the <i>Assignments</i> module, the example of if (e &gt; 0) { e = e - 1;.. note again these are integers, so the input can't be 0.5 or a 'half number' that makes e negative after 1 is subtracted. This is a little confusing because they are mixing assignment statements '=' with equality statements in working out their point-to reasoning. The very last assignment took some word smithing, x' + y' &gt; 2 * n. The last question to rewrite the assertion without using primed variables substitute exactly what x and y are into x + y &gt; 2 * n, which is (x * 2) + x &gt; 2 * n. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Loops" class="outline-3">
-<h3 id="Loops">Loops</h3>
-<div class="outline-text-3" id="text-Loops">
-<p>
-Module 2: <i>Introduction to Loops</i> when you mutate data many things can go wrong, so learning how to reason about correct loops will be important to us should we go on to use a Python or some other AI library later. The first example the while loop you can hand step this loop, adjust the varibles with each iteration, then compare them to the assert such as @assert i &gt;=n once the loop exits, since if n = 3, then i should equal 3. Invariants are talked about but not introduced yet, these will be critical to know. An invariant is something that remains constant and doesn't change. 
-</p>
-
-<p>
-Module 3: <i>Postconditions</i> or what can be shown to be true after a function returns. The first learn by doing example note the brackets that C0 uses to declare scope, you want your first assignment within the first bracket:
-</p>
-
-<pre class="example" id="orgb0f28bd">
-int endless_subtraction(int x, int y)
-//@requires x &gt; 0;
-//@ensures \result &lt; y;
-{
-  int temp = y;
-  while (temp &gt; 0) {
-    temp = temp - x;
-  }
-  return temp;
-}
-</pre>
-
-<p>
-For the next assignment, an example of the @ensures syntax:
-</p>
-
-<pre class="example" id="orgae3f6f0">
-//@ensures \result &gt; 0 &amp;&amp; \result % 2 == 0
-//@ensures \result == x || \result == -x
-</pre>
-
-<p>
-In <i>Contract Exploits</i>, I couldn't get the gcd() function exercise to accept my answer: 
-</p>
-
-<pre class="example" id="org3a4e558">
-//@ensures \result % x == 0 &amp;&amp; \result % y == 0;
-
-However it does accept as correct answer:
-//@ensures x % \result == 0 &amp;&amp; y % \result == 0;
-</pre>
-</div>
-</div>
-
-<div id="outline-container-Testing" class="outline-3">
-<h3 id="Testing">Testing</h3>
-<div class="outline-text-3" id="text-Testing">
-<p>
-Module 3 <i>Introduction to Testing</i> I had no problems answering all the assignments correctly the first time, a testament to the greatness of CS019/PAPL. For the edge cases I used gcd(1, 10) and gcd(10, 1), for the factorial function I used fact(0) is 1. There's numerous pow(base, exp) function edge cases you can come up with like pow(0,2) is 0. 
-</p>
-
-<p>
-<i>Specification Functions</i> module is interesting, writing an inefficient secondary correct function to test a much faster implementation, or a secondary function to quickly test the result. I used 100,10 as inputs to the incorrect gcd. It uses a for loop, something the text didn't discuss at all before using it but you can probably figure it out anyway (for loops are covered in Module 10). First i is declared and assigned to 1, this is the index. A condition: i must be less or equal to x and i must be less or equal to y for the loop to continue. On each iteration increment i with i++ until i's value doesn't pass the loop condition. This is a completely incorrect implementation for example purposes.
-</p>
-</div>
-</div>
-
-<div id="outline-container-Proving%20Correctness" class="outline-3">
-<h3 id="Proving%20Correctness">Proving Correctness</h3>
-<div class="outline-text-3" id="text-Proving%20Correctness">
-<p>
-Module 4 <i>Proving Correctness</i> let's learn about invariants and correctness proofs. The exercise in <i>Reasoning about Loop Invariants</i> for int test(int lo, int hi) my answers if you're stuck were lo &lt;= i', lo &lt;= i + 1, and i + 1 &lt;= hi. I couldn't get the system to accept i' &lt;= hi which it should be, if the condition on line 10 is i + 1 &lt;= hi. It does however accept i &lt;= hi (without the prime). We found another exercise bug. 
-</p>
-
-<p>
-Aside: It's sometimes beneficial to have a few bugs in these kinds of courses, because you then challenge your own answer and go through the material again to prove your answer is correct. You'll experience this if you ever use an international version of a popular university textbook which typically sell for only 10% the regular cost. Almost always the end of chapter exercises will have been rewritten by some contractor to force students to buy the full priced version, as often the exercises will be assigned homework. Since the publisher doesn't care at all about the international version it will likely be filled with errata/mistakes in these exercises. You will have to dig deep into the material in order to assure yourself that you have the correct answer and the text is wrong. It also keeps you awake while going through the material.
-</p>
-
-<p>
-There's another mistake in the very last point-to reasoning question in <i>Proving Correctness</i>, the second loop invariant should be i &lt;= hi instead of lo &lt;= i. In <i>Termination</i> the answers are a little tricky, i + 5 doesn't really make any sense but is still valid since i is decreasing. <i>Proving Functions Correct</i> the last module is very short but enough to put all this material together. Congrats you now know how to reason about a program that mutates it's variables.
-</p>
-</div>
-</div>
-
-<div id="outline-container-Arrays" class="outline-3">
-<h3 id="Arrays">Arrays</h3>
-<div class="outline-text-3" id="text-Arrays">
-<p>
-Since we're on a roll let's finish this entire course, starting with Module 8 <i>C0 Memory Model for Simple Types</i>. In <i>Function Calls</i> in a C program main() is called first, which is usually at the bottom. The first learn by doing exercise you are only determining what fast pow is being called with (parameters), so x and y. The second is hand stepping the function one iteration. You can see how difficult this can become, trying to keep the entire state of a program's variables in your head. In Pyret and other functional languages you don't have to do this, since variables are immutable. The recursion module should be easy to figure out since we've already done a lot of recursion with Pyret. 
-</p>
-
-<p>
-The first array exercise actually runs your code, this was mine, note we are using booleans, so &amp;&amp;, || or !.
-</p>
-<details id="org664b098">
-<pre class="example" id="org6b61b0b">
-bool[] B = alloc_array(bool, 4);
-B[0] = b;
-B[1] = !B[0];
-B[2] = B[0] &amp;&amp; B[1];
-B[3] = B[1] || B[0];
-</pre>
-</details>
-
-<p>
-The second array exercise also runs your code, I copied the examples for int[]:
-</p>
-
-<details id="org4e64426">
-<pre class="example" id="org28659d9">
-char[][] C = alloc_array(char[], 3);
-for (int i = 0; i &lt; 3; i++) {
-    C[i] = alloc_array(char, 2);
-}
-C[0][0] = 'a';
-C[0][1] = 'b';
-C[1][0] = 'c';
-C[1][1] = 'd';
-C[2][0] = 'e';
-C[2][1] = 'f';
-</pre>
-</details>
-
-<p>
-In Module 9 <i>The C0 Memory Model</i> the first assignment asks you to open the c0 interpreter and find out what the default initialized value is for an array of type boolean. I guessed it was false instead of using the interpreter since false would be the obvious design choice. You can try the online interpreter for c0 <a href="https://c0.surge.sh/">here</a>. At the end of this module they example a contract calling a helper function with \length(A) being used as an input in order to find the length of the array, with a warning that this is a hacky method that won't work if contracts aren't enabled in production since that assert statement won't be run. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Aliasing" class="outline-3">
-<h3 id="Aliasing">Aliasing</h3>
-<div class="outline-text-3" id="text-Aliasing">
-<p>
-Scope and aliasing can be difficult topics to learn, as per this paper on <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/tfk-stu-underst-alias-proc-calls/">Prof Shriram</a>'s Brown Univeristy page where upper-level students even failed to understand aliasing. That paper is worth looking at, to see how confusing this can become in some languages like Java where one change affects two different locations, as they both point to the same thing. The exercises on this page can get tricky, remember that A = B if true means array A and B share the same memory location and are thus the same array. A[1] = B[1] if true means the values stored at those indexes are the same. 
-</p>
-
-<p>
-Moving on to module 10 <i>Coding with Arrays</i> we run into more aliasing. Here they decide to introduce for loops even though they were already used previously. The main difference between a while loop and a for loop, is you want to use a for loop when the range is known, and a while loop for unknown amounts of loops, such as waiting for a user to enter a key, or summing an arbitrary amount of inputs. Since an array is a fixed range you'd use a for loop for our array copy program.  The learn by doing for summing an array, all you need to do here is declare int sum = 0 then in the body of the for loop keep a running sum, returning it outside the loop. Better code you'd have an if test to see if n == 0 then return 0 (sum of an empty array) but I didn't bother and it accepted my answer anyway. 
-</p>
-
-<details id="org2b9e4cf">
-<pre class="example" id="orga0011d0">
-int sum = 0; 
-for(int i = 0; i &lt; n; i++) {
-   sum += A[i];
-}
-return sum;
-// grader doesn't like sum = sum + A[i], preferring the += syntax instead
-
-
-//the 'did I get this' exercise
-int sum = 0;
-for(int i = 0; i &lt; n; i++) {
-   sum += i;
-}
-return sum;
-//note the 'between 0 and n' meaning exclusive of n
-
-</pre>
-</details>
-
-<p>
-In <i>Safety of Array Code</i> you can see how difficult this can become to prove safety such as needing to guarantee the loop never reaches INT MAX. The very last <i>did I get this</i> question asks you to prove access to B[i] is safe, which there is only one answer and what we just covered in this module (the loop invariant). The rest of the exercises get harder and harder, but you will eventually figure them out and get better at 'point to reasoning'. For example the reasoning in array copy after the postcondition is added, how can we prove the postcondition is correct: if array B is created with length of n, and returned, then the postcondition must be correct. In <i>Correctness of Array Code</i> I couldn't get the system to accept my answer, which was originally A[i] == B[i] and return true, false otherwise. The accepted answer is to check if they don't equal, return true otherwise:
-</p>
-
-<pre class="example" id="org30396a9">
-bool is_same_array(int[] A, int[] B, int n)
- //@requires n == \length(A) &amp;&amp; n == \length(B)
-{ 
- for (int i = 0; i &lt; n; i++) 
- //@loop_invariant 0 &lt;= i
- {
-   if (A[i] != B[i]) 
-   return false; 
-  } 
-  
-  return true;
-}
-</pre>
-
-<p>
-For Module 10 <i>Contract Exploits w/Array Code</i> the learn by doing assignment wants you to write assert statements such as assert(A[0] == 0);, checking A's elements are not modified by array copy. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Searching%20and%20Sorting" class="outline-3">
-<h3 id="Searching%20and%20Sorting">Searching and Sorting</h3>
-<div class="outline-text-3" id="text-Searching%20and%20Sorting">
-<p>
-The loop invariant in the first search function is suspect, as that invariant will be broken the first iteration. From the assignment questions this appears to be a typo, that it should read 0 &lt;= i instead. In Module 11 this is a confirmed typo, as the same function is repeated but with the fixed invariant. The first search learn by doing there's a few typos you'll catch, like search(100, x, A, 0, 10) when our search function only takes 4 parameters not 5. The last exercise in <i>Searching in a sorted Array</i> is easy once you've done the other exercises, only the 3rd line was a problem which was assert that A[i] &lt; x, a kind of pointless assertion since if A[i] is not x, and A[i] is not bigger than x (remember it's a sorted array), then our present iteration of A[i] must be less than x. In <i>Reasoning about the search function</i> the first exercise any function calls in the requires/ensures/assert contracts need to be checked for safety violations, and any statement accessing arrays in the @ensures postconditions, assert contracts or body of the code. The feedback for the correct answer on the last exercise is wrong but by now you should be pretty good at point to reasoning. The postcondition in the last exercise is correct because the array has a precondition that it's already sorted, there's a loop invariant that the desired value is not in the array so far making a call to a boolean function with the current value of i, there's 2 assert statements and an if block that if A[current loop index] is bigger than x, then clearly x isn't in the array since it's a sorted array. 
-</p>
-
-<p>
-At this point, believe it or not, you know all there is to know about basic imperative programming and can go through the docs of any mainstream language like Python3.x for a future AI course. What we didn't cover was manual C pointers which if you wanted could go through the slides of the full 15-122 <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">course</a> or try a systems <a href="https://functionalcs.github.io/curriculum/#orgf43f5fd">course</a> that shows how these pointers work at the assembly level. Since we care about AI and will likely be using Python soon this course was a great intro to reasoning about code that mutates memory. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Complexity" class="outline-3">
-<h3 id="Complexity">Complexity</h3>
-<div class="outline-text-3" id="text-Complexity">
-<p>
-We made it to the last unit on complexity.  
-</p>
-
-<p>
-The first example: 3n + 4 \(\in\) O(2n - 1)
-</p>
-
-<ul class="org-ul">
-<li>try n = 1</li>
-<li>7 \(\le\) c(1) so c = 7 and technically that answer is fine, f(3n + 4) is still in O(n)</li>
-</ul>
-
-
-<p>
-Their assignment: 3n + 4 \(\in\) O(2\(n^2\) + 3n + 1) 
-</p>
-<ul class="org-ul">
-<li>Try n = 1:</li>
-<li>7 \(\le\) c(2(\(1^2\)) + 3(1) + 1)</li>
-<li>7 \(\le\) c(6)</li>
-<li>You could claim c = 2 or find a better approximation of n:</li>
-<li>Try n = 2:</li>
-<li>3(2) + 4 \(\le\) c(2(\(2^2\))+ 3(2) + 1</li>
-<li>10 \(\le\) c(15)</li>
-<li>True, so \(n_0\) = 2 and c = 1 though c = 2 is still a valid upper bound since f(n) is in O(\(n^2\))</li>
-<li>c = anything would be fine since n is always going to be bounded by \(n^2\)</li>
-</ul>
-
-<p>
-There's an optional assignment, to show 2\(n^2\) + 3n + 1 is not in O(3n + 4)
-</p>
-
-<ul class="org-ul">
-<li>Try n = 1</li>
-<li>2(1) + 3(1) + 1 \(\le\) c7</li>
-<li>Try n = 2</li>
-<li>2(4) + 3(2) + 1 \(\le\) c10</li>
-<li>Try n = 3</li>
-<li>2(9) + 3(3) + 1 \(\le\) c13 or 28 &lt; c13</li>
-<li>We can see at this point that no matter what constant we pick for c, the \(n^2\) variable on the left will always be greater eventually than whatever we choose the constant c to be.</li>
-</ul>
-
-<p>
-The did I get this assignment will be easy, whatever polynomial has the highest degree it will bound the lower degree polynomial since n can't outgrow \(n^k\). In <i>Simplest and Tightest Bound</i> what they are saying here is if your steps are 3n + 1, you don't want to pick any giant bound such as 3n + 1 is \(\in\) \(n^4\). You want the tightest bound, which is n, or whatever the maximum power is of f(n). If there is no variable n then the tightest bound is O(1) or constant time. 
-</p>
-
-<p>
-The <i>Complexity Classes</i> module assumes you remember <a href="https://artofproblemsolving.com/wiki/index.php/Logarithm">logarithms</a> the inverse of exponentiation. Let's try the example using the logarithmic properties from that AoPS page:
-</p>
-
-<ul class="org-ul">
-<li>3n(2+ log 2\(n^3\))</li>
-<li>6n + 3n log 2\(n^3\)
-<ul class="org-ul">
-<li>From AoPS: log bc = log b + log c</li>
-</ul></li>
-<li>6n + 3n(log 2 + log \(n^3\))
-<ul class="org-ul">
-<li>From AoPs: log \(b^n\) = n log b</li>
-</ul></li>
-<li>6n + 3n(log2 + 3 log n)</li>
-<li>6n + 3n log2 + 9n log n
-<ul class="org-ul">
-<li>6n is in O(n) complexity class obviously</li>
-<li>3n log 2 is in O(n) because the constant 2</li>
-<li>9n log n is in O(n log n) since n is not constant</li>
-<li>We pick the biggest class: O(n log n)</li>
-</ul></li>
-</ul>
-
-<p>
-Try the exercises for determining complexity class:
-</p>
-
-<ul class="org-ul">
-<li>log (3\(n^2\)) - 2</li>
-<li>log 3 + log \(n^2\) - 2</li>
-<li>log 3 + 2 log n - 2
-<ul class="org-ul">
-<li>complexity class: log n</li>
-</ul></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-Determining%20complexity%20of%20code" class="outline-3">
-<h3 id="Determining%20complexity%20of%20code">Determining complexity of code</h3>
-<div class="outline-text-3" id="text-Determining%20complexity%20of%20code">
-<p>
-In this module don't worry about their fancy square matrix functions only what the code overall structure is (nested loops where functions are called, constant time returns, etc). In <i>Beyond n</i> I couldn't get the last exercise about n collection of images but correctly guessed 'wh' since we're still making a copy. It doesn't matter if you don't get these immediately you will gain through experience how to estimate complexity. 
-</p>
-
-<p>
-The last module <i>Experimentally Testing Complexity</i> the cost form an+b is what we've seen before such as 3n + 7, and this chapter is about analyzing a running program to discover what the multiplying constant is (the a in an). To figure out if it's n, \(n^2\), \(n^3\) read the introduction where doubling the size of the input should get double the cost if it's O(n), four times the cost if it's O(\(n^2\)), eight times the cost if it's O(\(n^3\)). The first activity that is f(n) = an<sup>2</sup>, notice the time goes from 0.02 -&gt; 0.08 -&gt; 0.28 -&gt; 1.05 etc. That's roughly 4x the cost or \(n^2\). The matrix mult activity has roughly 8x the cost after n &gt; 400. There's an error in the assignments, I couldn't get my answers accepted unless I multiplied 'a' by 100,000,000 not 10,000,000. In fact if you check their example chart for vector-above-avg-better, they have clearly multiplied 'a' by 100 million not 10 million. 
-</p>
-
-<p>
-The last learn by doing assignment 0.38sec multiplied by 4 is 1.52 or close enough to the next doubled input, so this function must be \(n^2\). Multiplying f(n)/n<sup>2</sup> you end up with roughly a = 0.6 and there's an interesting follow up on how you can screw up your tests since the initialization of the test is \(n^2\) but the function cost is only n. 
-</p>
-</div>
-</div>
-</div>
-
 
 <div id="outline-container-Lecture%206%20CS019%20Quicksort" class="outline-2">
 <h2 id="Lecture%206%20CS019%20Quicksort">Lecture 6 CS019 Quicksort</h2>
@@ -2034,7 +1597,7 @@ We're watching the lecture titled Wed9/19/18. Reminder these lectures can be vie
 He remarks that their quicksort implementation is really a filter, and we should try quicksort using a built-in. Let's try it:
 </p>
 
-<pre class="example" id="orgcf6ea56">
+<pre class="example" id="orgdd4405c">
 fun combine(lt, p, gt):
   lt.append([list: p]).append(gt)
 end
@@ -2062,31 +1625,6 @@ end
 He ends the lecture trying to convey a bigger idea: use the structure of the data to come up with a simple solution, confirm the inefficient solution is correct, optimize it according to the bound you want. 
 </p>
 </div>
-
-<div id="outline-container-Lab%3A%20Big-O%202" class="outline-3">
-<h3 id="Lab%3A%20Big-O%202">Lab: Big-O 2</h3>
-<div class="outline-text-3" id="text-Lab%3A%20Big-O%202">
-<p>
-Now we can do the <a href="https://cs.brown.edu/courses/cs019/2017/big-O-lab-2.pdf">second lab</a>. The first task is a mental exercise, which you can figure out after reading the Wikipedia article on Quicksort implementation <a href="https://en.wikipedia.org/wiki/Quicksort#Implementation_issues">issues</a>. Several optimizations are listed in the article, one is switching to insertion sort when the number of elements remaining to be sorted are under some threshold. Since insertion sort efficiency for small lists in the best/average case scenario was repeatedly talked about in lectures I'm going to guess this is the solution they expect you to come up with since as we will see soon every single comparison sort style algorithm has the same worst case complexity, unless this whole task is just a trick to get you to see how hopeless it is to try and improve the worst case complexity of quicksort. 
-</p>
-
-<p>
-The next task is to read some <a href="http://www.cs.ubc.ca/~liorma/cpsc320/files/sorting-2x2.pdf">slides</a> up to and including the lower bound slides, coincidentally from the same school I once went to though I wish our classes were as good as CS019. The decision tree is somewhat confusing at first, a&lt;b means abc, acb, cab, as in 'a' appears before 'b' does in that permutation. Lower bound slide, n! leaves, there are 6 leaves (meaning branches with no children) and since this tree is n = 3, n! is 1x2x3 or 6. The lower bound proof look at the first example of logarithms <a href="https://en.wikipedia.org/wiki/Logarithm">here</a> if \(2^{h+1}\) \(\ge\) \(n!\) then \(h + 1\) \(\ge\) \(\log_2 n!\) because \(b^y = x\) is \(log_b x = y\). The task is to explain how this relates to our previous problem of attempting to optimize quicksort, and these slides prove that <i>every</i> comparison sort algorithm has the same worst case \(\Omega\)([n -&gt; n log n]) comparisons. However I recall him telling us in lecture that insertion sort for a small list can help with the average/best case (note worse case obviously stays the same). 
-</p>
-
-<p>
-1.1 Tasks, sum all integers in a list requires linear work to go through the list and get the elements so this must be minimum O([k -&gt; k]) unless they were in some kind of sequential order where you could use a closed form solution, like n(n -1)/2. Looking at the recurrence relations chapter in PAPL, this is doing constant work at every step, so T(k) = T(k - 1) + c where the c is addition of elements. The rest of the tasks look at the chapter on <i>Predicting Growth</i> in PAPL and see if there is a corresponding recurrence. They did however, make sure to point out we're using integers, so this opens the door to tricks we can do on only even or odd integers such as <a href="https://www.cs.cmu.edu/~15150/previous-semesters/2012-spring/resources/lectures/05.pdf">fast exponentiation</a> but even with those tricks the minimum runtime for going through an n sized list, and at each element doing constant work on an entire other list of size n won't change it's recurrence of T(k) = (k - 1) + k. 
-</p>
-
-<p>
-Formal analysis writeup, use it as a template to look at the other function.
-</p>
-
-<p>
-The last optional task asks how you would implement silly flipper in linear time. The original function calls reverse at every single element. Really all it's doing is linking first, last-rest, first-rest, last-rest - 1 .. so two lists input, the orig and reversed version, link(f, ff) and then on empty case use .take() to truncate. Linear reverse is described in the above pdf on fast exponentiation. 
-</p>
-</div>
-</div>
 </div>
 
 
@@ -2094,14 +1632,10 @@ The last optional task asks how you would implement silly flipper in linear time
 <h2 id="Assignment%202%3A%20Nile">Assignment 2: Nile</h2>
 <div class="outline-text-2" id="text-Assignment%202%3A%20Nile">
 <p>
-This is a great intro course as the assignments are similar to what you'd be doing outside of school, such as using a Python library to pull down data from a website API and it arrives as lists nested within some other data structure and needs to be unpacked and cleaned such as dealing with the newline character "\n" in this assignment. Here we are restricted from using list built-ins, so things like member(), append(), or distinct() you'll have to write these yourself, the book considers rewriting library functions as drill exercises since programming is learn by doing. 
+Here we are restricted from using list built-ins, so member, append, or distinct you'll have to write these yourself though PAPL already gives you uniq in chapter 10. The instructor considers rewriting library functions as drill exercises since programming is learn by doing. We need to fill in recommend and popular-pairs according to the <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">spec</a> we're given. Don't use their 2018 starter template, there's some kind of bug where accessing the content of a recommendation doesn't work. Write your own or use <a href="https://code.pyret.org/editor#share=0Bxr4FfLa3goOMmI2RnlkWUhCTzA">this</a>:
 </p>
 
-<p>
-We need to fill in recommend() and popular-pairs() according to the <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">spec</a> we're given. Don't use their 2018 starter template, there's some kind of bug where accessing the content of a recommendation doesn't work. Write your own or use <a href="https://code.pyret.org/editor#share=0Bxr4FfLa3goOMmI2RnlkWUhCTzA">this</a>:
-</p>
-
-<pre class="example" id="orga8f195e">
+<pre class="example" id="org1c37692">
 provide *
 provide-types *
 
@@ -2131,7 +1665,7 @@ end
 Examples to help understand what the assignment is asking for, you can run this to see if the tests are at least well formed:
 </p>
 
-<pre class="example" id="org7d2928a">
+<pre class="example" id="org5bdaec4">
 fun recommend(title :: String, book-records :: List&lt;File&gt;) -&gt; Recommendation:
   doc: ```Takes in the title of a book and a list of files,
        and returns a recommendation of book(s) to be paired with title
@@ -2162,10 +1696,10 @@ end
 </pre>
 
 <p>
-Start again by writing as if functions already exist for what you want to do, creating templates if you wish for a function. My strategy is map through the input, extract the file.content string of "Title\nTitle", and return a single list of all titles that have been recommended.  
+Again you can do whatever you want here like in DocDiff, my strategy is map through the input, extract the file.content string of "Title\nTitle", and return a single list of all titles that have been recommended.  
 </p>
 
-<pre class="example" id="org98a844e">
+<pre class="example" id="org8d968f2">
 fun recommend(title :: String, book-records :: List&lt;File&gt;) -&gt; Recommendation:
 
  list-of-titles = fold(lam(acc, elt): acc.append(elt) end, empty, map(lam(x): make-list(title, x) end, book-records))
@@ -2179,7 +1713,7 @@ end
 I wished for a function called make-list(), fed into a fold to append the return into a single [list: "title", "title"]:
 </p>
 
-<pre class="example" id="org223128a">
+<pre class="example" id="orged19882">
 # note recommend(title, book-records) are in scope here, if make-list is inside recommend
 # you can change parameters to make-list(f :: File) and freely use title inside body of make-list 
 
@@ -2193,6 +1727,7 @@ fun make-list(search-title :: String, f :: File) -&gt; List&lt;String&gt;:
     empty      
   end
 where:
+# ... other tests omitted
   make-list("A", file("", "A\nB\nC")) is [list: "B", "C"]
 end
 
@@ -2202,7 +1737,7 @@ end
 Another wished for function, f-to-list() which I expect extracts the f.content string, converts to a list and returns so it can be tested for membership. Notice I left the input to f-to-list() a single input, and the helper inside deals with accumulators/appending the newline character. 
 </p>
 
-<pre class="example" id="org03e47f3">
+<pre class="example" id="org78a081e">
 fun f-to-list(s :: String) -&gt; List&lt;String&gt;:
   doc:" Consumes string Title\nTitle and returns [list: Title, Title]"
 
@@ -2221,11 +1756,16 @@ fun f-to-list(s :: String) -&gt; List&lt;String&gt;:
   helper(empty, string-to-code-points(s + "\n"))
 where:
   f-to-list("1984\nHeart of Darkness") is [list: "1984", "Heart of Darkness"]
+# other tests here..
 end
 </pre>
 
 <p>
-Now complete wished for function produce-rec() which receives a list of all recommended titles, duplicates meaning they were recommended more than once. This is the first draft, the second draft is seeing where you can redesign to minimize the complexity or completely scrap the entire program and rewrite it from scratch, which is normal as you now know a little more about the requirements needed and can plan a better program. 
+And this is all you do, going on like this writing examples first to understand exactly what the output should be, when you start writing and get to a spot where you wish that your data was in a specific format or that you could accomplish something like counting a total, you insert a function call you haven't created yet wishing for that function, then create a stub for it to remind yourself to fill it in by pasting in the recursive template. You then do the same procedure for the wished for functions, anytime you need something wish for it, write a stub/paste the template. Since Pyret evaluates top down you want to continually drop these function templates above everything else. 
+</p>
+
+<p>
+When it seems like you've wished your way to the end, pick the smallest and easiest stub and start writing them moving up the chain of easy subroutines. By the time you get to your main functions your program has already been written, at this point you may want to trash everything you did and redo it now that you have a better idea of what needs to be done and this is totally normal.  
 </p>
 </div>
 
@@ -2235,17 +1775,17 @@ Now complete wished for function produce-rec() which receives a list of all reco
 <p>
 Using the 2019 <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">Nile</a> assignment spec, notice the new datatype for popular-pairs(), this will be inside a recommendation instead of a list of titles: recommendation(2, [list: pair(book1, book2), pair(book2, book3)] and the return annotation is popular-pairs() -&gt; Recommendation&lt;BookPair&gt;:
 </p>
-<pre class="example" id="org47c59ff">
+<pre class="example" id="orgb7f43c6">
 data BookPair:
     | pair(book1 :: String, book2 :: String)
 end
 </pre>
 
 <p>
-From the examples you write, notice the pattern is f paired w/r, fr paired w/rr, etc. 
+From the examples you write, the pattern is first paired w/rest, first-of-the-rest paired w/rest-of-the-rest, etc. 
 </p>
 
-<pre class="example" id="orgce52303">
+<pre class="example" id="orgea0e66b">
 input = [list: file("alist.txt", "1984\nAnimal Farm\nHigurashi\nLife of Pi"),
                file("blist.txt", "Animal Farm\nHigurashi\nLife of Pi"),
                file("clist.txt", "1984\nHeart of Darkness")]
@@ -2260,23 +1800,14 @@ recommendation(2, [list: pair("Animal Farm","Higurashi"), pair("Animal Farm", "L
 <h2 id="Assignment%203%3A%20Sortacle">Assignment 3: Sortacle</h2>
 <div class="outline-text-2" id="text-Assignment%203%3A%20Sortacle">
 <p>
-This assignment we're building a testing oracle. Let's try this using some of the design recipe shilled in the lectures: 
+This assignment we're building a testing oracle.
 </p>
-
-<ul class="org-ul">
-<li>Identify what must be represented and how it is represented</li>
-<li>State what kind of data the function consumes and produces</li>
-<li>Work through examples that illustrate the function's purpose</li>
-<li>Write an outline of the function</li>
-<li>Fill in the gaps</li>
-<li>Test it</li>
-</ul>
 
 <p>
 First function is generate-input(n :: Number) -&gt; List&lt;Person&gt;, it consumes a number, and produces a list of length n of type Person. Since this function is going to generate random person.name strings we can't directly match the output in a test case, but we can still confirm it has the correct properties of [list: person(name, number)]:
 </p>
 
-<pre class="example" id="org2facd9f">
+<pre class="example" id="orgdd16269">
 data Person:
   | person(name :: String, age :: Number)
 end
@@ -2300,11 +1831,11 @@ end
 </pre>
 
 <p>
-Pyret has a built-in function for generating a list <a href="https://www.pyret.org/docs/latest/lists.html#%28part._lists_repeat%29">repeat()</a> which we will need to write ourselves since this assignment doesn't allow using built-ins outside of the higher order functions and sort() or sort-by() though I used some list built-ins here and in the test cases since we already rewrote them in the Nile assignment. One way we could architect this is recursing on n, linking a list together. So num-random() gives us something resembling a random name, see this <a href="https://en.wikipedia.org/wiki/ASCII">article</a>, code points I guess could be between 97 and 122 or 'a' and 'z' though you could just leave this random and fuzzy test:
+Pyret has a built-in function for generating a list <a href="https://www.pyret.org/docs/latest/lists.html#%28part._lists_repeat%29">repeat()</a> which we will need to write ourselves since this assignment doesn't allow using built-ins outside of the higher order functions and sort() or sort-by() though I used some other list built-ins here and in the test cases since we already rewrote them in the Nile assignment. One way we could architect this is recursing on n, linking a list together. So num-random() gives us something resembling a random name, see this <a href="https://en.wikipedia.org/wiki/ASCII">article</a>, code points I guess could be between 97 and 122 or 'a' and 'z' though you could just leave this random and fuzzy test with all unicode code points:
 </p>
 
-<details id="org1b51645">
-<pre class="example" id="org778c14d">
+<details id="orgadecf5f">
+<pre class="example" id="orgedef9f0">
 fun generate-input(n :: Number) -&gt; List&lt;Person&gt;:
   doc:"Generate random n size list of person(name, age)"
 
@@ -2363,32 +1894,17 @@ end
 Now we have what the assignment is looking for:
 </p>
 
-<pre class="example" id="org8fdded7">
+<pre class="example" id="org5b88a91">
 &gt;&gt;&gt; generate-input(2)
 [list: person("vwqukq", 3), person("rljhrsijqcwyuglwjtnhc", 48)]
 </pre>
 
 <p>
-Next is a sort validation function that consumes two sorted lists of type Person, and compares if they are both the same returning a boolean true or false. This is similar to 15-122 when we would call an inefficient and obviously correct version of the same program in order to satisfy the postcondition the output is the same. Start with basic tests as usual:
+Next is a sort validation function that consumes two sorted lists of type Person, and compares if they are both the same returning a boolean true or false. To compare if the first sorted input list is equal to the correct sorted list, we could map2 over both lists to do equality tests, then fold over the list map2 returns comparing each entry with 'true'. Note this is inefficient as a case statement can break on the first instance of false instead of continuing through the entire linear list: 
 </p>
 
-<pre class="example" id="org2af1567">
-fun is-valid(test-input :: List&lt;Person&gt;, correct-input :: List&lt;Person&gt;) -&gt; Boolean:
-  ...
-where:
-  is-valid([list: person("a", 31), person("b", 30)],[list: person("b", 30), person("a", 31)]) is true
-  is-valid([list: person("c", 10), person("d", 10)]) is true 
-  is-valid(empty, empty) is true
-  is-valid([list: person("a", 31)], empty) is false
-end
-</pre>
-
-<p>
-To compare if the first sorted input list is equal to the correct sorted list, we could map2 over both lists to see if .age is equal, then fold over the list map2 returns comparing each entry with 'true'. This is inefficient as a case statement can break on the first instance of false instead of continuing through the entire linear list: 
-</p>
-
-<details id="org15e91c2">
-<pre class="example" id="org2528225">
+<details id="orgf2d3e3a">
+<pre class="example" id="orgf258157">
 fun is-valid(test-input :: List&lt;Person&gt;, correct-input :: List&lt;Person&gt;) -&gt; Boolean:
   doc: "Consumes l1 a sorted list and compares to l2 a correct-sorter() list"
 
@@ -2429,6 +1945,7 @@ fun is-valid(test-input :: List&lt;Person&gt;, correct-input :: List&lt;Person&g
     false  
   end
 where:
+  # some corner cases, omitted many tests
   is-valid(empty, empty) is true
   is-valid([list: person("a", 31)], empty) is false
   is-valid([list: person("", 31)], [list: person("a", 31)]) is false 
@@ -2440,8 +1957,8 @@ end
 Now we go about writing multiple buggy implementations of sorting algorithms and test these functions with oracle :: (List&lt;Person&gt; -&gt; List&lt;Person&gt;) -&gt; Boolean ie: oracle(insertion-sort)) or oracle(quick-sort):
 </p>
 
-<details id="org96af36b">
-<pre class="example" id="org716fada">
+<details id="org9604cce">
+<pre class="example" id="org77b8f44">
 fun combine(lt, p, gt):
   doc: "Used by quicksort"
   lt.append([list: p]).append(gt)
@@ -2499,23 +2016,46 @@ end
 </details>
 
 <p>
-These tests won't always pass, because sometimes incorrect-qsort() will produce the correct output, it's only on edge cases with duplicate ages that it won't pass our oracle test case. Quicksort will also sometimes produce a different sort sequence for multiple same ages where the names will differ than the sequence correct-sorter() is using. 
-</p>
-
-<p>
-If you were a student at Brown actually taking this course, you would have to write a much larger set of tests since the grading TAs would be running your oracle against a suite of incorrect sorting algorithms. Some things you'd need to check are: missing ages, all random inputs not just ASCII characters (fuzzy testing), empty names with the same or different ages. I sterilized the input to the oracle sorters but they probably don't when grading. 
+These tests won't always pass, because sometimes incorrect-qsort() will produce the correct output, it's only on edge cases with duplicate ages that it won't pass our oracle test case. Quicksort will also sometimes produce a different sort sequence for multiple same ages or similar names with different ages that were correctly but differently sorted than the sequence correct-sorter() uses.  
 </p>
 </div>
 
-<div id="outline-container-More%20testing" class="outline-3">
-<h3 id="More%20testing">More testing</h3>
-<div class="outline-text-3" id="text-More%20testing">
+<div id="outline-container-Check%20your%20work%20against%20the%20official%20solution" class="outline-3">
+<h3 id="Check%20your%20work%20against%20the%20official%20solution">Check your work against the official solution</h3>
+<div class="outline-text-3" id="text-Check%20your%20work%20against%20the%20official%20solution">
 <p>
-This is a vast field we can't hope to learn in this short workshop, you will be more than prepared after to learn <a href="http://cs.brown.edu/courses/cs195y/2020/pages/lectures.html">these</a> things <a href="https://www.cs.cmu.edu/~15414/index.html">yourself</a> and read <a href="https://cs.gmu.edu/~offutt/softwaretest/">books</a> on testing or see how software is designed by <a href="https://youtu.be/4l16sYRpfL8">industry</a> to take advantage of types.
+Write your solution first, then read this <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/wnk-use-rel-prob-pbt/">pdf</a>. He writes about how this course encourages <a href="http://cs.brown.edu/courses/cs195y/2020/pages/pdf/01.24-propertiesandoracles.pdf">property-based testing</a> which is a way to test properties instead of values and there is a thorough writeup about this sortacle assignment what they graded for and exactly what would fail their tests. 
+</p>
+
+<p>
+We find out they didn't really care about the generator only that it is a good drill exercise, they primarily tested is-valid extracting only that function to test. They broke the testing down into specific properties is-valid should have and exactly how they implemented their own tests for these properties. 
+</p>
+
+<p>
+My lazy implementation passed most of their grading tests, as my tests checked if outputs were not the same as inputs (missing names/ages/changed sizes) and although my tests caught whenever correct-sorter hit a corner case like quicksort where duplicate ages could have different order if sorted by age, I didn't handle this false is-valid with additional checks and since these sorts were still valid my implementation would be useless for automated testing. I also sanitized generate-input with checks on valid ages and names but did not check for out of bounds ages in is-valid so would have failed that test too. 
+</p>
+
+<p>
+The grading tests for oracle assignment (actually, all the assignments) are also in the same paper, don't read it until after you try your own implementation to see if you are picking up these property-based testing techniques, eventually you will.  
 </p>
 </div>
 </div>
+
+<div id="outline-container-Logic%20for%20Systems" class="outline-3">
+<h3 id="Logic%20for%20Systems">Logic for Systems</h3>
+<div class="outline-text-3" id="text-Logic%20for%20Systems">
+<p>
+The techniques they used in the paper are taught in their <i>Logic for Systems</i> class which I partially archived with some recorded lectures if you're interested in this kind of logical thinking about programs. We will do something similar later, reasoning about the specifications of programs and their behavior. 
+</p>
+
+<pre class="example" id="org16bcff7">
+Archive of 195y if you're interested before recorded lectures disappear
+magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
+</pre>
 </div>
+</div>
+</div>
+
 
 <div id="outline-container-Assignment%204%3A%20Data%20Scripting" class="outline-2">
 <h2 id="Assignment%204%3A%20Data%20Scripting">Assignment 4: Data Scripting</h2>
@@ -2529,7 +2069,7 @@ This assignment is yet more <a href="http://cs.brown.edu/courses/csci0190/2018/d
 <h4 id="is-palindrome%28%29%20and%20sum-largest%28%29">is-palindrome() and sum-largest()</h4>
 <div class="outline-text-4" id="text-is-palindrome%28%29%20and%20sum-largest%28%29">
 <p>
-Straight forward to figure out using map/map2/fold. When you map over nested lists the x in lam(x) is the entire nested list. 
+Straight forward to figure out using map/map2/fold.. 
 </p>
 </div>
 </div>
@@ -2549,7 +2089,7 @@ Notice two consecutive 0's in the test case which will screw up your list/empty 
 <p>
 Template is:
 </p>
-<pre class="example" id="orgff7b227">
+<pre class="example" id="org791b98f">
 data PHR:
   | phr(name :: String,
       height :: Number,
@@ -2591,7 +2131,7 @@ My solution was to write a helper function bmi(p :: PHR) -&gt; Number and then f
 <p>
 You could want tests for empty, one element, two elements, and the given assignment example:
 </p>
-<pre class="example" id="org68d0bf3">
+<pre class="example" id="org5fe425d">
 fun data-smooth(phrs :: List&lt;PHR&gt;) -&gt; List&lt;Number&gt;:
   doc: "Smooth heart rate data"
 ...
@@ -2625,7 +2165,7 @@ One way to try this assignment is recurse on length with (prior + l.first + l.re
 I wrote this template:
 </p>
 
-<pre class="example" id="org5ef434c">
+<pre class="example" id="org53b2104">
 # optional
 data Freq:
   | frequency(word :: String, count :: Number)
@@ -2645,7 +2185,7 @@ end
 </pre>
 
 <p>
-The assignment wants a list returned of words, in descending order of freq count, sorted by smallest string length if there's a tie. If the highest frequency count is greater than 1, then you return those words otherwise return the list sorted if there are no freq greater than 1 is how I interpret the assignment. I made a distinct list, mapped over it and at each distinct list entry filtered the total input list 'words' to get a list of same words, storing x.word and the length of whatever list that filter returned to get frequency("word", 3). I then obtained the highest frequency count, and used it to recurse on, creating a new list if x.count == count breaking on if count &lt; 2. Before appending to a helper function accumulator I used sort-by() from the <a href="https://www.pyret.org/docs/latest/lists.html#%28part._lists_sort-by%29">documentation</a>. If the highest freq count however was only 1 then I sorted and returned the list. Maybe you can engineer a simpler way. 
+The assignment wants a list returned of words, in descending order of freq count, sorted by smallest string length if there's a tie. If the highest frequency count is greater than 1, then you return those words otherwise return the list sorted if there are no freq greater than 1 is how I interpret the assignment. 
 </p>
 </div>
 </div>
@@ -2657,7 +2197,7 @@ The assignment wants a list returned of words, in descending order of freq count
 We're asked to take [list: 20151004, 150, 200, 175, 20151005, 0.002, 0.03, 20151007, 130, 0.54, 20151101, 78] and turn it into a daily maximum [list: max-hz(20151004, 200), max-hz(20151005, 0.03), max-hz(20151007, 130)] if the searched for month is October. Our template:
 </p>
 
-<pre class="example" id="orge854934">
+<pre class="example" id="orgf3ab46a">
 data Report:
   | max-hz(date :: Number, max-reading :: Number)
 end
@@ -2671,7 +2211,7 @@ end
 </pre>
 
 <p>
-I completed this with 2 functions maxx(), and a helper(). I filtered sensor-data for the month desired to get a distinctlist of all dates of that month [list: 20151004, 20151005, 20151007] since if you multiply month by 100, and add 20150000 you get the desired month. Then I called helper(distinct-list, sensor-data) which tested if f was a member of my distinct month list. If so I called maxx to find the highest count that day: link(max-hz(f, maxx(r), helper(distinct-list, r))). 
+I completed this with 2 functions maxx(), and a helper(). I filtered sensor-data for the month desired to get a distinct list of all dates of that month [list: 20151004, 20151005, 20151007] since if you multiply month by 100, and add 20150000 you get the desired month. Then I called helper(distinct-list, sensor-data) which tested if f was a member of my distinct month list. If so I called maxx to find the highest count that day: link(max-hz(f, maxx(r), helper(distinct-list, r))). 
 </p>
 </div>
 </div>
@@ -2682,13 +2222,13 @@ I completed this with 2 functions maxx(), and a helper(). I filtered sensor-data
 <h2 id="Lecture%207%20CS019%20Trees">Lecture 7 CS019 Trees</h2>
 <div class="outline-text-2" id="text-Lecture%207%20CS019%20Trees">
 <p>
-We're watchin Fri9/21/18 lecture on 2D tree shaped data w/guest lecturer <a href="http://cs.brown.edu/~tbn/publications/">Tim Nelson</a> who is an expert in formal methods such as proving correct a network security policy as an example or formally verifying software models something we will be doing in the courses after this one. An interesting paper from his page authored with Prof K you should read is <i>The Human in Formal Methods</i>. In it they write about porting the method of example writing we've been doing to this domain. A common learning mistake that students make is talked about, in that they write programs before they have understood the problem, as a result they 'solve' the wrong problem, which misdirected from the learning goals. We so far have been writing examples and tests, so are a bit better at understanding the problem before writing the software but this paper makes it clear we should probably be writing much more examples and tests, and even try finding invariants. 
+We're watchin Fri9/21/18 lecture on 2D tree shaped data w/guest lecturer <a href="http://cs.brown.edu/~tbn/publications/">Tim Nelson</a> who is an expert in formal methods such as proving correct a network security policy as an example or formally verifying software models something we will be doing in the courses after this one. An interesting paper from his page authored with Prof K you should read is <i>The Human in Formal Methods</i>. In it they write about porting the method of example writing we've been doing to this domain. A common learning mistake that students make is talked about, in that they write programs before they have understood the problem, as a result they 'solve' the wrong problem, which misdirected from the learning goals. If you read the paper linked in the first DocDiff assignment you already know this.
 </p>
 
 <p>
 The mutual recursive datatypes, to understand them write out your own tree:
 </p>
-<pre class="example" id="org3c8c598">
+<pre class="example" id="org1bf0344">
        a 
       /  \   
     b    none     
@@ -2717,7 +2257,7 @@ c has none
 <h3 id="Reading%20Chapter%2011">Reading Chapter 11</h3>
 <div class="outline-text-3" id="text-Reading%20Chapter%2011">
 <p>
-Cases are introduced here after we have used them multiple times, but now you know the meaning of the term data variant. You create a custom datatype, and cases will take it apart. 
+Cases are finally introduced here after we have used them multiple times, but now you know the meaning of the term data variant. You create a custom datatype, and cases will take it apart. 
 </p>
 </div>
 </div>
@@ -2736,50 +2276,8 @@ Notice the typo in oldest-song() examples, using lvar instead of lver (always ru
 <h3 id="Reading%20Chapter%2013">Reading Chapter 13</h3>
 <div class="outline-text-3" id="text-Reading%20Chapter%2013">
 <p>
-The recursive data definitions that we saw in Lecture 7, and they hand step through a recursive function. Seems like this should be in chapter 1. The design recipe template from HtDP book for recursive data definitions is also shown. For the 3 exercises, cut and paste the recursive template and try filling it in to complete the exercises, notice how easy it is, that's why they shill the design recipe. 
+The recursive data definitions that we saw in Lecture 7, and they hand step through a recursive function. Seems like this should be in chapter 1. The design recipe template from HtDP book for recursive data definitions is also shown if you didn't read it from previously in this workshop. 
 </p>
-
-<pre class="example" id="org3a7ed09">
-data NumList:
-  | nl-empty
-  | nl-link(first :: Number, rest :: NumList)
-end
-
-#|
-fun num-list-fun(nl :: NumList) -&gt; ???:
-  cases (NumList) nl:
-    | nl-empty =&gt; ...
-    | nl-link(first, rest) =&gt;
-      ... first ...
-      ... num-list-fun(rest) ...
-  end
-end
-|#
-
-</pre>
-<p>
-The HtDP method is first uncomment the template, change the function name and the recursive call name to w/e name your function is. Change the annotation for the return such as -&gt; Boolean. If you add a parameter, add one to the recursive call too. Now the function pretty much fills out itself. Try the exercises, the very last one I interpreted as:
-</p>
-
-<pre class="example" id="org2c2b8b1">
-data NumListList:
-  | nll-empty
-  | nll-link(first :: NumList, rest :: NumListList)
-end
-
-fun sum-of-lists(nl :: NumListList) -&gt; NumList:
-  doc: "We already wrote num-list-sum() as an exercise"
-  cases (NumListList) nl:
-    | nll-empty =&gt; nl-empty
-    | nll-link(first, rest) =&gt;
-      nl-link(num-list-sum(first), sum-of-lists(rest))
-  end
-end
-test = nll-link(nl-link(1, nl-link(3, nl-empty)), nll-link(nl-link(3, nl-link(4, nl-empty)), nll-empty))
-sum-of-lists(test)
-
-&gt;&gt;nl-link(4, nl-link(7, nl-empty))
-</pre>
 </div>
 </div>
 </div>
@@ -2788,7 +2286,7 @@ sum-of-lists(test)
 <h2 id="Lecture%208%20CS019%20Sets">Lecture 8 CS019 Sets</h2>
 <div class="outline-text-2" id="text-Lecture%208%20CS019%20Sets">
 <p>
-We're watching Mon9/24/18 lecture on sets. When he shortens insert() to equal link, try it in the pyret repl: insert = link, insert(2, empty) produces [list: 2]. The end of this lecture discussing the big-O complexity of both representations he points out the inefficient blue representation is better depending on what you care about, like appending a log you often don't look at. Note some of the students had problems figuring out the big-O, it's expected at this stage you only have a familiarity with costs and that true understanding will come later with more experience and during an algorithms book/class which has various analysis techniques we haven't been taught yet that make it much easier.  
+We're watching Mon9/24/18 lecture on sets. When he shortens insert() to equal link, try it in the pyret repl. The end of this lecture discussing the big-O complexity of both representations he points out the inefficient representation is better depending on what you care about, like appending a log you often don't look at. 
 </p>
 </div>
 
@@ -2802,18 +2300,15 @@ We haven't covered 18.2 yet so just reading 18.1, covers what we just saw in the
 <p>
 There's a link to the <a href="https://papl.cs.brown.edu/2019/glossary.html">glossary</a>, interesting definitions in there such as links to a paper on coalgebras/coinduction. In the size() recurrence, remember the chapter <i>Predicting Growth</i> where common recurrences are listed such as T(k) = T(k - 1) + k is \([k \rightarrow k^2]\) because it's closed form solution is: \(\frac{k^2 + k}{2}\) hence T(d) = d + (d - 1) is also \([d \rightarrow d^2]\).
 </p>
+</div>
+</div>
 
-<p>
-End of 18.1.3 notes your program could keep running stats about which representation of insert() to use and make a decision. The exercises here you can do in your head, thinking of types to give these operations like subset() or how remove is going to work, obviously it must remove all the duplicates if the representation allows for duplicates which is easy to implement if f == removed-thing, skip over it and link the rest. I'm not exactly sure about the last exercise, I'm assuming they want us to consider that type LSet = List is not good enough, and to create an entire new datatype of nl-set since Set datatype is already built-in, like we did for nl-link.
-</p>
-</div>
-</div>
 
 <div id="outline-container-Reading%20Chapter%2015" class="outline-3">
 <h3 id="Reading%20Chapter%2015">Reading Chapter 15</h3>
 <div class="outline-text-3" id="text-Reading%20Chapter%2015">
 <p>
-This is short unfinished <a href="https://papl.cs.brown.edu/2020/testing.html">chapter</a> on testing. In testing blocks we have some new binary and unary test <a href="https://www.pyret.org/docs/latest/testing.html">operators</a> we can use like <i>expr1 is%(function) expr2</i> or <i>expr1 satisfies (function)</i>. See examples in the documentation. 
+This is short unfinished <a href="https://papl.cs.brown.edu/2020/testing.html">chapter</a> on testing. In testing blocks we have some new binary and unary test <a href="https://www.pyret.org/docs/latest/testing.html">operators</a> we can use like <i>expr1 is%(function) expr2</i> or <i>expr1 satisfies (function)</i>. See examples in the documentation.
 </p>
 </div>
 </div>
@@ -2826,8 +2321,8 @@ This is short unfinished <a href="https://papl.cs.brown.edu/2020/testing.html">c
 Let's build a testing <a href="http://cs.brown.edu/courses/csci0190/2019/oracleoracle.html">oracle</a>. There's a starter <a href="https://code.pyret.org/editor#share=1ZCe4jQepT5vars3-1dK8jBPVhAllLBoq&amp;v=7aff971">template</a> we need to access the function they give us matchmaker() and is-hire() 
 </p>
 
-<details id="org7363168">
-<pre class="example" id="org71c3794">
+<details id="orge7c1e15">
+<pre class="example" id="org5964109">
 # CSCI0190 (Fall 2018)
 provide *
 provide-types *
@@ -2891,7 +2386,7 @@ end
 Run the template then try to give matchmaker some inputs to see what it does:
 </p>
 
-<pre class="example" id="org0561790">
+<pre class="example" id="org3be20bb">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 # Note matchmaker writeup: it is 0 to n-1 indexed, so 3 lists means 0 - 2 
@@ -2901,7 +2396,7 @@ matchmaker(companies, candidates)
 </pre>
 
 <p>
-First Let's understand the matching algorithm, we don't have to write one ourselves but we have to know how it works in order to test all the false matchmaker algorithms in our oracle. Wikipedia has a section on the <a href="https://en.wikipedia.org/wiki/Stable_marriage_problem#Algorithmic_solution">Gale-Shapely algorithm</a>. As usual Wikipedia is incomplete or has imprecise language, so let's look at the actual <a href="http://www.eecs.harvard.edu/cs286r/courses/fall09/papers/galeshapley.pdf">paper</a>. Scroll down to Theorem 1: <i>There always exists a stable set of marriages</i> and look at the proof for the algorithm:
+First Let's understand the matching algorithm, we don't have to write one ourselves but we have to know how it works in order to test all the false matchmaker algorithms in our oracle. Let's look at the actual <a href="http://www.eecs.harvard.edu/cs286r/courses/fall09/papers/galeshapley.pdf">paper</a>. Scroll down to Theorem 1: <i>There always exists a stable set of marriages</i> and look at the proof for the algorithm:
 </p>
 
 <ul class="org-ul">
@@ -2922,7 +2417,7 @@ First Let's understand the matching algorithm, we don't have to write one oursel
 The 2019 assignment writeup contains a few hints, such as 'be cautious about using the provided matchmaker function in your oracle as this assumes that there is only one right answer to a given instance of the stable hiring problem'. I translate this to mean there could be many permutations of the stable-hiring problem which are still correct, however the Gale-Shipley algorithm produces the exact same matching everytime if the company is making offers, and candidates rejecting. What if the roles are reversed, if it is candidate making offers and company rejecting, is the matching then different? We have 2 inputs into matchmaker but it doesn't say which one is actually making the offers and which input is rejecting. We should try altering the inputs and see what happens: 
 </p>
 
-<pre class="example" id="org73c3e22">
+<pre class="example" id="org55b3877">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 
@@ -2934,7 +2429,7 @@ candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 </pre>
 
 <p>
-They're different, so there is indeed more than one solution to the problem depending on if the bias is towards candidates or companies. So how are we going to test. Googling around I find an old book, entirely on the Stable Marriage problem <a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15251-f10/Site/Materials/Lectures/Lecture21/lecture21.pdf">here</a>. On page 8 <i>Stability Checking</i> we are given a stability checking algorithm and on page 7 this is more clearly defined. For each company C, look at their preferences and check that each candidate they prefer is not matched to somebody else if candidate also prefers company C. The assignment also wants us to repeatedly test matchmaker algorithms to ensure they still produce stable matchings over many random inputs.
+They're different, so there is indeed more than one solution to the problem depending on if the bias is towards candidates or companies. So how are we going to test. Googling around I find an old book, entirely on the Stable Marriage problem <a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15251-f10/Site/Materials/Lectures/Lecture21/lecture21.pdf">here</a>. On page 8 <i>Stability Checking</i> we are given a stability checking algorithm and on page 7 this is more clearly defined: For each company C, look at their preferences and check that each candidate they prefer is not matched to somebody else if candidate also prefers company C.
 </p>
 
 <ul class="org-ul">
@@ -2949,21 +2444,14 @@ They're different, so there is indeed more than one solution to the problem depe
 <li>check they are actually type Hire</li>
 <li>check they are stable as per the algorithm in that book</li>
 </ul></li>
-<li>False matchmakers to try and fool your tests with:
-<ul class="org-ul">
-<li>shuffle the pairs randomly</li>
-<li>return a duplicate matching</li>
-<li>return empty/n-1 or n + 1 pairs</li>
-<li>swap companies w/candiates</li>
-</ul></li>
 </ul>
 
 <p>
 This was my good enough generate-input function for test inputs &lt; num = 25, more than that and needs optimization, like using a dict or keep a sorted accumulator to check for dupes. 
 </p>
 
-<details id="org771d809">
-<pre class="example" id="org16f65ad">
+<details id="org9070b32">
+<pre class="example" id="orgd275c0f">
 fun generate-input(num :: Number) -&gt; List&lt;List&lt;Number&gt;&gt;:
   doc: 'generates a list of candidates or companies for a group of size num'
   fun test-for-dupes(input :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
@@ -3003,6 +2491,32 @@ end
 </pre>
 </details>
 </div>
+
+<div id="outline-container-Check%20your%20solution" class="outline-3">
+<h3 id="Check%20your%20solution">Check your solution</h3>
+<div class="outline-text-3" id="text-Check%20your%20solution">
+<p>
+The same <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/wnk-use-rel-prob-pbt/">paper</a> we read for Sortacle assignment there is a writeup for this one too. Once again they didn't really care that much about the input generation functions. Checking my own work they cared that is-valid tested for stability, uniqueness and completeness which my tests all covered mainly because I found that old book on the stable matchmaking problem that handed me a stability testing algorithm and from years of reading hacky software I just expected disaster so tested for dupes and incompleteness. 
+</p>
+
+<p>
+How they came up with these tests is a good read, they used Alloy taught in cs195y (also the book <i>Software Foundations</i> by Jackson) to produce a model where all three properties were satisfied, then had Alloy produce unstable matchings while preserving the other two properties unique and complete. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Future%20assignments%20auditing" class="outline-3">
+<h3 id="Future%20assignments%20auditing">Future assignments auditing</h3>
+<div class="outline-text-3" id="text-Future%20assignments%20auditing">
+<p>
+All the 'solutions' to the assignments are in the rest of the paper, meaning what property they wanted the student to notice and test for. If you want you can do those assignments like the instructors: come up with properties to test for, write these down on paper. Come up with a relational test for each assignment. Think about what multiple correct outputs could happen for a single input. Write skeleton tests for these then read what they wanted in the paper. 
+</p>
+
+<p>
+Of course it is good practice/drill to actually program from scratch each assignment if you lack experience and this of course will be much easier after you write down on paper all the properties you think should be tested. You may want to try implementing <a href="http://cs.brown.edu/courses/cs195y/2020/pages/pdf/Oracle.pdf">topological sort</a> from cs195y as there's a full solution for it in the paper noting that many students completely bombed this assignment, primarily the Python background students whereas the cs19 students and the Java background students did well on it. If you read why the author's conjecture it's because Python enables a sloppy method of programming, making it unsuitable for beginning students. Now you know why you aren't doing a Python curriculum that 99.9% of all people seem to recommend whenever you type into google 'how do I learn to program'.      
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-Lecture%209%20CS019%20Logarithmic%20Growth" class="outline-2">
@@ -3038,7 +2552,7 @@ All of <a href="https://papl.cs.brown.edu/2020/set-representations.html#%28part.
 Let's try the CS019 lab for <a href="https://zacharyespiritu.com/documents/teaching/csci0190/iterating-over-trees-lab.pdf">trees</a>. The first part is just thought exercises then the lab offers us stencil code for the BT tree lab sections:
 </p>
 
-<pre class="example" id="orgbd0a3fa">
+<pre class="example" id="orgc411448">
 #  _____                _                                      _ 
 # |_   _| __ ___  ___  | |_ _ __ __ ___   _____ _ __ ___  __ _| |
 #   | || '__/ _ \/ _ \ | __| '__/ _` \ \ / / _ \ '__/ __|/ _` | |
@@ -3076,7 +2590,7 @@ end
 First make a tree, run it, and type 'a-tree' into pyret interpreter and click the output to see the right and left branches, or a-tree.left or a-tree.right
 </p>
 
-<pre class="example" id="org7d47b64">
+<pre class="example" id="org1ef94c8">
 a-tree =
   node(5,
     node(4, 
@@ -3098,7 +2612,7 @@ The lab wants us to write various traversals, here's what I wrote for btree-in-o
 </p>
 
 
-<pre class="example" id="org223bf8a">
+<pre class="example" id="orgec15d7e">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -3142,7 +2656,7 @@ end
 Another lab where we rewrite map/filter/fold. Below when you see Prof K's lecture on knowledge transfer you'll understand why he makes us do this over and over. This is my first attempt at map, I wrote it like he writes software on the board in class thinking through the data definition:
 </p>
 
-<pre class="example" id="orged41db7">
+<pre class="example" id="orgd21d267">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -3193,7 +2707,7 @@ Note that btree-fold the lab wants you to convert the tree to a list, apply f to
 I interpret the <a href="https://cs.brown.edu/courses/cs019/2018/filesystemfilesystem.html">assignment</a> to mean this directory tree/model:
 </p>
 
-<pre class="example" id="orgdbb8261">
+<pre class="example" id="org33c01fd">
 # this is missing from my template:
 type Path = List&lt;String&gt;
 
@@ -3210,7 +2724,7 @@ filesystem = (dir("TS", [list:
 Recall that Pyret allows you to write methods for datatype, here's an example for du-dir() where I wrote a .size() method you can call on any directory:
 </p>
 
-<pre class="example" id="org750f5a1">
+<pre class="example" id="org726cbaa">
 provide *
 provide-types *
 
@@ -3273,7 +2787,7 @@ end
 This is all in the Pyret documentation, and I looked at the Pyret source on github to see how to chain multiple methods:
 </p>
 
-<pre class="example" id="orgd8ce889">
+<pre class="example" id="org6da433c">
 data Dir:
   | dir(name :: String, ds :: List&lt;Dir&gt;, fs :: List&lt;File&gt;) with:
     method size(self :: Dir) -&gt; Number:
@@ -3300,7 +2814,7 @@ The path method there's numerous ways you could architect this to be better. I d
 Watching lecture titled Mon/10/01/18. In the examples of ones, everytime you invoke 'ones' you get lzlink(1, &lt;thunk&gt;) which is one, plus a way to get more ones if called again. We're asked to write our own map, you could also try it with cases:
 </p>
 
-<pre class="example" id="orgf482506">
+<pre class="example" id="org6596440">
 fun maps&lt;A, B&gt;(f :: (A -&gt; B), s :: Lz&lt;A&gt;) -&gt; Lz&lt;B&gt;:
   cases (Lz&lt;A&gt;) s:
     | lzlink(e, r) =&gt; lzlink(f(e), {(): maps(f, rst(s))}) 
@@ -3326,7 +2840,7 @@ end
 </pre>
 
 <p>
-The type variables annotation he used maps&lt;A,B,C&gt;(f :: (A -&gt; B),..)-&gt; Stream&lt;C&gt;:  is in the streams chapter of the text and in <a href="https://papl.cs.brown.edu/2020/para-poly.html">Chapter 27</a>. 
+The type variables annotation he used maps&lt;A,B,C&gt;(f :: (A -&gt; B),..)-&gt; Stream&lt;C&gt;: is in the streams chapter of the text and in <a href="https://papl.cs.brown.edu/2020/para-poly.html">Chapter 27</a>. 
 </p>
 </div>
 
@@ -3334,11 +2848,7 @@ The type variables annotation he used maps&lt;A,B,C&gt;(f :: (A -&gt; B),..)-&gt
 <h3 id="Reading%20Chapter%2016">Reading Chapter 16</h3>
 <div class="outline-text-3" id="text-Reading%20Chapter%2016">
 <p>
-The chapter on streams will explain some calculus notation converting it to a pyret function. The symbol \(\varepsilon\) is epsilon which is a small positive qty, and "functions of arity one" means one parameter or input. There's a <a href="https://www.pyret.org/docs/latest/A_Tour_of_Pyret.html#%28part._.For_loops%29">for loop</a> used in the check block which is an iterator. We learn more about the ( -&gt;) notation, meaning no arguments. 
-</p>
-
-<p>
-The fibonacci example, change the starting values around so you can see what's going on. You first lz-link 0 and 1 then those values are mapped over, producing a new value, which gets mapped over again etc. 
+The chapter on streams will explain some calculus notation converting it to a pyret function. The symbol \(\varepsilon\) is epsilon which is a small positive qty, and "functions of arity one" means one parameter or input. There's a <a href="https://www.pyret.org/docs/latest/A_Tour_of_Pyret.html#%28part._.For_loops%29">for loop</a> used in the check block which is an iterator. We learn more about the ( -&gt;) notation, meaning no arguments. The fibonacci example, change the starting values around so you can see what's going on. You first lz-link 0 and 1 then those values are mapped over, producing a new value, which gets mapped over again etc. 
 </p>
 </div>
 </div>
@@ -3351,7 +2861,7 @@ The fibonacci example, change the starting values around so you can see what's g
 The streams lab is <a href="https://cs.brown.edu/courses/cs019/2016/streams-lab.pdf">here</a>, mostly adapted from the chapter we just read in PAPL. Everything here we've already seen. We already wrote map and map2, try to write your own filter/fold for streams:
 </p>
 
-<pre class="example" id="org80c0d95">
+<pre class="example" id="orgada82d9">
 fun lz-fold&lt;A, B&gt;(f :: (A, B -&gt; A), base :: A, s :: Stream&lt;B&gt;) -&gt; Stream&lt;A&gt;:
   lz-link(f(base, lz-first(s)), lam(): lz-fold(f, f(base, lz-first(s)), lz-rest(s)) end) 
 end
@@ -3394,20 +2904,6 @@ Lecture Fri10/05/18. Using same reactor model to make a point about differential
 </div>
 </div>
 
-
-<div id="outline-container-Assignment%207%3A%20Updater" class="outline-2">
-<h2 id="Assignment%207%3A%20Updater">Assignment 7: Updater</h2>
-<div class="outline-text-2" id="text-Assignment%207%3A%20Updater">
-<p>
-If you did the tree lab earlier this <a href="https://cs.brown.edu/courses/cs019/2018/updaterupdater.html">assignment</a> will be easy to prototype then gets harder as you try and optimize, like the writeup suggests make a working prototype first then optimize. Write your own datatype for Cursor&lt;A&gt;, for variants write a node index, the children/subtrees of that node, and another variant for everything else in the tree or 'above' the cursor. The Lists library has helpful built-ins such as get() and set() and filter to change the list of subtrees in mytree.children. The analysis they want was done in big-O lab 2, writing up a formal analysis describing the run-time complexity of each operation. Can you describe how your own code works and it's runtime complexity? That's all this is asking. 
-</p>
-
-<p>
-Option <a href="https://www.pyret.org/docs/latest/option.html">datatype</a> is explained in the Pyret documentation, used if a function may not return a value. Notice the cases on Option, some(a) returns value 'a' and none returns whatever value you want instead of nothing, like 0 or a string 'empty'.
-</p>
-</div>
-</div>
-
 <div id="outline-container-Lecture%2014%20CS019%20Aliasing" class="outline-2">
 <h2 id="Lecture%2014%20CS019%20Aliasing">Lecture 14 CS019 Aliasing</h2>
 <div class="outline-text-2" id="text-Lecture%2014%20CS019%20Aliasing">
@@ -3415,16 +2911,8 @@ Option <a href="https://www.pyret.org/docs/latest/option.html">datatype</a> is e
 Lecture Wed10/10/18. A great lecture about memory aliasing, introduces directed acyclic graphs, which is what <a href="https://eagain.net/articles/git-for-computer-scientists/">git</a> is.   
 </p>
 </div>
+</div>
 
-<div id="outline-container-Reading%20Chapter%2020" class="outline-3">
-<h3 id="Reading%20Chapter%2020">Reading Chapter 20</h3>
-<div class="outline-text-3" id="text-Reading%20Chapter%2020">
-<p>
-Covers what we just did in lecture. 
-</p>
-</div>
-</div>
-</div>
 
 <div id="outline-container-Lecture%2015%20CS019%20Monads%2C%20Sequential%20Computation" class="outline-2">
 <h2 id="Lecture%2015%20CS019%20Monads%2C%20Sequential%20Computation">Lecture 15 CS019 Monads, Sequential Computation</h2>
@@ -3440,175 +2928,77 @@ The end of the lecture he walks through the code of a pyret library he wrote, ex
 </div>
 
 
-<div id="outline-container-Assignment%208%3A%20Continued%20Fractions" class="outline-2">
-<h2 id="Assignment%208%3A%20Continued%20Fractions">Assignment 8: Continued Fractions</h2>
-<div class="outline-text-2" id="text-Assignment%208%3A%20Continued%20Fractions">
+<div id="outline-container-Lectures%20Memory%20mutation" class="outline-2">
+<h2 id="Lectures%20Memory%20mutation">Lectures Memory mutation</h2>
+<div class="outline-text-2" id="text-Lectures%20Memory%20mutation">
 <p>
-A stream <a href="http://cs.brown.edu/courses/csci0190/2018/contfraccontfrac.html">assignment</a>. We've already done most of this assignment in stream labs and the book/lectures. The big-O complexity analysis request all this is asking you to do is understand what you just built seeing if you can explain it's runtime complexity and whatever performance tradeoffs you made, just like we did in updated assignment. This is a skill you build over time through practice learning how to write better software.  
+We skipped graphs and union-find/min spanning trees because we will come back when do them later. For now let's learn about mutation. Watch lecture 23 Wed10/31/18, and skip to 40:00. Here we learn about objects such as using the 'this' keyword in java/javascript and memory referencing in C/C++. Everything in this lecture is in PAPL too such as identical which means two things are identical if changing one thing also changes the other. 
 </p>
 
 <p>
-This is a highly useful exercise, you will probably come across streams like this for approximations in a lot of software.
+Your lecture should start with the Box datatype. "Your programs now have a notion of time" aka state, the state of things at time x. The {} expression is an <a href="https://www.pyret.org/docs/latest/Expressions.html#%28elem._%28bnf-prod._%28.Pyret._obj-expr%29%29%29">object</a>. 
 </p>
 </div>
 
-<div id="outline-container-Streams%20in%20Python" class="outline-3">
-<h3 id="Streams%20in%20Python">Streams in Python</h3>
-<div class="outline-text-3" id="text-Streams%20in%20Python">
+<div id="outline-container-Lecture%2024%20Memory%20refs" class="outline-3">
+<h3 id="Lecture%2024%20Memory%20refs">Lecture 24 Memory refs</h3>
+<div class="outline-text-3" id="text-Lecture%2024%20Memory%20refs">
 <p>
-Try Numerical methods w/Functional programming in <a href="http://ix.cs.uoregon.edu/~pdownen/notes/nmfp.pdf">Python</a>, it shows how to create the same kind of streams to refine a result to better and better accuracy. To understand the weird init syntax see <a href="https://www.cs.cmu.edu/~112/notes/notes-oop.html">this</a>, note the video button for a YouTube tutorial.
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-Assignment%209%3A%20JoinLists" class="outline-2">
-<h2 id="Assignment%209%3A%20JoinLists">Assignment 9: JoinLists</h2>
-<div class="outline-text-2" id="text-Assignment%209%3A%20JoinLists">
-<p>
-We find out what reduce is in this assignment, and an introduction to writing code for parallel architecture. If you read the lectures notes on <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s20/lect.html">trees</a> from COMP212 it has some insight into split/merge. Whenever you see a variable named 'elt' in assignments or the pyret docs it means element. 
+More of the same topic, watching lecture Fri 11/2/18. The reference remains the same, the value can change. Once he goes back to talking about union-find abandon the lecture, we will return and watch it when we learn it in competitive programming.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Graphs" class="outline-2">
-<h2 id="Graphs">Graphs</h2>
-<div class="outline-text-2" id="text-Graphs">
+<div id="outline-container-Lecture%2025%20Closures" class="outline-3">
+<h3 id="Lecture%2025%20Closures">Lecture 25 Closures</h3>
+<div class="outline-text-3" id="text-Lecture%2025%20Closures">
 <p>
-Lecture 16 - 21 cover the chapter on graphs. Try to read through the text first before watching the lectures they will probably make more sense. The {} expression is an <a href="https://www.pyret.org/docs/latest/Expressions.html#%28elem._%28bnf-prod._%28.Pyret._obj-expr%29%29%29">object</a>. 
+Watching <a href="https://youtu.be/munnj3BXJCc">lecture</a> Mon 11/5/18. A part of this lecture is offscreen, but the point is equal-never is impossible to implement with state/mutation because of time, in the future it could be equal if mutated. A closure gives you dynamic environment, from the book <i>Programming in SML</i>:    
 </p>
 
+<blockquote>
 <p>
-21.2.1 <i>Links by Name</i> notice how he writes the graph representation using custom types, allowing for cases on these types to extract the individual nodes or whatever else and if your language has the ability (Pyret does) you could type check the use of all these types like Node and Graph or Key. Now you know essentially what statically typed functional programs do: represent the data however you want using a bunch of custom types so you can more easily pick the data apart with cases, the compiler will check everything is logically sound according to the types you declared but with much stronger tools such as exhaustive pattern matching which you can learn about <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s20/lect.html">here</a>.    
+One way to understand what’s going on here is through the concept of a closure, a technique for implementing higher-order functions. When a function expression is evaluated, a copy of the environment is attached to the function. Subsequently, all free variables of the function (i.e., those variables not occurring as parameters) are resolved with respect to the environment attached to the function; the function is therefore said to be “closed” with respect to the attached environment. This is achieved at function application time by “swapping” the attached environment of the function for the environment active at the point of the call. The swapped environment is restored after the call is complete.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-Reading%20Chapter%2022" class="outline-3">
+<h3 id="Reading%20Chapter%2022">Reading Chapter 22</h3>
+<div class="outline-text-3" id="text-Reading%20Chapter%2022">
+<p>
+Identical, closures and recursion is explained in this <a href="https://papl.cs.brown.edu/2020/State__Change__and_More_Equality.html">chapter</a>. Chapter 32 also has the cs173 <a href="https://papl.cs.brown.edu/2020/implementing-mutation.html">version</a> of closures.
 </p>
 </div>
 </div>
 
+<div id="outline-container-Lecture%2026%20The%20Halting%20problem" class="outline-3">
+<h3 id="Lecture%2026%20The%20Halting%20problem"><span class="todo TODO">TODO</span> Lecture 26 The Halting problem</h3>
+</div>
+</div>
 
-<div id="outline-container-Lecture%2022%20CS019%20Choose%20your%20own%20curriculum" class="outline-2">
-<h2 id="Lecture%2022%20CS019%20Choose%20your%20own%20curriculum">Lecture 22 CS019 Choose your own curriculum</h2>
-<div class="outline-text-2" id="text-Lecture%2022%20CS019%20Choose%20your%20own%20curriculum">
+<div id="outline-container-The%20rest%20of%20the%20cs19%20lectures" class="outline-2">
+<h2 id="The%20rest%20of%20the%20cs19%20lectures">The rest of the cs19 lectures</h2>
+<div class="outline-text-2" id="text-The%20rest%20of%20the%20cs19%20lectures">
 <p>
-Watching Mon 10/29/18 lecture, some previous cs019 students come in to talk about other courses they now do and answer questions. Prof K has some suggestions of what students should consider taking, which you can look up yourself and build your own self-directed curriculum:
+We will take them as these topics come up:
 </p>
-
 <ul class="org-ul">
-<li>His sequel to this course, CS1730 which covers the last half of PAPL and plai.org, if you check his YouTube account he has some lectures he's putting on there I'm assuming for the new version of plai.org in Spring 2021</li>
-<li><a href="http://cs.brown.edu/courses/csci1450/lectures.html">CS145</a> their probability and statistics course. Look at the textbook used in 145, it's Bertsekas and Tsitsiklis, which is also an <a href="https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/index.htm">Open Courseware</a> course or try the <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/index.htm">scholar version</a> taught by Prof Tsitsiklis because it comes with all the recitations too. We will be using Ryan O'donnell's probability notes instead in the AI workshop.</li>
-<li>CS22 is encouraged, looking at it's <a href="https://cs.brown.edu/courses/csci0220/#section4-lectures">page</a> it uses MIT's Math for CS pdf, this <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/">whole course</a> is public.</li>
-<li>CS1951t is their VR <a href="https://sites.google.com/view/brown-vr-sw-review-2018/home">course</a>, it seems to use that wiki as their lecture notes if you want to hack around with virtual environments.</li>
-<li><a href="http://cs.brown.edu/courses/cs195y/2020/pages/lectures.html">CS195y</a> is a course for modeling the state of programs that manipulate memory to prove protocols obey desired properties. In the past you went through the <a href="https://softwareabstractions.org/">Alloy book</a> but I'm guessing since Alloy has such poor documentation they now use their own racket implementation of Alloy called <a href="https://github.com/tnelson/Forge/blob/master/forge/docs/basicForgeDocumentation.md">Forge</a>. If you notice all the zoom lectures from 3/13 until the end of the course are open to download so you can get a good overview of what SAT solving is, natural deduction, binary decision diagrams, etc.</li>
-</ul>
-
-<pre class="example" id="org27c5833">
-Archive of 195y if you're interested before recorded lectures disappear
-magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
-</pre>
-
+<li>Lecture 16 - 21 Graphs and Dijkstra's algorithm</li>
+<li>Lecture 22 Brown students talk about future courses to take</li>
+<li>Lecture 23 - 24 is union find/min spanning trees (and mutation we already saw)</li>
+<li>Lecture 27 &amp; 28 Memoization</li>
+<li>Lecture 29 Dynamic Programming</li>
+<li>Lecture 30 Levenshtein Distance (spell checkers)</li>
+<li>Lecture 31 P = NP</li>
+<li>Lecture 32 - 34 Programming languages 
 <ul class="org-ul">
-<li>CS1650 is their <a href="http://cs.brown.edu/courses/csci1650/">exploitation writing</a> course, focusing on binary code reuse meaning taking existing code and hijacking it's control-flow execution order to make it do what you want like injecting your own code. You run binary.exe and in memory is code who's order you can rearrange. The lectures are closed but most of this material is from <a href="http://security.cs.rpi.edu/courses/binexp-spring2015/">this</a> workshop, and you can learn assembly and practice Return-Oriented Programming from CMU's 15-213 which has many version on YouTube or <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&amp;maxResults=50">Panopto</a> lectures. MIT also has a systems <a href="https://css.csail.mit.edu/6.858/2020/">security</a> course if you wanted to know how CPU timing attacks work or how an <a href="https://pdos.csail.mit.edu/6.828/2020/schedule.html">operating system</a> works.</li>
+<li>discusses what PL researchers do, shows you how he wrote PAPL using Racket scribble</li>
+</ul></li>
+<li>Lecture 35 Computer Networks</li>
+<li>Lecture 36 Security</li>
 </ul>
-</div>
-</div>
-
-
-<div id="outline-container-Lecture%2023%20Min%20Spanning%20Trees%20%26%20Mutation" class="outline-2">
-<h2 id="Lecture%2023%20Min%20Spanning%20Trees%20%26%20Mutation">Lecture 23 Min Spanning Trees &amp; Mutation</h2>
-<div class="outline-text-2" id="text-Lecture%2023%20Min%20Spanning%20Trees%20%26%20Mutation">
-<p>
-TODO: End of the lecture begins programming by mutation
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2024%20%26%2025%20Programming%20w%2FState" class="outline-2">
-<h2 id="Lecture%2024%20%26%2025%20Programming%20w%2FState">Lecture 24 &amp; 25 Programming w/State</h2>
-<div class="outline-text-2" id="text-Lecture%2024%20%26%2025%20Programming%20w%2FState">
-<p>
-TODO: More mutation, how dereferencing works, we are actually learning some C/C++ here. Remember his paper earlier warning that students after intro CS courses do not truly understand how aliasing works so he has created this content to fix that. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2026%20The%20Halting%20Problem" class="outline-2">
-<h2 id="Lecture%2026%20The%20Halting%20Problem">Lecture 26 The Halting Problem</h2>
-<div class="outline-text-2" id="text-Lecture%2026%20The%20Halting%20Problem">
-<p>
-TODO: Some theoretical CS
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2027%20%26%2028%20Memoization" class="outline-2">
-<h2 id="Lecture%2027%20%26%2028%20Memoization">Lecture 27 &amp; 28 Memoization</h2>
-<div class="outline-text-2" id="text-Lecture%2027%20%26%2028%20Memoization">
-<p>
-TODO: Many other topics discussed here
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2029%20Dynamic%20Programming" class="outline-2">
-<h2 id="Lecture%2029%20Dynamic%20Programming">Lecture 29 Dynamic Programming</h2>
-<div class="outline-text-2" id="text-Lecture%2029%20Dynamic%20Programming">
-<p>
-TODO
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2030%20Levenshtein%20Distance" class="outline-2">
-<h2 id="Lecture%2030%20Levenshtein%20Distance">Lecture 30 Levenshtein Distance</h2>
-<div class="outline-text-2" id="text-Lecture%2030%20Levenshtein%20Distance">
-<p>
-TODO/spell checking 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2031%20P%20%3D%20NP" class="outline-2">
-<h2 id="Lecture%2031%20P%20%3D%20NP">Lecture 31 P = NP</h2>
-<div class="outline-text-2" id="text-Lecture%2031%20P%20%3D%20NP">
-<p>
-TODO complexity
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2032%20-%2034%20Programming%20languages" class="outline-2">
-<h2 id="Lecture%2032%20-%2034%20Programming%20languages">Lecture 32 - 34 Programming languages</h2>
-<div class="outline-text-2" id="text-Lecture%2032%20-%2034%20Programming%20languages">
-<p>
-TODO, discusses some of the PL chapters in PAPL, what PL researchers do, shows you how he wrote PAPL using Racket scribble
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2035%20Computer%20Networks" class="outline-2">
-<h2 id="Lecture%2035%20Computer%20Networks">Lecture 35 Computer Networks</h2>
-<div class="outline-text-2" id="text-Lecture%2035%20Computer%20Networks">
-<p>
-TODO, pretty good summary of how a modern computer network works, not in the book
-</p>
-</div>
-</div>
-
-<div id="outline-container-Lecture%2036%20Security" class="outline-2">
-<h2 id="Lecture%2036%20Security">Lecture 36 Security</h2>
-<div class="outline-text-2" id="text-Lecture%2036%20Security">
-<p>
-TODO also not in the book
-</p>
-</div>
-</div>
-
-<div id="outline-container-You%27re%20Done" class="outline-2">
-<h2 id="You%27re%20Done">You're Done</h2>
-<div class="outline-text-2" id="text-You%27re%20Done">
-<p>
-Eventually there will be a link here to a competitive programming workshop if you want to learn algorithms similar to the math workshop where we will try Putnam problems to better learn math proofs. The idea is to <a href="https://cp-algorithms.com/">practice</a> until we get better at algorithm design. However you truly are done though, you know how to take some abstract thing like a tree or a graph or a list or a stream or whatever, create a datatype where you flesh out it's representation in your program, how to make runtime complexity tradeoffs (remember the write once/hardly lookup datastructure he talked about for system logs) then how to test that same program you just wrote. Experience over time will <a href="https://blog.janestreet.com/effective-ml-video/">fill in</a> the rest of the blanks as you write your own software or try the AI workshop where we will use <a href="https://computationalthinking.mit.edu/Fall20/">Julia</a> to write datatypes that model real world things into abstract models to experiment with. 
-</p>
 </div>
 </div>
 </div>
