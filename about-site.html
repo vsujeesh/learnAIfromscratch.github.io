@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 00:58 -->
+<!-- 2021-01-11 Mon 09:50 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About this site</title>
@@ -229,7 +229,7 @@
 <h2 id="What%20is%20this">What is this</h2>
 <div class="outline-text-2" id="text-What%20is%20this">
 <p>
-This is just a bunch of (draft) puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets. The concept is you can complete all the courses using a mobile device, which is what I do while on lunch breaks or commuting, sitting on the beach, or waiting in a line. 
+Computer science is just a bunch of puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets and research. The concept is you can complete all the courses using a mobile device, which is what I do while on lunch breaks or commuting, sitting on the beach, or waiting in a line. A mobile device is also what what people in the world own, it's difficult to get access to working laptops/desktops and fill it with virtual environments to do other curriculums in some countries.
 </p>
 </div>
 
@@ -257,13 +257,13 @@ One bit of advice: it is important to view knowledge as sort of a semantic tree 
 <h3 id="CompSci">CompSci</h3>
 <div class="outline-text-3" id="text-CompSci">
 <p>
-Learn the foundations of computation itself, the trunk and branches.
+Learn the foundations of computation itself, the trunk and branches:
 </p>
 
 <ul class="org-ul">
-<li>CS19 and the book <i>Programming and Programming Languages</i> was chosen for having low complexity and ability to complete on a mobile device.</li>
+<li>CS19 <i>Accelerated Intro to CS</i> and the book <i>Programming and Programming Languages</i> was chosen for having very low complexity and ability to complete on a mobile device. It emphasizes property based testing and design by example. The prof of the course has papers about teaching it: what students ask in office hours, their success at assignments, and how they do in future courses.</li>
 <li>Robert Harpers PFPL book teaches the foundations of programming languages.</li>
-<li>Ryan O'Donnell's Theoretical CS Toolkit course goes well with the book <i>The Nature of Computation</i> that explains the foundations of computation.</li>
+<li>Ryan O'Donnell's Theoretical CS Toolkit course goes with the book <i>The Nature of Computation</i> that explains the foundations of computation.</li>
 <li>Competitive Programming chosen for practice. You can write text source on a tablet or phone and upload it to the online judge servers for free which compiles and tests them as many times as you want. Some of the <a href="https://open.kattis.com/help">languages</a> are amenable to templating so often you are just writing the body of the function.</li>
 </ul>
 </div>
@@ -272,8 +272,12 @@ Learn the foundations of computation itself, the trunk and branches.
 <div id="outline-container-Math" class="outline-3">
 <h3 id="Math">Math</h3>
 <div class="outline-text-3" id="text-Math">
+<p>
+Learn the trunk and big branches of math:
+</p>
+
 <ul class="org-ul">
-<li>Tao's book <i>Analysis I</i> and Wildberger's lectures reduce complexity.</li>
+<li>Tao's book <i>Analysis I</i> and Wildberger's lectures reduce complexity of foundations.</li>
 <li>The Putnam seminar by Prof Loh and the book <i>Putnam and Beyond</i> because competition problems teach you multiple things at the same time</li>
 <li>Gilbert Strang's CSE book and MIT lectures to see the common applied framework for using math in all sciences, in a way it's the foundations of applied math</li>
 </ul>
@@ -284,49 +288,81 @@ Learn the foundations of computation itself, the trunk and branches.
 <h3 id="AI">AI</h3>
 <div class="outline-text-3" id="text-AI">
 <p>
-Jump into the leaves. Google <a href="https://colab.research.google.com/github/ageron/julia_notebooks/blob/master/Julia_Colab_Notebook_Template.ipynb">Colab</a> can be used with a phone, so since we can practice writing AI algorithms on GPUs through Colab for free may as well also learn optimization of these algorithms. There are numerous AI competitions, most will accept notebook entries you can upload from colab. 
+Jump into the leaves. Google <a href="https://colab.research.google.com/github/ageron/julia_notebooks/blob/master/Julia_Colab_Notebook_Template.ipynb">Colab</a> can be used with a phone, so since we can practice writing AI algorithms on GPUs through Colab for free may as well also learn optimization of these algorithms. There are numerous AI competitions, most will accept notebook entries you can upload from colab.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-Software" class="outline-2">
-<h2 id="Software">Software</h2>
-<div class="outline-text-2" id="text-Software">
+
+<div id="outline-container-Software%20used%20to%20build%20this" class="outline-2">
+<h2 id="Software%20used%20to%20build%20this">Software used to build this</h2>
+<div class="outline-text-2" id="text-Software%20used%20to%20build%20this">
 <p>
-This site is built using org-mode which is a major mode for emacs meaning a collection of configurations that are automatically run whenever you open a .org file, a text file with some markup. I can edit the text on a phone then by a simple script ssh into a box to run:
+This site is built using org-mode which is a major mode for <a href="http://ergoemacs.org/emacs/emacs_make_modern.html">emacs</a> meaning a collection of behaviours that are automatically run whenever you open a .org file, a text file with some markup. It looks like this:
 </p>
 
-<pre class="example" id="orgf66e447">
+<pre class="example" id="org4fd49bc">
+#+STARTUP: showall
+#+TITLE: About this site
+#+options: num:nil html-postamble:nil toc:nil
+#+HTML_HEAD: &lt;style&gt; body {background-color: #fafad2} &lt;/style&gt;
+
+* Big heading
+
+Some text
+
+** Smaller heading
+
+#+BEGIN_QUOTE
+Some text
+#+END_QUOTE
+</pre>
+
+<p>
+The documentation for org html export I find highly confusing, to learn it I had to read the lisp in ox-html.el in emacs source and some other org lisp files in order to find all the features and make my own. You can use HTML5 tags such as for video if you turn on html5-fancy but I don't allowing the user to use their preferred software to look at videos.
+</p>
+
+<p>
+I can edit the text on a phone then by a simple script ssh into a box to run:
+</p>
+
+<pre class="example" id="org6cea9c6">
 emacs myfile.org --batch -f org-html-export-to-html --kill
 </pre>
 
 <p>
-Which then is upload via version control, now with a <a href="https://github.com/alphapapa/unpackaged.el#export-to-html-with-useful-anchors">minor mode</a> to use persistent div id's instead of org-mode's randomly generated ones, so diffs and direct links are useful. The css background color choice was from a paper in readability, warmer colors are easier for us to read and their compliments at the other end of the color spectrum mix better. In org-mode you can disable the built-in css and set any css you want manually at the top of the file with style tags:
+Which then is upload via version control, now with a <a href="https://github.com/alphapapa/unpackaged.el#export-to-html-with-useful-anchors">minor mode</a> to use persistent div id's instead of org-mode's randomly generated ones, so diffs and direct links are useful. The css background color choice was from a paper in readability, warmer colors are easier for us to read and their compliments at the other end of the color spectrum mix better.
+</p>
+</div>
+
+<div id="outline-container-Virtual%20Private%20Server" class="outline-3">
+<h3 id="Virtual%20Private%20Server">Virtual Private Server</h3>
+<div class="outline-text-3" id="text-Virtual%20Private%20Server">
+<p>
+The box that runs emacs is a <a href="https://guix.gnu.org/guix">guix system</a> VPS which is trivial to <a href="https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/">deploy</a> you essentially edit some s-exp text which are settings inside lists, and it is a single declaration file how exactly you want your remote system set up. Invoking guix deploy installs the remote VM for you on digital ocean or elsewhere. Hacking around your own VPS is possible because the init system, packager, package builds, system tests, and more are all written in a scheme <a href="https://www.gnu.org/software/guile/">variant</a> which permits <a href="https://gnu.huihoo.org/guile/2.0/Supporting-Multiple-Languages.html">any</a> other language you want to compile to their Guile scheme VM bytecode so you don't have to use their preferred language to manipulate your system you can use whatever language you want.
 </p>
 
-<pre class="example" id="org4d62c57">
-#+HTML_HEAD: &lt;style&gt; body {background-color: #fafad2} &lt;/style&gt;
-</pre>
-
 <p>
-The box that runs emacs is a <a href="https://guix.gnu.org/guix">guix system</a> VM which is trivial to <a href="https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/">deploy</a> you essentially edit some s-exp text which are settings inside lists, and it is a single declaration file how exactly you want your remote system set up. Invoking guix deploy installs the remote VM for you on digital ocean or elsewhere. Hacking around your own VPS is possible because the init system, packager, package builds, the initial RAM disk, system tests, and more are all written in a scheme <a href="https://www.gnu.org/software/guile/">variant</a> which permits <a href="https://gnu.huihoo.org/guile/2.0/Supporting-Multiple-Languages.html">any</a> other language you want to compile to their Guile virtual machine bytecode so you don't have to use their preferred language to manipulate your system you can use whatever you want.
-</p>
-
-<p>
-To learn to manipulate your Guix system see this <a href="https://pdos.csail.mit.edu/6.828/2020/xv6.html">book</a> (or <a href="https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf">pdf)</a> by MIT, they reduce the complexity of learning what an operating system is to the essential details by studying a variant of the V6 original unix system. It is meant to be read while looking at the <a href="https://github.com/mit-pdos/xv6-riscv">code</a>.   
+To learn to manipulate your guix system see this <a href="https://pdos.csail.mit.edu/6.828/2020/xv6.html">book</a> (or <a href="https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf">pdf)</a> by MIT, they reduce the complexity of learning what an operating system is to the essential details by studying a variant of the V6 original unix system. It is meant to be read while looking at the <a href="https://github.com/mit-pdos/xv6-riscv">code</a>.   
 </p>
 
 <p>
 <a href="https://hpc.guix.info/">Guix-HPC</a> is used in high performance computing by INRIA researchers.
 </p>
 </div>
+</div>
 
 <div id="outline-container-Guix-Jupyter%20notebooks" class="outline-3">
 <h3 id="Guix-Jupyter%20notebooks">Guix-Jupyter notebooks</h3>
 <div class="outline-text-3" id="text-Guix-Jupyter%20notebooks">
 <p>
-Guix-Jupyter is self-contained <a href="https://gitlab.inria.fr/guix-hpc/guix-kernel">notebooks</a> that describe their execution environment then can be deployed in a completely reproducible way, meaning you can freely install any software you want instead of being limited to what google colab offers and run your own VM hosted notebooks to do the AI curriculum on a mobile device if you wanted.
+Guix-Jupyter is self-contained <a href="https://gitlab.inria.fr/guix-hpc/guix-kernel">notebooks</a> that describe their execution environment then can be deployed in a completely reproducible way, meaning you can freely install any software you want instead of being limited to what colab offers and run your own VM hosted notebooks to do the AI curriculum on a mobile device if you wanted.
+</p>
+
+<hr>
+<p>
+<a href="./index.html">Home</a>
 </p>
 </div>
 </div>
