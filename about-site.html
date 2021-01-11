@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 00:31 -->
+<!-- 2021-01-11 Mon 00:58 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About this site</title>
@@ -229,7 +229,7 @@
 <h2 id="What%20is%20this">What is this</h2>
 <div class="outline-text-2" id="text-What%20is%20this">
 <p>
-This is just a bunch of (draft) puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets. 
+This is just a bunch of (draft) puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets. The concept is you can complete all the courses using a mobile device, which is what I do while on lunch breaks or commuting, sitting on the beach, or waiting in a line. 
 </p>
 </div>
 
@@ -257,7 +257,7 @@ One bit of advice: it is important to view knowledge as sort of a semantic tree 
 <h3 id="CompSci">CompSci</h3>
 <div class="outline-text-3" id="text-CompSci">
 <p>
-Learn the foundations of computation itself, the trunks and branches.
+Learn the foundations of computation itself, the trunk and branches.
 </p>
 
 <ul class="org-ul">
@@ -294,10 +294,10 @@ Jump into the leaves. Google <a href="https://colab.research.google.com/github/a
 <h2 id="Software">Software</h2>
 <div class="outline-text-2" id="text-Software">
 <p>
-This site is built using org-mode which is a major mode for emacs meaning a collection of configurations and customizations that are automatically run whenever you open a .org file which is just text with some markup. I can edit the text on a phone then by a simple script ssh into a box to run:
+This site is built using org-mode which is a major mode for emacs meaning a collection of configurations that are automatically run whenever you open a .org file, a text file with some markup. I can edit the text on a phone then by a simple script ssh into a box to run:
 </p>
 
-<pre class="example" id="orge15c09e">
+<pre class="example" id="orgf66e447">
 emacs myfile.org --batch -f org-html-export-to-html --kill
 </pre>
 
@@ -305,12 +305,12 @@ emacs myfile.org --batch -f org-html-export-to-html --kill
 Which then is upload via version control, now with a <a href="https://github.com/alphapapa/unpackaged.el#export-to-html-with-useful-anchors">minor mode</a> to use persistent div id's instead of org-mode's randomly generated ones, so diffs and direct links are useful. The css background color choice was from a paper in readability, warmer colors are easier for us to read and their compliments at the other end of the color spectrum mix better. In org-mode you can disable the built-in css and set any css you want manually at the top of the file with style tags:
 </p>
 
-<pre class="example" id="org80b99d5">
+<pre class="example" id="org4d62c57">
 #+HTML_HEAD: &lt;style&gt; body {background-color: #fafad2} &lt;/style&gt;
 </pre>
 
 <p>
-The server is a <a href="https://guix.gnu.org/guix">guix system</a> VM which is trivial to <a href="https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/">deploy</a> you essentially edit some s-exp text which are settings inside lists, and it is a single declaration file how exactly you want your remote system set up. Invoking guix deploy installs the remote VM for you on digital ocean or elsewhere. Hacking around your own VPS is possible because the init system, packager, package builds, the initial RAM disk, system tests, and more are all written in a scheme <a href="https://www.gnu.org/software/guile/">variant</a> which permits <a href="https://gnu.huihoo.org/guile/2.0/Supporting-Multiple-Languages.html">any</a> other language you want to compile to their Guile virtual machine bytecode so you don't have to use their preferred language to manipulate your system you can use whatever you want.
+The box that runs emacs is a <a href="https://guix.gnu.org/guix">guix system</a> VM which is trivial to <a href="https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/">deploy</a> you essentially edit some s-exp text which are settings inside lists, and it is a single declaration file how exactly you want your remote system set up. Invoking guix deploy installs the remote VM for you on digital ocean or elsewhere. Hacking around your own VPS is possible because the init system, packager, package builds, the initial RAM disk, system tests, and more are all written in a scheme <a href="https://www.gnu.org/software/guile/">variant</a> which permits <a href="https://gnu.huihoo.org/guile/2.0/Supporting-Multiple-Languages.html">any</a> other language you want to compile to their Guile virtual machine bytecode so you don't have to use their preferred language to manipulate your system you can use whatever you want.
 </p>
 
 <p>
@@ -326,7 +326,7 @@ To learn to manipulate your Guix system see this <a href="https://pdos.csail.mit
 <h3 id="Guix-Jupyter%20notebooks">Guix-Jupyter notebooks</h3>
 <div class="outline-text-3" id="text-Guix-Jupyter%20notebooks">
 <p>
-Guix-Jupyter is self-contained <a href="https://gitlab.inria.fr/guix-hpc/guix-kernel">notebooks</a> that describe their execution environment then can be deployed in a completely reproducible way, meaning you can eliminate google colab completely and run your own VM hosted notebooks to do the AI curriculum on a mobile device if you wanted.
+Guix-Jupyter is self-contained <a href="https://gitlab.inria.fr/guix-hpc/guix-kernel">notebooks</a> that describe their execution environment then can be deployed in a completely reproducible way, meaning you can freely install any software you want instead of being limited to what google colab offers and run your own VM hosted notebooks to do the AI curriculum on a mobile device if you wanted.
 </p>
 </div>
 </div>
