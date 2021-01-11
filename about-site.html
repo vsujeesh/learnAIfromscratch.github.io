@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 09:50 -->
+<!-- 2021-01-11 Mon 10:06 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About this site</title>
@@ -229,7 +229,7 @@
 <h2 id="What%20is%20this">What is this</h2>
 <div class="outline-text-2" id="text-What%20is%20this">
 <p>
-Computer science is just a bunch of puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets and research. The concept is you can complete all the courses using a mobile device, which is what I do while on lunch breaks or commuting, sitting on the beach, or waiting in a line. A mobile device is also what what people in the world own, it's difficult to get access to working laptops/desktops and fill it with virtual environments to do other curriculums in some countries.
+Computer science is just a bunch of puzzles to figure out, I adjusted it so you can work F/T and complete it as a hobby by gamifying the material a little. I routinely eliminate material to increase the efficiency of the curriculum by hopefully reducing it to entirely problem sets and research. The concept is you can complete all the courses using a mobile device, which is what I do while on lunch breaks or commuting, sitting on the beach, or waiting in a line. A mobile device is also what most people in the world own, it's difficult to get access to working laptops/desktops and fill it with virtual environments to do other curriculums in some countries.
 </p>
 </div>
 
@@ -257,7 +257,7 @@ One bit of advice: it is important to view knowledge as sort of a semantic tree 
 <h3 id="CompSci">CompSci</h3>
 <div class="outline-text-3" id="text-CompSci">
 <p>
-Learn the foundations of computation itself, the trunk and branches:
+Learn the foundations of computation itself, the trunk and PL theory big branches:
 </p>
 
 <ul class="org-ul">
@@ -273,7 +273,7 @@ Learn the foundations of computation itself, the trunk and branches:
 <h3 id="Math">Math</h3>
 <div class="outline-text-3" id="text-Math">
 <p>
-Learn the trunk and big branches of math:
+Learn the foundations pure math trunk and some of the big branches of applied math:
 </p>
 
 <ul class="org-ul">
@@ -302,7 +302,7 @@ Jump into the leaves. Google <a href="https://colab.research.google.com/github/a
 This site is built using org-mode which is a major mode for <a href="http://ergoemacs.org/emacs/emacs_make_modern.html">emacs</a> meaning a collection of behaviours that are automatically run whenever you open a .org file, a text file with some markup. It looks like this:
 </p>
 
-<pre class="example" id="org4fd49bc">
+<pre class="example" id="orgd501ef9">
 #+STARTUP: showall
 #+TITLE: About this site
 #+options: num:nil html-postamble:nil toc:nil
@@ -327,7 +327,7 @@ The documentation for org html export I find highly confusing, to learn it I had
 I can edit the text on a phone then by a simple script ssh into a box to run:
 </p>
 
-<pre class="example" id="org6cea9c6">
+<pre class="example" id="orgad3ae8c">
 emacs myfile.org --batch -f org-html-export-to-html --kill
 </pre>
 
@@ -358,6 +358,15 @@ To learn to manipulate your guix system see this <a href="https://pdos.csail.mit
 <div class="outline-text-3" id="text-Guix-Jupyter%20notebooks">
 <p>
 Guix-Jupyter is self-contained <a href="https://gitlab.inria.fr/guix-hpc/guix-kernel">notebooks</a> that describe their execution environment then can be deployed in a completely reproducible way, meaning you can freely install any software you want instead of being limited to what colab offers and run your own VM hosted notebooks to do the AI curriculum on a mobile device if you wanted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Emacs" class="outline-3">
+<h3 id="Emacs">Emacs</h3>
+<div class="outline-text-3" id="text-Emacs">
+<p>
+You don't have to use notebooks either, if you own a laptop/desktop emacs can be split screen to run an interpreter or compiler beside your code to immediately see output. Pyret, Julia, Common Lisp, Python, it can all be run in emacs. To learn emacs try Xah-Lee's <a href="http://ergoemacs.org/emacs/emacs.html">tutorial</a> he reduced the complexity of every other tutorial for emacs like what to do when you randomly come upon some elisp.el file in the wild and wish to <a href="http://ergoemacs.org/emacs/emacs_installing_packages.html">use it</a>.
 </p>
 
 <hr>
