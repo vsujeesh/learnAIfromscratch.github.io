@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 11:06 -->
+<!-- 2021-01-12 Tue 11:01 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -268,7 +268,7 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-This is a self-directed workshop to learn machine learning, neural networks, autonomous agents and whatever else we can find. Like the other two workshops on <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">computer science</a> this is a course built around courses. Self-directed means choose your own curriculum. I'll audit resources and you can decide to take it yourself or not. My interest will be: learning some of the popular current models and methods for learning, how to <a href="https://mitmath.github.io/18337/">optimize</a> these models and deploy them, and <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034#Prospectus">criticism</a> of the current state of AI to see if there's something else we should be trying. This field changes every year as you will see in the first 10-701 lecture, methods that we abandoned have a breakthrough then we go back to them, and methods that dominate today could be replaced tomorrow.     
+This is a self-directed workshop to learn machine learning, neural networks, autonomous agents and whatever else we can find. Like the other two workshops on <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">computer science</a> this is a course built around courses. Self-directed means choose your own curriculum. I'll audit resources and you can decide to take it yourself or not. My interest will be: learning some of the popular current models and methods for learning, how to <a href="https://mitmath.github.io/18337/">optimize</a> these models and deploy them, and <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034#Prospectus">criticism</a> of the current state of AI to see if there's something else we should be trying.     
 </p>
 </div>
 
@@ -300,7 +300,11 @@ Maybe try some AI competitions, like <a href="https://halite.io/">Halite</a>.
 <h2 id="Start%20here">Start here</h2>
 <div class="outline-text-2" id="text-Start%20here">
 <p>
-Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. We are told there are sets T, P and E where T is the set of tasks, P is the set of performance measures that improves with experiences in set E. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics. 10-701 talks about how ML methods change often, there was a breakthrough in neural networks recently so now it's all about neural networks, we used to heavily use kernel methods and now not as much. We could use convex optimization back then and now things are much more non-convex.  
+Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. We are told there are sets T, P and E where T is the set of tasks, P is the set of performance measures that improves with experiences in set E. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics.
+</p>
+
+<p>
+10-701 when you get past course logistics talks about how ML methods change often, there was a breakthrough in neural networks recently so now it's all about neural networks, we used to heavily use kernel methods and now not as much. We could use convex optimization back then and now things are much more non-convex.  
 </p>
 
 <p>
@@ -315,8 +319,14 @@ You can learn basic set theory by typing it into <a href="https://www.youtube.co
 <div id="outline-container-Probability" class="outline-3">
 <h3 id="Probability">Probability</h3>
 <div class="outline-text-3" id="text-Probability">
+<blockquote>
 <p>
-A good starting point is 15-251 CMU's undergrad class on theoretical cs topics. Let's watch <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures. I'm also going through his <a href="https://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> on probability because they're pretty good at explaining this from a computer science viewpoint "probability theory = analyzing randomized code". By this I mean I watched both lectures, then will go through these notes as I do machine learning not completely master the entire set of 252 pages of notes and then resume, you can do both at the same time. 
+"Probability = analyzing random code"
+</p>
+</blockquote>
+
+<p>
+A good starting point is 15-251 CMU's undergrad class on theoretical cs topics. Let's watch <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures, the full notes with exercises are <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a> to practice after, and the solutions to the exercises to check your own work is <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">here</a>. 
 </p>
 
 <p>
@@ -326,18 +336,27 @@ Other sources you could use
 <li>These brief <a href="http://bactra.org/prob-notes/srl.pdf">notes</a></li>
 <li>This whole MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/">course</a> which has fully worked out solutions to the assignments</li>
 <li>Any machine learning <a href="https://mml-book.github.io/">book</a></li>
-<li>The first chapters of the deep learning <a href="https://www.deeplearningbook.org/">book</a> (use libgen to get a decent pdf, the site copy is scrambled on my browser)</li>
-<li>The first chapter of <i>All of Statistics</i></li>
+<li>The first chapters of the deep learning <a href="https://www.deeplearningbook.org/">book</a> (use libgen to get a decent pdf, the site copy is trash on my browser)</li>
 <li>Terence Tao's <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">notes</a> on the foundations of probability theory, the discrete probability notes are excellent</li>
 <li>Wildberger's probability and stats <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a></li>
-<li>The exercises for 15-251 probability lectures <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">here</a> w/solutions which I will use</li>
+<li>His <a href="https://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> from 15-359 a class about random computing (figuring out what load balancing should be, random algorithms, etc).</li>
 </ul>
 
 <p>
-I'm watching the 2013 YouTube lecture but if you want the 2015 Panopto version it is <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a>. In the YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The input to these algorithms he uses to set up the theory are 1/m with m being the total amount of possible outcomes. A coin flip has two outcomes: it's probability of heads or tails is 1 over 2 possible outcomes or 1/2. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RandInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. TODO
+I'm watching the 2013 15-251 YouTube lecture but if you want the 2015 Panopto version it is <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a> with unobstructed slides, and the lecture clarifies things better than the 2013 lecture, though the notes for the course cover everything. In the 2013 YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RandInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. The term notation overload means multiple definitions for the same notation, hoping you derive from context which definition the notation is using.
 </p>
 
+<p>
+Anytime there is some mental rational arithmetic try it in your head. 1/6 + 1/8 + 1/8 is 1/6 + 1/4, which from Wildberger lectures if you watched them in math workshop, a/b + c/d is (ad + cb)/bd and or just (6+4)/24 since the numerator is all 1's. The more you practice this the easier it gets like that guy in the class who just shouts out the answer in the 2015 lecture. 
+</p>
 
+<p>
+The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I win if I get a double-1s" better than the 2013 lecture. There are 36 outcomes each time he rolls 2 dice ie: outcome: 1,1 or 1,2 or 1,3 or 1,4 or 1,5 or 1,6. If you draw a tree this will end up being 36 total outcomes with each roll since 6x6. Remove the single outcome where it comes up 1,1, so 35/36 outcomes per roll and there is 24 rolls. Subtract that from the total probability of 1 in other words the Pr[Wc] compliment definition.
+</p>
+
+<p>
+TODO
+</p>
 
 <hr>
 <p>
