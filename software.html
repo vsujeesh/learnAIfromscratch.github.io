@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-14 Thu 11:07 -->
+<!-- 2021-01-17 Sun 22:47 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Computer Science from Scratch</title>
@@ -347,7 +347,7 @@
 <li><a href="#Lecture%2013%20CS19%20Differential%20Systems">Lecture 13 CS19 Differential Systems</a></li>
 <li><a href="#Lecture%2014%20CS19%20Aliasing">Lecture 14 CS19 Aliasing</a></li>
 <li><a href="#Lecture%2015%20CS19%20Monads%2C%20Sequential%20Computation">Lecture 15 CS19 Monads, Sequential Computation</a></li>
-<li><a href="#CS19%20Lectures%20on%20Memory%20mutation">CS19 Lectures on Memory mutation</a>
+<li><a href="#CS19%20Lectures%20on%20mutation">CS19 Lectures on mutation</a>
 <ul>
 <li><a href="#Lecture%2024%20Memory%20refs">Lecture 24 Memory refs</a></li>
 <li><a href="#Lecture%2025%20Closures">Lecture 25 Closures</a></li>
@@ -361,7 +361,12 @@
 <li><a href="#The%20rest%20of%20the%20cs19%20lectures">The rest of the cs19 lectures</a></li>
 </ul>
 </li>
-<li><a href="#The%20Theory%20of%20Computation">The Theory of Computation</a></li>
+<li><a href="#Algorithms">Algorithms</a>
+<ul>
+<li><a href="#Practice">Practice</a></li>
+<li><a href="#CP4%20Chapter%201">CP4 Chapter 1</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -379,7 +384,11 @@ This is part IA of the <a href="https://learnaifromscratch.github.io">AI Tripos<
 <h2 id="Start%20here">Start here</h2>
 <div class="outline-text-2" id="text-Start%20here">
 <p>
-We begin with Brown University's CS19 <i>Accelerated Introduction to Computer Science</i>. You don't have to do it all linearly we can take it up to a certain point then use the rest of the course as our research material for doing competitive programming problem sets. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education.  
+We begin with Brown University's CS19 <i>Accelerated Introduction to Computer Science</i>. You don't have to do it all linearly we can take it up to a certain point then use the rest of the course as our research material for doing competitive programming problem sets. Look around the instructor's <a href="https://cs.brown.edu/~sk/">page</a> like his manifesto on the current state of compsci education.
+</p>
+
+<p>
+This course was chosen because all the complexity of learning to program is removed, it contains advanced concepts and the teaching style of the instructor is very different than any other lecture you've seen. 
 </p>
 </div>
 
@@ -407,7 +416,7 @@ As stated in the intro it's possible to complete this course with just a phone o
 <p>
 I made a torrent w/the lectures and labs:
 </p>
-<pre class="example" id="org799e1a6">
+<pre class="example" id="orgc801b5d">
 CS019 2018 Lectures, labs
 magnet:?xt=urn:btih:5db2ed40c8952ea69a06c4ab940d168bc2798a49&amp;dn=cs019
 </pre>
@@ -540,7 +549,7 @@ This <a href="https://youtu.be/vxXFDS95nB4">recorded</a> recitation explains ano
 A <a href="https://youtu.be/XEOLa6J2_F0">tutorial</a> on lists, case syntax and recursion helpful when reading chapter 9 and 10. For a list, imagine you are building up a structure one link at a time: link(1, link(2, link(3, &#x2026; and now you want to take apart that structure, so you use recursion to disassemble the structure you built back to the base case. PAPL has a <a href="https://papl.cs.brown.edu/2020/Recursive_Data.html">chapter</a> on this you can skip ahead and read now to see what a template for recursion on lists looks like:
 </p>
 
-<pre class="example" id="orgd6a553e">
+<pre class="example" id="org5523012">
 # This is the design recipe for recursive data using type NumList
 # Change nl-link to link(first, rest) for regular lists
 #|
@@ -594,7 +603,7 @@ Here we are being taught how to write examples which help us later write the pro
 There's an exercise to add examples for lists that end with positive numbers, and lists with [link: 0], try it yourself. Reminder that the recursive template can be used for all of these exercises:
 </p>
 
-<pre class="example" id="orgd95cd34">
+<pre class="example" id="org23b3ce1">
 #|
 fun list-fun(l :: List&lt;???&gt;) -&gt; ???:
   cases (List) l:
@@ -730,7 +739,7 @@ Everytime a list is returned, the next call to insert can happen because it is c
 Let's do the <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">lab</a> on functions as data, and write our own map, filter and fold. 
 </p>
 
-<pre class="example" id="org8c02f3c">
+<pre class="example" id="org7fde548">
 fun fun-plus-one(num :: Number, func :: (Number -&gt; Number)) -&gt; Number:
   func(num) + 1
 end
@@ -751,7 +760,7 @@ Try entering various built-ins, or one you wrote yourself, as the second paramet
 We're given test cases and asked to implement f-to-c and goldilocks, and given the formula for f to c temperature unit conversion.
 </p>
 
-<pre class="example" id="org6942f27">
+<pre class="example" id="org70cf220">
 fun f-to-c(f-lst :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
   cases (List) f-lst:
     | empty =&gt; empty
@@ -783,7 +792,7 @@ end
 We're asked to rewrite goldilocks using map. The data dumped into a map function is whatever the value is at that list index. In this case we know it's a number since f-lst parameter is :: List&lt;Number&gt;.
 </p>
 
-<pre class="example" id="org232464b">
+<pre class="example" id="org4568d97">
 fun goldilocks2(f-lst :: List&lt; Number&gt;) -&gt; List&lt;String&gt;:
   f-lst.map({(x): if x &gt; 90: "too hot" else if x &lt; 70: "too cold" else: "just right" end})
 end
@@ -800,7 +809,7 @@ end
 We could have also rewritten it like the following example, where a seperate function is used for map instead of writing our own lambda:
 </p>
 
-<pre class="example" id="orgfa2f9b0">
+<pre class="example" id="org3132ab8">
 fun goldilocks(x :: Number) -&gt; String:
   if x &gt; 90:
     "too hot"
@@ -823,8 +832,8 @@ end
 Now our task is write our own version of map. I used the documentation examples for map as check tests. Remember map consumes a function and a list, applies the function to each entry in the list returning a new list, try to do this yourself before looking at a solution (your solution may be better). For annotations, I used the <a href="https://www.pyret.org/docs/latest/s_annotations.html#%28part._s~3aname-ann%29">built-in</a> name annotations but if you read through the documentation you can also import annotations, or create your own datatype. The 'T' annotation is described at the end of chapter on processing lists, the notation &lt;T&gt; says that T is a type variable parameter meaning it can be any type, so if you give map a list of numbers it will be type List&lt;Number&gt;, or a list of strings, it will be List&lt;String&gt; etc. 
 </p>
 
-<details id="org23a6fd3">
-<pre class="example" id="orgac08e5e">
+<details id="org74de07d">
+<pre class="example" id="org1d22fd5">
 fun my-map&lt;T&gt;(func :: (T -&gt; T), l :: List&lt;T&gt;) -&gt; List&lt;T&gt;:
   cases (List) l:
     | empty =&gt; empty
@@ -847,8 +856,8 @@ end
 First two assignments are straight forward to get you to used to using filter, except you have to use string-to-code-points() instead of any built-in string functions. 
 </p>
 
-<details id="org1672465">
-<pre class="example" id="orgcd8fa27">
+<details id="org2a2ce23">
+<pre class="example" id="orgbc09864">
 fun tl-dr(lol :: List&lt;String&gt;, length-thresh :: Number) -&gt; List&lt;String&gt;:
   filter(lam(element): string-to-code-points(element).length() &lt;= length-thresh end, lol)
 end
@@ -875,8 +884,8 @@ end
 Lambda parameters can be a single letter: filter(lam(x): x &gt; 1 end) as it's immediately evident what that parameter is and it's scope is limited. Task: implement our own version of filter, which is similar to what we did for map:
 </p>
 
-<details id="orgde9ce39">
-<pre class="example" id="orgdb43d11">
+<details id="org55fc631">
+<pre class="example" id="orge36ae24">
 fun my-filter&lt;T&gt;(func :: ( T -&gt; Boolean), l :: List&lt;T&gt;)-&gt; List&lt;T&gt;:
   cases (List) l:
     | empty =&gt; empty
@@ -906,8 +915,8 @@ end
 Try the two tasks: list-product and list-max:
 </p>
 
-<details id="org65bafe2">
-<pre class="example" id="org0cef638">
+<details id="orgc8790c8">
+<pre class="example" id="org55f2cf3">
 fun list-product(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): acc * n end, 1, lon)
 end
@@ -922,7 +931,7 @@ end
 There's a bug here to fix, try all negative examples
 Found by <a href="https://github.com/rand-anon-007">https://github.com/rand-anon-007</a>
 </p>
-<pre class="example" id="org1e08dad">
+<pre class="example" id="orga95f82d">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): if n &gt; acc: n else: acc end end, 0, lon)
 end
@@ -937,7 +946,7 @@ end
 The problem is the accumulator needs to be initialized with the first value of the list, well actually the problem is I didn't write enough example tests:
 </p>
 
-<pre class="example" id="org329edb1">
+<pre class="example" id="orgdf43978">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): if n &gt; acc: n else: acc end end, lon.get(0), lon)
 where:
@@ -954,7 +963,7 @@ end
 Then we come to another problem, what if the list is empty then long.get(0) returns an error:
 </p>
 
-<pre class="example" id="org2abfafb">
+<pre class="example" id="org7f13a95">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   if lon == empty:
     0 # is this correct?
@@ -974,7 +983,7 @@ end
 Now we have to make design decisions, should it eval to 0 for empty since the max of an empty list is nothing or should it raise an error?
 </p>
 
-<pre class="example" id="org90bc1e6">
+<pre class="example" id="org042f9cc">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   if lon == empty:
     raise("List can't be empty")
@@ -995,8 +1004,8 @@ end
 Write your own fold 
 </p>
 
-<details id="org04b9e74">
-<pre class="example" id="orgbee5e01">
+<details id="org1249428">
+<pre class="example" id="org09e5b62">
 fun my-fold&lt;T&gt;(func :: (T, T-&gt; T), acc :: T, l :: List&lt;T&gt;) -&gt; T:
   cases (List) l:
     | empty =&gt; acc
@@ -1024,8 +1033,8 @@ end
 Try the task for implementing who-passed, the second task we're asked to write map2 ourselves. 
 </p>
 
-<details id="org4b114a8">
-<pre class="example" id="orgf6ac4d9">
+<details id="org58f5da8">
+<pre class="example" id="orgaec97d4">
 # link(ff, rr) and link(f, r) can be called anything:
 # ie: link(head-first, tail-first) or link(head-second, tail-second)
 
@@ -1057,7 +1066,7 @@ end
 The last task, best-price, look on youtube what a basic demand function is. Here's an example:
 </p>
 
-<pre class="example" id="org85d8230">
+<pre class="example" id="org0548203">
 fun demand(price-increase :: Number) -&gt; Number:
  doc: "1000 is approx demand of product at a fixed price"
   1000 - (60 * price-increase)
@@ -1076,7 +1085,7 @@ This means as the price increases, the quantity demanded will decrease by 60 uni
 map and filter only consider one item at a time whereas fold can consider the entire list. You can implement both map and filter with fold (try it). If you've noticed in the Pyret documentation there is two folds: foldl and foldr:
 </p>
 
-<pre class="example" id="org55c4d38">
+<pre class="example" id="orga68d601">
 import lists as L
 
 L.foldl(lam(acc, x): acc + x end, 0, [list: 1, 2, 3])
@@ -1188,7 +1197,7 @@ Before we begin see the Pyret <a href="https://www.pyret.org/docs/latest/Pyret_S
 Let's start with create-vec() since we were given examples in the assignment writeup, scroll down the assignment writeup and click 'Implementation' you should get <a href="https://code.pyret.org/editor#share=1s-chFIEAeCKvIsYnstqRxqOBtiodMPme&amp;v=7aff971">this</a> which makes it clear they just want a single function called overlap, but we can fill it with helper functions like create-vec:
 </p>
 
-<pre class="example" id="org45abc2a">
+<pre class="example" id="orgb7a0381">
 fun create-vec(l-a :: List&lt;String&gt;, l-b :: List&lt;String&gt;) -&gt; List&lt;Number&gt;:
   doc: "Consumes two lists and returns a vector representation of the first input (l-a)"
   ...
@@ -1203,7 +1212,7 @@ end
 Write examples what you think it should produce. How do you sort the vector representation is it alphabetical (you can use built-in .sort() for this) is one test to write. Practice writing create-vec in several ways, for example a vector looks a lot like table data. Let's make one using the above given example for [list: "a", "B", "c"], [list: "d", "d", "D", "b"]) is [list: 1, 1, 1, 0]  
 </p>
 
-<pre class="example" id="org87a2327">
+<pre class="example" id="orgfbec835">
 vector = table: word, count
   row: "a", 1
   row: "b", 1
@@ -1217,7 +1226,7 @@ vector.get-column("count") # this returns: [list: 1, 1, 1, 0]
 You could then write a helper function inside create-vec that takes the distinct and sorted concatenation of both input lists to produce a vector table, I found this in the Pyret documentation:
 </p>
 
-<pre class="example" id="org205627a">
+<pre class="example" id="org9fb1668">
   fun helper(distinct-list :: List&lt;String&gt;, vec-table :: Table) -&gt; Table:
     cases (List) distinct-list:
       | empty =&gt; vec-table
@@ -1239,7 +1248,7 @@ end
 Or you could play around with making a vector data type, then you can build whole lists of vectors and map through the list to do cases on vectors
 </p>
 
-<pre class="example" id="orgfcc117b">
+<pre class="example" id="org77b6d85">
 data Vector:
   | vec(
       words :: List&lt;String&gt;,
@@ -1555,7 +1564,7 @@ In 3 <i>The Tabular Method</i> we finally get an explanation what the terms 'que
 Let's figure out 5, a function that takes input 2 lists and counts their length. This translates to two nested cases:
 </p>
 
-<pre class="example" id="orge81e1ca">
+<pre class="example" id="orga0ec713">
 fun dbl-count(list1, list2):
  cases (List) list1:
   | empty =&gt; 0
@@ -1604,7 +1613,7 @@ We're watching the lecture titled Wed9/19/18. Reminder these lectures can be vie
 He remarks that their quicksort implementation is really a filter, and we should try quicksort using a built-in. Let's try it:
 </p>
 
-<pre class="example" id="org8948414">
+<pre class="example" id="orgef2de22">
 fun combine(lt, p, gt):
   lt.append([list: p]).append(gt)
 end
@@ -1642,7 +1651,7 @@ He ends the lecture trying to convey a bigger idea: use the structure of the dat
 Here we are restricted from using list built-ins, so member, append, or distinct you'll have to write these yourself though PAPL already gives you uniq in chapter 10. The instructor considers rewriting library functions as drill exercises since programming is learn by doing. We need to fill in recommend and popular-pairs according to the <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">spec</a> we're given. Don't use their 2018 starter template, there's some kind of bug where accessing the content of a recommendation doesn't work. Write your own or use <a href="https://code.pyret.org/editor#share=0Bxr4FfLa3goOMmI2RnlkWUhCTzA">this</a>:
 </p>
 
-<pre class="example" id="orgc074479">
+<pre class="example" id="org572dd99">
 provide *
 provide-types *
 
@@ -1672,7 +1681,7 @@ end
 Examples to help understand what the assignment is asking for, you can run this to see if the tests are at least well formed:
 </p>
 
-<pre class="example" id="org769c466">
+<pre class="example" id="org354a1d4">
 fun recommend(title :: String, book-records :: List&lt;File&gt;) -&gt; Recommendation:
   doc: ```Takes in the title of a book and a list of files,
        and returns a recommendation of book(s) to be paired with title
@@ -1706,7 +1715,7 @@ end
 Again you can do whatever you want here like in DocDiff, my strategy is map through the input, extract the file.content string of "Title\nTitle", and return a single list of all titles that have been recommended.  
 </p>
 
-<pre class="example" id="orge56d757">
+<pre class="example" id="orga486ce8">
 fun recommend(title :: String, book-records :: List&lt;File&gt;) -&gt; Recommendation:
 
  list-of-titles = fold(lam(acc, elt): acc.append(elt) end, empty, map(lam(x): make-list(title, x) end, book-records))
@@ -1720,7 +1729,7 @@ end
 I wished for a function called make-list(), fed into a fold to append the return into a single [list: "title", "title"]:
 </p>
 
-<pre class="example" id="orga4aedc2">
+<pre class="example" id="org7008449">
 # note recommend(title, book-records) are in scope here, if make-list is inside recommend
 # you can change parameters to make-list(f :: File) and freely use title inside body of make-list 
 
@@ -1744,7 +1753,7 @@ end
 Another wished for function, f-to-list() which I expect extracts the f.content string, converts to a list and returns so it can be tested for membership. Notice I left the input to f-to-list() a single input, and the helper inside deals with accumulators/appending the newline character. 
 </p>
 
-<pre class="example" id="orgfee7485">
+<pre class="example" id="orgbc534a4">
 fun f-to-list(s :: String) -&gt; List&lt;String&gt;:
   doc:" Consumes string Title\nTitle and returns [list: Title, Title]"
 
@@ -1782,7 +1791,7 @@ When it seems like you've wished your way to the end, pick the smallest and easi
 <p>
 Using the 2019 <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">Nile</a> assignment spec, notice the new datatype for popular-pairs(), this will be inside a recommendation instead of a list of titles: recommendation(2, [list: pair(book1, book2), pair(book2, book3)] and the return annotation is popular-pairs() -&gt; Recommendation&lt;BookPair&gt;:
 </p>
-<pre class="example" id="org521f9a8">
+<pre class="example" id="orgbde246f">
 data BookPair:
     | pair(book1 :: String, book2 :: String)
 end
@@ -1792,7 +1801,7 @@ end
 From the examples you write, the pattern is first paired w/rest, first-of-the-rest paired w/rest-of-the-rest, etc. 
 </p>
 
-<pre class="example" id="org0ff00cd">
+<pre class="example" id="org0568602">
 input = [list: file("alist.txt", "1984\nAnimal Farm\nHigurashi\nLife of Pi"),
                file("blist.txt", "Animal Farm\nHigurashi\nLife of Pi"),
                file("clist.txt", "1984\nHeart of Darkness")]
@@ -1814,7 +1823,7 @@ This assignment we're building a testing oracle.
 First function is generate-input(n :: Number) -&gt; List&lt;Person&gt;, it consumes a number, and produces a list of length n of type Person. Since this function is going to generate random person.name strings we can't directly match the output in a test case, but we can still confirm it has the correct properties of [list: person(name, number)]:
 </p>
 
-<pre class="example" id="orgbf6eaf1">
+<pre class="example" id="orgfda3483">
 data Person:
   | person(name :: String, age :: Number)
 end
@@ -1841,8 +1850,8 @@ end
 Pyret has a built-in function for generating a list <a href="https://www.pyret.org/docs/latest/lists.html#%28part._lists_repeat%29">repeat()</a> which we will need to write ourselves since this assignment doesn't allow using built-ins outside of the higher order functions and sort() or sort-by() though I used some other list built-ins here and in the test cases since we already rewrote them in the Nile assignment. One way we could architect this is recursing on n, linking a list together. So num-random() gives us something resembling a random name, see this <a href="https://en.wikipedia.org/wiki/ASCII">article</a>, code points I guess could be between 97 and 122 or 'a' and 'z' though you could just leave this random and fuzzy test with all unicode code points:
 </p>
 
-<details id="org41e5689">
-<pre class="example" id="orge0c651a">
+<details id="org8242aac">
+<pre class="example" id="orgf0c6bb1">
 fun generate-input(n :: Number) -&gt; List&lt;Person&gt;:
   doc:"Generate random n size list of person(name, age)"
 
@@ -1901,7 +1910,7 @@ end
 Now we have what the assignment is looking for:
 </p>
 
-<pre class="example" id="org64540e4">
+<pre class="example" id="org46a33a2">
 &gt;&gt;&gt; generate-input(2)
 [list: person("vwqukq", 3), person("rljhrsijqcwyuglwjtnhc", 48)]
 </pre>
@@ -1910,8 +1919,8 @@ Now we have what the assignment is looking for:
 Next is a sort validation function that consumes two sorted lists of type Person, and compares if they are both the same returning a boolean true or false. To compare if the first sorted input list is equal to the correct sorted list, we could map2 over both lists to do equality tests, then fold over the list map2 returns comparing each entry with 'true'. Note this is inefficient as a case statement can break on the first instance of false instead of continuing through the entire linear list: 
 </p>
 
-<details id="org055527e">
-<pre class="example" id="org4d6d047">
+<details id="orgca1af97">
+<pre class="example" id="org9cbc2d3">
 fun is-valid(test-input :: List&lt;Person&gt;, correct-input :: List&lt;Person&gt;) -&gt; Boolean:
   doc: "Consumes l1 a sorted list and compares to l2 a correct-sorter() list"
 
@@ -1964,8 +1973,8 @@ end
 Now we go about writing multiple buggy implementations of sorting algorithms and test these functions with oracle :: (List&lt;Person&gt; -&gt; List&lt;Person&gt;) -&gt; Boolean ie: oracle(insertion-sort)) or oracle(quick-sort):
 </p>
 
-<details id="org873e99c">
-<pre class="example" id="orgf1936d1">
+<details id="orgd80df4b">
+<pre class="example" id="org0b9334d">
 fun combine(lt, p, gt):
   doc: "Used by quicksort"
   lt.append([list: p]).append(gt)
@@ -2055,7 +2064,7 @@ The grading tests for oracle assignment (actually, all the assignments) are also
 The techniques they used in the paper are taught in their <i>Logic for Systems</i> class which I partially archived with some recorded lectures if you're interested in this kind of logical thinking about programs. We will do something similar later, reasoning about the specifications of programs and their behavior. 
 </p>
 
-<pre class="example" id="org8185d1b">
+<pre class="example" id="org563de09">
 Archive of 195y if you're interested before recorded lectures disappear
 magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
 </pre>
@@ -2096,7 +2105,7 @@ Notice two consecutive 0's in the test case which will screw up your list/empty 
 <p>
 Template is:
 </p>
-<pre class="example" id="org08b75ad">
+<pre class="example" id="orgabcd39d">
 data PHR:
   | phr(name :: String,
       height :: Number,
@@ -2138,7 +2147,7 @@ My solution was to write a helper function bmi(p :: PHR) -&gt; Number and then f
 <p>
 You could want tests for empty, one element, two elements, and the given assignment example:
 </p>
-<pre class="example" id="orgf16a07a">
+<pre class="example" id="orgcbd20fe">
 fun data-smooth(phrs :: List&lt;PHR&gt;) -&gt; List&lt;Number&gt;:
   doc: "Smooth heart rate data"
 ...
@@ -2172,7 +2181,7 @@ One way to try this assignment is recurse on length with (prior + l.first + l.re
 I wrote this template:
 </p>
 
-<pre class="example" id="orgc46e8d7">
+<pre class="example" id="org4fa9d6f">
 # optional
 data Freq:
   | frequency(word :: String, count :: Number)
@@ -2204,7 +2213,7 @@ The assignment wants a list returned of words, in descending order of freq count
 We're asked to take [list: 20151004, 150, 200, 175, 20151005, 0.002, 0.03, 20151007, 130, 0.54, 20151101, 78] and turn it into a daily maximum [list: max-hz(20151004, 200), max-hz(20151005, 0.03), max-hz(20151007, 130)] if the searched for month is October. Our template:
 </p>
 
-<pre class="example" id="orgfcf7854">
+<pre class="example" id="orgd775474">
 data Report:
   | max-hz(date :: Number, max-reading :: Number)
 end
@@ -2235,7 +2244,7 @@ We're watchin Fri9/21/18 lecture on 2D tree shaped data w/guest lecturer <a href
 <p>
 The mutual recursive datatypes, to understand them write out your own tree:
 </p>
-<pre class="example" id="orga6384b2">
+<pre class="example" id="org9837f40">
        a 
       /  \   
     b    none     
@@ -2328,8 +2337,8 @@ This is short unfinished <a href="https://papl.cs.brown.edu/2020/testing.html">c
 Let's build a testing <a href="http://cs.brown.edu/courses/csci0190/2019/oracleoracle.html">oracle</a>. There's a starter <a href="https://code.pyret.org/editor#share=1ZCe4jQepT5vars3-1dK8jBPVhAllLBoq&amp;v=7aff971">template</a> we need to access the function they give us matchmaker() and is-hire() 
 </p>
 
-<details id="orgca99f0f">
-<pre class="example" id="org9e4c412">
+<details id="org3663914">
+<pre class="example" id="org5dc63e6">
 # CSCI0190 (Fall 2018)
 provide *
 provide-types *
@@ -2393,7 +2402,7 @@ end
 Run the template then try to give matchmaker some inputs to see what it does:
 </p>
 
-<pre class="example" id="org20d0a4d">
+<pre class="example" id="orge24fd5f">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 # Note matchmaker writeup: it is 0 to n-1 indexed, so 3 lists means 0 - 2 
@@ -2424,7 +2433,7 @@ First Let's understand the matching algorithm, we don't have to write one oursel
 The 2019 assignment writeup contains a few hints, such as 'be cautious about using the provided matchmaker function in your oracle as this assumes that there is only one right answer to a given instance of the stable hiring problem'. I translate this to mean there could be many permutations of the stable-hiring problem which are still correct, however the Gale-Shipley algorithm produces the exact same matching everytime if the company is making offers, and candidates rejecting. What if the roles are reversed, if it is candidate making offers and company rejecting, is the matching then different? We have 2 inputs into matchmaker but it doesn't say which one is actually making the offers and which input is rejecting. We should try altering the inputs and see what happens: 
 </p>
 
-<pre class="example" id="org076cc9a">
+<pre class="example" id="org1eb0ae7">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 
@@ -2457,8 +2466,8 @@ They're different, so there is indeed more than one solution to the problem depe
 This was my good enough generate-input function for test inputs &lt; num = 25, more than that and needs optimization, like using a dict or keep a sorted accumulator to check for dupes. 
 </p>
 
-<details id="org6074039">
-<pre class="example" id="org786414c">
+<details id="orgf9e4a4d">
+<pre class="example" id="org0a8e1b3">
 fun generate-input(num :: Number) -&gt; List&lt;List&lt;Number&gt;&gt;:
   doc: 'generates a list of candidates or companies for a group of size num'
   fun test-for-dupes(input :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
@@ -2559,7 +2568,7 @@ All of <a href="https://papl.cs.brown.edu/2020/set-representations.html#%28part.
 Let's try the CS19 lab for <a href="https://zacharyespiritu.com/documents/teaching/csci0190/iterating-over-trees-lab.pdf">trees</a>. The first part is just thought exercises then the lab offers us stencil code for the BT tree lab sections:
 </p>
 
-<pre class="example" id="org35726ef">
+<pre class="example" id="org6c47bca">
 #  _____                _                                      _ 
 # |_   _| __ ___  ___  | |_ _ __ __ ___   _____ _ __ ___  __ _| |
 #   | || '__/ _ \/ _ \ | __| '__/ _` \ \ / / _ \ '__/ __|/ _` | |
@@ -2597,7 +2606,7 @@ end
 First make a tree, run it, and type 'a-tree' into pyret interpreter and click the output to see the right and left branches, or a-tree.left or a-tree.right
 </p>
 
-<pre class="example" id="org6ccb11d">
+<pre class="example" id="org2468991">
 a-tree =
   node(5,
     node(4, 
@@ -2619,7 +2628,7 @@ The lab wants us to write various traversals, here's what I wrote for btree-in-o
 </p>
 
 
-<pre class="example" id="org97f8f0f">
+<pre class="example" id="orgf53d419">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -2663,7 +2672,7 @@ end
 Another lab where we rewrite map/filter/fold. Below when you see Prof K's lecture on knowledge transfer you'll understand why he makes us do this over and over. This is my first attempt at map, I wrote it like he writes software on the board in class thinking through the data definition:
 </p>
 
-<pre class="example" id="orgcd314a9">
+<pre class="example" id="orgf69b373">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -2714,7 +2723,7 @@ Note that btree-fold the lab wants you to convert the tree to a list, apply f to
 I interpret the <a href="https://cs.brown.edu/courses/cs019/2018/filesystemfilesystem.html">assignment</a> to mean this directory tree/model:
 </p>
 
-<pre class="example" id="orga2fe65e">
+<pre class="example" id="orgc35e9ed">
 # this is missing from my template:
 type Path = List&lt;String&gt;
 
@@ -2731,7 +2740,7 @@ filesystem = (dir("TS", [list:
 Recall that Pyret allows you to write methods for datatype, here's an example for du-dir() where I wrote a .size() method you can call on any directory:
 </p>
 
-<pre class="example" id="org2454f7f">
+<pre class="example" id="org6c3a091">
 provide *
 provide-types *
 
@@ -2794,7 +2803,7 @@ end
 This is all in the Pyret documentation, and I looked at the Pyret source on github to see how to chain multiple methods:
 </p>
 
-<pre class="example" id="org91518b1">
+<pre class="example" id="orge19b453">
 data Dir:
   | dir(name :: String, ds :: List&lt;Dir&gt;, fs :: List&lt;File&gt;) with:
     method size(self :: Dir) -&gt; Number:
@@ -2821,7 +2830,7 @@ The path method there's numerous ways you could architect this to be better. I d
 Watching lecture titled Mon/10/01/18. In the examples of ones, everytime you invoke 'ones' you get lzlink(1, &lt;thunk&gt;) which is one, plus a way to get more ones if called again. We're asked to write our own map, you could also try it with cases:
 </p>
 
-<pre class="example" id="orge4db17b">
+<pre class="example" id="org4487761">
 fun maps&lt;A, B&gt;(f :: (A -&gt; B), s :: Lz&lt;A&gt;) -&gt; Lz&lt;B&gt;:
   cases (Lz&lt;A&gt;) s:
     | lzlink(e, r) =&gt; lzlink(f(e), {(): maps(f, rst(s))}) 
@@ -2868,7 +2877,7 @@ The chapter on streams will explain some calculus notation converting it to a py
 The streams lab is <a href="https://cs.brown.edu/courses/cs019/2016/streams-lab.pdf">here</a>, mostly adapted from the chapter we just read in PAPL. Everything here we've already seen. We already wrote map and map2, try to write your own filter/fold for streams:
 </p>
 
-<pre class="example" id="org530cdf3">
+<pre class="example" id="org4facddf">
 fun lz-fold&lt;A, B&gt;(f :: (A, B -&gt; A), base :: A, s :: Stream&lt;B&gt;) -&gt; Stream&lt;A&gt;:
   lz-link(f(base, lz-first(s)), lam(): lz-fold(f, f(base, lz-first(s)), lz-rest(s)) end) 
 end
@@ -2935,15 +2944,15 @@ The end of the lecture he walks through the code of a pyret library he wrote, ex
 </div>
 
 
-<div id="outline-container-CS19%20Lectures%20on%20Memory%20mutation" class="outline-2">
-<h2 id="CS19%20Lectures%20on%20Memory%20mutation">CS19 Lectures on Memory mutation</h2>
-<div class="outline-text-2" id="text-CS19%20Lectures%20on%20Memory%20mutation">
+<div id="outline-container-CS19%20Lectures%20on%20mutation" class="outline-2">
+<h2 id="CS19%20Lectures%20on%20mutation">CS19 Lectures on mutation</h2>
+<div class="outline-text-2" id="text-CS19%20Lectures%20on%20mutation">
 <p>
 We skipped graphs and union-find/min spanning trees because we will come back when do them later. For now let's learn about mutation. Watch lecture 23 Wed10/31/18, and skip to 40:00. Here we learn about objects such as using the 'this' keyword in java/javascript and memory referencing. Everything in this lecture is in PAPL too such as identical which means two things are identical if changing one thing also changes the other (aliasing). 
 </p>
 
 <p>
-Your lecture should start with the Box datatype. "Your programs now have a notion of time" aka state, the state of things at time x. The {} expression is an <a href="https://www.pyret.org/docs/latest/Expressions.html#%28elem._%28bnf-prod._%28.Pyret._obj-expr%29%29%29">object</a>. 
+Your lecture should start with the Box datatype. "Your programs now have a notion of time" aka state, the state of things at time x. The {} expression is an <a href="https://www.pyret.org/docs/latest/Expressions.html#%28elem._%28bnf-prod._%28.Pyret._obj-expr%29%29%29">object</a>. You may have heard of the term 'unboxing variables', this is what we are learning. In say the C# programming language, boxing is the process of converting a primitive type like int and char into an object type. This is the building blocks of object oriented programming. 
 </p>
 </div>
 
@@ -2960,7 +2969,7 @@ Watching lecture Fri 11/2/18. This is similar to how StandardML does variable mu
 <h3 id="Lecture%2025%20Closures">Lecture 25 Closures</h3>
 <div class="outline-text-3" id="text-Lecture%2025%20Closures">
 <p>
-Watching <a href="https://youtu.be/munnj3BXJCc">lecture</a> Mon 11/5/18. A part of this lecture is offscreen, but the point is equal-never is impossible to implement with state/mutation because of time, in the future it could be equal if mutated. A closure gives you dynamic environment, from the book <i>Programming in SML</i>:    
+Watching <a href="https://youtu.be/munnj3BXJCc">lecture</a> Mon 11/5/18. A part of this lecture is offscreen, but the point is equal-never is impossible to implement with state/mutation because of time, in the future it could be equal if mutated. Closures are discussed, from the book <i>Programming in SML</i>:    
 </p>
 
 <blockquote>
@@ -2989,7 +2998,7 @@ If you did any of the cs19 assignments, you had to read the Pyret documentation 
 </p>
 
 <p>
-The rest of PAPL covers how <a href="https://papl.cs.brown.edu/2020/objects.html">objects</a> and dynamic dispatch work, if you want to understand object-oriented languages and PAPL has chapters on parameterized types, and type inference if you want to understand functional languages. Arrays and mutation are covered if you want to understand imperative style programming with C like languages. If you've ever seen a language like Lisp or Ocaml with a pile of nested let statements and wondered what was happening there is a <a href="https://papl.cs.brown.edu/2020/Interpreting_Functions.html#%28part._let-desugar%29">chapter</a> in PAPL explaining it precisely. It will also teach you all the jargon like <i>lexical scope</i> or <i>semantics</i> that get passed around tutorials and language documentation by constructing an interpreter so you can map syntax to meaning. Every example is done in Pyret too reducing the complexity so you can type these concepts yourself into CPO and modify them to learn more how they work.
+The rest of PAPL covers how <a href="https://papl.cs.brown.edu/2020/objects.html">objects</a> and dynamic dispatch work though you already know the basic building blocks of boxing and PAPL has chapters on parameterized types, and type inference if you want to understand functional languages. If you've ever seen a language like Lisp or Ocaml with a pile of nested let statements and wondered what was happening there is a <a href="https://papl.cs.brown.edu/2020/Interpreting_Functions.html#%28part._let-desugar%29">chapter</a> in PAPL explaining it precisely. It will also teach you all the jargon like <i>lexical scope</i> or <i>semantics</i> that get passed around tutorials and language documentation by constructing an interpreter so you can map syntax to meaning. Every example is done in Pyret too reducing the complexity so you can type these concepts yourself into CPO and modify them to learn more how they work.
 </p>
 </div>
 
@@ -3007,11 +3016,11 @@ To learn version control and common software development tools see <a href="http
 <h3 id="Clone%20other%20software">Clone other software</h3>
 <div class="outline-text-3" id="text-Clone%20other%20software">
 <p>
-A good place to start is find some program that you want to clone, rewrite some of their features into language of choice, for example I rewrote youtube-dl into a big hack using <a href="https://www.gnu.org/software/guile/">scheme</a> because I didn't want to keep having to update to accomodate every media site on earth and just wanted a way to archive YouTubes videos. Cloning doesn't mean you copy their source, you can redesign and engineer a completely new solution in fact this is how I started programming, years ago there was some software I wanted to customize who's source I could not understand whatsoever so I made my own by cloning all it's features.  
+A good place to start is find some program that you want to clone, rewrite some of their features into language of choice, for example I rewrote youtube-dl into a big hack using <a href="https://www.gnu.org/software/guile/">scheme</a> because I didn't want to keep having to update to accomodate every media site on earth and just wanted a way to archive YouTube videos. Cloning doesn't mean you copy their source, you can redesign and engineer a completely new solution in fact this is how I started programming, years ago there was some software I wanted to customize who's source I could not understand whatsoever so I made my own by cloning all it's features. If you do have access to the source it's even better, when you're done you can see how they wrote the software and compare it to yours.  
 </p>
 
 <p>
-To work on existing source an easy way to do this is by using Guix system in a VM, you can invoke guix <a href="https://hpc.guix.info/">environment</a> so find some program in the wild like youtube-dl, and environment allows you to only install the dependencies needed to work on that project in a container. There are countless academic projects floating around often written in Python where there is a large list of packages needed to run their demo software, you don't want to have to install a bunch of Python 2.7 packages on your regular system instead just replicate the environment where you list all the things you need to run that software and it just works.   
+To work on existing programs the easiest way I found is using Guix, you can invoke guix <a href="https://hpc.guix.info/">environment</a> so find some program in the wild like youtube-dl and invoking guix environment allows you to only install the dependencies needed to work on that project in a container. There are countless academic projects floating around where there is a large list of packaged dependencies needed to run their demo software, you don't want to have to install a bunch of Python 2.7 packages or old compilers on your regular system instead just replicate the environment where you list all the things you need to run that software and it just works.   
 </p>
 </div>
 </div>
@@ -3044,32 +3053,154 @@ We will take them as these topics come up:
 </div>
 
 
-<div id="outline-container-The%20Theory%20of%20Computation" class="outline-2">
-<h2 id="The%20Theory%20of%20Computation">The Theory of Computation</h2>
-<div class="outline-text-2" id="text-The%20Theory%20of%20Computation">
+<div id="outline-container-Algorithms" class="outline-2">
+<h2 id="Algorithms">Algorithms</h2>
+<div class="outline-text-2" id="text-Algorithms">
 <p>
-What are the foundations of computation and programming languages and how can we practice this theory to better understand it?  
+We will take a short cut like we did in the math workshop. When you try competition level math problems you end up learning many different things at the same time, including the ability to solve problems in general. Competition programming is the same, doing these problems help you learn many different concepts at the same time.
 </p>
 
 <p>
-Get the book <i>Competitive Programming</i> by Halim and Effendy. The <a href="http://libgen.rs/book/index.php?md5=EABCCEC887295E5DA350302DECA61D7C">third</a> version is on libgen and I own a copy of the <a href="https://cpbook.net/#CP4content">4th version</a> so will be using that but as you can see from the changelog on the book page, there isn't much difference except for including OCaml, including Kattis online judge and UVa as an online judge, and adding in new techniques which I will describe as I find them. An online judge is just a server that accepts source files you upload through a website, that compiles and tests your code to see if your program is correct and runs according to the bounds of the problem. These are usually run by universities and have competition grade testing. 
+Instead of an algorithms text, we will read a theoretical compsci text called <i>The Nature of Computation</i> for which there are recorded <a href="https://www.youtube.com/playlist?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX">lectures</a>.
+</p>
+</div>
+
+<div id="outline-container-Practice" class="outline-3">
+<h3 id="Practice">Practice</h3>
+<div class="outline-text-3" id="text-Practice">
+<p>
+Get the book <i>Competitive Programming</i> by Halim and Effendy. The <a href="http://libgen.rs/book/index.php?md5=EABCCEC887295E5DA350302DECA61D7C">third</a> version is on libgen and I own a copy of the <a href="https://cpbook.net/#CP4content">4th version</a> so will be using that but as you can see from the changelog on the book page, there isn't much difference except for including OCaml, including Kattis with UVa as an online judge, and adding in new competitive problem categories which I will describe as I find them. An online judge is a server that accepts source files you upload through a website, that compiles and tests your code to see if your program is correct and runs according to the bounds of the problem, issuing various verdict like AC (Accepted) or TLE (Time Limit Exceeded). These are usually run by universities and have competition grade testing.
+</p>
+
+<ul class="org-ul">
+<li>All the recommended Kattis problems in the 4th edition are <a href="https://cpbook.net/methodstosolve">here</a> with hints to solve them.</li>
+<li>All the code from both books are <a href="https://github.com/stevenhalim/cpbook-code">here</a> in C++/Java/Python and OCaml.</li>
+</ul>
+
+<p>
+You can use any of these <a href="https://open.kattis.com/help">languages</a> on Kattis and UVa uses <a href="https://en.wikipedia.org/wiki/UVa_Online_Judge">these</a> languages. You could use other online judges too such as <a href="https://codeforces.com/blog/entry/79">Codeforces</a> or <a href="https://www.spoj.com/">Spoj</a> which supports 45+ languages you can do these challenges in AWK if you want. In this workshop we'll just use Kattis, it has the simplest UI and hosts the ICPC <a href="https://icpc.kattis.com/">problem archive</a>. There is a lot of software around for automating submissions to Kattis or verifying problem inputs you can search github for as well.
+</p>
+</div>
+
+<div id="outline-container-Kattis%20languages" class="outline-4">
+<h4 id="Kattis%20languages">Kattis languages</h4>
+<div class="outline-text-4" id="text-Kattis%20languages">
+<p>
+We aren't building software we are just hacking away on cruise control playing a mind game to learn how to solve problems with computation so whatever language you decide to use we won't be using much of it, just primarily it's standard library. If you don't plan on competing in ICPC you can use any language Kattis accepts
+</p>
+
+<ul class="org-ul">
+<li>C++
+<ul class="org-ul">
+<li>Competitive programming books will teach you C++ or try a <a href="http://web.stanford.edu/class/cs106l/lectures.html">course</a>. This is the preferred language for competitions because you can use templates which generate code saving you time by writing the most minimal amount of code possible. These competition books will teach common techniques to hack the C++ STL defaults too like inserting negative integers into a priority queue to make it Min-PQ instead of Max-PQ.</li>
+</ul></li>
+<li>C
+<ul class="org-ul">
+<li>There is a good crash course <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/">here</a>, the classic C <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">book</a> and lectures from <a href="https://www.youtube.com/playlist?list=PL4YtNpAhVHFJVlaD203_8JkUOUT8RYUhY">15-213</a> to understand the compiler like how linking works. The <a href="http://drh.github.io/cii/">book</a> <i>C Interfaces and Implementations</i> is written in literary programming style, explaining code as you read it. Looking through the <a href="https://wiki.sei.cmu.edu/confluence/display/c">SEI CERT C Coding Standard</a> to avoid problems in your solutions like out of bounds arrays will be helpful too but remember this is for competitions so violating all the C best practices like not freeing memory to save on CPU execution time will be beneficial.</li>
+</ul></li>
+<li>JavaScript (node.js)
+<ul class="org-ul">
+<li>Try MIT Prof Jackson's advanced introduction to <a href="http://people.csail.mit.edu/dnj/teaching/6170/js-live-2020/">JavaScript</a>, his slides allow you to edit and run code as you read them.</li>
+</ul></li>
+<li>OCaml:
+<ul class="org-ul">
+<li>Cornell's <a href="https://www.cs.cornell.edu/courses/cs3110/2020fa/textbook/">OCaml book</a> from CS3110 covers the standard library, and there is many resources to find out OCaml's <a href="https://ocaml.org/learn/tutorials/comparison_of_standard_containers.html">time complexity</a> for the standard library. Remember thunks in cs19? You can do <a href="https://www.cs.cornell.edu/courses/cs3110/2020fa/textbook/adv/lazy.html">lazy evaluation</a> now as a way to experiment with performance optimization. Here's what a range tree aka fenwick tree looks like written in <a href="https://contest.cs.cmu.edu/295/tutorials/range_tree.txt">OCaml</a> from CMU's 15-295 class on competitive programming.</li>
+</ul></li>
+<li>Common Lisp:
+<ul class="org-ul">
+<li>Plenty of <a href="https://stevelosh.com/blog/2018/08/a-road-to-common-lisp/">resources</a> to learn CL. Lisp compilers are written in lisp, so you can understand the entire toolchain all the way down which will be helpful for optimization. You may like the <a href="https://stevelosh.com/blog/2018/08/a-road-to-common-lisp/#s16-lisp-as-a-system">development cycle</a> where you can interactively play around with your program making it very suitable for competitive programming throwing inputs at something and seeing what happens, such as looking for a pattern you can enter into <a href="https://oeis.org/">OEIS</a>.</li>
+</ul></li>
+<li>Java: 
+<ul class="org-ul">
+<li>MIT's 6.031 <a href="http://web.mit.edu/6.031/www/fa20/">course</a> and whatever you can find on optimizing Java searching libgen.</li>
+</ul></li>
+<li>Rust:
+<ul class="org-ul">
+<li>The Rust standard library from what I remember using it a few years ago is very small so this means you will be rolling by hand a lot of things that come built-in with other languages. This could be good or bad, meaning if you want to learn Rust it's good but if you want to do real competitions where there are time limits it could be a problem. However my understanding of Rust is from years ago, I don't use it so don't know anything about the latest versions of Rust so investigate this yourself.</li>
+</ul></li>
+<li>Prolog:
+<ul class="org-ul">
+<li>Completely <a href="https://www.metalevel.at/prolog/optimization">different</a> way of writing code in a declarative style</li>
+</ul></li>
+<li>Free Pascal:
+<ul class="org-ul">
+<li><a href="https://castle-engine.io/modern_pascal_introduction.html">Pascal</a> looks like pseudocode from algorithm texts, very easy to program on a mobile device, compilation is lightspeed fast and almost every online judge still supports it though I know nothing about it's standard library cost model or where to find this information.</li>
+</ul></li>
+<li>Kotlin:
+<ul class="org-ul">
+<li>If you own an android phone everything you need to learn and compile Kotlin is in the play store, it's the preferred language for building apps on android. Search libgen for 'Kotlin performance' books to see what they have to say about the standard Kotlin library and it's cost model.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-Using%20a%20phone%2Ftablet" class="outline-4">
+<h4 id="Using%20a%20phone%2Ftablet">Using a phone/tablet</h4>
+<div class="outline-text-4" id="text-Using%20a%20phone%2Ftablet">
+<p>
+Kattis has an online editor you can use for any of their languages, or any app store from Apple to Xiaomi have free offline compilers for many of the languages Kattis supports, so you can write in C++ or <a href="https://play.google.com/store/apps/details?id=org.eql5.android.repl&amp;hl=en&amp;gl=US">Common Lisp</a> and compile it on your phone without needing an internet connection before submitting it to a judge, or search for <a href="http://cpp.sh/">webpage compilers</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-About%20programming%20languages" class="outline-4">
+<h4 id="About%20programming%20languages">About programming languages</h4>
+<div class="outline-text-4" id="text-About%20programming%20languages">
+<p>
+You may be asking yourself, what is the real difference between many of the above programming languages and ALGOL 60. Many of those languages use the same characteristics: assignables are allocated upon entry to the scope of their declaration, then deallocated upon exit using a stack discipline, this is known as 'Algol-like languages'. Where can you learn a meaningful distinction between Java and say Kotlin or OCaml and Haskell? How can you extend any of those languages and know your extension remains type safe? 
 </p>
 
 <p>
-You can use any of these <a href="https://open.kattis.com/help">languages</a> on Kattis and UVa uses <a href="https://en.wikipedia.org/wiki/UVa_Online_Judge">these</a> languages. Pick whatever one you want since you will invest significant time into it's libraries and internals as you debug problems that time limit exceed. Common Lisp is Lisp all the way down to the compiler which has extensive documentation and papers on google scholar you can read about it's architecture as you read the source. There is even an optimizable <a href="https://numcl.github.io/numcl/">numpy clone</a> available for CL. You can practice javascript with Kattis, use <a href="https://dev.realworldocaml.org/toc.html">OCaml</a> if you want easy libraries with type signatures to tell you exactly what they do, or do everything in C++ as the book shows you.
+Robert Harper's <a href="https://www.cs.cmu.edu/~rwh/pfpl/">book</a> <i>Practical Foundations for Programming Languages</i> which I'm going to do (with the relevant PAPL chapters) while we try competitive problems will answer this question.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-CP4%20Chapter%201" class="outline-3">
+<h3 id="CP4%20Chapter%201">CP4 Chapter 1</h3>
+<div class="outline-text-3" id="text-CP4%20Chapter%201">
+<p>
+Let's flip through the first chapter of CP4 (or CP3 if you don't own CP4). Reminder CP3 is on library genesis. Under <i>Problem Categorization</i> we are told the site <a href="https://cpbook.net/methodstosolve">Methods to Solve</a> has starred problems to try, and that if we do 3 of them per category we have somewhat mastered this book. Excluding the problems on UVa, there is <a href="https://cpbook.net/methodstosolve?oj=kattis&amp;topic=ch1&amp;quality=starred">97 starred problems</a> just for the first chapter so we should try roughly 48 of them. No problem.
 </p>
 
 <p>
-This is all explained in chapter 1, so I'm going to start with reading that.
+The section <i>Tips to be competitive</i> seem the same in both versions. Modern CPUs can do 100M operations per second and we are only allowed 1 second 'CPU time' in most problems. Note that the maximum input bounds in the problem statement, these will likely be tested on all our submissions to see if exceed 1 second on max input but they will never exceed 1M because of I/O problems with judging servers, this means O([n -&gt; n log n]) and O([n -&gt; n]) algorithms can't be differentiated between each other with inputs under 1M.
 </p>
 
 <p>
-TODO
+Most of the handwritten chapter exercises in this chapter hilariously tell you to read the rest of the book and then come back and do them. We already know basic analysis from CS19 and later when we do things like Graphs and DP Prof K will teach us that complexity too.
 </p>
+
+<p>
+I'm just skimming through this chapter, there's good advice in 1.3.5 <i>Master the Art of Testing Code</i> from a competitor's viewpoint, if you choose OCaml/F#/Haskell then you will catch some of these errors easily as you won't be able to compile. Kattis does not care about whitespace output formatting thankfully so presentation error judgement is unlikely. The book then describes the anatomy of each problem, the problem writeup usually is to deceive the reader with useless information to make it seem more complicated than it is something we know from CS19 assignments already. 
+</p>
+
+<p>
+In my edition there is a full walkthrough for <a href="https://open.kattis.com/problems/moscowdream">moscowdream</a> problem. On first glance it looks like you should write a conditional if (a, b, c &gt; 0) &amp;&amp; (a+b+c &gt;= n) then "YES" else "NO". However there is a corner case, it will print 'YES' when a, b, and c are all equal to 1 and n = 1, unless you check for &amp;&amp; (n &gt;= 3).
+</p>
+
+<p>
+Try the rest of the 1.4[a-j] problems <a href="https://cpbook.net/methodstosolve?oj=kattis&amp;topic=ch1&amp;quality=all">here</a> in language of choice. We are building entire programs, so you will need to know how to read STDIN in your language, extract it and manipulate it, then print to STDOUT. Here's a C example but this is much easier in Python, or any of the other languages
+</p>
+
+<pre class="example" id="org823e082">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, c, n; scanf("%d %d %d %d", &amp;a, &amp;b, &amp;c, &amp;n);
+    if ((a &gt; 0) &amp;&amp; (b &gt; 0) &amp;&amp; (c &gt; 0) &amp;&amp; (n &gt;= 3) &amp;&amp; (a+b+c &gt;= n))
+    printf("YES\n");
+    else
+    printf("NO\n");
+}
+</pre>
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>
