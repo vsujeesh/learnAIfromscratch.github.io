@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-21 Thu 10:04 -->
+<!-- 2021-01-26 Tue 11:09 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,6 +261,7 @@
 <ul>
 <li><a href="#Lecture%201%2015-251">Lecture 1 15-251</a></li>
 <li><a href="#Lecture%202%2015-251">Lecture 2 15-251</a></li>
+<li><a href="#Exercises">Exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -321,10 +322,9 @@ Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture
 </p>
 
 <p>
-You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> or going through the math workshop, which also covers what a vector is, and reading Terence Tao's <i>Analysis I</i> chapter on sets. I will now assume you know/can look up any set theory we see in these lectures.   
+You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> or going through the math workshop, which also covers what a vector is, and reading Terence Tao's <i>Analysis I</i> chapter on sets. 
 </p>
 </div>
-
 <div id="outline-container-Probability" class="outline-3">
 <h3 id="Probability">Probability</h3>
 <div class="outline-text-3" id="text-Probability">
@@ -335,21 +335,8 @@ You can learn basic set theory by typing it into <a href="https://www.youtube.co
 </blockquote>
 
 <p>
-A good starting point is 15-251 CMU's undergrad class on theoretical cs topics. Let's watch <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures taught by Ryan O'Donnell, the full notes with exercises are <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a> to practice after, and the solutions to the exercises to check your own work is <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">here</a>. 
+We will start with <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and some of <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures taught by Ryan O'Donnell, the full notes with exercises are <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a> to practice after, and the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. We will use that understanding to level up to Cozma Shalizi's <a href="http://bactra.org/prob-notes/srl.pdf">notes</a> on probability and statistics, watch some Wildberger stats <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a>, finally trying the chapter on probability from the math for ML <a href="https://mml-book.github.io/">book</a> and Knuth's <a href="https://libgen.is/book/index.php?md5=930D5B423E3648214E3600A761A11A11">draft chapter</a> on probability from <i>Mathematical Preliminaries Redux</i> because there is a lot of confusing notation, so practice with this framework will help us understand it.  
 </p>
-
-<p>
-Other sources you could use 
-</p>
-<ul class="org-ul">
-<li>These brief <a href="http://bactra.org/prob-notes/srl.pdf">notes</a></li>
-<li>This whole MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/">course</a> which has fully worked out solutions to the assignments</li>
-<li>Any machine learning <a href="https://mml-book.github.io/">book</a></li>
-<li>The first chapters of the deep learning <a href="https://www.deeplearningbook.org/">book</a> (use libgen to get a decent pdf, the site copy is trash on my browser)</li>
-<li>Terence Tao's <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">notes</a> on the foundations of probability theory, the discrete probability notes are excellent</li>
-<li>Wildberger's probability and stats <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a></li>
-<li>Ryan O'Donnell's <a href="https://www.cs.cmu.edu/~odonnell/papers/probability-and-computing-lecture-notes.pdf">notes</a> from 15-359 a class about random computing (figuring out what load balancing should be, random algorithms, etc).</li>
-</ul>
 </div>
 
 <div id="outline-container-Lecture%201%2015-251" class="outline-4">
@@ -370,26 +357,77 @@ The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I
 <p>
 2015 lecture for independence of multiple events, the huge AND notation and product notation means as you iterate through \(Pr[A_1]\) to \(Pr[A_5]\), you insert that symbol between each value. So \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) .. by probability definition is the same as \(Pr[A_1] \cdot Pr[A_2] \cdot Pr[A_3]\).., but for every possible subset of {1,2,3,4,5}.
 </p>
+</div>
+</div>
 
-<p>
-At the end of the lecture during the Birthday Paradox you can see why I chose these lectures over every other school's intro probability lectures, he avoids all the highschool-tier simplistic demonstrations of wasting time going through the class asking their birthdays and skips right to the probability of using a random day to show it works. I've seen many lectures where this same content is reduced to a magic show and then the notes are impossible to figure out whereas here he sets up this theory as random code to analyze. 
-</p>
-</div>
-</div>
 
 <div id="outline-container-Lecture%202%2015-251" class="outline-4">
 <h4 id="Lecture%202%2015-251">Lecture 2 15-251</h4>
 <div class="outline-text-4" id="text-Lecture%202%2015-251">
 <p>
-Random variables. The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Everything here is translated to code, W = 31 x I - 1 should be W = (31 x I) - 1, and T = 2 x (RandInt(5) - 1) assume that RandInt(0) is not possible and raises an exception, or else this code makes no sense with 2 x (0 - 1), this is in the notes.
+Random variables. The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Everything here is translated to code, W = 31 x I - 1 is W = (31 x I) - 1, and T = 2 x (RandInt(5) - 1) assume that RandInt(0) is not possible and raises an exception, or else this code makes no sense with 2 x (0 - 1). 
 </p>
 
 <p>
-Linearity of Expectation proofs he's just using distributive property to move stuff around, E[aX + b] is the same as (a(E[X]) + b). Note around 35:00 where he makes a comment about understanding the types. An event space can't be summed because it's a set. The indicator can be summed because it is 0 or 1, type real number. The last 10 minutes or so of this lecture he uses a graph coloring problem and talks about satisfiability, both explained in previous lectures, you can either watch them yourself or just go through the notes.  
+Linearity of Expectation proofs he's just using distributive property to move stuff around, E[aX + b] is the same as (a(E[X]) + b). Note around 35:00 where he makes a comment about understanding the types: an event space can't be summed because it's a set, the indicator can be summed because it is 0 or 1, type real number. The last 10 minutes or so of this lecture you can optionally watch, he uses a graph coloring problem and talks about satisfiability, both explained in previous lectures if you're interested.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Exercises" class="outline-4">
+<h4 id="Exercises">Exercises</h4>
+<div class="outline-text-4" id="text-Exercises">
+<p>
+Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. If you get stuck look at Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a> he walks through many of these proofs with visual diagrams. I'm also reading Knuth's <a href="https://libgen.is/book/index.php?md5=930D5B423E3648214E3600A761A11A11">chapter</a> on probability as I go through these. Try to explain everything to yourself like I've done here:
 </p>
 
 <p>
-Let's try the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. TODO
+15.1 A discrete probability space is modelled as a tuple, (Omega, Pr[]), a tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements or variables, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The function should map these elements so every function call on Omega the total sum is 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one either the event will surely happen with probability 1, or not happen with probability 0.      
+</p>
+
+<p>
+Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The sample space = {1,2,3,4,5,6}, and Pr[] function has the property that every probability in the sample space must add up to one, so the leaves of that tree would be probability 1/6 each and Pr[roll] = 1/6. Two dice the sample space is 6x6 with 36 total leaves as possible outcomes, each leaf with probabilty 1/36. The coin and dice example, sample space = {H,T} x {1,2,3,4,5,6} and these are being tossed together, in my head I see a tree with Heads or Tails branches with 1/2 probability, and attached to each the outcome of a 1/6 dice roll, so Pr[Coin,Dice] is 1/2 x 1/6 or 1/12 which makes sense since each branch will have 6 outcomes, and there's two branches for H or T, and all 12 outcomes must add up to 1.  
+</p>
+
+<p>
+Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event which means the power set is the set of all events, that is if Omega = {H,T} then the power set E of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. In this example Omega has 2 elements, so \(2^2\) is all possible events. Note that an event is an entire set, so if you flipped the coin then the event it lands on T is E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Pr[empty] is thus 0, and Pr[omega] is 1. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" it creates a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. Knuth's definition of event sets is more clear, it's the probability of all the elements in Omega that are in set E. 
+</p>
+
+<p>
+Def 15.8 we have two 6 sided dice so our event space is {1,2,3,4,5,6} x {1,2,3,4,5,6} or 36 possible outcomes. The proposition 'I will roll double numbers' is the event space E = {(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)} and Pr[E] = 6/36 or 1/6 probability of that proposition occuring. A 3 sided die, where we roll a d sided die after, is E = {1,2,3} x {d} and Pr[E] is 1/3 x 1/d or 1/3d. How do we figure out 'the second roll is a 2'? The first roll must be &gt; 1 in order to be able to roll a 2 sided or more die after. This creates the subset E = {(2,2),(3,2)} as those are our only possible outcomes since 'second roll is a 2'. Def 15.7 the probability of Pr[E] is the sum of all probabilities in E, so we have (1/3 x 1/2) + (1/3 x 1/3), or 1/3d + 1/3d where d = 2 in the first roll, and d = 3 in the second because the size of d depend on the first roll. Why is the second roll in the first element 1/2? Because we had a 1/3 probability of rolling a 2 first roll, and since we rolled a 2 that determined the size of the second roll which was a 2 sided die. In the other event we had a 1/3 probability of rolling a 3, obtained a 3 meaning the second roll is a 3 sided die, so have another 1/3 probability of rolling a 2 on the second roll. 
+</p>
+
+<p>
+15.9 Looking at the solution for if A is a subset of B, then Pr[A] is less or equal to Pr[B], they first translate the notation Pr[A] to it's definition which is the sum of all l's (ie: the leaves, or the probabilities) in set A. Add to this the set B minus A, and you get the set B because (B\A) + A = B, so Pr[A] must be less than or equal to Pr[B]. Make examples using rolls of single 6-sided dice:
+</p>
+<ul class="org-ul">
+<li>Sample space = {1,2,3,4,5,6} and Pr(l) of any element in set Omega = 1/6</li>
+<li>B is an event subset of omega: B = {1,2}</li>
+<li>A is a subset of B: A = {1}
+<ul class="org-ul">
+<li>Pr[A] + Pr[B\A] is 1/6 + 1/6</li>
+<li>Pr[B] is 1/6 + 1/6</li>
+</ul></li>
+</ul>
+<p>
+The rest of 15.9 is pretty obvious, for example Pr[A union B] is Pr[A] + Pr[B] minus what both sets have in common. Make toy examples using the same sets from our dice rolling example:
+</p>
+<ul class="org-ul">
+<li>A = {1}, Pr[A] = 1/6</li>
+<li>B = {1,2}, Pr[B] = 1/6 + 1/6
+<ul class="org-ul">
+<li>A union B is {1,2} or 1/6 + 1/6.</li>
+<li>A intersect B = {1}, or 1/6.</li>
+<li>Pr[A] + Pr[B] is 1/6 x 3, so minus their intersection and we get the desired 1/6 + 1/6.</li>
+</ul></li>
+</ul>
+
+<p>
+15.11 make another example for yourself using the 15.8 exercise 'I will roll double numbers'. If you broke up that set into individual sets of A1 = {(1,1)}, A2 = {(2,2)} then their union is {1,2} but Pr[A1] + Pr[A2] is bigger than the union as Pr[A1] + Pr[A2] is 4/36 where Pr[A1 union A2] is 2/36.
+</p>
+
+<p>
+15.5 this is 1/3 x d again or 1/3d probability. As you can see from the solution, it's just plugging in event sets to the formula for Pr[A|B]. TODO
 </p>
 
 <hr>
