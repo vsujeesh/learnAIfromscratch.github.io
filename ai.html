@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-26 Tue 11:09 -->
+<!-- 2021-01-27 Wed 10:51 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -355,17 +355,20 @@ The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I
 </p>
 
 <p>
-2015 lecture for independence of multiple events, the huge AND notation and product notation means as you iterate through \(Pr[A_1]\) to \(Pr[A_5]\), you insert that symbol between each value. So \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) .. by probability definition is the same as \(Pr[A_1] \cdot Pr[A_2] \cdot Pr[A_3]\).., but for every possible subset of {1,2,3,4,5}.
+2015 lecture for independence of multiple events, the huge AND notation and product notation means as you iterate through \(Pr[A_1]\) to \(Pr[A_5]\), you insert that symbol between each value ie for intersection: \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) ..
 </p>
 </div>
 </div>
-
 
 <div id="outline-container-Lecture%202%2015-251" class="outline-4">
 <h4 id="Lecture%202%2015-251">Lecture 2 15-251</h4>
 <div class="outline-text-4" id="text-Lecture%202%2015-251">
 <p>
-Random variables. The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Everything here is translated to code, W = 31 x I - 1 is W = (31 x I) - 1, and T = 2 x (RandInt(5) - 1) assume that RandInt(0) is not possible and raises an exception, or else this code makes no sense with 2 x (0 - 1). 
+Random variables. A random variable is neither random nor a variable, it's a function from the sample space to some real number, as described in this MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/unit-i/lecture-5/">lecture</a> notice you have Omega = set of all students, a function from one student in Omega to their height in inches is a random variable which creates a new random variable as a function from their height in inches to height in cms. If I were to guess why it has that name, from reading Tao's probability foundations <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a> it's a way to extend the sample space by creating a new sample space with new probabilities.   
+</p>
+
+<p>
+The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Everything here is translated to code, W = 31 x I - 1 is W = (31 x I) - 1, and T = 2 x (RandInt(5) - 1) assume that RandInt(0) is not possible and raises an exception, or else this code makes no sense with 2 x (0 - 1). 
 </p>
 
 <p>
@@ -382,7 +385,7 @@ Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f1
 </p>
 
 <p>
-15.1 A discrete probability space is modelled as a tuple, (Omega, Pr[]), a tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements or variables, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The function should map these elements so every function call on Omega the total sum is 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one either the event will surely happen with probability 1, or not happen with probability 0.      
+15.1 A discrete probability space, Omega, is modelled as a tuple: (Omega, Pr[]). A tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The total sum of everything in the Omega sample space should sum to 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one:  either the event will surely happen with probability 1, or not happen with probability 0, or possibly happen with probability from 0 to 1.       
 </p>
 
 <p>
@@ -390,7 +393,7 @@ Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The 
 </p>
 
 <p>
-Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event which means the power set is the set of all events, that is if Omega = {H,T} then the power set E of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. In this example Omega has 2 elements, so \(2^2\) is all possible events. Note that an event is an entire set, so if you flipped the coin then the event it lands on T is E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Pr[empty] is thus 0, and Pr[omega] is 1. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" it creates a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. Knuth's definition of event sets is more clear, it's the probability of all the elements in Omega that are in set E. 
+Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. In this example Omega has 2 elements, so \(2^2\) is all possible events. Note that an event is type set, so if you flipped the coin then the event it lands on T is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. It's the sum of probabilities of all elements in Omega that are also in set E. 
 </p>
 
 <p>
