@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-27 Wed 10:51 -->
+<!-- 2021-01-28 Thu 10:15 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -261,6 +261,7 @@
 <ul>
 <li><a href="#Lecture%201%2015-251">Lecture 1 15-251</a></li>
 <li><a href="#Lecture%202%2015-251">Lecture 2 15-251</a></li>
+<li><a href="#Probability%20%26%20Markets">Probability &amp; Markets</a></li>
 <li><a href="#Exercises">Exercises</a></li>
 </ul>
 </li>
@@ -296,7 +297,7 @@ As I go I will choose various materials from the following list that will probab
 <li>15-388 (2019) <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">Practical Data Science</a> another CMU course has good lectures to use as recitations for prereqs like linear algebra or probability, and the <a href="http://www.datasciencecourse.org/lectures/">notes</a> are in interactive jupyter notebooks you can view or run yourself as you read them.</li>
 <li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">Machine Learning for Intelligent Systems</a> Cornell's intro ML class has the best instructor I find in terms of explaining the math notation, keeping on point (no long offtopic anecdotes), and has the best <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a>. This class only covers supervised learning which has overlap with unsupervised and reinforcement learning.</li>
 <li>Many book chapters, papers, guides all suggested by these courses&#x2026; primarily the Deep Learning book by Goodfellow, Mathematics for Machine Learning, and Strang's new Linear Algebra w/Deep Learning.</li>
-<li>A <a href="https://computationalthinking.mit.edu/Fall20/">course</a> on programming models so we can do things like import any Python or R library we want and use it, and learn how to optimize our programs when deploying them instead of every other ML curriculum that stops with the modelling and tells you nothing about GPUs or parallel deployment. You can of course use any language you want, even common <a href="https://github.com/numcl/numcl">lisp</a>.</li>
+<li>A <a href="https://computationalthinking.mit.edu/Fall20/">course</a> on programming models so we can do things like import any Python or R library we want and use it, and learn how to optimize our programs when deploying them instead of every other ML curriculum that stops with the modeling and tells you nothing about GPUs or parallel deployment. You can of course use any language you want, even common <a href="https://github.com/numcl/numcl">lisp</a>.</li>
 </ul>
 
 <p>
@@ -310,7 +311,7 @@ Maybe try some AI competitions, like <a href="https://halite.io/">Halite</a>.
 <h2 id="Start%20here">Start here</h2>
 <div class="outline-text-2" id="text-Start%20here">
 <p>
-Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. We are told there are sets T, P and E where T is the set of tasks, P is the set of performance measures that improves with experiences in set E. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics.
+Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics.
 </p>
 
 <p>
@@ -318,11 +319,11 @@ Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning
 </p>
 
 <p>
-Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Watch this first to see what we need to know then we will pick up all the probability and linear algebra after. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,-1). So using his patient data vector example, Y would be binary 0 or 1 to represent yes or no. X is all the feature set of a patient and D is the total training data set of all possible combinations of feature set with yes and no.
+Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,-1). So using his patient data vector example, Y would be binary 0 or 1 to represent yes or no. X is all the feature set of a patient and D is the total training data set of all possible combinations of feature set with yes and no.
 </p>
 
 <p>
-You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> or going through the math workshop, which also covers what a vector is, and reading Terence Tao's <i>Analysis I</i> chapter on sets. 
+You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> or going through the math workshop, which also covers what a vector is.
 </p>
 </div>
 <div id="outline-container-Probability" class="outline-3">
@@ -343,11 +344,7 @@ We will start with <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and 
 <h4 id="Lecture%201%2015-251">Lecture 1 15-251</h4>
 <div class="outline-text-4" id="text-Lecture%201%2015-251">
 <p>
-I'm watching the 2013 15-251 YouTube lecture and the 2015 Panopto version <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a> with unobstructed slides, and the lecture clarifies things better than the 2013 lecture, though the notes for the course cover everything. In the 2013 YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RandInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. The term notation overload means multiple definitions for the same notation, hoping you derive from context which definition the notation is using.
-</p>
-
-<p>
-Anytime there is some mental rational arithmetic try it in your head. 1/6 + 1/8 + 1/8 is 1/6 + 1/4, which from Wildberger lectures if you watched them in math workshop, a/b + c/d is (ad + cb)/bd and or just (6+4)/24 since the numerator is all 1's. The more you practice this the easier it gets like that guy in the class who just shouts out the answer in the 2015 lecture. 
+I'm watching the 2013 15-251 YouTube lecture and the 2015 Panopto version <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a> with unobstructed slides, and the lecture clarifies things better than the 2013 lecture, though the notes for the course cover everything. In the 2013 YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RandInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. The term <i>notation overload</i> means multiple definitions for the same notation, hoping you derive from context which definition the notation is using.
 </p>
 
 <p>
@@ -355,7 +352,7 @@ The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I
 </p>
 
 <p>
-2015 lecture for independence of multiple events, the huge AND notation and product notation means as you iterate through \(Pr[A_1]\) to \(Pr[A_5]\), you insert that symbol between each value ie for intersection: \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) ..
+2015 lecture for independence of multiple events, the big union or 'and' notation \(\bigcup\) or the \(\prod\) product notation means as you iterate through a sequence like \(Pr[A_1]\) to \(Pr[A_5]\), you insert that operation between each value ie for intersection: \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) or \(Pr[A_1] \cdot Pr[A_2] \cdot.. Pr[A_i]\).
 </p>
 </div>
 </div>
@@ -364,18 +361,24 @@ The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I
 <h4 id="Lecture%202%2015-251">Lecture 2 15-251</h4>
 <div class="outline-text-4" id="text-Lecture%202%2015-251">
 <p>
-Random variables. A random variable is neither random nor a variable, it's a function from the sample space to some real number, as described in this MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/unit-i/lecture-5/">lecture</a> notice you have Omega = set of all students, a function from one student in Omega to their height in inches is a random variable which creates a new random variable as a function from their height in inches to height in cms. If I were to guess why it has that name, from reading Tao's probability foundations <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a> it's a way to extend the sample space by creating a new sample space with new probabilities.   
+Random variables are explained as whatever the value that variable has at the end of computation. Random variables are a function from the sample space to the real numbers. Any function you obtain from an existing random variable is another random variable as described in this MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/unit-i/lecture-5/">lecture</a> you have Omega = set of all students, a function from one student in the Omega set to their height in inches is a random variable (sample set to real number). A new function from their height in inches to their height in cms is another random variable. Tao's discrete probability foundations <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a> explain this concept as a way to extend the sample space by creating a new sample space with new probabilities, much like how you would change basis in linear algebra.    
 </p>
 
 <p>
-The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Everything here is translated to code, W = 31 x I - 1 is W = (31 x I) - 1, and T = 2 x (RandInt(5) - 1) assume that RandInt(0) is not possible and raises an exception, or else this code makes no sense with 2 x (0 - 1). 
+The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Linearity of Expectation proofs he's just using distributive property to move stuff around, E[aX + b] is the same as (a(E[X]) + b) because these are linear/scaling operations. Note around 35:00 where he makes a comment about understanding the types: an event space can't be summed because it's a set, the indicator can be summed because it is 0 or 1, type real number. The last 10 minutes or so of this lecture you can optionally watch, he uses a graph coloring problem and talks about satisfiability, both explained in previous lectures if you're interested.
 </p>
+</div>
+</div>
 
+<div id="outline-container-Probability%20%26%20Markets" class="outline-4">
+<h4 id="Probability%20%26%20Markets">Probability &amp; Markets</h4>
+<div class="outline-text-4" id="text-Probability%20%26%20Markets">
 <p>
-Linearity of Expectation proofs he's just using distributive property to move stuff around, E[aX + b] is the same as (a(E[X]) + b). Note around 35:00 where he makes a comment about understanding the types: an event space can't be summed because it's a set, the indicator can be summed because it is 0 or 1, type real number. The last 10 minutes or so of this lecture you can optionally watch, he uses a graph coloring problem and talks about satisfiability, both explained in previous lectures if you're interested.
+It may be helpful to see all these abstractions with concrete examples in the real world. This <a href="https://www.janestreet.com/probability-markets/">guide</a> here is for people applying to Jane Street as a quantitative trader which explains all these random modeling concepts in a different view that may make more sense. This is how you learn, seeing the same highly abstract model in multiple contexts to learn it's behavior, then doing exercises to confirm you understand the model. This pdf has confidence intervals (confidence regions) which we will <a href="http://bactra.org/prob-notes/srl.pdf">read</a> about soon.    
 </p>
 </div>
 </div>
+
 
 <div id="outline-container-Exercises" class="outline-4">
 <h4 id="Exercises">Exercises</h4>
@@ -384,16 +387,34 @@ Linearity of Expectation proofs he's just using distributive property to move st
 Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. If you get stuck look at Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a> he walks through many of these proofs with visual diagrams. I'm also reading Knuth's <a href="https://libgen.is/book/index.php?md5=930D5B423E3648214E3600A761A11A11">chapter</a> on probability as I go through these. Try to explain everything to yourself like I've done here:
 </p>
 
+<details id="org20dff33">
 <p>
-15.1 A discrete probability space, Omega, is modelled as a tuple: (Omega, Pr[]). A tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The total sum of everything in the Omega sample space should sum to 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one:  either the event will surely happen with probability 1, or not happen with probability 0, or possibly happen with probability from 0 to 1.       
+
 </p>
 
 <p>
-Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The sample space = {1,2,3,4,5,6}, and Pr[] function has the property that every probability in the sample space must add up to one, so the leaves of that tree would be probability 1/6 each and Pr[roll] = 1/6. Two dice the sample space is 6x6 with 36 total leaves as possible outcomes, each leaf with probabilty 1/36. The coin and dice example, sample space = {H,T} x {1,2,3,4,5,6} and these are being tossed together, in my head I see a tree with Heads or Tails branches with 1/2 probability, and attached to each the outcome of a 1/6 dice roll, so Pr[Coin,Dice] is 1/2 x 1/6 or 1/12 which makes sense since each branch will have 6 outcomes, and there's two branches for H or T, and all 12 outcomes must add up to 1.  
+15.1 A discrete probability space, Omega or \(\Omega\), is modeled as a tuple: (Omega, Pr[]). A tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The total sum of the Omega sample space is 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one: either the event will surely happen with probability 1, or not happen with probability 0, or possibly happen with probability from 0 to 1.       
 </p>
 
 <p>
-Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. In this example Omega has 2 elements, so \(2^2\) is all possible events. Note that an event is type set, so if you flipped the coin then the event it lands on T is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. It's the sum of probabilities of all elements in Omega that are also in set E. 
+Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The sample space = {1,2,3,4,5,6}, and Pr[] function has the property that every probability in the sample space must add up to one, so the leaves of that tree would be probability 1/6 each and Pr[roll] = 1/6. Two dice the sample space is 6x6 with 36 total leaves as possible outcomes, each leaf with probabilty 1/36. The coin and dice example, sample space = {H,T} x {1,2,3,4,5,6} in my head I see a tree with Heads or Tails branches with 1/2 probability, and attached to each branch is the outcome of a 1/6 dice roll, so Pr[Coin,Dice] is 1/2 x 1/6 or 1/12 which makes sense since each branch will have 6 outcomes, and there's two branches for H or T, and all 12 outcomes must add up to 1. Here's the same example with a 3 sided die:
+</p>
+
+<pre class="example" id="orgf3efedf">
+       Bernoulli(1/2)
+        /          \ 
+  RandInt(3)     RandInt(3) 	
+     /  \          /  \ 
+(H,1),(H,2)(H,3) (T,1),(T,2),(T,3)
+</pre>
+
+<p>
+In this example it's 1/2 x 1/3, or 1/6 probability in each leaf, which again makes sense as there are 6 leaves or outcomes x 1/6 = 1. 
+</p>
+
+
+<p>
+Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. Notice we have 2 probability = 0 in that power set, as {H,T} is an impossible state (assuming you don't count a coin landing on it's side) and the empty set are both Pr = 0. An event is type set, so if you flipped the coin then the event that it lands on Tails is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. In Knuth's writeup he makes this more clear using notation to show an event is the sum of probabilities of all elements in Omega that are also in set E. 
 </p>
 
 <p>
@@ -401,7 +422,7 @@ Def 15.8 we have two 6 sided dice so our event space is {1,2,3,4,5,6} x {1,2,3,4
 </p>
 
 <p>
-15.9 Looking at the solution for if A is a subset of B, then Pr[A] is less or equal to Pr[B], they first translate the notation Pr[A] to it's definition which is the sum of all l's (ie: the leaves, or the probabilities) in set A. Add to this the set B minus A, and you get the set B because (B\A) + A = B, so Pr[A] must be less than or equal to Pr[B]. Make examples using rolls of single 6-sided dice:
+15.9 Looking at the solution for if A is a subset of B, then Pr[A] is less or equal to Pr[B], they first translate the notation Pr[A] to it's definition which is the sum of all outcomes (ie: the leaves, or the probabilities) in set A. Add to this the set B minus A, and you get the set B because (B\A) + A = B, so Pr[A] must be less than or equal to Pr[B]. Make examples using rolls of single 6-sided dice:
 </p>
 <ul class="org-ul">
 <li>Sample space = {1,2,3,4,5,6} and Pr(l) of any element in set Omega = 1/6</li>
@@ -413,7 +434,7 @@ Def 15.8 we have two 6 sided dice so our event space is {1,2,3,4,5,6} x {1,2,3,4
 </ul></li>
 </ul>
 <p>
-The rest of 15.9 is pretty obvious, for example Pr[A union B] is Pr[A] + Pr[B] minus what both sets have in common. Make toy examples using the same sets from our dice rolling example:
+The rest of 15.9 is pretty obvious, make toy examples using the same sets from our dice rolling example:
 </p>
 <ul class="org-ul">
 <li>A = {1}, Pr[A] = 1/6</li>
@@ -430,8 +451,10 @@ The rest of 15.9 is pretty obvious, for example Pr[A union B] is Pr[A] + Pr[B] m
 </p>
 
 <p>
-15.5 this is 1/3 x d again or 1/3d probability. As you can see from the solution, it's just plugging in event sets to the formula for Pr[A|B]. TODO
+15.14 this is 1/3 x d again or 1/3d probability. As you can see from the solution, it's just plugging in event sets to the formula for Pr[A|B].
+TODO
 </p>
+</details>
 
 <hr>
 <p>
