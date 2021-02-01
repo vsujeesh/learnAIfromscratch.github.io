@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-11 Mon 09:50 -->
+<!-- 2021-02-01 Mon 07:59 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -250,11 +250,7 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a>
-<ul>
-<li><a href="#Study%20advice">Study advice</a></li>
-</ul>
-</li>
+<li><a href="#Intro">Intro</a></li>
 <li><a href="#Start%20here">Start here</a>
 <ul>
 <li><a href="#The%20natural%20numbers">The natural numbers</a></li>
@@ -276,11 +272,7 @@
 <li><a href="#How%20to%20read%20math">How to read math</a></li>
 </ul>
 </li>
-<li><a href="#2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</a>
-<ul>
-<li><a href="#Aside%3A%20Induction%20and%20Recursion">Aside: Induction and Recursion</a></li>
-</ul>
-</li>
+<li><a href="#2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</a></li>
 <li><a href="#2.2%20Addition">2.2 Addition</a>
 <ul>
 <li><a href="#Exercise%202.2.1">Exercise 2.2.1</a></li>
@@ -405,18 +397,19 @@
 <li><a href="#Finish%20this%20playlist">Finish this playlist</a></li>
 </ul>
 </li>
+<li><a href="#Po-Shen%20Loh">Po-Shen Loh</a>
+<ul>
+<li><a href="#Linear%20Algebra%20Explained">Linear Algebra Explained</a></li>
+<li><a href="#Matrix%20multiplication">Matrix multiplication</a></li>
+<li><a href="#Determinants">Determinants</a></li>
+<li><a href="#Poh-Shen%20Loh%27s%20advice">Poh-Shen Loh's advice</a></li>
+</ul>
+</li>
 <li><a href="#Limits">Limits</a>
 <ul>
 <li><a href="#6.1%20Convergence%20and%20limit%20laws">6.1 Convergence and limit laws</a></li>
 <li><a href="#6.2%20The%20Extended%20real%20numbers">6.2 The Extended real numbers</a></li>
-<li><a href="#6.3%20Sup%20and%20Inf%20of%20sequences">6.3 Sup and Inf of sequences</a></li>
-<li><a href="#6.4%20Limsup%2C%20Liminf%20and%20limit%20points">6.4 Limsup, Liminf and limit points</a>
-<ul>
-<li><a href="#Review">Review</a></li>
-</ul>
-</li>
 <li><a href="#6.5%20Some%20standard%20limits">6.5 Some standard limits</a></li>
-<li><a href="#6.6%20Subsequences">6.6 Subsequences</a></li>
 <li><a href="#6.7%20Real%20number%20exponents%20II">6.7 Real number exponents II</a></li>
 </ul>
 </li>
@@ -425,19 +418,7 @@
 <li><a href="#7.1%20Finite%20series">7.1 Finite series</a></li>
 <li><a href="#7.2%20Infinite%20series">7.2 Infinite series</a></li>
 <li><a href="#7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</a></li>
-</ul>
-</li>
-<li><a href="#Infinite%20sets">Infinite sets</a>
-<ul>
-<li><a href="#Constructive%20Mathematics">Constructive Mathematics</a></li>
-</ul>
-</li>
-<li><a href="#Po-Shen%20Loh">Po-Shen Loh</a>
-<ul>
-<li><a href="#Linear%20Algebra%20Explained">Linear Algebra Explained</a></li>
-<li><a href="#Matrix%20multiplication">Matrix multiplication</a></li>
-<li><a href="#Determinants">Determinants</a></li>
-<li><a href="#Poh-Shen%20Loh%27s%20advice">Poh-Shen Loh's advice</a></li>
+<li><a href="#Infinite%20sets">Infinite sets</a></li>
 </ul>
 </li>
 <li><a href="#CMU%20Putnam%20Seminar">CMU Putnam Seminar</a>
@@ -454,21 +435,12 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-This is part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> to learn math from scratch. No background is required. This is a draft over time it will change to be more efficient.      
+This is part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> to learn mathematical logic. No background is required.
 </p>
 
 <p>
 <i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>.  
 </p>
-</div>
-
-<div id="outline-container-Study%20advice" class="outline-3">
-<h3 id="Study%20advice">Study advice</h3>
-<div class="outline-text-3" id="text-Study%20advice">
-<p>
-At first, your proofs will just be complete sentences that are a convincing argument to yourself. You don't need to have them verified or a solutions guide or anything. The act of re-reading definitions, experimenting around with the examples, and trying to deduce the logic to write your own proof is <a href="https://infinitedescent.xyz/20180214-exercises-ibl/">how you learn math</a>. Later when we do the <a href="#CMU%20Putnam%20Seminar">Putnam seminar</a> we will see multiple strategies and solutions which won't make sense unless we try some basic proof writing first. 
-</p>
-</div>
 </div>
 </div>
 
@@ -476,7 +448,7 @@ At first, your proofs will just be complete sentences that are a convincing argu
 <h2 id="Start%20here">Start here</h2>
 <div class="outline-text-2" id="text-Start%20here">
 <p>
-We start with some 10 minute lectures on basic arithmetic, from the point of view of a mathematician.
+We start at the very beginning counting sticks and work our way up to the CMU <a href="https://youtu.be/vGQZjITDft4">Putnam Seminar</a>. 
 </p>
 </div>
 
@@ -780,7 +752,7 @@ Wildberger proves the distributive and commutative laws using fractions while st
 <h2 id="Proofs">Proofs</h2>
 <div class="outline-text-2" id="text-Proofs">
 <p>
-Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for students while they read through Rudin's analysis book. Tao starts from the very beginning, and constructs all the algebra laws for natural numbers, integers, rational and real numbers then will teach us calculus so if you have no math background this is fine since we're going to redo it all from scratch anyway.   
+Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for students while they read through Rudin's analysis book. 
 </p>
 </div>
 
@@ -844,49 +816,8 @@ Let's understand Axiom 2.5 by watching a lecture from MIT on proofs though you w
 <ul class="org-ul">
 <li>From MIT's 6.042j <i>Mathematics for Computer Scientists</i></li>
 </ul></li>
-<li>Read chapter 24 <i>Techniques of proof IV: Induction</i> in Kevin Houston's book, there is also advice here for induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes, like assuming too much, confusing over statements.</li>
+<li>Read chapter 24 <i>Techniques of proof IV: Induction</i> in Kevin Houston's book, there is also advice here for induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes, for <i>Common Errors and Pitfalls</i> which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k. The logical chain of deduction goes forward, you assume k and then prove the successor of k which means all future successors are also proven as this deduction chain keeps on going.</li>
 </ul>
-
-<p>
-Proposition 2.1.16 (Recursive definitions) in the book <i>Analysis I</i>. Tao uses a function, it's definition can be read in chapter 3.3. Here \(a_0\) is function notation so \(a_0\) is \(f_0(0)\), \(a_1\) is \(f_1(1)\). This proposition is using a new function (a rule that maps from one input to one output) every time but will make no sense if you don't know what a function is so surprised Tao includes this here. You can safely skip this proposition and come back later when you've finished a few chapters. 
-</p>
-</div>
-
-
-<div id="outline-container-Aside%3A%20Induction%20and%20Recursion" class="outline-4">
-<h4 id="Aside%3A%20Induction%20and%20Recursion">Aside: Induction and Recursion</h4>
-<div class="outline-text-4" id="text-Aside%3A%20Induction%20and%20Recursion">
-<p>
-Induction and recursion are the same concept.  As an example, the specification of a program function twoExp(n) that when given a value n, returns \(2^n\). The examples you write for this program are as follows:
-</p>
-<ul class="org-ul">
-<li>twoExp(0) = 1</li>
-<li>twoExp(1) = 2</li>
-<li>twoExp(2) = 4</li>
-<li>twoExp(3) = 8</li>
-<li>twoExp(4) = 16</li>
-<li>twoExp(5) = 32</li>
-</ul>
-
-<p>
-You notice the pattern: the result of the next value, is 2x the previous value. twoExp(5) is 2 * twoExp(4). You write an algorithm using the above examples: if input = 0, then return 1, otherwise return 2 * twoExp(n-1). You make an assumption, that the input will always be non-negative. Walking through the program execution, twoExp(3) evaluates:
-</p>
-
-<ul class="org-ul">
-<li>2 * twoExp(3-1)</li>
-<li>2 * (2 * twoExp(2-1))</li>
-<li>2 * (2 * (2 * twoExp(1-1)))</li>
-<li>2 * (2 * (2 * (1))) = \(2^3\)</li>
-</ul>
-
-<p>
-To prove this by induction on n, we try the base case P(0). If n = 0 then twoExp(0) evaluates to 1, which is \(2^0\). What is P(n)? According to our recursive definition, n = 2*P where the value of P = twoExp(n-1) or \(2^{n-1}\). Our inductive step is n, since our algorithm is inductively defined n-1, and we wish to prove the successor n + 1, which is n. 2*P = \(2*2^{n-1}\) or \(2^n\). 
-</p>
-
-<p>
-Note that we didn't have to do anything extra to prove this recursive function. That's because an inductive proof is a recursive function, and a recursive function is an inductive proof.    
-</p>
-</div>
 </div>
 </div>
 
@@ -935,53 +866,48 @@ Proposition 2.2.4 (Addition is commutative) the base case is straight forward. W
 <h4 id="Exercise%202.2.1">Exercise 2.2.1</h4>
 <div class="outline-text-4" id="text-Exercise%202.2.1">
 <p>
-Remember a proof at our early level is just a convicing argument to yourself. To check that it is correct, all the forms have to already have been introduced in the text, for example say Tao has only defined 0 + b = 0 but not b + 0 = 0 + b. We can't assume b + 0 = 0 + b unless it has already been proved (or you write your own lemma for it) so if Tao has only shown 0 + b = 0, you can still do a dance where you claim b = 0 and then by substitution in the appendix claim it's also 0 = b but you're not supposed to directly assume anything.
-</p>
-
-<details id="org4c35aff">
-<p>
-
+Prove 2.2.5 (Addition is associative) what we want to prove is (a + b) + c = a + (b + c)
 </p>
 
 <p>
-Proposition 2.2.5 (Addition is associative) what we want to prove is (a + b) + c = a + (b + c)
+<b>Base Case</b>: What is the base case? We want to show that if a natural number is inside or outside brackets, it will have the same result when added together. Induct on any variable (a, b or c) you want. This will use substitution, which is in the appendix: if we say x = y, then every future occurrence of y we can substitute for x just like if we say 1+1 = 2, then everytime you see a 2 you can substitute it for (1+1) like 0, 1, (1+1), 3. 
 </p>
 
-
-<p>
-<b>Base Case</b>: What is the base case? We want to show that if a natural number is inside or outside brackets, it will have the same result when added together. Induct on any variable (a, b or c) you want. This will use substitution, which is in the appendix. If we say x = y, then every future occurrence of y we can substitute for x:
-</p>
-
-<p>
-(a + b) + 0 = a + (b + 0) (substitute 0 for c)
-</p>
 <ul class="org-ul">
-<li>left side: (a + b) + 0 since b + 0 = b (lemma 2.2.2) then we have:</li>
-<li>a + (b + 0) (lemma 2.2.2)
+<li>Base case:</li>
+<li>(a + b) + 0 = a + (b + 0) (substitute 0 for c)</li>
+<li>looking at left side: (a + b) + 0
 <ul class="org-ul">
-<li>base case: a + (b + 0) = a + (b + 0)</li>
+<li>since b + 0 = b (lemma 2.2.2) then (value) + 0 = value</li>
+<li>(a + b) + 0 = a + b</li>
 </ul></li>
-<li>or choose a: right side: 0 + (b + c) = b + c by definition of addition</li>
-<li>lef side: (0 + b) + c by definition of addition
+<li>looking at right side: a + (b + 0)
 <ul class="org-ul">
-<li>another base case: 0 + (b + c) = 0 + (b + c)</li>
+<li>a + (b + 0) is a + (b) for the same lemma 2.2.2 reasons</li>
+<li>a + (b + 0) = a + b</li>
 </ul></li>
+<li>now we have a + b = a + b and base case is done.</li>
 </ul>
 
 <p>
-<b>IH</b>:
-The inductive hypothesis (IH) we assume addition is associative, and that (a + b) + c = a + (b + c). If any steps of your proof are in the form (a + b) + c or a + (b + c) you can substitute them for each other by the IH, since we declared them equal. For example: y + a + (b + c). Note a + (b + c) is the form of our hypothesis, so can change this to y + (a + b) + c 
+We selected c for the base case, but what if you choose a or b? Try it while looking at the definition of addition. 
 </p>
 
 <p>
-<b>Inductive step</b>: There's a few ways to show this, I'll move stuff around randomly and you can see where the proof is:
+<b>IH</b>:
+The inductive hypothesis (IH) we assume addition is associative, and that (a + b) + c = a + (b + c). Remember substitution? If you say x is equal y then everytime you see y, you can change it for x. We will do that here with the inductive hypothesis: if any steps of your proof end up in the form (a + b) + c or a + (b + c) you can substitute them for each other. For example: y + a + (b + c). Note a + (b + c) is the form of our hypothesis, so can change this to y + (a + b) + c. 
+</p>
+
+<p>
+<b>Inductive step</b>: We want to prove the successor of c is also associative. There's a few ways to show this, I'll move stuff around randomly and you can see where the proof is:
 </p>
 
 <p>
 Inducting on c: (a + b) + (c++) = a + (b + (c++))
 </p>
 <ul class="org-ul">
-<li>right side: a + (b + (c++))</li>
+<li>right side: a + (b + (c++)) 
+<ul class="org-ul">
 <li>a + (b + c)++ (lemma 2.2.3)</li>
 <li>((a + b) + c)++ (by the IH)</li>
 <li>((a + b)++) + c (def of addition)</li>
@@ -989,31 +915,28 @@ Inducting on c: (a + b) + (c++) = a + (b + (c++))
 <li>((b++)+ a) + c (def of addition)</li>
 <li>c + ((b++) + a) (commutative)</li>
 <li>c + (a + (b++)) (commutative)</li>
-<li>left side: (a + b) + (c++)</li>
-<li>(c++) + (a + b) (commutative)</li>
-<li>(c + (a + b))++ (def of addition.. consider (a + b) to be one value
-<ul class="org-ul">
-<li><b>Recall (n++) + m = (n + m)++ ergo (n++) + (m + b) is (n + (m + b))++</b></li>
 </ul></li>
-<li>((a + b) + c)++ (commutative)</li>
-<li>(a + (b + c))++ (by the IH)</li>
-<li>((b + c) + a)++ (commutative)
+<li>left side: (a + b) + (c++)
 <ul class="org-ul">
+<li>(c++) + (a + b) (commutative)</li>
+<li>(c + (a + b))++ (def of addition.. consider (a + b) to be one value):</li>
+</ul></li>
+<li><b>Recall (n++) + m = (n + m)++ so this means (c++) + (a + b) is (c + (a + b))++ because (n++) + (value) = (n + value)++</b>
+<ul class="org-ul">
+<li>(c + (a + b))++ is the same as ((a + b) + c)++ (commutative around the (a + b) bracket)</li>
+<li>(a + (b + c))++ (by the IH)</li>
+<li>((b + c) + a)++ (commutative)</li>
 <li>etc., can keep moving these around</li>
 </ul></li>
 </ul>
 
 <p>
-Try moving everything around until you understand exactly how commutativity and associativity work. See if you can get it to a form where you can use the inductive hypothesis, substitute and permute them around some more until this starts to make sense. Remember that (n + m) is one value, so (n++) + (n + m) is (n++) + (value) which we know from the text can be written as the form  (n + (n + m))++, and (n + (n + m)) can be rewritten according to commutative property ((n + m) + n) because it's just (n + (value)) so ((value) + n) changes nothing. . 
+Try moving everything around until you understand exactly how commutativity and associativity work. See if you can get it to a form where you can use the inductive hypothesis, substitute and permute them around some more until this starts to make sense. The proof, mimic Tao and write full sentences using his proofs in this chapter as your exact template.
 </p>
 
-<ul class="org-ul">
-<li>The proof, mimic Tao and write full sentences
-<ul class="org-ul">
-<li>We induct on <i>a</i> keeping <i>b</i> and <i>c</i> fixed. We first consider the base case a = 0 and we have to prove (0 + b) + c = 0 + (b + c). By the definition of addition (0 + b) + c = b + c, and 0 + (b + c) = b + c, thus both sides are equal to b + c and are equal to each other. Suppose inductively that addition is associative and (a + b) + c = a + (b + c), now we have to prove that ((a++) + b) + c = (a++) + (b + c) to close the induction. By the definition of addition, the left hand side is equal to ((a + b)++) + c which is also equal to ((a + b) + c)++ by the definition of addition. By the inductive hypothesis, ((a + b) + c)++ is equal to (a + (b + c))++. The right-hand side is equal to (a + (b + c))++ by the definition of addition and now both sides are equal to each other, and we have closed the induction.</li>
-</ul></li>
-</ul>
-</details>
+<p>
+What you learned here is that we are only using point to reasoning, there is no calculating involved and you should see this reasoning more abstractly like a + (b + c) is a + (value) so if (n++) + m = (n + m)++, then (c++) + (a + b) is really just (n++) + m as you can substitute m = (a + b) just like we substituted 1 + 1 for 2 or think of it as any arbitrary natural number (value) + (n++) since we can point to the reasoning that (a + b) will equal (value).   
+</p>
 </div>
 </div>
 </div>
@@ -1026,7 +949,7 @@ Proposition 2.2.6 (Cancellation Law) uses Axiom 2.4 which states '<i>Different n
 </p>
 
 <p>
-Lemma 2.2.10 has an exercise where induction is suggested but this is actually much easier to prove using contradiction (See Kevin Houston book). Always read the <a href="https://terrytao.wordpress.com/books/analysis-i/#comment-447019">comments</a> on Tao's blog if you're stuck: "You can modify the statement of the exercise to an equivalent statement which makes sense for a=0. (The statement will probably look something like “For any natural number a, either a=0, or else there exists exactly one…”.)" If you see this stackexchange <a href="https://math.stackexchange.com/a/3392788">answer</a> they use the peano axioms of 2.2 existence and 2.4 uniqueness. We can also try the chapter on contradiction proofs in Kevin Houston's book or the appendix of <i>Analysis</i>: Suppose for the sake of contradiction that that there exists two different natural numbers with the same successor. Then a = m++ and b = m++. But then by Axiom 2.4 we have a = b, a contradiction. If you want to try induction anyway see <a href="https://taoanalysis.wordpress.com/2020/03/16/exercise-2-2-2/">this</a> but I don't see why you can't induct on a and make the base case 1, so 0++ = 1. 
+Lemma 2.2.10 has an exercise where induction is suggested but this is actually much easier to prove using contradiction (See Kevin Houston book). Always read the <a href="https://terrytao.wordpress.com/books/analysis-i/#comment-447019">comments</a> on Tao's blog if you're stuck: "You can modify the statement of the exercise to an equivalent statement which makes sense for a=0. (The statement will probably look something like “For any natural number a, either a=0, or else there exists exactly one…”.)" If you see this stackexchange <a href="https://math.stackexchange.com/a/3392788">answer</a> they use the peano axioms of 2.2 existence and 2.4 uniqueness. We can also try the chapter on contradiction proofs in Kevin Houston's book or the appendix of <i>Analysis</i>: Suppose for the sake of contradiction that that there exists two different natural numbers with the same successor. Then a = m++ and b = m++. But then by Axiom 2.4 we have a = b, a contradiction. If you want to try induction anyway see <a href="https://taoanalysis.wordpress.com/2020/03/16/exercise-2-2-2/">this</a>.
 </p>
 
 <p>
@@ -1038,16 +961,16 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 <h4 id="Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-Exercises">
 <p>
-Try these yourself, doesn't matter if they are right or wrong we don't have enough practice with mathematical logic yet so consider this to be practice. 
+Try these yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork.
 </p>
 
-<details id="org9fe9c73">
+<details id="org8b00343">
 <p>
 
 </p>
 
 <p>
-Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for natural numbers. Here I will show how you can 'reverse' or unravel lemma 2.2.2 or other proved proposition, none of this is a properly written proof only notes on moving through steps to understand the problem then after write a proof in the style Tao has been teaching us. We just want to point to definitions and lemmas here not use induction:   
+Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for natural numbers. None of this is a properly written proof only notes on moving through steps to understand the problem then after write a proof in the style Tao has been teaching us.
 </p>
 
 <ul class="org-ul">
@@ -1060,22 +983,27 @@ Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for nat
 <li><b>Transitive order property</b></li>
 <li>a \(\ge\) b and b \(\ge\) c, then a \(\ge\) c</li>
 <li>If a = b + 0, b = c + 0, and a = c + 0, then we have lemma 2.2.2 and transitivity (equality) holds with a = b, b = c and a = c.</li>
-<li>Substitution:</li>
+</ul>
+
+<p>
+Try some more substitution to prove a \(\ge\) b and b \(\ge\) c, then a \(\ge\) c   
+</p>
+<ul class="org-ul">
 <li>a = b + n</li>
 <li>b = c + n
 <ul class="org-ul">
-<li>b is equal to (c + n) so let's put that in place of b in a = b + n:</li>
+<li>b is equal to (c + n) so substitute for b in a = b + n:</li>
 </ul></li>
 <li>a = (c + n) + n</li>
 <li>a = c + (n++)
 <ul class="org-ul">
-<li>By lemma 2.2.10 we have a = c + m since b++ will always equal some nonzero natural number.</li>
+<li>By lemma 2.2.10 we have a = c + (value) since n++ will always equal some nonzero natural number.</li>
 </ul></li>
-<li>By definition 2.2.11 a = c + m is a \(\ge\) c + m</li>
+<li>By definition 2.2.11 a = c + (value) is a \(\ge\) c + (value)</li>
 </ul>
 
 <p>
-Proof attempt, though we could write our own def or lemma that a + b = a natural number it's largely implied by everything we've read so far: By the definition of ordering of the natural numbers, if a = b + m and b = c + n, then a = c + m + n. By associativity a = c + (m + n) and since if a = b when m or n are 0, then a = c when m and n are 0. By substitution d = m + n, and since m and n are natural numbers, d is a natural number by the Peano axioms and 2.1.3 (m + n)++ = d++, and by Axiom 2.4 (m + n) = d so we have a = c + d as desired by the definition of Ordering of the natural numbers. 
+Possible proof strategy: By the definition of ordering of the natural numbers, if a = b + m and b = c + n, then a = c + m + n. By associativity a = c + (m + n) and since if a = b when m or n are 0, then a = c when m and n are 0. By substitution d = m + n, and since m and n are natural numbers, d is a natural number by the Peano axioms and 2.1.3 (m + n)++ = d++, and by Axiom 2.4 (m + n) = d so we have a = c + d as desired by the definition of ordering of the natural numbers. 
 </p>
 
 <ul class="org-ul">
@@ -1083,47 +1011,68 @@ Proof attempt, though we could write our own def or lemma that a + b = a natural
 <li>If a \(\ge\) b and b \(\ge\) a then a = b</li>
 <li>See the entry for Antisymmetric <a href="https://en.wikipedia.org/wiki/Antisymmetric_relation">relation</a></li>
 <li>If these two inequalites hold then they must be equal</li>
-<li>We need to show a = b:</li>
+<li>We need to show a = b:
+<ul class="org-ul">
 <li>a = b + m by 2.2.11</li>
 <li>b = a + n by 2.2.11</li>
-<li>Substitute b for (a + n):</li>
+</ul></li>
+<li>Substitute b for (a + n):
+<ul class="org-ul">
 <li>a = (a + n) + m</li>
 <li>a = a + (n + m)</li>
 <li>a + 0 = a + (n + m) ('reversing' lemma 2.2.2)</li>
-<li>0 = n + m (cancellation law)</li>
+<li>0 = n + m (cancel a by cancellation law)</li>
 <li>0 = 0 + 0 (corollary 2.2.9)</li>
+</ul></li>
 <li>If n = 0, and m = 0 by above, then a = b + 0 which is a = b</li>
+</ul>
+
+<p>
+Scratchwork for (d) preserving order exercise:
+</p>
+
+<ul class="org-ul">
 <li><b>d) Addition preserves order</b></li>
-<li>a \(\ge\) b iff a + c \(\ge\) b + c</li>
-<li>a + c = b + n + c by 2.2.11</li>
-<li>a = b + n by cancellation law and a \(\ge\) b by 2.2.11</li>
-<li>Another method: a + c \(\ge\) b + c</li>
+<li>a \(\ge\) b iff a + c \(\ge\) b + c
+<ul class="org-ul">
+<li>Use def 2.2.11 to convert a \(\ge\) b to the form a = b + d, add c to both sides:</li>
+<li>a + c = b + d + c by 2.2.11</li>
+<li>a = b + d by cancellation law and a \(\ge\) b by 2.2.11</li>
+</ul></li>
+<li>Another method: if  a + c \(\ge\) b + c then:
+<ul class="org-ul">
 <li>a + c = b + n + c by 2.2.11</li>
 <li>a + c = b + c + n (commutative law)</li>
-<li>(a + c) = (b + c) + n (associative law)
+<li>(a + c) = (b + c) + n (associative law)</li>
+<li>This is (nat number) = (nat number) + n or by 2.2.11 a \(\ge\) b
 <ul class="org-ul">
-<li>This is nat number = nat number + another number or by 2.2.11 a \(\ge\) b</li>
+<li>Again don't get hung up on what is inside the brackets, think of larger picture of def 2.2.11 that (value) = (value) + number</li>
 </ul></li>
-<li><b>e) a &lt; b iff a++ \(\le\) b</b></li>
-<li>b = (a++) + n (def ordering of natural numbers)</li>
-<li>b = (a + n)++ (def of addition)
+</ul></li>
+</ul>
+
+<p>
+Scratchwork for exercise (e):
+</p>
+
 <ul class="org-ul">
-<li>successor of a number cannot be itself, so b does not equal a and by 2.2.11 a &lt; b</li>
-<li>We skipped steps, Tao is more thorough so let's try it again:</li>
-</ul></li>
-<li>b = a + n and n does not equal zero (2.2.11)</li>
-<li>Since n must be a positive natural number by 2.2.7 and 2.2.11:</li>
-<li>b = a + (n++)
+<li><b>e) a &lt; b iff a++ \(\le\) b</b>
 <ul class="org-ul">
-<li>def of a positive natural lemma 2.2.10</li>
-</ul></li>
+<li>if a is less than b, then b = a + n and n does not equal zero (2.2.11)</li>
+<li>Since n must be a positive natural number by 2.2.7 and 2.2.11 then b = a + (n++) by 2.2.10</li>
 <li>b = a + (n + 1) (corollary from 2.2.2/2.2.3)</li>
 <li>b = a + (1 + n ) (commutative law)</li>
-<li>b = (a + 1) + n (associative law, grouping doesn't matter for addition)</li>
-<li>b = (a++) + n by previous corollary of n++ is n + 1
-<ul class="org-ul">
-<li>a++ \(\le\) b since by 2.2.11</li>
+<li>b = (a + 1) + n (associative law)</li>
+<li>b = (a++) + n by previous corollary of n++ is n + 1</li>
 </ul></li>
+<li>We have a++ \(\le\) b by 2.2.11</li>
+</ul>
+
+<p>
+Scratchwork for exercise (f):
+</p>
+
+<ul class="org-ul">
 <li><b>f) a &lt; b iff b = a + d for some positive number d</b></li>
 <li>For the sake of contradiction, assume a \(\le\) b in the a = b case for some positive number d. Then a + 0 = a + d by lemma 2.2.2, and 0 = d by cancellation law. This is a contradiction that d must be a positive number so a cannot equal b and a \(\lt\) b</li>
 </ul>
@@ -1140,9 +1089,11 @@ Proposition 2.2.13 fill in the gaps:.
 <ul class="org-ul">
 <li>a = b + d (as per 2.2.12, d must be positive)</li>
 <li>c++ = d (lemma 2.2.10)</li>
-<li>a++ = b + (c++) (substitution)</li>
+<li>a++ = b + (c++) (substitution c++ for d)</li>
 <li>a++ &gt; b by def of ordering</li>
-<li>or not so rigorous way:</li>
+</ul></li>
+<li>Or another way:
+<ul class="org-ul">
 <li>a++ = (b + c)++ (def of addition, (b + c)++ must be positive</li>
 <li>a = b + c (Axiom 2.4)</li>
 <li>a &gt; b (2.2.12 d is positive)</li>
@@ -1156,7 +1107,7 @@ Proposition 2.2.13 fill in the gaps:.
 </ul>
 
 <p>
-Proposition 2.2.14 (Strong induction) From MIT this <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">lecture</a> on strong induction, the intuition here is Q(m) if all the dominoes are already knocked down and there's one left standing, then it too will be knocked down where 'weak induction' intuition is P(n) if you knock down one domino, they will all fall. If P(n) is true because P(n++) implies P(n) true, then for all m \(\le\) P(n), Q(m) is true. If you still don't get it search Youtube for another tutorial but Tao comes back to strong induction later in the book.   
+Proposition 2.2.14 (Strong induction) From MIT this <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">lecture</a> on strong induction, the intuition here is Q(m) if all the dominoes are already knocked down and there's one left standing, then it too will be knocked down where 'weak induction' intuition is P(n) if you knock down one domino, they will all fall. If P(n) is true because P(n++) implies P(n) true, then for all m \(\le\) P(n), Q(m) is true. Tao comes back to strong induction later in the book if you don't get it right away.   
 </p>
 
 <p>
@@ -1186,7 +1137,7 @@ Try an example.
 </ul>
 
 <p>
-Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that all P(m) is true for m \(\le\) n++. Then per Axiom 2.5 P(n) is true, so P(m) is true for all m \(\le\) n' since Tao hinted at 'backwards induction'. A much more rigorous answer is <a href="https://taoanalysis.wordpress.com/2020/03/16/exercise-2-2-6/">here</a>.  
+Exercise 2.2.6: Your proof could roughly be 'Suppose P(n++) is true such that all P(m) is true for m \(\le\) n++. Then per Axiom 2.5 P(n) is true, so P(m) is true for all m \(\le\) n' since Tao hinted at 'backwards induction'. A much more rigorous answer is <a href="https://taoanalysis.wordpress.com/2020/03/16/exercise-2-2-6/">here</a> but remember this book was an advanced set of notes for an honors real analysis course at UCLA, you don't have to figure out this proof yet.  
 </p>
 </details>
 </div>
@@ -1224,7 +1175,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orga546bbe">
+<details id="orgd0b097a">
 <p>
 
 </p>
@@ -1239,11 +1190,11 @@ Lemma X: For any natural number n, n0 = 0.
 </p>
 <ul class="org-ul">
 <li>base case: 0(0) is 0 x 0 = 0 by 2.3.1 so 0 = 0</li>
-<li>IH: n x 0 = 0</li>
+<li>IH: n0 = 0</li>
 <li>Inductive step: (n++)0 = 0</li>
-<li>(n++) x m = (n x m) + m by def 2.3.1 so (n x 0) + 0 = 0</li>
+<li>(n++) x m = (n x m) + m by def 2.3.1 so (n0) + 0 = 0</li>
 <li>Remove the + 0 (lemma 2.2.2)</li>
-<li>Now it is in the form of the IH: n x 0 so we can substitute 0 for n x 0
+<li>Now it is in the form of the IH: n0 = 0 so we can substitute 0 for n0
 <ul class="org-ul">
 <li>0 = 0 and induction is closed.</li>
 </ul></li>
@@ -1251,6 +1202,10 @@ Lemma X: For any natural number n, n0 = 0.
 
 <p>
 From 2.3.1 we have (n++) x m = (n x m) + m but not n x (m++). We need a Lemma Y: n x (m++) is (n x m) + n rewriting Lemma 2.2.3 but for multiplication. Plug in values to make sure it's correct: 1 x (2++) = (1 x 2) + 1 or 2 x (2++) = (2 x 2) + 2.
+</p>
+
+<p>
+Lemma Y: n(m++) is (nm) + m:
 </p>
 
 <ul class="org-ul">
@@ -1279,14 +1234,16 @@ From 2.3.1 we have (n++) x m = (n x m) + m but not n x (m++). We need a Lemma Y:
 
 
 <p>
-Now we have to prove m x n = n x m 
+Now we have to prove mn = nm 
 </p>
 
 <ul class="org-ul">
-<li>base case: def 2.3.1 and lemma X</li>
-<li>IH: m x n = n x m</li>
-<li>m x n++ = n++ x m</li>
+<li>Base case: def 2.3.1 and lemma X</li>
+<li>Hypothesis: mn = nm</li>
+<li>Inductive step: m(n++) = (n++)m 
+<ul class="org-ul">
 <li>Lemma Y = def 2.3.1</li>
+</ul></li>
 </ul>
 
 <p>
@@ -1298,9 +1255,11 @@ The hint is to prove the second statement first, if n and m are both positive, t
 </p>
 
 <ul class="org-ul">
-<li>If n &gt; 0, and m &gt; 0, then nm &gt; 0</li>
+<li>If n &gt; 0, and m &gt; 0, then nm &gt; 0 
+<ul class="org-ul">
 <li>We have nm = 0 + d for some positive d</li>
 <li>Since d is positive, n and m must be positive (or else 0 = 0 + d, a contradiction)</li>
+</ul></li>
 </ul>
 
 <p>
@@ -1313,23 +1272,19 @@ Lemma 2.3.3: n x m = 0 iff n = 0 or m = 0. You could try a contradiction using t
 
 <p>
 <b>Exercise 2.3.3</b>
-A rewrite of 2.2.5: For any natural numbers a, b c, we have (a x b) x c = a x (b x c). You could induct on b, convert to the 2.3.1 form, and rearrange whenever you move something around and it is in the form of the inductive hypotenuse.
-</p>
-
-<p>
-Tao also suggests using the distributive law:
+For any natural numbers a, b c, we have (ab)c = a(bc). Tao suggests using the distributive law:
 </p>
 
 <ul class="org-ul">
-<li>Inductive Step: (a x b++) x c = a x (b++ x c)</li>
-<li>(a x b++) x c = (ac(b++)) by communative law</li>
-<li>(ac(b++)) = (ac(b + 1)) by corollary n++ = n + 1</li>
-<li>(ac(b + 1)) = acb + ac by distributive law again
+<li>Inductive Step: (a(b++))c = a((b++)c)
 <ul class="org-ul">
-<li>Do the same to the other side, you end up with acb + ac = acb + ac</li>
-<li>cancellation law the two +ac:</li>
-<li>acb = acb or (ab)c = a(bc)</li>
-<li>or permute any way you want like we did for 2.2.5</li>
+<li>(a(b + 1))c by corollary n++ = n + 1</li>
+<li>(ab + a)c by distributive law</li>
+<li>(ab + a) is also a(b++)</li>
+<li>a(b++)c is also ac(b++) by commutative law   
+<ul class="org-ul">
+<li>you can see where this is going, keep distributing and moving things around like we did before to prove associativity for addition</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -1398,7 +1353,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 Proof scratchwork, these exercises are all similar to the Wildberger proof he gave in the lecture and Tao's example proofs.
 </p>
 
-<details id="orgf4bf270">
+<details id="org416dc80">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1504,7 +1459,7 @@ To recap we defined the natural numbers, embedded them in the integers (a - b) t
 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orgf5c939b">
+<details id="orgf5a3bed">
 <p>
 
 </p>
@@ -1522,7 +1477,7 @@ The hint for proving transitivity is to see Corollary 4.1.9 the cancellation law
 </p>
 
 <p>
-The transitivity proof is a great example of 'just naively write your proofs until you get better eventually'. We used Tao's hint of finding numbers than can or can't be zeros and wrote a proof that is probably not what he would've done, but at this early stage who cares, it works until we learn about proof theory and fortify our logic skills and in the process by manipulating around rational number equality you won't forget the definition that a/b = c/d if ad = cb, which to me is the point of doing proofs, to remember the material. 
+The transitivity proof is a great example of just naively writing your proofs until you get better eventually. We used Tao's hint of finding numbers than can or can't be zeros and are getting better using mathematical logic to deduce answers.
 </p>
 
 <ul class="org-ul">
@@ -1607,11 +1562,11 @@ Wildberger has a basic introduction <a href="https://youtu.be/UsQsV8VsCxw">lectu
 </p>
 
 <p>
-His definition is a decimal number is a rational number a/b, where b is a power of 10 (hence deca/decimal), then shows various examples how you can manipulate rational numbers like 1/2 to be 5/10, or 0.50, we also find out why 1/3 is not a decimal number. In binary, it's a base-2 system, so the only prime factor is 2. If you load up any language interpreter and try and add 0.1 + 0.2 you will get surprising results, typically this number: <a href="https://0.30000000000000004.com/">https://0.30000000000000004.com/</a>
+His definition is a decimal number is a rational number a/b, where b is a power of 10 (hence deca/decimal), then shows various examples how you can manipulate rational numbers like 1/2 to be 5/10, or 0.50, we also find out why 1/3 is not a decimal number. In binary, which is a base-2 system, the only prime factor is 2. If you load up any language interpreter and try and add 0.1 + 0.2 you will get surprising results, typically this number: <a href="https://0.30000000000000004.com/">https://0.30000000000000004.com/</a> because of the way floating point is used to represent decimals.
 </p>
 
 <p>
-The examples are pretty good, showing how the hindu-arabic encoded powers of 10 drop down by the divisor and result in a decimal. The visualizations are for later lectures showcasing the complexity of bigger and bigger decimals. At 36:00 arithmetic w/decimals is covered, showing how the rational number and decimal number arithmetic methods are the same so you can just stay w/rational numbers if you want converting back to decimals at anytime. 
+At 36:00 arithmetic w/decimals is covered, showing how the rational number and decimal number arithmetic methods are the same so you can just stay w/rational numbers if you want converting back to decimals at anytime. 
 </p>
 </div>
 
@@ -1706,11 +1661,11 @@ Proposition 4.4.5 is basically saying for any epsilon bigger than 0, there exist
 </p>
 
 <p>
-Tao mentions Dedekind cuts will be avoided, and the theory of infinite decimals has complexity problems so also will be avoided. Wildberger has numerous <a href="https://youtu.be/jlnBo3APRlU">lectures</a> on both theories if you're interested the most detailed ones are in his 'Famous Math Problems' playlist. Wildberger makes the point that you will only ever find the cherry picked <a href="https://www.math.brown.edu/~res/INF/handout3.pdf">example</a> of the square root of 2 for Dedekind cuts in any undergrad material because of the mind boggling complexity involved trying to partition a set for pi<sup>2</sup>/6 and other irrational numbers. 
+Tao mentions Dedekind cuts will be avoided, and the theory of infinite decimals has problems so also will be avoided. Wildberger has numerous <a href="https://youtu.be/jlnBo3APRlU">lectures</a> on both theories if you're interested the most detailed ones are in his 'Famous Math Problems' playlist. Wildberger makes the point that you will only ever find the cherry picked <a href="https://www.math.brown.edu/~res/INF/handout3.pdf">example</a> of the square root of 2 for Dedekind cuts in any undergrad material because of the mind boggling complexity involved trying to partition a set for pi<sup>2</sup>/6 and other irrational numbers. 
 </p>
 
 <p>
-The <a href="https://en.wikibooks.org/wiki/Undergraduate_Mathematics/Proof_by_infinite_descent">infinite descent</a> exercise Tao has basically handed the solution to us, if you fix any sequence of natural numbers then by their definition there are finitely many numbers from 0 to your fixed point, so you can't choose infinitely many distinct natural numbers less than your fixed point so infinite descent does not exist for the naturals because you'll run out of them. Integers you can infinitely descend to negative infinity and of course rationals we know you can infinitely descend with bigger denominators until you approach zero or negative infinity. 
+The <a href="https://en.wikibooks.org/wiki/Undergraduate_Mathematics/Proof_by_infinite_descent">infinite descent</a> exercise Tao has basically handed the solution to us, if you fix any sequence of natural numbers then by their definition there are finitely many numbers from 0 to your fixed point, so you can't choose infinitely many distinct natural numbers less than your fixed point so infinite descent does not exist for the naturals because you'll run out of them. Integers you can infinitely descend to negative infinity and of course rationals we know you can infinitely descend with bigger denominators until you approach zero or descend to negative infinity. 
 </p>
 </div>
 </div>
@@ -1956,7 +1911,7 @@ This chapter on set theory in <i>Analysis I</i> relies on the fact that you've a
 <h3 id="A.2%20Implication">A.2 Implication</h3>
 <div class="outline-text-3" id="text-A.2%20Implication">
 <p>
-A.2 Implication seems confusing on first read, it's modern language use relating to casuality is different from the logician's use which is explained <a href="http://www.math.niu.edu/~richard/Math101/implies.pdf">here</a>. The only permutation where implication is false is if p implies q and p is true, but q is false. See the Kevin Houston book for more details. 
+A.2 Implication seems confusing on first read, it's modern language use relating to casuality is different from the logician's use which is explained <a href="http://www.math.niu.edu/~richard/Math101/implies.pdf">here</a>. The only combination where implication is false is if p implies q and p is true, but q is false. See the Kevin Houston book for more details. 
 </p>
 
 <p>
@@ -2080,7 +2035,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 <div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises" class="outline-4">
 <h4 id="3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">
-<details id="orgf5be36a">
+<details id="orgb6919f3">
 <p>
 
 </p>
@@ -2196,15 +2151,15 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 <div id="outline-container-3.3%20Functions--Exercises" class="outline-4">
 <h4 id="3.3%20Functions--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-3.3%20Functions--Exercises">
-<details id="org1acbf61">
+<details id="org7e02b9d">
 <p>
-A all of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
+All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
 
 <ul class="org-ul">
 <li>Ex 3.3.1 was deleted in errata (See Tao's site)</li>
 <li>Ex 3.3.2 The proof for this is in the book <a href="https://infinitedescent.xyz/">https://infinitedescent.xyz/</a>.</li>
-<li>Ex 3.3.3 The empty function is always injective since it's 'vacuously true' that f(x) = f(x'). It is never surjective since there are no elements in the emptyset that fit the surjective definition of every element in Y is a value of f(x) of f(x) = y, and thus never bijective, since a function must be both injective and surjective to be bijective.</li>
+<li>Ex 3.3.3 The empty function is always injective since it's 'vacuously true' that f(x) = f(x'). It is never surjective since there are no elements in the empty set that fit the surjective definition of every element in Y is a value of f(x) or y = f(x), and thus never bijective, since a function must be both injective and surjective to be bijective.</li>
 <li>Ex 3.3.4 The tilde hat thinghy is just notation for two different fuctions, like f and f'. Cancellation law means we're trying to prove two different functions are the same so g = g' and f = f'. If f and g are injective, then g(f(x)) = g(f'(x)) and f(x) = f'(x), and by one-to-one definition of injective functions f = f' (since f is g's input).  Surjective is similar, g(y) = g'f(x)) = g(f(x)) = g'(y) so g = g'. Does g need to be injective for this proof to always hold? Try corner case examples from the text, like if g = n<sup>2</sup>, then g(f(-1)) and g(f'(1)) have the same output, so two different inputs to g with same output means f(x) can't equal f(x') as per definition of one-to-one functions so we can't always derive f = f'.</li>
 <li>Ex 3.3.5 If f is injective in g(f(x)), then g doesn't need to be injective. Consider an example A = {1}, B = {2, 3}, and C = {4}. f(1) = g(2) = 4 so f is still injective. The difference in 3.3.4 is the wording 'show that these two input functions are always equal if g in injective' and the second question 'Is this still true if g is not injective?' which means a single case where if g is not injective, and we get two non distinct inputs that equal the same outputg, the whole proof is false whereas here we are asked 'must g always be injective' so just needa single case of not needing to be injective.</li>
 <li>Ex 3.3.6 Is described <a href="https://math.stackexchange.com/a/2865322">here</a> see Remark 3.3.24 if you forgot what an inverse function is. Note how the inverse of f and f cancel each other out.</li>
@@ -2219,11 +2174,7 @@ A all of these proofs have a youtube tutorial or stackexchange answer, these are
 <h3 id="Proof%20strategies">Proof strategies</h3>
 <div class="outline-text-3" id="text-Proof%20strategies">
 <p>
-Watch <a href="https://youtu.be/K0CoGGcLc1M?t=2161">this</a> starting @ 36:00, from 41:00+ he shows how he solves problems step by step, trying small cases to understand the problem better and poking at the problem enough to finally figure out a proof. You can check your own proofs too, going through Tao's mathematical logic appendix and seeing if the opposite of your argument holds, and double checking all your assumptions 'is there a definition of X or did I just assume it existed'. 
-</p>
-
-<p>
-So tl;dr relax and just keep writing because the practice of flipping back through the text and rereading definitions and theorems, tracing the logic and seeing how one definition helps define another, and putting this in the form of notes (a proof) is how you learn. This is why none of these books contain solutions because you're supposed to figure it out yourself.  
+Watch <a href="https://youtu.be/K0CoGGcLc1M?t=2161">this</a> starting @ 36:00, from 41:00+ he shows how he solves problems step by step, trying small cases to understand the problem better and poking at the problem enough to finally figure out a proof.  
 </p>
 </div>
 </div>
@@ -2233,11 +2184,11 @@ So tl;dr relax and just keep writing because the practice of flipping back throu
 <h3 id="3.4%20Images%20and%20inverse%20images">3.4 Images and inverse images</h3>
 <div class="outline-text-3" id="text-3.4%20Images%20and%20inverse%20images">
 <p>
-Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = x<sup>2</sup>, so {-2,-1,0,1,2} and in Example 3.4.5, the set of everything in the natural numbers that can result in {1,2,3} if f(x) = 2x, is only f({1}). Axiom 3.11 (Union) if A = {{2,3}, {3,4}, {4,5}} and Ua = {2,3,4,5} why? Because it's {2,3} U {3,4} U {4, 5} you are performing union on every set, this is notation to avoid having to write out an enormous page of union operations. Search youtube for <a href="https://youtu.be/TDpQSa3hJRw">indexed sets</a>. The power set you can choose which subsets you want to add, again search for this on youtube. 
+This is only casual reading, skip the exercises and return to do them when these topics come up again. 
 </p>
 
 <p>
-The exercises, we've already done similar exercises in set theory there's nothing new here. Reminder that millions of discrete and applied math students have already done similar exercises so you can look up proofs of function inverse images anywhere. I did enough of the exercises so I was sure I understood these set and function operations otherwise move on and return later to this chapter when needed. 
+Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = x<sup>2</sup>, so {-2,-1,0,1,2}. The rest of this chapter search youtube for <a href="https://youtu.be/TDpQSa3hJRw">indexed sets</a>. The power set if the example doesn't make sense, again search for this on youtube. 
 </p>
 </div>
 </div>
@@ -2246,11 +2197,11 @@ The exercises, we've already done similar exercises in set theory there's nothin
 <h3 id="3.5%20Cartesian%20products">3.5 Cartesian products</h3>
 <div class="outline-text-3" id="text-3.5%20Cartesian%20products">
 <p>
-Another topic with plenty of youtube <a href="https://youtu.be/NnEkVooAsxk">tutorials</a>. Definition 3.5.7 notation for product is introduced, it looks complicated but all it's doing is specifying an index (i is greater or equal to 1, and less than or equal to n) and repeated cross product. The exercises some of the solutions are <a href="https://youtu.be/XmkGxHZDer8">walked through</a> on youtube.
+Again more casual reading, come back to do the exercises as needed.
 </p>
 
 <p>
-The cartesian plane itself is a cartesian product of R x R, you have tuples (x, y) or (x, y, z) so R x R x R. In programming the type int * int is the set Integers x Integers, anything that isn't a cross product of the integers with itself will not type check.
+Another topic with plenty of youtube <a href="https://youtu.be/NnEkVooAsxk">tutorials</a>. Definition 3.5.7 notation for product is introduced, it looks complicated but all it's doing is specifying an index (i is greater or equal to 1, and less than or equal to n) and repeated cross product. The exercises some of the solutions are <a href="https://youtu.be/XmkGxHZDer8">walked through</a> on youtube. The cartesian plane itself is a cartesian product of R x R, you have tuples (x, y) or (x, y, z) so R x R x R. 
 </p>
 </div>
 </div>
@@ -2259,7 +2210,11 @@ The cartesian plane itself is a cartesian product of R x R, you have tuples (x, 
 <h3 id="3.6%20Cardinality%20of%20sets">3.6 Cardinality of sets</h3>
 <div class="outline-text-3" id="text-3.6%20Cardinality%20of%20sets">
 <p>
-A good <a href="https://youtu.be/JkOKMwRe4BE">tutorial</a>. Tao is using #(A) notation which means finite cardinality, while |A| cardinality notation means infinite. There exists errata for the exercises specifically 3.6.8. The last exercise the <a href="https://www.youtube.com/watch?v=2-mxYrCNX60">pigeonhole principle</a> if set A has greater cardinality than B, then f(x) A -&gt; B can't be injective, since there would be two elements in A that point to a single element in B.  
+Skip the exercises like the last two chapters, we just want to be familiar with the material and later when you do the Putnam seminar you can return. 
+</p>
+
+<p>
+A good <a href="https://youtu.be/JkOKMwRe4BE">tutorial</a>. Tao is using #(A) notation which means finite set cardinality, while |A| cardinality notation means infinite. There exists errata for the exercises specifically 3.6.8. The last exercise the <a href="https://www.youtube.com/watch?v=2-mxYrCNX60">pigeonhole principle</a> if set A has greater cardinality than B, then f(x) A -&gt; B can't be injective, since there would be two elements in A that point to a single element in B.  
 </p>
 </div>
 </div>
@@ -2333,11 +2288,11 @@ An excellent lecture why we even need these complex limit and real definitions i
 <h3 id="5.1%20Cauchy%20sequences">5.1 Cauchy sequences</h3>
 <div class="outline-text-3" id="text-5.1%20Cauchy%20sequences">
 <p>
-There is a lecture this <a href="https://youtu.be/QNecfhHa_qY">here</a>.
+There is a lecture <a href="https://youtu.be/QNecfhHa_qY">here</a>.
 </p>
 
 <p>
-Def 5.1.1 the notation outside the bracket is n = starting index, and the infinity symbol is the length of the index. 
+Def 5.1.1 the notation outside the bracket is n = starting index, and the infinity symbol is how far the index should go which is infinitely far. 
 </p>
 
 <p>
@@ -2380,7 +2335,7 @@ Prop 5.2.8 is the proof that 0.9999&#x2026; = 1, and again prop 4.4.1 is brought
 </ul>
 
 <p>
-Only two exercises here, simple point to definition pretend you are a lawyer writing an argument and convince an invisible jury through explanation why it's true an equivalent sequence of rationals is a Cauchy sequence if and only if one of them is a Cauchy sequence. There's no need to pull out any fancy techniques here we will learn all those later. 
+Only two exercises here, simple point to definition pretend you are a lawyer writing an argument and convince an invisible jury through explanation why it's true an equivalent sequence of rationals is a Cauchy sequence if and only if one of them is a Cauchy sequence.
 </p>
 </div>
 </div>
@@ -2435,10 +2390,6 @@ Prop 5.4.14 we already know from previous proofs and Wildberger lectures that th
 <h3 id="5.5%20The%20least%20upper%20bound%20property">5.5 The least upper bound property</h3>
 <div class="outline-text-3" id="text-5.5%20The%20least%20upper%20bound%20property">
 <p>
-Now we learn analysis, the sup(E) least upper bound property that will come up in every single future chapter. 
-</p>
-
-<p>
 Example 5.5.7 the empty set doesn't have a least upper bound because of prior definitions where you can always find a rational number (which are also contained in the real numbers) to act as an upper bound to nothing like 1/trillion, 1/septillion, etc. 
 </p>
 
@@ -2470,14 +2421,9 @@ Finally we learn square roots. Depending on your copy of Tao's book there's some
 <p>
 Exercises 5.6.2 and 5.6.3 are simple and worth doing, using substitution to manipulate exponent laws. Exercise 5.6.3 that's the square root of x<sup>2</sup>, so x or using Lemma 5.6.6(g) or Lemma 5.6.9(b): \((x^{2/1})^{1/2}\) is \(x^{2/1  \cdot  1/2}\) which is x<sup>1</sup> or x. 
 </p>
-
-<p>
-We didn't cover the real decimals appendix either which we'll have to look at after reading chapter 6.   
-</p>
 </div>
 </div>
 </div>
-
 
 <div id="outline-container-Trigonometry%20Boot%20Camp" class="outline-2">
 <h2 id="Trigonometry%20Boot%20Camp">Trigonometry Boot Camp</h2>
@@ -2561,291 +2507,7 @@ As typical with Wildberger lectures this goes far into more advanced material li
 <h3 id="Finish%20this%20playlist">Finish this playlist</h3>
 <div class="outline-text-3" id="text-Finish%20this%20playlist">
 <p>
-At your leisure finish the rest of this series, we need to know eigenvalues, solving a system of linear equations, how row reduction/gaussian elimination works, rank, polynomials, changing basis and whatever you think is interesting. Everything in this series will come up later in machine learning courses esp gaussian elimination and we will do additional linear algebra courses but nobody explains it better than Wildberger does I find, for example the very first lecture on going from one basis to the next you will frequently see in the <i>Math for ML</i> book we do later.  
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Limits" class="outline-2">
-<h2 id="Limits">Limits</h2>
-<div class="outline-text-2" id="text-Limits">
-</div>
-<div id="outline-container-6.1%20Convergence%20and%20limit%20laws" class="outline-3">
-<h3 id="6.1%20Convergence%20and%20limit%20laws">6.1 Convergence and limit laws</h3>
-<div class="outline-text-3" id="text-6.1%20Convergence%20and%20limit%20laws">
-<p>
-Returning back to Tao's <i>Analysis I</i> let's learn what a limit is after using formal limits for all of chapter 5. Reminder if you haven't seen it Wildberger has a <a href="https://youtu.be/K4eAyn-oK4M">lecture</a> on limits. Think of any infinite convergent sequence such as 1.9<sub>1</sub> 1.99<sub>2</sub> 1.999<sub>3</sub> &#x2026; converging to 2 and that you have taken such a sequence and stuck it in an imaginary infinite array and indexed every value. This sequence does not end and goes on forever getting closer to the least upper bound. Everytime you subtract the limit from the next sequence entry you get a new smaller epsilon if it is a converging sequence. Try this yourself subtract (1.9 - 2), (1.99 - 2), (1.999999 - 2) and take the absolute value. If you choose an arbitrary epsilon of say 1, then every entry in the remaining infinite sequence will have an equal or smaller distance from 1 if it is converging, which is what the definition means by 'every epsilon &gt; 0'. The further you go down the infinite sequence the smaller this epsilon becomes so that 'for all positive epsilon' there is some index in this array where if you pick any arbitrary epsilon like .0000000001, every future index will contain a value equal or smaller than that epsilon. 
-</p>
-
-<p>
-Prop 6.1.7 notice he has assigned epsilon to the value |L-L'|/3 which is why d(L,L') \(\le\) 2epsilon is d(L,L') = 2|L-L'|/3 I somehow missed that assignment and spent a few minutes wondering what was going on. He wanted a tiny displacement but why divide by 3 instead of 2? I'm guessing to set up the triangle inequality. 
-</p>
-
-<p>
-In Remark 6.1.9 we throw out the starting index, I also noticed he changed the index type from naturals to integers in these definitions. Try some exercises:
-</p>
-
-<details id="org9a1c5fa">
-<p>
-Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
-</p>
-
-<p>
-Ex 6.1.2 is asking is it possible for a sequence of real numbers to converge to another real number, if none of the conditions are satisfied so a proof by contradiction where you look in the logic appendix for if and only if statements and try to prove it false. Let's look at Def 6.1.5 and see if it's possible. Assume for contradiction given any real epsilon &gt; 0, you <i>can't</i> find an index in a convergent infinite sequence so that all future entries are less than or equal to that epsilon. Then this sequence is not converging, and is divergent by def 6.1.5. If the difference between the limit and the sequence entry does not continually shrink meaning there exists some index that can satisfy every epsilon &gt; 0 then it is moving away from the limit and contradicts the definition of convergence of sequences.   
-</p>
-
-<p>
-Ex 6.1.3 this looks a lot like ex 6.1.2, we have a sequence converging to a real number, and one index is bigger or equal to the other, so if a later index entry of the sequence is not within epsilon, obviously an earlier index can't be a convergent sequence either because then we don't have the property that n \(\ge\) N ie all future index values of some arbitrary epsilon displacement between c (the real number) and the sequence entries. This is in Remark 6.1.9 that the starting index is irrelevant only the fact that a sequence eventually converge to a limit is relevant.  
-</p>
-
-<p>
-Ex 6.1.4 another question about indices, this one you are adding an arbitrary integer to the index (which could also be zero) that acts like a stepping function, moving up in increments of 1000. If a'<sub>n</sub> and a<sub>n</sub> are supposed to be converging to a limit, if you add 1000 to the index, a<sub>1001</sub>, a<sub>2002</sub>, a<sub>3003</sub> better converge if a'<sub>n</sub> wants to converge or else the properties of def 6.1.5 don't hold. You could show this with k = 0, j = n + k, and now you have a sequence a<sub>j</sub> = a<sub>n</sub> where a<sub>n</sub> will only converge if a<sub>j</sub> does since they are the same sequence and n + k \(\ge\) n \(\ge\) N which is def 6.1.5 again, so adding an arbitrary step to the indices shouldn't matter. 
-</p>
-
-<p>
-Ex 6.1.5 Looking at Def 5.1.8 for a Cauchy sequence, for every possible positive epsilon there must exist an eventual index where two adjacent index entries subtracted from each other have to be less than or equal to that epsilon meaning of course they are converging so the distance between entries grows smaller and smaller. The limit definition, is the limit subtracted from an eventual index &gt; N will always be within an epsilon displacement if it is converging to that limit. The triangle inequality for distance back in 4.3.3 states the distance from x to z, is less than or equal to the distance from x to y plus the distance from y to z. The distance a<sub>j</sub> - a<sub>k</sub> \(\le\) epsilon, and the distance a<sub>n</sub> - limit \(\le\) epsilon so assign y = limit in the triangle inequality: a<sub>j</sub> - a<sub>k</sub> \(\le\) a<sub>j</sub> - limit \(\le\) a<sub>k</sub> - limit and of course are all within epsilon so a convergent sequence of real numbers is also a Cauchy sequence. 
-</p>
-
-<p>
-Ex 6.1.6 prove prop 6.1.15. There is a long proof answer <a href="https://taoanalysis.wordpress.com/2020/05/31/exercise-6-1-6/">here</a> you probably want to try and understand but it's worth going back and seeing how he superceded the proofs of temporary constructions before. For example in remark 4.2.5 he defined the quotient x/y of two rationals then substituted in his temporary notation and definitions to prove the new notation and definitions led to the same conclusion, and thus could discard it and use the new notation. Here I did the same thing using 6.1.11 his proof that the limit of 1/n = 0 rewriting it using new limit notation, substituted in Cauchy/formal limits, came to the same conclusion and now I claim formal limits are 'genuine limits' and can toss that notation. I also used 6.1.11 as a concrete example to try his contradiction suggestion, assuming 1/n was not eventually &epsilon;-close to 0 and found it was much easier to prove that it had to converge to 0 thus be the genuine limit of 1/n. Is this correct? The proofs of all the limits can be found on YouTube if you're wondering.
-</p>
-
-<p>
-Ex 6.1.7 we look at Prop 6.1.4 and rewrite it to bridge rational bounded sequences from 5.1.12 to real number bounded sequences defined in 6.1.16, just like how 6.1.4 bridged rational Cauchy sequences to real number Cauchy sequences, you are using 6.1.4's proof as a template: Suppose that \((a_n)_{n=m}^\infty\) is a sequence in the sense of 6.1.16 and it is bounded by a real number M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m, in particular it is bounded by a rational M &gt; 0 which makes it a bounded sequence in the sense of 5.1.12. Now suppose \((a_n)_{n=m}^{\infty}\) is a sequence in the sense of 5.1.12 that is bounded by a rational M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m. If M is a real number, then there exists an integer N &gt; M by the Archimedean property&#x2026; and your proof carries on like this showing that 6.1.16 is indeed bounded by a real number.    
-</p>
-
-<p>
-6.1.8 Try and prove these yourself, doesn't matter how awful your proof is just that you looked at previous Cauchy series lemma proofs like 5.3.6 and tried to adapt them to limits, like he does in Prop 6.1.11 so proving the addition of two limits converges to another limit, if a<sub>n</sub> - L must be less than epsilon for every epsilon &gt; 0, then substitute in L = a<sub>n</sub> + b<sub>n</sub> and see what happens: \(|a_n - (a_n + b_{n})| + |b_n - (a_n + b_{n})|\) \(\le\) epsilon then lim\((a_n + b_{n})\). This is the point of doing proof based math so you can experiment around to better learn constructions and derive all the rules later if you forget them. There are answers floating around for Ex 6.1.8 but maybe you know a better/more intuitive way to prove that a<sub>n</sub> + b<sub>n</sub> converges to the real number x + y. 
-</p>
-
-<p>
-6.1.9, why does x/0 fail, and 6.1.10 modifying 6.1.4 again you can figure out easily since we know you can always squeeze a rational number in, so a<sub>n</sub> - b<sub>n</sub> \(\le\) rational epsilon \(\le\) real epsilon 
-</p>
-</details>
-</div>
-</div>
-
-<div id="outline-container-6.2%20The%20Extended%20real%20numbers" class="outline-3">
-<h3 id="6.2%20The%20Extended%20real%20numbers">6.2 The Extended real numbers</h3>
-<div class="outline-text-3" id="text-6.2%20The%20Extended%20real%20numbers">
-<p>
-We patch the definition of real numbers with negative and positive infinity elements that are distinct from all other real numbers. All we can do with these two new objects is equate things to them, something is infinite if it equals negative or positive infinity. Tao points out cancellation of infinity elements leads to nonsense conclusions.     
-</p>
-
-<p>
-Example 6.2.7 and def 6.2.6 if a set 'E' contains negative infinity, sup(E) is that set with negative infinity removed and the least upper bound taken, so his example E = {-1, -2, &#x2026;.} U {negative infinity} results in the set {-1, -2, &#x2026;, -\(\infty\)} so there is a set of infinite descending numbers unioned with an object 'negative infinity' and sup(E) is -1 because we remove -\(\infty\), but are still left with the first set of {-1, -2,..} even though it technically is also negative infinity it is not the object \(-\infty\). Example 6.2.9 that set is equal to infinity but does not contain the actual element infinity. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-6.3%20Sup%20and%20Inf%20of%20sequences" class="outline-3">
-<h3 id="6.3%20Sup%20and%20Inf%20of%20sequences">6.3 Sup and Inf of sequences</h3>
-<div class="outline-text-3" id="text-6.3%20Sup%20and%20Inf%20of%20sequences">
-<p>
-Example 6.3.4 the supremum = 1 is obvious but how do we prove it? The sequence is a<sub>n</sub> \(\le\) 1 for all n \(\ge\) 1, so any element x of this set x &lt; 1, but since a<sub>1</sub> = 1 and is in the set, we have x &lt; a<sub>1</sub> so x is not an upper bound, and 1 is the upper bound. Similar reasoning for the infimum, a<sub>n</sub> &gt; 0 for all n \(\ge\) 1, so we have x &gt; 0 for all elements in this set. By 5.4.13 Archimedean property we have a positive integer N such that Nx &gt; 1 or 1/N &lt; x, so if 1/n &lt; x that means x &gt; 0 is not the lower bound of this sequence since a<sub>n</sub> &lt; x so we must have 0 as the lower bound. There is a completely different solution <a href="https://taoanalysis.wordpress.com/2020/06/27/exercise-6-3-1/">here</a> you may want to look at, using 1/n \(\le\) M for all n &gt; 0, so for n = 1 we have 1/1 \(\le\) M or 1 \(\le\) M for the supremum. The infimum is derived using a contradiction. It doesn't matter how you prove it. 
-</p>
-
-<p>
-Prop 6.3.10 why is it decreasing? Because \(a_{n+1} \le a_n\), pick any arbitrary x between 0 and 1, like 1/2. a<sub>1</sub> is (1/2)<sup>1</sup> or 1/2. a<sub>2</sub> is (1/2)<sup>2</sup> or 1/4. a<sub>3</sub> is (1/2)<sup>3</sup> or 1/2 x 1/2 x 1/2 or 1/8. This fails when x &gt; 1 since it is no longer a decreasing series and is divergent. Tao asks to look at the first chapter again, which we skipped but now can read. The problem with 1.2.3 is that it assumes there is a limit for all real numbers x<sup>n</sup>, a limit can only exist if 0 &lt; x &lt; 1 for x<sup>n</sup> as n goes to infinity.
-</p>
-
-<p>
-You can look up a proof of the monotone sequence theorem <a href="https://youtu.be/zVeHdyp1l0g">here</a>. If you forgot all the inequality manipulations he did here review Tao's chapter on them again. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-6.4%20Limsup%2C%20Liminf%20and%20limit%20points" class="outline-3">
-<h3 id="6.4%20Limsup%2C%20Liminf%20and%20limit%20points">6.4 Limsup, Liminf and limit points</h3>
-<div class="outline-text-3" id="text-6.4%20Limsup%2C%20Liminf%20and%20limit%20points">
-<p>
-If this chapter doesn't make sense find a real analysis <a href="https://www.youtube.com/playlist?list=PL22w63XsKjqxqaF-Q7MSyeSG1W1_xaQoS">playlist</a>. Since this is an analysis book we are exploring metric space (the real line) and now getting into topology territory. Example 6.4.4 we find out limits are just a special case of limit points. 
-</p>
-
-<p>
-Def 6.4.6 note the new notation is "the supremum of all the elements from a<sub>N</sub> onwards" so the example 6.4.7, what's the supremum of a<sub>1</sub> and all future indices? 1.1. What's the supremum of a<sub>2</sub> and everything past it? 1.001. What's the supremum of a<sub>3</sub> and everything past it? 1.001 again. You are looking ahead not before the current sequence index. 
-</p>
-
-<p>
-Prop 6.4.12 L<sup>+</sup> and L<sup>-</sup> are extended real numbers so we can equate them to infinity. In the same proposition a) and b) seem to be saying that there exists an infinite amount of real numbers in the sequence bigger or less to wherever we happen to be when we take the limit superior or limit inferior. For c), the infimum of the entire sequence will be less or equal to the limit inferior because the limit inferior doesn't look at all the previous sequence entries, same with the limit superior so it too will be less or equal to the supremum. 
-</p>
-
-<p>
-Squeeze test introduced here in 6.4.14, and Tao finally completes the real number definition.
-</p>
-</div>
-
-<div id="outline-container-Review" class="outline-4">
-<h4 id="Review">Review</h4>
-<div class="outline-text-4" id="text-Review">
-<p>
-Try some of his multiple choice applets <a href="http://scherk.pbworks.com/w/page/14864181/FrontPage">here</a> like Inequalities, Infimum and supremum, Logic and the Sequences quiz if you haven't already done them. If you don't remember the answer look at that chapter it's not a memory test and our goal isn't to become real analysts it's just to understand the construction of these objects for use in later courses.
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-6.5%20Some%20standard%20limits" class="outline-3">
-<h3 id="6.5%20Some%20standard%20limits">6.5 Some standard limits</h3>
-<div class="outline-text-3" id="text-6.5%20Some%20standard%20limits">
-<p>
-Very short chapter, the proof of 6.5.1 is a standard point-at-definitions style proof, see Lemma 5.6.6(a) and (b) and (g), if L = 1/x<sup>1/k</sup> then L<sup>k</sup> = (1/x<sup>1\k</sup>)<sup>k\1</sup> which is L<sup>k</sup> = 1/x. For the exercise with x<sup>q</sup>, look at Def 5.6.7 and 5.6.9 again. 
-</p>
-
-<p>
-If you are weak with limits we will revisit these chapters numerous times there is no need to memorize everything here just know where to look it up when needed.   
-</p>
-</div>
-</div>
-
-<div id="outline-container-6.6%20Subsequences" class="outline-3">
-<h3 id="6.6%20Subsequences">6.6 Subsequences</h3>
-<div class="outline-text-3" id="text-6.6%20Subsequences">
-<p>
-Example 6.6.2, a<sub>2n</sub> is multiplying the indices by 2, producing the subsequence a<sub>0</sub>, a<sub>2</sub>, a<sub>4</sub> like in his example. It just means if you apply a function to the indices that is strictly increasing, you get another sequence and can call this new sequence b<sub>n</sub> or c<sub>n</sub>. Theorem 6.6.8 proof: since we already declared a bounded sequence meaning a<sub>n</sub> \(\le\) M for all n in N, then (negative bound) \(\le\) a<sub>n</sub> \(\le\) (positive bound), so this can't be equated to infinity as it lies in between these two bounds. This means L is a limit point of this sequence and within this sequence one or more subsequences exist that converge to L. Tao teaches us some topology terms in 6.6.9.
-</p>
-
-<p>
-I didn't do any exercises here, later when we do the Putnam book we will revisit all these definitions again as needed all you need to know that if you apply an increasing function to the indices of an infinite sequence you can probably find a subsequence in there somewhere that has a limit point. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-6.7%20Real%20number%20exponents%20II" class="outline-3">
-<h3 id="6.7%20Real%20number%20exponents%20II">6.7 Real number exponents II</h3>
-<div class="outline-text-3" id="text-6.7%20Real%20number%20exponents%20II">
-<p>
-Here we learn what things like x<sup>e</sup> or x<sup>&pi;</sup> mean. The proof is huge, but Tao makes it easy to follow it's all things we've already seen.
-</p>
-
-<p>
-Proposition 6.7.3 we use the limit laws to prove the usual exponent laws for rational numbers hold for real numbers. All you have to know is that a real exponent is a limit so you can use the limit laws to manipulate them in the future if needed otherwise the normal laws of rational exponents hold. Some solutions to the exercises are <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">here</a> on Tao's class page.     
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Series" class="outline-2">
-<h2 id="Series">Series</h2>
-<div class="outline-text-2" id="text-Series">
-</div>
-<div id="outline-container-7.1%20Finite%20series" class="outline-3">
-<h3 id="7.1%20Finite%20series">7.1 Finite series</h3>
-<div class="outline-text-3" id="text-7.1%20Finite%20series">
-<p>
-Tao has abstracted away the actual values of whatever sequence and we are just manipulating indices here. Make an example series for yourself: a<sub>i</sub> = 1<sub>1</sub>, 3<sub>2</sub>, 5<sub>3</sub>. \(\sum_{i=2}^3 a_i\) means a<sub>2</sub> + a<sub>3</sub> or 3<sub>2</sub> + 5<sub>3</sub> as per Definition 7.1.1. 
-</p>
-
-<p>
-In Lemma 7.1.4 the triangle inequality proof is <a href="https://proofwiki.org/wiki/Triangle_Inequality_for_Indexed_Summations">here</a> note how they get the base case of 0 by setting the variable on top of the sigma less than the initial starting variable so all indexed summations are zero (let b &lt; a) like Tao's beginning of chapter examples with m - 2, m - 1. 
-</p>
-
-<p>
-Check the errata for this chapter, in my version (third edition (hardback)) there's a few problems. 
-</p>
-
-<p>
-Remark 7.1.9 the proof is straight forward when you flip back to Lemma 7.1.4 and note that because he already assumed x to be g(n + 1) he could not also assign x to h(n + 1), which is why he needed to introduce h(j).   
-</p>
-
-<p>
-7.1.13 why is P(0) true? Because the assertion P(n) is true for any set X with n elements, so if it has P(0) elements, it's sum is 0. Reminder to also re-read what a cartesian product is, remember the cartesian plane itself is a cartesian product of every value of x with every value of y.
-</p>
-
-<p>
-Proving all these finite sum identities are easy once you get one of them, all you need is 7.1.1 and the recursive definition he uses to pull out values, manipulate and reindex the sum. 
-</p>
-
-<ul class="org-ul">
-<li>Try 7.1.4(d) without induction, expand the series, factor out the c, done:
-<ul class="org-ul">
-<li>\(\sum_{i=1}^n (ca_i)\) = ca<sub>1</sub> + ca<sub>2</sub> + &#x2026; + ca<sub>n</sub></li>
-<li>c(a<sub>1</sub> + a<sub>2</sub> &#x2026; + a<sub>n</sub>) by distributive law</li>
-<li>rewrite as c(summation notation)</li>
-</ul></li>
-
-<li>7.1.4(c) expand a<sub>i</sub> + b<sub>i</sub>, group them together:
-<ul class="org-ul">
-<li>(a<sub>1</sub> + b<sub>1</sub> +.. a<sub>n</sub> + b<sub>n</sub>) = (a<sub>1</sub> +.. a<sub>n</sub>) + (b<sub>1</sub> +.. b<sub>n</sub>)</li>
-<li>rewrite in summation notation</li>
-</ul></li>
-<li>7.1.4(a) let m = 1: 
-<ul class="org-ul">
-<li>(a<sub>1</sub> +.. a<sub>n</sub>) + (a<sub>n+1</sub> +.. a<sub>p</sub>) = (a<sub>1</sub> +.. a<sub>p</sub>)</li>
-</ul></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-7.2%20Infinite%20series" class="outline-3">
-<h3 id="7.2%20Infinite%20series">7.2 Infinite series</h3>
-<div class="outline-text-3" id="text-7.2%20Infinite%20series">
-<p>
-Example 7.2.4 is also a Khan Academy <a href="https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-1/v/partial-sum-notation">lecture</a>, S<sub>N</sub> partial sum the N is any index value greater or equal to the starting index, meaning you take the first 10 sums, the first 20 sums, the first billion sums. Plug in some values to his example, try a 4 as N:
-</p>
-
-<ul class="org-ul">
-<li>\(\sum_{n=1}^4 2^{-n} = 1 - 2^{-4}\)</li>
-<li>or 1/2<sup>1</sup> + 1/2<sup>2</sup> + 1/2<sup>3</sup> + 1/2<sup>4</sup> = 15/16
-<ul class="org-ul">
-<li>S<sub>4</sub> = 1 - 1/16 = 15/16</li>
-</ul></li>
-</ul>
-
-<p>
-Proposition 7.2.5 the proof is on Tao's class page see the homework <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">solutions</a> but it's things we've already done a dozen times, this is a partial sum from p to q, where if you subtract S<sub>q</sub> - S<sub>p</sub> you should get an absolute value smaller or equal to epsilon for some index that is bigger than N known as the 'tail'. 
-</p>
-
-<p>
-Really all you need out of this chapter is the series laws (Prop 7.2.14) for convergent infinite series and know later if it ever comes up, where to find these definitions and methods to test for convergence. For example in the book <i>The Art of Computer Programming</i> you will rarely ever use any of these definitions instead using the finite definitions.
-</p>
-</div>
-</div>
-
-<div id="outline-container-7.3%20Sums%20of%20non-negative%20numbers" class="outline-3">
-<h3 id="7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</h3>
-<div class="outline-text-3" id="text-7.3%20Sums%20of%20non-negative%20numbers">
-<p>
-7.3.7, do you get how he rewrote that sum to the geometric series?:
-</p>
-<ul class="org-ul">
-<li>\(2^{k}\frac{1}{(2^{k})^q}\)</li>
-<li>\(2^k(2^{-kq})\) by Lemma 5.6.9(d)</li>
-<li>\((2^{k +(-kq)})\) by exp laws x<sup>k</sup> * x<sup>k</sup> = x<sup>k+k</sup></li>
-<li>\((2^{1 - q})^k\)  which is \(2^{k - qk}\) by Lemma 5.6.9(b) (x<sup>q</sup>)<sup>r</sup> = x<sup>qr</sup> 
-<ul class="org-ul">
-<li>the geometric series is the sum x<sup>n</sup></li>
-<li>\((2^{1 - q})^k\) is (thing)<sup>k</sup> or x<sup>n</sup></li>
-</ul></li>
-</ul>
-
-<p>
-Just flip through the remainder of this chapter noting things you can always come back to if needed to understand better, such as rearranging infinite sums. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Infinite%20sets" class="outline-2">
-<h2 id="Infinite%20sets">Infinite sets</h2>
-<div class="outline-text-2" id="text-Infinite%20sets">
-<p>
-Again skim through this chapter noting anything of interest, like countability. All we need to know is nat, int and rationals are all considered countable while the set of real numbers is not. The axiom of choice has an interesting writeup where Tao notes Godel's theorem which claims anything you prove with the axiom of choice will not contradict a proof made without using it, so long as the axioms of set theory are 'consistent'. Tao notes this axiom of choice short cut is used to avoid difficult/lengthy methods in analysis and the different schools of thought regarding this axiom are summarized <a href="https://cs.uwaterloo.ca/~alopez-o/math-faq/mathtext/node35.html">here</a> and actually that entire <a href="https://cs.uwaterloo.ca/~alopez-o/math-faq/mathtext/math-faq.html">FAQ</a> is an ancient 1998 Sci.Math newsgroup FAQ, flipping through it is pretty interesting notably there existed a time when you could read something on the internet in basic html without stale memes or ads bombarding you at every page scroll. 
-</p>
-
-<p>
-On the topic of ancient books, you can now read Hardy's <i>A Course of Pure Mathematics</i> which would have made absolutely no sense if you didn't take some linear algebra and Tao chapters first. A great way to read Hardy's book is to refer to it as we go through the Putnam seminar. 
-</p>
-</div>
-
-<div id="outline-container-Constructive%20Mathematics" class="outline-3">
-<h3 id="Constructive%20Mathematics">Constructive Mathematics</h3>
-<div class="outline-text-3" id="text-Constructive%20Mathematics">
-<p>
-Remark 8.4.3 Tao notes these objects are not constructive meaning you can show they can exist but you can't actually construct them. One benefit to only working in constructive mathematics is you can then use <i>proof theory</i> to prove your logic is correct. Robert Harper when asked by students how can they know if their proofs are correct replies they should take constructive <a href="https://www.cs.cmu.edu/~aplatzer/course/constlog20-schedule.html">logic</a>. It is a way to model a proof's logic to ensure your logic such as implications or disjunctions are correct. I won't make you take it but if you did, and you went back to the beginning of this book, and you modelled the first few chapters using this logic (with exception of that Lemma in chapter 3 Tao noted is not constructive) you would get really good at mathematical logic. You could even type your proofs into an <a href="https://plfa.github.io/">assistant</a> and run them.
+At your leisure finish the rest of this series, we need to know eigenvalues, solving a system of linear equations, how row reduction/gaussian elimination works, rank, polynomials, and whatever you think is interesting. Everything in this series will come up later in machine learning courses esp gaussian elimination and we will do additional linear algebra courses but nobody explains it better than Wildberger does I find, for example the very first lecture on going from one basis to the next you will frequently see in the <i>Math for ML</i> book we do in the AI workshop later.  
 </p>
 </div>
 </div>
@@ -2961,11 +2623,223 @@ His advice is we should concentrate on learning linear algebra, and the best way
 </div>
 </div>
 
+<div id="outline-container-Limits" class="outline-2">
+<h2 id="Limits">Limits</h2>
+<div class="outline-text-2" id="text-Limits">
+</div>
+<div id="outline-container-6.1%20Convergence%20and%20limit%20laws" class="outline-3">
+<h3 id="6.1%20Convergence%20and%20limit%20laws">6.1 Convergence and limit laws</h3>
+<div class="outline-text-3" id="text-6.1%20Convergence%20and%20limit%20laws">
+<p>
+Returning back to Tao's <i>Analysis I</i> let's learn what a limit is after using formal limits for all of chapter 5. Think of any infinite convergent sequence such as 1.9<sub>1</sub> 1.99<sub>2</sub> 1.999<sub>3</sub> &#x2026; converging to 2 and that you have taken such a sequence and stuck it in an imaginary infinite array and indexed every value. This sequence does not end and goes on forever getting closer to the least upper bound. Everytime you subtract the limit from the next sequence entry you get a new smaller epsilon if it is a converging sequence. Try this yourself subtract (1.9 - 2), (1.99 - 2), (1.999999 - 2) and take the absolute value. If you choose an arbitrary epsilon of say 1, then every entry in the remaining infinite sequence will have an equal or smaller distance from 1 if it is converging, which is what the definition means by 'every epsilon &gt; 0'. The further you go down the infinite sequence the smaller this epsilon becomes so that 'for all positive epsilon' there is some index in this array where if you pick any arbitrary epsilon like .0000000001, every future index will contain a value equal or smaller than that epsilon if it converging to a limit. 
+</p>
+
+<p>
+Prop 6.1.7 notice he has assigned epsilon to the value |L-L'|/3 which is why d(L,L') \(\le\) 2epsilon is d(L,L') = 2|L-L'|/3 I somehow missed that assignment and spent a few minutes wondering what was going on. He wanted a tiny displacement but why divide by 3 instead of 2? I'm guessing to set up the triangle inequality. 
+</p>
+
+<p>
+In Remark 6.1.9 we throw out the starting index, I also noticed he changed the index type from naturals to integers in these definitions. Try some exercises:
+</p>
+
+<details id="org79f3f9f">
+<p>
+Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
+</p>
+
+<p>
+Ex 6.1.2 is asking is it possible for a sequence of real numbers to converge to another real number, if none of the conditions are satisfied so a proof by contradiction where you look in the logic appendix for if and only if statements and try to prove it false. Let's look at Def 6.1.5 and see if it's possible. Assume for contradiction given any real epsilon &gt; 0, you <i>can't</i> find an index in a convergent infinite sequence so that all future entries are less than or equal to that epsilon. Then this sequence is not converging, and is divergent by def 6.1.5. If the difference between the limit and the sequence entry does not continually shrink meaning there exists some index that can satisfy every epsilon &gt; 0 then it is moving away from the limit and contradicts the definition of convergence of sequences.   
+</p>
+
+<p>
+Ex 6.1.3 this looks a lot like ex 6.1.2, we have a sequence converging to a real number, and one index is bigger or equal to the other, so if a later index entry of the sequence is not within epsilon, obviously an earlier index can't be a convergent sequence either because then we don't have the property that n \(\ge\) N ie all future index values of some arbitrary epsilon displacement between c (the real number) and the sequence entries. This is in Remark 6.1.9 that the starting index is irrelevant only the fact that a sequence eventually converge to a limit is relevant.  
+</p>
+
+<p>
+Ex 6.1.4 another question about indices, this one you are adding an arbitrary integer to the index (which could also be zero) that acts like a stepping function, moving up in increments of 1000. If a'<sub>n</sub> and a<sub>n</sub> are supposed to be converging to a limit, if you add 1000 to the index, a<sub>1001</sub>, a<sub>2002</sub>, a<sub>3003</sub> better converge if a'<sub>n</sub> wants to converge or else the properties of def 6.1.5 don't hold. You could show this with k = 0, j = n + k, and now you have a sequence a<sub>j</sub> = a<sub>n</sub> where a<sub>n</sub> will only converge if a<sub>j</sub> does since they are the same sequence and n + k \(\ge\) n \(\ge\) N which is def 6.1.5 again, so adding an arbitrary step to the indices shouldn't matter. 
+</p>
+
+<p>
+Ex 6.1.5 Looking at Def 5.1.8 for a Cauchy sequence, for every possible positive epsilon there must exist an eventual index where two adjacent index entries subtracted from each other have to be less than or equal to that epsilon meaning of course they are converging so the distance between entries grows smaller and smaller. The limit definition, is the limit subtracted from an eventual index &gt; N will always be within an epsilon displacement if it is converging to that limit. The triangle inequality for distance back in 4.3.3 states the distance from x to z, is less than or equal to the distance from x to y plus the distance from y to z. The distance a<sub>j</sub> - a<sub>k</sub> \(\le\) epsilon, and the distance a<sub>n</sub> - limit \(\le\) epsilon so assign y = limit in the triangle inequality: a<sub>j</sub> - a<sub>k</sub> \(\le\) a<sub>j</sub> - limit \(\le\) a<sub>k</sub> - limit and of course are all within epsilon so a convergent sequence of real numbers is also a Cauchy sequence. 
+</p>
+
+<p>
+Ex 6.1.6 prove prop 6.1.15. There is a long proof answer <a href="https://taoanalysis.wordpress.com/2020/05/31/exercise-6-1-6/">here</a> you probably want to try and understand but it's worth going back and seeing how he superceded the proofs of temporary constructions before. For example in remark 4.2.5 he defined the quotient x/y of two rationals then substituted in his temporary notation and definitions to prove the new notation and definitions led to the same conclusion, and thus could discard it and use the new notation. Here I did the same thing using 6.1.11 his proof that the limit of 1/n = 0 rewriting it using new limit notation, substituted in Cauchy/formal limits, came to the same conclusion and now I claim formal limits are 'genuine limits' and can toss that notation. I also used 6.1.11 as a concrete example to try his contradiction suggestion, assuming 1/n was not eventually &epsilon;-close to 0 and found it was much easier to prove that it had to converge to 0 thus be the genuine limit of 1/n. Is this correct? The proofs of all the limits can be found on YouTube if you're wondering.
+</p>
+
+<p>
+Ex 6.1.7 we look at Prop 6.1.4 and rewrite it to bridge rational bounded sequences from 5.1.12 to real number bounded sequences defined in 6.1.16, just like how 6.1.4 bridged rational Cauchy sequences to real number Cauchy sequences, you are using 6.1.4's proof as a template: Suppose that \((a_n)_{n=m}^\infty\) is a sequence in the sense of 6.1.16 and it is bounded by a real number M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m, in particular it is bounded by a rational M &gt; 0 which makes it a bounded sequence in the sense of 5.1.12. Now suppose \((a_n)_{n=m}^{\infty}\) is a sequence in the sense of 5.1.12 that is bounded by a rational M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m. If M is a real number, then there exists an integer N &gt; M by the Archimedean property&#x2026; and your proof carries on like this showing that 6.1.16 is indeed bounded by a real number.    
+</p>
+
+<p>
+6.1.8 Try and prove these yourself, doesn't matter how awful your proof is just that you looked at previous Cauchy series lemma proofs like 5.3.6 and tried to adapt them to limits, like he does in Prop 6.1.11 so proving the addition of two limits converges to another limit, if a<sub>n</sub> - L must be less than epsilon for every epsilon &gt; 0, then substitute in L = a<sub>n</sub> + b<sub>n</sub> and see what happens: \(|a_n - (a_n + b_{n})| + |b_n - (a_n + b_{n})|\) \(\le\) epsilon then lim\((a_n + b_{n})\). This is the point of doing proof based math so you can experiment around to better learn constructions and derive all the rules later if you forget them. There are answers floating around for Ex 6.1.8 but maybe you know a better/more intuitive way to prove that a<sub>n</sub> + b<sub>n</sub> converges to the real number x + y. 
+</p>
+
+<p>
+6.1.9, why does x/0 fail, and 6.1.10 modifying 6.1.4 again you can figure out easily since we know you can always squeeze a rational number in, so a<sub>n</sub> - b<sub>n</sub> \(\le\) rational epsilon \(\le\) real epsilon 
+</p>
+</details>
+</div>
+</div>
+
+<div id="outline-container-6.2%20The%20Extended%20real%20numbers" class="outline-3">
+<h3 id="6.2%20The%20Extended%20real%20numbers">6.2 The Extended real numbers</h3>
+<div class="outline-text-3" id="text-6.2%20The%20Extended%20real%20numbers">
+<p>
+We patch the definition of real numbers with negative and positive infinity elements that are distinct from all other real numbers. All we can do with these two new objects is equate things to them, something is infinite if it equals negative or positive infinity. Tao points out cancellation of infinity elements leads to nonsense conclusions.     
+</p>
+
+<p>
+Example 6.2.7 and def 6.2.6 if a set 'E' contains negative infinity, sup(E) is that set with negative infinity removed and the least upper bound taken, so his example E = {-1, -2, &#x2026;.} U {negative infinity} results in the set {-1, -2, &#x2026;, -\(\infty\)} so there is a set of infinite descending numbers unioned with an object 'negative infinity' and sup(E) is -1 because we remove -\(\infty\), but are still left with the first set of {-1, -2,..} even though it technically is also negative infinity it is not the object \(-\infty\). Example 6.2.9 that set is equal to infinity but does not contain the actual element infinity. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-6.5%20Some%20standard%20limits" class="outline-3">
+<h3 id="6.5%20Some%20standard%20limits">6.5 Some standard limits</h3>
+<div class="outline-text-3" id="text-6.5%20Some%20standard%20limits">
+<p>
+Very short chapter, the proof of 6.5.1 is a standard point-at-definitions style proof, see Lemma 5.6.6(a) and (b) and (g), if L = 1/x<sup>1/k</sup> then L<sup>k</sup> = (1/x<sup>1\k</sup>)<sup>k\1</sup> which is L<sup>k</sup> = 1/x. For the exercise with x<sup>q</sup>, look at Def 5.6.7 and 5.6.9 again. 
+</p>
+
+<p>
+If you are weak with limits we will revisit these chapters numerous times there is no need to memorize everything here just know where to look it up when needed.   
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-6.7%20Real%20number%20exponents%20II" class="outline-3">
+<h3 id="6.7%20Real%20number%20exponents%20II">6.7 Real number exponents II</h3>
+<div class="outline-text-3" id="text-6.7%20Real%20number%20exponents%20II">
+<p>
+Here we learn what things like x<sup>e</sup> or x<sup>&pi;</sup> mean. The proof is huge, but Tao makes it easy to follow it's all things we've already seen.
+</p>
+
+<p>
+Proposition 6.7.3 we use the limit laws to prove the usual exponent laws for rational numbers hold for real numbers. All you have to know is that a real exponent is a limit so you can use the limit laws to manipulate them in the future if needed otherwise the normal laws of rational exponents hold. Some solutions to the exercises are <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">here</a> on Tao's class page.     
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Series" class="outline-2">
+<h2 id="Series">Series</h2>
+<div class="outline-text-2" id="text-Series">
+</div>
+<div id="outline-container-7.1%20Finite%20series" class="outline-3">
+<h3 id="7.1%20Finite%20series">7.1 Finite series</h3>
+<div class="outline-text-3" id="text-7.1%20Finite%20series">
+<p>
+Tao has abstracted away the actual values of whatever sequence and we are just manipulating indices here. Make an example series for yourself: a<sub>i</sub> = 1<sub>1</sub>, 3<sub>2</sub>, 5<sub>3</sub>. \(\sum_{i=2}^3 a_i\) means a<sub>2</sub> + a<sub>3</sub> or 3<sub>2</sub> + 5<sub>3</sub> as per Definition 7.1.1. 
+</p>
+
+<p>
+In Lemma 7.1.4 the triangle inequality proof is <a href="https://proofwiki.org/wiki/Triangle_Inequality_for_Indexed_Summations">here</a> note how they get the base case of 0 by setting the variable on top of the sigma less than the initial starting variable so all indexed summations are zero (let b &lt; a) like Tao's beginning of chapter examples with m - 2, m - 1. 
+</p>
+
+<p>
+Check the errata for this chapter, in my version (third edition (hardback)) there's a few problems. 
+</p>
+
+<p>
+Remark 7.1.9 the proof is straight forward when you flip back to Lemma 7.1.4 and note that because he already assumed x to be g(n + 1) he could not also assign x to h(n + 1), which is why he needed to introduce h(j).   
+</p>
+
+<p>
+7.1.13 why is P(0) true? Because the assertion P(n) is true for any set X with n elements, so if it has P(0) elements, it's sum is 0. Reminder to also re-read what a cartesian product is, remember the cartesian plane itself is a cartesian product of every value of x with every value of y.
+</p>
+
+<p>
+Proving all these finite sum identities are easy once you get one of them, all you need is 7.1.1 and the recursive definition he uses to pull out values, manipulate and reindex the sum. 
+</p>
+
+<ul class="org-ul">
+<li>Try 7.1.4(d) without induction, expand the series, factor out the c, done:
+<ul class="org-ul">
+<li>\(\sum_{i=1}^n (ca_i)\) = ca<sub>1</sub> + ca<sub>2</sub> + &#x2026; + ca<sub>n</sub></li>
+<li>c(a<sub>1</sub> + a<sub>2</sub> &#x2026; + a<sub>n</sub>) by distributive law</li>
+<li>rewrite as c(summation notation)</li>
+</ul></li>
+
+<li>7.1.4(c) expand a<sub>i</sub> + b<sub>i</sub>, group them together:
+<ul class="org-ul">
+<li>(a<sub>1</sub> + b<sub>1</sub> +.. a<sub>n</sub> + b<sub>n</sub>) = (a<sub>1</sub> +.. a<sub>n</sub>) + (b<sub>1</sub> +.. b<sub>n</sub>)</li>
+<li>rewrite in summation notation</li>
+</ul></li>
+<li>7.1.4(a) let m = 1: 
+<ul class="org-ul">
+<li>(a<sub>1</sub> +.. a<sub>n</sub>) + (a<sub>n+1</sub> +.. a<sub>p</sub>) = (a<sub>1</sub> +.. a<sub>p</sub>)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-7.2%20Infinite%20series" class="outline-3">
+<h3 id="7.2%20Infinite%20series">7.2 Infinite series</h3>
+<div class="outline-text-3" id="text-7.2%20Infinite%20series">
+<p>
+Example 7.2.4 is also a Khan Academy <a href="https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-1/v/partial-sum-notation">lecture</a>, S<sub>N</sub> partial sum the N is any index value greater or equal to the starting index, meaning you take the first 10 sums, the first 20 sums, the first billion sums. Plug in some values to his example, try a 4 as N:
+</p>
+
+<ul class="org-ul">
+<li>\(\sum_{n=1}^4 2^{-n} = 1 - 2^{-4}\)</li>
+<li>or 1/2<sup>1</sup> + 1/2<sup>2</sup> + 1/2<sup>3</sup> + 1/2<sup>4</sup> = 15/16
+<ul class="org-ul">
+<li>S<sub>4</sub> = 1 - 1/16 = 15/16</li>
+</ul></li>
+</ul>
+
+<p>
+Proposition 7.2.5 the proof is on Tao's class page see the homework <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">solutions</a> but it's things we've already done a dozen times, this is a partial sum from p to q, where if you subtract S<sub>q</sub> - S<sub>p</sub> you should get an absolute value smaller or equal to epsilon for some index that is bigger than N known as the 'tail'. 
+</p>
+
+<p>
+Really all you need out of this chapter is the series laws (Prop 7.2.14) for convergent infinite series and know later if it ever comes up, where to find these definitions and methods to test for convergence. For example in the book <i>The Art of Computer Programming</i> you will rarely ever use any of these definitions instead using the finite definitions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-7.3%20Sums%20of%20non-negative%20numbers" class="outline-3">
+<h3 id="7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</h3>
+<div class="outline-text-3" id="text-7.3%20Sums%20of%20non-negative%20numbers">
+<p>
+7.3.7, do you get how he rewrote that sum to the geometric series?:
+</p>
+<ul class="org-ul">
+<li>\(2^{k}\frac{1}{(2^{k})^q}\)</li>
+<li>\(2^k(2^{-kq})\) by Lemma 5.6.9(d)</li>
+<li>\((2^{k +(-kq)})\) by exp laws x<sup>k</sup> * x<sup>k</sup> = x<sup>k+k</sup></li>
+<li>\((2^{1 - q})^k\)  which is \(2^{k - qk}\) by Lemma 5.6.9(b) (x<sup>q</sup>)<sup>r</sup> = x<sup>qr</sup> 
+<ul class="org-ul">
+<li>the geometric series is the sum x<sup>n</sup></li>
+<li>\((2^{1 - q})^k\) is (thing)<sup>k</sup> or x<sup>n</sup></li>
+</ul></li>
+</ul>
+
+<p>
+Just flip through the remainder of this chapter noting things you can always come back to if needed to understand better, such as rearranging infinite sums. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Infinite%20sets" class="outline-3">
+<h3 id="Infinite%20sets">Infinite sets</h3>
+<div class="outline-text-3" id="text-Infinite%20sets">
+<p>
+Only skim through this chapter noting anything of interest, like countability. All we need to know is nat, int and rationals are all considered countable while the set of real numbers is not. The axiom of choice has an interesting writeup where Tao notes Godel's theorem which claims anything you prove with the axiom of choice will not contradict a proof made without using it, so long as the axioms of set theory are 'consistent'. Tao notes this axiom of choice short cut is used to avoid difficult/lengthy methods in analysis and the different schools of thought regarding this axiom are summarized <a href="https://cs.uwaterloo.ca/~alopez-o/math-faq/mathtext/node35.html">here</a>.
+</p>
+</div>
+</div>
+</div>
+
+
 <div id="outline-container-CMU%20Putnam%20Seminar" class="outline-2">
 <h2 id="CMU%20Putnam%20Seminar">CMU Putnam Seminar</h2>
 <div class="outline-text-2" id="text-CMU%20Putnam%20Seminar">
 <p>
-The rest of this workshop we follow Prof Loh's advice and do competitive math problems in order to learn undergrad math. We will acheive this with the CMU Putnam Seminar and the book <i>Putnam and Beyond</i> second edition you can find on <a href="http://libgen.rs/search.php?req=putnam+and+beyond">library genesis</a>. Most of the lectures are <a href="https://www.youtube.com/c/DailyChallengewithPoShenLoh/search?query=CMU%20Putnam%20Seminar">archived</a> on YouTube and the class page is <a href="https://www.math.cmu.edu/~ploh/2020-putnam.shtml">here</a>. Now the rest of Tao's book(s) and whatever else we can find such as MIT's calculus courses on OCW are research to help us solve these problems instead of us sequentially going through long courses and losing motivation.  
+The rest of this workshop we follow Prof Loh's advice and do competitive math problems in order to learn undergrad math. We will acheive this with the CMU Putnam Seminar and the book <i>Putnam and Beyond</i> second edition you can find on <a href="http://libgen.rs/search.php?req=putnam+and+beyond">library genesis</a>. Most of the lectures are <a href="https://www.youtube.com/c/DailyChallengewithPoShenLoh/search?query=CMU%20Putnam%20Seminar">archived</a> on YouTube and the class page is <a href="https://www.math.cmu.edu/~ploh/2020-putnam.shtml">here</a>. You can practice highschool math with his other site Expii <a href="https://www.expii.com/solve">Solve</a> each problem has links at the bottom to relevant Expii lessons. The problems in the in every set grow in difficulty and as typical with Poh-Shen Loh content one problem covers multiple topics. We didn't take calculus, but it doesn't matter we'll just learn it as we go through these problem sets finishing Tao's book. 
 </p>
 </div>
 
@@ -2985,8 +2859,18 @@ At 13:31: the top 500 scores are only ~23 points out of 120 max possible points,
 </p>
 
 <p>
-TODO 
+Third problem @31:45 'integral coefficients' means they are integers. If you forgot what a polynomial is Wildberger has a brief crash course describing their properties and graphing in <a href="https://youtu.be/JpPNzdlXVYw">this</a> linear algebra lecture. A root means the entire polynomial evaluates to 0, so p(m) = m<sup>2</sup> - 4 has a root m = 2.  
 </p>
+
+<p>
+Notice how he's just abstracting away using boxes ignoring all the values. If you forgot what modular arithmetic is Wildberger also has a <a href="https://youtu.be/Sq_BmcmrQkk">lecture</a> for this in typical Wildberger style where he introduces the problem it's trying to solve, the history and then at around 11:43 the rules of k congruent to l mod m.
+</p>
+
+<p>
+TODO
+</p>
+
+
 
 <hr>
 <p>
