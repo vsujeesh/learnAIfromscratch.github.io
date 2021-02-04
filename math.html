@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-04 Thu 00:05 -->
+<!-- 2021-02-04 Thu 00:26 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -801,18 +801,11 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </ul>
 
 <p>
-Let's understand Axiom 2.5 by watching a lecture from MIT though you will end up writing so many induction style proofs on the natural numbers in Tao's book this will become second nature.
+This will make much more sense when you try this yourself as math is learn through doing. 
 </p>
 
-<ul class="org-ul">
-<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-2-induction/">1. Induction lecture</a> 
-<ul class="org-ul">
-<li>From MIT's 6.042j <i>Mathematics for Computer Scientists</i></li>
-</ul></li>
-</ul>
-
 <p>
-Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k. The logical chain of deduction goes forward, you assume k and then prove the successor of k which means all future successors are also proven as this deduction chain keeps on going.  
+Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k. The logical chain of deduction goes forward, you prove the base case and say this is true, you assume k and say this is also true, now you prove the successor of k which means all future successors are also proven as this deduction chain keeps on going.  
 </p>
 </div>
 </div>
@@ -861,23 +854,28 @@ I will break this down by three things:
 </ul>
 
 <p>
+Remember it is a logical chain:
+</p>
+<ul class="org-ul">
+<li>This first thing is true, here's the proof</li>
+<li>Claim this second thing is also true</li>
+<li>Prove the successor of the claim is true, using the previous 2 like they are already established definitions.</li>
+</ul>
+
+<p>
 How does the base case for n + 0 = n become 0 + 0 = 0, from the previous definition of 0 + m = m?  We are inducting on n so once we substitute in 0 for n we now have 0 + (value) = (value) which is from the definition of addition: 0 + m = m. Since (value) is 0 it is 0 + 0 = 0. 
 </p>
 
 <p>
-Suppose that n + 0 = n (assumption) then let's create a logical chain of deduction by proving the next successor which is (n++) + 0 = n++. Pointing to the definition of addition: (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal forms so interchangable.
+Suppose that n + 0 = n (assumption). Then the successor is (n++) + 0 = n++. Pointing to the definition of addition: (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal forms so interchangable.
 </p>
 
 <p>
-Finally we are left with (n + 0)++ = n++ and (n + 0) the value in brackets is in the form of the inductive hypotenuse or assumption, since we have assumed n + 0 = n, we can again substitute/interchange/swap n + 0 for n and get (n)++ = n++. Tao does not tell the reader they can do this, he assumes that you know what an assumption is in mathematical logic. Concretely what this means is whenever your proof by induction ends up in the form of the hypothesis/assumption, you can exchange the forms: since n + 0 = n, if you see n anywhere, you can rewrite it as n + 0 or vice-versa. To understand why this works requires a background in logic which we are building. 
+Finally we are left with (n + 0)++ = n++ and (n + 0) the value in brackets is in the form of the inductive hypotenuse or assumption, since we have assumed n + 0 = n, we can again substitute/interchange/swap n + 0 for n and get (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. 
 </p>
 
 <p>
-Why is induction even used at all? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. 
-</p>
-
-<p>
-The most important takeway: no arithmetic was done here at all. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. Remember this, you are moving forms around according using logical reasoning. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs like you would a puzzle swapping out definitions for each other.  
+The most important takeway: no arithmetic was done here at all. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. Remember this, you are moving forms around according using logical reasoning. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
 </p>
 </div>
 </div>
@@ -1029,7 +1027,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="orge1fd927">
+<details id="org6bcaaa9">
 <p>
 
 </p>
@@ -1237,7 +1235,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="org134cd3c">
+<details id="orge8cab6d">
 <p>
 
 </p>
@@ -1410,7 +1408,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, just read this chapter to know how an integer object is constructed. This is the poor scratchwork I did
 </p>
 
-<details id="org19d89b7">
+<details id="org0292fb7">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1512,7 +1510,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="org5940b29">
+<details id="orgf8fa33b">
 <p>
 
 </p>
@@ -2022,7 +2020,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="org46c4caa">
+<details id="orgd7617ab">
 <p>
 
 </p>
@@ -2135,7 +2133,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="orga17b394">
+<details id="org9a1b785">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2654,7 +2652,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="org30c7c95">
+<details id="org465e12e">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
