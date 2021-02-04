@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-04 Thu 09:47 -->
+<!-- 2021-02-04 Thu 11:10 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -1018,7 +1018,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="orgee749f9">
+<details id="org14d3694">
 <p>
 
 </p>
@@ -1226,7 +1226,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="org6106b5c">
+<details id="orge9fd2fd">
 <p>
 
 </p>
@@ -1399,7 +1399,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="org0d08b78">
+<details id="orgc0c5e0b">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1501,7 +1501,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="org6a117ed">
+<details id="org8418817">
 <p>
 
 </p>
@@ -2015,7 +2015,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="orge6dde75">
+<details id="org81df3b3">
 <p>
 
 </p>
@@ -2128,7 +2128,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="org1e27c48">
+<details id="org85a4109">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2643,7 +2643,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="orgbed20d6">
+<details id="orgd1091b0">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2737,7 +2737,7 @@ Wildberger has a lecture on <a href="https://youtu.be/rQzfHbkltkY">summation</a>
 </p>
 
 <p>
-Tao has abstracted away the actual values of whatever sequence and we are just manipulating indices here. Make an example series for yourself: a<sub>i</sub> = 1<sub>1</sub>, 3<sub>2</sub>, 5<sub>3</sub>. \(\sum_{i=2}^3 a_i\) means a<sub>2</sub> + a<sub>3</sub> or 3<sub>2</sub> + 5<sub>3</sub> as per Definition 7.1.1. 
+We are just manipulating indices here. Make an example series for yourself: a<sub>i</sub> = 1<sub>1</sub>, 3<sub>2</sub>, 5<sub>3</sub>. \(\sum_{i=2}^3 a_i\) means a<sub>2</sub> + a<sub>3</sub> or 3<sub>2</sub> + 5<sub>3</sub> as per Definition 7.1.1. 
 </p>
 
 <p>
@@ -2749,7 +2749,7 @@ Check the errata for this chapter, in my version (third edition (hardback)) ther
 </p>
 
 <p>
-7.1.13 why is P(0) true? Because the assertion P(n) is true for any set X with n elements, so if it has P(0) elements, it's sum is 0. Reminder to also re-read what a cartesian product is, remember the cartesian plane itself is a cartesian product of every value of x with every value of y.
+7.1.13 why is P(0) true? Because the assertion P(n) is true for any set X with n elements, so if it has P(0) elements, it's sum is 0. Reminder to also re-read what a cartesian product is, the cartesian plane itself is a cartesian product of every value of x with every value of y.
 </p>
 
 <p>
@@ -2918,11 +2918,11 @@ Let's begin, watching the <a href="https://ocw.mit.edu/courses/mathematics/18-01
 </p>
 
 <p>
-Watching the MIT lecture, note the point x<sub>0</sub> just means 'a fixed point on the x axis' so it's a placeholder/variable for any arbitrary point on the x axis. Reminder in this lectures y = f(x) and we are on the (x, y) coord plane so if you see a function in the tuple like (x, f(x+thing)) this is <a href="https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_value">call by value</a> strategy, you evaluate the arguments to produce a value then pass that to f() which produces some element from Y.
+Watching the MIT lecture, note the point x<sub>0</sub> just means 'a fixed point on the x axis' so it's a placeholder/variable for any arbitrary point on the x axis. In these lectures y = f(x) as we are on the (x, y) coord plane so if you see a function in the tuple like (x, f(x+thing)) since y = f(x) it will produce (x, y=x+thing).
 </p>
 
 <p>
-At around 17:40 or so pause this lecture to find out what he means by 'the limit delta-x goes to zero' it means that tiny delta-x displacement moving towards x<sub>0</sub>, which is it's zero point since it begins at x<sub>0</sub>. This is visualized <a href="https://youtu.be/kfF40MiS7zA">here</a>. Keep watching for about 8 minutes where he points out the graph has a hole at certain values when taking limits (since 0/0) then go back to the MIT lecture, we already know exactly how limits are constructed. In the MIT lecture the function input of f(x<sub>0</sub> + delta-x) and since this is a cartesian plane we have y = f(x) so when you input the point P + it's tiny displacement to f() you get a new element from set Y. 
+At around 17:40 or so pause this lecture to find out what he means by 'the limit delta-x goes to zero' it means that tiny delta-x displacement moving towards x<sub>0</sub>, which is it's zero point since it begins at x<sub>0</sub>. This is visualized <a href="https://youtu.be/kfF40MiS7zA">here</a>. Keep watching for about 8 minutes where he points out the graph has a hole at certain values when taking limits (since 0/0) then go back to the MIT lecture, we already know exactly how limits are constructed. 
 </p>
 
 <p>
@@ -2930,9 +2930,53 @@ There was a pretty good breakdown of how f'(x<sub>0</sub>) = -1/(x<sub>0</sub>)<
 </p>
 
 <p>
-27:10 of the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first lecture</a>, how would you calculate the area of the triangle below the tangent line of = 1/x, stop it at 28:32 and see if you can solve this problem on your own before him showing you the answer. This is why math books don't need exercises or solutions it's because the exercises are built in, you can make your own.
+27:10 of the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first lecture</a>, how would you calculate the area of the triangle below the tangent line of = 1/x, stop it at 28:32 and see if you can solve this problem on your own before him showing you the answer. Make your own Putnam seminar exercises for example at 33:00 can you simplify that tangent equation before he does.  
 </p>
 
+<ul class="org-ul">
+<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
+<li>this is:
+<ul class="org-ul">
+<li>- 0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot \frac{(x - x_0)}{1}\)</li>
+</ul></li>
+<li>standard wildberger algebra:
+<ul class="org-ul">
+<li>- 0 - \(\frac{1}{x_0}\) = \(\frac{-x + x_0}{x_0^2}\)</li>
+</ul></li>
+<li>add \(\frac{1}{x_0}\) to both sides, cancelling from left side:
+<ul class="org-ul">
+<li>0 =  \(\frac{(-x + x_0)}{x_0^2}\) + \(\frac{1}{x_0}\)</li>
+</ul></li>
+<li>more standard wildberger algebra:
+<ul class="org-ul">
+<li>0 =  \(\frac{((-x + x_0)(x_0)) + 1(x_0^2)}{x_0^3}\)</li>
+</ul></li>
+<li>distribute:
+<ul class="org-ul">
+<li>0 =  \(\frac{-x(x_0) + x_0^2 + x_0^2}{x_0^3}\)</li>
+</ul></li>
+<li>combine:
+<ul class="org-ul">
+<li>0 =  \(\frac{-x(x_0) + 2x_0^2}{x_0^3}\)</li>
+</ul></li>
+<li>we can remove one x<sub>0</sub> from each side of the addition
+<ul class="org-ul">
+<li>why? because this is: \(\frac{-x(x_0)}{x_0^3}\) + \(\frac{2x_0^2}{x_0^3}\)</li>
+<li>0 =  \(\frac{-x + 2x_0}{x_0^2}\)</li>
+</ul></li>
+<li>solve for x, add x/(x<sub>0</sub>)<sup>2</sup> to both sides
+<ul class="org-ul">
+<li>\(\frac{x}{x_0^2}\) = \(\frac{2x_0}{x_0^2}\)</li>
+</ul></li>
+<li>clear fractions multiplying by x<sub>0</sub><sup>2</sup>/1
+<ul class="org-ul">
+<li>x = 2x<sub>0</sub></li>
+</ul></li>
+</ul>
+
+<p>
+He used a much faster way to reason this algebra but he's had years of practice you eventually pick up his style of quick algebra which is why we are doing this course, to practice.
+</p>
 
 <p>
 TODO
