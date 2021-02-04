@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-04 Thu 00:26 -->
+<!-- 2021-02-04 Thu 09:47 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -785,7 +785,7 @@ Start with <i>Analysis I</i> chapter 2. We begin again with basic counting but r
 <li>Axiom 2.4: Different natural numbers must have different successors</li>
 <li>Axiom 2.5: Let P(n) be any property pertaining to a natural number n. Suppose that P(0) is true, and suppose that whenever P(n) is true, P(n++) is also true. Then P(n) is true for every natural number n. 
 <ul class="org-ul">
-<li>We make an assumption about a property P(n) being true meaning you do not prove P(n), you prove P(0) and P(n + 1) are true, and both these form a logical implication meaning that if they are both true, then your initial assumption of P(n) being true holds.</li>
+<li>We make an assumption about a property P(n) being true meaning you do not prove P(n) it is already assumed to be true, you prove P(0) and P(n + 1) are true, and all three form the logical chain that also proves n+2, n+3, etc.</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -801,11 +801,11 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </ul>
 
 <p>
-This will make much more sense when you try this yourself as math is learn through doing. 
+This will make much more sense when you try this yourself in the next chapter. P(n) is not a function it represents properties or statements.  
 </p>
 
 <p>
-Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k. The logical chain of deduction goes forward, you prove the base case and say this is true, you assume k and say this is also true, now you prove the successor of k which means all future successors are also proven as this deduction chain keeps on going.  
+Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k.  
 </p>
 </div>
 </div>
@@ -841,25 +841,16 @@ Try writing your own examples:
 <h4 id="First%20proof">First proof</h4>
 <div class="outline-text-4" id="text-First%20proof">
 <p>
-There is some subtle things going on in Lemma 2.2.2 we will now walk through. Notice first how he is using the exact same induction template from 2.1.11, you will eventually get very familiar with this template. Notice second that he's using a different variable to not confuse it with the already established definition of 0 + m = m these variables are just placeholders for a value and if you see m twice or n twice it means the same value.
+Let's go through his proof in Lemma 2.2.2. Notice first how he is using the exact same induction template from 2.1.11, you will eventually get very familiar with this template. He's using a different variable to not confuse it with the already established definition of 0 + m = m these variables are just placeholders for a value and if you see m twice or n twice it means the same value.
 </p>
 
 <p>
-I will break this down by three things:
+Induction proofs are a logical chain:
 </p>
 <ul class="org-ul">
-<li>Base case</li>
-<li>The inductive hypothesis or assumption</li>
-<li>The inductive step or increment or successor</li>
-</ul>
-
-<p>
-Remember it is a logical chain:
-</p>
-<ul class="org-ul">
-<li>This first thing is true, here's the proof</li>
-<li>Claim this second thing is also true</li>
-<li>Prove the successor of the claim is true, using the previous 2 like they are already established definitions.</li>
+<li><i>P(base)</i> This first link is true, here's the proof</li>
+<li><i>P(n)</i> Assume the second link is also true</li>
+<li><i>P(n + 1)</i> Prove successor is true, with ability to use the previous 2 like they are already established definitions.</li>
 </ul>
 
 <p>
@@ -867,15 +858,15 @@ How does the base case for n + 0 = n become 0 + 0 = 0, from the previous definit
 </p>
 
 <p>
-Suppose that n + 0 = n (assumption). Then the successor is (n++) + 0 = n++. Pointing to the definition of addition: (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal forms so interchangable.
+Suppose that n + 0 = n (assumption). Then the successor (n++) + 0 = n++. Pointing to the definition of addition: (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal forms so interchangable.
 </p>
 
 <p>
-Finally we are left with (n + 0)++ = n++ and (n + 0) the value in brackets is in the form of the inductive hypotenuse or assumption, since we have assumed n + 0 = n, we can again substitute/interchange/swap n + 0 for n and get (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. 
+Finally we are left with (n + 0)++ = n++ and (n + 0) the value in brackets is in the form of P(n) the inductive hypotenuse or assumption, since we have assumed n + 0 = n, we can again substitute/interchange/swap n + 0 for n and get (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. 
 </p>
 
 <p>
-The most important takeway: no arithmetic was done here at all. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. Remember this, you are moving forms around according using logical reasoning. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
+The most important takeway: <i>no arithmetic was done here at all</i>. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. You are a logician now pattern matching forms and moving them around. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
 </p>
 </div>
 </div>
@@ -1027,7 +1018,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org6bcaaa9">
+<details id="orgee749f9">
 <p>
 
 </p>
@@ -1170,7 +1161,7 @@ Proposition 2.2.13 fill in the gaps:.
 </ul>
 
 <p>
-(Optional) Proposition 2.2.14 (Strong induction) From MIT this <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">lecture</a> on strong induction, the intuition here is Q(m) if all the dominoes are already knocked down and there's one left standing, then it too will be knocked down where 'weak induction' intuition is P(n) if you knock down one domino, they will all fall. If P(n) is true because P(n++) implies P(n) true, then for all m \(\le\) P(n), Q(m) is true. Tao comes back to strong induction later in the book if you don't get it right away.   
+(Optional) Proposition 2.2.14 (Strong induction) From MIT this <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-3-strong-induction/">lecture</a> on strong induction, Tao comes back to strong induction later in the book if you don't get it right away.   
 </p>
 
 <p>
@@ -1235,7 +1226,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orge8cab6d">
+<details id="org6106b5c">
 <p>
 
 </p>
@@ -1405,10 +1396,10 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 <h4 id="4.1%20The%20integers--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-4.1%20The%20integers--Exercises">
 <p>
-You don't have to do the exercises, just read this chapter to know how an integer object is constructed. This is the poor scratchwork I did
+You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="org0292fb7">
+<details id="org0d08b78">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1510,7 +1501,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orgf8fa33b">
+<details id="org6a117ed">
 <p>
 
 </p>
@@ -1657,46 +1648,50 @@ Rest of this chapter covers exponents and their properties.
 <h4 id="4.3%20Absolute%20value%20and%20exponentiation--Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-4.3%20Absolute%20value%20and%20exponentiation--Exercises">
 <p>
-4.3.5 Prove that \(2^n \ge n\) for all positive integers n using induction. 
+Exercise 4.3.5 Prove that \(2^n \ge n\) for all positive integers n using induction. 
 </p>
 
 <ul class="org-ul">
 <li>base case: n = 0
 <ul class="org-ul">
-<li>2<sup>0</sup> = 1 and since n = 0, 1 &gt; 0.</li>
+<li>2<sup>0</sup> = 1 and since n = 0, 1 &gt; 0. 
+<ul class="org-ul">
 <li>but Tao specifically wrote 'positive integers' so base case must be 1</li>
+</ul></li>
 <li>2<sup>1</sup> = 2 and since n = 1, 2 &gt; 1</li>
 </ul></li>
-<li>inductive step:
+<li>assumption:  \(2^n \ge n\) for all positive integers n</li>
+<li>successor: \(2^{n + 1} \ge n + 1\)
 <ul class="org-ul">
-<li>\(2^{n + 1} \ge n + 1\)</li>
-<li>left side: \(2^{n + 1}\) is 2<sup>n</sup> * 2 by def 4.3.9</li>
-<li>22<sup>n</sup> is also 2<sup>n</sup> + 2<sup>n</sup> by prop 4.3.10 (a)</li>
-<li>so now we have 2<sup>n</sup> + 2<sup>n</sup> \(\ge\) n + 1</li>
+<li>left side:</li>
+<li>\(2^{n + 1}\) is 2<sup>n</sup>*2 by def 4.3.9</li>
+<li>2*2<sup>n</sup> is also 2<sup>n</sup> + 2<sup>n</sup> by prop 4.3.10 (a)</li>
+<li>now we have 2<sup>n</sup> + 2<sup>n</sup> \(\ge\) n + 1</li>
 </ul></li>
-<li>assumption:
+<li>since 2<sup>n</sup> \(\ge\) n (pointing to our assumption), then 2<sup>n</sup> + 2<sup>n</sup> \(\ge\) n + n  
 <ul class="org-ul">
-<li>since 2<sup>n</sup> \(\ge\) n, then 2<sup>n</sup> + 2<sup>n</sup> \(\ge\) n + n</li>
-<li>since we are working in only positive integers, we know n + n is \(\ge\) n + 1</li>
+<li>n is only positive, so n + n is \(\ge\) n + 1</li>
 <li>2<sup>n</sup> + 2<sup>n</sup> \(\ge\) n + n \(\ge\) n + 1
 <ul class="org-ul">
-<li>and now here we have standard transitivity proving \(2^{n + 1} \ge n + 1\)</li>
+<li>here we have standard transitivity proving \(2^{n + 1} \ge n + 1\)</li>
 </ul></li>
 </ul></li>
 </ul>
 
 <p>
-This of course falls apart if Tao changed it to 'for all integers' instead of positive integers, or if we allowed our assumption 2<sup>n</sup> &gt; n to have n = 0, then we could not assume n + n is \(\ge\) n + 1. The rest of the induction exercises are similar, like proving Prop 4.3.10 so inducting on n: \(a^{n + 1}a^m\) = \(a^{n + 1 + m}\) the left hand side becomes \(a^n \cdot a \cdot a^m\) which is also the definition of \(a^{m+1}\) so can be rewritten \(a^na^{m+1}\) or \((a^na^m)a\) so in form of the hypotenuse, we change it to \((a^{n+m})a\) which is of course \(a^{n+1+m}\) and now both sides are equal. I skipped the absolute value exercises. 
+This of course falls apart if Tao changed it to 'for all integers' instead of positive integers, or if we allowed our assumption 2<sup>n</sup> &gt; n to have n = 0, then we could not assume n + n is \(\ge\) n + 1. Search around for proving inequalities on YouTube there are dozens of demonstrations of various strategies.  
 </p>
 </div>
 </div>
 </div>
 
+
+
 <div id="outline-container-4.4%20Gaps%20in%20the%20rational%20numbers" class="outline-3">
 <h3 id="4.4%20Gaps%20in%20the%20rational%20numbers">4.4 Gaps in the rational numbers</h3>
 <div class="outline-text-3" id="text-4.4%20Gaps%20in%20the%20rational%20numbers">
 <p>
-The idea here is that certain things don't exist in the rational numbers object like the square root of 2, so there are 'gaps' where the square root of 2 should be. 
+The idea here is that certain things don't exist in the rational numbers object like the square root of 2, so there are gaps where the square root of 2 should be. 
 </p>
 
 <p>
@@ -1734,7 +1729,7 @@ The <a href="https://en.wikibooks.org/wiki/Undergraduate_Mathematics/Proof_by_in
 <h3 id="Lectures">Lectures</h3>
 <div class="outline-text-3" id="text-Lectures">
 <p>
-Some optional mostly 10 minute lectures on algebra basics, such as how Pascal's array/Khayyam triangle/Yang Hui's triangle encodes the binomial theorem, this series sets up understanding algebra and later calculus and combinatorics.
+Some optional mostly 10 minute lectures on algebra basics, such as how Pascal's array/Khayyam triangle/Yang Hui's triangle encodes the binomial theorem.
 </p>
 
 <ul class="org-ul">
@@ -2020,7 +2015,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="orgd7617ab">
+<details id="orge6dde75">
 <p>
 
 </p>
@@ -2133,7 +2128,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="org9a1b785">
+<details id="org1e27c48">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2266,7 +2261,7 @@ An excellent lecture why we even need these complex limit and real definitions i
 <h3 id="5.1%20Cauchy%20sequences">5.1 Cauchy sequences</h3>
 <div class="outline-text-3" id="text-5.1%20Cauchy%20sequences">
 <p>
-This is just reading to see the construction of real number objects. If you don't get it, doesn't matter as every course you end up doing ends up hand waving this definition away but Tao is quite good at explaining complex math objects, so you probably will get an intuitive sense how these continuous objects are constructed.      
+Wildberger has good lecture introducing what a sequence is <a href="https://youtu.be/J-Gow6SfG2c">here</a>.  
 </p>
 
 <p>
@@ -2275,10 +2270,6 @@ Def 5.1.1 the notation outside the bracket is n = starting index, and the infini
 
 <p>
 Example 5.1.2 reminds us of Def 4.3.4 d(x,y) = |x - y| \(\le \epsilon\) so if x and y are 2, then 2 - 2 = 0 and every single epsilon is valid since x - y will always be less than epsilon.
-</p>
-
-<p>
-If you don't get what a sequence is it's understandable since these things are not really defined as per Wildberger because these are abstract objects mathematicians don't want to pin down so they can continue to use them abstractly. Take Tao's first example from 5.1.2 the sequence: 1.4, 1.41, 1.414, 1.4142.. and put all of those in an array. Index the array so you have 1.4<sub>1</sub> 1.41<sub>2</sub> 1.414<sub>3</sub> 1.4142<sub>4</sub>
 </p>
 
 <p>
@@ -2318,7 +2309,7 @@ Exercise 5.1.1 since we declared it a Cauchy sequence, you can point to the defi
 </p>
 
 <p>
-This sort of made sense, there is a lecture <a href="https://youtu.be/QNecfhHa_qY">here</a> if you're interested more about the proofs used in this chapter.
+There is a lecture <a href="https://youtu.be/QNecfhHa_qY">here</a> if you're interested more about the proofs used in this chapter.
 </p>
 </div>
 </div>
@@ -2396,7 +2387,7 @@ Example 5.5.7 the empty set doesn't have a least upper bound because of prior de
 </p>
 
 <p>
-The proof for Theorem 5.5.9 is huge requiring going back to look at the Archimedean property again and some exercises. Wildberger has broken down this <a href="https://youtu.be/ncIgoIBLPqQ?t=960">proof</a> somewhat showing the gist of what is going on but the last part of the proof that the upper bound S is less than or equal to every upper bound of E is easy to follow.  
+The proof for Theorem 5.5.9 is huge requiring going back to look at the Archimedean property again and some exercises. Wildberger has broken down this <a href="https://youtu.be/ncIgoIBLPqQ?t=960">proof</a> showing the gist of what is going on but the last part of the proof that the upper bound S is less than or equal to every upper bound of E is easy to follow.  
 </p>
 
 <p>
@@ -2652,7 +2643,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="org465e12e">
+<details id="orgbed20d6">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2742,6 +2733,10 @@ Proposition 6.7.3 we use the limit laws to prove the usual exponent laws for rat
 <h3 id="7.1%20Finite%20series">7.1 Finite series</h3>
 <div class="outline-text-3" id="text-7.1%20Finite%20series">
 <p>
+Wildberger has a lecture on <a href="https://youtu.be/rQzfHbkltkY">summation</a> of arithmetic and geometric series to go with this chapter.    
+</p>
+
+<p>
 Tao has abstracted away the actual values of whatever sequence and we are just manipulating indices here. Make an example series for yourself: a<sub>i</sub> = 1<sub>1</sub>, 3<sub>2</sub>, 5<sub>3</sub>. \(\sum_{i=2}^3 a_i\) means a<sub>2</sub> + a<sub>3</sub> or 3<sub>2</sub> + 5<sub>3</sub> as per Definition 7.1.1. 
 </p>
 
@@ -2750,11 +2745,7 @@ In Lemma 7.1.4 the triangle inequality proof is <a href="https://proofwiki.org/w
 </p>
 
 <p>
-Check the errata for this chapter, in my version (third edition (hardback)) there's a few problems. 
-</p>
-
-<p>
-Remark 7.1.9 the proof is straight forward when you flip back to Lemma 7.1.4 and note that because he already assumed x to be g(n + 1) he could not also assign x to h(n + 1), which is why he needed to introduce h(j).   
+Check the errata for this chapter, in my version (third edition (hardback)) there's a few problems. Remark 7.1.9 the proof is straight forward when you flip back to Lemma 7.1.4 and note that because he already assumed x to be g(n + 1) he could not also assign x to h(n + 1), which is why he needed to introduce h(j).   
 </p>
 
 <p>
