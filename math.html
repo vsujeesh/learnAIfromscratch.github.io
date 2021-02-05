@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-05 Fri 10:37 -->
+<!-- 2021-02-05 Fri 10:51 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -757,7 +757,7 @@ Wildberger proves the distributive and commutative laws using fractions while st
 <h2 id="Proofs">Proofs</h2>
 <div class="outline-text-2" id="text-Proofs">
 <p>
-Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for an honors analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, and in the preface he mentions we will need some lectures to go with the material to help us understand it. 
+Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for an honors analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, and in the preface he mentions we will need some lectures to go with the material to help us understand it. My goal here is just to provide some scratchwork so you can have extra intuition into what is going when Tao abstractly moves things around. 
 </p>
 </div>
 
@@ -911,7 +911,7 @@ We prove the successor: n++ + (m++) = ((n++) + m)++. Looking at the left side, r
 <h4 id="Third%20proof">Third proof</h4>
 <div class="outline-text-4" id="text-Third%20proof">
 <p>
-Proposition 2.2.4 (Addition is commutative) the base case is point-to definition of addition and Lemma 2.2.2. We use the definition of addition, and lemma 2.2.2 to rewrite the successor of n to be (n + m)++ = (m + n)++ and now it is in the form of the inductive hypothesis: (hypothesis form)successor = (hypothesis form)successor so we can use our assumption that n + m = m + n to exchange n + m to m + n.  
+Proposition 2.2.4 (Addition is commutative) the base case is point-to definition of addition and Lemma 2.2.2. We use the definition of addition, and lemma 2.2.2 to rewrite the successor of n to be (n + m)++ = (m + n)++ and now it is in the form of the inductive hypothesis: (hypothesis form)successor = (hypothesis form)successor so we can use our assumption that n + m = m + n to commute m and n around.
 </p>
 </div>
 </div>
@@ -1036,7 +1036,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org175a42a">
+<details id="org59d5db4">
 <p>
 
 </p>
@@ -1244,7 +1244,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="org9c43510">
+<details id="orga68586f">
 <p>
 
 </p>
@@ -1417,7 +1417,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="orgfd6da7b">
+<details id="orge4ac628">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1519,7 +1519,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orge845b7b">
+<details id="orgfb11a71">
 <p>
 
 </p>
@@ -2033,7 +2033,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="orgd80b9af">
+<details id="org6041245">
 <p>
 
 </p>
@@ -2146,7 +2146,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="orgdf06590">
+<details id="org34372bd">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2661,7 +2661,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="orga3809eb">
+<details id="orgd9d2753">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2952,7 +2952,7 @@ There was a pretty good breakdown of how f'(x<sub>0</sub>) = -1/(x<sub>0</sub>)<
 </p>
 
 <ul class="org-ul">
-<li>0 \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
+<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
 <li>this is:
 <ul class="org-ul">
 <li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot \frac{(x - x_0)}{1}\)</li>
