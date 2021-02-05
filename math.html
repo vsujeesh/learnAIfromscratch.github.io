@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-04 Thu 11:10 -->
+<!-- 2021-02-05 Fri 09:46 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -272,6 +272,7 @@
 <li><a href="#Proofs">Proofs</a>
 <ul>
 <li><a href="#Materials%20needed">Materials needed</a></li>
+<li><a href="#Nature%20of%20mathematical%20logic">Nature of mathematical logic</a></li>
 <li><a href="#2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</a></li>
 <li><a href="#2.2%20Addition">2.2 Addition</a>
 <ul>
@@ -769,6 +770,23 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 </div>
 </div>
 
+<div id="outline-container-Nature%20of%20mathematical%20logic" class="outline-3">
+<h3 id="Nature%20of%20mathematical%20logic">Nature of mathematical logic</h3>
+<div class="outline-text-3" id="text-Nature%20of%20mathematical%20logic">
+<p>
+In math we use we define new concepts by deriving them from existing concepts. Some of these laws can't be proved, as there are no earlier laws from which we can derive their proofs from and they are called axioms. Axioms are supposed to be self-evident and simple enough that they can be fully understood without a definition such as Euclid's <a href="https://en.wikipedia.org/wiki/Parallel_postulate">parallel postulate</a> that it is obvious there exists a concept of parallelism. The remaining laws are called theorems which are proved from the axioms. This is known as an axiom system of logic, where if you discover new concepts about the axioms they automatically make all the existing derived theorems true for these new concepts so mathematicians tend to construct their axiom systems so they are true for the largest number of concepts. 
+</p>
+
+<p>
+The way that theorems are derived from axioms is provided by the <i>rules of inference</i> some of which Tao will teach us in his book <i>Analysis I</i> we are about to read. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the logical rules of inference and propositions and the basics of proof theory. If you want to know exactly how a proof is constructed from hypothesis to judgement (conclusion) you should read this as you do Tao's book, as it won't make any sense until you've written a few basic proofs yourself, which we will proceed to do right now.
+</p>
+
+<p>
+If there is time I will add a <a href="http://symbolaris.com/course/constlog20-schedule.html">constructive logic</a> course so we can use a proof assistant like <a href="https://cs.uwaterloo.ca/~plragde/842/handouts/notes.html">Agda</a> to learn mathematical logic by actually writing software and running it then you will really understand what is going on turning proofs into programs.
+</p>
+</div>
+</div>
+
 <div id="outline-container-2.1%20The%20Peano%20Axioms" class="outline-3">
 <h3 id="2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</h3>
 <div class="outline-text-3" id="text-2.1%20The%20Peano%20Axioms">
@@ -791,7 +809,7 @@ Start with <i>Analysis I</i> chapter 2. We begin again with basic counting but r
 </ul>
 
 <p>
-Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest definition of proof by induction I've seen. Note the example where no natural number can be 'a half number', because of the increment step n++. The base case of 0 (as per Axiom 2.5, and Axiom 2.1) fails if we are using 'half numbers' instead of natural numbers because if zero is a natural number, and any n++ is another natural number, the only next successive number is 1 it can't be 0.5 or -3 or 3/4. The way you should view these axioms about the natural numbers is:
+Remark 2.1.10 the example where no natural number can be 'a half number', because of the increment step n++. The base case of 0 (as per Axiom 2.5, and Axiom 2.1) fails if we are using 'half numbers' instead of natural numbers because if zero is a natural number, and any n++ is another natural number, the only next successive number is 1 it can't be 0.5 or -3 or 3/4. The way you should view these axioms about the natural numbers is:
 </p>
 
 <ul class="org-ul">
@@ -801,11 +819,11 @@ Remark 2.1.10 and the template in Proposition 2.1.11 is probably the clearest de
 </ul>
 
 <p>
-This will make much more sense when you try this yourself in the next chapter. P(n) is not a function it represents properties or statements.  
+P(n) is not a function it represents properties. Think about how the natural numbers are defined with successors, those all inherit properties of previous proven theorems such as P(n): "any natural number n plus 0 equals n". If you prove that for 0, n and the next successor n+1 that these all have property P(n), then because of the way the natural numbers are defined the next successor will inherit this property too since they are derived in a chain from P(0) as per Axiom 2.1.     
 </p>
 
 <p>
-Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k.  
+Some optional reading here about induction <a href="http://www.cs.cmu.edu/~arielpro/15251f17/notes/induction-pitfalls.pdf">pitfalls</a> from CMU's 15-251 class notes which at this stage is too advanced for us as we haven't done enough proofs yet but worth reading anyway so you keep it around to refer to as we go. The first mistake is confusing the types: a statement is not a value, you can't add one to it. Always think about the type of each variable in a problem. The second mistake is assuming the inductive step k++ and working backwards to prove k you create a logical chain from 0 to the next number to it's successor not the other way around.   
 </p>
 </div>
 </div>
@@ -848,9 +866,9 @@ Let's go through his proof in Lemma 2.2.2. Notice first how he is using the exac
 Induction proofs are a logical chain:
 </p>
 <ul class="org-ul">
-<li><i>P(base)</i> This first link is true, here's the proof</li>
-<li><i>P(n)</i> Assume the second link is also true</li>
-<li><i>P(n + 1)</i> Prove successor is true, with ability to use the previous 2 like they are already established definitions.</li>
+<li><i>P(base)</i> First link contains the property and is true, you prove this</li>
+<li><i>P(n)</i> Assume this second link contains the property, you do not prove this because you assumed it's already true</li>
+<li><i>P(n + 1)</i> Prove successor is true, with ability to use the previous 2 like they are already established definitions because we are down the chain where the first 2 are already established in the 'scope' of our proof.</li>
 </ul>
 
 <p>
@@ -1018,7 +1036,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org14d3694">
+<details id="org2a56640">
 <p>
 
 </p>
@@ -1226,7 +1244,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orge9fd2fd">
+<details id="orge643ea9">
 <p>
 
 </p>
@@ -1399,7 +1417,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="orgc0c5e0b">
+<details id="orgc195a87">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1501,7 +1519,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="org8418817">
+<details id="orgc57a255">
 <p>
 
 </p>
@@ -2015,7 +2033,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="org81df3b3">
+<details id="orgb669061">
 <p>
 
 </p>
@@ -2128,7 +2146,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="org85a4109">
+<details id="org5b88c67">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2643,7 +2661,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="orgd1091b0">
+<details id="orgce22c3c">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2934,14 +2952,14 @@ There was a pretty good breakdown of how f'(x<sub>0</sub>) = -1/(x<sub>0</sub>)<
 </p>
 
 <ul class="org-ul">
-<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
+<li>0 \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
 <li>this is:
 <ul class="org-ul">
-<li>- 0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot \frac{(x - x_0)}{1}\)</li>
+<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot \frac{(x - x_0)}{1}\)</li>
 </ul></li>
 <li>standard wildberger algebra:
 <ul class="org-ul">
-<li>- 0 - \(\frac{1}{x_0}\) = \(\frac{-x + x_0}{x_0^2}\)</li>
+<li>0 - \(\frac{1}{x_0}\) = \(\frac{-x + x_0}{x_0^2}\)</li>
 </ul></li>
 <li>add \(\frac{1}{x_0}\) to both sides, cancelling from left side:
 <ul class="org-ul">
