@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-05 Fri 09:46 -->
+<!-- 2021-02-05 Fri 10:37 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -774,11 +774,11 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 <h3 id="Nature%20of%20mathematical%20logic">Nature of mathematical logic</h3>
 <div class="outline-text-3" id="text-Nature%20of%20mathematical%20logic">
 <p>
-In math we use we define new concepts by deriving them from existing concepts. Some of these laws can't be proved, as there are no earlier laws from which we can derive their proofs from and they are called axioms. Axioms are supposed to be self-evident and simple enough that they can be fully understood without a definition such as Euclid's <a href="https://en.wikipedia.org/wiki/Parallel_postulate">parallel postulate</a> that it is obvious there exists a concept of parallelism. The remaining laws are called theorems which are proved from the axioms. This is known as an axiom system of logic, where if you discover new concepts about the axioms they automatically make all the existing derived theorems true for these new concepts so mathematicians tend to construct their axiom systems so they are true for the largest number of concepts. 
+In math we define new concepts by deriving them from existing concepts. Some of these laws can't be proved, as there are no earlier laws from which we can derive their proofs from and they are called axioms. Axioms are supposed to be self-evident and simple enough that they can be fully understood without a definition such as Euclid's <a href="https://en.wikipedia.org/wiki/Parallel_postulate">parallel postulate</a> that it is obvious there exists a concept of parallelism. The remaining laws are called theorems which are proved from the axioms. This is known as an axiom system of logic, where if you discover new concepts about the axioms they automatically make all the existing derived theorems true for these new concepts so mathematicians tend to construct their axiom systems so they are true for the largest number of concepts. 
 </p>
 
 <p>
-The way that theorems are derived from axioms is provided by the <i>rules of inference</i> some of which Tao will teach us in his book <i>Analysis I</i> we are about to read. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the logical rules of inference and propositions and the basics of proof theory. If you want to know exactly how a proof is constructed from hypothesis to judgement (conclusion) you should read this as you do Tao's book, as it won't make any sense until you've written a few basic proofs yourself, which we will proceed to do right now.
+The way that theorems are derived from axioms is provided by the <i>rules of inference</i> some of which Tao will teach us in his book <i>Analysis I</i> we are about to read. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the meaning of logical constants and the justifications of the logical laws/rules of inference, and their history such as hypothesis a Greek word translated into Latin as supposition, meaning an assumption. If you want to know exactly how a proof is constructed you should read this as you do Tao's book. 
 </p>
 
 <p>
@@ -876,15 +876,15 @@ How does the base case for n + 0 = n become 0 + 0 = 0, from the previous definit
 </p>
 
 <p>
-Suppose that n + 0 = n (assumption). Then the successor (n++) + 0 = n++. Pointing to the definition of addition: (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal forms so interchangable.
+Suppose that n + 0 = n (assumption). Then the successor (n++) + 0 = n++. Pointing to the definition of addition where it defines (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal so interchangable.
 </p>
 
 <p>
-Finally we are left with (n + 0)++ = n++ and (n + 0) the value in brackets is in the form of P(n) the inductive hypotenuse or assumption, since we have assumed n + 0 = n, we can again substitute/interchange/swap n + 0 for n and get (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. 
+Finally we are left with (n + 0)++ = n++. The value in the brackets (n + 0) is in the form of P(n) the inductive hypothesis or assumption, since we have assumed n + 0 = n is true, we can again substitute/interchange/swap n + 0 for n and arrive at the proof: (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. Property P(n) exists in base case 0, plus 1, plus another, so this property holds for all natural numbers derived from the Peano axioms. 
 </p>
 
 <p>
-The most important takeway: <i>no arithmetic was done here at all</i>. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. You are a logician now pattern matching forms and moving them around. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
+The most important takeaway: <i>no arithmetic was done here at all</i>. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. You are a logician now pattern matching forms and moving them around. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
 </p>
 </div>
 </div>
@@ -894,7 +894,7 @@ The most important takeway: <i>no arithmetic was done here at all</i>. We pointe
 <h4 id="Second%20proof">Second proof</h4>
 <div class="outline-text-4" id="text-Second%20proof">
 <p>
-Here we are proving n + (m++) = (n + m)++, inducting on n. Since we are building a logical chain of deductions we start at the first link, which is 0 and induct on variable n meaning we replace all occurences with n with 0 to get the form: 0 + (m++) = (0 + m)++. Looking at the right side, get out your scissors and cut apart the definition of addition and replace (0 + m)++ with (m)++. So now we have 0 + (m++) = m++.  Since we know from the definition of addition that 0 + (value) = (value), you can replace 0 + (m++) with m++ and now the base case is equal on both sides: m++ = m++ 
+Lemma 2.2.3 Here we are proving n + (m++) = (n + m)++, inducting on n. Since we are building a logical chain of deductions we start at the first link, which is 0 and induct on variable n meaning we replace n with 0 to get the form: 0 + (m++) = (0 + m)++. Looking at the right side, get out your scissors and cut apart the definition of addition and replace (0 + m)++ with (m)++. So now we have 0 + (m++) = m++.  Since we know from the definition of addition that 0 + (value) = (value), you can replace 0 + (m++) with m++ and now the base case is equal on both sides: m++ = m++ 
 </p>
 
 <p>
@@ -902,7 +902,7 @@ Next, we assume  n + (m++) = (n + m)++.
 </p>
 
 <p>
-Now the successor: n++ + (m++) = ((n++) + m)++. Looking at the left side, take scissors to definition of addition again, and cut out/replace (value) + (successor value) with (value + value)successor so n++ + (m++) becomes ((n++) + m)++, and now both sides are equal. Tao writes his proof a different way for instructive reasons you should still follow but this works too. In his proof he used the inductive hypothesis again, once he substituted around it became the form (n + (m++)++) so he could exchange that for ((n + m)++)++ because look at the brackets, it's ((hypothesis)otherstuff) you can manipulate what's inside the bracket, they are the same form. 
+We prove the successor: n++ + (m++) = ((n++) + m)++. Looking at the left side, refer to the definition of division and notice (n++) + m = (n + m)++ or (successor value) + (something) = (value + something)successor, the left hand side is now (n + (m++))++. This form is similar to the hypothesis of n + (m++) = (n + m)++ so substitute it in the left side and now we have ((n + m)++)++.  The right side follows the same logic as the left. ((n++) + m)++ can be seen abstractly as (value)++ or (successor + value)++, and the second is the definition of addition again so ((value + value)successor)++ 
 </p>
 </div>
 </div>
@@ -1036,7 +1036,7 @@ Definition 2.2.11 n is greater or equal to m if n = m + some other natural numbe
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org2a56640">
+<details id="org175a42a">
 <p>
 
 </p>
@@ -1244,7 +1244,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orge643ea9">
+<details id="org9c43510">
 <p>
 
 </p>
@@ -1417,7 +1417,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="orgc195a87">
+<details id="orgfd6da7b">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1519,7 +1519,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orgc57a255">
+<details id="orge845b7b">
 <p>
 
 </p>
@@ -2033,7 +2033,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="orgb669061">
+<details id="orgd80b9af">
 <p>
 
 </p>
@@ -2146,7 +2146,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="org5b88c67">
+<details id="orgdf06590">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -2661,7 +2661,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="orgce22c3c">
+<details id="orga3809eb">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
