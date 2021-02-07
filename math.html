@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-06 Sat 10:30 -->
+<!-- 2021-02-07 Sun 12:41 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -272,7 +272,11 @@
 <li><a href="#Proofs">Proofs</a>
 <ul>
 <li><a href="#Materials%20needed">Materials needed</a></li>
-<li><a href="#Nature%20of%20mathematical%20logic">Nature of mathematical logic</a></li>
+<li><a href="#Nature%20of%20mathematical%20logic">Nature of mathematical logic</a>
+<ul>
+<li><a href="#Lectures%20on%20logic">Lectures on logic</a></li>
+</ul>
+</li>
 <li><a href="#2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</a></li>
 <li><a href="#2.2%20Addition">2.2 Addition</a>
 <ul>
@@ -293,6 +297,34 @@
 <li><a href="#2.3%20Multiplication--Exercises">Exercises</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#Set%20Theory">Set Theory</a>
+<ul>
+<li><a href="#History%20of%20set%20theory">History of set theory</a></li>
+<li><a href="#Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">Appendix A: the basics of mathematical logic</a></li>
+<li><a href="#Lectures%20on%20deduction">Lectures on deduction</a>
+<ul>
+<li><a href="#Quiz%3A%20Logic">Quiz: Logic</a></li>
+</ul>
+</li>
+<li><a href="#3.1%20Fundamentals%20%28Set%20Theory%29">3.1 Fundamentals (Set Theory)</a>
+<ul>
+<li><a href="#Quiz%20Sets">Quiz Sets</a></li>
+<li><a href="#3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</a></li>
+</ul>
+</li>
+<li><a href="#3.2%20Russell%27s%20Paradox">3.2 Russell's Paradox</a></li>
+<li><a href="#3.3%20Functions">3.3 Functions</a>
+<ul>
+<li><a href="#Quiz%20Functions">Quiz Functions</a></li>
+<li><a href="#3.3%20Functions--Exercises">Exercises</a></li>
+</ul>
+</li>
+<li><a href="#Proof%20strategies">Proof strategies</a></li>
+<li><a href="#3.4%20Images%20and%20inverse%20images">3.4 Images and inverse images</a></li>
+<li><a href="#3.5%20Cartesian%20products">3.5 Cartesian products</a></li>
+<li><a href="#3.6%20Cardinality%20of%20sets">3.6 Cardinality of sets</a></li>
 </ul>
 </li>
 <li><a href="#Integers%20and%20rational%20numbers">Integers and rational numbers</a>
@@ -339,33 +371,6 @@
 <li><a href="#2x2%20matrices%20I">2x2 matrices I</a></li>
 <li><a href="#2x2%20matrices%20II">2x2 matrices II</a></li>
 <li><a href="#Inverting%203x3%20Matrices">Inverting 3x3 Matrices</a></li>
-</ul>
-</li>
-<li><a href="#Set%20Theory">Set Theory</a>
-<ul>
-<li><a href="#History%20of%20set%20theory">History of set theory</a></li>
-<li><a href="#Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">Appendix A: the basics of mathematical logic</a>
-<ul>
-<li><a href="#Quiz%3A%20Logic">Quiz: Logic</a></li>
-</ul>
-</li>
-<li><a href="#3.1%20Fundamentals%20%28Set%20Theory%29">3.1 Fundamentals (Set Theory)</a>
-<ul>
-<li><a href="#Quiz%20Sets">Quiz Sets</a></li>
-<li><a href="#3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</a></li>
-</ul>
-</li>
-<li><a href="#3.2%20Russell%27s%20Paradox">3.2 Russell's Paradox</a></li>
-<li><a href="#3.3%20Functions">3.3 Functions</a>
-<ul>
-<li><a href="#Quiz%20Functions">Quiz Functions</a></li>
-<li><a href="#3.3%20Functions--Exercises">Exercises</a></li>
-</ul>
-</li>
-<li><a href="#Proof%20strategies">Proof strategies</a></li>
-<li><a href="#3.4%20Images%20and%20inverse%20images">3.4 Images and inverse images</a></li>
-<li><a href="#3.5%20Cartesian%20products">3.5 Cartesian products</a></li>
-<li><a href="#3.6%20Cardinality%20of%20sets">3.6 Cardinality of sets</a></li>
 </ul>
 </li>
 <li><a href="#Real%20Numbers">Real Numbers</a>
@@ -774,18 +779,92 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 <h3 id="Nature%20of%20mathematical%20logic">Nature of mathematical logic</h3>
 <div class="outline-text-3" id="text-Nature%20of%20mathematical%20logic">
 <p>
-In math we define new concepts by deriving them from existing concepts. Some of these laws can't be proved, as there are no earlier laws from which we can derive their proofs from and they are called axioms. Axioms are supposed to be self-evident and simple enough that they can be fully understood without a definition such as Euclid's <a href="https://en.wikipedia.org/wiki/Parallel_postulate">parallel postulate</a> that it is obvious there exists a concept of parallelism. The remaining laws are called theorems which are proved from the axioms. This is known as an axiom system of logic, where if you discover new concepts about the axioms they automatically make all the existing derived theorems true for these new concepts so mathematicians tend to construct their axiom systems so they are true for the largest number of concepts. 
+In math we define new concepts by deriving them from existing concepts. Some of these laws can't be proved, as there are no earlier laws from which we can derive their proofs from and they are called axioms. Axioms are supposed to be self-evident and simple enough that they can be fully understood without a definition such as Euclid's <a href="https://en.wikipedia.org/wiki/Parallel_postulate">parallel postulate</a> that it is obvious there exists a concept of parallelism. The remaining laws are called theorems which are deduced from the axioms. This is known as an axiom system of logic, where if you discover new concepts about the axioms they automatically make all the existing derived theorems true for these new concepts so mathematicians tend to construct their axiom systems using reduction to make a single system so they are true for the largest number of concepts. 
 </p>
 
 <p>
-The way that theorems are derived from axioms is provided by the <i>rules of inference</i> some of which Tao will teach us in his book <i>Analysis I</i> we are about to read. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the meaning of logical constants and the justifications of the logical laws/rules of inference, and their history such as hypothesis a Greek word translated into Latin as supposition, meaning an assumption. If you want to know exactly how a proof is constructed you should read this as you do Tao's book. 
+The way that theorems are derived from axioms is by deduction: if P then Q, assume P and prove Q which is part of the <i>rules of inference</i> some of which Tao will teach us in his book <i>Analysis I</i> we are about to read. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the meaning of logical constants and the justifications of the rules of inference, and their history such as hypothesis a Greek word translated into Latin as supposition, meaning an assumption. If you want to know exactly how a proof is constructed you should read this as you do Tao's book noting the elimination rules. In math the contrapositive of statements is often used for proofs such as 'if P then Q so not Q then not P' as these are logically equivalent statements. 
 </p>
 
 <p>
-If there is time I will add a <a href="http://symbolaris.com/course/constlog20-schedule.html">constructive logic</a> course so we can use a proof assistant like <a href="https://cs.uwaterloo.ca/~plragde/842/handouts/notes.html">Agda</a> to learn mathematical logic by actually writing software and running it then you will really understand what is going on turning proofs into programs.
+Variables are used to express general laws, for example how do you express that every natural number is equal to itself ie: 2 = 2 and 3 = 3. You introduce a free variable x = x and it's meaning remains fixed inside this context. A free variable is something that isn't bound, there are other variables in math that are bound such as a variable for an index: i = 1 in summation notation or x -&gt; 0 in limit notation. You cannot then substitute in some other value to i or x in that context. Often the prime symbol is used to denote two different variables with the same letter such as b and b' called b and b prime. We won't use many quantifiers but in other texts they exist, such as 'for all' \(\forall{x}(x = 0)\) means using the natural numbers as context, for all natural numbers x, x = 0 which is of course incorrect stating that every single natural number is 0. For individual quantifiers we use 'there exists' \(\exists{x}(x = 0)\) which translates to 'there exists an individual natural number x such that x = 0'. Note that in the for all and individual exists declarations that x is a bound variable whereas x in the the expression x = x + 0 is a free variable, any value can be used in that context. The operation of replacing all occurences of one variable for a value is known as substitution such as a + 0 = a and substitute in 1: 1 + 0 = 1. There is also a similar substitution rule, where equivalent terms or formulas can be substituted for one another. If I say that m = x, then produce the expression m + n = z you can use the substitution rule to replace m with x as they are equivalent: x + n = z. You will see later in Tao's book that this becomes very abstract where elaborate theories that have the same derived theorems, or highly complex expressions that can be determined to be the same as other highly complex expressions, then with the substitution rule they can be switched for each other.  
+</p>
+
+<p>
+Math has data structures just like programming languages. There are sets like {3, 1, 5} in which order does not matter, and lists like (a<sub>1</sub>, a<sub>2</sub>, &#x2026;., a<sub>n</sub>) which are ordered data. These are often interpreted as vectors or n-tuples like (x, y) coordinates. A list (x, x, y) is different from (x, y) as order matters but set {x, x, y} is the same as {x, y}. Math and computer science overlap with undecidability, languages and their semantics, lambda calculus alternative syntax for math functions, and of course computation itself is modelled with math such as Turing machines. 
+</p>
+
+<p>
+A lot of math is <a href="https://youtu.be/k5t4yV_vxA8">object-oriented</a> so theories describe classes of structures and the instance of those structures models the theory/axioms. 
 </p>
 </div>
+
+<div id="outline-container-Lectures%20on%20logic" class="outline-4">
+<h4 id="Lectures%20on%20logic">Lectures on logic</h4>
+<div class="outline-text-4" id="text-Lectures%20on%20logic">
+<ul class="org-ul">
+<li><a href="https://youtu.be/1KPdNm_5Fkk">Logic</a> - Lecture from 15-251 CMU</li>
+</ul>
+
+<p>
+Around 32:00 is the model for 'pretty much all mathematical reasoning' and logical quantifiers like 'for all' or 'there exists' and propositional connectives such as 'implies' or 'iff' are introduced. Most of this is in Tao's appendix.
+</p>
+
+<p>
+You only need to know these connectives:
+</p>
+<ul class="org-ul">
+<li>AND \(\land\) (conjunction)</li>
+<li>OR \(\lor\) (disjunction)</li>
+<li>NOT \(\neg\)</li>
+<li>Implies \(\implies\) is only false when A is true and B is false</li>
+<li>If and only if \(\iff\)</li>
+</ul>
+
+<p>
+These connectives symbols can of course be used to define each other:
+</p>
+<ul class="org-ul">
+<li>A \(\implies\) B is \(\neg\) A \(\lor\) B
+<ul class="org-ul">
+<li>implication is only true when either A is false OR B is true</li>
+</ul></li>
+<li>Iff is (A \(\implies\) B) \(\land\) (B \(\implies\) A)</li>
+</ul>
+
+<p>
+Implication seems confusing at first, it's modern language use relating to casuality is different from the logician's use which is explained <a href="http://www.math.niu.edu/~richard/Math101/implies.pdf">here</a> and those Per Martin-Lof <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> above gives a complete justification of the logical rules of implication.
+</p>
+
+<p>
+Some more optional lectures on the history of logic from Aristotle to the present state:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/UcjKKcvv7Rw">Aristotle and deduction</a> - Brief history of logic MF 251
+<ul class="org-ul">
+<li>Origins of modern logic</li>
+</ul></li>
+<li><a href="https://youtu.be/-8IVhNrwNdg">Stoics and other thinkers</a> - Brief history of logic MF 252
+<ul class="org-ul">
+<li>Implication, disjunction and conjunction is discussed here and highly relevant to all further chapters</li>
+</ul></li>
+<li><a href="https://youtu.be/q-o3qB2i80U">Islamic/Medieval logic</a> - Brief history of logic MF 253
+<ul class="org-ul">
+<li>Modal logic origins</li>
+</ul></li>
+<li><a href="https://youtu.be/70PzhlfAUi4">Leibniz to Boole</a> - Brief history of logic MF 254
+<ul class="org-ul">
+<li>From deduction to induction</li>
+<li>Notation for relations</li>
+<li>Boole's book Analysis of Logic</li>
+<li>De Morgan's laws</li>
+</ul></li>
+</ul>
 </div>
+</div>
+</div>
+
 
 <div id="outline-container-2.1%20The%20Peano%20Axioms" class="outline-3">
 <h3 id="2.1%20The%20Peano%20Axioms">2.1 The Peano Axioms</h3>
@@ -827,7 +906,7 @@ This is called an inductive definition: clause 1 is an application, clause 2 a s
 </p>
 
 <p>
-P(n) is not a function it represents "n has the property P". Think about how the natural numbers are generated with successors, those generated natural numbers all inherit properties of previous generated numbers such as P(n): "any natural number n + 0 = n". If you prove that for 0, n and the next successor n+1 that these all have property P(n), any new successor will inherit this property too since they are derived in a chain from P(0) as per Axiom 2.1.      
+P(n) is not a function it represents "n has the property P". Think about how the natural numbers are generated with successors, those generated natural numbers all inherit properties of previous generated numbers such as P(n): "any natural number n + 0 = n". If you prove that for 0, n and the next successor n+1 that these all have property P(n), any new successor will inherit this property too since they are derived in a chain from P(0) as per Axiom 2.1. You have already encountered mathematical induction in elementary school when presented with a summing progression such as '1+2+3+4&#x2026;' the inductive step is 'and so on'.        
 </p>
 </div>
 </div>
@@ -840,7 +919,7 @@ The example for addition: 3 + 5 should be the same as (((5++)++)++) and adding 0
 </p>
 
 <p>
-Definition 2.2.1 we can add n++ to m by defining (n++) + m to be (n + m)++. You can read this as (thing)++ anything in brackets is just a value to be determined, so you can consider it as a single value to be incremented. 
+Definition 2.2.1 we can add n++ to m by defining (n++) + m to be (n + m)++. You can read this as (thing)++ and anything in brackets is just a value to be determined, so you can consider it as a single value to be incremented. Example (1 + 2 + 3)++ + 5 is (n++) + 5.  
 </p>
 
 <p>
@@ -879,15 +958,19 @@ How does the base case for n + 0 = n become 0 + 0 = 0, from the previous definit
 </p>
 
 <p>
-Suppose that n + 0 = n (assumption). Then the successor (n++) + 0 = n++. Pointing to the definition of addition where it defines (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can substitute them for each other: (n++) + 0 becomes (n + 0)++ as they are equal so interchangable.
+Suppose that n + 0 = n (assumption). Then the successor (n++) + 0 = n++. Pointing to the definition of addition where it defines (n++) + m = (n + m)++ we see it is in the same form as (n++) + 0, so if we say something is equal to something else, we can replace them for each other: (n++) + 0 becomes (n + 0)++ as they are equal so interchangable.
 </p>
 
 <p>
-Finally we are left with (n + 0)++ = n++. The value in the brackets (n + 0) is in the form of P(n) the inductive hypothesis or assumption, since we have assumed n + 0 = n is true, we can again substitute/interchange/swap n + 0 for n and arrive at the proof: (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. Property P(n) exists in base case 0, plus 1, plus another, so this property holds for all natural numbers derived from the Peano axioms. 
+Finally we are left with (n + 0)++ = n++. The value in the brackets (n + 0) is in the form of P(n) the inductive hypothesis or assumption, since we have assumed n + 0 = n is true, we can again replace n + 0 for n and arrive at the proof: (n)++ = n++. Remember to consider your assumption 'already true' and a definition you can just point to while in the inductive proof. Why is induction used? Because we are building up a structure. He defined natural numbers as being the successor of another, which means an incremental layer upon layer that you can recursively take apart back to the base case just like you can in computer programming. Property P(n) exists in base case 0, plus 1, plus another, so this property holds for all natural numbers derived from the Peano axioms. 
 </p>
 
 <p>
-The most important takeaway: <i>no arithmetic was done here at all</i>. We pointed at definitions, and reasoned about them using substitution to exchange their forms until they were the same on both sides of the equal sign. You are a logician now pattern matching forms and moving them around. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.  
+The most important takeaway: <i>no arithmetic was done here at all</i>. We pointed at definitions, and reasoned about them using replacement to exchange their forms until they were the same on both sides of the equal sign. You are a logician now pattern matching forms and moving them around. If thing = thing2, then thing2 = thing. At this early stage you could literally cut out the definitions and assemble proofs by swapping out definitions for each other.
+</p>
+
+<p>
+How can you check this is correct? Reverse the logic, if n + 0 does not equal n, then 0 + 0 does not equal 0. 
 </p>
 </div>
 </div>
@@ -905,7 +988,11 @@ Next, we assume  n + (m++) = (n + m)++.
 </p>
 
 <p>
-We prove the successor: n++ + (m++) = ((n++) + m)++. Looking at the left side, refer to the definition of division and notice (n++) + m = (n + m)++ or (successor value) + (something) = (value + something)successor, the left hand side is now (n + (m++))++. This form is similar to the hypothesis of n + (m++) = (n + m)++ so substitute it in the left side and now we have ((n + m)++)++.  The right side follows the same logic as the left. ((n++) + m)++ can be seen abstractly as (value)++ or (successor + value)++, and the second is the definition of addition again so ((value + value)successor)++ 
+We prove the successor: n++ + (m++) = ((n++) + m)++. Looking at the left side, refer to the definition of division and notice (n++) + m = (n + m)++ or (successor value) + (something) = (value + something)successor, the left hand side is now (n + (m++))++. This form is similar to the hypothesis of n + (m++) = (n + m)++ so replace the left side and now we have ((n + m)++)++.  The right side follows the same logic as the left. ((n++) + m)++ can be seen abstractly as (value)++ or (successor + value)++, and the second is the definition of addition again so ((value + value)successor)++
+</p>
+
+<p>
+You can always insert concrete examples to see what is going on, ie for n+(m++) = (n+m)++ let n=2, m=0 then 2+(0+1) = (2+0)+1. 
 </p>
 </div>
 </div>
@@ -923,38 +1010,8 @@ Proposition 2.2.4 (Addition is commutative) the base case is point-to definition
 <h4 id="Fourth%20proof%20%26%20Implication">Fourth proof &amp; Implication</h4>
 <div class="outline-text-4" id="text-Fourth%20proof%20%26%20Implication">
 <p>
-Proposition 2.2.6 we want to prove b = c. In the inductive step, he uses Axiom 2.4 to drop down from the successor to the form: a + b = a + c which is the form of the inductive hypothesis, where we claimed 'a + b = a + c implies b = c' so we can now imply b = c and have 'virtual cancellation without subtraction'. Tao writes about implication in the appendix which you should briefly read then return to many times over as it comes up in later chapters.
+Proposition 2.2.6 we want to prove b = c. In the inductive step, he uses Axiom 2.4 to drop down from the successor to the form: a + b = a + c which is the form of the inductive hypothesis, where we claimed 'a + b = a + c implies b = c' so we can now imply b = c and have 'virtual cancellation without subtraction'. Tao writes about implication in the appendix which you should read then return to many times over as it comes up in later chapters.
 </p>
-
-<p>
-A.2 Implication seems confusing at first, it's modern language use relating to casuality is different from the logician's use which is explained <a href="http://www.math.niu.edu/~richard/Math101/implies.pdf">here</a>. The only combination where implication is false is if p implies q and p is true, but q is false. 
-</p>
-
-<p>
-An optional short series on the history of various schools of logic that led to our present state.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://youtu.be/UcjKKcvv7Rw">Aristotle and deduction</a> - Brief history of logic MF 251
-<ul class="org-ul">
-<li>Origins of modern logic</li>
-</ul></li>
-<li><a href="https://youtu.be/-8IVhNrwNdg">Stoics and other thinkers</a> - Brief history of logic MF 252
-<ul class="org-ul">
-<li>Implication, disjunction and conjunction is discussed here and highly relevant to all further chapters</li>
-</ul></li>
-<li><a href="https://youtu.be/q-o3qB2i80U">Islamic/Medieval logic</a> - Brief history of logic MF 253
-<ul class="org-ul">
-<li>Modal logic origins</li>
-</ul></li>
-<li><a href="https://youtu.be/70PzhlfAUi4">Leibniz to Boole</a> - Brief history of logic MF 254
-<ul class="org-ul">
-<li>From deduction to induction</li>
-<li>Notation for relations</li>
-<li>Boole's book Analysis of Logic</li>
-<li>De Morgan's laws</li>
-</ul></li>
-</ul>
 </div>
 </div>
 
@@ -1014,7 +1071,7 @@ Inducting on c: (a + b) + (c++) = a + (b + (c++))
 </ul>
 
 <p>
-Try moving everything around until you understand exactly how commutativity and associativity work. See if you can get it to a form where you can use the inductive hypothesis, substitute and permute them around some more until this starts to make sense. 
+Try moving everything around until you understand exactly how commutativity and associativity work. See if you can get it to a form where you can use the inductive hypothesis, replace and permute them around some more until this starts to make sense. 
 </p>
 </div>
 </div>
@@ -1024,7 +1081,7 @@ Try moving everything around until you understand exactly how commutativity and 
 <h3 id="2.2.%20cont.">2.2. cont.</h3>
 <div class="outline-text-3" id="text-2.2.%20cont.">
 <p>
-Lemma 2.2.10 has an exercise where induction is suggested. Always read the <a href="https://terrytao.wordpress.com/books/analysis-i/#comment-447019">comments</a> on Tao's blog if you're stuck but this is the Peano Axiom 2.4 so not sure why it's even here, it's just restating Axiom 2.4 and 2.3. Assume for contradiction that b++ = a and c++ = a. But by the Peano axioms this is not possible so c++ must equal b++. That is my good enough proof so we can later use this lemma to substitute 'a positive number' for b++. 
+Lemma 2.2.10 has an exercise where induction is suggested. Always read the <a href="https://terrytao.wordpress.com/books/analysis-i/#comment-447019">comments</a> on Tao's blog if you're stuck but this is the Peano Axiom 2.4 so not sure why it's even here, it's just restating Axiom 2.4 and 2.3. Assume for contradiction that b++ = a and c++ = a so a positive number is the successor of two different natural numbers. But by the Peano axioms this is not possible so c++ must equal b++. That is my good enough proof so we can later use this lemma to replace 'a positive number' for b++. 
 </p>
 
 <p>
@@ -1044,7 +1101,7 @@ Another way to think about order of the natural numbers, is because they are ind
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org7194050">
+<details id="orgd25085e">
 <p>
 
 </p>
@@ -1066,13 +1123,13 @@ Proposition 2.2.12 / Exercise 2.2.3: Prove the basic properties of order for nat
 </ul>
 
 <p>
-Try some more substitution to prove a \(\ge\) b and b \(\ge\) c, then a \(\ge\) c   
+Try some more equivalency replacement to prove a \(\ge\) b and b \(\ge\) c, then a \(\ge\) c   
 </p>
 <ul class="org-ul">
 <li>a = b + n</li>
 <li>b = c + n
 <ul class="org-ul">
-<li>b is equal to (c + n) so substitute for b in a = b + n:</li>
+<li>b is equal to (c + n) so replace for b in a = b + n:</li>
 </ul></li>
 <li>a = (c + n) + n</li>
 <li>a = c + (n++)
@@ -1083,7 +1140,7 @@ Try some more substitution to prove a \(\ge\) b and b \(\ge\) c, then a \(\ge\) 
 </ul>
 
 <p>
-Possible proof strategy: By the definition of ordering of the natural numbers, if a = b + m and b = c + n, then a = c + m + n. By associativity a = c + (m + n) and since if a = b when m or n are 0, then a = c when m and n are 0. By substitution d = m + n, and since m and n are natural numbers, d is a natural number by the Peano axioms and 2.1.3 (m + n)++ = d++, and by Axiom 2.4 (m + n) = d so we have a = c + d as desired by the definition of ordering of the natural numbers. 
+Possible proof strategy: By the definition of ordering of the natural numbers, if a = (b) + m and b = c + n, then a = (c + n) + m. By associativity a = c + (m + n) and since if a = b when m or n are 0, then a = c when m and n are 0. By replacement d = m + n, and since m and n are natural numbers, d is a natural number by the Peano axioms and 2.1.3 (m + n)++ = d++, and by Axiom 2.4 (m + n) = d so we have a = c + d as desired by the definition of ordering of the natural numbers. 
 </p>
 
 <ul class="org-ul">
@@ -1096,7 +1153,7 @@ Possible proof strategy: By the definition of ordering of the natural numbers, i
 <li>a = b + m by 2.2.11</li>
 <li>b = a + n by 2.2.11</li>
 </ul></li>
-<li>Substitute b for (a + n):
+<li>Replace b for (a + n):
 <ul class="org-ul">
 <li>a = (a + n) + m</li>
 <li>a = a + (n + m)</li>
@@ -1169,7 +1226,7 @@ Proposition 2.2.13 fill in the gaps:.
 <ul class="org-ul">
 <li>a = b + d (as per 2.2.12, d must be positive)</li>
 <li>c++ = d (lemma 2.2.10)</li>
-<li>a++ = b + (c++) (substitution c++ for d)</li>
+<li>a++ = b + (c++) (Replacing c++ for d)</li>
 <li>a++ &gt; b by def of ordering</li>
 </ul></li>
 <li>Or another way:
@@ -1252,7 +1309,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orgdecd95a">
+<details id="org2dbb9a2">
 <p>
 
 </p>
@@ -1272,7 +1329,7 @@ Lemma X: For any natural number n, n0 = 0.
 <ul class="org-ul">
 <li>(n++) x m = (n x m) + m by def 2.3.1 so (n0) + 0 = 0</li>
 <li>Remove the + 0 (lemma 2.2.2)</li>
-<li>Now it is in the form of the IH: n0 = 0 so we can substitute 0 for n0</li>
+<li>Now it is in the form of the IH: n0 = 0 so we can replace 0 for n0</li>
 <li>0 = 0 and induction is closed.</li>
 </ul></li>
 </ul>
@@ -1293,7 +1350,7 @@ Lemma Y: n(m++) is (nm) + m:
 <ul class="org-ul">
 <li>(n++) x (thing) is (n x thing) + thing by def 2.3.1</li>
 <li>(n x m++) + m++</li>
-<li>It's in the form of IH now, we can substitute (n x (m++)) for (n x m) + n</li>
+<li>It's in the form of IH now, we can replace (n x (m++)) for (n x m) + n</li>
 <li>((n x m) + n)) + m++ 
 <ul class="org-ul">
 <li>(n x m) + n + m + 1 since m++ is m + 1</li>
@@ -1393,6 +1450,291 @@ Prove the <a href="https://youtu.be/7eZUzceFFJw">identity</a>.
 </div>
 
 
+<div id="outline-container-Set%20Theory" class="outline-2">
+<h2 id="Set%20Theory">Set Theory</h2>
+<div class="outline-text-2" id="text-Set%20Theory">
+</div>
+<div id="outline-container-History%20of%20set%20theory" class="outline-3">
+<h3 id="History%20of%20set%20theory">History of set theory</h3>
+<div class="outline-text-3" id="text-History%20of%20set%20theory">
+<p>
+There is a <a href="https://youtu.be/5LsdsnjXT_Y">lecture</a> on the history of sets/functions, explaining ordinals, cardinals, various schools of logic, and a second <a href="https://youtu.be/Bo2w25fDLwY">lecture</a> about the history of set theory with Godel and Turing. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic" class="outline-3">
+<h3 id="Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">Appendix A: the basics of mathematical logic</h3>
+<div class="outline-text-3" id="text-Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">
+<p>
+This chapter on set theory in <i>Analysis I</i> relies on the fact that you've already read the appendix on logic. Tao makes a point that this chapter is meant to be read and understood not studied and memorized. Proposition A.2.6, proof by contradiction, we will learn later that when pi/2 (90deg) the sine function is 1. 
+</p>
+
+<p>
+Exercise A.5.1
+</p>
+<ul class="org-ul">
+<li>a) For every x++, and every y++, y*y = x or x is the square root of y. Is this true? Square root of two is the obvious candidate for claiming this is a false statement since what y * y = sqrt(2).</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-Lectures%20on%20deduction" class="outline-3">
+<h3 id="Lectures%20on%20deduction">Lectures on deduction</h3>
+<div class="outline-text-3" id="text-Lectures%20on%20deduction">
+<ul class="org-ul">
+<li><a href="https://youtu.be/61bWR8ACNts">Deduction</a> - Lecture from 15/251 CMU</li>
+</ul>
+
+<p>
+Optional lecture, you've already done some deduction from writing proofs, however this lecture shows what is and what isn't deducible. The end of the lecture has overlap with the appendix and the first logic lecture in this workshop so can be skipped.
+</p>
+</div>
+
+<div id="outline-container-Quiz%3A%20Logic" class="outline-4">
+<h4 id="Quiz%3A%20Logic">Quiz: Logic</h4>
+<div class="outline-text-4" id="text-Quiz%3A%20Logic">
+<p>
+These multiple choice <a href="http://scherk.pbworks.com/w/page/14864181/FrontPage">quizzes</a> are from Tao's Analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, try the <a href="http://scherk.pbworks.com/w/page/14864234/Quiz%3A%20Logic">logic</a> quiz. If you struggle search YouTube for proofs by implication, or search 'discrete math inference rules' there are dozens of tutorials. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29" class="outline-3">
+<h3 id="3.1%20Fundamentals%20%28Set%20Theory%29">3.1 Fundamentals (Set Theory)</h3>
+<div class="outline-text-3" id="text-3.1%20Fundamentals%20%28Set%20Theory%29">
+<p>
+You may want to watch this <a href="https://youtu.be/59WX2V7Vjgg">lecture</a> by Wildberger he visualizes sets.
+</p>
+
+<p>
+Example 3.1.2 is similar to a nested list such as [list: 1, [list: 1, 2], 100] is length 3, even though there is a nested list overall it still only contains 3 elements. Remark 3.1.3 is in the above historical lectures on set theory. We are referred to Appendix A.7 Equality to read about the substitution axiom which you should have already read.
+</p>
+
+<p>
+Lemma 3.1.6 if set A is equal to set (empty), then if x is in A it must also be in set empty, a contradiction, so A must be a non-empty set is how I interpret the lemma, which is a way to say that if an empty set exists, there must also be a possibility of a non-empty set. Remark 3.1.8 Cardinality if you watched the Wildberger <i>History of Mathematics</i> <a href="#History%20of%20set%20theory">lecture</a> linked above assigns a value.
+</p>
+
+<p>
+Note the errata for Definition 3.1.4 from Tao's site: "Definition 3.1.4 has to be given the status of an axiom (the axiom of extensionality) rather than a definition, changing all references to this definition accordingly.  This requires some changes to the text discussing this definition. Firstly, in the preceding paragraph, “define the notion of equality” will now be “seek to capture the notion of equality”, and “formalize this as a definition” should be “formalize this as an axiom”.  For the paragraph after Example 3.1.5, delete the first two sentences, and remove the word “Thus” from the third sentence. Exercise 3.1.1 is now trivial and can be deleted." So this is now Axiom 3.1.4, but the definition remains the same. 
+</p>
+
+<p>
+Exercise 3.1.2 prove emptyset, {emptyset}, {{emptyset}}, and {emptyset{emptyset}} are all not equal.
+</p>
+
+<ul class="org-ul">
+<li>If \(\emptyset\) = {\(\emptyset\)} then by Def 3.1.4 \(\emptyset\) \(\in \emptyset\) a contradiction to Axiom 3.2</li>
+<li>Same reasoning as above for \(\emptyset\) is not equal to {{\(\emptyset\)}} or {\(\emptyset\){\(\emptyset\)}}</li>
+<li>{\(\emptyset\)} is not equal to {{\(\emptyset\)}} because [list: 1] is not equal to [list: [list: 1]]. The first has element 1 in it, the second has element [list: 1].</li>
+</ul>
+
+<p>
+Remark 3.1.21 clarifies the above exercise how {2} and 2 are distinct objects. is not in {1,2,3} but 2 is in {1,2,3}. The rest of this chapter is straight forward definitions of set operations. 
+</p>
+
+<p>
+Example 3.1.32 looks a lot like programming syntax. There seems to be an order of evaluation, applying the axiom of specification first to create a new set, then applying the axiom of replacement so working right to left in {n++ : n \(\in\) {3,5,9); n&lt;6}
+</p>
+</div>
+
+<div id="outline-container-Quiz%20Sets" class="outline-4">
+<h4 id="Quiz%20Sets">Quiz Sets</h4>
+<div class="outline-text-4" id="text-Quiz%20Sets">
+<p>
+Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">quiz</a>. There are many Youtube <a href="https://www.youtube.com/playlist?list=PLg8ZEeSiXsjgoQJzRcq60GjK0UrkMsA3-">lectures</a> on basic theory. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises" class="outline-4">
+<h4 id="3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</h4>
+<div class="outline-text-4" id="text-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">
+<p>
+You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
+</p>
+
+<details id="org6d9b164">
+<p>
+
+</p>
+
+<ul class="org-ul">
+<li>3.1.3 prove the remaining claims in 3.1.13:</li>
+</ul>
+<p>
+If a and b are objects, then {a, b} = {a} U {b}: By (new axiom) 3.1.4 we need to show every element x in {a, b} is in {a} U {b}. Suppose that x is an element of {a, b} then by axiom 3.3 x = a or x = b. By Axiom 3.4 this means at least one of the following statements is true: x \(\in\) {a} or x \(\in\) {b}. We divide into cases. If x is in a, then by axiom 3.4 x \(\in\) {a} U {b}, similarly if x is in b, it is also in {a} U {b}. Thus in both cases we see every element of {a, b} is in {a} U {b}. Note the proof works by showing x is in both a AND b which is the definition of union.
+</p>
+
+<ul class="org-ul">
+<li>The next claim, prove the union operation is commutative so A \(\cup\) B = B \(\cup\) A</li>
+</ul>
+<p>
+Follows the same proof he did for the union operation is associative. Suppose x is an element of A \(\cup\) B. By def 3.1.4 and axiom 3.4 pairwise union then x \(\in\) A or x \(\in\) B. By disjuntion this is also x \(\in\) B or x \(\in\) A. So x is in B \(\cup\) A and x is in A \(\cup\) B.
+</p>
+
+<ul class="org-ul">
+<li>3.1.4 prove claims in Proposition 3.1.18</li>
+</ul>
+<p>
+You can write both these proofs exactly like his 3.1.18 proof for transitivity. Suppose A \(\subset\) B and B \(\subset\) A. To prove that A = B we have to prove that every element A is an element of B, and every element B is an element of A by def 3.1.4. Let us pick an arbitrary element x \(\in\) A. Then, since A \(\subset\) B, x must also be an element of B. But since B \(\subset\) A, then every element of A is an element of B and every element B is an element of A. By 3.1.4 they are equal. 
+</p>
+
+
+<ul class="org-ul">
+<li>3.1.15 Show how union, intersection and subset are logically equivalent:</li>
+</ul>
+<p>
+Show that any two set operations implies another. If x is in A \(\cup\) B, then by definition of union x \(\in\) A or B, so by disjunction x is in B because logically we can pick either one. If x is in A, since A is a subset of B then x is again \(\in\) B. Thus x \(\in\) A \(\cup\) B if and only if x \(\in\) B and by definition of union, and axiom of equality 3.1.4, A \(\cup\) B = B. Since x is in B, if x is in A \(\cap\) B it must also be in A, so x is in A and B, which is the definition of intersection, and if A \(\cap\) B = A, and if A \(\cup\) B = B, then every element of A is in B so A \(\subset\) B.  
+</p>
+</details>
+</div>
+</div>
+</div>
+
+<div id="outline-container-3.2%20Russell%27s%20Paradox" class="outline-3">
+<h3 id="3.2%20Russell%27s%20Paradox">3.2 Russell's Paradox</h3>
+<div class="outline-text-3" id="text-3.2%20Russell%27s%20Paradox">
+<p>
+Wildberger has a lecture in his history of math series about this if you watch the lecture on set theory. 3.9 Axiom of Regularity is worth reading to see some more examples of what is and what isn't an element of a set otherwise you can skip this chapter. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.3%20Functions" class="outline-3">
+<h3 id="3.3%20Functions">3.3 Functions</h3>
+<div class="outline-text-3" id="text-3.3%20Functions">
+<p>
+Example 3.3.3 if you forgot range <a href="https://stackoverflow.com/questions/4396290/what-does-this-square-bracket-and-parenthesis-bracket-notation-mean-first1-last">notation</a> which Tao will teach us in later chapters. Remark 3.3.5 clears up some notation for functions notably a sequence subscript also denotes a function. Example 3.3.9 asks why 3.3.7 asserts that all functions from {empty} set to X are equal, because they have the same domain (nothing) and range. 
+</p>
+
+<p>
+Our first proof in this chapter is in Lemma 3.3.12, and if we can go by all the previous chapters, this will be our template for the exercises. It also doesn't make sense, so I checked the errata page and sure enough there is <a href="https://terrytao.wordpress.com/books/analysis-i/">errata</a> for this lemma depending what version of the book you're using.
+</p>
+
+<p>
+Def 3.3.10 composition, you can think of that composition symbol as being a binary operator (function) that accepts two functions as input and outputs a single function. 
+</p>
+
+<p>
+3.3.14 See this <a href="https://youtu.be/DP1ND5-w7fg">tutorial</a> and notice Tao has defined this function by it's contrapositive, which you can do as it is logically equivalent. Write your own examples for this definition. If two distinct elements of A map to the same element of B, this is not injective. However if those two A elements are equal to each other then it is injective: 
+</p>
+
+<ul class="org-ul">
+<li>A = {a, b, a} (function input)</li>
+<li>B = {1, 2} (output)
+<ul class="org-ul">
+<li>f(a) = 1</li>
+<li>f(b) = 2</li>
+<li>f(a) = 1 
+<ul class="org-ul">
+<li>but {a} = {a}, so f(a) = f(a) and this function is injective.</li>
+</ul></li>
+</ul></li>
+<li>A = {b, c}</li>
+<li>B = {2}
+<ul class="org-ul">
+<li>f(c) = 2</li>
+<li>f(b) = 2
+<ul class="org-ul">
+<li>but {c} doesn't equal {b} so this not injective</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+3.3.17 Onto functions, another <a href="https://youtu.be/c5shCGRMpcQ">tutorial</a> and for Remark 3.3.24 <a href="https://youtu.be/P9A4IrD_uBQ">here</a> is a tutorial for bijective inverse functions
+</p>
+</div>
+
+
+<div id="outline-container-Quiz%20Functions" class="outline-4">
+<h4 id="Quiz%20Functions">Quiz Functions</h4>
+<div class="outline-text-4" id="text-Quiz%20Functions">
+<p>
+Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%3A%20Functions">quiz</a> from Tao's analysis class. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.3%20Functions--Exercises" class="outline-4">
+<h4 id="3.3%20Functions--Exercises">Exercises</h4>
+<div class="outline-text-4" id="text-3.3%20Functions--Exercises">
+<p>
+All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
+</p>
+
+<details id="org49aab08">
+<p>
+All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
+</p>
+
+<ul class="org-ul">
+<li>Ex 3.3.1 was deleted in errata (See Tao's site)</li>
+<li>Ex 3.3.2 The proof for this is in the book <a href="https://infinitedescent.xyz/">https://infinitedescent.xyz/</a>.</li>
+<li>Ex 3.3.3 The empty function is always injective since it's 'vacuously true' that f(x) = f(x'). It is never surjective since there are no elements in the empty set that fit the surjective definition of every element in Y is a value of f(x) or y = f(x), and thus never bijective, since a function must be both injective and surjective to be bijective.</li>
+<li>Ex 3.3.4 The tilde hat thinghy is just notation for two different fuctions, like f and f'. Cancellation law means we're trying to prove two different functions are the same so g = g' and f = f'. If f and g are injective, then g(f(x)) = g(f'(x)) and f(x) = f'(x), and by one-to-one definition of injective functions f = f' (since f is g's input).  Surjective is similar, g(y) = g'f(x)) = g(f(x)) = g'(y) so g = g'. Does g need to be injective for this proof to always hold? Try corner case examples from the text, like if g = n<sup>2</sup>, then g(f(-1)) and g(f'(1)) have the same output, so two different inputs to g with same output means f(x) can't equal f(x') as per definition of one-to-one functions so we can't always derive f = f'.</li>
+<li>Ex 3.3.5 If f is injective in g(f(x)), then g doesn't need to be injective. Consider an example A = {1}, B = {2, 3}, and C = {4}. f(1) = g(2) = 4 so f is still injective. The difference in 3.3.4 is the wording 'show that these two input functions are always equal if g in injective' and the second question 'Is this still true if g is not injective?' which means a single case where if g is not injective, and we get two non distinct inputs that equal the same outputg, the whole proof is false whereas here we are asked 'must g always be injective' so just needa single case of not needing to be injective.</li>
+<li>Ex 3.3.6 Is described <a href="https://math.stackexchange.com/a/2865322">here</a> see Remark 3.3.24 if you forgot what an inverse function is. Note how the inverse of f and f cancel each other out.</li>
+<li>Ex 3.3.7 Similar to above and his association proof</li>
+</ul>
+</details>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Proof%20strategies" class="outline-3">
+<h3 id="Proof%20strategies">Proof strategies</h3>
+<div class="outline-text-3" id="text-Proof%20strategies">
+<p>
+Watch <a href="https://youtu.be/K0CoGGcLc1M?t=2161">this</a> starting @ 36:00, from 41:00+ he shows how he solves problems step by step, trying small cases to understand the problem better and poking at the problem enough to finally figure out a proof.  
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-3.4%20Images%20and%20inverse%20images" class="outline-3">
+<h3 id="3.4%20Images%20and%20inverse%20images">3.4 Images and inverse images</h3>
+<div class="outline-text-3" id="text-3.4%20Images%20and%20inverse%20images">
+<p>
+This is only casual reading, skip the exercises and return to do them when these topics come up again. 
+</p>
+
+<p>
+Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = x<sup>2</sup>, so {-2,-1,0,1,2}. The rest of this chapter, if it doesn't make sense on first read search youtube ie: <a href="https://youtu.be/TDpQSa3hJRw">indexed sets</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.5%20Cartesian%20products" class="outline-3">
+<h3 id="3.5%20Cartesian%20products">3.5 Cartesian products</h3>
+<div class="outline-text-3" id="text-3.5%20Cartesian%20products">
+<p>
+Again more casual reading, come back to do the exercises as needed.
+</p>
+
+<p>
+Another topic with plenty of youtube <a href="https://youtu.be/NnEkVooAsxk">tutorials</a>. Definition 3.5.7 notation for product is introduced, it looks complicated but all it's doing is specifying an index (i is greater or equal to 1, and less than or equal to n) and repeated cross product. The exercises some of the solutions are <a href="https://youtu.be/XmkGxHZDer8">walked through</a> on youtube. The cartesian plane itself is a cartesian product of R x R, you have tuples (x, y) or (x, y, z) so R x R x R. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.6%20Cardinality%20of%20sets" class="outline-3">
+<h3 id="3.6%20Cardinality%20of%20sets">3.6 Cardinality of sets</h3>
+<div class="outline-text-3" id="text-3.6%20Cardinality%20of%20sets">
+<p>
+Skip the exercises like the last two chapters, we just want to be familiar with the material. Reminder in the preface of this book, Tao himself advocates to skip the exercises as 'set theory is not essential for analysis' but it will be essential for us to understand numerous other math topics, at which time we can come back here. 
+</p>
+
+<p>
+A good <a href="https://youtu.be/JkOKMwRe4BE">tutorial</a>. Tao is using #(A) notation which means finite set cardinality, while |A| cardinality notation means infinite. There exists errata for the exercises specifically 3.6.8. The last exercise the <a href="https://www.youtube.com/watch?v=2-mxYrCNX60">pigeonhole principle</a> if set A has greater cardinality than B, then f(x) A -&gt; B can't be injective, since there would be two elements in A that point to a single element in B.  
+</p>
+</div>
+</div>
+</div>
+
 <div id="outline-container-Integers%20and%20rational%20numbers" class="outline-2">
 <h2 id="Integers%20and%20rational%20numbers">Integers and rational numbers</h2>
 <div class="outline-text-2" id="text-Integers%20and%20rational%20numbers">
@@ -1425,7 +1767,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="org72d0835">
+<details id="org3211672">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1447,7 +1789,7 @@ You don't have to do the exercises, though proving equality as per A.7 for every
 </p>
 
 <p>
-4.1.6 if a, b, c, are integers such that ac = bc and c is non-zero, then a = b. (a&#x2013;a')(c&#x2013;c') = (b&#x2013;b')(c&#x2013;c') and c is non-zero, then (a&#x2013;a') = (b&#x2013;b') or a + b' = b + a'. (ac + a'c')&#x2013;(ac' + a'c) = (bc + b'c')&#x2013;(bc'+b'c). This is ac + a'c' + bc' + b'c = b'c' + bc + a'c + ac' or factored to c(a + b') + c'(a' + b) = c(b + a') + c'(b' + a). Now we are the exact same place as Tao's proof in Lemma 4.1.3 where he wrote since a + b' = b + a' two sides are equal. If (c&#x2013;c') was (0&#x2013;0') then this would be 0 = 0 not (a&#x2013;a') = (b&#x2013;b'). Not a proof, but explains why the cancellation law works. If a + b' = b + a' we can also substitute, so c(b + a') + c'(b + a') = c(b + a') + c'(b + a'). Subtract one of the c(value) or c'(value) from both sides so c'(b + a') = c'(b + a') and now we can divide by c' to get b + a' = b + a', and since a + b' = b + a' then substitute back b + a' = a + b' which won't work if c' = 0. Not really the proof Tao wanted but it kind of works.
+4.1.6 if a, b, c, are integers such that ac = bc and c is non-zero, then a = b. (a&#x2013;a')(c&#x2013;c') = (b&#x2013;b')(c&#x2013;c') and c is non-zero, then (a&#x2013;a') = (b&#x2013;b') or a + b' = b + a'. (ac + a'c')&#x2013;(ac' + a'c) = (bc + b'c')&#x2013;(bc'+b'c). This is ac + a'c' + bc' + b'c = b'c' + bc + a'c + ac' or factored to c(a + b') + c'(a' + b) = c(b + a') + c'(b' + a). Now we are the exact same place as Tao's proof in Lemma 4.1.3 where he wrote since a + b' = b + a' two sides are equal. If (c&#x2013;c') was (0&#x2013;0') then this would be 0 = 0 not (a&#x2013;a') = (b&#x2013;b'). Not a proof, but explains why the cancellation law works. If a + b' = b + a' we can also replace, so c(b + a') + c'(b + a') = c(b + a') + c'(b + a'). Subtract one of the c(value) or c'(value) from both sides so c'(b + a') = c'(b + a') and now we can divide by c' to get b + a' = b + a', and since a + b' = b + a' then replace back b + a' = a + b' which won't work if c' = 0. Not really the proof Tao wanted but it kind of works.
 </p>
 
 <p>
@@ -1527,7 +1869,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="orge0aea50">
+<details id="org0355a7d">
 <p>
 
 </p>
@@ -1597,7 +1939,7 @@ Prove the rest of Proposition 4.2.4. The first is the same as Tao's demo proof. 
 <li>Ex 4.2.4</li>
 </ul>
 <p>
-Prove Lemma 4.2.7 is exactly the same as Tao's proof for Lemma 4.1.5 of the integers just substituting rational numbers and their definitions. 
+Prove Lemma 4.2.7 is exactly the same as Tao's proof for Lemma 4.1.5 of the integers just replacing rational numbers and their definitions. 
 </p>
 
 <ul class="org-ul">
@@ -1945,284 +2287,6 @@ End of the lecture introduces non-linear approximations, using differential calc
 </div>
 
 
-<div id="outline-container-Set%20Theory" class="outline-2">
-<h2 id="Set%20Theory">Set Theory</h2>
-<div class="outline-text-2" id="text-Set%20Theory">
-</div>
-<div id="outline-container-History%20of%20set%20theory" class="outline-3">
-<h3 id="History%20of%20set%20theory">History of set theory</h3>
-<div class="outline-text-3" id="text-History%20of%20set%20theory">
-<p>
-There is a <a href="https://youtu.be/5LsdsnjXT_Y">lecture</a> on the history of sets/functions, explaining ordinals, cardinals, various schools of logic, and a second <a href="https://youtu.be/Bo2w25fDLwY">lecture</a> about the history of set theory with Godel and Turing. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic" class="outline-3">
-<h3 id="Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">Appendix A: the basics of mathematical logic</h3>
-<div class="outline-text-3" id="text-Appendix%20A%3A%20the%20basics%20of%20mathematical%20logic">
-<p>
-This chapter on set theory in <i>Analysis I</i> relies on the fact that you've already read the appendix on logic and have an idea what implies means or disjunction. Now that we have done some proofs ourselves, and the basics of trigonometry we can finally understand some of the examples he uses in this appendix. Tao makes a point that this chapter is meant to be read and understood not studied and memorized, and thankfully he is not bombarding us with piles of confusing logic notation that you normally see in other 'how to do proofs' books. 
-</p>
-
-<p>
-Proposition A.2.3, confusing the hypotenuse "Suppose that&#x2026;" by assuming the conclusion. We always assume the hypotenuse, and prove the conclusion.  Proposition A.2.6, proof by contradiction, we know that when pi/2 (90deg) the sine function is 1, because remember it is the y axis of the unit circle. Tao also makes a note here to not use confusing logical notation in proofs.  
-</p>
-
-<p>
-Exercise A.5.1
-</p>
-<ul class="org-ul">
-<li>a) For every x++, and every y++, y*y = x or x is the square root of y. Is this true? Square root of two is the obvious candidate for claiming this is a false statement since what y * y = sqrt(2).</li>
-</ul>
-
-<p>
-We will have to come back and re-read this appendix again later when we learn limits. Logic is something you build over time.
-</p>
-</div>
-
-<div id="outline-container-Quiz%3A%20Logic" class="outline-4">
-<h4 id="Quiz%3A%20Logic">Quiz: Logic</h4>
-<div class="outline-text-4" id="text-Quiz%3A%20Logic">
-<p>
-These multiple choice <a href="http://scherk.pbworks.com/w/page/14864181/FrontPage">quizzes</a> are from Tao's Analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, try the <a href="http://scherk.pbworks.com/w/page/14864234/Quiz%3A%20Logic">logic</a> quiz. If you struggle search YouTube for proofs by implication, or search 'discrete math inference rules' there are dozens of tutorials. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29" class="outline-3">
-<h3 id="3.1%20Fundamentals%20%28Set%20Theory%29">3.1 Fundamentals (Set Theory)</h3>
-<div class="outline-text-3" id="text-3.1%20Fundamentals%20%28Set%20Theory%29">
-<p>
-Example 3.1.2 is similar to a nested list such as [list: 1, [list: 1, 2], 100] is length 3, even though there is a nested list overall it still only contains 3 elements. Remark 3.1.3 is in the above historical lectures on set theory. We are referred to Appendix A.7 Equality to read about the substitution axiom which you should have already read.
-</p>
-
-<p>
-Lemma 3.1.6 if set A is equal to set (empty), then if x is in A it must also be in set empty, a contradiction, so A must be a non-empty set is how I interpret the lemma, which is a way to say that if an empty set exists, there must also be a possibility of a non-empty set. Remark 3.1.8 Cardinality if you watched the Wildberger <i>History of Mathematics</i> <a href="#History%20of%20set%20theory">lecture</a> linked above assigns a value.
-</p>
-
-<p>
-Note the errata for Definition 3.1.4 from Tao's site: "Definition 3.1.4 has to be given the status of an axiom (the axiom of extensionality) rather than a definition, changing all references to this definition accordingly.  This requires some changes to the text discussing this definition. Firstly, in the preceding paragraph, “define the notion of equality” will now be “seek to capture the notion of equality”, and “formalize this as a definition” should be “formalize this as an axiom”.  For the paragraph after Example 3.1.5, delete the first two sentences, and remove the word “Thus” from the third sentence. Exercise 3.1.1 is now trivial and can be deleted." So this is now Axiom 3.1.4, but the definition remains the same. 
-</p>
-
-<p>
-Exercise 3.1.2 prove emptyset, {emptyset}, {{emptyset}}, and {emptyset{emptyset}} are all not equal.
-</p>
-
-<ul class="org-ul">
-<li>If \(\emptyset\) = {\(\emptyset\)} then by Def 3.1.4 \(\emptyset\) \(\in \emptyset\) a contradiction to Axiom 3.2</li>
-<li>Same reasoning as above for \(\emptyset\) is not equal to {{\(\emptyset\)}} or {\(\emptyset\){\(\emptyset\)}}</li>
-<li>{\(\emptyset\)} is not equal to {{\(\emptyset\)}} because [list: 1] is not equal to [list: [list: 1]]. The first has element 1 in it, the second has element [list: 1].</li>
-</ul>
-
-<p>
-Remark 3.1.21 clarifies the above exercise how {2} is not in {1,2,3} but 2 is in {1,2,3}. The rest of this chapter is straight forward definitions of set operations, better than the usual treatment of venn diagrams. Remark 3.1.26 distinct is defined as <i>there are elements of one set which are not elements of the other</i> so \(\emptyset\) and \(\emptyset\) are not distinct because neither can have elements. In Proposition 3.1.28 notice how any operation on two sets results in a new set, like a higher order filter function over a list results in a new list. 
-</p>
-
-<p>
-Example 3.1.32 looks a lot like programming syntax. There seems to be an order of evaluation, applying the axiom of specification first to create a new set, then applying the axiom of replacement so working right to left in {n++ : n \(\in\) {3,5,9); n&lt;6}
-</p>
-</div>
-
-<div id="outline-container-Quiz%20Sets" class="outline-4">
-<h4 id="Quiz%20Sets">Quiz Sets</h4>
-<div class="outline-text-4" id="text-Quiz%20Sets">
-<p>
-Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">quiz</a>. There are many Youtube <a href="https://www.youtube.com/playlist?list=PLg8ZEeSiXsjgoQJzRcq60GjK0UrkMsA3-">lectures</a> on basic theory. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises" class="outline-4">
-<h4 id="3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">Exercises</h4>
-<div class="outline-text-4" id="text-3.1%20Fundamentals%20%28Set%20Theory%29--Exercises">
-<p>
-You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
-</p>
-
-<details id="orgbc54433">
-<p>
-
-</p>
-
-<ul class="org-ul">
-<li>3.1.3 prove the remaining claims in 3.1.13:</li>
-<li>If a and b are objects, then {a, b} = {a} U {b}:
-<ul class="org-ul">
-<li>By (new axiom) 3.1.4 we need to show every element x in {a, b} is in {a} U {b}. Suppose that x is an element of {a, b} then by axiom 3.3 x = a or x = b. By Axiom 3.4 this means at least one of the following statements is true: x is in {a} or x is in {b}. We divide into cases. If x is in a, then by axiom 3.4 it is in {a} U {b}, similarly if x is in b, it is also in {a} U {b}. Thus in both cases we see every element of {a, b} is in {a} U {b}.</li>
-</ul></li>
-<li>The next claim, prove the union operation is commutative: 
-<ul class="org-ul">
-<li>Follows the same proof he did for the union operation is associative. Suppose x is an element of A \(\cup\) B. By def 3.1.4 and axiom 3.4 pairwise union then x \(\in\) A or x \(\in\) B. By disjuntion this is also x \(\in\) B or x \(\in\) A. So x is in B \(\cup\) A and x is in A \(\cup\) B.</li>
-</ul></li>
-<li>Last claim, prove A \(\cup\) A is equal to A \(\cup\) \(\emptyset\) is equal to \(\emptyset\) \(\cup\) A is equal to A. Suppose x is an element in A \(\cup\) A, then x is in A or x is in A, so by disjunction (we can pick either, but there's only one choice) x is in A. If x is in \(\emptyset\) \(\cup\) A, x is in \(\emptyset\) or x is in A, so x is in the union of A and \(\emptyset\) and since the emptyset is empty x is in A.</li>
-</ul>
-
-
-<ul class="org-ul">
-<li>3.1.4 prove claims in Proposition 3.1.18 
-<ul class="org-ul">
-<li>You can write both these proofs exactly like his 3.1.18 proof for transitivity. Suppose A \(\subset\) B and B \(\subset\) A. To prove that A = B we have to prove that every element A is an element of B, and every element B is an element of A by def 3.1.4. Let us pick an arbitrary element x \(\in\) A. Then, since A \(\subset\) B, x must also be an element of B. But since B \(\subset\) A, then every element of A is an element of B and every element B is an element of A. By 3.1.4 they are equal.</li>
-</ul></li>
-</ul>
-
-
-<ul class="org-ul">
-<li>3.1.15 Show how union, intersection and subset are logically equivalent:
-<ul class="org-ul">
-<li>For this exercise if A is a subset of B, and the union of A and B = B, then this implies the intersection of A and B will be A, which in turn implies A is a subset of B.</li>
-<li>We will show that any two set operations implies another. If x is in A \(\cup\) B, then by definition of union x is in A or B, so by disjunction x is in B. If x is in A, since A is a subset of B then x is again in B. Thus x \(\in\) A \(\cup\) B if and only if x \(\in\) B and by definition of union, and axiom of equality 3.1.4, A \(\cup\) B = B. Since x is in B, if x is in A \(\cap\) B it must also be in A, so x is in A and B, which is the definition of intersection, and if A \(\cap\) B = A, and if A \(\cup\) B = B, then every element of A is in B so A \(\subset\) B.</li>
-</ul></li>
-</ul>
-</details>
-</div>
-</div>
-</div>
-
-<div id="outline-container-3.2%20Russell%27s%20Paradox" class="outline-3">
-<h3 id="3.2%20Russell%27s%20Paradox">3.2 Russell's Paradox</h3>
-<div class="outline-text-3" id="text-3.2%20Russell%27s%20Paradox">
-<p>
-Wildberger has a lecture in his history of math series about this if you watch the lecture on set theory. 3.9 Axiom of Regularity is worth reading to see some more examples of what is and what isn't an element of a set otherwise you can skip this chapter. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-3.3%20Functions" class="outline-3">
-<h3 id="3.3%20Functions">3.3 Functions</h3>
-<div class="outline-text-3" id="text-3.3%20Functions">
-<p>
-Example 3.3.2 that lemma 2.2.10 again.   
-</p>
-
-
-
-<p>
-Example 3.3.3 if you forgot range <a href="https://stackoverflow.com/questions/4396290/what-does-this-square-bracket-and-parenthesis-bracket-notation-mean-first1-last">notation</a>. Remark 3.3.5 clears up some notation for functions notably a sequence subscript also denotes a function. Example 3.3.9 asks why 3.3.7 asserts that all functions from empty-set to X are equal, because they have the same domain (nothing) and range. 
-</p>
-
-<p>
-Our first proof in this chapter is in Lemma 3.3.12, and if we can go by all the previous chapters, this will be our template for the exercises. It also doesn't make sense, so I checked the errata page and sure enough there is <a href="https://terrytao.wordpress.com/books/analysis-i/">errata</a> for this lemma depending what version of the book you're using.
-</p>
-
-<p>
-3.3.14 See this <a href="https://youtu.be/DP1ND5-w7fg">tutorial</a>. Write your own examples for this definition. If two distinct elements of A map to the same element of B, this is not injective. However if those two A elements are equal to each other then it is injective: 
-</p>
-
-<ul class="org-ul">
-<li>A = {a, b, a} (function input)</li>
-<li>B = {1, 2} (output)
-<ul class="org-ul">
-<li>f(a) = 1</li>
-<li>f(b) = 2</li>
-<li>f(a) = 1 
-<ul class="org-ul">
-<li>but {a} = {a}, so f(a) = f(a) and this function is injective.</li>
-</ul></li>
-</ul></li>
-<li>A = {b, c}</li>
-<li>B = {2}
-<ul class="org-ul">
-<li>f(c) = 2</li>
-<li>f(b) = 2
-<ul class="org-ul">
-<li>but {c} doesn't equal {b} so this not injective</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-3.3.17 Onto functions, another <a href="https://youtu.be/c5shCGRMpcQ">tutorial</a> and for Remark 3.3.24 <a href="https://youtu.be/P9A4IrD_uBQ">here</a> is a tutorial for bijective inverse functions
-</p>
-</div>
-
-
-<div id="outline-container-Quiz%20Functions" class="outline-4">
-<h4 id="Quiz%20Functions">Quiz Functions</h4>
-<div class="outline-text-4" id="text-Quiz%20Functions">
-<p>
-Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%3A%20Functions">quiz</a> from Tao's analysis class. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-3.3%20Functions--Exercises" class="outline-4">
-<h4 id="3.3%20Functions--Exercises">Exercises</h4>
-<div class="outline-text-4" id="text-3.3%20Functions--Exercises">
-<p>
-All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
-</p>
-
-<details id="org7ac9cce">
-<p>
-All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
-</p>
-
-<ul class="org-ul">
-<li>Ex 3.3.1 was deleted in errata (See Tao's site)</li>
-<li>Ex 3.3.2 The proof for this is in the book <a href="https://infinitedescent.xyz/">https://infinitedescent.xyz/</a>.</li>
-<li>Ex 3.3.3 The empty function is always injective since it's 'vacuously true' that f(x) = f(x'). It is never surjective since there are no elements in the empty set that fit the surjective definition of every element in Y is a value of f(x) or y = f(x), and thus never bijective, since a function must be both injective and surjective to be bijective.</li>
-<li>Ex 3.3.4 The tilde hat thinghy is just notation for two different fuctions, like f and f'. Cancellation law means we're trying to prove two different functions are the same so g = g' and f = f'. If f and g are injective, then g(f(x)) = g(f'(x)) and f(x) = f'(x), and by one-to-one definition of injective functions f = f' (since f is g's input).  Surjective is similar, g(y) = g'f(x)) = g(f(x)) = g'(y) so g = g'. Does g need to be injective for this proof to always hold? Try corner case examples from the text, like if g = n<sup>2</sup>, then g(f(-1)) and g(f'(1)) have the same output, so two different inputs to g with same output means f(x) can't equal f(x') as per definition of one-to-one functions so we can't always derive f = f'.</li>
-<li>Ex 3.3.5 If f is injective in g(f(x)), then g doesn't need to be injective. Consider an example A = {1}, B = {2, 3}, and C = {4}. f(1) = g(2) = 4 so f is still injective. The difference in 3.3.4 is the wording 'show that these two input functions are always equal if g in injective' and the second question 'Is this still true if g is not injective?' which means a single case where if g is not injective, and we get two non distinct inputs that equal the same outputg, the whole proof is false whereas here we are asked 'must g always be injective' so just needa single case of not needing to be injective.</li>
-<li>Ex 3.3.6 Is described <a href="https://math.stackexchange.com/a/2865322">here</a> see Remark 3.3.24 if you forgot what an inverse function is. Note how the inverse of f and f cancel each other out.</li>
-<li>Ex 3.3.7 Similar to above and his association proof</li>
-</ul>
-</details>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Proof%20strategies" class="outline-3">
-<h3 id="Proof%20strategies">Proof strategies</h3>
-<div class="outline-text-3" id="text-Proof%20strategies">
-<p>
-Watch <a href="https://youtu.be/K0CoGGcLc1M?t=2161">this</a> starting @ 36:00, from 41:00+ he shows how he solves problems step by step, trying small cases to understand the problem better and poking at the problem enough to finally figure out a proof.  
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-3.4%20Images%20and%20inverse%20images" class="outline-3">
-<h3 id="3.4%20Images%20and%20inverse%20images">3.4 Images and inverse images</h3>
-<div class="outline-text-3" id="text-3.4%20Images%20and%20inverse%20images">
-<p>
-This is only casual reading, skip the exercises and return to do them when these topics come up again. 
-</p>
-
-<p>
-Chapter 3.4 of Tao's <i>Analysis I</i>. Example 3.4.5 makes more sense if you read Example 3.4.6 too, f<sup>-1</sup>({0,1,4}) is the set of everything that could result in {0,1,4} if f(x) = x<sup>2</sup>, so {-2,-1,0,1,2}. The rest of this chapter, if it doesn't make sense on first read search youtube ie: <a href="https://youtu.be/TDpQSa3hJRw">indexed sets</a>. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-3.5%20Cartesian%20products" class="outline-3">
-<h3 id="3.5%20Cartesian%20products">3.5 Cartesian products</h3>
-<div class="outline-text-3" id="text-3.5%20Cartesian%20products">
-<p>
-Again more casual reading, come back to do the exercises as needed.
-</p>
-
-<p>
-Another topic with plenty of youtube <a href="https://youtu.be/NnEkVooAsxk">tutorials</a>. Definition 3.5.7 notation for product is introduced, it looks complicated but all it's doing is specifying an index (i is greater or equal to 1, and less than or equal to n) and repeated cross product. The exercises some of the solutions are <a href="https://youtu.be/XmkGxHZDer8">walked through</a> on youtube. The cartesian plane itself is a cartesian product of R x R, you have tuples (x, y) or (x, y, z) so R x R x R. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-3.6%20Cardinality%20of%20sets" class="outline-3">
-<h3 id="3.6%20Cardinality%20of%20sets">3.6 Cardinality of sets</h3>
-<div class="outline-text-3" id="text-3.6%20Cardinality%20of%20sets">
-<p>
-Skip the exercises like the last two chapters, we just want to be familiar with the material. Reminder in the preface of this book, Tao himself advocates to skip the exercises as 'set theory is not essential for analysis' but it will be essential for us to understand numerous other math topics, at which time we can come back here. 
-</p>
-
-<p>
-A good <a href="https://youtu.be/JkOKMwRe4BE">tutorial</a>. Tao is using #(A) notation which means finite set cardinality, while |A| cardinality notation means infinite. There exists errata for the exercises specifically 3.6.8. The last exercise the <a href="https://www.youtube.com/watch?v=2-mxYrCNX60">pigeonhole principle</a> if set A has greater cardinality than B, then f(x) A -&gt; B can't be injective, since there would be two elements in A that point to a single element in B.  
-</p>
-</div>
-</div>
-</div>
-
 <div id="outline-container-Real%20Numbers" class="outline-2">
 <h2 id="Real%20Numbers">Real Numbers</h2>
 <div class="outline-text-2" id="text-Real%20Numbers">
@@ -2434,11 +2498,11 @@ Exercise 5.5.1 you can type into youtube 'proof of infinum' and get a dozen tuto
 <h3 id="5.6%20Real%20number%20exponents%20I">5.6 Real number exponents I</h3>
 <div class="outline-text-3" id="text-5.6%20Real%20number%20exponents%20I">
 <p>
-Finally we learn square roots. Depending on your copy of Tao's book there's some minor errata here to look up. Note in the proof of Lemma 5.6.8 he's using substitution, if \(y^a = x^{1/b'}\) then we can substitute them both for any occurences, such as \((y^{a})^{a'}\) = \((x^{1/b'})^{a'}\). Anytime in the future when you see some complicated nested square roots you can go back to this chapter and understand them. 
+Finally we learn square roots. Depending on your copy of Tao's book there's some minor errata here to look up. Note in the proof of Lemma 5.6.8 he's using equivalency replacement, if \(y^a = x^{1/b'}\) then we can replace them both for any occurences, such as \((y^{a})^{a'}\) = \((x^{1/b'})^{a'}\). Anytime in the future when you see some complicated nested square roots you can go back to this chapter and understand them. 
 </p>
 
 <p>
-Exercises 5.6.2 and 5.6.3 are simple and worth doing, using substitution to manipulate exponent laws. Exercise 5.6.3 that's the square root of x<sup>2</sup>, so x or using Lemma 5.6.6(g) or Lemma 5.6.9(b): \((x^{2/1})^{1/2}\) is \(x^{2/1 \cdot 1/2}\) which is x<sup>1</sup> or x. 
+Exercises 5.6.2 and 5.6.3 are simple and worth doing, using replacement to manipulate exponent laws. Exercise 5.6.3 that's the square root of x<sup>2</sup>, so x or using Lemma 5.6.6(g) or Lemma 5.6.9(b): \((x^{2/1})^{1/2}\) is \(x^{2/1 \cdot 1/2}\) which is x<sup>1</sup> or x. 
 </p>
 </div>
 </div>
@@ -2669,7 +2733,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="orge4b7f84">
+<details id="orge37e8f7">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2691,7 +2755,7 @@ Ex 6.1.5 Looking at Def 5.1.8 for a Cauchy sequence, for every possible positive
 </p>
 
 <p>
-Ex 6.1.6 prove prop 6.1.15. There is a long proof answer <a href="https://taoanalysis.wordpress.com/2020/05/31/exercise-6-1-6/">here</a> you probably want to try and understand but it's worth going back and seeing how he superceded the proofs of temporary constructions before. For example in remark 4.2.5 he defined the quotient x/y of two rationals then substituted in his temporary notation and definitions to prove the new notation and definitions led to the same conclusion, and thus could discard it and use the new notation. Here I did the same thing using 6.1.11 his proof that the limit of 1/n = 0 rewriting it using new limit notation, substituted in Cauchy/formal limits, came to the same conclusion and now I claim formal limits are 'genuine limits' and can toss that notation. I also used 6.1.11 as a concrete example to try his contradiction suggestion, assuming 1/n was not eventually &epsilon;-close to 0 and found it was much easier to prove that it had to converge to 0 thus be the genuine limit of 1/n. Is this correct? The proofs of all the limits can be found on YouTube if you're wondering.
+Ex 6.1.6 prove prop 6.1.15. There is a long proof answer <a href="https://taoanalysis.wordpress.com/2020/05/31/exercise-6-1-6/">here</a> you probably want to try and understand but it's worth going back and seeing how he superceded the proofs of temporary constructions before. For example in remark 4.2.5 he defined the quotient x/y of two rationals then substituted in his temporary notation and definitions to prove the new notation and definitions led to the same conclusion, and thus could discard it and use the new notation. Here I did the same thing using 6.1.11 his proof that the limit of 1/n = 0 rewriting it using new limit notation substituted in Cauchy/formal limits, came to the same conclusion and now I claim formal limits are 'genuine limits' and can toss that notation. I also used 6.1.11 as a concrete example to try his contradiction suggestion, assuming 1/n was not eventually &epsilon;-close to 0 and found it was much easier to prove that it had to converge to 0 thus be the genuine limit of 1/n. Is this correct? The proofs of all the limits can be found on YouTube if you're wondering.
 </p>
 
 <p>
@@ -2890,8 +2954,16 @@ At 13:31: the top 500 scores are only ~23 points out of 120 max possible points,
 </p>
 
 <p>
-Now we go through ideas, poking at the problem to solve it like p(1) to sum all the coefficients, a strategy to show all the integers are neither even nor odd so can't be rational. Notice how he's just abstracting away using boxes ignoring all the values. If you forgot what modular arithmetic is Wildberger also has a <a href="https://youtu.be/Sq_BmcmrQkk">lecture</a> for this in typical Wildberger style where he introduces the problem it's trying to solve, the history and then at around 11:43 the rules of k congruent to l mod m.
+Now we go through ideas, poking at the problem to solve it like p(1) to sum all the coefficients, a strategy to show all the integers are neither even nor odd so can't be rational. Notice how he's just abstracting away using boxes ignoring all the values. If you forgot what modular arithmetic is Wildberger also has a <a href="https://youtu.be/Sq_BmcmrQkk">lecture</a> for this in typical Wildberger style where he introduces the problem it's trying to solve, the history and then at around 11:43 the rules of k congruent to l mod m. A conceptual crash course is: consider an abstract system of the type (D, 0, successor) where D has two distinct objects 0 and 1, and let 0++ = 1 and 1++ = 0. This is called residues modulo 2. The natural numbers become this mod2 system when each natural number is replaced by it's remainder after division by 2:
 </p>
+
+<ul class="org-ul">
+<li>0/2 is remainder 0</li>
+<li>1/2 is remainder 1</li>
+<li>2/2 is remainder 0</li>
+<li>3/2 is remainder 1</li>
+<li>4/2 is remainder 0</li>
+</ul>
 
 <p>
 He cleared the fractions by multiplying the polynomial by c<sup>n</sup> which you can see <a href="https://en.wikipedia.org/wiki/Rational_root_theorem#Proofs">here</a> (rational root theorem), which makes sense if (b/c)<sup>n</sup> then it's (b<sup>n</sup>/c<sup>n</sup>) ie (3/4)<sup>2</sup> then 3/4 x 3/4 or 9/16. This introduction is worth rewatching a few times to learn how this style of problem solving works.
