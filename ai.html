@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-01-28 Thu 10:15 -->
+<!-- 2021-02-08 Mon 10:31 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>An Artificial Intelligence Curriculum</title>
@@ -262,6 +262,7 @@
 <li><a href="#Lecture%201%2015-251">Lecture 1 15-251</a></li>
 <li><a href="#Lecture%202%2015-251">Lecture 2 15-251</a></li>
 <li><a href="#Probability%20%26%20Markets">Probability &amp; Markets</a></li>
+<li><a href="#CMU%20Putnam%20Seminar">CMU Putnam Seminar</a></li>
 <li><a href="#Exercises">Exercises</a></li>
 </ul>
 </li>
@@ -287,25 +288,32 @@ I will go through some of the lectures and papers, and some of the prereqs like 
 <h3 id="Materials">Materials</h3>
 <div class="outline-text-3" id="text-Materials">
 <p>
-As I go I will choose various materials from the following list that will probably grow over time:
+We start with the following 3 courses:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.depthfirstlearning.com/">Depth First Learning</a> are curriculums built around a single paper. You can learn exactly how AlphaGo and other game solving techniques work, neural networks, different training methods. Many of these paper curriculums were funded by Jane Street Capital so have applications in quantitative finance.</li>
 <li>10-701 (Fall 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube recorded lectures and is CMU's graduate course in machine learning. The difference between CMU ML intro courses is <a href="https://docs.google.com/document/d/1Y0Jx_tcINWQrWJx31WGEQSsUs059OUMmPIVSeyxNdeM/edit">here</a>. It's also a survey of methods by current researchers so they will talk about the latest models and methods, what doesn't work for what.</li>
-<li>10-301/601 (Spring 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> also has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">recorded lectures</a> with highly polished slides and lectures.</li>
-<li>15-388 (2019) <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22618ea253-ca45-4b14-9f1d-aab501543bd2%22">Practical Data Science</a> another CMU course has good lectures to use as recitations for prereqs like linear algebra or probability, and the <a href="http://www.datasciencecourse.org/lectures/">notes</a> are in interactive jupyter notebooks you can view or run yourself as you read them.</li>
-<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">Machine Learning for Intelligent Systems</a> Cornell's intro ML class has the best instructor I find in terms of explaining the math notation, keeping on point (no long offtopic anecdotes), and has the best <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a>. This class only covers supervised learning which has overlap with unsupervised and reinforcement learning.</li>
-<li>Many book chapters, papers, guides all suggested by these courses&#x2026; primarily the Deep Learning book by Goodfellow, Mathematics for Machine Learning, and Strang's new Linear Algebra w/Deep Learning.</li>
-<li>A <a href="https://computationalthinking.mit.edu/Fall20/">course</a> on programming models so we can do things like import any Python or R library we want and use it, and learn how to optimize our programs when deploying them instead of every other ML curriculum that stops with the modeling and tells you nothing about GPUs or parallel deployment. You can of course use any language you want, even common <a href="https://github.com/numcl/numcl">lisp</a>.</li>
 </ul>
+<pre class="example" id="orge37bf11">
+Torrent for 10-701 lectures/assignments
+magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
+</pre>
 
-<p>
-Maybe try some AI competitions, like <a href="https://halite.io/">Halite</a>. 
-</p>
+<ul class="org-ul">
+<li>10-301/601 (Spring 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> also has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">recorded lectures</a> with highly polished slides and lectures.</li>
+</ul>
+<pre class="example" id="orgfd1ffe9">
+Torrent for 10-301/601 lectures/assignments
+magnet:?xt=urn:btih:2e1005d058b5f4c357d7338c85937aabdd91dcdc&amp;dn=10601
+</pre>
+
+<ul class="org-ul">
+<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">Machine Learning for Intelligent Systems</a> Cornell's intro ML class has the best instructor I find in terms of explaining the math notation, keeping on point (no long offtopic anecdotes), and has the best <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a>. This class only covers supervised learning which has overlap with unsupervised and reinforcement learning.</li>
+</ul>
 </div>
 </div>
 </div>
+
 
 <div id="outline-container-Start%20here" class="outline-2">
 <h2 id="Start%20here">Start here</h2>
@@ -374,7 +382,24 @@ The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.
 <h4 id="Probability%20%26%20Markets">Probability &amp; Markets</h4>
 <div class="outline-text-4" id="text-Probability%20%26%20Markets">
 <p>
-It may be helpful to see all these abstractions with concrete examples in the real world. This <a href="https://www.janestreet.com/probability-markets/">guide</a> here is for people applying to Jane Street as a quantitative trader which explains all these random modeling concepts in a different view that may make more sense. This is how you learn, seeing the same highly abstract model in multiple contexts to learn it's behavior, then doing exercises to confirm you understand the model. This pdf has confidence intervals (confidence regions) which we will <a href="http://bactra.org/prob-notes/srl.pdf">read</a> about soon.    
+It may be helpful to see all these abstractions with concrete examples in the real world. This <a href="https://www.janestreet.com/probability-markets/">guide</a> here is for people applying to Jane Street as a quantitative trader which explains all these random modeling concepts in a different view that may make more sense. This is how you learn, seeing the same highly abstract model in multiple contexts to learn it's behavior, then doing exercises to confirm you understand the model. This pdf has confidence intervals (confidence regions) which we will <a href="http://bactra.org/prob-notes/srl.pdf">read</a> about soon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-CMU%20Putnam%20Seminar" class="outline-4">
+<h4 id="CMU%20Putnam%20Seminar">CMU Putnam Seminar</h4>
+<div class="outline-text-4" id="text-CMU%20Putnam%20Seminar">
+<p>
+Watching an intro seminar on Probability <a href="https://youtu.be/3xNvjyufoUE">here</a>. Immediately we run into basic stats we haven't done, the Normal or bell curve, see section <a href="http://bactra.org/prob-notes/srl.pdf">6.2</a> in Shalizi's notes and this Wildberger <a href="https://youtu.be/80Lt--lex_M">lecture</a> on the normal distribution.
+</p>
+
+<p>
+He walks through a probability problem showcasing the benefits of independence. 
+</p>
+
+<p>
+TODO
 </p>
 </div>
 </div>
@@ -384,10 +409,10 @@ It may be helpful to see all these abstractions with concrete examples in the re
 <h4 id="Exercises">Exercises</h4>
 <div class="outline-text-4" id="text-Exercises">
 <p>
-Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. If you get stuck look at Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a> he walks through many of these proofs with visual diagrams. I'm also reading Knuth's <a href="https://libgen.is/book/index.php?md5=930D5B423E3648214E3600A761A11A11">chapter</a> on probability as I go through these. Try to explain everything to yourself like I've done here:
+Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. 
 </p>
 
-<details id="org20dff33">
+<details id="orgac9983d">
 <p>
 
 </p>
@@ -400,7 +425,7 @@ Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f1
 Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The sample space = {1,2,3,4,5,6}, and Pr[] function has the property that every probability in the sample space must add up to one, so the leaves of that tree would be probability 1/6 each and Pr[roll] = 1/6. Two dice the sample space is 6x6 with 36 total leaves as possible outcomes, each leaf with probabilty 1/36. The coin and dice example, sample space = {H,T} x {1,2,3,4,5,6} in my head I see a tree with Heads or Tails branches with 1/2 probability, and attached to each branch is the outcome of a 1/6 dice roll, so Pr[Coin,Dice] is 1/2 x 1/6 or 1/12 which makes sense since each branch will have 6 outcomes, and there's two branches for H or T, and all 12 outcomes must add up to 1. Here's the same example with a 3 sided die:
 </p>
 
-<pre class="example" id="orgf3efedf">
+<pre class="example" id="org2ad6a50">
        Bernoulli(1/2)
         /          \ 
   RandInt(3)     RandInt(3) 	
@@ -414,7 +439,7 @@ In this example it's 1/2 x 1/3, or 1/6 probability in each leaf, which again mak
 
 
 <p>
-Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. Notice we have 2 probability = 0 in that power set, as {H,T} is an impossible state (assuming you don't count a coin landing on it's side) and the empty set are both Pr = 0. An event is type set, so if you flipped the coin then the event that it lands on Tails is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Knuth describes this event set as a proposition. Everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. In Knuth's writeup he makes this more clear using notation to show an event is the sum of probabilities of all elements in Omega that are also in set E. 
+Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. Notice we have 2 probability = 0 in that power set, as {H,T} is an impossible state (assuming you don't count a coin landing on it's side) and the empty set are both Pr = 0. An event is type set, so if you flipped the coin then the event that it lands on Tails is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Don Knuth in <i>Mathematical Preliminaries Redux</i> describes this event set as a proposition: everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. In Knuth's writeup he makes this more clear using notation to show an event is the sum of probabilities of all elements in Omega that are also in set E. 
 </p>
 
 <p>
@@ -452,6 +477,9 @@ The rest of 15.9 is pretty obvious, make toy examples using the same sets from o
 
 <p>
 15.14 this is 1/3 x d again or 1/3d probability. As you can see from the solution, it's just plugging in event sets to the formula for Pr[A|B].
+</p>
+
+<p>
 TODO
 </p>
 </details>
