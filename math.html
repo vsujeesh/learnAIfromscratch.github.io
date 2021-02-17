@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-10 Wed 11:09 -->
+<!-- 2021-02-17 Wed 05:59 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -417,7 +417,6 @@
 <li><a href="#7.1%20Finite%20series">7.1 Finite series</a></li>
 <li><a href="#7.2%20Infinite%20series">7.2 Infinite series</a></li>
 <li><a href="#7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</a></li>
-<li><a href="#Infinite%20sets">Infinite sets</a></li>
 </ul>
 </li>
 <li><a href="#CMU%20Putnam%20Seminar">CMU Putnam Seminar</a>
@@ -428,7 +427,19 @@
 </ul>
 </li>
 <li><a href="#Calculus">Calculus</a></li>
-<li><a href="#Differentiation">Differentiation</a></li>
+<li><a href="#Differentiation">Differentiation</a>
+<ul>
+<li><a href="#Non-polynomial%20derivatives">Non-polynomial derivatives</a></li>
+<li><a href="#Polynomial%20derivatives">Polynomial derivatives</a></li>
+</ul>
+</li>
+<li><a href="#Discrete%20Math">Discrete Math</a>
+<ul>
+<li><a href="#Assignment%201">Assignment 1</a></li>
+<li><a href="#The%20Binomial%2FTrinomial%20Theorem">The Binomial/Trinomial Theorem</a></li>
+</ul>
+</li>
+<li><a href="#Daily%20Challenge">Daily Challenge</a></li>
 </ul>
 </li>
 </ul>
@@ -770,7 +781,7 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 <h3 id="Nature%20of%20mathematical%20logic">Nature of mathematical logic</h3>
 <div class="outline-text-3" id="text-Nature%20of%20mathematical%20logic">
 
-<figure id="org846aa24">
+<figure id="org28ddca9">
 <img src="./proofs.png" alt="proofs.png">
 
 <figcaption><span class="figure-number">Figure 1: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
@@ -1121,7 +1132,7 @@ Another way to think about order of the natural numbers, is because they are ind
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="orgac2218b">
+<details id="org389ab0c">
 <p>
 
 </p>
@@ -1329,7 +1340,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="orgede6fa9">
+<details id="org96d8b6c">
 <p>
 
 </p>
@@ -1576,7 +1587,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="org056c1f5">
+<details id="org9751adc">
 <p>
 
 </p>
@@ -1686,7 +1697,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="org2299f5b">
+<details id="orge46f54c">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -1787,7 +1798,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="org778cbf6">
+<details id="org8785ac8">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1889,7 +1900,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="org6cae8a9">
+<details id="org39ebc50">
 <p>
 
 </p>
@@ -2610,7 +2621,7 @@ As typical with Wildberger lectures this goes far into more advanced material li
 <h3 id="Finish%20this%20playlist">Finish this playlist</h3>
 <div class="outline-text-3" id="text-Finish%20this%20playlist">
 <p>
-At your leisure finish the rest of this series, we need to know eigenvalues, solving a system of linear equations, how row reduction/gaussian elimination works, rank, polynomials, and whatever you think is interesting. Everything in this series will come up later in machine learning courses esp gaussian elimination and we will do additional linear algebra courses but nobody explains it better than Wildberger does I find, for example the very first lecture on going from one basis to the next you will frequently see in the <i>Math for ML</i> book we do in the AI workshop later.  
+You can either finish this at your leisure or wait until we do the Putnam seminar and watch them when problems come up for linear algebra. 
 </p>
 </div>
 </div>
@@ -2753,7 +2764,7 @@ In Remark 6.1.9 we throw out the starting index, I also noticed he changed the i
 These exercises can wait until we do a calculus course
 </p>
 
-<details id="org2d06485">
+<details id="org2ee488c">
 <p>
 Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
 </p>
@@ -2934,15 +2945,6 @@ Just flip through the remainder of this chapter noting things you can always com
 </p>
 </div>
 </div>
-
-<div id="outline-container-Infinite%20sets" class="outline-3">
-<h3 id="Infinite%20sets">Infinite sets</h3>
-<div class="outline-text-3" id="text-Infinite%20sets">
-<p>
-Only skim through this chapter noting anything of interest, like countability. All we need to know is nat, int and rationals are all considered countable while the set of real numbers is not. The axiom of choice has an interesting writeup where Tao notes Godel's theorem which claims anything you prove with the axiom of choice will not contradict a proof made without using it, so long as the axioms of set theory are 'consistent'. Tao notes this axiom of choice short cut is used to avoid difficult/lengthy methods in analysis and the different schools of thought regarding this axiom are summarized <a href="https://cs.uwaterloo.ca/~alopez-o/math-faq/mathtext/node35.html">here</a>.
-</p>
-</div>
-</div>
 </div>
 
 <div id="outline-container-CMU%20Putnam%20Seminar" class="outline-2">
@@ -2953,7 +2955,7 @@ The rest of this workshop we follow Prof Loh's advice and do competitive math pr
 </p>
 
 <p>
-According to <a href="https://canvas.stanford.edu/courses/46752/pages/the-william-lowell-putnam-competition-and-the-polya-problem-solving-seminar">Stanford</a> "The competition emphasizes ingenuity rather than knowledge, so freshmen are not at much of a disadvantage compared to seniors" which we can translate to mean you don't need any advanced knowledge of uppergrad math just knowledge of how mathematical logic works.
+According to <a href="https://canvas.stanford.edu/courses/46752/pages/the-william-lowell-putnam-competition-and-the-polya-problem-solving-seminar">Stanford</a> "The competition emphasizes ingenuity rather than knowledge, so freshmen are not at much of a disadvantage compared to seniors".
 </p>
 </div>
 
@@ -2992,12 +2994,7 @@ He cleared the fractions by multiplying the polynomial by c<sup>n</sup> which yo
 <p>
 His other site Expii Solve has similar kinds of <a href="https://www.expii.com/solve/70/1">challenges</a> they start easy and get harder with links at the bottom of each question where to find background material, you may want to try those too they help you learn all kinds of topics such as spherical geometry, probability and even calculus. It's a community written site so kind of like math overflow where anybody can write a tutorial for a subject and these are upvoted if other people find them useful, which could be good or bad, a well written Tao-like fundamentals post would likely not be upvoted compared to some bag of tricks with a flashy youtube embed.
 </p>
-
-<p>
-Let's continue this seminar as we learn calculus because first we need to know what an integral is, the exponential function, analysis and optimization of functions, vector calculus and probability. What you got out of this was how to solve a problem by throwing out little ideas and then stringing them together to see what works. 
-</p>
 </div>
-
 
 <div id="outline-container-Introduction--Exercises" class="outline-4">
 <h4 id="Introduction--Exercises">Exercises</h4>
@@ -3014,17 +3011,8 @@ There are more <a href="https://www.math.cmu.edu/~ploh/docs/math/2020-295/01-int
 <h3 id="Calculus">Calculus</h3>
 <div class="outline-text-3" id="text-Calculus">
 <p>
-Let's learn some calculus as an extension to the Putnam seminar. You will be surprised by how easy it is to follow along first year university calculus lectures without being confused now that you've developed basic mathematical thinking. Refer to the first few Wildberger notes like his laws of <a href="#Division">division</a> as you watch these. As you go through these lectures, stop it whenever the prof sets up a problem and asks the audience 'how are we going to do this?' and then follow what you just saw in the first Putnam lecture: try to figure it out yourself either in geometry context of these courses, Tao's book or Wildberger's algebraic calculus <a href="https://www.openlearning.com/courses/algebraic-calculus-one/?cl=1">course</a>.
+Let's learn some basic geometric derivatives as they will be required for the Putnam seminar. This will also prove to you that you can already do any calculus course you want. If you want a full, typical university calculus sequence then try (workshop todo). 
 </p>
-
-<p>
-Materials:
-</p>
-
-<ul class="org-ul">
-<li>MIT's 18.01 Scholar version <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/">here</a> which is the same as the 2006 version but with lectures cut into smaller segments, and added recitation videos and assignments.</li>
-<li>(Optional) Wildberger's <a href="https://www.openlearning.com/courses/algebraic-calculus-one/?cl=1">Algebraic Calculus One</a> course to see what rational analysis looks like</li>
-</ul>
 </div>
 </div>
 
@@ -3032,19 +3020,27 @@ Materials:
 <h3 id="Differentiation">Differentiation</h3>
 <div class="outline-text-3" id="text-Differentiation">
 <p>
-Let's begin, watching the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first</a> lecture. If you've never seen cartesian coordinates before Wildberger will show the benefits of such a system in the first minute or so of this <a href="https://youtu.be/a6Pk-kbzhxA">lecture</a> and there's a course <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/readings/course-reader/">reader</a> the first reading is how to graph functions and move them around which is what you think it is, if you add a displacement to the input x then the y coordinate also moves. 
+A derivative tells you what is happening at one point x of space or at one moment t of time. If dy/dx is &gt; 0 or df/dx &gt; 0 then either y (the graph) or f (function) is increasing. The derivative's origins are the problem of finding a tangent to a given curve and the problem of finding the velocity given the position over time. 
 </p>
 
 <p>
-Watching the MIT lecture, note the point x<sub>0</sub> just means 'a fixed point on the x axis' so it's a placeholder/variable for any arbitrary point on the x axis. In these lectures y = f(x) as we are on the (x, y) coord plane so if you see a function in the tuple like (x, f(x+thing)) since y = f(x) it will produce (x, y=x+thing).
+Let's begin, watching the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first</a> lecture. There's a course <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/readings/course-reader/">reader</a> how to graph functions and move them around which is what you think it is, if you add a displacement to the input x then the y coordinate also moves. Watching the MIT lecture, note the point x<sub>0</sub> just means 'a fixed point on the x axis' so it's a placeholder/variable for any arbitrary point on the x axis. 
 </p>
 
 <p>
-At around 17:40 or so pause this lecture to find out what he means by 'the limit delta-x goes to zero' it means that tiny delta-x displacement moving towards x<sub>0</sub>, which is it's zero point since it begins at x<sub>0</sub>. This is visualized <a href="https://youtu.be/kfF40MiS7zA">here</a>. Keep watching for about 8 minutes where he points out the graph has a hole at certain values when taking limits (since 0/0) then go back to the MIT lecture, we already know exactly how limits are constructed. 
+At around 17:40 or so pause this lecture to find out what he means by 'the limit delta-x goes to zero' it means that tiny delta-x displacement moving towards x<sub>0</sub>, which is it's zero point since it begins at x<sub>0</sub>. This is visualized <a href="https://youtu.be/kfF40MiS7zA">here</a>.
 </p>
 
 <p>
-There was a pretty good breakdown of finding the derivative of 1/x. He only used Wildberger algebra from the very first lectures of this workshop recall the laws of division: \(\frac{k/m}{n}\) = \(\frac{k}{mn}\) and he used the distributed law to factor out the 1/delta-x so it became 1/n(k/m).
+Delta-Y/Delta-X the alternative notation, why is y in the numerator? Because (f(x<sub>0</sub>) - f(x)) is (y<sub>0</sub> - y) the output of those functions. 
+</p>
+</div>
+
+<div id="outline-container-Non-polynomial%20derivatives" class="outline-4">
+<h4 id="Non-polynomial%20derivatives">Non-polynomial derivatives</h4>
+<div class="outline-text-4" id="text-Non-polynomial%20derivatives">
+<p>
+The lecture continues with a good breakdown of finding the derivative of 1/x, which is a rational function and not a polynomial. It is the inverse to x<sup>n</sup> which is a polynomial. He only used Wildberger algebra from the very first lectures of this workshop recall the laws of division: \(\frac{k/m}{n}\) = \(\frac{k}{mn}\) and he used the distributed law to factor out the 1/delta-x so it became 1/n(k/m).
 </p>
 
 <p>
@@ -3092,9 +3088,6 @@ There was a pretty good breakdown of finding the derivative of 1/x. He only used
 </ul></li>
 </ul>
 
-<p>
-He used a much faster way to reason this algebra but he's had years of practice you eventually pick up his style of quick algebra which is why we are doing this course, to practice.
-</p>
 
 <p>
 The last area calculation:
@@ -3116,8 +3109,83 @@ The last area calculation:
 </ul>
 
 <p>
-You can read all this in the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/lecture-notes/lec1.pdf">notes</a> though they don't really explain steps, expecting you to figure it out. Reminder this is the geometric interpretation of a derivative, we will see later that it all just ends up being limits and you can discard the axioms of geometry. End of this lecture is the derivative nx<sup>n-1</sup>, the 'junk' notation of \(O(\Delta x)^2\) is a bound anything squared or bigger is too small to care about, and since delta-x goes to 0, so once you substitute in 0 for delta-x that term disappears. These kinds of limits are in the next lecture.
+You can read all this in the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/lecture-notes/lec1.pdf">notes</a> though they don't really explain steps, expecting you to figure it out. Reminder this is the geometric interpretation of a derivative being used to find a tangent. There exists other interpretations of what a derivative is like velocity or a limit.  
 </p>
+</div>
+</div>
+
+<div id="outline-container-Polynomial%20derivatives" class="outline-4">
+<h4 id="Polynomial%20derivatives">Polynomial derivatives</h4>
+<div class="outline-text-4" id="text-Polynomial%20derivatives">
+<p>
+The polynomial y = x<sup>n</sup> and it's derivative nx<sup>n-1</sup>, the 'junk' notation of \(O(\Delta x)^2\) is a bound meaning anything squared or larger is discarded, and since delta-x goes to 0, so once you substitute in 0 for delta-x that term disappears.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Discrete%20Math" class="outline-3">
+<h3 id="Discrete%20Math">Discrete Math</h3>
+<div class="outline-text-3" id="text-Discrete%20Math">
+<p>
+CMU's 21-228 Discrete Mathematics course is being live streamed this semester <a href="https://youtu.be/0K540qqyJJU">here</a>. The class <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">page</a> advises using the book <i>Discrete Mathematics</i> by L. Lovász, J. Pelikán, and K. Vesztergombi as optional reading if you want further clarification of whatever comes up in lectures.
+</p>
+
+<p>
+I'm adding it into the daily problem set because why not, it's combinatorics not requiring much background. Let's start with the first <a href="https://youtu.be/0K540qqyJJU">lecture</a> which as I write this, begins a live stream in 20 minutes. He's breaking down some elementary combinatorics problems to show the logic of solving them. The first one he did in reverse.  @37:40 why does the last digit have to be even? Because it's supposed to be an even 4-digit number so ending in 0, 2, 4, 5, 8. The general form is crazy but he did it by writing down a table of one digit numbers, two digits .. n + 1 digits to find the general pattern.
+</p>
+</div>
+
+<div id="outline-container-Assignment%201" class="outline-4">
+<h4 id="Assignment%201">Assignment 1</h4>
+<div class="outline-text-4" id="text-Assignment%201">
+<p>
+Let's try some of the <a href="https://www.math.cmu.edu/~ploh/docs/math/2021-228/hw1.pdf">assignments</a>.
+</p>
+
+<p>
+1.) The first is a symmetric difference assignment which is defined <a href="https://en.wikipedia.org/wiki/Symmetric_difference">here</a>. Look under properties, the answer is there 'from the property of the inverses in a Boolean group, it follows&#x2026;'. We can eliminate B and are left with:
+</p>
+
+<p>
+(A \(\triangle\) C) \(\triangle\) (C \(\triangle\) A) and from that same article, we can eliminate C so are left with A \(\triangle\) A which is just the empty set.  
+</p>
+
+<p>
+2.) We have a general set bigger than 3, and we need to know how many contain permutations of only: {1, 2}, {1, 3}, {2, 3}. What if the set is {1,2,3,4}? or 2<sup>4</sup> subset, how many will include 2 of our numbers of the 16 generated subsets? Let's find out: Using some free powerset 'calculator' I randomly googled, I count 6 occurences for 2<sup>4</sup>, 12 occurences for 2<sup>5</sup>. So we have 3, 3x2, 3x2x2 and I'm going to assume 2<sup>6</sup> will be 3x2x2x2 occurences or 24. This pattern looks like 3 x 2<sup>n-3</sup> for n \(\ge\) 3 and if you were to prove this, the inductive n + 1 step is: 3 x 2<sup>n+1-3</sup> which is what we want, input power of 5 and the successor (n+1-3) is power of 6 with 3x2x2x2.    
+</p>
+
+<p>
+3.) Do you remember the Wildberger <a href="https://youtu.be/h0Woqc_5qUE?t=270">lectures</a> on Pascal's Array on the number of paths to the binomial coefficient in other words <a href="https://youtu.be/9txb9FgLDNY">n choose k</a>? Think about paths on a grid and how to exclude one point, all of this is in the course book which is your reference to help solve these problems, not something you have to read end to end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-The%20Binomial%2FTrinomial%20Theorem" class="outline-4">
+<h4 id="The%20Binomial%2FTrinomial%20Theorem">The Binomial/Trinomial Theorem</h4>
+<div class="outline-text-4" id="text-The%20Binomial%2FTrinomial%20Theorem">
+<p>
+Wildberger has an extended lecture <a href="https://youtu.be/V2mk24udsMw">here</a> constructing the notation for n choose k from scratch. 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-Daily%20Challenge" class="outline-3">
+<h3 id="Daily%20Challenge">Daily Challenge</h3>
+<div class="outline-text-3" id="text-Daily%20Challenge">
+<p>
+Now this workshop is a problem per day, get the second edition <i>Putnam and Beyond</i> by Gelca and Andreescu from <a href="https://libgen.is/book/index.php?md5=DE63F2E34FF5C055F381084C79FB56F9">library genesis</a>. These will be hard but not impossible problems, I'll throw in Poh-Shen Loh's Discrete Mathematics course materials and lectures as well since they are the exact same style. <i>Putnam and Beyond</i> is a great book as it will fill in all the blanks for algebra, geometry, calculus, combinatorics, probability and number theory. Every problem in the book has a fully worked out solution but as per Poh-Shen Loh's advice we should spend a long time thinking how to solve these ourselves before looking at the solution or you will get nothing out of this material. By long he means 'a day or more'.
+</p>
+
+
+
+
+
+
+
+
 
 <hr>
 <p>
