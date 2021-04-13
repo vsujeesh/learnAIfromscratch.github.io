@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-08 Mon 10:31 -->
+<!-- 2021-04-12 Mon 18:19 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>An Artificial Intelligence Curriculum</title>
+<title>Artificial Intelligence</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -245,250 +245,187 @@
 <body>
 <div id="content">
 <header>
-<h1 class="title">An Artificial Intelligence Curriculum</h1>
+<h1 class="title">Artificial Intelligence</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a>
+<li><a href="#Courses">Courses</a>
 <ul>
-<li><a href="#Materials">Materials</a></li>
+<li><a href="#Books">Books</a></li>
+<li><a href="#Papers">Papers</a></li>
 </ul>
 </li>
-<li><a href="#Start%20here">Start here</a>
+<li><a href="#Lectures%201">Lectures 1</a>
 <ul>
-<li><a href="#Probability">Probability</a>
-<ul>
-<li><a href="#Lecture%201%2015-251">Lecture 1 15-251</a></li>
-<li><a href="#Lecture%202%2015-251">Lecture 2 15-251</a></li>
-<li><a href="#Probability%20%26%20Markets">Probability &amp; Markets</a></li>
-<li><a href="#CMU%20Putnam%20Seminar">CMU Putnam Seminar</a></li>
-<li><a href="#Exercises">Exercises</a></li>
-</ul>
-</li>
+<li><a href="#Probability">Probability</a></li>
+<li><a href="#Reading">Reading</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-Intro" class="outline-2">
-<h2 id="Intro">Intro</h2>
-<div class="outline-text-2" id="text-Intro">
+<div id="outline-container-Courses" class="outline-2">
+<h2 id="Courses">Courses</h2>
+<div class="outline-text-2" id="text-Courses">
 <p>
-This is a self-directed workshop to learn machine learning, neural networks, autonomous agents and whatever else we can find. Like the other two workshops on <a href="https://learnaifromscratch.github.io/math.html">math</a> and <a href="https://learnaifromscratch.github.io/software.html">computer science</a> this is a course built around courses. Self-directed means choose your own curriculum. I'll audit resources and you can decide to take it yourself or not. My interest will be: learning some of the popular current models and methods for learning, how to <a href="https://mitmath.github.io/18337/">optimize</a> these models and deploy them, and <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034#Prospectus">criticism</a> of the current state of AI to see if there's something else we should be trying.
-</p>
-
-<p>
-I will go through some of the lectures and papers, and some of the prereqs like picking up probability, matrix manipulations, calculus. You can then figure the rest out yourself easily really the only issue is getting to a level where all these abstract models and notation make sense then you can coast to the finish line. 
-</p>
-</div>
-
-<div id="outline-container-Materials" class="outline-3">
-<h3 id="Materials">Materials</h3>
-<div class="outline-text-3" id="text-Materials">
-<p>
-We start with the following 3 courses:
+Sometimes watching the lectures is necessary since the prof will sketch out an algorithm that isn't in the slides  
 </p>
 
 <ul class="org-ul">
-<li>10-701 (Fall 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube recorded lectures and is CMU's graduate course in machine learning. The difference between CMU ML intro courses is <a href="https://docs.google.com/document/d/1Y0Jx_tcINWQrWJx31WGEQSsUs059OUMmPIVSeyxNdeM/edit">here</a>. It's also a survey of methods by current researchers so they will talk about the latest models and methods, what doesn't work for what.</li>
+<li>10-701 (Fa 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube lectures</li>
+<li>10-301/601 (Sp 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">lectures</a></li>
+<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">ML for Intelligent Systems</a> YouTube lectures w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a></li>
+<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats
+<ul class="org-ul">
+<li>a geometric explanation</li>
+</ul></li>
 </ul>
-<pre class="example" id="orge37bf11">
+
+<p>
+Some backups  
+</p>
+<pre class="example" id="orgdd9f6a3">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
-</pre>
 
-<ul class="org-ul">
-<li>10-301/601 (Spring 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> also has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">recorded lectures</a> with highly polished slides and lectures.</li>
-</ul>
-<pre class="example" id="orgfd1ffe9">
 Torrent for 10-301/601 lectures/assignments
 magnet:?xt=urn:btih:2e1005d058b5f4c357d7338c85937aabdd91dcdc&amp;dn=10601
 </pre>
+</div>
+
+<div id="outline-container-Books" class="outline-3">
+<h3 id="Books">Books</h3>
+<div class="outline-text-3" id="text-Books">
+<p>
+The courses do not follow a single book and recommend the following, many are free or try <a href="https://en.wikipedia.org/wiki/Library_Genesis">libgen</a>:
+</p>
 
 <ul class="org-ul">
-<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">Machine Learning for Intelligent Systems</a> Cornell's intro ML class has the best instructor I find in terms of explaining the math notation, keeping on point (no long offtopic anecdotes), and has the best <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a>. This class only covers supervised learning which has overlap with unsupervised and reinforcement learning.</li>
+<li><i>Machine Learning A Probabilistic Perspective</i> by Kevin Murphy
+<ul class="org-ul">
+<li>2021 <a href="https://probml.github.io/pml-book/book1.html">draft</a> is free &amp; includes Jupyter <a href="https://github.com/probml/pyprobml/tree/master/book1">notebooks</a> for each chapter</li>
+</ul></li>
+<li><i>Pattern Recognition and Machine Learning</i> by Bishop is free <a href="https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/">here</a></li>
+<li><i>Machine Learning</i> by Tom Mitchell w/ <a href="http://www.cs.cmu.edu/%7Etom/NewChapters.html">new</a> chapters</li>
+<li><i>The Elements of Statistical Learning</i> is <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">free</a></li>
+</ul>
+
+<p>
+General modeling books   
+</p>
+<ul class="org-ul">
+<li><i>Mathematical Modeling and Applied Calculus</i> reviewed <a href="https://www.maa.org/press/maa-reviews/mathematical-modeling-and-applied-calculus">here</a></li>
+<li><i>Principles of Applied Statistics</i> by Cox/Donnelly reviewed <a href="http://bactra.org/reviews/cox-donnelly.html">here</a></li>
+</ul>
+
+<p>
+Mathematics reference
+</p>
+<ul class="org-ul">
+<li><i>Mathematics for Machine Learning</i> by Deisenroth/Faisal/Ong is <a href="https://mml-book.github.io/">free</a></li>
 </ul>
 </div>
 </div>
+
+<div id="outline-container-Papers" class="outline-3">
+<h3 id="Papers">Papers</h3>
+<div class="outline-text-3" id="text-Papers">
+<ul class="org-ul">
+<li>Depth First Learning builds <a href="https://www.depthfirstlearning.com/">curriculums</a> around papers to understand them</li>
+<li>MIT's graduate section for 6.034 on interesting AI <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034">papers</a></li>
+</ul>
+
+<blockquote>
+<p>
+"Recent astonishing progress in "machine learning" has eclipsed much of the traditional work on symbolic thinking. But problems remain: the systems that result from work on machine learning research have no concept of meaning&#x2013;the "words" do not have referents outside of the ways in which they are used. Such systems may perform well on many tasks but they do not smoothly interface with systems that are organized around modeling the world, which is probably essential to solving really deep problems of common sense and science." - <a href="https://ai6034.mit.edu/wiki/index.php?title=6.S966:_A_Graduate_Section_for_6.034">Gerald Sussman</a>
+</p>
+</blockquote>
+</div>
+</div>
 </div>
 
 
-<div id="outline-container-Start%20here" class="outline-2">
-<h2 id="Start%20here">Start here</h2>
-<div class="outline-text-2" id="text-Start%20here">
+<div id="outline-container-Lectures%201" class="outline-2">
+<h2 id="Lectures%201">Lectures 1</h2>
+<div class="outline-text-2" id="text-Lectures%201">
 <p>
-Let's audit the first intro lecture for CS4780, 10-701, and 10-601. The learning goals of 10-601 are <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-objectives.pdf">here</a>, it's first lecture primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. Most of this lecture and 10-701 are course logistics, you can watch both in under 30mins skipping the logistics.
+Let's audit the first intro lectures for CS4780, 10-701, and 10-601.
+</p>
+
+
+<p>
+10-601 primarily talked about history of ML like expert systems and why they failed. We learn the brief difference between regression output, probability output and classification. Most of this lecture is course logistics you can skip.
 </p>
 
 <p>
-10-701 when you get past course logistics talks about how ML methods change often, there was a breakthrough in neural networks recently so now it's all about neural networks, we used to heavily use kernel methods and now not as much. We could use convex optimization back then and now things are much more non-convex.  
+10-701 when you get past course logistics talks about how machine learning constantly changes, there was a breakthrough in neural networks recently so now it's all about neural networks, we used to heavily use kernel methods and now do not. We could use convex optimization in the past and now things are much more non-convex.  
 </p>
 
 <p>
-Meanwhile in CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,-1). So using his patient data vector example, Y would be binary 0 or 1 to represent yes or no. X is all the feature set of a patient and D is the total training data set of all possible combinations of feature set with yes and no.
+CS4780 the <a href="https://youtu.be/MrLPzBxG95I">intro</a> lecture jumps into supervised learning setup, explaining the math notation. His high level explanation of how machine learning works: insert data, insert expected output, generate program. At 32:00 the supervised learning intro begins. Lecture notes are <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">here</a>. He uses arrows on top of the notation to denote vectors. Look up what <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">iid</a> is: "all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples". \(D = \{ (x_{i}, y_{i})....(x_{n},y_{n}) \}\) is a subset of XY meaning a cartesian product of every single combination of X (features) with Y (labels), like the cartesian coordinates in a x and y graph, you can combine any one of them to form a point: (0,1) or (100,-1), so using his patient data vector example: Y would be binary 0 or 1 to represent yes or no, X is the feature set of a patient and D is the total training data set of all possible combinations of feature set with yes and no.
 </p>
 
 <p>
-You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> or going through the math workshop, which also covers what a vector is.
+You can learn basic set theory by typing it into <a href="https://www.youtube.com/watch?v=59WX2V7Vjgg">YouTube</a> and vectors are covered in the reading, or the book <i>Mathematical Modeling and Applied Calculus</i> from the beginning of these notes.
 </p>
 </div>
+
 <div id="outline-container-Probability" class="outline-3">
 <h3 id="Probability">Probability</h3>
 <div class="outline-text-3" id="text-Probability">
-<blockquote>
 <p>
-"Probability = analyzing random code"
-</p>
-</blockquote>
-
-<p>
-We will start with <a href="https://youtu.be/gtNNEPuyVXo">Probability 1</a> and some of <a href="https://youtu.be/p7fqy9FLA8A">Probability 2</a> lectures taught by Ryan O'Donnell, the full notes with exercises are <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a> to practice after, and the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. We will use that understanding to level up to Cozma Shalizi's <a href="http://bactra.org/prob-notes/srl.pdf">notes</a> on probability and statistics, watch some Wildberger stats <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">lectures</a>, finally trying the chapter on probability from the math for ML <a href="https://mml-book.github.io/">book</a> and Knuth's <a href="https://libgen.is/book/index.php?md5=930D5B423E3648214E3600A761A11A11">draft chapter</a> on probability from <i>Mathematical Preliminaries Redux</i> because there is a lot of confusing notation, so practice with this framework will help us understand it.  
-</p>
-</div>
-
-<div id="outline-container-Lecture%201%2015-251" class="outline-4">
-<h4 id="Lecture%201%2015-251">Lecture 1 15-251</h4>
-<div class="outline-text-4" id="text-Lecture%201%2015-251">
-<p>
-I'm watching the 2013 15-251 YouTube lecture and the 2015 Panopto version <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a3880a8-fbf8-4c10-8ebb-a7ca8360a0ba&amp;start=undefined">here</a> with unobstructed slides, and the lecture clarifies things better than the 2013 lecture, though the notes for the course cover everything. In the 2013 YouTube lecture we are interrupted by an ancient <a href="https://youtu.be/DFB4Iw7BHoU">meme</a>. The probability tree, if you haven't figured it out you start with 1/2 up top and now each outcome must add up to 1, so RandInt(3) left side is 3/6 or 1/2, which when combined with Bernoulli(1/2) is 1. The term <i>notation overload</i> means multiple definitions for the same notation, hoping you derive from context which definition the notation is using.
-</p>
-
-<p>
-The 2015 Panopto lecture at 27:05 explains the "I will roll two dice 24 times. I win if I get a double-1s" better than the 2013 lecture. There are 36 outcomes each time he rolls 2 dice ie: outcome: 1,1 or 1,2 or 1,3 or 1,4 or 1,5 or 1,6. If you draw a tree this will end up being 36 total outcomes with each roll since 6x6. Remove the single outcome where it comes up 1,1, so 35/36 outcomes per roll and there is 24 rolls. Subtract that from the total probability of 1 in other words the \(Pr[W^{c}]\) compliment definition. The silver and gold coin problem you will get right away as 2/3 probability if you've ever seen those Monty Hall probability <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-18-probability-introduction/">lectures</a> from MIT's 6.042J except here I find it's explained better, later in the lecture he explains why he doesn't teach the Monty Hall example.  
-</p>
-
-<p>
-2015 lecture for independence of multiple events, the big union or 'and' notation \(\bigcup\) or the \(\prod\) product notation means as you iterate through a sequence like \(Pr[A_1]\) to \(Pr[A_5]\), you insert that operation between each value ie for intersection: \(Pr[A_1] \cap Pr[A_2] \cap Pr[A_3]\) or \(Pr[A_1] \cdot Pr[A_2] \cdot.. Pr[A_i]\).
+Wildberger's probability lecture <a href="https://youtu.be/siXj4hkUIp8">ProbStats5: Random variables</a> will explain notation like \(X^{-1}(x_i)\). A random variable is a function over the sample space that returns a real number and he geometrically demonstrates this function. Expected value E(x) is demonstrated as the mean, variance Var(x) is demonstrated as the distance between probabilities and the mean, and standard derivation SD(x) turns the variance from quadratic to linear. Probability is covered extensively by all the books the courses recommend but this is a nice lecture to visualize a random variable and all the other Wildberger lectures are similar first presenting a visualization of the theory then examples.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Lecture%202%2015-251" class="outline-4">
-<h4 id="Lecture%202%2015-251">Lecture 2 15-251</h4>
-<div class="outline-text-4" id="text-Lecture%202%2015-251">
+<div id="outline-container-Reading" class="outline-3">
+<h3 id="Reading">Reading</h3>
+<div class="outline-text-3" id="text-Reading">
 <p>
-Random variables are explained as whatever the value that variable has at the end of computation. Random variables are a function from the sample space to the real numbers. Any function you obtain from an existing random variable is another random variable as described in this MIT <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/unit-i/lecture-5/">lecture</a> you have Omega = set of all students, a function from one student in the Omega set to their height in inches is a random variable (sample set to real number). A new function from their height in inches to their height in cms is another random variable. Tao's discrete probability foundations <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a> explain this concept as a way to extend the sample space by creating a new sample space with new probabilities, much like how you would change basis in linear algebra.    
+Let's skim chapter 8.1 <i>When Models Meet Data</i> of the <a href="https://mml-book.github.io/">mml book</a>. We take tabular data, represent it as a vector with N rows (samples) and D columns (features). Once we have a vector representation we can use concepts from linear alegbra to manipulate it, and to compare it to another vector by constructing a geometry we can run optimizations on. We read about different ways to construct new features and that increasingly neural networks are used to learn new features which was mentioned in the first lecture of 10-701. There are two schools: machine learning where the predictor is a function or a probability model, we will mainly be covering the probability model in 10-601/701. In 8.1.4 the goal is to construct a model so that it's parameters will perform well on new unseen data.
 </p>
 
 <p>
-The YouTube version is the same as the Panopto 2015 <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4ef6eb2-870e-4526-bdd8-79654572583a&amp;start=undefined">version</a>. Linearity of Expectation proofs he's just using distributive property to move stuff around, E[aX + b] is the same as (a(E[X]) + b) because these are linear/scaling operations. Note around 35:00 where he makes a comment about understanding the types: an event space can't be summed because it's a set, the indicator can be summed because it is 0 or 1, type real number. The last 10 minutes or so of this lecture you can optionally watch, he uses a graph coloring problem and talks about satisfiability, both explained in previous lectures if you're interested.
-</p>
-</div>
-</div>
-
-<div id="outline-container-Probability%20%26%20Markets" class="outline-4">
-<h4 id="Probability%20%26%20Markets">Probability &amp; Markets</h4>
-<div class="outline-text-4" id="text-Probability%20%26%20Markets">
-<p>
-It may be helpful to see all these abstractions with concrete examples in the real world. This <a href="https://www.janestreet.com/probability-markets/">guide</a> here is for people applying to Jane Street as a quantitative trader which explains all these random modeling concepts in a different view that may make more sense. This is how you learn, seeing the same highly abstract model in multiple contexts to learn it's behavior, then doing exercises to confirm you understand the model. This pdf has confidence intervals (confidence regions) which we will <a href="http://bactra.org/prob-notes/srl.pdf">read</a> about soon.
-</p>
-</div>
-</div>
-
-<div id="outline-container-CMU%20Putnam%20Seminar" class="outline-4">
-<h4 id="CMU%20Putnam%20Seminar">CMU Putnam Seminar</h4>
-<div class="outline-text-4" id="text-CMU%20Putnam%20Seminar">
-<p>
-Watching an intro seminar on Probability <a href="https://youtu.be/3xNvjyufoUE">here</a>. Immediately we run into basic stats we haven't done, the Normal or bell curve, see section <a href="http://bactra.org/prob-notes/srl.pdf">6.2</a> in Shalizi's notes and this Wildberger <a href="https://youtu.be/80Lt--lex_M">lecture</a> on the normal distribution.
+What is a parameter? In the chapter on vector calculus, these are described as 'an optimization problem: find parameters that control how well a model explains the data' and there is a concrete example of a curve model of training data, where at each observation we want to find parameters that explain the observations basically finding a signal in noise. Skimming through chapter 7 of <i>Principles of Applied Statistics</i> on criteria for parameters: "we aim to summarize the aspects of interest by parameters, preferably small in number and formally defined as properties of the probability model". There's some examples here like a pipe with water flowing through it, if you take measurements what is the minimum amount of measurements to include as parameters to your water pipe model that best describes the observations like velocity, the area inside the pipe, the viscosity of the water (feature set). The choice of regression model is explained as the search for a model with as few explanatory variables as necessary to give an adequate empirical fit to the data where overfitting means your model too closely resembles the sample and can't be generalized. 
 </p>
 
 <p>
-He walks through a probability problem showcasing the benefits of independence. 
+Let's also skim the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i>. Each chapter also has a colab notebook you can run <a href="https://github.com/probml/pyprobml/tree/master/book1">here</a> in Python. This is a terse survey of what we are about to take in detail and much of this is what we just saw in CS4780's first lecture. All of these stats functions exist as libraries in programming language of choice.
 </p>
 
 <p>
-TODO
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Exercises" class="outline-4">
-<h4 id="Exercises">Exercises</h4>
-<div class="outline-text-4" id="text-Exercises">
-<p>
-Let's try some of the exercises <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_all_but_sols.pdf">here</a>, then compare to the <a href="https://www.anilada.com/courses/15251f17/www/notes/notes_exs_sols.pdf">solutions</a>. 
-</p>
-
-<details id="orgac9983d">
-<p>
-
+Reading 1.2 <i>Supervised Learning</i>, if you took the compsci <a href="https://learnaifromscratch.github.io/software.html">workshop</a> you know exactly what tabular data and fixed-size feature representation is as it was the first assignment we did turning documents into vectors and <a href="https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations/programming-vectors/a/vector-magnitude-normalization">normalizing</a>. The 'design matrix' example in Murphy's book notes that this is what <i>big data</i> means because N (150 rows) is greater than D (4 columns), the number of features. Figure 1.4 we have simple if-else statements represented as a decision tree, value = [0, 49, 5] for versicolor means our decision tree only correctly labelled 49 versicolors and mislabelled 5 virginica. 
 </p>
 
 <p>
-15.1 A discrete probability space, Omega or \(\Omega\), is modeled as a tuple: (Omega, Pr[]). A tuple is another name for an ordered list, ie: a data structure in math. This tuple is a framework to model non-deterministic statements, meaning they have indeterminate state as explained by Terence Tao <a href="https://terrytao.wordpress.com/2015/09/29/275a-notes-0-foundations-of-probability-theory/">here</a>. Omega is type set, called a sample space, with Pr[] being type function that maps a real number between 0 and 1 to everything in the set Omega. The total sum of the Omega sample space is 1 as it would make no sense for our probability model to have negative probability, and make no sense to have probability greater than one: either the event will surely happen with probability 1, or not happen with probability 0, or possibly happen with probability from 0 to 1.       
+The decision rule function f(x;theta), I read it as x is the input, consuming that entire table of data for the flowers as a vector, and theta (the parameters) are features and their threshold to define the decision function like feature 'petal-length' &lt;= 2.45.
 </p>
 
 <p>
-Exercise 15.4, how do we model rolling a 6-sided die using 15.1 definition. The sample space = {1,2,3,4,5,6}, and Pr[] function has the property that every probability in the sample space must add up to one, so the leaves of that tree would be probability 1/6 each and Pr[roll] = 1/6. Two dice the sample space is 6x6 with 36 total leaves as possible outcomes, each leaf with probabilty 1/36. The coin and dice example, sample space = {H,T} x {1,2,3,4,5,6} in my head I see a tree with Heads or Tails branches with 1/2 probability, and attached to each branch is the outcome of a 1/6 dice roll, so Pr[Coin,Dice] is 1/2 x 1/6 or 1/12 which makes sense since each branch will have 6 outcomes, and there's two branches for H or T, and all 12 outcomes must add up to 1. Here's the same example with a 3 sided die:
-</p>
-
-<pre class="example" id="org2ad6a50">
-       Bernoulli(1/2)
-        /          \ 
-  RandInt(3)     RandInt(3) 	
-     /  \          /  \ 
-(H,1),(H,2)(H,3) (T,1),(T,2),(T,3)
-</pre>
-
-<p>
-In this example it's 1/2 x 1/3, or 1/6 probability in each leaf, which again makes sense as there are 6 leaves or outcomes x 1/6 = 1. 
+1.2.1.4 the goal of supervised learning is coming up with a classification model like the decision tree, to reliably predict labels for any new data. The loss function notation is explained in the appendix. Reading from left to right, Loss-Fun(params) is defined as the average of the sum of all outputs from a binary indicator function so summing 0 and 1's then dividing by the total number of indices of input vector x to get the average. The binary indicator function is a boolean comparing the target y (the known label) to the predicted label output of f(x;params) as you iterate the row indices of that table of data. This is explained in <i>Mathematics for Machine Learning</i> in chapter 8.3.1, or search the entire pdf for negative log-likelihood. According to that book the interpretation should be if you vary the parameters on fixed data (our vector input of flower features) this function tells us how likely a particular setting of the parameters is to explain the observations in the input vector. Example 8.5 of that book shows this as a least-squares problem and both log(), exp() and least squares are explained in the <i>Mathematical Modeling and Applied Calculus</i> text. 
 </p>
 
 
 <p>
-Def 15.7 Event, a new set is introduced to model events. Any subset of our probability space, or sample space, is called an event. The power set of Omega is the set of all events, that is if Omega = {H,T} then the power set of all events is {{empty},{T},{H},{H,T}} so total 4 elements in the power set or \(2^n\) where n = size of Omega, otherwise known as the cardinality of set Omega. Notice we have 2 probability = 0 in that power set, as {H,T} is an impossible state (assuming you don't count a coin landing on it's side) and the empty set are both Pr = 0. An event is type set, so if you flipped the coin then the event that it lands on Tails is the set E = {T}, and Pr[E] is 1/2, as Pr[E] is defined here to be a function that returns the sum of all outcomes in set E. Don Knuth in <i>Mathematical Preliminaries Redux</i> describes this event set as a proposition: everytime you think of a proposition like "the flip will be Tails" there is a subset of only {T} or "the dice roll will be a 6" you get an event set E = {6}. In Knuth's writeup he makes this more clear using notation to show an event is the sum of probabilities of all elements in Omega that are also in set E. 
+In the following function the hat notation on top of the y means estimated/predicted value of y. That entire function is then further reduced to the notation \(l_{01}(y,\hat{y})\) to indicate zero-one loss of true label vs predicted label. The last function empirical risk minimization, argmin is defined <a href="https://math.stackexchange.com/a/2157524">here</a> meaning what x input to f(x) results in the global minimum (lowest y value) so imagine that you are feeding a decision rule function with numerous different thresholds/features as parameters, that argmin function should return the parameters with the least average mislabeling on the training set.
 </p>
 
 <p>
-Def 15.8 we have two 6 sided dice so our event space is {1,2,3,4,5,6} x {1,2,3,4,5,6} or 36 possible outcomes. The proposition 'I will roll double numbers' is the event space E = {(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)} and Pr[E] = 6/36 or 1/6 probability of that proposition occuring. A 3 sided die, where we roll a d sided die after, is E = {1,2,3} x {d} and Pr[E] is 1/3 x 1/d or 1/3d. How do we figure out 'the second roll is a 2'? The first roll must be &gt; 1 in order to be able to roll a 2 sided or more die after. This creates the subset E = {(2,2),(3,2)} as those are our only possible outcomes since 'second roll is a 2'. Def 15.7 the probability of Pr[E] is the sum of all probabilities in E, so we have (1/3 x 1/2) + (1/3 x 1/3), or 1/3d + 1/3d where d = 2 in the first roll, and d = 3 in the second because the size of d depend on the first roll. Why is the second roll in the first element 1/2? Because we had a 1/3 probability of rolling a 2 first roll, and since we rolled a 2 that determined the size of the second roll which was a 2 sided die. In the other event we had a 1/3 probability of rolling a 3, obtained a 3 meaning the second roll is a 3 sided die, so have another 1/3 probability of rolling a 2 on the second roll. 
+Some conditional probability introduced here that are in the above Wildberger lectures. Equation 1.7 if you look at the appendix means the 'parametric distributions' or probability that y = label given random variable x and parameters, and it's equated to more terse notation of \(f_{c}(x;\theta)\). That p() function returns a number from 0 to 1, in this example 3 ordered elements of a list that represent the 3 labels, with the probability of them being labelled setosa 0/54 so highly unlikley to happen, and the probability of being labelled versicolor 49/54 or 0.9 so very high probability but there is still uncertainty. This probability function output is then input to NLL() and if you were to plot a negative log() function in R/Python/Julia, you would see that when given a higher number like 1, the graph is very close to the x-axis (minimum loss) whereas if probability is closer to 0, the graph shoots up to infinity on the y-axis meaning a lot of loss. MLE is explained in the <i>Mathematics for ML</i> book in chapter 8.3.1 "MLE gives us the most likely parameter for the set of data" and there's lectures regarding MLE in 10-601/701.
 </p>
 
 <p>
-15.9 Looking at the solution for if A is a subset of B, then Pr[A] is less or equal to Pr[B], they first translate the notation Pr[A] to it's definition which is the sum of all outcomes (ie: the leaves, or the probabilities) in set A. Add to this the set B minus A, and you get the set B because (B\A) + A = B, so Pr[A] must be less than or equal to Pr[B]. Make examples using rolls of single 6-sided dice:
-</p>
-<ul class="org-ul">
-<li>Sample space = {1,2,3,4,5,6} and Pr(l) of any element in set Omega = 1/6</li>
-<li>B is an event subset of omega: B = {1,2}</li>
-<li>A is a subset of B: A = {1}
-<ul class="org-ul">
-<li>Pr[A] + Pr[B\A] is 1/6 + 1/6</li>
-<li>Pr[B] is 1/6 + 1/6</li>
-</ul></li>
-</ul>
-<p>
-The rest of 15.9 is pretty obvious, make toy examples using the same sets from our dice rolling example:
-</p>
-<ul class="org-ul">
-<li>A = {1}, Pr[A] = 1/6</li>
-<li>B = {1,2}, Pr[B] = 1/6 + 1/6
-<ul class="org-ul">
-<li>A union B is {1,2} or 1/6 + 1/6.</li>
-<li>A intersect B = {1}, or 1/6.</li>
-<li>Pr[A] + Pr[B] is 1/6 x 3, so minus their intersection and we get the desired 1/6 + 1/6.</li>
-</ul></li>
-</ul>
-
-<p>
-15.11 make another example for yourself using the 15.8 exercise 'I will roll double numbers'. If you broke up that set into individual sets of A1 = {(1,1)}, A2 = {(2,2)} then their union is {1,2} but Pr[A1] + Pr[A2] is bigger than the union as Pr[A1] + Pr[A2] is 4/36 where Pr[A1 union A2] is 2/36.
+Let's watch some more lectures we've caught up to the courses. None of the math so far is impossible, though we can see how hard a problem machine learning is: given completely noisey data what are the minimum amount of observations to find a signal to categorize/label anything in it correctly, and even harder how do you generalize this to unseen data not in the training set. 
 </p>
 
-<p>
-15.14 this is 1/3 x d again or 1/3d probability. As you can see from the solution, it's just plugging in event sets to the formula for Pr[A|B].
-</p>
-
-<p>
-TODO
-</p>
-</details>
 
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>
