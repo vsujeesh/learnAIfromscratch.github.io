@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-05-04 Tue 21:04 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modern Linear Algebra</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  body {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: auto;
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} img {width: 100%; height: auto;}  figure {text-align: center;} </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Modern Linear Algebra</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#Intro">Intro</a>
+<ul>
+<li><a href="#Materials">Materials</a></li>
+<li><a href="#Optional%20but%20recommended%20extra%20materials">Optional but recommended extra materials</a></li>
+</ul>
+</li>
+<li><a href="#Week%201%20Vectors">Week 1 Vectors</a>
+<ul>
+<li><a href="#Trig%20bootcamp">Trig bootcamp</a>
+<ul>
+<li><a href="#Optional%20extra%20trig">Optional extra trig</a></li>
+</ul>
+</li>
+<li><a href="#Vector%20bootcamp">Vector bootcamp</a></li>
+<li><a href="#Recommendation">Recommendation</a></li>
+<li><a href="#Exercises%20%26%20Putnam%20Seminar">Exercises &amp; Putnam Seminar</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-Intro" class="outline-2">
+<h2 id="Intro">Intro</h2>
+<div class="outline-text-2" id="text-Intro">
+<p>
+Here we take the modernized version of MIT's 18.06 <i>Linear Algebra</i> which focuses on structure and insight and less hand calculation since in the real world of applied math most matrices are not even represented as tables of numbers. The assignments and lectures you can run in your browser and the problem sets in the book(s) are all <b>optional</b>, if you feel you need practice then try them otherwise you're fine. 
+</p>
+
+<p>
+The changes from a standard intro course are:
+</p>
+<ul class="org-ul">
+<li>More emphasis on the conceptual and the practical.</li>
+<li>Hand computations: some, but not more than is needed.</li>
+<li>No pivot variable, free variable, echelon forms.</li>
+<li>Less emphasis on hand computation of inverses.</li>
+<li>Raise the importance of the Singular Value Decomposition (we will not think of it as much as an offshoot of the Eigendecomposition, but being its own creature)</li>
+<li>Matrix calculus: gradients with respect to vectors and matrices <b>not really taught anywhere in standard math courses</b></li>
+<li>Applications to machine learning, statistics, and other areas</li>
+<li>Raise importance of linear transformations</li>
+<li>Useful for biologists, economists, physicists, math majors, engineers etc., not a 'computer science only' curriculum</li>
+</ul>
+
+<p>
+'Linear' algebra is what you think it is, doing algebra operations with linear time complexity and enjoying linear features like associativity, commutativity etc. It becomes highly abstract where we can take very dense impossibly gigantic matrices and reduce them to an encoding we can do linear things with then reconstruct the impossibly gigantic matrix again. You can see why this would be useful in every applied field. 
+</p>
+</div>
+
+<div id="outline-container-Materials" class="outline-3">
+<h3 id="Materials">Materials</h3>
+<div class="outline-text-3" id="text-Materials">
+<p>
+The new 18.06 doesn't use a single book, we will mix numerical linear algebra books in with the usual books MIT uses and take lectures from a variety of sources as we go.
+</p>
+
+<ul class="org-ul">
+<li>18.06 <a href="https://github.com/mitmath/1806/blob/master/summaries.md#spring-2020-1806-syllabus-">Linear Algebra</a> (Spring 2020)
+<ul class="org-ul">
+<li>We have access to some <a href="https://video.odl.mit.edu/collections/d0c4c14da3cf419ba5b57d3d7d6ce2a0/">lectures</a> and will fill in the rest</li>
+<li>We have access to the <a href="https://github.com/mitmath/1806/tree/master/recitation-materials-2020">recitations</a></li>
+<li>No calculus or programming background needed</li>
+<li>Assignments are self-grading (run in browser) w/solutions
+<ul class="org-ul">
+<li>The only work we have to do is the course assignments everything else is voluntary</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Optional%20but%20recommended%20extra%20materials" class="outline-3">
+<h3 id="Optional%20but%20recommended%20extra%20materials">Optional but recommended extra materials</h3>
+<div class="outline-text-3" id="text-Optional%20but%20recommended%20extra%20materials">
+<p>
+The following is optional you can do in parallel with 18.06:
+</p>
+
+<p>
+Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">Wild LinAlg</a> YouTube series is an unusual geometric focused course using the affine parallel plane, which is simple to understand as cartesian complexity is all removed: no origin, no distance measurement, no angles. He will describe the historical problem, show the special case of solving it, then step by step show how to generalize it with proofs demystifying a lot of concepts that no other single course covers. You derive almost all of it from scratch and by removing all the structure imposed on linear algebra in most intro courses you can see the big picture. He also will veer into totally wtf topics like mobius bands or hyperbolic linear algebra to show how the abstractions work in non-euclidean space. One example, the last lecture in 3Blue1Brown's <a href="https://youtu.be/TgKwz5Ikpc8">series</a> where he represents a polynomial space as vectors with increasing powers, is exactly how Wildberger defines a data structure he calls Polynumbers except he goes even further with the abstraction with Bi-Polynumbers, the rows of the matrix become powers of y, the columns powers of x. He will also cover complex matrices fully defining them then using dihedron matrices to replace complex numbers. 
+</p>
+
+<p>
+If you have a <a href="https://learnaifromscratch.github.io/software.html">programming</a> background Brown's CS053 <a href="http://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a> starts with complex and finite Galois fields, which leads into understanding exactly how vector arithmetic works when it's defined as functions. All the labs are in the book and there's an auto-grading script <a href="http://resources.codingthematrix.com/">here</a> though if you wanted, you could do this whole book in Julia either importing the Python libraries or using the Julia libraries. YouTube's Julia channel is full of <a href="https://youtu.be/zoUeUG-Sm6g">demonstrations</a>. You can also grade your own lab, many of the lab stencils come with example tests and I briefly looked at submit.py which calls a remote server to receive specific assignment/lab tests using a simple to understand Python API which means you can grab these yourself in any language you want. The book copies on library genesis are missing some of the illustrations but these are reproduced in lectures and slides or you can buy the book, it's not expensive and worth owning.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-Week%201%20Vectors" class="outline-2">
+<h2 id="Week%201%20Vectors">Week 1 Vectors</h2>
+<div class="outline-text-2" id="text-Week%201%20Vectors">
+<p>
+I'm going off the <a href="https://github.com/mitmath/1806/blob/master/summaries.md#spring-2020-1806-syllabus-">2020</a> syllabus, they want us to:
+</p>
+<ul class="org-ul">
+<li>Watch Strang's <a href="https://youtu.be/ZK3O402wf1c?t=1">intro</a></li>
+<li>Read Chapter 1 of Strang's <a href="http://library.lol/main/CA5B3224F7921F51B4F0CC081D0444C9">book</a></li>
+<li>Read first few pages of the 18.06 <a href="https://raw.githubusercontent.com/mitmath/1806/master/recitation-materials-2019/Linear_algebra_101.pdf">cheatsheet</a></li>
+</ul>
+
+<p>
+First, let's see what a vector is with this 10 minute <a href="https://youtu.be/fNk_zzaMoSs">video</a> then skim section 1 <i>Vectors</i> of the 18.06 <a href="https://raw.githubusercontent.com/mitmath/1806/master/recitation-materials-2019/Linear_algebra_101.pdf">cheatsheet</a>. In #7, the length or magnitude formula has a typo missing the square root, the length of a 2D and 3D vector is detailed <a href="https://youtu.be/5ptH2Xw4DZc">here</a> it's just the Pythagorean theorem.
+</p>
+</div>
+
+<div id="outline-container-Trig%20bootcamp" class="outline-3">
+<h3 id="Trig%20bootcamp">Trig bootcamp</h3>
+<div class="outline-text-3" id="text-Trig%20bootcamp">
+<p>
+If you looked at Strang's book you'll see some basic trig in there used for examples. Let's take a very short crash course to remember trig:
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trigonometry Bootcamp</a> - Brown University
+<ul class="org-ul">
+<li>Contains a review <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">video</a> and a solutions video</li>
+<li>(Optional) <a href="https://youtu.be/yBw67Fb31Cs">Trig fundamentals</a> by 3Blue1Brown that won't make sense unless you do the Brown bootcamp</li>
+</ul></li>
+</ul>
+
+<p>
+In case you forgot what \(\pi\) (pi) is (for us just an applied constant of 3.14&#x2026; or 22/7 or 355/113) Wildberger <a href="https://youtu.be/lcIbCZR0HbU">talks</a> about the history of pi such as Archimedes interval for pi, Newton's formula, a hexadecimal version of pi, his own formula.
+</p>
+
+<p>
+Let's start with the crash course <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>.   
+</p>
+
+<ul class="org-ul">
+<li>If you forgot highschool <a href="https://youtu.be/by0Gy1ZJ_hU">this video</a> @ time index 6:00 shows how sine(x) is the y-axis, and cosine(x) is the x-axis, the whole thing is worth watching</li>
+<li>Radians you could even make up your own notation and define it as DoublePI = 6.283… and then 360deg is DouplePI, 90deg is 1/4DoublePI, 180deg is DoublePI/2, etc.</li>
+<li>We really only need to know how sine/cosine functions work, all others are derived from them</li>
+</ul>
+
+<p>
+In the scaling of triangles example where \(\frac{1}{\sqrt 2}\) becomes \(\frac{\sqrt 2}{2}\) they are rationalizing the denominator:
+</p>
+<ul class="org-ul">
+<li>\(\frac{1}{\sqrt 2}\cdot\frac{\sqrt 2}{\sqrt 2}\) is \(\frac{\sqrt 2}{\sqrt 2 \cdot \sqrt 2}\) which is \(\frac{\sqrt 2}{\sqrt 4}\) or \(\frac{\sqrt 2}{2}\)</li>
+</ul>
+
+
+<p>
+Summary: There exists 3 triangles, which we should know their measurements, we scale them down since this is a unit circle with maximum x and y values of 1. Then we superimpose the triangles in the pi/2 (90deg) angle space on the unit circle in such a way that we have known values of cos()/sin() and other trig functions, because we can derive those other functions from cosine and sine. 
+</p>
+
+<p>
+Try the <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/trigbootcamp-practiceworksheet.pdf">worksheet</a> you can actually draw these out and count rotations if you want or use this radian to angle <a href="https://en.wikipedia.org/wiki/Degree_(angle)#/media/File:Degree-Radian_Conversion.svg">picture</a> from Wikipedia. The equations if one side is squared, then you need to take the square root of both sides so it's (not-squared = value) instead of (squared thing = value-when-squared). If you're stuck watch the video that walks through all the <a href="https://www.youtube.com/watch?v=EQo2SXbasC4">solutions</a>. How I solved these: subtract 1 pi if it's bigger than 2pi, or a 1/2pi if smaller and see what you get, look at the 3 triangles if they have a corresponding value for sin/cos. If not subtract pi/3, pi/6 etc.
+</p>
+
+<p>
+If you hate this trigonomentry this guy reinvented it <a href="https://www.youtube.com/playlist?list=PL3C58498718451C47">here</a> with rational trigonometry and has a book on library genesis where angles are removed and replaced with vectors, he even respecified hyperbolic geometry to be completely rational it's crazy when you see it.
+</p>
+</div>
+
+<div id="outline-container-Optional%20extra%20trig" class="outline-4">
+<h4 id="Optional%20extra%20trig">Optional extra trig</h4>
+<div class="outline-text-4" id="text-Optional%20extra%20trig">
+<p>
+The 3Blue1Brown <a href="https://youtu.be/yBw67Fb31Cs">Trig fundamentals</a> vid walks through a lot of graphs of trig functions and what happens if you square them, multiply by a scalar, etc. The actual lecture content is not that long it's mainly waiting for students to solve some in-lecture problem (which you should try yourself). If you're wondering he's using <a href="https://www.desmos.com/calculator/zfbhdeyjsu">this</a> graph software. 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-Vector%20bootcamp" class="outline-3">
+<h3 id="Vector%20bootcamp">Vector bootcamp</h3>
+<div class="outline-text-3" id="text-Vector%20bootcamp">
+<p>
+Made for students doing multivariable calculus which is perfect for us, since 18.06 assumes the student is currently enrolled in 18.02 MIT's multivariable calculus course. 
+</p>
+
+<ul class="org-ul">
+<li><a href="http://www.math.brown.edu/dkatz/vectorbootcamp/">Vector bootcamp</a> - Brown University
+<ul class="org-ul">
+<li>Vectors &amp; Scalars, Dot Product and Cross Product</li>
+<li>Problem sets + solutions</li>
+</ul></li>
+</ul>
+
+<p>
+Let's watch the first <a href="https://youtu.be/lTvelzDUamo">vectors and scalars</a> vid:
+</p>
+
+<ul class="org-ul">
+<li>So far almost all of this is in Wildberger's first <a href="https://youtu.be/yAb12PWrhV0">lecture</a></li>
+<li>Magnitude/Pythagorean theorem is introduced which we already know but there's a good explanation here</li>
+<li>Vector algebra is the exact same as any other linear operation, if you remember functions notice how all these definitions are the same for functions: f(v + w) = f(v) + f(w)
+<ul class="org-ul">
+<li>~@25:00 all the other vector algebra properties can be derived from the ones in this bootcamp like a(bv) = (ab)v</li>
+</ul></li>
+</ul>
+
+
+<p>
+TODO
+</p>
+</div>
+</div>
+
+<div id="outline-container-Recommendation" class="outline-3">
+<h3 id="Recommendation">Recommendation</h3>
+<div class="outline-text-3" id="text-Recommendation">
+<p>
+I would recommend to start with Wildberger's first <a href="https://youtu.be/yAb12PWrhV0">lecture</a> and skim Strang's <a href="https://youtu.be/ZK3O402wf1c?t=1">intro</a> so you can see what column times a vector looks like, or skip Strang's lecture and read chapter 1. Wildberger introduces what a basis vector is, note that the exact same vector can be represented in different ways, which for us later will mean changing basis to different perspectives to simplify things. The end of this lecture he shows how to solve linear equations with 2 unknowns which is demonstrated in the first Strang lecture but Strang expects you already know how to do this whereas Wildberger doesn't and then uses this to go further solving the general 1-dimensional, and 2-dimensional cases. End of the video he asks what is the geometric meaning of ad-bc which you can see <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Determinant-as-area.svg/1200px-Determinant-as-area.svg.png">here</a> it is the area. There's some exercises you can do if you remember highschool 'elimination of 3 unknowns' (search YouTube for a tutorial) or just watch Strang's lecture which shows how to do it in linear algebra ie: Ax = b.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Exercises%20%26%20Putnam%20Seminar" class="outline-3">
+<h3 id="Exercises%20%26%20Putnam%20Seminar">Exercises &amp; Putnam Seminar</h3>
+<div class="outline-text-3" id="text-Exercises%20%26%20Putnam%20Seminar">
+<p>
+There's no homework assigned yet so you're good, unless you want to try the exercises in Strang's book. This is beyond what we've done so far but it's an example of how you solve problems and what we do in the <a href="https://learnaifromscratch.github.io/math.html">math workshop</a>. If you have an hour to kill watch <a href="https://youtu.be/uWU0j98jBRo">this</a> Putnam seminar lecture on linear algebra problem solving taught by the US math olympiad national coach. The most important takeaway here is three things:
+</p>
+
+<ul class="org-ul">
+<li>1) He solved the problem by just coming up with various small ideas and writing them all down like he was performing an investigation which is how you should do the Strang book problems in Chapter 1 should you volunteer to do them. You will then 'learn how to solve problems' and the rest of the book will be easy for you. This is how you learn math, like a puzzle.</li>
+<li>2) He ended up reviewing almost all of undergrad linear algebra in the process of solving a <i>single problem</i> and this is why people do math olympiad style problems, because it teaches you multiple things at once. You can if you have the motivation, pause the seminar and independently research everything talked about like null spaces, eigenvalues, rank, all in Wildberger or Strang lectures on YouTube and if you did follow this Putnam seminar class and look up everything, you can just do all the homework right now and skip to the 18.06 new <a href="https://video.odl.mit.edu/collections/d0c4c14da3cf419ba5b57d3d7d6ce2a0/">lectures</a>. You're done!</li>
+<li>3) He drew boxes around variables that are matrices to outline their structure/shape. This is talked about in his professional development <a href="https://youtu.be/5__JFBncHAA">seminar</a> for math teachers we'll see later but it's to keep track of the notation.</li>
+</ul>
+
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-04-29 Thu 00:48 -->
+<!-- 2021-05-02 Sun 14:26 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Computer Science from Scratch</title>
@@ -340,7 +340,11 @@
 <li><a href="#Lab%3A%20Streams">Lab: Streams</a></li>
 </ul>
 </li>
-<li><a href="#Assignment%208%3A%20Continued%20Fractions">Assignment 8: Continued Fractions</a></li>
+<li><a href="#Assignment%208%3A%20Continued%20Fractions">Assignment 8: Continued Fractions</a>
+<ul>
+<li><a href="#Myths%20about%20floating-point%20arithmetic">Myths about floating-point arithmetic</a></li>
+</ul>
+</li>
 <li><a href="#Lecture%2012%20Model%20View%20Controllers">Lecture 12 Model View Controllers</a></li>
 <li><a href="#Lecture%2013%20Differential%20Systems">Lecture 13 Differential Systems</a></li>
 <li><a href="#Assignment%209%3A%20Tweesearch%20I%2C%20II%20and%20III">Assignment 9: Tweesearch I, II and III</a></li>
@@ -473,7 +477,7 @@ Many of the lectures only have about 20-30 mins of content, the rest is students
 <p>
 A torrent w/the lectures, recitations and labs:
 </p>
-<pre class="example" id="org06ae1ae">
+<pre class="example" id="org2f6d3b7">
 CS019 2018 Lectures, labs
 magnet:?xt=urn:btih:5db2ed40c8952ea69a06c4ab940d168bc2798a49&amp;dn=cs019
 </pre>
@@ -513,7 +517,7 @@ Watch the cs19 lecture titled <a href="https://www.youtube.com/playlist?list=PLl
 With CPO open (code.pyret.org) cut + paste the following on the left hand side and click Run:
 </p>
 
-<pre class="example" id="org70bd97c">
+<pre class="example" id="org080eaf8">
 # this is a comment it doesn't get run because it begins with #
 empty
 "this is what the empty list looks like"
@@ -634,7 +638,7 @@ This chapter tells you exactly how functions are defined and run by Pyret, and w
 Something I used to do when beginning was delete a parens and add it again to see the scope it closed off, as these nested expressions can get confusing. CPO will highlight where it begins/ends if you move arrow keys around the closing brackets. For example in 5.2.1:
 </p>
 
-<pre class="example" id="orge86f219">
+<pre class="example" id="orga3b1597">
 frame(
   above(rectangle(120, 30, "solid", top),
     above(rectangle(120, 30, "solid", middle),
@@ -650,7 +654,7 @@ this is: frame(img)
 In <i>5.5 Functions Practice: Cost of pens</i> the pen-cost function evaluates to a number, so you can do algebra on it's output, try it in the test cases: 
 </p>
 
-<pre class="example" id="orgabfe27e">
+<pre class="example" id="org9c3eb54">
 fun pen-cost(num-pens :: Number, message :: String) -&gt; Number:
   doc: ```total cost for pens, each 25 cents
        plus 2 cents per message character```
@@ -718,7 +722,7 @@ This is actually an SQL/database introduction, and a linear algebra introduction
 There's an exercise using only booleans, how would you write the function is-email(e :: string) &#x2013;&gt; Boolean? Look through the <a href="https://www.pyret.org/docs/latest/strings.html#%28part._strings_string-contains%29">docs</a>. 
 </p>
 
-<pre class="example" id="org848b085">
+<pre class="example" id="org1221af4">
 fun is-email(e :: String) -&gt; Boolean:
   doc: "Incorrect program to verify is-email"
 
@@ -754,7 +758,7 @@ This <a href="https://youtu.be/vxXFDS95nB4">recitation</a> explains anonymous fu
 Play around in CPO:
 </p>
 
-<pre class="example" id="orgbd58733">
+<pre class="example" id="org8955fb5">
 # create anon function, bind it to test:
 
 test = lam(x :: Number): x + 1 end
@@ -790,7 +794,7 @@ How to think about this chapter: a list is a data structure made up of empty and
 <p>
 The exercise is to hand step the function thinking about the examples, then copy the code and tests to CPO:
 </p>
-<pre class="example" id="org81a18d4">
+<pre class="example" id="org7638f16">
 fun my-pos-nums(l):
   cases (List) l:
     | empty =&gt; empty
@@ -812,8 +816,8 @@ end
 Hand step my-pos-nums program thinking about one link at a time: 
 </p>
 
-<details id="org9bb59b3">
-<pre class="example" id="org81124f2">
+<details id="org561db0f">
+<pre class="example" id="org8af5132">
 my-pos-nums([list: 1, -2, 3, 4])
 
 f = 1, r = [list: -2, 3, 4]
@@ -856,7 +860,7 @@ Link syntax is link(element, list) and all those link element operations are pen
 The exercise "Suppose num-max were not already built in, can you define it?" Try some examples, the function writes itself:
 </p>
 
-<pre class="example" id="org28b4aa2">
+<pre class="example" id="orgb6ba34b">
 my-num-max(1,  2) is 2
 my-num-max(1, -1) is 1
 my-num-max(2,  2) is 2
@@ -874,7 +878,7 @@ my-num-max(2,  2) is 2
 Try the exercise for my-max with an accumulator:
 </p>
 
-<pre class="example" id="org59305a5">
+<pre class="example" id="orge257de6">
 fun my-max(l :: List&lt;Number&gt;) -&gt; Number:
   doc: "my-max with an accumulator exercise"
 
@@ -916,11 +920,11 @@ I wrote this with a helper function, using polymorphic type annotations as defin
 <p>
 Example, my-alt could also be:
 </p>
-<pre class="example" id="org7eb02ae">
+<pre class="example" id="orgb943693">
 fun my-alt&lt;Anything&gt;(e :: List&lt;Anything&gt;, keep :: Boolean) -&gt; List&lt;Anything&gt;:
 </pre>
 
-<pre class="example" id="org5f8c8f4">
+<pre class="example" id="orgbd7bab9">
 fun my-alternating&lt;T&gt;(l :: List&lt;T&gt;) -&gt; List&lt;T&gt;:
   doc: "my-alternating with polymorphic type annotations"
 
@@ -979,7 +983,7 @@ He walks through exactly what a template is and how to extract data to make a te
 This is the code on the board which you should have typed into CPO yourself:
 </p>
 
-<pre class="example" id="orgc4572dd">
+<pre class="example" id="org1459ec2">
 
 fun insert(n :: Number, l :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
   cases (List) l:
@@ -1138,7 +1142,7 @@ Try the <a href="https://papl.cs.brown.edu/2015/Programming_in_Pyret.html#%28par
 First step, analyze the values the program is working with, both input and output. The input is two lists of strings, who's case we ignore, and the output will be a value with square roots involved (irrational numbers), so we are dealing with <a href="https://www.pyret.org/docs/latest/numbers.html">Roughnums</a>. Write the purpose and stub of the function:
 </p>
 
-<pre class="example" id="org00f20bf">
+<pre class="example" id="orgf8ef8a4">
 fun overlap(doc1 :: List&lt;String&gt;, doc2 :: List&lt;String&gt;) -&gt; Number:
   doc: "Consumes 2 documents, returns their overlap"
   ...
@@ -1151,7 +1155,7 @@ end
 Understand the data definition. We need a distinct combined list of both documents, that ignores case, that is sorted, to represent the word freq count of each document. 
 </p>
 
-<pre class="example" id="orgd8dc443">
+<pre class="example" id="org39551f8">
 Handwritten examples to figure out the data definition
 
 Example input to overap:
@@ -1171,7 +1175,7 @@ doc-2-vec = [list: 0, 1, 0, 3] #0a, 1b, 0c, 3d
 Write examples of calling the function (tests). From the 2015 chapter on examples: "Examples should cover at least all the different cases mentioned in the data definition, and also to test common extremes and base cases." 
 </p>
 
-<pre class="example" id="orgdf3dbe9">
+<pre class="example" id="orgc1b5253">
 fun overlap(doc1 :: List&lt;String&gt;, doc2 :: List&lt;String&gt;) -&gt; Number:
 ...
 where:
@@ -1194,7 +1198,7 @@ end
 In these examples I calculated the dot product by hand and input them in the tests:
 </p>
 
-<pre class="example" id="org589d900">
+<pre class="example" id="org9edaafb">
 dot-product example
 
 Both:
@@ -1234,7 +1238,7 @@ Write more tests, such as an epsilon displacement test for 2 bigger documents th
 Write the function. The tests we wrote gave us our overlap equation:
 </p>
 
-<pre class="example" id="org478e7f3">
+<pre class="example" id="org0c1dc63">
 # import the list library
 import lists as L
 
@@ -1265,7 +1269,7 @@ end
 Now you use the exact same method to write dot-product, and create-vector. You can test properties of create-vector for example the vector output, if you add up every element in the list it should equal the length of doc-1-lowercase
 </p>
 
-<pre class="example" id="org7485d22">
+<pre class="example" id="org268fdd7">
 #The folded sum of [list: 1, 1, 1, 0] is 3 and [list: "a", "b", "c"].length() is 3
 
 create-vector([list: "a", "b", "c", "d"], [list: "a", "b", "c"])
@@ -1286,7 +1290,7 @@ The output of create-vector is a list, so (list-output).foldl() and I put .foldl
 Let's do the <a href="https://cs.brown.edu/courses/cs019/2016/hofs-lab.pdf">lab</a> on functions as data, and write our own map, filter and fold. 
 </p>
 
-<pre class="example" id="orgffc95f4">
+<pre class="example" id="org1040e18">
 fun fun-plus-one(num :: Number, func :: (Number -&gt; Number)) -&gt; Number:
   func(num) + 1
 end
@@ -1309,7 +1313,7 @@ Try entering various built-ins, or one you wrote yourself, as the second paramet
 We're given test cases and asked to implement f-to-c and goldilocks, and given the formula for f to c temperature unit conversion.
 </p>
 
-<pre class="example" id="org29a6be9">
+<pre class="example" id="orgcb9780b">
 fun f-to-c(f-lst :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
   cases (List) f-lst:
     | empty =&gt; empty
@@ -1341,7 +1345,7 @@ end
 map(lam(x): x + 1 end, f-lst) the 'x' input is the element in each link in the list f-list, you are mapping over the whole list one element at a time and returning a new list. We are asked to implement goldilocks using map: 
 </p>
 
-<pre class="example" id="orgbdc1997">
+<pre class="example" id="org286866d">
 # lambda notation
 fun goldilocks(f-lst :: List&lt; Number&gt;) -&gt; List&lt;String&gt;:
   f-lst.map(lam(x): if x &gt; 90: "too hot" else if x &lt; 70: "too cold" else: "just right" end end)
@@ -1363,7 +1367,7 @@ end
 .map() is a built-in list method, where f-lst.map(&#x2026;) means we are mapping over f-lst. We could have also rewritten it like the following example where we consume a function of type A (number) that produces a different type B (string, boolean):
 </p>
 
-<pre class="example" id="org76692f9">
+<pre class="example" id="orgfdc1b37">
 fun goldilocks(x :: Number) -&gt; String:
   if x &gt; 90:
     "too hot"
@@ -1396,7 +1400,7 @@ end
 Write your own version of map. I used the documentation examples for map as check tests. Remember map consumes a function and a list, applies the function to each entry in the list returning a new list.
 </p>
 
-<pre class="example" id="orgea55158">
+<pre class="example" id="orgee77cfe">
 fun my-map&lt;A,B&gt;(func :: (A -&gt; B), l :: List&lt;A&gt;) -&gt; List&lt;B&gt;:
 ...
 check:
@@ -1414,7 +1418,7 @@ end
 First two assignments are straight forward to get you to used to using filter, except you have to use string-to-code-points() instead of any built-in string functions. 
 </p>
 
-<pre class="example" id="orgfbb72f4">
+<pre class="example" id="orgfd2b817">
 fun tl-dr(lol :: List&lt;String&gt;, length-thresh :: Number) -&gt; List&lt;String&gt;:
   filter(lam(element): string-to-code-points(element).length() &lt;= length-thresh end, lol)
 end
@@ -1440,7 +1444,7 @@ end
 Lambda parameters can be a single letter: filter(lam(x): x &gt; 1 end) as it's immediately evident what that parameter is and it's scope is limited though you can add annotations like lam(x :: Number). You can also ignore the parameter if you don't plan on using it replacing x with underscore. Task: implement our own version of filter, which is similar to what we did for map:
 </p>
 
-<pre class="example" id="orgfcf5cce">
+<pre class="example" id="orgaced153">
 fun my-filter&lt;T&gt;(func :: ( T -&gt; Boolean), l :: List&lt;T&gt;)-&gt; List&lt;T&gt;:
   cases (List) l:
     | empty =&gt; empty
@@ -1466,7 +1470,7 @@ end
 Try the two tasks: list-product and list-max:
 </p>
 
-<pre class="example" id="orgc39b4ac">
+<pre class="example" id="org9ef4a73">
 fun list-product(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): acc * n end, 1, lon)
 end
@@ -1481,7 +1485,7 @@ end
 There's a bug here to fix, try all negative examples
 Found by <a href="https://github.com/rand-anon-007">https://github.com/rand-anon-007</a>
 </p>
-<pre class="example" id="org39c16c5">
+<pre class="example" id="orge126f72">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): if n &gt; acc: n else: acc end end, 0, lon)
 end
@@ -1496,7 +1500,7 @@ end
 The problem is the accumulator needs to be initialized with the first value of the list not 0:
 </p>
 
-<pre class="example" id="orga40e2c7">
+<pre class="example" id="org82c37bc">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   fold(lam(acc, n): if n &gt; acc: n else: acc end end, lon.get(0), lon)
 where:
@@ -1513,7 +1517,7 @@ end
 If the list is empty then long.get(0) raises an error:
 </p>
 
-<pre class="example" id="orgc1c8b35">
+<pre class="example" id="org708f8e5">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   if lon == empty:
     0 # is this correct?
@@ -1533,7 +1537,7 @@ end
 Now we have to make design decisions, should it eval to 0 for empty since the max of an empty list is nothing or should it raise an error that we can handle?
 </p>
 
-<pre class="example" id="org0d5198d">
+<pre class="example" id="org34dbd39">
 fun list-max(lon :: List&lt;Number&gt;) -&gt; Number:
   if lon == empty:
     raise("List can't be empty")
@@ -1553,7 +1557,7 @@ end
 Write your own fold: 
 </p>
 
-<pre class="example" id="org1d010f1">
+<pre class="example" id="orgfce8e3b">
 fun my-fold&lt;A,B&gt;(func :: (B, A -&gt; B), acc :: B, l :: List&lt;A&gt;) -&gt; B:
   cases (List) l:
     | empty =&gt; acc
@@ -1587,7 +1591,7 @@ That type signature func :: (B, A -&gt; B) means the function you are taking as 
 Try the task for implementing who-passed, the second task we're asked to write map2 ourselves: 
 </p>
 
-<pre class="example" id="org41d692f">
+<pre class="example" id="org37dd856">
 # link(ff, rr) and link(f, r) can be called anything:
 # ie: link(head-first, tail-first) or link(head-second, tail-second)
 
@@ -1621,7 +1625,7 @@ end
 The last task, best-price, look on youtube what a basic demand function is. Here's an example:
 </p>
 
-<pre class="example" id="org1041644">
+<pre class="example" id="org9697e8e">
 fun demand(price-increase :: Number) -&gt; Number:
  doc: "1000 is approx demand of product at a fixed price"
   1000 - (60 * price-increase)
@@ -1640,7 +1644,7 @@ This means as the price increases, the quantity demanded will decrease by 60 uni
 map and filter only consider one element in a list at a time whereas fold can consider the entire list. You can implement both map and filter with fold (try it). If you've noticed in the Pyret documentation there is foldl and foldr:
 </p>
 
-<pre class="example" id="org0d96f2f">
+<pre class="example" id="org4772d6f">
 import lists as L
 
 L.foldl(lam(acc, x): acc + x end, 0, [list: 1, 2, 3])
@@ -1656,7 +1660,7 @@ L.foldr(lam(acc, x): acc + x end, 0, [list: 1, 2, 3])
 Here's an example of why you'd want to use foldr, making your own map function:
 </p>
 
-<pre class="example" id="org917d232">
+<pre class="example" id="org5893bab">
 import lists as L
 
 fun my-map&lt;A,B&gt;(func :: (A -&gt; B), list1 :: List&lt;A&gt;) -&gt; List&lt;B&gt;:
@@ -1690,7 +1694,7 @@ In 11.3.2 try commenting out one of the cases from fun advice(c :: TLColor). If 
 After this assignment we are caught up to where students are currently at in the lectures. Here we are restricted from using list built-ins, so member, append, or distinct you'll have to write these yourself. The instructor considers rewriting library functions as drill exercises since programming is learn by doing. We need to fill in recommend and popular-pairs according to the <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">spec</a> we're given. Don't use their 2018 starter template, there's some kind of bug where accessing the content of a recommendation doesn't work. Write your own or use <a href="https://code.pyret.org/editor#share=0Bxr4FfLa3goOMmI2RnlkWUhCTzA">this</a>:
 </p>
 
-<pre class="example" id="org09f2cda">
+<pre class="example" id="orgb84f570">
 provide *
 provide-types *
 
@@ -1720,7 +1724,7 @@ end
 Examples to help understand what the assignment is asking for, you can run this to see if the tests are at least well formed:
 </p>
 
-<pre class="example" id="orgeb308fe">
+<pre class="example" id="orgb441c01">
 fun recommend(title :: String, book-records :: List&lt;File&gt;) -&gt; Recommendation:
   doc: ```Takes in the title of a book and a list of files,
        and returns a recommendation of book(s) to be paired with title
@@ -1762,7 +1766,7 @@ One property to test would be to reverse the procedure. Given a list of titles, 
 Using the 2019 <a href="https://cs.brown.edu/courses/cs019/2019/nilenile.html">Nile</a> assignment spec:
 </p>
 
-<pre class="example" id="org2e507a2">
+<pre class="example" id="org4532d3c">
 data BookPair:
     | pair(book1 :: String, book2 :: String)
 end
@@ -2086,7 +2090,7 @@ In 3 <i>The Tabular Method</i> we finally get an explanation what the terms 'que
 Let's figure out 5, a function that takes as input 2 lists and counts their length. This translates to two nested cases:
 </p>
 
-<pre class="example" id="org8f70bda">
+<pre class="example" id="orgeeee060">
 fun dbl-count(list1, list2):
  cases (List) list1:
   | empty =&gt; 0
@@ -2135,7 +2139,7 @@ We're watching the lecture titled Wed9/19/18. Reminder these lectures can be vie
 He remarks that their quicksort implementation is really a filter, and we should try quicksort using a filter:
 </p>
 
-<pre class="example" id="org509d960">
+<pre class="example" id="orgfaf9a8e">
 fun combine(lt, p, gt):
   lt.append([list: p]).append(gt)
 end
@@ -2177,7 +2181,7 @@ This assignment we're building a testing oracle.
 First function is generate-input(n :: Number) -&gt; List&lt;Person&gt;, it consumes a number, and produces a list of length n of type Person. Since this function is going to generate random person.name strings we can't directly match the output in a test case, but we can still confirm it has the correct properties of [list: person(name, number)]:
 </p>
 
-<pre class="example" id="org071aa60">
+<pre class="example" id="org1c606fc">
 data Person:
   | person(name :: String, age :: Number)
 end
@@ -2204,8 +2208,8 @@ end
 Pyret has a built-in function for generating a list <a href="https://www.pyret.org/docs/latest/lists.html#%28part._lists_repeat%29">repeat()</a> which we will need to write ourselves since this assignment doesn't allow using built-ins outside of the higher order functions and sort() or sort-by() though I used some other list built-ins here and in the test cases since we already rewrote them in the Nile assignment. One way we could architect this is recursing on n, linking a list together. So num-random() gives us something resembling a random name, see this <a href="https://en.wikipedia.org/wiki/ASCII">article</a>, code points I guess could be between 97 and 122 or 'a' and 'z' though you could just leave this random and fuzzy test with all unicode code points since our sorters could hold foreign unicode names or symbols or anything:
 </p>
 
-<details id="org2c3a703">
-<pre class="example" id="org6d4a8bf">
+<details id="org66010bd">
+<pre class="example" id="org43a774d">
 import lists as L
 
 data Person:
@@ -2269,7 +2273,7 @@ end
 Now we have what the assignment is looking for:
 </p>
 
-<pre class="example" id="orga8fff3f">
+<pre class="example" id="orgd15a36a">
 &gt;&gt;&gt; generate-input(2)
 [list: person("vwqukq", 3), person("rljhrsijqcwyuglwjtnhc", 48)]
 </pre>
@@ -2283,8 +2287,8 @@ Next is a sort validation function that consumes two sorted lists of type Person
 Note this is <b>inefficient</b> as a cases on List can break on the first instance of false instead of continuing through the entire linear list: 
 </p>
 
-<details id="org47a8a45">
-<pre class="example" id="orgdc820a6">
+<details id="orgb1f05fd">
+<pre class="example" id="orgd5119cc">
 fun is-valid(test-input :: List&lt;Person&gt;, correct-input :: List&lt;Person&gt;) -&gt; Boolean:
   doc: "Consumes test-input and compares to correct-input a correct-sorter() list"
 
@@ -2337,8 +2341,8 @@ end
 Now we go about writing multiple buggy implementations of sorting algorithms and test these functions with oracle :: (List&lt;Person&gt; -&gt; List&lt;Person&gt;) -&gt; Boolean ie: oracle(insertion-sort)) or oracle(quick-sort):
 </p>
 
-<details id="org960e137">
-<pre class="example" id="orgca7cd1c">
+<details id="orgb0958f4">
+<pre class="example" id="org675e1c1">
 fun combine(lt, p, gt):
   doc: "Used by incorrect-quicksort"
   lt.append([list: p]).append(gt)
@@ -2428,7 +2432,7 @@ The grading tests for oracle assignment (actually, all the assignments) are also
 The techniques they used in the paper are taught in their <i>Logic for Systems</i> class which I partially archived with some recorded lectures if you're interested in this kind of logical thinking about programs. We will do something similar later, reasoning about the specifications of programs and their behavior. 
 </p>
 
-<pre class="example" id="orgbc6e5e2">
+<pre class="example" id="org029b86d">
 Archive of 195y if you're interested before recorded lectures disappear
 magnet:?xt=urn:btih:3187a9951b43b85771a975653680a4a8d9faf61d&amp;dn=195y
 </pre>
@@ -2469,7 +2473,7 @@ Notice two consecutive 0's in the test case which will screw up your list/empty 
 <p>
 Template is:
 </p>
-<pre class="example" id="org14b6fd9">
+<pre class="example" id="org34fb577">
 data PHR:
   | phr(name :: String,
       height :: Number,
@@ -2512,7 +2516,7 @@ My solution was to write a helper function bmi(p :: PHR) -&gt; Number and then f
 You could want tests for empty, one element, two elements, and the given assignment example:
 </p>
 
-<pre class="example" id="org8840069">
+<pre class="example" id="org56caed8">
 fun data-smooth(phrs :: List&lt;PHR&gt;) -&gt; List&lt;Number&gt;:
   doc: "Smooth heart rate data"
 ...
@@ -2543,7 +2547,7 @@ end
 I wrote this template:
 </p>
 
-<pre class="example" id="org1227015">
+<pre class="example" id="org484d7bd">
 # optional
 data Freq:
   | frequency(word :: String, count :: Number)
@@ -2575,7 +2579,7 @@ The assignment wants a list returned of words, in descending order of freq count
 We're asked to take [list: 20151004, 150, 200, 175, 20151005, 0.002, 0.03, 20151007, 130, 0.54, 20151101, 78] and turn it into a daily maximum [list: max-hz(20151004, 200), max-hz(20151005, 0.03), max-hz(20151007, 130)] if the searched for month is October. Our template:
 </p>
 
-<pre class="example" id="org7ef6ad5">
+<pre class="example" id="orga945721">
 data Report:
   | max-hz(date :: Number, max-reading :: Number)
 end
@@ -2603,7 +2607,7 @@ We're watchin Fri9/21/18 lecture on 2D tree shaped data w/guest lecturer <a href
 <p>
 The mutual recursive datatypes, to understand them write out your own tree:
 </p>
-<pre class="example" id="org253270a">
+<pre class="example" id="org09d4a29">
        a 
       /  \   
     b    none     
@@ -2680,8 +2684,8 @@ This is short unfinished <a href="https://papl.cs.brown.edu/2020/testing.html">c
 Let's build a testing <a href="http://cs.brown.edu/courses/csci0190/2019/oracleoracle.html">oracle</a>. There's a starter <a href="https://code.pyret.org/editor#share=1ZCe4jQepT5vars3-1dK8jBPVhAllLBoq&amp;v=7aff971">template</a> we need to access the function they give us matchmaker() and is-hire() 
 </p>
 
-<details id="org209ac22">
-<pre class="example" id="org7d5fb7a">
+<details id="orgb36a753">
+<pre class="example" id="orge35e4a6">
 # CSCI0190 (Fall 2018)
 provide *
 provide-types *
@@ -2745,7 +2749,7 @@ end
 Run the template then try to give matchmaker some inputs to see what it does:
 </p>
 
-<pre class="example" id="org47aaf6a">
+<pre class="example" id="org08d331a">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 # Note matchmaker writeup: it is 0 to n-1 indexed, so 3 lists means 0 - 2 
@@ -2776,7 +2780,7 @@ First Let's understand the matching algorithm, we don't have to write one oursel
 The 2019 assignment writeup contains a few hints, such as 'be cautious about using the provided matchmaker function in your oracle as this assumes that there is only one right answer to a given instance of the stable hiring problem'. I translate this to mean there could be many permutations of the stable-hiring problem which are still correct, however the Gale-Shipley algorithm produces the exact same matching everytime if the company is making offers, and candidates rejecting. What if the roles are reversed, if it is candidate making offers and company rejecting? We have 2 inputs into matchmaker but it doesn't say which one is actually making the offers and which input is rejecting. We should try altering the inputs and see what happens: 
 </p>
 
-<pre class="example" id="orgeafe354">
+<pre class="example" id="org3bf7185">
 companies =  [list: [list: 1, 0, 2], [list: 0, 2, 1], [list: 0, 2, 1]]
 candidates = [list: [list: 1, 0, 2], [list: 1, 2, 0], [list: 0, 1, 2]]
 
@@ -2808,8 +2812,8 @@ They're different, so there is indeed more than one solution to the problem depe
 This was my good enough generate-input function for test inputs &lt; num = 25, more than that and needs optimization, like using a dictionary datastructure or keep a sorted accumulator to check for dupes, or using filter: 
 </p>
 
-<details id="orgd7d989f">
-<pre class="example" id="orgab02993">
+<details id="org8acf0a8">
+<pre class="example" id="org94efdb7">
 fun generate-input(num :: Number) -&gt; List&lt;List&lt;Number&gt;&gt;:
   doc: 'generates a list of candidates or companies for a group of size num'
   fun test-for-dupes(input :: List&lt;Number&gt;) -&gt; List&lt;Number&gt;:
@@ -2897,7 +2901,7 @@ All of <a href="https://papl.cs.brown.edu/2020/set-representations.html#%28part.
 Let's try the CS19 lab for <a href="https://zacharyespiritu.com/documents/teaching/csci0190/iterating-over-trees-lab.pdf">trees</a>. The first part is just thought exercises then the lab offers us stencil code for the BT tree lab sections:
 </p>
 
-<pre class="example" id="orgb5c416c">
+<pre class="example" id="org2ee4b13">
 #  _____                _                                      _ 
 # |_   _| __ ___  ___  | |_ _ __ __ ___   _____ _ __ ___  __ _| |
 #   | || '__/ _ \/ _ \ | __| '__/ _` \ \ / / _ \ '__/ __|/ _` | |
@@ -2935,7 +2939,7 @@ end
 First make a tree, run it, and type 'a-tree' into pyret interpreter and click the output to see the right and left branches, or a-tree.left or a-tree.right
 </p>
 
-<pre class="example" id="org2901ab8">
+<pre class="example" id="org6fa5423">
 a-tree =
   node(5,
     node(4, 
@@ -2957,7 +2961,7 @@ The lab wants us to write various traversals, here's what I wrote for btree-in-o
 </p>
 
 
-<pre class="example" id="org01546fb">
+<pre class="example" id="org5e28104">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -3001,7 +3005,7 @@ end
 Another lab where we rewrite map/filter/fold. Below when you see Prof K's lecture on knowledge transfer you'll understand why he makes us do this over and over. This is my first attempt at map, I wrote it like he writes software on the board in class thinking through the data definition:
 </p>
 
-<pre class="example" id="org539c1c8">
+<pre class="example" id="orgaa6e008">
 data BTree&lt;T&gt;:
   | mt
   | node(value :: T, left :: BTree&lt;T&gt;, right :: BTree&lt;T&gt;)
@@ -3052,7 +3056,7 @@ Note that btree-fold the lab wants you to convert the tree to a list, apply f to
 I interpret the <a href="https://cs.brown.edu/courses/cs019/2018/filesystemfilesystem.html">assignment</a> to mean this directory tree/model:
 </p>
 
-<pre class="example" id="org4ea57f8">
+<pre class="example" id="org8e55679">
 # this is missing from my template:
 type Path = List&lt;String&gt;
 
@@ -3069,8 +3073,8 @@ filesystem = (dir("TS", [list:
 Pyret allows you to write methods for datatype, here's an example for du-dir() where I wrote a .size() method:
 </p>
 
-<details id="org403f693">
-<pre class="example" id="orgdea6acf">
+<details id="orgfbc6a81">
+<pre class="example" id="org607a973">
 provide *
 provide-types *
 
@@ -3134,7 +3138,7 @@ end
 This is all in the Pyret documentation, and I looked at the Pyret source on github to see how to chain multiple methods:
 </p>
 
-<pre class="example" id="orge015fd5">
+<pre class="example" id="org5782b9f">
 data Dir:
   | dir(name :: String, ds :: List&lt;Dir&gt;, fs :: List&lt;File&gt;) with:
     method size(self :: Dir) -&gt; Number:
@@ -3161,7 +3165,7 @@ The path method there's numerous ways you could architect this to be better. Adv
 Reading the <a href="http://cs.brown.edu/courses/csci0190/2018/updaterupdater.html">assignment</a> for updater, the Cursor datatype can also contain another cursor which points to the node above:
 </p>
 
-<pre class="example" id="org0c77b0f">
+<pre class="example" id="org9e46309">
 data Cursor&lt;A&gt;:
   | mt-cursor
   | cursor(above :: Cursor&lt;A&gt;, index :: List&lt;Number&gt;, point :: Tree&lt;A&gt;)
@@ -3172,7 +3176,7 @@ end
 The index represents the pointed to cursor's position in the child list, ie: [list: 0]. This means you can fold through all the cursor.above indexes to make a string of .get() or .set()::
 </p>
 
-<pre class="example" id="orgeea3cbe">
+<pre class="example" id="org4a3f8a2">
 import lists as L
 
 data Tree&lt;A&gt;:
@@ -3230,7 +3234,7 @@ end
 Check the top node, if a match then cursor(mt, empty, entire-tree) otherwise send the children list of the root node into a helper function that keeps track of the parent node. When pred(f.value) is true, find the position in the parent list of your cursor point, extract this number as an index, build the cursor with:
 </p>
 
-<pre class="example" id="orgfa4e38b">
+<pre class="example" id="org3dd4322">
 cursor(find-cursor(entire-tree, lam(x): x == parent-node.value end)),
   index-of-point-node, point-node)
 </pre>
@@ -3243,7 +3247,7 @@ The index can also just be a number you test to see if it's 0, meaning trying to
 get-node-val returns type <a href="https://www.pyret.org/docs/latest/option.html">option</a> (this is also in PAPL under Chapter 12/Sets) an option will wrap the response in some(v) or read the documentation for cases on (Option) with some(a) =&gt; syntax. Including an underscore in cases means you don't plan on using that field 
 </p>
 
-<pre class="example" id="orgcd9ca4f">
+<pre class="example" id="org2436158">
 # this returns some(v) which you extract with some.value
 fun get-node-val&lt;A&gt;(cur :: Cursor&lt;A&gt;) -&gt; Option&lt;A&gt;: 
   cases(Cursor) cur:
@@ -3263,7 +3267,7 @@ end
 Watching lecture titled Mon/10/01/18. In the examples of ones, everytime you invoke 'ones' you get lzlink(1, &lt;thunk&gt;) which is one, plus a way to get more ones if called again. We're asked to write our own map, you could also try it with cases:
 </p>
 
-<pre class="example" id="org32d271a">
+<pre class="example" id="org655f6b6">
 fun maps&lt;A, B&gt;(f :: (A -&gt; B), s :: Lz&lt;A&gt;) -&gt; Lz&lt;B&gt;:
   cases (Lz&lt;A&gt;) s:
     | lzlink(e, r) =&gt; lzlink(f(e), {(): maps(f, rst(s))}) 
@@ -3309,7 +3313,7 @@ The chapter on streams will explain some calculus notation converting it to a py
 The streams lab is <a href="https://cs.brown.edu/courses/cs019/2016/streams-lab.pdf">here</a>, mostly adapted from the chapter we just read in PAPL. We already wrote map and map2, try to write your own filter/fold for streams:
 </p>
 
-<pre class="example" id="orgd951267">
+<pre class="example" id="orgfc64ceb">
 fun lz-fold&lt;A, B&gt;(f :: (A, B -&gt; A), base :: A, s :: Stream&lt;B&gt;) -&gt; Stream&lt;A&gt;:
   lz-link(f(base, lz-first(s)), lam(): lz-fold(f, f(base, lz-first(s)), lz-rest(s)) end) 
 end
@@ -3339,8 +3343,8 @@ end
 You don't need the template for the <a href="https://cs.brown.edu/courses/cs019/2018/contfraccontfrac.html">assignment</a> only the following:
 </p>
 
-<details id="org00332c9">
-<pre class="example" id="orgaf2246c">
+<details id="orgf216b89">
+<pre class="example" id="orgcd07058">
 # CSCI0190 (Fall 2018)
 provide *
 provide-types *
@@ -3415,8 +3419,8 @@ end
 You only have to use repeating-stream for phi and e, though I wrote a decimal to continued fraction algorithm I got from from <a href="http://pi.math.cornell.edu/~gautam/ContinuedFractions.pdf">here</a> on page 13 and my own inefficient e generator anyway. When you write your repeating-stream function for e it has to be property-based tested since it's a stream you can only take x amount of values at a time.
 </p>
 
-<details id="org96e9a31">
-<pre class="example" id="org9dcbd19">
+<details id="org4230baa">
+<pre class="example" id="orgd06923f">
 
 fun c-frac(n :: Number) -&gt; Stream&lt;Option&lt;Number&gt;&gt;:
   doc: "Consumes decimal, returns some(fraction integral) stream"
@@ -3442,7 +3446,7 @@ end
 # see wikipedia it is the sum of 1/k! where k starts at 0 and keeps going
 # 1/0! + 1/1 + 1/(1*2) + 1/(1*2*3) ... where 1/0! is 1.
 fun generate-e(n :: Number) -&gt; Number:
-  doc:"Generates e to n decimal places"
+  doc:"Generates e (inefficiently) to n decimal places"
 
   fun e-helper(current-count):
     factorial = take(nats-from(1), current-count)
@@ -3491,8 +3495,8 @@ The <a href="https://www.pyret.org/docs/latest/option.html">ask</a> check decima
 The goal of this assignment is to produce a program that can make refined approximations:
 </p>
 
-<details id="org63d4e70">
-<pre class="example" id="org485e6a6">
+<details id="org25e0c85">
+<pre class="example" id="org94a7922">
 # First attempt without Options
 
 fun c-approx(c-list :: List&lt;Number&gt;) -&gt; Number:
@@ -3539,8 +3543,8 @@ The algorithm for this is just hand stepping the examples in the assignment writ
 There is many other stream functions left for you to write like fraction-stream which takes a stream as a parameter, so you can use take() inside the body of fraction-stream to keep grabbing more input:
 </p>
 
-<details id="orgdd40309">
-<pre class="example" id="org61a16c9">
+<details id="orgded7f0a">
+<pre class="example" id="org9ec56c6">
 # you can use a map over a stream here too
 
 fun fraction-stream(n :: Stream&lt;Number&gt;) -&gt; Stream&lt;Number&gt;:
@@ -3558,8 +3562,17 @@ end
 </details>
 
 <p>
-The assignment has you redoing everything for option types, meaning doing cases on Options to safeguard against division by zero and many other problems the writeup notes. The big-O complexity assignment asks what are the meaningful parameters for the analysis, this doesn't mean the parameters of the functions but the statistics definition of parameters like is the worst case, ie: no threshold is found for your approximations since we are dealing with streams and not n-sized lists anymore.The 2020 assignment writeup has some warnings about <a href="https://cs.brown.edu/courses/cs019/2020/contfrac.html#%28part._cf-rcs%29">floating point</a> which uses round to nearest strategy. More in this <a href="https://www.youtube.com/playlist?list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw">playlist</a> how the IEEE standard for encoding of numbers works (it's a standard that changes).   
+The assignment has you redoing everything for option types, meaning doing cases on Options to safeguard against division by zero and many other problems the writeup notes. The big-O complexity assignment asks what are the meaningful parameters for the analysis, this doesn't mean the parameters of the functions but the statistics definition of parameters like is the worst case, ie: no threshold is found for your approximations since we are dealing with streams and not n-sized lists anymore.
 </p>
+</div>
+
+<div id="outline-container-Myths%20about%20floating-point%20arithmetic" class="outline-3">
+<h3 id="Myths%20about%20floating-point%20arithmetic">Myths about floating-point arithmetic</h3>
+<div class="outline-text-3" id="text-Myths%20about%20floating-point%20arithmetic">
+<p>
+Check out <a href="https://github.com/mitmath/18335/blob/master/notes/fp-myths.pdf">myths about floating-point arithmetic</a> from MIT's 2020 class of numerical analysis. A computer represents floating point as a set of rational numbers mulitplied by powers of two (binary) or powers of 10 in decimal floating point which exist as libraries and hardware features. You can watch a lecture <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8dd08ed5-7688-4b34-937f-201b909f61c7&amp;query=15-213">here</a> how fractional binary numbers work in C, and a visual representation how the definition of IEEE floating point standard works (the same lecture exists on youtube if you search for 15-213).   
+</p>
+</div>
 </div>
 </div>
 
