@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-17 Wed 05:59 -->
+<!-- 2021-05-05 Wed 19:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Foundations from Scratch</title>
@@ -356,23 +356,6 @@
 <li><a href="#4.4%20Gaps%20in%20the%20rational%20numbers">4.4 Gaps in the rational numbers</a></li>
 </ul>
 </li>
-<li><a href="#Some%20Algebra">Some Algebra</a>
-<ul>
-<li><a href="#Lectures">Lectures</a></li>
-</ul>
-</li>
-<li><a href="#Linear%20Algebra">Linear Algebra</a>
-<ul>
-<li><a href="#Introduction%20to%20Linear%20Algebra">Introduction to Linear Algebra</a></li>
-<li><a href="#Vector%20Arithmetic">Vector Arithmetic</a></li>
-<li><a href="#Center%20of%20mass%20and%20barycentric%20coordinates">Center of mass and barycentric coordinates</a></li>
-<li><a href="#Area%20and%20volume%20%28determinants%29">Area and volume (determinants)</a></li>
-<li><a href="#Change%20of%20coordinates%20and%20determinants">Change of coordinates and determinants</a></li>
-<li><a href="#2x2%20matrices%20I">2x2 matrices I</a></li>
-<li><a href="#2x2%20matrices%20II">2x2 matrices II</a></li>
-<li><a href="#Inverting%203x3%20Matrices">Inverting 3x3 Matrices</a></li>
-</ul>
-</li>
 <li><a href="#Real%20Numbers">Real Numbers</a>
 <ul>
 <li><a href="#What%20exactly%20is%20a%20limit">What exactly is a limit</a></li>
@@ -387,59 +370,21 @@
 <li><a href="#5.6%20Real%20number%20exponents%20I">5.6 Real number exponents I</a></li>
 </ul>
 </li>
-<li><a href="#Trigonometry%20Boot%20Camp">Trigonometry Boot Camp</a></li>
-<li><a href="#Linear%20Algebra%20cont.">Linear Algebra cont.</a>
-<ul>
-<li><a href="#3D%20affine%20geometry">3D affine geometry</a></li>
-<li><a href="#Equations%20of%20lines%20and%20planes%20in%203D">Equations of lines and planes in 3D</a></li>
-<li><a href="#Applications%20of%203x3%20matrices">Applications of 3x3 matrices</a></li>
-<li><a href="#Finish%20this%20playlist">Finish this playlist</a></li>
-</ul>
-</li>
-<li><a href="#Po-Shen%20Loh">Po-Shen Loh</a>
-<ul>
-<li><a href="#Linear%20Algebra%20Explained">Linear Algebra Explained</a></li>
-<li><a href="#Matrix%20multiplication">Matrix multiplication</a></li>
-<li><a href="#Determinants">Determinants</a></li>
-<li><a href="#Poh-Shen%20Loh%27s%20advice">Poh-Shen Loh's advice</a></li>
-</ul>
-</li>
-<li><a href="#Limits">Limits</a>
-<ul>
-<li><a href="#6.1%20Convergence%20and%20limit%20laws">6.1 Convergence and limit laws</a></li>
-<li><a href="#6.2%20The%20Extended%20real%20numbers">6.2 The Extended real numbers</a></li>
-<li><a href="#6.5%20Some%20standard%20limits">6.5 Some standard limits</a></li>
-<li><a href="#6.7%20Real%20number%20exponents%20II">6.7 Real number exponents II</a></li>
-</ul>
-</li>
 <li><a href="#Series">Series</a>
 <ul>
 <li><a href="#7.1%20Finite%20series">7.1 Finite series</a></li>
-<li><a href="#7.2%20Infinite%20series">7.2 Infinite series</a></li>
 <li><a href="#7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</a></li>
+</ul>
+</li>
+<li><a href="#Math%20circle">Math circle</a>
+<ul>
+<li><a href="#Combinatorics%20lecture%201">Combinatorics lecture 1</a></li>
+<li><a href="#Algebra%20chapter%201">Algebra chapter 1</a></li>
 </ul>
 </li>
 <li><a href="#CMU%20Putnam%20Seminar">CMU Putnam Seminar</a>
 <ul>
-<li><a href="#Introduction">Introduction</a>
-<ul>
-<li><a href="#Introduction--Exercises">Exercises</a></li>
-</ul>
-</li>
-<li><a href="#Calculus">Calculus</a></li>
-<li><a href="#Differentiation">Differentiation</a>
-<ul>
-<li><a href="#Non-polynomial%20derivatives">Non-polynomial derivatives</a></li>
-<li><a href="#Polynomial%20derivatives">Polynomial derivatives</a></li>
-</ul>
-</li>
-<li><a href="#Discrete%20Math">Discrete Math</a>
-<ul>
-<li><a href="#Assignment%201">Assignment 1</a></li>
-<li><a href="#The%20Binomial%2FTrinomial%20Theorem">The Binomial/Trinomial Theorem</a></li>
-</ul>
-</li>
-<li><a href="#Daily%20Challenge">Daily Challenge</a></li>
+<li><a href="#Introduction">Introduction</a></li>
 </ul>
 </li>
 </ul>
@@ -451,7 +396,7 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-This is part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> to learn the basics of mathematical reasoning and problem solving tactics which you will discover is all you need to then learn whatever it is you want on your own. No background is required. 
+This is part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos</a> to learn the basics of mathematical reasoning so deduction and strategies for writing proofs. No background is required. We start with some typical linear progression then it turns into a game learning through solving problems. There is a seperate linear algebra workshop <a href="https://learnaifromscratch.github.io/linear.html">here</a>.
 </p>
 
 <p>
@@ -463,7 +408,7 @@ This is part IB of the <a href="https://learnaifromscratch.github.io">AI Tripos<
 <h3 id="What%20is%20math">What is math</h3>
 <div class="outline-text-3" id="text-What%20is%20math">
 <p>
-As per <a href="https://youtu.be/WKeITf83wBo">Poh-Shen Loh</a> it is one of the easiest subject you will ever take because there is little to memorize, you deduce whatever it is you don't know using mathematical reasoning. The closest analogy would be lawyers, they deduce from statutes and case law new arguments, and these are proofs ie: 'proven beyond a reasonable doubt'. We will be doing the same thing using <a href="https://en.wikipedia.org/wiki/Reason#Logical_reasoning_methods_and_argumentation">methods of reasoning</a>. Once you start to get familiar with this logic then you can use it not only to manipulate models you build in math of real life things but in everyday life your thinking will change to become more rigorous. In math the model studies you while you study the model.  
+As per <a href="https://youtu.be/WKeITf83wBo">Poh-Shen Loh</a> it is one of the easiest subject you will ever take because there is little to memorize, you can deduce whatever it is you don't know using mathematical reasoning. The closest analogy would be lawyers, they deduce from statutes and case law new arguments. We will be doing the same thing using <a href="https://en.wikipedia.org/wiki/Reason#Logical_reasoning_methods_and_argumentation">methods of reasoning</a>. Once you start to get familiar with this logic then you can use it not only to manipulate models you build in math of real life things but in everyday life your thinking will change to become more rigorous. In math the model studies you while you study the model.  
 </p>
 
 <p>
@@ -773,7 +718,7 @@ Wildberger proves the distributive and commutative laws using fractions while st
 <h2 id="Proofs">Proofs</h2>
 <div class="outline-text-2" id="text-Proofs">
 <p>
-Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for an honors analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, and in the preface he mentions we will need some lectures to go with the material to help us understand it. My goal here is just to provide some scratchwork so you can have extra intuition into what is going when Tao abstractly moves things around. 
+Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I</i>. The author explains <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">here</a> why we need this rigorous stage. This book was originally supplementary notes for an honors analysis <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">class</a>, and in the preface he mentions we will need some lectures to go with the material to help us understand it. We will read only some of this text at first, then return to it later when we're doing problem challenges, by that time you will be much more sophisticated through practice.
 </p>
 </div>
 
@@ -781,7 +726,7 @@ Now we will redo what we just learned rigorously in Terence Tao's <i>Analysis I<
 <h3 id="Nature%20of%20mathematical%20logic">Nature of mathematical logic</h3>
 <div class="outline-text-3" id="text-Nature%20of%20mathematical%20logic">
 
-<figure id="org28ddca9">
+<figure id="orgebfcb86">
 <img src="./proofs.png" alt="proofs.png">
 
 <figcaption><span class="figure-number">Figure 1: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
@@ -793,7 +738,7 @@ Axioms are laws without a proof, as there are no earlier laws from which we can 
 </p>
 
 <p>
-Deduction can be described as if P then Q, assume P and prove Q which is part of the <i>rules of inference</i>. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the meaning of logical constants and the justifications of the rules of inference, and their history such as hypothesis a Greek word translated into Latin as supposition, meaning an assumption. If you want to know exactly how a proof is constructed you should read this as you do Tao's book noting the elimination rules. In math the contrapositive of statements is often used for proofs such as 'if P then Q so not Q then not P' as these are logically equivalent statements. 
+Deduction can be described as if P then Q, assume P and prove Q which is part of the <i>rules of inference</i>. There is a series of <a href="https://www.hf.uio.no/ifikk/forskning/publikasjoner/tidsskrifter/njpl/vol1no1/meaning.pdf">lectures</a> given by Per Martin-Lof in 1983, which in clear language anybody can understand, explains the meaning of logical constants and the justifications of the rules of inference, and their history such as hypothesis a Greek word translated into Latin as supposition, meaning an assumption. In math the contrapositive of statements is often used for proofs such as 'if P then Q so not Q then not P' as these are logically equivalent statements. 
 </p>
 
 <p>
@@ -801,15 +746,15 @@ Variables are used to express general laws, for example how do you express that 
 </p>
 
 <p>
-The operation of replacing all occurences of one variable for a value is known as substitution such as a + 0 = a and if a = 1, then substitute 1 + 0 = 1. There is also a substitution rule, where equivalent terms or formulas can be substituted for one another and this becomes highly abstract interchanging entire complex expressions not just single variables for another.  
+The operation of replacing all occurences of one variable for a value is known as substitution such as a + 0 = a and if a = 1, then substitute 1 + 0 = 1. There is also a substitution rule, where equivalent terms or formulas can be substituted for one another and this becomes highly abstract interchanging entire complex expressions. In books you will often see a succession of equal signs: (thing) = (bigger thing) = (even more complex thing) meaning all 3 can be substituted for each other.   
 </p>
 
 <p>
-Math has data structures just like programming languages. There are sets like {3, 1, 5} in which order does not matter, and lists like (a<sub>1</sub>, a<sub>2</sub>, &#x2026;., a<sub>n</sub>) which are ordered data. These are often interpreted as vectors or n-tuples like (x, y) coordinates. A list (x, x, y) is different from (x, y) as order matters but set {x, x, y} is the same as {x, y}. Math is <a href="https://youtu.be/k5t4yV_vxA8">object-oriented</a> so theories describe classes of structures and the instance of those structures models the theory/axioms.
+Math has data structures just like programming languages, and you can create new ones if you want. There are sets like {3, 1, 5} in which order does not matter, and lists like (a<sub>1</sub>, a<sub>2</sub>, &#x2026;., a<sub>n</sub>) which are ordered data. These are often interpreted as vectors or n-tuples like (x, y) coordinates. A list (a, a, b) is different from (a, b) as order matters but set {a, a, b} is the same as {a, b}. Math is <a href="https://youtu.be/k5t4yV_vxA8">object-oriented</a> so theories describe classes of structures and the instance of those structures models the theory/axioms.
 </p>
 
 <p>
-That's it, you now know all you need the rest is just practice. Much of the above was taken from texts you can find on library genesis about mathematical logic like <i>Introduction to Metamathematics</i> by Kleene if you want to see how reduction is used to collect a bunch of theories and reduce them to axioms, and how similar it all is to computer science with relational models, decidability, complexity theory and determining semantics of a natural language.
+That's it really: rules of inference, logical deduction, building models and manipulation of data structures. Much of the above was taken from texts you can find on library genesis about mathematical logic like <i>Introduction to Metamathematics</i> by Kleene if you want to see how reduction is used to collect a bunch of theories and reduce them to axioms, and how similar it all is to computer science with relational models, decidability, complexity theory and determining semantics of a natural language.
 </p>
 </div>
 
@@ -1132,7 +1077,7 @@ Another way to think about order of the natural numbers, is because they are ind
 Try a few yourself, write a convincing argument to yourself like how Tao writes proofs. Click on details button to see my scratchwork you do not have to do all the exercises.
 </p>
 
-<details id="org389ab0c">
+<details id="org83b0dfa">
 <p>
 
 </p>
@@ -1340,7 +1285,7 @@ Remark 2.3.8 the contradiction is that ac = bc by corollary 2.3.7 when fed into 
 Scratchwork and notes
 </p>
 
-<details id="org96d8b6c">
+<details id="org1a15608">
 <p>
 
 </p>
@@ -1519,7 +1464,7 @@ Exercise A.5.1
 </ul>
 
 <p>
-Optional lecture, you've already done some deduction from writing proofs, however this lecture shows what is and what isn't deducible. The end of the lecture has overlap with the appendix and the first logic lecture in this workshop so can be skipped.
+Optional lecture, you've already done some deduction from writing proofs, however this lecture shows what is and what isn't deducible. The end of the lecture has overlap with the appendix and the first logic lecture in this workshop.
 </p>
 </div>
 
@@ -1587,7 +1532,7 @@ Try Tao's <a href="http://scherk.pbworks.com/w/page/14864241/Quiz%3A%20Sets">qui
 You can skip these, even in the preface of this book Tao advocates to just read this chapter so I've only done a few. 
 </p>
 
-<details id="org9751adc">
+<details id="org4e2f4bb">
 <p>
 
 </p>
@@ -1697,7 +1642,7 @@ Another multiple choice <a href="http://scherk.pbworks.com/w/page/14864227/Quiz%
 All optional, do you get what a bijective/surjective/injective function is? Then you're good we will do all these definitions again in a calculus course.
 </p>
 
-<details id="orge46f54c">
+<details id="orgac3b035">
 <p>
 All of these proofs have a youtube tutorial or stackexchange answer, these are common proofs first year students do.
 </p>
@@ -1798,7 +1743,7 @@ Chapter 4 of <i>Analysis I</i> by Tao. Definition 4.1.1 is exactly the definitio
 You don't have to do the exercises, though proving equality as per A.7 for every object he creates is worth trying. This is the poor scratchwork I did
 </p>
 
-<details id="org8785ac8">
+<details id="org712d289">
 <p>
 4.1.1 Proving A.7 Equality again. From Def 4.1.1 equality is defined as: a&#x2013;b = c&#x2013;d iff a + d = c + b and the variables are natural numbers. Does a&#x2013;b = a&#x2013;b? In this defition: a + b = a + b so yes, since we already proved natural numbers obey the reflexive axiom. Does x&#x2013;y = y&#x2013;x or x + x = y + y and yes, x and y are natural number objects. If a&#x2013;b = c&#x2013;d, and c&#x2013;d = x&#x2013;y, does a&#x2013;b = x&#x2013;y? Converting everything to their respective natural number definition, and arranging on each side: a + d + c + y + a + y = c + b + x + d + x + b cancel and you're left with 2a + 2y = 2b + 2x, divide each by 2: a + y = x + b, converting this back into an integer this is a&#x2013;b = x&#x2013;y similar to Tao's proof in 4.1.1 of transitivity. 
 </p>
@@ -1900,7 +1845,7 @@ To recap we defined the natural number object, embedded them in the integers (a 
 These are pretty easy, try them. 4.2.6 in my copy must be a mistake 'show that if x, y, z are real numbers&#x2026;' that must be 'rational numbers' and sure enough checking Tao's errata page it is a mistake. There's a mistake in exercise 4.2.1 as well depending which version you're using. 
 </p>
 
-<details id="org39ebc50">
+<details id="org0914213">
 <p>
 
 </p>
@@ -2085,12 +2030,11 @@ This of course falls apart if Tao changed it to 'for all integers' instead of po
 </div>
 
 
-
 <div id="outline-container-4.4%20Gaps%20in%20the%20rational%20numbers" class="outline-3">
 <h3 id="4.4%20Gaps%20in%20the%20rational%20numbers">4.4 Gaps in the rational numbers</h3>
 <div class="outline-text-3" id="text-4.4%20Gaps%20in%20the%20rational%20numbers">
 <p>
-The idea here is that certain things don't exist in the rational numbers object like the square root of 2, so there are gaps where the square root of 2 should be. 
+The idea here is that certain things don't exist in the rational numbers object like the square root of 2, so there are 'gaps' where the square root of 2 should be. 
 </p>
 
 <p>
@@ -2110,7 +2054,7 @@ Proposition 4.4.5 is basically saying for any epsilon bigger than 0, there exist
 </p>
 
 <p>
-Tao mentions Dedekind cuts will be avoided, and the theory of infinite decimals has problems so also will be avoided. Wildberger has numerous <a href="https://youtu.be/jlnBo3APRlU">lectures</a> on both theories if you're interested the most detailed ones are in his 'Famous Math Problems' playlist. Wildberger makes the point that you will only ever find the cherry picked <a href="https://www.math.brown.edu/~res/INF/handout3.pdf">example</a> of the square root of 2 for Dedekind cuts in any undergrad material because of the mind boggling complexity involved trying to partition a set for pi<sup>2</sup>/6 and other irrational numbers. 
+Tao mentions Dedekind cuts will be avoided, and the theory of infinite decimals has problems so also will be avoided. Wildberger has numerous <a href="https://youtu.be/jlnBo3APRlU">lectures</a> on both theories if you're interested the most detailed ones are in his <i>Famous Math Problems</i> playlist. Wildberger makes the point that you will only ever find the cherry picked <a href="https://www.math.brown.edu/~res/INF/handout3.pdf">example</a> of the square root of 2 for Dedekind cuts in any undergrad material because of the mind boggling complexity involved trying to partition a set for pi<sup>2</sup>/6 and other irrational numbers. 
 </p>
 
 <p>
@@ -2120,209 +2064,11 @@ The <a href="https://en.wikibooks.org/wiki/Undergraduate_Mathematics/Proof_by_in
 </div>
 </div>
 
-<div id="outline-container-Some%20Algebra" class="outline-2">
-<h2 id="Some%20Algebra">Some Algebra</h2>
-<div class="outline-text-2" id="text-Some%20Algebra">
-</div>
-<div id="outline-container-Lectures" class="outline-3">
-<h3 id="Lectures">Lectures</h3>
-<div class="outline-text-3" id="text-Lectures">
-<p>
-Some optional mostly 10 minute lectures on algebra basics, such as how Pascal's array/Khayyam triangle/Yang Hui's triangle encodes the binomial theorem.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://youtu.be/5c3WyrebRYI">Introduction to Algebra</a> 
-<ul class="org-ul">
-<li>Wildberger notes there is a subtle change in variables as you get more sophisticated with algebra</li>
-</ul></li>
-<li><a href="https://youtu.be/oN5kw9i7qTA">Baby Algebra</a> 
-<ul class="org-ul">
-<li>The basics of solving equations</li>
-</ul></li>
-<li><a href="https://youtu.be/7eZUzceFFJw">Quadratic equations I</a> and <a href="https://youtu.be/mrY0mr1kGc0">part II</a>
-<ul class="org-ul">
-<li>Completing the square</li>
-<li>The quadratic formula</li>
-</ul></li>
-<li><a href="https://youtu.be/EnxV3_1oaOU">How to find a square root</a>
-<ul class="org-ul">
-<li>Manual square root algorithms</li>
-</ul></li>
-<li><a href="https://youtu.be/0QwESq4hCZQ">Number patterns I</a>
-<ul class="org-ul">
-<li>Table of differences, summation notation introduced</li>
-</ul></li>
-<li><a href="https://youtu.be/IUAVqWMybxU">Number patterns II</a>
-<ul class="org-ul">
-<li>Table of differences geometric interpretation</li>
-</ul></li>
-<li><a href="https://youtu.be/1mSk3J3GlA8">Euler and Pentagonal numbers</a>
-<ul class="org-ul">
-<li>Recursive partition function</li>
-</ul></li>
-<li><a href="https://youtu.be/cP50PQ-7VEk">Algebraic identities</a>
-<ul class="org-ul">
-<li>Common identities</li>
-</ul></li>
-<li><a href="https://youtu.be/h0Woqc_5qUE">The Binomial theorem</a>
-<ul class="org-ul">
-<li>Coefficients are related to paths on a two dimensional array</li>
-</ul></li>
-<li><a href="https://youtu.be/9txb9FgLDNY">Binomial coefficients</a>
-<ul class="org-ul">
-<li>N choose K intro to combinatorics</li>
-</ul></li>
-<li><a href="https://youtu.be/k4z2Y8Y_r-M">Trinomial theorem</a>
-<ul class="org-ul">
-<li>3D Pascal's tetrah</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Linear%20Algebra" class="outline-2">
-<h2 id="Linear%20Algebra">Linear Algebra</h2>
-<div class="outline-text-2" id="text-Linear%20Algebra">
-<p>
-We're doing <i>Analysis I</i> and Linear Algebra in parallel. These sets of lectures cover Linear Algebra from a geometric approach so later when we work through Tao's Linear Algebra <a href="https://terrytao.files.wordpress.com/2016/12/linear-algebra-notes.pdf">notes</a> we can understand what is happening. 
-</p>
-
-<p>
-This series is unique in that each linear algebra topic is setup with the problem it's trying to solve, how the special case of that problem can be solved, then how you would go about creating and proving a general case and the general case is what you find in most linear algebra books, they don't build it up from scratch. Wildberger has removed most of the complexity of linear algebra and any middle school student such as grade 7 and up can understand this series.
-</p>
-</div>
-
-<div id="outline-container-Introduction%20to%20Linear%20Algebra" class="outline-3">
-<h3 id="Introduction%20to%20Linear%20Algebra">Introduction to Linear Algebra</h3>
-<div class="outline-text-3" id="text-Introduction%20to%20Linear%20Algebra">
-<ul class="org-ul">
-<li><a href="https://youtu.be/yAb12PWrhV0">Introduction</a> - Wild Linear Algebra A1</li>
-</ul>
-
-<p>
-He constructs the affine plane from scratch. The vector (8/3, 10,3) you need to full screen to better see exactly where they are. From B, you move right 2 lines, and 2/3 so \(2 + \frac{2}{3}\) which is 8/3. From there you move up 1/3, and 3 so \(3 + \frac{1}{3}\) which is 10/3. Reasons for using the affine plane are you do not impose anything on it artificially like the origin (0,0) in the Cartesian plane, you can do projections easily, and it's construction is simple, since only parallel lines. 
-</p>
-
-<p>
-The biggest a takeaway here is what vector direction is, what a basis vector is and how you can combine them to form larger vectors, and how to translate basis vectors to suit different perspectives. The exercises at the end the delta symbol will return in the lecture on area and the determinant. 
-</p>
-
-<p>
-In this optional related <a href="https://youtu.be/Nu-YPJSNFpE">lecture</a> he shows how ancient people made a ruler using just parallel line geometry, which leads to modelling the rational continuum. Some more optional (short) videos is <a href="https://youtu.be/fNk_zzaMoSs">this</a> from 3Blue1Brown on what a vector is, and <a href="https://youtu.be/k7RM-ot2NWY">this</a> presentation of basis vectors and what a span is. Change of basis is video 13 in the 3BlueBrown playlist but the explanation here by Wildberger in the first lecture I find is better. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Vector%20Arithmetic" class="outline-3">
-<h3 id="Vector%20Arithmetic">Vector Arithmetic</h3>
-<div class="outline-text-3" id="text-Vector%20Arithmetic">
-<ul class="org-ul">
-<li><a href="https://youtu.be/132amJvoLpU">Geometry with Vectors</a> - Wild Linear Algebra A2</li>
-</ul>
-
-<p>
-All this vector arithmetic will come up later in other courses, at least now you will be somewhat familiar with it. Subtraction means going in the opposite direction, so if you're at the head of one vector and going to another vector's head, you are subtracting. The generalized affine combination where coefficients add up to 1 will come up again.  
-</p>
-
-<p>
-The proof for diagonals of a parallelogram bisect each other, note how quickly this can become a pile of symbols.
-</p>
-
-<ul class="org-ul">
-<li>let lambda = mu in: lambda = 1 - mu
-<ul class="org-ul">
-<li>if lambda = mu, then moving mu over to the other side means 2lambda</li>
-<li>2lambda = 1</li>
-<li>Divide each side by 2 to isolate lambda</li>
-<li>lambda = mu = 1/2</li>
-</ul></li>
-</ul>
-
-<p>
-@38:00 or so solving linear eq with 2 unknown variables we already covered in the first lecture
-</p>
-</div>
-</div>
-
-<div id="outline-container-Center%20of%20mass%20and%20barycentric%20coordinates" class="outline-3">
-<h3 id="Center%20of%20mass%20and%20barycentric%20coordinates">Center of mass and barycentric coordinates</h3>
-<div class="outline-text-3" id="text-Center%20of%20mass%20and%20barycentric%20coordinates">
-<p>
-Since we just did Physics in the software workshop (CS019 Differential systems) let's learn about Archimedes principle of the lever, accelerations in the grid plane and Newton's laws. This will come up again, note the labs here for a course in <a href="https://foundations-of-applied-mathematics.github.io/">applied math</a> specifically Lab Manual vol 2, writing python fuctions that perform Barycentric Lagrange interpolation. This is used to study air pollution by approximating graphs. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Area%20and%20volume%20%28determinants%29" class="outline-3">
-<h3 id="Area%20and%20volume%20%28determinants%29">Area and volume (determinants)</h3>
-<div class="outline-text-3" id="text-Area%20and%20volume%20%28determinants%29">
-<p>
-The fourth <a href="https://youtu.be/6XghF70fqkY">lecture</a> in the series to lead up to determinants. You probably recognize ad-bc from the first lecture, which was one of the exercises. He uses different notation for bi-vectors since it represents the union of vector a and b. The torque example you have probably seen somebody using a long pipe over a wrench in order to increase the torque without needing increased force, now you know why increasing the area of the wrench increases the torque. All 3 physics examples can be modelled with a parallegram/bi-vector. The bi-vector rules (ie: adding a scalar to one side of a bi-vector doesn't change the bi-vector) will make sense around 35:50 when he produces a picture proof showing how moving things doesn't change the bi-vector. At around 38:00 we once again get the formula ad-bc, the signed area is a scalar of two basis vectors. 45:50 introduces three-dimensional affine space. 
-</p>
-
-<p>
-Now that you've seen this model of area using bi-vectors, see <a href="https://youtu.be/Ip3X9LOh2dk">this</a> 10 minute presentation by 3Blue1Brown which will fill in some more details, like why the signed area can be negative if you didn't already figure it out. The exercises are conceptually easy, you don't have to do all of them but the whole point of linear algebra is to take these geometric concepts and do them in algebra. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Change%20of%20coordinates%20and%20determinants" class="outline-3">
-<h3 id="Change%20of%20coordinates%20and%20determinants">Change of coordinates and determinants</h3>
-<div class="outline-text-3" id="text-Change%20of%20coordinates%20and%20determinants">
-<p>
-<a href="https://youtu.be/Bozm0XgzmQo">Lecture</a> 5. Now we get a full intro to matrix and vector notation, and matrix operations, this is normally where linear algebra courses start. I like the fact that he built up the change of coordinates first so we aren't just presented with a meaningless array of numbers.  
-</p>
-
-<p>
-Exer 5.1 if you make a B matrix with e, f, g, h and then multiply AB, take the resulting matrices determinant. The piles of letters should equal det(A) x det(B) after you do some commutative rearranging, this is a 10 minute exercise.
-</p>
-</div>
-</div>
-
-<div id="outline-container-2x2%20matrices%20I" class="outline-3">
-<h3 id="2x2%20matrices%20I">2x2 matrices I</h3>
-<div class="outline-text-3" id="text-2x2%20matrices%20I">
-<p>
-<a href="https://youtu.be/qBOy-jCeFL8">Lecture</a> 6. I appreciate he starts all these lectures with a review, that makes them mostly self contained. This is something I haven't seen before, explaining all the arithmetic of 2x2 and higher matrices using just a 1x1 matrix. The inverse of a matrix is now simple to understand. He walks through some proofs of matrix laws like the associative law (AB)C = A(BC). The standard cartesian coord system is used here for examples of transformations like dilations and shear. A dilation is growing or shrinking, like your eye being dilated. 
-</p>
-
-<p>
-The end of this lecture: how do you visualize an arbitrary transformation? The next lecture expands on this intuition. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-2x2%20matrices%20II" class="outline-3">
-<h3 id="2x2%20matrices%20II">2x2 matrices II</h3>
-<div class="outline-text-3" id="text-2x2%20matrices%20II">
-<p>
-<a href="https://youtu.be/euoDroq6UMI">Lecture</a> 7. This tells you how to visualize transformations T(e<sub>1</sub>), T(e<sub>2</sub>) are the columns of a matrix, so you can look at it and see how it is being transformed. He briefly introduces an alternate framework of rational trig so we don't have to use those sin/cos functions to figure out a rotation. There is a book and entire playlist for rational trig, if you want to learn it write your own software library for rational trig as you go.
-</p>
-
-<p>
-End of the lecture introduces non-linear approximations, using differential calculus, to set up doing calculus in higher dimensions. The exercises you become 3Blue1Brown, able to visualize transformations yourself. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Inverting%203x3%20Matrices" class="outline-3">
-<h3 id="Inverting%203x3%20Matrices">Inverting 3x3 Matrices</h3>
-<div class="outline-text-3" id="text-Inverting%203x3%20Matrices">
-<p>
-<a href="https://youtu.be/anBKWgH_2eM">Lecture</a> 8. 3 dimensional linear algebra. Pretty good setup explaining the inverse of a 3x3 matrix, most books just give you a formula. We find out why delta is 1/delta. Transpose is also explained better than I've seen before. Reminder that these really complicated introductions all have an off the shelf formula, but he's showing us how they are derived fully so you understand the formula. 3x3 matrix multiplication is explained and pretty simple, explains why B(A(vec)) is the same as (BA)vec. If you're also doing the AI workshop, in 15-388 it's claimed B(A(vec)) is preferable in terms of complexity of running time to (BA)vec.   
-</p>
-</div>
-</div>
-</div>
-
-
 <div id="outline-container-Real%20Numbers" class="outline-2">
 <h2 id="Real%20Numbers">Real Numbers</h2>
 <div class="outline-text-2" id="text-Real%20Numbers">
 <p>
-This is a pretty good chapter in Tao's book, probably the clearest treatment I've ever seen of what exactly the construction of the Real numbers is using Cauchy sequences but not using limits to define them and other circular definitions. Tao invents some concepts here for the sole purposes of staging the definitions then tosses them away when we learn limits. Why do we need yet another numbers objects? Remember the supposed gaps in the rational numbers? This new object is supposed to fix the gaps. There's many, many more numbers objects like complex numbers. 
+Real numbers are basically a convenient abstraction for doing pure math analysis that every popular math text uses however our computers all use floating point arithmetic which is basically a stream of data we grab from to take finer approximations. You could view the following chapters as Cauchy sequences are just proving the real numbers exists instead of actually proving the real number system. 
 </p>
 </div>
 
@@ -2382,7 +2128,7 @@ An excellent lecture why we even need these complex limit and real definitions i
 <h3 id="5.1%20Cauchy%20sequences">5.1 Cauchy sequences</h3>
 <div class="outline-text-3" id="text-5.1%20Cauchy%20sequences">
 <p>
-Wildberger has good lecture introducing what a sequence is <a href="https://youtu.be/J-Gow6SfG2c">here</a>.  
+Wildberger has good lecture introducing what a sequence is <a href="https://youtu.be/J-Gow6SfG2c">here</a> and more precisely <a href="https://youtu.be/CEgP12Ijl_A">here</a> with index notation.  
 </p>
 
 <p>
@@ -2462,7 +2208,7 @@ Only two exercises here, simple point to definition pretend you are a lawyer wri
 <h3 id="5.3%20The%20construction%20of%20the%20real%20numbers">5.3 The construction of the real numbers</h3>
 <div class="outline-text-3" id="text-5.3%20The%20construction%20of%20the%20real%20numbers">
 <p>
-Tao has one of the few books anywhere that actually <a href="https://youtu.be/fXdFGbuAoF0">defines</a> the real numbers. Just like understanding the constructions of rationals and integers helped us understand their operations better, understanding the construction of the reals should help us better understand crazy abstractions like x<sup>e</sup>.  
+Tao has one of the few books anywhere that actually <a href="https://youtu.be/fXdFGbuAoF0">defines</a> the real numbers. Just like understanding the constructions of rationals and integers helped us understand their operations better, understanding the construction of the reals should help us better understand things like x<sup>e</sup> or square roots.  
 </p>
 
 <p>
@@ -2516,7 +2262,7 @@ Remark 5.5.11 we get the answer to 'can you add negative infinity with positive 
 </p>
 
 <p>
-The proof of prop 5.5.12 makes sense until you get to that inequality, wondering where he got x<sup>2</sup> + 5e, which is the Archemedian property. This is basically saying x is the least upper bound, x plus some tiny displacement (epsilon) squared is less than or equal to the Archimedian property of x<sup>2</sup> + 5(displacement) since if epsilon is really small, squaring it means it will be even smaller. He derives a double contradiction that x<sup>2</sup> is bigger than 2, and x<sup>2</sup> is less than 2, so x<sup>2</sup> must equal 2 and magically we have a number that solves x<sup>2</sup> = 2 which is not rational. 
+The proof of prop 5.5.12 makes sense until you get to that inequality, wondering where he got x<sup>2</sup> + 5e, which is the Archemedian property. This is basically saying x is the least upper bound, x plus some tiny displacement (epsilon) squared is less than or equal to the Archimedian property of x<sup>2</sup> + 5(displacement) since if epsilon is really small, squaring it means it will be even smaller. He derives a double contradiction that x<sup>2</sup> is bigger than 2, and x<sup>2</sup> is less than 2, so x<sup>2</sup> must equal 2 and we have a number that solves x<sup>2</sup> = 2 which is not rational. 
 </p>
 
 <p>
@@ -2534,313 +2280,6 @@ Finally we learn square roots. Depending on your copy of Tao's book there's some
 
 <p>
 Exercises 5.6.2 and 5.6.3 are simple and worth doing, using replacement to manipulate exponent laws. Exercise 5.6.3 that's the square root of x<sup>2</sup>, so x or using Lemma 5.6.6(g) or Lemma 5.6.9(b): \((x^{2/1})^{1/2}\) is \(x^{2/1 \cdot 1/2}\) which is x<sup>1</sup> or x. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Trigonometry%20Boot%20Camp" class="outline-2">
-<h2 id="Trigonometry%20Boot%20Camp">Trigonometry Boot Camp</h2>
-<div class="outline-text-2" id="text-Trigonometry%20Boot%20Camp">
-<p>
-Before we do trig, let's learn what \(\pi\) is. Wildberger <a href="https://youtu.be/lcIbCZR0HbU">talks</a> about the history of pi such as Archimedes interval for pi, Newton's formula, a hexadecimal version of pi, his own formula. The end of this lecture he claims pi is some kind of complex object we still don't understand. At this stage we only need to know it's a constant, or the applied approximation of 22/7 or 355/113.  
-</p>
-
-<p>
-Let's take the Brown Univeristy trig <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/">boot camp</a>. There is a crash course <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. I assume you know the basic gist of what an <a href="https://en.wikipedia.org/wiki/Angle">angle</a> is which will be better defined when we take calculus.   
-</p>
-
-<ul class="org-ul">
-<li>Radians you could even make up your own notation and define it as dblpi = 6.283… and then 360deg is dblpi, 90deg is 1/4dblpi, 180deg is dblpi/2, etc.</li>
-<li>We really only need to know sine and cosine functions, all others are derived from them</li>
-<li>In the scaling of triangles example where \(\frac{1}{\sqrt 2}\) becomes \(\frac{\sqrt 2}{2}\) they are rationalizing the denominator:
-<ul class="org-ul">
-<li>\(\frac{1}{\sqrt 2}\cdot\frac{\sqrt 2}{\sqrt 2}\) is \(\frac{\sqrt 2}{\sqrt 2 \cdot \sqrt 2}\) which is \(\frac{\sqrt 2}{\sqrt 4}\) or \(\frac{\sqrt 2}{2}\)</li>
-</ul></li>
-<li>You can download the <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/trigbootcamp-presentationslides.pdf">slides</a> to keep a copy of the scaled triangles</li>
-<li>The reflections think about subtracting 1/6 from 1/1, you get 5/6 so 5pi/6 is pi (180 deg) minus 1pi/6, and a negative direction means we are moving clockwise so move to pi, subtract pi/6 in other direction.</li>
-<li>The end of the lecture we finally discover why sin() and cos() are wave functions, since it's a function that moves around the unit circle. Tan() is the slope 'rise over run'</li>
-</ul>
-
-<p>
-Summary: There exists 3 triangles, which we should know their measurements, and scale them down since this is a unit circle with maximum x and y values of 1. Then we superimpose the triangles in the pi/2 (90deg) angle space on the unit circle in such a way that we have known values of cos()/sin() and other trig functions, because we can derive those other functions from cosine and sine. We reflect these triangles into the other areas of the circle so we can get x/y values there as well by rotating around the circle and then adding up all the angles to indicate how much we rotated counter-clockwise (positive) and clockwise (negative). A reflection is demonstrated <a href="https://youtu.be/aCypVdCNgWE">here</a> so if f(x) = sin(x), cos(x) and tan(x) then y = -(fx). 
-</p>
-
-<p>
-Try the <a href="http://www.math.brown.edu/~dkatz/trigbootcamp/trigbootcamp-practiceworksheet.pdf">worksheet</a> you can actually draw these out and count rotations if you want or use this radian to angle <a href="https://en.wikipedia.org/wiki/Degree_(angle)#/media/File:Degree-Radian_Conversion.svg">picture</a> from Wikipedia. The equations if one side is squared, then you need to take the square root of both sides so it's (not-squared = value) instead of (squared thing = value-when-squared). If you're stuck watch the video that walks through all the <a href="https://www.youtube.com/watch?v=EQo2SXbasC4">solutions</a> then do the worksheet again until you can finish it without needing to look at the video walkthru. 
-</p>
-
-<p>
-How I solved these: subtract 1 pi if it's bigger than 2pi, or a 1/2pi if smaller and see what you get, look at the 3 triangles if they have a corresponding value for sin/cos. If not subtract pi/3, pi/6 etc. If you're wondering why we are using radians instead of degrees it is explained <a href="https://youtu.be/CnQXRdgN_7I">here</a>. Wildberger's rational trigonometry uses a turn, so pi/2 is 1/4, pi is 1/2, and 2pi is 1. Angles are replaced by 'the spread of vectors'. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Linear%20Algebra%20cont." class="outline-2">
-<h2 id="Linear%20Algebra%20cont.">Linear Algebra cont.</h2>
-<div class="outline-text-2" id="text-Linear%20Algebra%20cont.">
-</div>
-<div id="outline-container-3D%20affine%20geometry" class="outline-3">
-<h3 id="3D%20affine%20geometry">3D affine geometry</h3>
-<div class="outline-text-3" id="text-3D%20affine%20geometry">
-<p>
-We're watching this <a href="https://youtu.be/I8MQyeNWdHw">lecture</a>: Three dimensional affine geometry | Wild Linear Algebra 9. He actually has a physical model of 3D affine space and shows how it projects to 2D. 3D (x, y, z) coordinates are explained with an interesting question 'how to model space?'. \(A^3\) space and \(V^3\) space are defined, insersecting and parallel planes are illustrated. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Equations%20of%20lines%20and%20planes%20in%203D" class="outline-3">
-<h3 id="Equations%20of%20lines%20and%20planes%20in%203D">Equations of lines and planes in 3D</h3>
-<div class="outline-text-3" id="text-Equations%20of%20lines%20and%20planes%20in%203D">
-<p>
-As typical with Wildberger lectures this goes far into more advanced material like Mobius bands to model all the lines in the plane, nobody ever showed me this in my linear algebra classes.
-</p>
-
-<p>
-<a href="https://youtu.be/Q0gnrV699GQ">Lecture</a> 10. Wildberger goes through different equations for lines: functions (calculus), cartesian and parametic. His example of cutting the Mobius band and not disconnecting all the lines reminds me of a lecture from Erik Demaine's advanced datastructures class and his fascination with origami. We get a new operation dmin(), when he finds the 'determinant of minors' you can see how easy this would be to write these operations as a program, and many optimized libraries already exist for doing so we won't be doing this by hand, this is to understand what those libraries do.  
-</p>
-
-<p>
-50:32 you can pause the lecture and easily calculate the dmin yourself for practice, in fact whenever he does some operation like finding the determinant see if you can do it yourself first. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Applications%20of%203x3%20matrices" class="outline-3">
-<h3 id="Applications%20of%203x3%20matrices">Applications of 3x3 matrices</h3>
-<div class="outline-text-3" id="text-Applications%20of%203x3%20matrices">
-<p>
-<a href="https://youtu.be/Vw91btJP6XI">Lecture</a> 11 the algebra of 3x3 matrices. A diagonal matrix, with constant diagonal, is a model or copy of the field of rational numbers, every number has a constant diagonal matrix. He goes through various transformations like reflections, projections and rotations in 3D. He shows the standard cos/sin rotation then rational trigonometry rotations, which makes rotations easier to manipulate when we are just learning, the basic <a href="https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions">rotations</a> using sin/cos are similar. Generalized reflections and projections are exampled, you don't have to memorize everything here just know what's happening: a line can project itself or relfect itself onto the plane, see if you can figure out what the matrices are doing as they all have patterns. The perpendicular definition, now you know why ax + by + cz = 0 is the plane equation. There's only two exercises, this was a good lecture of stuff that's usually not described at all in linear algebra texts.   
-</p>
-</div>
-</div>
-
-<div id="outline-container-Finish%20this%20playlist" class="outline-3">
-<h3 id="Finish%20this%20playlist">Finish this playlist</h3>
-<div class="outline-text-3" id="text-Finish%20this%20playlist">
-<p>
-You can either finish this at your leisure or wait until we do the Putnam seminar and watch them when problems come up for linear algebra. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Po-Shen%20Loh" class="outline-2">
-<h2 id="Po-Shen%20Loh">Po-Shen Loh</h2>
-<div class="outline-text-2" id="text-Po-Shen%20Loh">
-<p>
-Let's see what CMU professor <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh">Po-Shen Loh</a> is doing these days, since he's the current national coach of the US olympiad team who has won both the 2018 and 2019 competitions (and even <a href="https://twitter.com/PoShenLoh/status/1232835942387535872">wins</a> the math competitions for former medalists) so surely there will be something interesting for us in his content. 
-</p>
-</div>
-
-<div id="outline-container-Linear%20Algebra%20Explained" class="outline-3">
-<h3 id="Linear%20Algebra%20Explained">Linear Algebra Explained</h3>
-<div class="outline-text-3" id="text-Linear%20Algebra%20Explained">
-<p>
-This is a professional development seiminar for teachers given by Prof Loh on linear algebra specifically why is the formula for matrix multiplication constructed the way it is, and how to demystify the determinant. I audited them to see if we could use them here, the determinant lecture is definitely worth your time.   
-</p>
-</div>
-</div>
-
-<div id="outline-container-Matrix%20multiplication" class="outline-3">
-<h3 id="Matrix%20multiplication">Matrix multiplication</h3>
-<div class="outline-text-3" id="text-Matrix%20multiplication">
-<ul class="org-ul">
-<li><a href="https://youtu.be/5__JFBncHAA">Session 1 of 3</a> - Why is matrix multiplication done in 'strange' order?</li>
-</ul>
-
-<p>
-He begins talking about linear functions, which we know are functions that grow linear in size, using function composition as a model so g(f(x)). He writes his matrices using a full box/rectangle something he says he was taught in university to distinguish regular variables from matrices assigned to variables, like AB is actually matrix A x matrix B so he will draw a box around it to 'see it's shape better'. 
-</p>
-
-<p>
-1:06:00 or so he traces a variable from one function composition to another, distributes the variable at the end and shows that the multiplication you're doing at the end is exactly the same procedure of matrix multiplication, this part is worth watching if you're interested. 
-</p>
-
-<p>
-1:21:00 he describes the tech setup he's using for these videos: a lenovo laptop w/touchscreen he writes on, a green screen, and OBS Studio (free) to combine it all together and broadcast to YouTube. If you're interested you can see the <a href="https://youtu.be/nstKsCOhJZ4">camera</a> (looks like a Blackmagic URSA Broadcast or similar) and huge lights he's using, plus filming in what looks like a closet to drown out noise and sunlight. He says everything is run on linux and customized the touchscreen writing software as the code is open source. 
-</p>
-
-<p>
-1:43:00 he demonstrates how Fibonacci sequences can also show why matrix multiplication is associative, also a method to rapidly find any Fibonacci index using an order of magnitude estimate. He claims this method is superior to the typical golden ratio method because you're no longer carrying around square roots of 5 and can get exact solutions. 
-</p>
-
-<p>
-He ends with 'some students ask me in this modern day when there is big data and all these algorithms (machine learning) what kind of math will be the most useful for them to learn, my advice is linear algebra because it's convenient for modeling these things with a linear approximation'. He claims he had to take linear algebra in university twice to understand it because what he was taught in highschool about solving systems of equations was totally different than the abstract linear transformations in university. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Determinants" class="outline-3">
-<h3 id="Determinants">Determinants</h3>
-<div class="outline-text-3" id="text-Determinants">
-<ul class="org-ul">
-<li><a href="https://youtu.be/KfiCOUIvjE8">Session 3 of 3</a> - Determinants Explained</li>
-</ul>
-
-<p>
-I couldn't find session 2. The idea of this lecture is how teachers can demystify determinants to students, pointing out (signed) area and determinant are the same thing. If you can watch the whole lecture.   
-</p>
-
-<p>
-Prof Loh models the determinant as the area of parallelograms which we already know from the Wildberger lectures. There is a very long setup of 2x2 row operations getting areas of parallelograms and the determinant formula ad - bc just pops out of the last row operation. Signed area is then talked about like negating it, meaning 'flipping' the area, reflecting it across the origin.  
-</p>
-
-<p>
-He shows a student hack he saw at 1:37:10 or so for figuring out the determinant of a 3x3 matrix where you add on two extra columns to diagonally group and multiply, which is useless for 4x4 or NxN matrices. He explains the method he learned in school and still uses is the same method Wildberger taught us of blocking a row and column, taking the remaining 2x2 determinant and alternating their signs to a(ei-fh) - b(di-fg) + c(dh-eg). He says this method we use is scalable and works for all dimensions. 
-</p>
-
-<p>
-From about 1:44:00 he shows how to explain to students the standard 3x3 det() formula: aei + bfg + cdh - ceg -afh - bdi. He explains to find out himself he tested various matrices using linear functions, so holding some items in a vector fixed and let a few things vary, so basically testing it like you would a program. Scaling a linear variable down to 0, if it's 0 then the area should be zero too, this means there can't be any constants left floating around the formula or you will get nonsensical area. In the q&amp;a after he clarifies this. 
-</p>
-
-<p>
-He then takes every permutation of a row and shows that anything that multiplies two entries on a single row must also disappear from the determinant formula or else scaling breaks, the determinant formula multiplies a scalar twice in one vector.  
-</p>
-
-<p>
-Products from the same column breaks the formula as well. Recall that a 3x3 matrix is essentially 3 row vectors (x, y, z) so if you multiple anything in the same column, then you're exploding all the x vectors or z vectors while the rest stay constant, so you are stretching the signed area.
-</p>
-
-<p>
-Finally why is there alternating signs. Take a standard abcdefghi 3x3 matrix and take the 3x3 determinant formula: aei + bfg + cdh - ceg -afh - bdi. Make a matrix for each one using 1's and zeros. So aei will be a diagonal matrix of 1's and the rest zero:
-</p>
-
-
-<p>
-aei \(\begin{bmatrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{bmatrix}\)
-</p>
-
-<p>
-Compare the negative matrices: afh, bdi, and ceg to the diagonal matrix aei. Notice that you are flipping two of the 3 vector rows, so for example aei if you exchange ei with each other one time it becomes afh. If you switch ai in aei then you get ceg, another negative matrix in the determinant formula. In order to convert aei to a positive matrix like bfg, you need to flip twice. So it's revealed the negative matrices in the det() formula are one's you only flip an odd number of times, and positive even number of times, from the aei diagonal matrix. 
-</p>
-
-<p>
-2:16:30 he covers questions and gives more examples of single variables breaking the formula, column stretching.
-</p>
-
-<p>
-Most interesting part of this lecture is how he went about investigating the determinant formula, poking at it and experimenting around to see what happened when he broke the formula, modeling the formula using linear functions to see what happened, which is how you learn math from what we've seen already in Tao's blog posts and the book <i>How to think like a mathematician</i>. In a way this is also how you can learn some software you find in the wild with no documentation, disable some things and see what breaks. In other words poke at it to discover it's behavior. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Poh-Shen%20Loh%27s%20advice" class="outline-3">
-<h3 id="Poh-Shen%20Loh%27s%20advice">Poh-Shen Loh's advice</h3>
-<div class="outline-text-3" id="text-Poh-Shen%20Loh%27s%20advice">
-<p>
-His advice is we should concentrate on learning linear algebra, and the best way to learn math is through doing old competition problems. He claims math is the easiest of all subjects because 'there is little to memorize' meaning you can always derive things yourself using mathematical logic. In other interviews and videos on his channel I went through he claimed when he first was invited to a math olympiad seminar as a highschool student, he wasn't selected so the second year he was invited he decided to go for broke and tried to prove everything in the seminar using the most unusual methods he could think of and it worked, he ended up selected and winning a silver medal despite having little competition experience. Maybe there is something to his strategy of just winging it and seeing what you can prove naively yourself. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Limits" class="outline-2">
-<h2 id="Limits">Limits</h2>
-<div class="outline-text-2" id="text-Limits">
-<p>
-We will relearn this in a calculus class and can return to this chapter for more background. Everything in Calculus is a limit, like the derivative. 
-</p>
-</div>
-
-<div id="outline-container-6.1%20Convergence%20and%20limit%20laws" class="outline-3">
-<h3 id="6.1%20Convergence%20and%20limit%20laws">6.1 Convergence and limit laws</h3>
-<div class="outline-text-3" id="text-6.1%20Convergence%20and%20limit%20laws">
-<p>
-Returning back to Tao's <i>Analysis I</i> let's learn what a limit is after using formal limits for all of chapter 5. Think of any infinite convergent sequence such as 1.9<sub>1</sub> 1.99<sub>2</sub> 1.999<sub>3</sub> &#x2026; converging to 2 and that you have taken such a sequence and stuck it in an imaginary infinite array and indexed every value. This sequence does not end and goes on forever getting closer to the least upper bound. Everytime you subtract the limit from the next sequence entry you get a new smaller epsilon if it is a converging sequence. Try this yourself subtract (1.9 - 2), (1.99 - 2), (1.999999 - 2) and take the absolute value. If you choose an arbitrary epsilon of say 1, then every entry in the remaining infinite sequence will have an equal or smaller distance from 1 if it is converging, which is what the definition means by 'every epsilon &gt; 0'. The further you go down the infinite sequence the smaller this epsilon becomes so that 'for all positive epsilon' there is some index in this array where if you pick any arbitrary epsilon like .0000000001, every future index will contain a value equal or smaller than that epsilon if it converging to a limit. 
-</p>
-
-<p>
-Prop 6.1.7 notice he has assigned epsilon to the value |L-L'|/3 which is why d(L,L') \(\le\) 2epsilon is d(L,L') = 2|L-L'|/3 I somehow missed that assignment and spent a few minutes wondering what was going on. He wanted a tiny displacement but why divide by 3 instead of 2? I'm guessing to set up the triangle inequality. 
-</p>
-
-<p>
-In Remark 6.1.9 we throw out the starting index, I also noticed he changed the index type from naturals to integers in these definitions.
-</p>
-
-<p>
-These exercises can wait until we do a calculus course
-</p>
-
-<details id="org2ee488c">
-<p>
-Ex 6.1.1 assume we're using induction because Tao noting these are natural numbers. We want to show \(a_{n+i}\) is &gt; a<sub>n</sub> for all natural numbers i. If i = 1 then base case is satisfied, since n+1 &gt; n. Suppose \(a_{n+i}\) is &gt; a<sub>n</sub>, then the successor of i \(a_{n+i++}\) is &gt; a<sub>n</sub>. By earlier propositions of addition I'm too lazy to cite, \(a_{n+i++}\) can be rewritten as \(a_{(n+i)++}\) or \(a_{(n++)+ i}\) and since n++ is greater than n by peano axioms we're good. If m &gt; n, then we can assign m = n + 1 to the example sequence and by above terribly lazy induction proof a<sub>m</sub> &gt; a<sub>n</sub> and by transitivity. All we are doing here is defining what an increasing sequence means. Note these indices are recursive, we are creating a structure adding +1 so we can take it apart like we would a recursive datastructure, that's why the indices for a sequence often end with n-2, n-1, n or begin with n-n, n-(n-1).
-</p>
-
-<p>
-Ex 6.1.2 is asking is it possible for a sequence of real numbers to converge to another real number, if none of the conditions are satisfied so a proof by contradiction where you look in the logic appendix for if and only if statements and try to prove it false. Let's look at Def 6.1.5 and see if it's possible. Assume for contradiction given any real epsilon &gt; 0, you <i>can't</i> find an index in a convergent infinite sequence so that all future entries are less than or equal to that epsilon. Then this sequence is not converging, and is divergent by def 6.1.5. If the difference between the limit and the sequence entry does not continually shrink meaning there exists some index that can satisfy every epsilon &gt; 0 then it is moving away from the limit and contradicts the definition of convergence of sequences.   
-</p>
-
-<p>
-Ex 6.1.3 this looks a lot like ex 6.1.2, we have a sequence converging to a real number, and one index is bigger or equal to the other, so if a later index entry of the sequence is not within epsilon, obviously an earlier index can't be a convergent sequence either because then we don't have the property that n \(\ge\) N ie all future index values of some arbitrary epsilon displacement between c (the real number) and the sequence entries. This is in Remark 6.1.9 that the starting index is irrelevant only the fact that a sequence eventually converge to a limit is relevant.  
-</p>
-
-<p>
-Ex 6.1.4 another question about indices, this one you are adding an arbitrary integer to the index (which could also be zero) that acts like a stepping function, moving up in increments of 1000. If a'<sub>n</sub> and a<sub>n</sub> are supposed to be converging to a limit, if you add 1000 to the index, a<sub>1001</sub>, a<sub>2002</sub>, a<sub>3003</sub> better converge if a'<sub>n</sub> wants to converge or else the properties of def 6.1.5 don't hold. You could show this with k = 0, j = n + k, and now you have a sequence a<sub>j</sub> = a<sub>n</sub> where a<sub>n</sub> will only converge if a<sub>j</sub> does since they are the same sequence and n + k \(\ge\) n \(\ge\) N which is def 6.1.5 again, so adding an arbitrary step to the indices shouldn't matter. 
-</p>
-
-<p>
-Ex 6.1.5 Looking at Def 5.1.8 for a Cauchy sequence, for every possible positive epsilon there must exist an eventual index where two adjacent index entries subtracted from each other have to be less than or equal to that epsilon meaning of course they are converging so the distance between entries grows smaller and smaller. The limit definition, is the limit subtracted from an eventual index &gt; N will always be within an epsilon displacement if it is converging to that limit. The triangle inequality for distance back in 4.3.3 states the distance from x to z, is less than or equal to the distance from x to y plus the distance from y to z. The distance a<sub>j</sub> - a<sub>k</sub> \(\le\) epsilon, and the distance a<sub>n</sub> - limit \(\le\) epsilon so assign y = limit in the triangle inequality: a<sub>j</sub> - a<sub>k</sub> \(\le\) a<sub>j</sub> - limit \(\le\) a<sub>k</sub> - limit and of course are all within epsilon so a convergent sequence of real numbers is also a Cauchy sequence. 
-</p>
-
-<p>
-Ex 6.1.6 prove prop 6.1.15. There is a long proof answer <a href="https://taoanalysis.wordpress.com/2020/05/31/exercise-6-1-6/">here</a> you probably want to try and understand but it's worth going back and seeing how he superceded the proofs of temporary constructions before. For example in remark 4.2.5 he defined the quotient x/y of two rationals then substituted in his temporary notation and definitions to prove the new notation and definitions led to the same conclusion, and thus could discard it and use the new notation. Here I did the same thing using 6.1.11 his proof that the limit of 1/n = 0 rewriting it using new limit notation substituted in Cauchy/formal limits, came to the same conclusion and now I claim formal limits are 'genuine limits' and can toss that notation. I also used 6.1.11 as a concrete example to try his contradiction suggestion, assuming 1/n was not eventually &epsilon;-close to 0 and found it was much easier to prove that it had to converge to 0 thus be the genuine limit of 1/n. Is this correct? The proofs of all the limits can be found on YouTube if you're wondering.
-</p>
-
-<p>
-Ex 6.1.7 we look at Prop 6.1.4 and rewrite it to bridge rational bounded sequences from 5.1.12 to real number bounded sequences defined in 6.1.16, just like how 6.1.4 bridged rational Cauchy sequences to real number Cauchy sequences, you are using 6.1.4's proof as a template: Suppose that \((a_n)_{n=m}^\infty\) is a sequence in the sense of 6.1.16 and it is bounded by a real number M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m, in particular it is bounded by a rational M &gt; 0 which makes it a bounded sequence in the sense of 5.1.12. Now suppose \((a_n)_{n=m}^{\infty}\) is a sequence in the sense of 5.1.12 that is bounded by a rational M &gt; 0 and a<sub>n</sub> \(\le\) M for all n \(\ge\) m. If M is a real number, then there exists an integer N &gt; M by the Archimedean property&#x2026; and your proof carries on like this showing that 6.1.16 is indeed bounded by a real number.    
-</p>
-
-<p>
-6.1.8 Try and prove these yourself, doesn't matter how awful your proof is just that you looked at previous Cauchy series lemma proofs like 5.3.6 and tried to adapt them to limits, like he does in Prop 6.1.11 so proving the addition of two limits converges to another limit, if a<sub>n</sub> - L must be less than epsilon for every epsilon &gt; 0, then substitute in L = a<sub>n</sub> + b<sub>n</sub> and see what happens: \(|a_n - (a_n + b_{n})| + |b_n - (a_n + b_{n})|\) \(\le\) epsilon then lim\((a_n + b_{n})\). This is the point of doing proof based math so you can experiment around to better learn constructions and derive all the rules later if you forget them. There are answers floating around for Ex 6.1.8 but maybe you know a better/more intuitive way to prove that a<sub>n</sub> + b<sub>n</sub> converges to the real number x + y. 
-</p>
-
-<p>
-6.1.9, why does x/0 fail, and 6.1.10 modifying 6.1.4 again you can figure out easily since we know you can always squeeze a rational number in, so a<sub>n</sub> - b<sub>n</sub> \(\le\) rational epsilon \(\le\) real epsilon 
-</p>
-</details>
-</div>
-</div>
-
-<div id="outline-container-6.2%20The%20Extended%20real%20numbers" class="outline-3">
-<h3 id="6.2%20The%20Extended%20real%20numbers">6.2 The Extended real numbers</h3>
-<div class="outline-text-3" id="text-6.2%20The%20Extended%20real%20numbers">
-<p>
-We patch the definition of real numbers with negative and positive infinity elements that are distinct from all other real numbers. All we can do with these two new objects is equate things to them, something is infinite if it equals negative or positive infinity. Tao points out cancellation of infinity elements leads to nonsense conclusions.     
-</p>
-
-<p>
-Example 6.2.7 and def 6.2.6 if a set 'E' contains negative infinity, sup(E) is that set with negative infinity removed and the least upper bound taken, so his example E = {-1, -2, &#x2026;.} U {negative infinity} results in the set {-1, -2, &#x2026;, -\(\infty\)} so there is a set of infinite descending numbers unioned with an object 'negative infinity' and sup(E) is -1 because we remove -\(\infty\), but are still left with the first set of {-1, -2,..} even though it technically is also negative infinity it is not the object \(-\infty\). Example 6.2.9 that set is equal to infinity but does not contain the actual element infinity. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-6.5%20Some%20standard%20limits" class="outline-3">
-<h3 id="6.5%20Some%20standard%20limits">6.5 Some standard limits</h3>
-<div class="outline-text-3" id="text-6.5%20Some%20standard%20limits">
-<p>
-Very short chapter, the proof of 6.5.1 is a standard point-at-definitions style proof, see Lemma 5.6.6(a) and (b) and (g), if L = 1/x<sup>1/k</sup> then L<sup>k</sup> = (1/x<sup>1\k</sup>)<sup>k\1</sup> which is L<sup>k</sup> = 1/x. For the exercise with x<sup>q</sup>, look at Def 5.6.7 and 5.6.9 again. 
-</p>
-
-<p>
-If you are weak with limits we will revisit these chapters numerous times there is no need to memorize everything here just know where to look it up when needed.   
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-6.7%20Real%20number%20exponents%20II" class="outline-3">
-<h3 id="6.7%20Real%20number%20exponents%20II">6.7 Real number exponents II</h3>
-<div class="outline-text-3" id="text-6.7%20Real%20number%20exponents%20II">
-<p>
-Here we learn what things like x<sup>e</sup> or x<sup>&pi;</sup> mean. The proof is huge, but Tao makes it easy to follow it's all things we've already seen.
-</p>
-
-<p>
-Proposition 6.7.3 we use the limit laws to prove the usual exponent laws for rational numbers hold for real numbers. All you have to know is that a real exponent is a limit so you can use the limit laws to manipulate them in the future if needed otherwise the normal laws of rational exponents hold. Some solutions to the exercises are <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">here</a> on Tao's class page.     
 </p>
 </div>
 </div>
@@ -2898,31 +2337,6 @@ Proving all these finite sum identities are easy once you get one of them, all y
 </div>
 </div>
 
-<div id="outline-container-7.2%20Infinite%20series" class="outline-3">
-<h3 id="7.2%20Infinite%20series">7.2 Infinite series</h3>
-<div class="outline-text-3" id="text-7.2%20Infinite%20series">
-<p>
-Example 7.2.4 is also a Khan Academy <a href="https://www.khanacademy.org/math/ap-calculus-bc/bc-series-new/bc-10-1/v/partial-sum-notation">lecture</a>, S<sub>N</sub> partial sum the N is any index value greater or equal to the starting index, meaning you take the first 10 sums, the first 20 sums, the first billion sums. Plug in some values to his example, try a 4 as N:
-</p>
-
-<ul class="org-ul">
-<li>\(\sum_{n=1}^4 2^{-n} = 1 - 2^{-4}\)</li>
-<li>or 1/2<sup>1</sup> + 1/2<sup>2</sup> + 1/2<sup>3</sup> + 1/2<sup>4</sup> = 15/16
-<ul class="org-ul">
-<li>S<sub>4</sub> = 1 - 1/16 = 15/16</li>
-</ul></li>
-</ul>
-
-<p>
-Proposition 7.2.5 the proof is on Tao's class page see the homework <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">solutions</a> but it's things we've already done a dozen times, this is a partial sum from p to q, where if you subtract S<sub>q</sub> - S<sub>p</sub> you should get an absolute value smaller or equal to epsilon for some index that is bigger than N known as the 'tail'. 
-</p>
-
-<p>
-Really all you need out of this chapter is the series laws (Prop 7.2.14) for convergent infinite series and know later if it ever comes up, where to find these definitions and methods to test for convergence. For example in the book <i>The Art of Computer Programming</i> you will rarely ever use any of these definitions instead using the finite definitions.
-</p>
-</div>
-</div>
-
 <div id="outline-container-7.3%20Sums%20of%20non-negative%20numbers" class="outline-3">
 <h3 id="7.3%20Sums%20of%20non-negative%20numbers">7.3 Sums of non-negative numbers</h3>
 <div class="outline-text-3" id="text-7.3%20Sums%20of%20non-negative%20numbers">
@@ -2947,11 +2361,167 @@ Just flip through the remainder of this chapter noting things you can always com
 </div>
 </div>
 
+<div id="outline-container-Math%20circle" class="outline-2">
+<h2 id="Math%20circle">Math circle</h2>
+<div class="outline-text-2" id="text-Math%20circle">
+<p>
+Now we completely change from linear progression through textbooks to a solving olympiad style problems. This is similar to a <a href="https://youtu.be/z_75zzqXVnM">math circle</a> essentially an informal group of all ages from professors to student TAs to middle school students get together to group solve a problem and repeat. 
+</p>
+
+<p>
+Let's start with <a href="https://www.math.cmu.edu/~ploh/cmu.shtml">Poh-Shen Loh's</a> combinatorics problem solving seminars and a Russian olympiad-style book on basic algebra skills because you don't need a background more than what we've already done for either.
+</p>
+
+<p>
+<b>Materials</b>
+</p>
+<ul class="org-ul">
+<li><i>Mathematics via problems: Part 1: Algebra</i> by Arkadiy Skopenkov.
+<ul class="org-ul">
+<li>A masterclass in basic algebra everybody should know</li>
+<li>"This <a href="http://libgen.is/book/index.php?md5=B45D7552DC5CDC4E1EC1A323039B9AF9">book</a> attempts to build a bridge (by showing there is no gap) between ordinary high school exercises and the more sophisticated, intricate, and abstract concepts in mathematics"</li>
+<li>The <a href="https://www.mccme.ru/~skopenko/">author</a> is a professor at <a href="https://mipt.ru/english/">MIPT</a> and uses this book for an olympiad circle</li>
+</ul></li>
+<li>21-228 Discrete Mathematics <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">course</a> (Sp 2021)
+<ul class="org-ul">
+<li>Lectures on his YouTube <a href="https://www.youtube.com/c/DailyChallengewithPoShenLoh/search?query=Discrete%20Mathematics">channel</a></li>
+<li>Prof Loh is the current national coach of the US olympiad team who has won gold 4x (and even <a href="https://twitter.com/PoShenLoh/status/1232835942387535872">wins</a> the math competitions for former medalists) so surely his content will be worth viewing.</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-Combinatorics%20lecture%201" class="outline-3">
+<h3 id="Combinatorics%20lecture%201">Combinatorics lecture 1</h3>
+<div class="outline-text-3" id="text-Combinatorics%20lecture%201">
+<p>
+The <a href="https://youtu.be/0K540qqyJJU">first</a> lecture begins ~14:30 mins. We start here so you can see how to investigate problems in math. He's breaking down some elementary combinatorics problems to show the logic of solving them. @37:40 why does the last digit have to be even? Because it's supposed to be an even 4-digit number so ending in 0, 2, 4, 5, 8. The general form is crazy but he did it by writing down a table of one digit numbers, two digits .. n + 1 digits to find the general pattern.
+</p>
+
+<p>
+<b>Assignment 1</b>
+</p>
+
+<p>
+Let's try the <a href="https://www.math.cmu.edu/~ploh/docs/math/2021-228/hw1.pdf">assignment</a>. This discrete math course is unusual in that there is no hundreds of drill problems to do in the book, just the challenges he hands out. I will attempt to work through them like he does, writing down little examples and ideas and seeing what happens:
+</p>
+
+<p>
+1.) The first is a symmetric difference assignment which is defined <a href="https://en.wikipedia.org/wiki/Symmetric_difference">here</a>. Look under properties, the answer is there 'from the property of the inverses in a Boolean group, it follows…'. We can eliminate B and are left with:
+</p>
+
+<p>
+(A △ C) △ (C △ A) and from that same article, we can eliminate C so are left with A △ A which is just the empty set. 
+</p>
+
+<p>
+2.) We have a set bigger or equal to 3, and we need to know how many subsets contain <i>exactly 2</i> permutations of 1, 2, 3 so {1, 2, 3, 5} or {1, 2, 3} does not count as it contains 3 permutations of 1, 2, 3 and the assignment wants only 2. This seems like a powerset problem, generating all possible subsets. Google any free powerset online calculator and try the base case, set {1, 2, 3} it contains 3 sets with exactly 2 numbers from 1, 2, 3. Try the next bigger set {1, 2, 3, 4}, I count 6 occurences. The set {1, 2, 3, 4, 5} has 12 occurences. I'm going to guess {1, 2, 3, 4, 5, 6} is 24 occurences, and that {1, 2, 3, 4, 5, 6, 7} will have 48 occurences.  The pattern is 3x2x2x2.. now how to figure out what the n set is? If n = 4, it's 3x2, if n = 5, it's 3x2x2, if n = 6, it's 3x2x2x2. Writing out more examples I see it's: Length 4 choose 1 of the 2's, length 5 choose 2, length 6 choose 3, 7 choose 4, the choose n is the amount of 2's in 3x2x2x2.. and they differ by 3 each time. The solution seems to be any set with length n, subtract 3 and that's how many 2s to multiply to get the answer. A set {1, 2, 3&#x2026;. n} where n = 10, it's 3 times seven 2's or 3x2x2x2x2x2x2x2 or 384 subsets.
+</p>
+
+<p>
+3.) This is solved by Wildberger <a href="https://youtu.be/h0Woqc_5qUE">here</a> where he shows how to count the number of paths on a grid, it's Pascal's array or n choose k as detailed in his <a href="https://youtu.be/V2mk24udsMw">Famous Math Problems 5</a> lecture. There is also a writeup <a href="https://researchideas.ca/wmt/c6b3.html">here</a> how to avoid paths on a grid. First we can <a href="https://www.desmos.com/calculator/fbaikxgmyr">visualize</a> this with free online graphing software, either plotting y = 59 streets and x = 8 avenues or reduce the scope, since we're only interested in the (59 - 34) and (8 - 5) avenues. Zoom to see all the streets. If King Kong goes (59 - 34) streets and (8 - 5) avenues he has 25 streets + 3 avenues or 28 total moves in any direct path to the Empire state building then we have to figure out how to subtract the paths that involve 42nd and 7th ave. 
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-Algebra%20chapter%201" class="outline-3">
+<h3 id="Algebra%20chapter%201">Algebra chapter 1</h3>
+<div class="outline-text-3" id="text-Algebra%20chapter%201">
+<p>
+Reading <i>Mathematics via problems</i> book by Skopenkov. The contents of this book are similar to undergrad courses like <a href="https://cs.uwaterloo.ca/~cbruni/pdfs/Math135Notes/M135Notes_S2018.pdf">Math 135: Algebra for Honours Mathematics</a> and if you search for the course description they removed the <i>sage on the stage</i> approach of lecturing and students solely do problems together in class, like a math circle. In the preface of Skopenkov's book we are informed that you don't read this book linearly, you take sections that interest you solving the level 1 to 2 problems, then going back later and trying the level 3 and 4 problems as you will be 'at a new level'. Prof K in the software workshop recommends the same method that you iterate over material you've already done multiple times each time returning to it at a higher level so you can see how concepts there transfer over to concepts you're currently learning. 
+</p>
+
+<p>
+1.1.1(a) What are the rules of divisibility by 2, 4, 5, 10, 3, 9 and 11. This is an example of a great problem you could figure out yourself during spare time using just a phone calculator. Investigate first seeing if you can discover the rule, then look at author's proofs.
+</p>
+
+<details id="orgb74d3d4">
+<ul class="org-ul">
+<li>Divisible by 2:
+<ul class="org-ul">
+<li>Examples: 2, 4, 6, 8, 100, 1204</li>
+<li>Rule: last digit must be even, or end in 0 if &gt; 1 digit</li>
+</ul></li>
+<li>Divisible by 4:
+<ul class="org-ul">
+<li>Examples: 4, 8, 14*2, 16, 116, 11116</li>
+<li>Rule: any number where the last 2 digits are divisible by 4</li>
+<li>any even number x 2 is also divisible by 4</li>
+</ul></li>
+<li>Divisible by 5:</li>
+<li>5, 10, 70, 75, 100, 1115
+<ul class="org-ul">
+<li>Last digit ends in 5 or if &gt; 1 digit ends in 0</li>
+</ul></li>
+<li>Divisible by 10:
+<ul class="org-ul">
+<li>Rule: ends in 0</li>
+</ul></li>
+<li>Divisible by 3:
+<ul class="org-ul">
+<li>1 digit: 3, 6, 9</li>
+<li>2 digit: 12, 15, 18, 51</li>
+<li>n digit: 102, 1131, 1221, 13335</li>
+<li>Rule: Digits must sum to 3, 6, 9 etc if number is divisible by 3</li>
+<li>Test: Random number who's digits sum to 18, divide by 3 ie: 44442</li>
+</ul></li>
+<li>Divisible by 9:
+<ul class="org-ul">
+<li>You probably already know this from elementary school</li>
+</ul></li>
+<li>Divisible by 11:</li>
+<li>Examples: 11, 22, 143, 275, 726, 737
+<ul class="org-ul">
+<li>1-1 = 0, 2-2 - 0.. 143 add 1 and 3 then 4 - 4</li>
+<li>726: add 6 and 7, subtract 2 = 11</li>
+<li>Rule: sum even/odd digits, subtract from each other, if result is divisible by 11 or result is 0 then the original number is divisible by 11</li>
+</ul></li>
+</ul>
+
+<p>
+Page 2 are the proofs, he's using generalized hindu-arabic notation we already learned. First proof, subtract from n the last digit, ie: 112 - 2 = 110. What does he mean by 'divides each term of the sum' he means in hindu-arabic notation form, so 112 = 100 + 10 + 2 or 336 = 300 + 30 + 6 and 2 divides each term and the sum. The proof of divisibility by 4, any number n if you subtract the 10's and the last digit, it will be divisible by 4 like 177 is 177 - 70 - 7 or 100. The 4|n notation is in the preface, it means 4 divides n.
+</p>
+
+<ul class="org-ul">
+<li>Exercise, prove divisibility of 5: The number n - a<sub>0</sub> is divisible by 5. Suppose a<sub>0</sub> is 5, then rewrite his other example proofs.</li>
+
+<li>Exercise, prove divisibility of 10: The number 10<sub>a1</sub> is divisible by 10, could use the fact that anything divides zero: 'suppose a<sub>0</sub> is 0, or by definition a<sub>0</sub> is &lt; 10 so must be zero, then if a number divides every term of the sum, it divides the sum'.</li>
+</ul>
+
+<p>
+The rest of the proofs put in concrete values if you don't understand them like the proof of divisibility by 3: 234 is (200 - 2) + (30 - 3) + (4 - 4) or 225 which is divisible by 3. 1224 is (1000 - 1) + (200 - 2) + (20 - 2) + (4 - 4) or 1215 which is also divisible by 3, and by 9. He inserts a function f(n) to represent the algorithm of summing even/odd indexes of numbers divisible by 11. 
+</p>
+</details>
+
+<p>
+1.1.1(b) Trying some examples, 111,111|(10<sup>6m</sup> - 1). It will also divide repeating number of 1's that are 10<sup>6m</sup> digits long, so it's digit sum needs to be divisible by 6 ie 10<sup>12</sup>, 10<sup>18</sup> etc. A huge number consisting of all 1's who's digits sum to 1993 (a prime number, so sum of digits not divisible by anything except itself) is not divisible by 111,111. 
+</p>
+
+<p>
+1.1.1(c) prove that a number consisting of 2001 1's is divisible by 37. We are only asked to prove for 11111&#x2026; not a general number or rule of division by 37. Trying examples, any repeating number (111, 222, 333) who's digit sum is divisible by 3 is divisible by 37. Since 3|2001, it should be divisible by 37. Further investigation reveals that 37|1110 and 37|11,100 and 37|111,000 etc. 3|2001 is 667 so there are 667 'groups of 3' of the digits 111. If n = 111,111 then 37|n - (10<sub>a2</sub> + 10<sub>a1</sub> + a<sub>0</sub>) and 37|(10<sub>a2</sub> + 10<sub>a1</sub> + a<sub>0</sub>).
+</p>
+
+<p>
+Finish the rest of chapter 1, so 1.1.3, 1.1.4 and 1.1.5.
+</p>
+
+<ul class="org-ul">
+<li>1.1.3(a): 2|(a<sup>2</sup> - a) input small examples, like 3<sup>2</sup> - 3 is 6, whatever you substitute for a ends up even and is divisible by 2. A lot of Tao's rules are here, like not being able to cancel each side if the cancelled number is 0.</li>
+<li>1.1.3(f) if a = kb then ac = k(bc) which is still in the definition of division form: (thing) = k(thing).</li>
+<li>1.1.4 if a is divisible by 2 and 3, then a is obviously even, and since it is divisible by 3 as well, 3 x (even) will be divisible by 6. He uses an interesting proof for these but if 17|a and 19|a then 17x19 = 323 and 323|a because 17|323 and 19|323 is how I read it.</li>
+<li>1.1.5(a) k = 7 is not divisible by 2, 3 or 5 and 240|(7<sup>4</sup> - 1), also if k = 11, or k = 17. TODO</li>
+</ul>
+</div>
+</div>
+</div>
+
+
 <div id="outline-container-CMU%20Putnam%20Seminar" class="outline-2">
 <h2 id="CMU%20Putnam%20Seminar">CMU Putnam Seminar</h2>
 <div class="outline-text-2" id="text-CMU%20Putnam%20Seminar">
 <p>
-The rest of this workshop we follow Prof Loh's advice and do competitive math problems in order to learn undergrad math. We will acheive this with the CMU Putnam Seminar and the book <i>Putnam and Beyond</i> second edition you can find on <a href="http://libgen.rs/search.php?req=putnam+and+beyond">library genesis</a>. Most of the lectures are <a href="https://www.youtube.com/c/DailyChallengewithPoShenLoh/search?query=CMU%20Putnam%20Seminar">archived</a> on YouTube and the class page is <a href="https://www.math.cmu.edu/~ploh/2020-putnam.shtml">here</a>.
+Another Prof Loh seminar we can do at the same time as the algebra and combinatorics problems, this one follows the book <i>Putnam and Beyond</i> second edition you can find on <a href="http://libgen.rs/search.php?req=putnam+and+beyond">library genesis</a> what has completely worked out solutions for all problems. Lectures are <a href="https://www.youtube.com/c/DailyChallengewithPoShenLoh/search?query=CMU%20Putnam%20Seminar">archived</a> on YouTube and the class page is <a href="https://www.math.cmu.edu/~ploh/2020-putnam.shtml">here</a>.
 </p>
 
 <p>
@@ -2992,198 +2562,8 @@ He cleared the fractions by multiplying the polynomial by c<sup>n</sup> which yo
 </p>
 
 <p>
-His other site Expii Solve has similar kinds of <a href="https://www.expii.com/solve/70/1">challenges</a> they start easy and get harder with links at the bottom of each question where to find background material, you may want to try those too they help you learn all kinds of topics such as spherical geometry, probability and even calculus. It's a community written site so kind of like math overflow where anybody can write a tutorial for a subject and these are upvoted if other people find them useful, which could be good or bad, a well written Tao-like fundamentals post would likely not be upvoted compared to some bag of tricks with a flashy youtube embed.
+His other site Expii Solve has similar kinds of <a href="https://www.expii.com/solve/70/1">challenges</a> they start easy and get harder with links at the bottom of each question where to find background material, you may want to try those too they help you learn all kinds of topics such as spherical geometry, probability and even calculus. It's a community written site so kind of like math overflow where anybody can write a tutorial for a subject and these are upvoted if other people find them useful, which could be good or bad, a well written Tao-like fundamentals post would likely not be upvoted compared to some bag of tricks with a clickbait youtube embed. 
 </p>
-</div>
-
-<div id="outline-container-Introduction--Exercises" class="outline-4">
-<h4 id="Introduction--Exercises">Exercises</h4>
-<div class="outline-text-4" id="text-Introduction--Exercises">
-<p>
-There are more <a href="https://www.math.cmu.edu/~ploh/docs/math/2020-295/01-intro.pdf">problems</a> and all are proof by contradiction since he just showed us how to come up with a contradiction. Problem 2 looks the easiest for us, there is a closed set where there can't exist the same negative or positive number, like -3 and 3. A contradiction that immediatley comes to mind is multiplication, what if 3 exists in the set, and -1. Then 3(-1) is -3, which can't happen. The strategy now would be to prove -1 must exist in the set, since 4 + (-5) is -1, so then we disallow -5 but 6 + (-7) also results in -1. The pattern here is p + (-)(p+1) = -1 so we have to eliminate all negative p+1 numbers, and 0, leaving us with just the set of positive rationals. 
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-Calculus" class="outline-3">
-<h3 id="Calculus">Calculus</h3>
-<div class="outline-text-3" id="text-Calculus">
-<p>
-Let's learn some basic geometric derivatives as they will be required for the Putnam seminar. This will also prove to you that you can already do any calculus course you want. If you want a full, typical university calculus sequence then try (workshop todo). 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Differentiation" class="outline-3">
-<h3 id="Differentiation">Differentiation</h3>
-<div class="outline-text-3" id="text-Differentiation">
-<p>
-A derivative tells you what is happening at one point x of space or at one moment t of time. If dy/dx is &gt; 0 or df/dx &gt; 0 then either y (the graph) or f (function) is increasing. The derivative's origins are the problem of finding a tangent to a given curve and the problem of finding the velocity given the position over time. 
-</p>
-
-<p>
-Let's begin, watching the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first</a> lecture. There's a course <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/readings/course-reader/">reader</a> how to graph functions and move them around which is what you think it is, if you add a displacement to the input x then the y coordinate also moves. Watching the MIT lecture, note the point x<sub>0</sub> just means 'a fixed point on the x axis' so it's a placeholder/variable for any arbitrary point on the x axis. 
-</p>
-
-<p>
-At around 17:40 or so pause this lecture to find out what he means by 'the limit delta-x goes to zero' it means that tiny delta-x displacement moving towards x<sub>0</sub>, which is it's zero point since it begins at x<sub>0</sub>. This is visualized <a href="https://youtu.be/kfF40MiS7zA">here</a>.
-</p>
-
-<p>
-Delta-Y/Delta-X the alternative notation, why is y in the numerator? Because (f(x<sub>0</sub>) - f(x)) is (y<sub>0</sub> - y) the output of those functions. 
-</p>
-</div>
-
-<div id="outline-container-Non-polynomial%20derivatives" class="outline-4">
-<h4 id="Non-polynomial%20derivatives">Non-polynomial derivatives</h4>
-<div class="outline-text-4" id="text-Non-polynomial%20derivatives">
-<p>
-The lecture continues with a good breakdown of finding the derivative of 1/x, which is a rational function and not a polynomial. It is the inverse to x<sup>n</sup> which is a polynomial. He only used Wildberger algebra from the very first lectures of this workshop recall the laws of division: \(\frac{k/m}{n}\) = \(\frac{k}{mn}\) and he used the distributed law to factor out the 1/delta-x so it became 1/n(k/m).
-</p>
-
-<p>
-27:10 of the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/lecture-1-derivatives/">first lecture</a>, how would you calculate the area of the triangle below the tangent line of = 1/x, stop it at 28:32 and see if you can solve this problem on your own before him showing you the answer. Make your own Putnam seminar exercises for example at 33:00 can you simplify that tangent equation before he does.  
-</p>
-
-<ul class="org-ul">
-<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot (x - x_0)\)</li>
-<li>this is:
-<ul class="org-ul">
-<li>0 - \(\frac{1}{x_0}\) = \(\frac{-1}{x_0^2} \cdot \frac{(x - x_0)}{1}\)</li>
-</ul></li>
-<li>standard wildberger algebra:
-<ul class="org-ul">
-<li>0 - \(\frac{1}{x_0}\) = \(\frac{-x + x_0}{x_0^2}\)</li>
-</ul></li>
-<li>add \(\frac{1}{x_0}\) to both sides, cancelling from left side:
-<ul class="org-ul">
-<li>0 =  \(\frac{(-x + x_0)}{x_0^2}\) + \(\frac{1}{x_0}\)</li>
-</ul></li>
-<li>more standard wildberger algebra:
-<ul class="org-ul">
-<li>0 =  \(\frac{((-x + x_0)(x_0)) + 1(x_0^2)}{x_0^3}\)</li>
-</ul></li>
-<li>distribute:
-<ul class="org-ul">
-<li>0 =  \(\frac{-x(x_0) + x_0^2 + x_0^2}{x_0^3}\)</li>
-</ul></li>
-<li>combine:
-<ul class="org-ul">
-<li>0 =  \(\frac{-x(x_0) + 2x_0^2}{x_0^3}\)</li>
-</ul></li>
-<li>we can remove one x<sub>0</sub> from each side of the addition
-<ul class="org-ul">
-<li>why? because this is: \(\frac{-x(x_0)}{x_0^3}\) + \(\frac{2x_0^2}{x_0^3}\)</li>
-<li>0 =  \(\frac{-x + 2x_0}{x_0^2}\)</li>
-</ul></li>
-<li>solve for x, add x/(x<sub>0</sub>)<sup>2</sup> to both sides
-<ul class="org-ul">
-<li>\(\frac{x}{x_0^2}\) = \(\frac{2x_0}{x_0^2}\)</li>
-</ul></li>
-<li>clear fractions multiplying by \(\frac{x_0^2}{1}\)
-<ul class="org-ul">
-<li>x = 2x<sub>0</sub></li>
-</ul></li>
-</ul>
-
-
-<p>
-The last area calculation:
-</p>
-<ul class="org-ul">
-<li>\(\frac{1}{2}\)(2x<sub>0</sub>)(2y<sub>0</sub>)
-<ul class="org-ul">
-<li>this is:</li>
-</ul></li>
-<li>\(\frac{2x_0 \cdot 2y_0}{2}\)
-<ul class="org-ul">
-<li>cancel one of the scalars:</li>
-</ul></li>
-<li>\(\frac{2x_0}{1} \cdot \frac{2y_0}{2}\) = 2\(x_0 \cdot y_0\)
-<ul class="org-ul">
-<li>since y = 1/x (or y<sub>0</sub> = 1/x<sub>0</sub>)</li>
-</ul></li>
-<li>2x<sub>0</sub>(\(\frac{1}{x_0}\)) = 2</li>
-</ul>
-
-<p>
-You can read all this in the <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/lecture-notes/lec1.pdf">notes</a> though they don't really explain steps, expecting you to figure it out. Reminder this is the geometric interpretation of a derivative being used to find a tangent. There exists other interpretations of what a derivative is like velocity or a limit.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-Polynomial%20derivatives" class="outline-4">
-<h4 id="Polynomial%20derivatives">Polynomial derivatives</h4>
-<div class="outline-text-4" id="text-Polynomial%20derivatives">
-<p>
-The polynomial y = x<sup>n</sup> and it's derivative nx<sup>n-1</sup>, the 'junk' notation of \(O(\Delta x)^2\) is a bound meaning anything squared or larger is discarded, and since delta-x goes to 0, so once you substitute in 0 for delta-x that term disappears.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Discrete%20Math" class="outline-3">
-<h3 id="Discrete%20Math">Discrete Math</h3>
-<div class="outline-text-3" id="text-Discrete%20Math">
-<p>
-CMU's 21-228 Discrete Mathematics course is being live streamed this semester <a href="https://youtu.be/0K540qqyJJU">here</a>. The class <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">page</a> advises using the book <i>Discrete Mathematics</i> by L. Lovász, J. Pelikán, and K. Vesztergombi as optional reading if you want further clarification of whatever comes up in lectures.
-</p>
-
-<p>
-I'm adding it into the daily problem set because why not, it's combinatorics not requiring much background. Let's start with the first <a href="https://youtu.be/0K540qqyJJU">lecture</a> which as I write this, begins a live stream in 20 minutes. He's breaking down some elementary combinatorics problems to show the logic of solving them. The first one he did in reverse.  @37:40 why does the last digit have to be even? Because it's supposed to be an even 4-digit number so ending in 0, 2, 4, 5, 8. The general form is crazy but he did it by writing down a table of one digit numbers, two digits .. n + 1 digits to find the general pattern.
-</p>
-</div>
-
-<div id="outline-container-Assignment%201" class="outline-4">
-<h4 id="Assignment%201">Assignment 1</h4>
-<div class="outline-text-4" id="text-Assignment%201">
-<p>
-Let's try some of the <a href="https://www.math.cmu.edu/~ploh/docs/math/2021-228/hw1.pdf">assignments</a>.
-</p>
-
-<p>
-1.) The first is a symmetric difference assignment which is defined <a href="https://en.wikipedia.org/wiki/Symmetric_difference">here</a>. Look under properties, the answer is there 'from the property of the inverses in a Boolean group, it follows&#x2026;'. We can eliminate B and are left with:
-</p>
-
-<p>
-(A \(\triangle\) C) \(\triangle\) (C \(\triangle\) A) and from that same article, we can eliminate C so are left with A \(\triangle\) A which is just the empty set.  
-</p>
-
-<p>
-2.) We have a general set bigger than 3, and we need to know how many contain permutations of only: {1, 2}, {1, 3}, {2, 3}. What if the set is {1,2,3,4}? or 2<sup>4</sup> subset, how many will include 2 of our numbers of the 16 generated subsets? Let's find out: Using some free powerset 'calculator' I randomly googled, I count 6 occurences for 2<sup>4</sup>, 12 occurences for 2<sup>5</sup>. So we have 3, 3x2, 3x2x2 and I'm going to assume 2<sup>6</sup> will be 3x2x2x2 occurences or 24. This pattern looks like 3 x 2<sup>n-3</sup> for n \(\ge\) 3 and if you were to prove this, the inductive n + 1 step is: 3 x 2<sup>n+1-3</sup> which is what we want, input power of 5 and the successor (n+1-3) is power of 6 with 3x2x2x2.    
-</p>
-
-<p>
-3.) Do you remember the Wildberger <a href="https://youtu.be/h0Woqc_5qUE?t=270">lectures</a> on Pascal's Array on the number of paths to the binomial coefficient in other words <a href="https://youtu.be/9txb9FgLDNY">n choose k</a>? Think about paths on a grid and how to exclude one point, all of this is in the course book which is your reference to help solve these problems, not something you have to read end to end.
-</p>
-</div>
-</div>
-
-<div id="outline-container-The%20Binomial%2FTrinomial%20Theorem" class="outline-4">
-<h4 id="The%20Binomial%2FTrinomial%20Theorem">The Binomial/Trinomial Theorem</h4>
-<div class="outline-text-4" id="text-The%20Binomial%2FTrinomial%20Theorem">
-<p>
-Wildberger has an extended lecture <a href="https://youtu.be/V2mk24udsMw">here</a> constructing the notation for n choose k from scratch. 
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-Daily%20Challenge" class="outline-3">
-<h3 id="Daily%20Challenge">Daily Challenge</h3>
-<div class="outline-text-3" id="text-Daily%20Challenge">
-<p>
-Now this workshop is a problem per day, get the second edition <i>Putnam and Beyond</i> by Gelca and Andreescu from <a href="https://libgen.is/book/index.php?md5=DE63F2E34FF5C055F381084C79FB56F9">library genesis</a>. These will be hard but not impossible problems, I'll throw in Poh-Shen Loh's Discrete Mathematics course materials and lectures as well since they are the exact same style. <i>Putnam and Beyond</i> is a great book as it will fill in all the blanks for algebra, geometry, calculus, combinatorics, probability and number theory. Every problem in the book has a fully worked out solution but as per Poh-Shen Loh's advice we should spend a long time thinking how to solve these ourselves before looking at the solution or you will get nothing out of this material. By long he means 'a day or more'.
-</p>
-
-
-
-
-
-
 
 
 
