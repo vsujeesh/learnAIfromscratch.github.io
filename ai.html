@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-06 Thu 23:28 -->
+<!-- 2021-05-06 Thu 23:39 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -277,7 +277,7 @@
 <h2 id="Courses">Courses</h2>
 <div class="outline-text-2" id="text-Courses">
 <p>
-Sometimes watching the lectures is necessary since the prof will sketch out an algorithm that isn't in the slides  
+Let's start with machine learning. Sometimes watching the lectures is necessary since the prof will sketch out an algorithm that isn't in the slides but like all lectures they aren't as long as the running time, a lot of in-class student work or review you can skip.   
 </p>
 
 <ul class="org-ul">
@@ -306,7 +306,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="org50b5f9a">
+<pre class="example" id="org8d1b97f">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -462,11 +462,11 @@ Watching 10-601 second lecture <i>Decision Trees (Part 1)</i>. There's secret <a
 </p>
 
 <p>
-So far, if you too CS19 from the software workshop then all of this is familiar ie: table of data, function type notation. If it seems unclear, the c*(x) function is whatever generated the learning data, meaning sick -/+ and the patient attributes, so a doctor providing their medical diagnosis history over x months with hundreds of patients, c*(x) is the function in the doctor's brain that generated the decisions in the learning data, and h(x) is what we want to build that best approximates c*(x).
+So far, if you took CS19 from the compsci workshop then all of this is familiar ie: table of data, function type notation. If it seems unclear, the c*(x) function is whatever generated the training data, so a doctor providing their medical diagnosis history over x months with hundreds of patients and c*(x) is the function in the doctor's brain that generated the decisions in the training data, and h(x) is what we want to build that best approximates c*(x).
 </p>
 
 <p>
-@37:00 or so we get introduced to loss functions we already read about in the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i> except he's using the compact abstract notation. We have to write a decision stump algorithm in the homework, write down it's spec he gives in lecture. The website schedule for the course has a link to <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">this</a> reading which is exactly what we already read though they explain the notation better.
+@37:00 or so we get introduced to loss functions we already read about in the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i> except he's using the compact abstract notation. We have to write a decision stump algorithm in the homework, write down it's spec he gives in lecture since it's not in the assignment writeup for some reason. The website schedule for the course has a link to <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">this</a> reading which is exactly what we already read though they explain the notation better.
 </p>
 
 <p>
@@ -474,10 +474,10 @@ So far, if you too CS19 from the software workshop then all of this is familiar 
 </p>
 
 <p>
-Try the <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns.  Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then run a test case to see if you pass though you won't need to this is a simple assignment. 
+Try the <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns.  Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then run a test case to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="orge64b60c">
+<pre class="example" id="org47624fb">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
