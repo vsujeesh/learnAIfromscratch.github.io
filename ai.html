@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-04-12 Mon 18:19 -->
+<!-- 2021-05-06 Thu 23:28 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -260,6 +260,13 @@
 <ul>
 <li><a href="#Probability">Probability</a></li>
 <li><a href="#Reading">Reading</a></li>
+<li><a href="#Parameters">Parameters</a></li>
+<li><a href="#PML%20book%20chapter%201">PML book chapter 1</a></li>
+</ul>
+</li>
+<li><a href="#Lectures%202">Lectures 2</a>
+<ul>
+<li><a href="#10-601%20Decision%20Trees%20Part%201">10-601 Decision Trees Part 1</a></li>
 </ul>
 </li>
 </ul>
@@ -274,19 +281,32 @@ Sometimes watching the lectures is necessary since the prof will sketch out an a
 </p>
 
 <ul class="org-ul">
-<li>10-701 (Fa 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube lectures</li>
-<li>10-301/601 (Sp 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">lectures</a></li>
+<li>10-701 (Fa 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube lectures/assignments open to us</li>
+<li>10-301/601 (Sp 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">lectures</a> and open assignments</li>
 <li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">ML for Intelligent Systems</a> YouTube lectures w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a></li>
-<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats
+<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats a geometric explanation</li>
+</ul>
+
+<p>
+The courses use C++ Python Java Octave but I'm using Julia simply because there exists excellent resources all written by MIT profs
+</p>
+
 <ul class="org-ul">
-<li>a geometric explanation</li>
+<li>MIT's <i>Introduction to Computational Thinking</i> <a href="https://computationalthinking.mit.edu/Spring21/">18.S191</a> 2021 course
+<ul class="org-ul">
+<li>Amazing set of lectures that explain things like the SVD (linear algebra) and probability
+<ul class="org-ul">
+<li>ML w/Julia <a href="https://juliaacademy.com/p/introduction-to-machine-learning">tutorial</a> for using the libraries</li>
+<li>Some of a <a href="https://mitmath.github.io/18337/">course</a> w/YouTube lectures on AI performance engineering</li>
+</ul></li>
 </ul></li>
 </ul>
+
 
 <p>
 Some backups  
 </p>
-<pre class="example" id="orgdd9f6a3">
+<pre class="example" id="org50b5f9a">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -387,11 +407,21 @@ Wildberger's probability lecture <a href="https://youtu.be/siXj4hkUIp8">ProbStat
 <p>
 Let's skim chapter 8.1 <i>When Models Meet Data</i> of the <a href="https://mml-book.github.io/">mml book</a>. We take tabular data, represent it as a vector with N rows (samples) and D columns (features). Once we have a vector representation we can use concepts from linear alegbra to manipulate it, and to compare it to another vector by constructing a geometry we can run optimizations on. We read about different ways to construct new features and that increasingly neural networks are used to learn new features which was mentioned in the first lecture of 10-701. There are two schools: machine learning where the predictor is a function or a probability model, we will mainly be covering the probability model in 10-601/701. In 8.1.4 the goal is to construct a model so that it's parameters will perform well on new unseen data.
 </p>
+</div>
+</div>
 
+<div id="outline-container-Parameters" class="outline-3">
+<h3 id="Parameters">Parameters</h3>
+<div class="outline-text-3" id="text-Parameters">
 <p>
-What is a parameter? In the chapter on vector calculus, these are described as 'an optimization problem: find parameters that control how well a model explains the data' and there is a concrete example of a curve model of training data, where at each observation we want to find parameters that explain the observations basically finding a signal in noise. Skimming through chapter 7 of <i>Principles of Applied Statistics</i> on criteria for parameters: "we aim to summarize the aspects of interest by parameters, preferably small in number and formally defined as properties of the probability model". There's some examples here like a pipe with water flowing through it, if you take measurements what is the minimum amount of measurements to include as parameters to your water pipe model that best describes the observations like velocity, the area inside the pipe, the viscosity of the water (feature set). The choice of regression model is explained as the search for a model with as few explanatory variables as necessary to give an adequate empirical fit to the data where overfitting means your model too closely resembles the sample and can't be generalized. 
+What is a parameter? In the chapter on vector calculus, these are described as 'an optimization problem: find parameters that control how well a model explains the data' and there is a concrete example of a curve model of training data, where at each observation we want to find parameters that explain the observations basically finding a signal in noise. Skimming through chapter 7 of <i>Principles of Applied Statistics</i> on criteria for parameters: "we aim to summarize the aspects of interest by parameters, preferably small in number and formally defined as properties of the probability model". There's some examples here like a pipe with water flowing through it, if you take measurements what is the minimum amount of measurements to include as parameters to your water pipe model that best describes the observations like velocity, the area inside the pipe, the viscosity of the water (feature set). The choice of regression model is explained as the search for a model with as few explanatory variables as necessary to give an adequate empirical fit to the data where overfitting means your model too closely resembles the sample and can't be generalized. Summary: parameters are what you specify some object with, like if you were to specify a cat object, what are the minimum amount of cat characteristics you could use to distinguish the object as a cat from other objects. 
 </p>
+</div>
+</div>
 
+<div id="outline-container-PML%20book%20chapter%201" class="outline-3">
+<h3 id="PML%20book%20chapter%201">PML book chapter 1</h3>
+<div class="outline-text-3" id="text-PML%20book%20chapter%201">
 <p>
 Let's also skim the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i>. Each chapter also has a colab notebook you can run <a href="https://github.com/probml/pyprobml/tree/master/book1">here</a> in Python. This is a terse survey of what we are about to take in detail and much of this is what we just saw in CS4780's first lecture. All of these stats functions exist as libraries in programming language of choice.
 </p>
@@ -416,10 +446,57 @@ In the following function the hat notation on top of the y means estimated/predi
 <p>
 Some conditional probability introduced here that are in the above Wildberger lectures. Equation 1.7 if you look at the appendix means the 'parametric distributions' or probability that y = label given random variable x and parameters, and it's equated to more terse notation of \(f_{c}(x;\theta)\). That p() function returns a number from 0 to 1, in this example 3 ordered elements of a list that represent the 3 labels, with the probability of them being labelled setosa 0/54 so highly unlikley to happen, and the probability of being labelled versicolor 49/54 or 0.9 so very high probability but there is still uncertainty. This probability function output is then input to NLL() and if you were to plot a negative log() function in R/Python/Julia, you would see that when given a higher number like 1, the graph is very close to the x-axis (minimum loss) whereas if probability is closer to 0, the graph shoots up to infinity on the y-axis meaning a lot of loss. MLE is explained in the <i>Mathematics for ML</i> book in chapter 8.3.1 "MLE gives us the most likely parameter for the set of data" and there's lectures regarding MLE in 10-601/701.
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Lectures%202" class="outline-2">
+<h2 id="Lectures%202">Lectures 2</h2>
+<div class="outline-text-2" id="text-Lectures%202">
+</div>
+<div id="outline-container-10-601%20Decision%20Trees%20Part%201" class="outline-3">
+<h3 id="10-601%20Decision%20Trees%20Part%201">10-601 Decision Trees Part 1</h3>
+<div class="outline-text-3" id="text-10-601%20Decision%20Trees%20Part%201">
+<p>
+Watching 10-601 second lecture <i>Decision Trees (Part 1)</i>. There's secret <a href="https://1drv.ms/o/s!Aqk9RupCw3gqhnEVySsGVwiAwMI6">notes</a> and also a math notation <a href="http://www.cs.cmu.edu/~mgormley/courses/10601-s20/slides/10601-notation.pdf">crib sheet</a> that is extremely helpful. 
+</p>
 
 <p>
-Let's watch some more lectures we've caught up to the courses. None of the math so far is impossible, though we can see how hard a problem machine learning is: given completely noisey data what are the minimum amount of observations to find a signal to categorize/label anything in it correctly, and even harder how do you generalize this to unseen data not in the training set. 
+So far, if you too CS19 from the software workshop then all of this is familiar ie: table of data, function type notation. If it seems unclear, the c*(x) function is whatever generated the learning data, meaning sick -/+ and the patient attributes, so a doctor providing their medical diagnosis history over x months with hundreds of patients, c*(x) is the function in the doctor's brain that generated the decisions in the learning data, and h(x) is what we want to build that best approximates c*(x).
 </p>
+
+<p>
+@37:00 or so we get introduced to loss functions we already read about in the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i> except he's using the compact abstract notation. We have to write a decision stump algorithm in the homework, write down it's spec he gives in lecture. The website schedule for the course has a link to <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">this</a> reading which is exactly what we already read though they explain the notation better.
+</p>
+
+<p>
+<b>Assignment 1</b>
+</p>
+
+<p>
+Try the <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns.  Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then run a test case to see if you pass though you won't need to this is a simple assignment. 
+</p>
+
+<pre class="example" id="orge64b60c">
+include gdrive-sheets
+
+ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
+politicians-train =
+  load-table: Anti_satellite_test_ban, Aid_to_nicaraguan_contras, Mx_missile, Immigration, Superfund_right_to_sue, Duty_free_exports,	Export_south_africa, Party
+    source: load-spreadsheet(ssid).sheet-by-name("politicians_train", true)
+  end
+
+ssid2 = "1baH3PUQ852FSHZJ063v-ozi0wFARXEHIKIPgHCyqVVY"
+politicians-test =
+  load-table: Anti_satellite_test_ban, Aid_to_nicaraguan_contras, Mx_missile, Immigration, Superfund_right_to_sue, Duty_free_exports,	Export_south_africa, Party
+    source: load-spreadsheet(ssid2).sheet-by-name("politicians_test", true)
+  end
+</pre>
+
+<p>
+TODO
+</p>
+
 
 
 <hr>
