@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-06 Thu 23:39 -->
+<!-- 2021-05-10 Mon 20:14 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -267,6 +267,8 @@
 <li><a href="#Lectures%202">Lectures 2</a>
 <ul>
 <li><a href="#10-601%20Decision%20Trees%20Part%201">10-601 Decision Trees Part 1</a></li>
+<li><a href="#10-701%20Probability%2C%20MLE%20and%20MAP">10-701 Probability, MLE and MAP</a></li>
+<li><a href="#CS4780%20Lecture%202">CS4780 Lecture 2</a></li>
 </ul>
 </li>
 </ul>
@@ -281,14 +283,14 @@ Let's start with machine learning. Sometimes watching the lectures is necessary 
 </p>
 
 <ul class="org-ul">
-<li>10-701 (Fa 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> has YouTube lectures/assignments open to us</li>
-<li>10-301/601 (Sp 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> has YouTube <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">lectures</a> and open assignments</li>
-<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">ML for Intelligent Systems</a> YouTube lectures w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">notes</a></li>
-<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats a geometric explanation</li>
+<li>10-701 (Fa 2020) <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> w/<a href="https://www.youtube.com/playlist?list=PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P">lectures</a></li>
+<li>10-301/601 (Sp 2020) <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> w/<a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">lectures</a></li>
+<li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">ML for Intelligent Systems</a> w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">lectures</a></li>
 </ul>
 
+
 <p>
-The courses use C++ Python Java Octave but I'm using Julia simply because there exists excellent resources all written by MIT profs
+The courses use C++ Python Java Octave but I'm using Julia simply because there exists excellent resources
 </p>
 
 <ul class="org-ul">
@@ -296,8 +298,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <ul class="org-ul">
 <li>Amazing set of lectures that explain things like the SVD (linear algebra) and probability
 <ul class="org-ul">
-<li>ML w/Julia <a href="https://juliaacademy.com/p/introduction-to-machine-learning">tutorial</a> for using the libraries</li>
-<li>Some of a <a href="https://mitmath.github.io/18337/">course</a> w/YouTube lectures on AI performance engineering</li>
+<li>ML w/Julia <a href="https://juliaacademy.com/p/introduction-to-machine-learning">tutorial</a> for using the libraries and same prof has a <a href="https://mitmath.github.io/18337/">course</a> w/YouTube lectures on AI performance engineering</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -306,7 +307,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="org8d1b97f">
+<pre class="example" id="org9b6c4c2">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -345,6 +346,11 @@ Mathematics reference
 </p>
 <ul class="org-ul">
 <li><i>Mathematics for Machine Learning</i> by Deisenroth/Faisal/Ong is <a href="https://mml-book.github.io/">free</a></li>
+<li>Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> chapter on Probability &amp; Information Theory</li>
+<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats a geometric explanation
+<ul class="org-ul">
+<li>The only probability course you need</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -468,16 +474,45 @@ So far, if you took CS19 from the compsci workshop then all of this is familiar 
 <p>
 @37:00 or so we get introduced to loss functions we already read about in the first chapter in the 2021 <a href="https://probml.github.io/pml-book/book1.html">book</a> <i>Probabilistic Machine Learning</i> except he's using the compact abstract notation. We have to write a decision stump algorithm in the homework, write down it's spec he gives in lecture since it's not in the assignment writeup for some reason. The website schedule for the course has a link to <a href="http://ciml.info/dl/v0_99/ciml-v0_99-ch01.pdf">this</a> reading which is exactly what we already read though they explain the notation better.
 </p>
+</div>
+</div>
+
+<div id="outline-container-10-701%20Probability%2C%20MLE%20and%20MAP" class="outline-3">
+<h3 id="10-701%20Probability%2C%20MLE%20and%20MAP">10-701 Probability, MLE and MAP</h3>
+<div class="outline-text-3" id="text-10-701%20Probability%2C%20MLE%20and%20MAP">
+<p>
+Watching <a href="https://youtu.be/BqoKDBHtrno">lecture</a> 2 a helpful review of probability, you may want to do the 10-301 hw first before watching. 'In machine learning, random variables are seldom independent'. He adds that in 10-701 we will (incorrectly) assume they are independent anyway as it's easier to work with independent random variables and for the purposes of machine learning the outcome is fine. Recall from the Wildberger lectures, that a probability distribution is defined by it's mean or expected value, which is the 'center of the mass', and it's variance which is how far away the rest of the probabilites are from each other, this gives you that normal distribution curve or some other distribution. The prof in this lecture remarks we will often assume the distribution and solely be concerned with estimating the parameters. Throughout he remarks that often in probability definitions the thing dividing the top is a normalization function to get the probabilities to sum to 1. For example conditional probability P(A|B) = P(A and B)/P(B). Make a toy set: A = {1,2,3} and B = {3,2} then we have P({2,3})/P({2,3}) or 1.
+</p>
+
+<p>
+Bayes rule and everything discussed up to 25mins, plus continuous probability is in the Wildberger lectures. There's an anecdote about false positive rates, and @46:00 he talks about the bayesian approach (MAP) for estimating parameters which he says won't be used in the class. This is all in the Murphy and Mitchell texts.
+</p>
+
+<p>
+@1:04 we get our first algorithm MLE. A density estimator learns a mapping from a set of attributes to a probability. The likelihood of the data given the model: P(set of observations|model) = product of each observation conditioned on the parameters. Model is defined as a collection of parameters, since however you decide to parameterize an object to define it that becomes it's model. We will shortly see MLP or maximizing of a function in the 10-301 homework q = (number of observed heads)/total rolls.
+</p>
+</div>
+</div>
+
+<div id="outline-container-CS4780%20Lecture%202" class="outline-3">
+<h3 id="CS4780%20Lecture%202">CS4780 Lecture 2</h3>
+<div class="outline-text-3" id="text-CS4780%20Lecture%202">
+<p>
+Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html">lecture</a> 2: k-nearest neighbors. He has later lectures on MLE/MAP, all of it with proofs.
+TODO
+</p>
+
+
 
 <p>
 <b>Assignment 1</b>
 </p>
 
 <p>
-Try the <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns.  Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then run a test case to see if you pass though you won't need to this is a simple assignment. 
+Try the 10-301 <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these classifier functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns. Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then extract as a list to run test cases to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="org47624fb">
+<pre class="example" id="org14fc9f0">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
@@ -494,8 +529,34 @@ politicians-test =
 </pre>
 
 <p>
-TODO
+<b>Probability</b>
 </p>
+
+<p>
+In the hw1 folder if you either downloaded it from the torrent or got it from <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">here</a> there's two pdf files, the file labelled with 'tex' means a student filled in the solutions and generated a new pdf with LaTeX but you shouldn't automatically trust these solutions. For example here is a student quietly breaking academic protocol asking the <a href="https://math.stackexchange.com/questions/3814831/maximizing-probability-of-a-sequence-of-coin-tosses-for-a-biased-coin">same</a> question as problem 2. Are they right about question 1 though, that it's 81/1024? It asked what is the probability of observing <i>any combination</i> and the answer to question 1 is <a href="https://youtu.be/fyOdJ34iMpU">here</a> which is: \(\binom{n}k \cdot p^k(1-p)^{n-k}\) or \(\binom{5}4 \cdot 0.75^4(0.25)^1\) = 405/1024. In the response is a link to this <a href="https://www.wolframalpha.com/input/?i=plot+x%5E4%281-x%29%2C+for+x+in+%280..1%29">graph</a> we can see the maximum x input value for that function is 0.8, or 4/5 or <a href="https://math.stackexchange.com/questions/636539/intuitive-way-to-arrive-at-the-maximizing-argument-for-the-binomial-probability">this</a> answer. Global minimum/maximum is covered in the book <i>Mathematical Modelling and Applied Calculus</i> in Chapter 5: Optimization.  
+</p>
+
+<p>
+Question 3, 4 are in the Wildberger lectures, question 5 is this <a href="https://youtu.be/ERC9H-8kBHs?t=1296">tree</a> example he draws for total probability, P(R)P(W|R) + P(NR)P(W|NR) or 0.4*0.8 + 0.6*0.2 = 0.44
+</p>
+
+<p>
+Question 6, P(X=1)|Y=1) the set of A where X=1 is {(1,0), (1,1)} and B where Y=1 is {(0,1), (1,1)}. We are interested in A intersect B, divided by B (as per Wildberger lectures on Bayes rule). A intersect B is (1,1) and B is {(0,1), (1,1)} so 0.3/0.5 or 0.6. The probability P(Y=0) is 0.1 + 0.4 
+</p>
+
+<p>
+8, 9 and 10 is in the Wildberger <a href="https://youtu.be/pdaNVZQ9974?t=2548">lectures</a> for example at time index 42:30 <i>Transformation Formulas</i>, like E[6X]. Since E[x] is defined as a sum, multiplying by some scalar means you can factor it out ie: 6(E[X]) = E[6X]. Var[2x + 3] is fully explained in the same probability lecture you ignore addition and just square the scalar. Recall the variance is a sum so every input of x_i will add 3, shifting everything over by 3 which doesn't matter the distance between each x_i remains the same, as they're all moved over 3.
+</p>
+
+<p>
+Question 11 and 14 solution is <a href="https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading7a.pdf">here</a> in MIT OCW lecture notes, for #14 to determine b_3 conditioned on c_1, you take 0.35 and divide by the total marginal probability of c_1 which is .02 + .03 + .35 or .35/.40
+</p>
+
+<p>
+Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> (doesn't work on some browsers, try Chrome or use library genesis) gives the answers for the rest of this probability homework, question 15 the expectation of Y is the sum of (values * probability) which is 1/n * y. or y/n and 16 is clearly the first or second option, given that expected value(mean) of a bernoulli random variable p is p. Searching wikipedia for bernoulli entropy I find the answer is A, though we will do log(), exp() in the next part of the homework when we learn calculus.
+</p>
+
+
 
 
 
