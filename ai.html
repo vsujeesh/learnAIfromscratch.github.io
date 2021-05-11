@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-10 Mon 20:14 -->
+<!-- 2021-05-10 Mon 20:54 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -279,7 +279,7 @@
 <h2 id="Courses">Courses</h2>
 <div class="outline-text-2" id="text-Courses">
 <p>
-Let's start with machine learning. Sometimes watching the lectures is necessary since the prof will sketch out an algorithm that isn't in the slides but like all lectures they aren't as long as the running time, a lot of in-class student work or review you can skip.   
+Let's start with machine learning. I'm going to do these 3 courses but you don't have to, they all cover the same thing (supervised learning) so if something doesn't make sense in one lecture, you can watch it presented differently in another course. Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats is a geometric explanation and all you need to start, watch it concurrently with the ML lectures. We will pick up all the prereqs as we do the assignments.
 </p>
 
 <ul class="org-ul">
@@ -288,17 +288,17 @@ Let's start with machine learning. Sometimes watching the lectures is necessary 
 <li>CS4780 (2018) <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">ML for Intelligent Systems</a> w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">lectures</a></li>
 </ul>
 
-
 <p>
 The courses use C++ Python Java Octave but I'm using Julia simply because there exists excellent resources
 </p>
 
 <ul class="org-ul">
-<li>MIT's <i>Introduction to Computational Thinking</i> <a href="https://computationalthinking.mit.edu/Spring21/">18.S191</a> 2021 course
+<li>MIT's <i>Introduction to Computational Thinking</i> <a href="https://computationalthinking.mit.edu/Spring21/">18.S191</a> (Sp 2020)
 <ul class="org-ul">
-<li>Amazing set of lectures that explain things like the SVD (linear algebra) and probability
+<li>Amazing set of lectures that explain programming probabilities, the SVD (linear algebra)</li>
+<li>ML w/Julia <a href="https://juliaacademy.com/p/introduction-to-machine-learning">tutorial</a> for using the AI libraries
 <ul class="org-ul">
-<li>ML w/Julia <a href="https://juliaacademy.com/p/introduction-to-machine-learning">tutorial</a> for using the libraries and same prof has a <a href="https://mitmath.github.io/18337/">course</a> w/YouTube lectures on AI performance engineering</li>
+<li>Same prof has a <a href="https://mitmath.github.io/18337/">course</a> w/YouTube lectures on AI performance engineering</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -307,7 +307,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="org9b6c4c2">
+<pre class="example" id="orgbb6bfbb">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -347,13 +347,10 @@ Mathematics reference
 <ul class="org-ul">
 <li><i>Mathematics for Machine Learning</i> by Deisenroth/Faisal/Ong is <a href="https://mml-book.github.io/">free</a></li>
 <li>Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> chapter on Probability &amp; Information Theory</li>
-<li>Wildberger's <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> of probability &amp; stats a geometric explanation
-<ul class="org-ul">
-<li>The only probability course you need</li>
-</ul></li>
 </ul>
 </div>
 </div>
+
 
 <div id="outline-container-Papers" class="outline-3">
 <h3 id="Papers">Papers</h3>
@@ -402,7 +399,7 @@ You can learn basic set theory by typing it into <a href="https://www.youtube.co
 <h3 id="Probability">Probability</h3>
 <div class="outline-text-3" id="text-Probability">
 <p>
-Wildberger's probability lecture <a href="https://youtu.be/siXj4hkUIp8">ProbStats5: Random variables</a> will explain notation like \(X^{-1}(x_i)\). A random variable is a function over the sample space that returns a real number and he geometrically demonstrates this function. Expected value E(x) is demonstrated as the mean, variance Var(x) is demonstrated as the distance between probabilities and the mean, and standard derivation SD(x) turns the variance from quadratic to linear. Probability is covered extensively by all the books the courses recommend but this is a nice lecture to visualize a random variable and all the other Wildberger lectures are similar first presenting a visualization of the theory then examples.
+Wildberger's probability lecture <a href="https://youtu.be/siXj4hkUIp8">ProbStats5: Random variables</a> will explain notation like \(X^{-1}(x_i)\). A random variable is a function over the sample space that returns a real number and he geometrically demonstrates this function. Expected value E(x) is demonstrated as the mean, variance Var(x) is demonstrated as the distance between probabilities which define your distribution, and standard derivation SD(x) turns the variance from quadratic to linear. Probability is covered extensively by all the books the courses recommend but this is a nice lecture to visualize a random variable and all the other Wildberger lectures are similar first presenting a visualization of the theory then examples.
 </p>
 </div>
 </div>
@@ -512,7 +509,7 @@ TODO
 Try the 10-301 <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these classifier functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns. Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then extract as a list to run test cases to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="org14fc9f0">
+<pre class="example" id="org9ad7d40">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
@@ -541,7 +538,7 @@ Question 3, 4 are in the Wildberger lectures, question 5 is this <a href="https:
 </p>
 
 <p>
-Question 6, P(X=1)|Y=1) the set of A where X=1 is {(1,0), (1,1)} and B where Y=1 is {(0,1), (1,1)}. We are interested in A intersect B, divided by B (as per Wildberger lectures on Bayes rule). A intersect B is (1,1) and B is {(0,1), (1,1)} so 0.3/0.5 or 0.6. The probability P(Y=0) is 0.1 + 0.4 
+Question 6, P(X=1|Y=1) the set of A where X=1 is {(1,0), (1,1)} and B where Y=1 is {(0,1), (1,1)}. We are interested in A intersect B, divided by B (as per Wildberger lectures on Bayes rule). A intersect B is (1,1) and B is {(0,1), (1,1)} so 0.3/0.5 or 0.6. The probability P(Y=0) is 0.1 + 0.4 
 </p>
 
 <p>
