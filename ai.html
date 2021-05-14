@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-10 Mon 20:54 -->
+<!-- 2021-05-13 Thu 21:31 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -268,7 +268,13 @@
 <ul>
 <li><a href="#10-601%20Decision%20Trees%20Part%201">10-601 Decision Trees Part 1</a></li>
 <li><a href="#10-701%20Probability%2C%20MLE%20and%20MAP">10-701 Probability, MLE and MAP</a></li>
-<li><a href="#CS4780%20Lecture%202">CS4780 Lecture 2</a></li>
+<li><a href="#CS4780%20Lecture%202%20KNN">CS4780 Lecture 2 KNN</a></li>
+<li><a href="#Assignment%201">Assignment 1</a>
+<ul>
+<li><a href="#Assignment%201--Probability">Probability</a></li>
+<li><a href="#Calculus">Calculus</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -307,7 +313,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="orgbb6bfbb">
+<pre class="example" id="orgd2f150a">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -488,28 +494,30 @@ Bayes rule and everything discussed up to 25mins, plus continuous probability is
 <p>
 @1:04 we get our first algorithm MLE. A density estimator learns a mapping from a set of attributes to a probability. The likelihood of the data given the model: P(set of observations|model) = product of each observation conditioned on the parameters. Model is defined as a collection of parameters, since however you decide to parameterize an object to define it that becomes it's model. We will shortly see MLP or maximizing of a function in the 10-301 homework q = (number of observed heads)/total rolls.
 </p>
+
+<p>
+The prof teaching this is the head of CMU's systems bio group and maintains an interesting page on <a href="https://algorithmsinnature.org/">algorithms used by nature</a>. The second half of 10-701 is taught by prof Xing who somehow has 2 PhDs and is the new <a href="https://mbzuai.ac.ae/about">president</a> of MBZUAI the world's first AI only university, which offers fully paid MSc and PhD degrees. I would imagine if you took his CMU course and can understand it, and you already had a bachelors they would likely grant you admission.  
+</p>
 </div>
 </div>
 
-<div id="outline-container-CS4780%20Lecture%202" class="outline-3">
-<h3 id="CS4780%20Lecture%202">CS4780 Lecture 2</h3>
-<div class="outline-text-3" id="text-CS4780%20Lecture%202">
+<div id="outline-container-CS4780%20Lecture%202%20KNN" class="outline-3">
+<h3 id="CS4780%20Lecture%202%20KNN">CS4780 Lecture 2 KNN</h3>
+<div class="outline-text-3" id="text-CS4780%20Lecture%202%20KNN">
 <p>
-Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html">lecture</a> 2: k-nearest neighbors. He has later lectures on MLE/MAP, all of it with proofs.
-TODO
+Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html">lecture</a> k-nearest neighbors, which is only the last 15 minutes of the lecture the rest is practical advice how you should organize your learning, validation and testing data, like seperating temporal (data with a sense of time) data so your learning algorithm 'can't look at future data' to avoid overfitting meaning your model no longer generalizes, you're just fitting it for the test data. He talks about why you can't have a single algorithm to do everything, this is worth watching and not very technical. The distance equation is in the notes, fill in some values to see what they are rational exponents are defined in Tao's <i>Analysis I</i> book Definition 5.6.7 x^{a/b} is (x^{1/b})^a or if (something) = x^{1\n} then (something)^n = x, it's just the square root. You can look up Euclidean distance though you've probably already seen it, personally I've never seen Manhattan distance instead I learned it as Hamming distance which is the same thing. The point of this algorithm as per the student who asks the question "why are we doing this" is a generalized distance algorithm where you can pick the model you want for k-nearest neighbors. 
 </p>
+</div>
+</div>
 
-
-
-<p>
-<b>Assignment 1</b>
-</p>
-
+<div id="outline-container-Assignment%201" class="outline-3">
+<h3 id="Assignment%201">Assignment 1</h3>
+<div class="outline-text-3" id="text-Assignment%201">
 <p>
 Try the 10-301 <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these classifier functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns. Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then extract as a list to run test cases to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="org9ad7d40">
+<pre class="example" id="orgd52ed7f">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
@@ -524,11 +532,11 @@ politicians-test =
     source: load-spreadsheet(ssid2).sheet-by-name("politicians_test", true)
   end
 </pre>
+</div>
 
-<p>
-<b>Probability</b>
-</p>
-
+<div id="outline-container-Assignment%201--Probability" class="outline-4">
+<h4 id="Assignment%201--Probability">Probability</h4>
+<div class="outline-text-4" id="text-Assignment%201--Probability">
 <p>
 In the hw1 folder if you either downloaded it from the torrent or got it from <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">here</a> there's two pdf files, the file labelled with 'tex' means a student filled in the solutions and generated a new pdf with LaTeX but you shouldn't automatically trust these solutions. For example here is a student quietly breaking academic protocol asking the <a href="https://math.stackexchange.com/questions/3814831/maximizing-probability-of-a-sequence-of-coin-tosses-for-a-biased-coin">same</a> question as problem 2. Are they right about question 1 though, that it's 81/1024? It asked what is the probability of observing <i>any combination</i> and the answer to question 1 is <a href="https://youtu.be/fyOdJ34iMpU">here</a> which is: \(\binom{n}k \cdot p^k(1-p)^{n-k}\) or \(\binom{5}4 \cdot 0.75^4(0.25)^1\) = 405/1024. In the response is a link to this <a href="https://www.wolframalpha.com/input/?i=plot+x%5E4%281-x%29%2C+for+x+in+%280..1%29">graph</a> we can see the maximum x input value for that function is 0.8, or 4/5 or <a href="https://math.stackexchange.com/questions/636539/intuitive-way-to-arrive-at-the-maximizing-argument-for-the-binomial-probability">this</a> answer. Global minimum/maximum is covered in the book <i>Mathematical Modelling and Applied Calculus</i> in Chapter 5: Optimization.  
 </p>
@@ -550,8 +558,23 @@ Question 11 and 14 solution is <a href="https://ocw.mit.edu/courses/mathematics/
 </p>
 
 <p>
-Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> (doesn't work on some browsers, try Chrome or use library genesis) gives the answers for the rest of this probability homework, question 15 the expectation of Y is the sum of (values * probability) which is 1/n * y. or y/n and 16 is clearly the first or second option, given that expected value(mean) of a bernoulli random variable p is p. Searching wikipedia for bernoulli entropy I find the answer is A, though we will do log(), exp() in the next part of the homework when we learn calculus.
+Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> (doesn't work on some browsers, try Chrome or use library genesis) gives the answers for the rest of this probability homework, question 15 the expectation of Y is the sum of (values * probability) which is 1/n * y. or y/n and 16 is clearly the first or second option, given that expected value(mean) of a bernoulli random variable p is p. Searching wikipedia for Bernoulli entropy I find the answer is A, though we will do log(), exp() in the next part of the homework when we learn calculus.
 </p>
+</div>
+</div>
+
+<div id="outline-container-Calculus" class="outline-4">
+<h4 id="Calculus">Calculus</h4>
+<div class="outline-text-4" id="text-Calculus">
+<p>
+These problem sets, if you wanted you could use some library built-ins and eval them, for example the first question is a trivial Wolfram Alpha/Matlab/Octave/Julia calculation but of course we're going to learn calculus anyway.
+</p>
+
+<p>
+What is exp() and ln() in both question 1 and 2, plus the gaussian distribution we saw earlier? TODO
+</p>
+
+
 
 
 
@@ -561,6 +584,7 @@ Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/cont
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>
