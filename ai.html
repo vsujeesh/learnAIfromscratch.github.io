@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-13 Thu 21:31 -->
+<!-- 2021-05-13 Thu 22:18 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -313,7 +313,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="orgd2f150a">
+<pre class="example" id="org21ff14a">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -505,7 +505,7 @@ The prof teaching this is the head of CMU's systems bio group and maintains an i
 <h3 id="CS4780%20Lecture%202%20KNN">CS4780 Lecture 2 KNN</h3>
 <div class="outline-text-3" id="text-CS4780%20Lecture%202%20KNN">
 <p>
-Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html">lecture</a> k-nearest neighbors, which is only the last 15 minutes of the lecture the rest is practical advice how you should organize your learning, validation and testing data, like seperating temporal (data with a sense of time) data so your learning algorithm 'can't look at future data' to avoid overfitting meaning your model no longer generalizes, you're just fitting it for the test data. He talks about why you can't have a single algorithm to do everything, this is worth watching and not very technical. The distance equation is in the notes, fill in some values to see what they are rational exponents are defined in Tao's <i>Analysis I</i> book Definition 5.6.7 x^{a/b} is (x^{1/b})^a or if (something) = x^{1\n} then (something)^n = x, it's just the square root. You can look up Euclidean distance though you've probably already seen it, personally I've never seen Manhattan distance instead I learned it as Hamming distance which is the same thing. The point of this algorithm as per the student who asks the question "why are we doing this" is a generalized distance algorithm where you can pick the model you want for k-nearest neighbors. 
+Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote02_kNN.html">lecture</a> k-nearest neighbors, which is only the last 15 minutes of the lecture the rest is practical advice how you should organize your learning, validation and testing data, like seperating temporal (data with a sense of time) data so your learning algorithm 'can't look at future data' to avoid overfitting meaning your model no longer generalizes, you're just fitting it for the test data. He talks about why you can't have a single algorithm to do everything, this is worth watching and not very technical. The distance equation is in the notes, fill in some values to see what they are rational exponents are defined in Tao's <i>Analysis I</i> book Definition 5.6.7 \(x^\frac{a}{b}\) is \((x^\frac{1}{b})^a\) or if \((thing) = x^\frac{1}{n}\) then \((thing)^n = x\), it's just the square root. You can look up Euclidean distance though you've probably already seen it, personally I've never seen Manhattan distance instead I learned it as Hamming distance which is the same thing. The point of this algorithm as per the student who asks the question "why are we doing this" is a generalized distance algorithm where you can pick the model you want for k-nearest neighbors. 
 </p>
 </div>
 </div>
@@ -517,7 +517,7 @@ Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lectu
 Try the 10-301 <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these classifier functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns. Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then extract as a list to run test cases to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="orgd52ed7f">
+<pre class="example" id="org31620ea">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
