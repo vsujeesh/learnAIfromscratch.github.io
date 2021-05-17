@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-13 Thu 22:18 -->
+<!-- 2021-05-16 Sun 19:59 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artificial Intelligence</title>
@@ -271,8 +271,9 @@
 <li><a href="#CS4780%20Lecture%202%20KNN">CS4780 Lecture 2 KNN</a></li>
 <li><a href="#Assignment%201">Assignment 1</a>
 <ul>
-<li><a href="#Assignment%201--Probability">Probability</a></li>
-<li><a href="#Calculus">Calculus</a></li>
+<li><a href="#2.2%20Probability">2.2 Probability</a></li>
+<li><a href="#2.3%20Calculus">2.3 Calculus</a></li>
+<li><a href="#2.5%20Linear%20Algebra">2.5 Linear Algebra</a></li>
 </ul>
 </li>
 </ul>
@@ -313,7 +314,7 @@ The courses use C++ Python Java Octave but I'm using Julia simply because there 
 <p>
 Some backups  
 </p>
-<pre class="example" id="org21ff14a">
+<pre class="example" id="org24f28c8">
 Torrent for 10-701 lectures/assignments
 magnet:?xt=urn:btih:40ea1c0bb1dbbef33e2f7ffb5df0106f03d50a3e&amp;dn=10701
 
@@ -343,8 +344,11 @@ The courses do not follow a single book and recommend the following, many are fr
 General modeling books   
 </p>
 <ul class="org-ul">
-<li><i>Mathematical Modeling and Applied Calculus</i> reviewed <a href="https://www.maa.org/press/maa-reviews/mathematical-modeling-and-applied-calculus">here</a></li>
 <li><i>Principles of Applied Statistics</i> by Cox/Donnelly reviewed <a href="http://bactra.org/reviews/cox-donnelly.html">here</a></li>
+<li><i>Mathematical Modeling and Applied Calculus</i> reviewed <a href="https://www.maa.org/press/maa-reviews/mathematical-modeling-and-applied-calculus">here</a>
+<ul class="org-ul">
+<li>This will teach you calculus with vectors</li>
+</ul></li>
 </ul>
 
 <p>
@@ -484,7 +488,7 @@ So far, if you took CS19 from the compsci workshop then all of this is familiar 
 <h3 id="10-701%20Probability%2C%20MLE%20and%20MAP">10-701 Probability, MLE and MAP</h3>
 <div class="outline-text-3" id="text-10-701%20Probability%2C%20MLE%20and%20MAP">
 <p>
-Watching <a href="https://youtu.be/BqoKDBHtrno">lecture</a> 2 a helpful review of probability, you may want to do the 10-301 hw first before watching. 'In machine learning, random variables are seldom independent'. He adds that in 10-701 we will (incorrectly) assume they are independent anyway as it's easier to work with independent random variables and for the purposes of machine learning the outcome is fine. Recall from the Wildberger lectures, that a probability distribution is defined by it's mean or expected value, which is the 'center of the mass', and it's variance which is how far away the rest of the probabilites are from each other, this gives you that normal distribution curve or some other distribution. The prof in this lecture remarks we will often assume the distribution and solely be concerned with estimating the parameters. Throughout he remarks that often in probability definitions the thing dividing the top is a normalization function to get the probabilities to sum to 1. For example conditional probability P(A|B) = P(A and B)/P(B). Make a toy set: A = {1,2,3} and B = {3,2} then we have P({2,3})/P({2,3}) or 1.
+Watching <a href="https://youtu.be/BqoKDBHtrno">lecture</a> 2 a helpful review of probability, you may want to do the 10-301 hw first before watching. 'In machine learning, random variables are seldom independent'. He adds that in 10-701 we will (incorrectly) assume they are independent anyway as it's easier to work with independent random variables and for the purposes of machine learning the outcome is fine. Recall from the Wildberger lectures, that a probability distribution is defined by it's mean or expected value, which is the <a href="https://youtu.be/SncS82GBOQc">center of the mass</a>, and it's variance which is how far away the rest of the probabilites are from each other, this gives you that normal distribution curve or some other distribution. The prof in this lecture remarks we will often assume the distribution and solely be concerned with estimating the parameters. Throughout he remarks that often in probability definitions the thing dividing the top is a normalization function to get the probabilities to sum to 1. For example conditional probability P(A|B) = P(A and B)/P(B). Make a toy set: A = {1,2,3} and B = {3,2} then we have P({2,3})/P({2,3}) or 1.
 </p>
 
 <p>
@@ -517,7 +521,7 @@ Watching <a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lectu
 Try the 10-301 <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">homework</a>, it has an autograder for some languages but you don't need it. All these classifier functions like decision stumps already exist in highly optimized <a href="https://github.com/bensadeghi/DecisionTree.jl/blob/master/README.md">libraries</a> so I implemented the assignment using a few filters in <a href="https://code.pyret.org/">Pyret</a>. You can import the testing and training data as google sheets, convert them to tables then extract and filter columns. Anything in the homework files ending in .labels is the solution which you can literally cut and paste into google sheets, import as a table in Pyret and then extract as a list to run test cases to see if you pass though you won't need to this is a simple assignment. 
 </p>
 
-<pre class="example" id="org31620ea">
+<pre class="example" id="org1d30994">
 include gdrive-sheets
 
 ssid = "1w53u8p8eiyQ5efww54yz9b3WHcFgPMQe-Em0oLG5AJ0"
@@ -534,45 +538,121 @@ politicians-test =
 </pre>
 </div>
 
-<div id="outline-container-Assignment%201--Probability" class="outline-4">
-<h4 id="Assignment%201--Probability">Probability</h4>
-<div class="outline-text-4" id="text-Assignment%201--Probability">
+<div id="outline-container-2.2%20Probability" class="outline-4">
+<h4 id="2.2%20Probability">2.2 Probability</h4>
+<div class="outline-text-4" id="text-2.2%20Probability">
 <p>
 In the hw1 folder if you either downloaded it from the torrent or got it from <a href="https://gitlab.com/mathfromtheverybeginning/homework-10301/-/tree/master/hw1">here</a> there's two pdf files, the file labelled with 'tex' means a student filled in the solutions and generated a new pdf with LaTeX but you shouldn't automatically trust these solutions. For example here is a student quietly breaking academic protocol asking the <a href="https://math.stackexchange.com/questions/3814831/maximizing-probability-of-a-sequence-of-coin-tosses-for-a-biased-coin">same</a> question as problem 2. Are they right about question 1 though, that it's 81/1024? It asked what is the probability of observing <i>any combination</i> and the answer to question 1 is <a href="https://youtu.be/fyOdJ34iMpU">here</a> which is: \(\binom{n}k \cdot p^k(1-p)^{n-k}\) or \(\binom{5}4 \cdot 0.75^4(0.25)^1\) = 405/1024. In the response is a link to this <a href="https://www.wolframalpha.com/input/?i=plot+x%5E4%281-x%29%2C+for+x+in+%280..1%29">graph</a> we can see the maximum x input value for that function is 0.8, or 4/5 or <a href="https://math.stackexchange.com/questions/636539/intuitive-way-to-arrive-at-the-maximizing-argument-for-the-binomial-probability">this</a> answer. Global minimum/maximum is covered in the book <i>Mathematical Modelling and Applied Calculus</i> in Chapter 5: Optimization.  
 </p>
 
 <p>
-Question 3, 4 are in the Wildberger lectures, question 5 is this <a href="https://youtu.be/ERC9H-8kBHs?t=1296">tree</a> example he draws for total probability, P(R)P(W|R) + P(NR)P(W|NR) or 0.4*0.8 + 0.6*0.2 = 0.44
+<b>Question 3, 4 &amp; 5</b> are in the Wildberger lectures, question 5 is this <a href="https://youtu.be/ERC9H-8kBHs?t=1296">tree</a> example he draws for total probability, P(R)P(W|R) + P(NR)P(W|NR) or 0.4*0.8 + 0.6*0.2 = 0.44
 </p>
 
 <p>
-Question 6, P(X=1|Y=1) the set of A where X=1 is {(1,0), (1,1)} and B where Y=1 is {(0,1), (1,1)}. We are interested in A intersect B, divided by B (as per Wildberger lectures on Bayes rule). A intersect B is (1,1) and B is {(0,1), (1,1)} so 0.3/0.5 or 0.6. The probability P(Y=0) is 0.1 + 0.4 
+<b>Question 6</b> P(X=1|Y=1) the set of A where X=1 is {(1,0), (1,1)} and B where Y=1 is {(0,1), (1,1)}. We are interested in A intersect B, divided by B (as per Wildberger lectures on Bayes rule). A intersect B is (1,1) and B is {(0,1), (1,1)} so 0.3/0.5 or 0.6. The probability P(Y=0) is 0.1 + 0.4 
 </p>
 
 <p>
-8, 9 and 10 is in the Wildberger <a href="https://youtu.be/pdaNVZQ9974?t=2548">lectures</a> for example at time index 42:30 <i>Transformation Formulas</i>, like E[6X]. Since E[x] is defined as a sum, multiplying by some scalar means you can factor it out ie: 6(E[X]) = E[6X]. Var[2x + 3] is fully explained in the same probability lecture you ignore addition and just square the scalar. Recall the variance is a sum so every input of x_i will add 3, shifting everything over by 3 which doesn't matter the distance between each x_i remains the same, as they're all moved over 3.
+<b>Question 8, 9 &amp; 10</b> is again in the Wildberger <a href="https://youtu.be/pdaNVZQ9974?t=2548">lectures</a> for example at time index 42:30 <i>Transformation Formulas</i>. Since E[x] is defined as a sum, multiplying by some scalar means you can factor it out ie: 6(E[X]) = E[6X]. Var[2x + 3] is fully explained in the same probability lecture you ignore addition and just square the scalar. Recall the variance is a sum so every input of x_i will add 3, shifting everything over by 3 which doesn't matter the distance between each x_i remains the same, as they're all moved over 3.
 </p>
 
 <p>
-Question 11 and 14 solution is <a href="https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading7a.pdf">here</a> in MIT OCW lecture notes, for #14 to determine b_3 conditioned on c_1, you take 0.35 and divide by the total marginal probability of c_1 which is .02 + .03 + .35 or .35/.40
+<b>Question 11 &amp; 14</b> solution is <a href="https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading7a.pdf">here</a> in MIT OCW lecture notes, for question 14 to determine b_3 conditioned on c_1, you take 0.35 and divide by the total marginal probability of c_1 which is .02 + .03 + .35 or .35/.40
 </p>
 
 <p>
-Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> (doesn't work on some browsers, try Chrome or use library genesis) gives the answers for the rest of this probability homework, question 15 the expectation of Y is the sum of (values * probability) which is 1/n * y. or y/n and 16 is clearly the first or second option, given that expected value(mean) of a bernoulli random variable p is p. Searching wikipedia for Bernoulli entropy I find the answer is A, though we will do log(), exp() in the next part of the homework when we learn calculus.
+Goodfellow's <i>Deep Learning</i> <a href="https://www.deeplearningbook.org/contents/prob.html">book</a> (doesn't work on some browsers, try Chrome or use library genesis) gives the answers for the rest of this probability homework, question 15 the expectation of y is the sum of (values * probability) which is 1/n * y or y/n and  question 16 is clearly the first or second option, given that expected value(mean) of a bernoulli random variable p is p. Searching Wikipedia for Bernoulli entropy I find the answer is A, though we will do log(), exp() in the next part of the homework when we learn calculus.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Calculus" class="outline-4">
-<h4 id="Calculus">Calculus</h4>
-<div class="outline-text-4" id="text-Calculus">
+<div id="outline-container-2.3%20Calculus" class="outline-4">
+<h4 id="2.3%20Calculus">2.3 Calculus</h4>
+<div class="outline-text-4" id="text-2.3%20Calculus">
 <p>
-These problem sets, if you wanted you could use some library built-ins and eval them, for example the first question is a trivial Wolfram Alpha/Matlab/Octave/Julia calculation but of course we're going to learn calculus anyway.
+These problem sets, you can use math softare or online <a href="https://www.derivative-calculator.net/">derivatives calculator</a> then go through the book <i>Mathematical Modeling and Applied Caluclus</i> to verify the results. 
 </p>
 
 <p>
-What is exp() and ln() in both question 1 and 2, plus the gaussian distribution we saw earlier? TODO
+First a basic <a href="https://youtu.be/zfHEkt-1sqo">crash course</a> you can skip through, this series was designed for foreign students to Australia to learn the terminology of calculus and has mandarin subtitles. He shows how velocity is the integral of the acceleration and the derivative of velocity is the acceleration. There is also this <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">series</a> for a vizualitation.  
 </p>
+
+<p>
+What is exp() and ln() in both question 1 and 2, plus the gaussian distribution we saw earlier? Obtain the book <i>Mathematical Modeling and Applied Calculus</i> listed in the beginning of this page via library genesis or other means, and skip to chapter 1.4 <i>Exponential Functions</i>. Every chapter in this book is good and can be read with little background, most of the exercises you are programming in R. There is a short demonstration <a href="https://youtu.be/m2MIpDrF7Es">here</a> that assumes you have a basic idea what a derivative is from the other above videos. Read short chapter 1.5 on inverses, then 1.6 <i>Logarithmic Functions</i>. By read I mean leisurely skim through the material knowing where to go practice or read more in depth later if needed though the entire logarithmic chapter is worth practicing, it's the very first problem of our 10-301 hw1
+</p>
+
+<p>
+<b>Question 1</b> evaluate some ln(x + x) derivative, type it into the derivatives calculator above and then step by step figure it out yourself going through the book looking up the derivative rules and chain rule. \(ln(x^2)\) is two composite functions, ln(x) and f(x*x) or ln(f(x)) or further abstracting this is f(g(x)).  The derivative of ln(x) is 1/x, however since this is also a composite function, use the chain rule: 1/x * derivative of x
+</p>
+
+<p>
+\(ln(\frac{4}{x^2} - x^3)\) derivative or D(ln(x)) is:
+</p>
+
+<ul class="org-ul">
+<li>\(\frac{1}{\frac{4}{x^2} - x^3}\) \(\cdot\) D(\(\frac{4}{x^2}\)) - D(\(x^3\))</li>
+<li>We can simplify: \(\frac{4}{x^2}\) is \(4 \cdot x^{-2}\) (exponent rules 1/x is \(x^{-1}\))</li>
+<li>D(\(4x^{-2}\)) = 4 \(\cdot\) \((-2)x^{-3}\) (\(x^n\) derivative = \(nx^{n-1}\))</li>
+<li>D(\(x^3\)) = \(3x^2\) (\(x^n\) derivative again)</li>
+<li>Combine 1/x with D(x) - D(x):</li>
+<li>\(\frac{-8x^{-3} - 3x^2}{\frac{4}{x^2} - x^3}\)</li>
+</ul>
+
+<p>
+You can simplify further if you wanted but the assignment only wants us to plug in x = 1, which is - \(\frac{-11}{4 - 1}\) or -11/3.    
+</p>
+
+<p>
+<b>Question 2</b> Find a partial derivative of a multivariable function. Go to page 440 of the math modeling book chapter 4.6 <i>Partial Derivatives</i>. Skimming we see on page 450 'compute the derivative of the given function with respect to one variable, while treating all other variables as constants'. So really question 2 is asking us for the partial derivative of x only.
+</p>
+
+<p>
+Use some online derivatives calculator with (free) steps again, enter 3x^2(sin(z))e^-x <a href="https://www.derivative-calculator.net/">here</a> then go through each step with the math modeling and applied calc book: 
+</p>
+
+<ul class="org-ul">
+<li>3\(x^2\)(constant)\(e^{-x}\) or commuting (constant)3\(x^2e^{-x}\)</li>
+<li>Product rule for derivatives: f(x) * g(x) is: g(x) * D(f(x)) + f(x) * D(g(x))</li>
+<li>g(x) = \(e^{-x}\) and f(x) = 3\(x^2\)</li>
+<li>(constant)6x\(e^{-x}\) + 3\(x^2e^{-x}\)</li>
+<li>Note: \(e^{-x}\) is D(\(e^x\)) * D(-1(x)) (chain rule)  
+<ul class="org-ul">
+<li>-1D(x) (via distribution and laws of derivatives)</li>
+<li>-1(1) because D(\(x^1\)) is 1\(x^{0}\)</li>
+</ul></li>
+<li>Factor out (constant)6x\(e^{-x}\) + 3\(x^2e^{-x}\)(-1)</li>
+<li>(constant)3x\(e^{-x}\)(2 - x)</li>
+</ul>
+
+<p>
+<b>Question 3</b> is figure 1 of the beginning of chapter 4.2 <i>The Derivative as a Function</i>, if (x, D(x)) is (1/3, 0) then it is a local minimum looking at that graph.
+</p>
+
+<p>
+<b>Question 4</b> A <a href="https://youtu.be/lSoaMCNKfAg">transpose</a> converts all the columns into rows and vice-versa, so (1, 2, 3) a single row (R^1) 3 column vector becomes a single column vector with R^3 rows. Whatever n-row, and thus n-dimension vector you enter into that R^n function it returns a tranpose of a single dimension consisting of many columns (our feature sets) and squaring it will make no difference. Answer is R^n -&gt; R. Some of this is in the math modeling book in the chapter for least squares, but modern linear algebra we will cover <a href="https://learnaifromscratch.github.io/linear.html">here</a> and of course the next set of homework.
+</p>
+</div>
+</div>
+
+<div id="outline-container-2.5%20Linear%20Algebra" class="outline-4">
+<h4 id="2.5%20Linear%20Algebra">2.5 Linear Algebra</h4>
+<div class="outline-text-4" id="text-2.5%20Linear%20Algebra">
+<p>
+todo
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
